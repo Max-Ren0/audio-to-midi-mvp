@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "audio-midi-mvp"
+version = "0.0.0.dev1"
+description = "Local MP3 to editable multitrack MIDI; experimental seven-category transcription"
+requires-python = ">=3.11,<3.12"
+dependencies = ["mido>=1.3,<2", "numpy>=1.26,<3", "psutil>=6,<8", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+model = ["transformers==4.43.4", "mt3-infer @ git+https://github.com/openmirlab/mt3-infer.git@d8cbd287470291dee335f84315c5a9b9ff6e6c8a"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+audio-midi = "audio_midi.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/audio_midi"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
