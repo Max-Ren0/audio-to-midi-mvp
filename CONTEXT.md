@@ -44,7 +44,7 @@
 ## GitHub 版本管理（2026-10-15）
 - 用户要求先测试 GitHub，并授权每个可用版本自动上传与管理版本。
 - 已验证本机 gh 登录账号 Max-Ren0；当前目录初始化 Git 并保存初始研究快照。
-- 目标私有仓库：Max-Ren0/audio-to-midi-mvp。创建、推送和远端核验由本轮继续完成，以最终核验结果为准。
+- 私有仓库已创建并完成推送与读取验证：https://github.com/Max-Ren0/audio-to-midi-mvp 。GitHub 返回 isPrivate=true、当前账号 ADMIN；首次推送远端 main 与本地提交一致。
 - 新增 README.md、AGENTS.md、CHANGELOG.md、.gitignore；工作过程中的可用版本提交并推送，重要里程碑加标签。
 - 初始标签 v0.0.0-planning 仅代表规划文档，不表示 MVP 已实现。
 - 不上传临时竞品资源、音视频、模型权重与凭证；不安装后台监控。
