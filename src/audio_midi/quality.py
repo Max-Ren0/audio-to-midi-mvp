@@ -53,3 +53,18 @@ def metrics(reference: list[NoteEvent], predicted: list[NoteEvent], scale: float
     nr=len(ref);np=len(pred);tp=sum(x['matched'] for x in per.values());valid=[x['f1'] for x in per.values() if x['f1'] is not None]
     overall=dict(reference=nr,predicted=np,matched=tp,extra=np-tp,missed=nr-tp,precision=tp/np if np else None,recall=tp/nr if nr else None,f1=2*tp/(nr+np) if nr+np else None)
     return dict(overall=overall,per_category=per,macro_f1=sum(valid)/len(valid) if valid else None,alignment={'scale':scale,'shift_seconds':shift,'duration_seconds':duration},reference_window=[shift,shift+scale*duration])
+
+
+def load_sources(manifest_path: Path,input_sha256: str) -> dict[str,list[NoteEvent]]:
+    """Explicit reconstruction cache, bound to input and every candidate file hash."""
+    import json,hashlib
+    data=json.loads(manifest_path.read_text())
+    if data['input_sha256']!=input_sha256:raise ValueError('Candidate input hash mismatch')
+    result={}
+    for name,entry in data['sources'].items():
+        path=Path(entry['path'])
+        if not path.is_absolute():path=manifest_path.parent/path
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=entry['sha256']:raise ValueError('Candidate file hash mismatch')
+        if path.suffix.lower() in ('.mid','.midi'):result[name]=read_notes(path)
+        else:result[name]=[NoteEvent(**n) for n in json.loads(path.read_text())['notes']]
+    return result

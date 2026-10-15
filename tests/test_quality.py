@@ -47,3 +47,14 @@ def test_metrics_fixed_affine_window_and_one_to_one():
     got=metrics(ref,pred,1,10.1,1)
     assert got['overall']['reference']==1 and got['overall']['matched']==1
     assert got['overall']['predicted']==2
+
+
+def test_candidate_manifest_rejects_wrong_input_and_tampering(tmp_path):
+    import hashlib,json
+    from audio_midi.quality import load_sources
+    data=tmp_path/'notes.json';data.write_text(json.dumps({'notes':[{'category':'piano','pitch':60,'onset':0,'offset':1}]}))
+    m=tmp_path/'manifest.json';payload={'input_sha256':'correct','sources':{'piano':{'path':str(data),'sha256':hashlib.sha256(data.read_bytes()).hexdigest()}}};m.write_text(json.dumps(payload))
+    assert load_sources(m,'correct')['piano'][0].pitch==60
+    with pytest.raises(ValueError,match='input'):load_sources(m,'other')
+    data.write_text('{}')
+    with pytest.raises(ValueError,match='hash'):load_sources(m,'correct')
