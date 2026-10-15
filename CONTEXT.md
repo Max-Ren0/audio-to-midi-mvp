@@ -161,3 +161,12 @@
 - 待规划文档冻结后独立核对计算与边界，再同步GitHub；不变更v0.1.0-rc.1发布标签。
 
 - 规划固定a733f227后verify_cost_plan独立复核官方四页、预算算术和指标/评估边界，未发现必须修复项；计划SHA8942c8b6eb09f7b552ad01587a17c11698546ff24804e24fff25103dbf117e20。记录outputs/v0.1/优化计划与成本独立核对.md。未运行新模型/上传/付款，不移动v0.1.0-rc.1标签。
+
+
+## RipX分离对照执行（2026-10-15）
+- 用户明确授权使用后台打开的RipX，对相同MP3/改编MIDI按逐轨计划对比评估。分支codex/ripx-comparison，起始恢复点d528eca，开始时工作区干净。
+- 实验登记outputs/ripx-comparison/实验登记.json：旧v0.0、锁定v0.1、RipX分离+相同转谱路线、RipX原生MIDI。共用scale .9995/shift .14，继续排除人声，标准仍是改编一致度。
+- RipX界面已打开指定MP3，Separate Instruments/Voice/Other/Bass/Drums/Separate Guitar & Piano均勾选；Save Stem WAVs Only/Smaller Rips均关闭。点击Rip后子进程已运行并退出，主应用UI暂时超时；禁止擅自重启/终止应用。尚未取得导出结果。应用自主管理线程，不冒称CPU2同条件性能测试。
+
+- 已重新读取C0/C1 MIDI复算F1=45.3608/61.0169%，保存独立JSON。RipX8.0.3保存89,473,121字节工程及同哈希未编辑副本；本项目保留outputs/runs/ripx-comparison/RipX-未编辑.rip（忽略上传）。
+- 多次AX/截图/重新连接均-10005，重置控制会话也无效。已异步询问用户应用是否仍可操作，等待回答；不得把工程保存等同完成分轨导出或质量提升。对照进度.md明确C2电吉他原混音不变、other不是专用弦乐。

@@ -1,0 +1,86 @@
+{
+  "overall": {
+    "reference": 494,
+    "predicted": 568,
+    "matched": 324,
+    "extra": 244,
+    "missed": 170,
+    "precision": 0.5704225352112676,
+    "recall": 0.6558704453441295,
+    "f1": 0.6101694915254238
+  },
+  "per_category": {
+    "piano": {
+      "reference": 269,
+      "predicted": 297,
+      "matched": 246,
+      "extra": 51,
+      "missed": 23,
+      "precision": 0.8282828282828283,
+      "recall": 0.9144981412639405,
+      "f1": 0.8692579505300353
+    },
+    "acoustic_guitar": {
+      "reference": 24,
+      "predicted": 70,
+      "matched": 8,
+      "extra": 62,
+      "missed": 16,
+      "precision": 0.11428571428571428,
+      "recall": 0.3333333333333333,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "reference": 64,
+      "predicted": 23,
+      "matched": 6,
+      "extra": 17,
+      "missed": 58,
+      "precision": 0.2608695652173913,
+      "recall": 0.09375,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "reference": 36,
+      "predicted": 51,
+      "matched": 18,
+      "extra": 33,
+      "missed": 18,
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "f1": 0.41379310344827586
+    },
+    "drums": {
+      "reference": 94,
+      "predicted": 56,
+      "matched": 42,
+      "extra": 14,
+      "missed": 52,
+      "precision": 0.75,
+      "recall": 0.44680851063829785,
+      "f1": 0.56
+    },
+    "strings": {
+      "reference": 7,
+      "predicted": 71,
+      "matched": 4,
+      "extra": 67,
+      "missed": 3,
+      "precision": 0.056338028169014086,
+      "recall": 0.5714285714285714,
+      "f1": 0.10256410256410256
+    }
+  },
+  "macro_f1": 0.37562649283043653,
+  "alignment": {
+    "scale": 0.9995,
+    "shift_seconds": 0.14,
+    "duration_seconds": 60.0304375
+  },
+  "reference_window": [
+    0.14,
+    60.140422281250004
+  ],
+  "prediction_sha256": "ba7661c8c1f62efd649e66ac8474dc2915c816af3997a5f50886729b909d7e32",
+  "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3"
+}

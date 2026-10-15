@@ -1,0 +1,14 @@
+{
+  "ripx_version": "8.0.3",
+  "artifacts": {
+    "/Users/ringscherry/Documents/RipX/Rips/李荣浩 - 不将就-[AudioTrimmer.com].rip": {
+      "bytes": 89473121,
+      "sha256": "dc55d98a548663de5524791e575e3e6ab2f8fa11ab8c9a2e1c739cec0454bed9"
+    },
+    "/Users/ringscherry/Documents/RipX/Rips/李荣浩 - 不将就-[AudioTrimmer.com].rip.unedited": {
+      "bytes": 89473121,
+      "sha256": "dc55d98a548663de5524791e575e3e6ab2f8fa11ab8c9a2e1c739cec0454bed9"
+    }
+  },
+  "status": "Native project saved; WAV and MIDI export not yet available; no quality conclusion"
+}

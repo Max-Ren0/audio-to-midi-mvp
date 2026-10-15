@@ -1,0 +1,25 @@
+{
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3",
+  "duration": 60.0304375,
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14
+  },
+  "arms": [
+    "C0: existing v0.0 spike2",
+    "C1: existing v0.1 locked routing",
+    "C2: RipX WAV plus same v0.1 routing; mix electric source remains unchanged",
+    "C3: RipX native MIDI Simple, unfiltered, unedited"
+  ],
+  "restrictions": [
+    "No per-candidate alignment search",
+    "No vocal score",
+    "No reference-based relabel or manual note editing",
+    "Other remains residual, not a dedicated string stem",
+    "SDR unavailable without true isolated stems",
+    "No new purchases or remote audio uploads"
+  ],
+  "status": "RipX separation started via native app; GUI temporarily not responding; do not restart or kill",
+  "started_at": "2026-10-15T20:21:19.685583+08:00"
+}
