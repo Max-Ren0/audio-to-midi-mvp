@@ -523,5 +523,64 @@
       },
       "chroma_50ms": 5
     }
-  ]
+  ],
+  "diagnostic_parameters": {
+    "reference_window_seconds": [
+      0.14,
+      60.140422281250004
+    ],
+    "prediction_window_seconds": [
+      0,
+      60.0304375
+    ],
+    "windows": "left inclusive, right exclusive; filter prediction before mapping",
+    "prediction_to_reference": {
+      "scale": 0.9995,
+      "shift_seconds": 0.14
+    },
+    "onset_tolerances_seconds": [
+      0.05,
+      0.15
+    ],
+    "epsilon_seconds": 1e-09,
+    "matching": "maximum-cardinality bipartite, one-to-one, same category; each diagnostic separately maximized",
+    "chroma": "pitch modulo 12; melodic only",
+    "onset_only": "ignore pitch, same category",
+    "drum_families": {
+      "kick": [
+        35,
+        36
+      ],
+      "snare": [
+        38,
+        40
+      ],
+      "hi_hat": [
+        42,
+        44,
+        46
+      ],
+      "tom": [
+        41,
+        43,
+        45,
+        47,
+        48,
+        50
+      ],
+      "crash": [
+        49,
+        52,
+        55,
+        57
+      ],
+      "ride": [
+        51,
+        53,
+        59
+      ]
+    },
+    "other_drum_keys": "remain distinct by exact key, not merged",
+    "pitch_counters": "after category/window filtering; pitch values unchanged"
+  }
 }
