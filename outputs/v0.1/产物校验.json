@@ -1,0 +1,9 @@
+{
+  "config/v0.1-free.json": "a492d58dbd9dbcb81de7405d5177da9bc25808db2f83b2a11062ca09d0efa012",
+  "outputs/runs/v01/development/多乐器.mid": "ba7661c8c1f62efd649e66ac8474dc2915c816af3997a5f50886729b909d7e32",
+  "outputs/runs/v01/development/音色试听.wav": "c5a2cb1433763847b6890eecfba602122a88d3c60e341838099b438cd8ea75a2",
+  "outputs/runs/v01/development/运行报告.json": "27c0b9bf4a3a42b54454651ff2f4af73239c3c94edd8a837afc307b3273b97c9",
+  "work/v01/final-development-metrics.json": "a592c8416316fcc11394c125adcea1307b6b45ee0883d746da26d6583c459182",
+  "work/v01/baseline-development-metrics.json": "3e436047d6c6f759f17c289d00fec12fd89bb9fab03f4fb94a867376bc6ad3c6",
+  "work/v01/candidates.json": "544f6f32352440a64eff7b16a1b27c488cfc14a67e62d46be9f1d74e16f54649"
+}
