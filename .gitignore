@@ -1,0 +1,28 @@
+# Local research and generated media
+work/
+inputs/
+results/
+models/
+checkpoints/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.mp4
+*.mov
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
