@@ -22,10 +22,19 @@ def write_midi(notes: list[NoteEvent], path: Path, bpm: float = 120) -> None:
         if not group:
             continue
         channel=9 if category=='drums' else next(channels)
-        program=group[0].program
-        if program is None or category=='vocal' or not 0<=program<=127:
-            program=PROGRAMS[category]
-        track=mido.MidiTrack([mido.MetaMessage('track_name',name=category), mido.Message('program_change',channel=channel,program=program)])
+        # Stable category presets; retain raw model labels in the report.
+        program=PROGRAMS[category]
+        volume={'piano':72,'acoustic_guitar':65,'electric_guitar':60,'bass':82,'drums':72,'strings':48,'vocal':110}[category]
+        names={'piano':'Acoustic Grand Piano','acoustic_guitar':'Steel String Acoustic Guitar','electric_guitar':'Clean Electric Guitar','bass':'Fingered Electric Bass','drums':'GM Standard Drum Kit','strings':'String Ensemble','vocal':'Voice Oohs (melody approximation)'}
+        track=mido.MidiTrack([
+            mido.MetaMessage('track_name',name=category),
+            mido.MetaMessage('instrument_name',name=names[category]),
+            mido.Message('control_change',channel=channel,control=0,value=0),
+            mido.Message('control_change',channel=channel,control=32,value=0),
+            mido.Message('program_change',channel=channel,program=program),
+            mido.Message('control_change',channel=channel,control=7,value=volume),
+            mido.Message('control_change',channel=channel,control=10,value=64),
+        ])
         midi.tracks.append(track)
         events=[]
         for n in group:

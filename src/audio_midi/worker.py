@@ -26,7 +26,7 @@ def run_command(command: list[str], deadline: float, log_path: Path, memory_limi
         if time.monotonic()>=deadline:
             raise WorkerError('处理超时',peak,attempt-1)
         env=os.environ.copy()
-        env.update({'OMP_NUM_THREADS':'2','MKL_NUM_THREADS':'2','TOKENIZERS_PARALLELISM':'false','PYTHONUNBUFFERED':'1','AUDIO_MIDI_BATCH_SIZE':str(2 if attempt==1 else 1)})
+        env.update({'OMP_NUM_THREADS':'2','OPENBLAS_NUM_THREADS':'2','NUMBA_NUM_THREADS':'2','MKL_NUM_THREADS':'2','TOKENIZERS_PARALLELISM':'false','PYTHONUNBUFFERED':'1','AUDIO_MIDI_BATCH_SIZE':str(2 if attempt==1 else 1)})
         reason=None
         with log_path.open('ab') as log:
             process=subprocess.Popen(command,stdout=log,stderr=log,start_new_session=True,env=env)

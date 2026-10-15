@@ -62,3 +62,23 @@
 - 官方工具候选：Klangio API（https://api-docs.klang.io/ ，提供音乐转谱与音频分离），RipX（https://hitnmix.com/2024/02/14/ripx-deepremix-for-midi-file-extraction/ ，分层编辑与MIDI导出），Melodyne（官方文档确认Audio-to-MIDI，非自动七类混音保证）。
 - 开源候选：RoFormer类音频分离（https://github.com/ZFTurbo/Music-Source-Separation-Training），Transkun钢琴专用（https://github.com/Yujia-Yan/Transkun），均须用本曲实测，不能承诺一定改善。
 - 建议下一步先取同一15–30秒，做竞品/商业工具与本地路线对比；分别听主旋律、各单轨与合奏，若主旋律都不可辨认不继续扩建。仅诊断先聚焦主旋律，不代表取消七类目标。外部上传及付费仍需用户具体授权。
+
+## 本轮新输入与授权（2026-10-15）
+- 用户要求把乐器播放/真实音色需求写入v0.0 PRD，并用新MP3重新多乐器转录、交付MID。已说明标准MID不能嵌入真实乐器采样；交付GM映射加采样库渲染WAV。
+- 新输入：/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3，声明约60.04秒。
+- 用户明确批准本轮质量优先，允许超过三倍时长；仅实验模式放宽，生产默认不改变。
+- 已备份并补充桌面v0.0-spec.md：/Users/ringscherry/Desktop/吉他产品/v0.0/v0.0-spec.backup-20261015-145518.md；同步补充仓库规格，新增outputs/v0.0-PRD-音色与转谱补充.md。根目录PRD.pages未修改，不宣称其已更新。
+- 分支feat/v0.0-separation，恢复点ca22f42；独立work/sep-env安装Demucs与兼容PyTorch，计划先分离后按声部转录，本地处理无外部音频上传。
+
+## 最新交付：新MP3分离转谱与音色（2026-10-15）
+- 新文件解码60.0304375秒；本轮用户明确批准质量优先、允许更久。原文件未改，无第三方音频上传。
+- 桌面v0.0/v0.0-spec.md与仓库规格新增乐器选择、音色WAV及Logic边界，先保存桌面backup-20261015-145518.md；另有outputs/v0.0-PRD-音色与转谱补充.md，PRD.pages未修改。
+- 新路线：Demucs4.0.1 htdemucs_6s六源分离，pYIN人声/贝斯+起音边界，BasicPitch ONNX钢琴，YourMT3分别处理吉他/鼓/other弦乐。
+- 每轨固定GM音色、Bank Select、Program Change、instrument_name、CC7/CC10；标准MID不含真实采样。TinySoundFont0.3.7+GeneralUser GS2.0.3输出WAV，MIDI-only，不混原曲。
+- 最终产物：outputs/runs/reprocess-20261015-v2/不将就_多乐器.mid、不同乐器合奏音色试听.wav（实际文件名不将就_音色试听.wav）、不将就_主旋律钢琴.mid、主旋律钢琴试听.wav、转录报告.json、交付说明.md。音频/产物全忽略上传。
+- 591音符：钢琴227/木吉他70/电吉他1/贝斯51/鼓56/弦乐71/人声旋律115。电吉他只有1候选，证据不足，不宣称七类可靠。
+- 原分离约40秒，最后一次复用分离后的转录+渲染142.78秒；不能将142.78声称完整总耗时。三个YourMT3 RSS峰值约2.63/2.54/2.57GiB；DSP0.77GiB；原分离峰值未测。
+- 59自动测试通过，真实新MID结构/全部配对/音色设置通过，试听WAV峰值约0.9。独立审查发现的弯音值域、来源校验与同音重复节奏均有失败复现及修复测试。
+- 脚本scripts/reprocess_split.py，setup_quality.sh准备独立环境；requirements-quality.txt为额外离线组件，requirements-separation.txt固定隔离Demucs。标准uv.lock仍管理基线，单独uv sync可能移除实验额外组件。
+- 新模型/音色来源及哈希见THIRD_PARTY.md与outputs/v0.0-二次转录说明.md。来源记录验证输入和六个stem哈希，不能只按时长复用。
+- 当前分支feat/v0.0-separation，拟保存实验标签v0.0.0-spike.2；默认生产三倍时间限制不改。仍缺用户听辨、真实标注F1、Logic实机验收；禁止提前宣称质量比旧版更好或达到正式v0.0.0。

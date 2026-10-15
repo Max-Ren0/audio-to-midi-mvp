@@ -12,3 +12,11 @@
 FFmpeg/FFprobe are invoked as separately installed tools. PyTorch, NumPy, SciPy, mido and psutil are installed dependencies; their versions are in uv.lock and their upstream notices remain in installed distributions. No audio, weights or external research source snapshots are committed.
 
 User-supplied music is used only locally with user approval; no ownership or redistribution rights are asserted.
+
+## Quality-first experiment additions
+
+- Demucs4.0.1 (MIT): https://github.com/facebookresearch/demucs ; htdemucs_6s weight 5c90dfd2-34c22ccb.th from dl.fbaipublicfiles.com. SHA256 34c22ccb381c6f9fdbf324f04e1e2fe21aaaf293f5ded163a162697ff9a02ddd. Isolated torch2.5.1/torchaudio2.5.1 runtime. Piano separation is explicitly experimental with known bleed.
+- Spotify Basic Pitch0.4.0 (Apache2.0): https://github.com/spotify/basic-pitch ; only ONNX model is used. Default CoreML/TensorFlow dependencies are omitted in this local ONNX configuration.
+- librosa0.11 pYIN: https://librosa.org/doc/0.11.0/generated/librosa.pyin.html ; used on separated vocal and bass stems with onset boundaries, not a trained multi-instrument classifier.
+- TinySoundFont Python bindings0.3.7 (MIT): https://github.com/nwhitehead/tinysoundfont-pybind ; offline synthesis only, PyAudio is not required for the code path used here and is omitted.
+- GeneralUser GS2.0.3 by S. Christian Collins: https://github.com/mrbumpy409/GeneralUser-GS , commit684543d5e5efaef08d02be50dcda8d552478fa60. SF2 SHA256 9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe. The upstream LICENSE v2.0 permits music creation and records qualifications about historical sample provenance. The library and its license remain local; no SoundFont is redistributed in this repository. WAV previews are rendered from MIDI using this sample bank, with no original-song audio blended in.

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "audio-midi-mvp"
-version = "0.0.0.dev1"
+version = "0.0.0.dev2"
 description = "Local MP3 to editable multitrack MIDI; experimental seven-category transcription"
 requires-python = ">=3.11,<3.12"
 dependencies = ["mido>=1.3,<2", "numpy>=1.26,<3", "psutil>=6,<8", "scipy>=1.11,<2"]

@@ -1,0 +1,4 @@
+# ONNX/offline audio extras. Install base uv.lock first.
+onnxruntime==1.31.0
+resampy==0.4.2
+setuptools==75.8.0

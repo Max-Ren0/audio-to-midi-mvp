@@ -80,3 +80,9 @@ uv lock --check
 ## 版本维护
 
 每个可用阶段检查后提交并推送，重要里程碑加标签。实验版以 `v0.0.0-spike.N` 标记；正式 `v0.0.0` 须按规格通过验收。原始媒体、模型权重、凭证及本地运行产物不上传。
+
+## 质量优先第二路线与音色试听
+
+按用户新要求增加本地Demucs6s分离后转谱：pYIN处理人声/贝斯、BasicPitch ONNX处理钢琴、YourMT3处理吉他/鼓及other中的弦乐。该实验允许更久，默认生产transcribe仍保留原三倍时长限制。
+
+MIDI写入每轨Bank Select、Program Change、instrument_name与音量控制。采样音色试听另存WAV；标准MIDI不包含真实乐器采样。可用scripts/reprocess_split.py执行实验，scripts/setup_quality.sh准备独立依赖。详情见outputs/v0.0-二次转录说明.md。
