@@ -1,0 +1,108 @@
+{
+  "limit": 24,
+  "registered": [
+    {
+      "id": "mix",
+      "model": "YourMT3",
+      "input": "AudioTrimmer60s",
+      "deadline": 600,
+      "memory_gib": 3.2
+    },
+    {
+      "id": "piano",
+      "model": "Transkun2.0.1",
+      "input": "piano60s",
+      "deadline": 600,
+      "memory_gib": 6
+    },
+    {
+      "id": "drums",
+      "model": "ADTOF",
+      "input": "drums60s",
+      "deadline": 600,
+      "memory_gib": 6
+    },
+    {
+      "id": "bass-bp",
+      "model": "BasicPitch0.4.0 ONNX",
+      "input": "bass60s",
+      "deadline": 300,
+      "memory_gib": 4
+    }
+  ],
+  "actual_development_attempts": [
+    {
+      "id": "mix-launch-incorrect-interpreter",
+      "attempts": 2,
+      "status": "failed_before_model_load",
+      "cause": "Resolving virtualenv interpreter symlink escaped venv; module unavailable"
+    },
+    {
+      "id": "mix",
+      "attempts": 1,
+      "status": "success",
+      "receipt": "work/v01/mix-run.json"
+    },
+    {
+      "id": "piano",
+      "attempts": 1,
+      "status": "success",
+      "receipt": "work/v01/transkun-run.json"
+    },
+    {
+      "id": "drums-adtof",
+      "attempts": 1,
+      "status": "success",
+      "receipt": "work/v01/adtof-run.json"
+    },
+    {
+      "id": "bass-bp",
+      "attempts": 1,
+      "status": "success",
+      "receipt": "work/v01/bass-bp-run.json"
+    }
+  ],
+  "development_attempt_count": 6,
+  "dsp_variants": [
+    {
+      "name": "bass-snap-0.03",
+      "delta": 0.03,
+      "uses_cached_pyin": true,
+      "new_model_inference": false,
+      "path": "work/v01/bass-snap-0.03.json"
+    },
+    {
+      "name": "bass-snap-0.05",
+      "delta": 0.05,
+      "uses_cached_pyin": true,
+      "new_model_inference": false,
+      "path": "work/v01/bass-snap-0.05.json"
+    },
+    {
+      "name": "bass-snap-0.07",
+      "delta": 0.07,
+      "uses_cached_pyin": true,
+      "new_model_inference": false,
+      "path": "work/v01/bass-snap-0.07.json"
+    }
+  ],
+  "extra_locked_run": {
+    "input": "work/spike/bujiangjiu-60-120.mp3",
+    "config_commit": "522de524c6e4b5329bee7fe372aca633c13de1ab",
+    "expected_stages": [
+      "separation",
+      "bass",
+      "drums_mt3",
+      "guitar",
+      "mix",
+      "piano",
+      "strings"
+    ],
+    "recording_status": "retrospectively enumerated while locked run executing; original pre-run registration incomplete"
+  },
+  "deviations": [
+    "Initial launch failures and three DSP variants were not added to the registry before running; now reconstructed from logs, not falsely backdated",
+    "Specialists ran the 60-second excerpt directly with bounded workers and native segment inference instead of a separate 15-second probe",
+    "Planned120-180s unavailable because original long input no longer exists at recorded path; using retained60-120s as extra within-song regression, not a new blind dataset"
+  ]
+}

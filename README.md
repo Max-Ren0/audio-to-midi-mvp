@@ -86,3 +86,24 @@ uv lock --check
 按用户新要求增加本地Demucs6s分离后转谱：pYIN处理人声/贝斯、BasicPitch ONNX处理钢琴、YourMT3处理吉他/鼓及other中的弦乐。该实验允许更久，默认生产transcribe仍保留原三倍时长限制。
 
 MIDI写入每轨Bank Select、Program Change、instrument_name与音量控制。采样音色试听另存WAV；标准MIDI不包含真实乐器采样。可用scripts/reprocess_split.py执行实验，scripts/setup_quality.sh准备独立依赖。详情见outputs/v0.0-二次转录说明.md。
+
+## v0.1 免费实验路线
+
+v0.1使用六类器乐，忽略人声；两套方案见outputs/v0.1/两套逐轨方案.md。当前是RC实验，不能因整体分数提高就视为六类通过。原audio-midi命令是历史基线路线；本轮六类免费路线使用下述脚本。
+
+在仓库根目录准备项目隔离环境（已有模型资产按THIRD_PARTY.md准备）：
+
+```sh
+sh scripts/setup_v01.sh
+.venv/bin/python scripts/run_v01.py input.mp3 --config config/v0.1-free.json --output-dir outputs/runs/my-v01 --solo
+```
+
+输入MP3≤180秒；默认质量实验限时1800秒，CPU2线程，模型分阶段内存限制。输出目录必须不存在。该命令不读取标准MIDI、不调用音乐API。生成MID不内嵌采样，试听由本地音色库合成。首次所需模型/环境下载需要联网；推理本身本地完成。
+
+仅评测时另行提供标准，所有候选共用已确认的映射（下例.9995/.14仅针对本项目既有AudioTrimmer片段，其他歌曲不能照搬）：
+
+```sh
+.venv/bin/python scripts/evaluate_v01.py reference.mid outputs/runs/my-v01/多乐器.mid --duration 60.0304375 --scale .9995 --shift .14 --output outputs/runs/my-v01/评测.json
+```
+
+`--candidates`仅用于以输入及候选哈希绑定的历史候选清单复原，耗时不包括历史推理；不冒充全流程耗时。`--stems`复用必须通过输入与六个stem的来源哈希校验。所有实际产物和权重留本地，代码/配置/摘要推送私有GitHub。

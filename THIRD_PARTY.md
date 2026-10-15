@@ -20,3 +20,10 @@ User-supplied music is used only locally with user approval; no ownership or red
 - librosa0.11 pYIN: https://librosa.org/doc/0.11.0/generated/librosa.pyin.html ; used on separated vocal and bass stems with onset boundaries, not a trained multi-instrument classifier.
 - TinySoundFont Python bindings0.3.7 (MIT): https://github.com/nwhitehead/tinysoundfont-pybind ; offline synthesis only, PyAudio is not required for the code path used here and is omitted.
 - GeneralUser GS2.0.3 by S. Christian Collins: https://github.com/mrbumpy409/GeneralUser-GS , commit684543d5e5efaef08d02be50dcda8d552478fa60. SF2 SHA256 9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe. The upstream LICENSE v2.0 permits music creation and records qualifications about historical sample provenance. The library and its license remain local; no SoundFont is redistributed in this repository. WAV previews are rendered from MIDI using this sample bank, with no original-song audio blended in.
+
+## v0.1免费实验增补（2026-10-15）
+
+- Transkun 2.0.1，官方 https://github.com/Yujia-Yan/Transkun ，由PyPI同名2.0.1分发包安装，代码声明MIT。使用随包pretrained/2.0.pt（V2默认无踏板延长口径）与2.0.conf；权重与配置不上传。权重SHA256 `50a80010effc2a59ffcd068a95cd2b29bd7f23a27a3515bc3ccd209c89a3d44c`（56,408,978字节）；配置SHA256 `d3d989214eb148230ee5df476d994dcde6af595904d3f968f1221d2e3bea5ac6`。代码许可不自动替代单独权重商用审计，本轮为用户本地研究验证。
+- ADTOF-PyTorch 0.1.0，官方原作者仓库链接的移植 https://github.com/xavriley/ADTOF-pytorch ，固定Git提交 `85c192e78f716ea0b111cc8a5ee4a8f6a3a4f8a9`。随包权重SHA256 `1bc986e596ec47ba0b44916f87cd4a39f0b2bec23596df3fb5d0e87749217320`（3,617,805字节）。原始ADTOF https://github.com/MZehren/ADTOF 内容采用CC BY-NC-SA 4.0；移植不能消除原权重非商业约束。仅作研究对照，未进入v0.1锁定交付路线，也不默认用于商用发行。
+- 新组件使用项目work/sep-env隔离环境（torch/torchaudio2.5.1、numpy1.26.4）；完整当前环境固定于requirements-v01-specialists.txt。基线YourMT3仍使用项目.venv及原固定权重，不改全局环境。
+- 两套方案列出的MVSEP、Klangio、RipX、Logic、Aria-AMT等未在本轮调用或安装。公开能力与本曲成绩分开，不声称未测工具达到任何准确率。
