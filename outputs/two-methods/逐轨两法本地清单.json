@@ -1,0 +1,235 @@
+{
+  "package": "outputs/runs/two-methods/六轨各两法-12份单轨MID.zip",
+  "sha256": "19e262ed9819460c4737738ae6a7dc85b4d2c197d9548a0c87e8e26403824d78",
+  "bytes": 11930,
+  "scope": "六类各A/B本地流程共12单轨，非完整Top专用候选；无新推理，电吉他B从已有SW guitar原始预测导出",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375
+  },
+  "files": [
+    {
+      "category": "piano",
+      "method": "Demucs钢琴＋Transkun",
+      "file": "01-钢琴/A-Demucs钢琴_Transkun.mid",
+      "source": "outputs/runs/v01/development/单轨/piano.mid",
+      "sha256": "448ea62d1532f11ef144c7e1ca86ef63e4f73a8bc3daa0eb195b5665f4172b9e",
+      "bytes": 2330,
+      "score": {
+        "reference": 269,
+        "predicted": 297,
+        "matched": 246,
+        "extra": 51,
+        "missed": 23,
+        "precision": 0.8282828282828283,
+        "recall": 0.9144981412639405,
+        "f1": 0.8692579505300353
+      }
+    },
+    {
+      "category": "piano",
+      "method": "SW钢琴＋Transkun",
+      "file": "01-钢琴/B-SW钢琴_Transkun.mid",
+      "source": "outputs/runs/two-methods/sw-local-control/单轨/piano.mid",
+      "sha256": "051470b03b4e531c1d550d2209909e3378fdafc1ec98ec864f9ccb2d4c5c76fa",
+      "bytes": 2141,
+      "score": {
+        "reference": 269,
+        "predicted": 269,
+        "matched": 268,
+        "extra": 1,
+        "missed": 1,
+        "precision": 0.9962825278810409,
+        "recall": 0.9962825278810409,
+        "f1": 0.9962825278810409
+      }
+    },
+    {
+      "category": "acoustic_guitar",
+      "method": "Demucs吉他＋YourMT3",
+      "file": "02-木吉他/A-Demucs吉他_YourMT3.mid",
+      "source": "outputs/runs/v01/development/单轨/acoustic_guitar.mid",
+      "sha256": "bb1601024033c9f9edc4510c58bc769e932fbef0fcbb570cbbe2ba74a7083398",
+      "bytes": 736,
+      "score": {
+        "reference": 24,
+        "predicted": 70,
+        "matched": 8,
+        "extra": 62,
+        "missed": 16,
+        "precision": 0.11428571428571428,
+        "recall": 0.3333333333333333,
+        "f1": 0.1702127659574468
+      }
+    },
+    {
+      "category": "acoustic_guitar",
+      "method": "SW吉他＋YourMT3",
+      "file": "02-木吉他/B-SW吉他_YourMT3.mid",
+      "source": "outputs/runs/two-methods/sw-local-control/单轨/acoustic_guitar.mid",
+      "sha256": "bfaeb51a86e31fecb4563c7afc07685ba714ab5158a46a9a0347665e1b6a3f2e",
+      "bytes": 410,
+      "score": {
+        "reference": 24,
+        "predicted": 25,
+        "matched": 0,
+        "extra": 25,
+        "missed": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    {
+      "category": "electric_guitar",
+      "method": "原混音＋YourMT3",
+      "file": "03-电吉他清音/A-原混音_YourMT3.mid",
+      "source": "outputs/runs/v01/development/单轨/electric_guitar.mid",
+      "sha256": "afe842d5f47a32d0b5ee5eeaf4282979fa26af27665f005e68cac4d749a0880d",
+      "bytes": 357,
+      "score": {
+        "reference": 64,
+        "predicted": 23,
+        "matched": 6,
+        "extra": 17,
+        "missed": 58,
+        "precision": 0.2608695652173913,
+        "recall": 0.09375,
+        "f1": 0.13793103448275862
+      }
+    },
+    {
+      "category": "bass",
+      "method": "Demucs贝斯＋pYIN",
+      "file": "04-贝斯/A-Demucs贝斯_pYIN.mid",
+      "source": "outputs/runs/v01/development/单轨/bass.mid",
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0",
+      "bytes": 631,
+      "score": {
+        "reference": 36,
+        "predicted": 51,
+        "matched": 18,
+        "extra": 33,
+        "missed": 18,
+        "precision": 0.35294117647058826,
+        "recall": 0.5,
+        "f1": 0.41379310344827586
+      }
+    },
+    {
+      "category": "bass",
+      "method": "SW贝斯＋pYIN",
+      "file": "04-贝斯/B-SW贝斯_pYIN.mid",
+      "source": "outputs/runs/two-methods/sw-local-control/单轨/bass.mid",
+      "sha256": "14bf7a18866b34422c881b495982b5a4bf10645c4d0b1dab873f97d95cae955e",
+      "bytes": 515,
+      "score": {
+        "reference": 36,
+        "predicted": 37,
+        "matched": 12,
+        "extra": 25,
+        "missed": 24,
+        "precision": 0.32432432432432434,
+        "recall": 0.3333333333333333,
+        "f1": 0.3287671232876712
+      }
+    },
+    {
+      "category": "drums",
+      "method": "Demucs鼓＋YourMT3",
+      "file": "05-鼓/A-Demucs鼓_YourMT3.mid",
+      "source": "outputs/runs/v01/development/单轨/drums.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+      "bytes": 637,
+      "score": {
+        "reference": 94,
+        "predicted": 56,
+        "matched": 42,
+        "extra": 14,
+        "missed": 52,
+        "precision": 0.75,
+        "recall": 0.44680851063829785,
+        "f1": 0.56
+      }
+    },
+    {
+      "category": "drums",
+      "method": "SW鼓＋YourMT3",
+      "file": "05-鼓/B-SW鼓_YourMT3.mid",
+      "source": "outputs/runs/two-methods/sw-local-control/单轨/drums.mid",
+      "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+      "bytes": 806,
+      "score": {
+        "reference": 94,
+        "predicted": 79,
+        "matched": 48,
+        "extra": 31,
+        "missed": 46,
+        "precision": 0.6075949367088608,
+        "recall": 0.5106382978723404,
+        "f1": 0.5549132947976878
+      }
+    },
+    {
+      "category": "strings",
+      "method": "Demucs other＋YourMT3筛弦乐",
+      "file": "06-弦乐/A-Demucs other_YourMT3筛弦乐.mid",
+      "source": "outputs/runs/v01/development/单轨/strings.mid",
+      "sha256": "903d5c89f0960df7f2f47eeaf661376f5eb782a96eb31715144f4579be243436",
+      "bytes": 658,
+      "score": {
+        "reference": 7,
+        "predicted": 71,
+        "matched": 4,
+        "extra": 67,
+        "missed": 3,
+        "precision": 0.056338028169014086,
+        "recall": 0.5714285714285714,
+        "f1": 0.10256410256410256
+      }
+    },
+    {
+      "category": "strings",
+      "method": "SW other＋YourMT3筛弦乐",
+      "file": "06-弦乐/B-SW other_YourMT3筛弦乐.mid",
+      "source": "outputs/runs/two-methods/sw-local-control/单轨/strings.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+      "bytes": 451,
+      "score": {
+        "reference": 7,
+        "predicted": 39,
+        "matched": 3,
+        "extra": 36,
+        "missed": 4,
+        "precision": 0.07692307692307693,
+        "recall": 0.42857142857142855,
+        "f1": 0.13043478260869565
+      }
+    },
+    {
+      "category": "electric_guitar",
+      "method": "SW总吉他＋YourMT3筛电吉他",
+      "file": "03-电吉他清音/B-SW总吉他_YourMT3筛电吉他.mid",
+      "source": "work/v01/runtime/1792079033121801000/guitar.json",
+      "source_sha256": "f966c5702683896b4a1d835450f659c75751b0ee22caedd662d94301f36930b7",
+      "sha256": "6a8b0b683c26b24ed9d8735faa3a1dce3e2762a110d920157933d8be3ed84b86",
+      "bytes": 301,
+      "score": {
+        "reference": 64,
+        "predicted": 14,
+        "matched": 5,
+        "extra": 9,
+        "missed": 59,
+        "precision": 0.35714285714285715,
+        "recall": 0.078125,
+        "f1": 0.1282051282051282
+      },
+      "export": "Filter pre-existing raw predictions by electric_guitar; clean_notes duration60.0304375; write_midi default120BPM. No reference-dependent edit or new inference."
+    }
+  ],
+  "missing": [
+    "全部计划中的专用API候选尚未运行"
+  ],
+  "reference_manifest_sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732"
+}
