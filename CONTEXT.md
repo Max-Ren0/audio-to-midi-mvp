@@ -184,3 +184,10 @@
 - 收到Documents/RipX/Rips/李荣浩 - 不将就-[AudioTrimmer.com].mid，SHA98c09bfc94fdfd0139d470674928ee75e7ae854c4dd157418eaaf1f0cd99217b。本地副本outputs/runs/ripx-comparison/RipX-用户导出-单Piano轨.mid，原文件不改。
 - 实际仅一条Piano音符轨624音，Program0/channel0，另有节拍轨，256PPQ/59.780949秒，1403pitchwheel/20008polytouch；不能确认Simple导出。无其他五类音符轨，不能证明人声已排除。
 - 原样机械评分同时间映射14TP/624pred/494ref，F1=2.50447%，钢琴单类3.13550%。不作为RipX完整多轨/分离质量结论，不能直接与C0/C1排名。C2缺WAV，C3完整多轨仍缺。检查与JSON已写outputs/ripx-comparison，待冻结后独立复核。
+
+
+## RipX多轨重试（2026-10-15）
+- 用户同路径文件已更新SHA6669643e2b54fb02669b90b7895602aec5d3d2b1fece6f6b60285eeed09c312a；7物理轨，Voice360/Piano624/Guitar388/Bass96/Strings158/Percussion73，排除Voice后1339音，Program24吉他未分木电。无pitchwheel/polytouch。保留两次原始副本。
+- 共用旧映射评分19TP/1339pred/494ref，F1 2.0731%。起音例RipX第一组55/64为0，Transkun约.284，参考.424，提示导出原点疑点；没有按新文件另搜偏移。不能把分数当RipX分离质量排名。
+- outputs/ripx-comparison/RipX多轨对照报告.md、新检查/评分/试听校验JSON已保存；outputs/runs/ripx-comparison/RipX-器乐试听.mid/.wav仅移除Voice，不改其他音符或时间。C2仍缺分层WAV。
+- 旧单轨d57c1a2审查已返回通过，提示旧状态段落阅读矛盾；已将对照进度.md旧段标历史并链接最新报告。新多轨结果待冻结后独立复核。

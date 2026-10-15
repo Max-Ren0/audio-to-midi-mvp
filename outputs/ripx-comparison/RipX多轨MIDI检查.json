@@ -1,0 +1,118 @@
+{
+  "sha256": "6669643e2b54fb02669b90b7895602aec5d3d2b1fece6f6b60285eeed09c312a",
+  "local_copy": "outputs/runs/ripx-comparison/RipX-用户导出-多轨原始.mid",
+  "bytes": 14483,
+  "type": 1,
+  "ticks_per_beat": 256,
+  "duration_seconds": 59.7809487148439,
+  "event_counts": {
+    "copyright": 1,
+    "time_signature": 1,
+    "set_tempo": 36,
+    "end_of_track": 7,
+    "track_name": 6,
+    "control_change": 30,
+    "program_change": 6,
+    "key_signature": 5,
+    "note_on": 1699,
+    "note_off": 1699
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "",
+      "programs": [],
+      "note_on_count": 0,
+      "channels": []
+    },
+    {
+      "index": 1,
+      "name": "Voice",
+      "programs": [
+        {
+          "channel": 0,
+          "program": 53
+        }
+      ],
+      "note_on_count": 360,
+      "channels": [
+        0
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Piano",
+      "programs": [
+        {
+          "channel": 1,
+          "program": 0
+        }
+      ],
+      "note_on_count": 624,
+      "channels": [
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Guitar",
+      "programs": [
+        {
+          "channel": 2,
+          "program": 24
+        }
+      ],
+      "note_on_count": 388,
+      "channels": [
+        2
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Bass guitar",
+      "programs": [
+        {
+          "channel": 3,
+          "program": 33
+        }
+      ],
+      "note_on_count": 96,
+      "channels": [
+        3
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Strings",
+      "programs": [
+        {
+          "channel": 4,
+          "program": 48
+        }
+      ],
+      "note_on_count": 158,
+      "channels": [
+        4
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Percussion",
+      "programs": [
+        {
+          "channel": 9,
+          "program": 0
+        }
+      ],
+      "note_on_count": 73,
+      "channels": [
+        9
+      ]
+    }
+  ],
+  "exclusion": {
+    "track": "Voice",
+    "program": 53,
+    "notes": 360
+  }
+}

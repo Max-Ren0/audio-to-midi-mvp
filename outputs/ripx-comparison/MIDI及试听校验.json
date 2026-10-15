@@ -1,0 +1,18 @@
+{
+  "outputs/runs/ripx-comparison/RipX-器乐试听.mid": {
+    "bytes": 10433,
+    "sha256": "01725cbc30a9d19c11e27e74705bb903a34fc5b97f334cfec148a32b92791010"
+  },
+  "outputs/runs/ripx-comparison/RipX-用户导出-单Piano轨.mid": {
+    "bytes": 91044,
+    "sha256": "98c09bfc94fdfd0139d470674928ee75e7ae854c4dd157418eaaf1f0cd99217b"
+  },
+  "outputs/runs/ripx-comparison/RipX-器乐试听.wav": {
+    "bytes": 10810004,
+    "sha256": "9842557ec89808a4a1f7c9f918ea77c83e4c64bebdaa055f02718fc5aef1c241"
+  },
+  "outputs/runs/ripx-comparison/RipX-用户导出-多轨原始.mid": {
+    "bytes": 14483,
+    "sha256": "6669643e2b54fb02669b90b7895602aec5d3d2b1fece6f6b60285eeed09c312a"
+  }
+}
