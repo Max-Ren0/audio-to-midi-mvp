@@ -1,0 +1,11 @@
+{
+  "reference": {
+    "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/不将就 - 李荣浩（改编）.mid",
+    "sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3"
+  },
+  "prediction": {
+    "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/outputs/runs/reprocess-20261015-v2/不将就_多乐器.mid",
+    "sha256": "3ce04b8315a5cf54eaac5db70ab9986cd1ef114682b98a38326c13b02de266c8"
+  },
+  "metrics_sha256": "8780691bfb9f0655bb9c421f2c76bf03f621634664992cb18a39ed66152e5a15"
+}

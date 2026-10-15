@@ -15,3 +15,13 @@
 - If pushing fails, preserve local commits and report the failure; do not claim cloud synchronization succeeded.
 - Do not upload credentials, private input media, downloaded model weights, temporary competitor resources, or generated bulk results.
 - This is an agent workflow during active project work, not a background filesystem watcher.
+
+## Independent verification
+- The main agent completes a checkable version and freezes it as a Git commit before starting an independent verification subagent.
+- The verifier checks original requirements and actual artifacts, does not edit project files, and does not assume the main agent’s claims are correct.
+- Check omissions, factual or logical errors, and key boundaries. Report specific file locations and evidence; only run checks that preserve existing data and services.
+- The main agent evaluates each finding, fixes confirmed issues, freezes a new version, and re-verifies affected parts. Bind every review to a commit and artifact hashes when artifacts are not tracked.
+- Final delivery states what was verified, what was found and resolved, and remaining uncertainties.
+
+## Current target override (2026-10-15)
+- Ignore vocals from now on. Default target and acceptance cover piano, acoustic guitar, electric guitar, bass, drums, and strings. Input may contain vocals; vocal output is not required. Preserve historical artifacts.
