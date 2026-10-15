@@ -1,0 +1,115 @@
+{
+  "overall": {
+    "reference": 494,
+    "predicted": 472,
+    "matched": 337,
+    "extra": 135,
+    "missed": 157,
+    "precision": 0.7139830508474576,
+    "recall": 0.6821862348178138,
+    "f1": 0.6977225672877847
+  },
+  "per_category": {
+    "piano": {
+      "reference": 269,
+      "predicted": 269,
+      "matched": 268,
+      "extra": 1,
+      "missed": 1,
+      "precision": 0.9962825278810409,
+      "recall": 0.9962825278810409,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "reference": 24,
+      "predicted": 25,
+      "matched": 0,
+      "extra": 25,
+      "missed": 24,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "electric_guitar": {
+      "reference": 64,
+      "predicted": 23,
+      "matched": 6,
+      "extra": 17,
+      "missed": 58,
+      "precision": 0.2608695652173913,
+      "recall": 0.09375,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "reference": 36,
+      "predicted": 37,
+      "matched": 12,
+      "extra": 25,
+      "missed": 24,
+      "precision": 0.32432432432432434,
+      "recall": 0.3333333333333333,
+      "f1": 0.3287671232876712
+    },
+    "drums": {
+      "reference": 94,
+      "predicted": 79,
+      "matched": 48,
+      "extra": 31,
+      "missed": 46,
+      "precision": 0.6075949367088608,
+      "recall": 0.5106382978723404,
+      "f1": 0.5549132947976878
+    },
+    "strings": {
+      "reference": 7,
+      "predicted": 39,
+      "matched": 3,
+      "extra": 36,
+      "missed": 4,
+      "precision": 0.07692307692307693,
+      "recall": 0.42857142857142855,
+      "f1": 0.13043478260869565
+    }
+  },
+  "macro_f1": 0.35805479384297567,
+  "alignment": {
+    "scale": 0.9995,
+    "shift_seconds": 0.14,
+    "duration_seconds": 60.0304375
+  },
+  "reference_window": [
+    0.14,
+    60.140422281250004
+  ],
+  "reference_sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732",
+  "prediction_sha256": "08386c643056ee18ec36c25b064e08e2544c434b2a8ee5dfb49c3fabfc2ba966",
+  "scope": "six instruments, exact pitch/category, 50ms onset, one-to-one; shared alignment; no vocals",
+  "reference_track_manifest": {
+    "tracks": {
+      "piano": {
+        "path": "/Users/ringscherry/.codex/attachments/859c99bf-3bd7-40ff-8605-92ea139b7b2a/01-钢琴.mid",
+        "sha256": "a5a62b19513a3b025c5f85a04253b644eb7b47bc772914768284702d6635d7dd"
+      },
+      "acoustic_guitar": {
+        "path": "/Users/ringscherry/.codex/attachments/0a02e9a1-3434-48e9-81e3-05edd7350e1d/02-木吉他.mid",
+        "sha256": "0a34be1fd55852269a63324a7dc2865eb664d9e383bf41cf4cb0ae58ff955c51"
+      },
+      "electric_guitar": {
+        "path": "/Users/ringscherry/.codex/attachments/e40bf3fb-c82a-4807-aa6c-de379fd751b7/03-电吉他清音.mid",
+        "sha256": "23510775ebb9a944cbaf48e13a42ed940645e63b4bf843ec160ca221d591882f"
+      },
+      "bass": {
+        "path": "/Users/ringscherry/.codex/attachments/0169a6c6-4b9d-46d9-ac59-5248c94a49c0/04-贝斯.mid",
+        "sha256": "6e42978457f00deb4edd6260aa873463a379059e5bd7ccd3cf8e40683332d3f8"
+      },
+      "drums": {
+        "path": "/Users/ringscherry/.codex/attachments/10d35748-73f5-4eae-be23-78b229d287c0/05-鼓.mid",
+        "sha256": "1071658e4d2adad7e31a0bcc3fbdc9ea80bdbc13ab2c8469cb8eb3618b7780c6"
+      },
+      "strings": {
+        "path": "/Users/ringscherry/.codex/attachments/892492b7-6157-4e77-a757-de3de435e2c7/06-弦乐.mid",
+        "sha256": "cce70eebf4470fa127a998d71b2a4d2311c48e2f27b7d01fcc32ecc18ba5690c"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "jobs": [
+    {
+      "id": "acoustic-direct",
+      "sep_type": 66,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "acoustic-from-guitar",
+      "sep_type": 66,
+      "add_opt2": 1,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "electric-direct",
+      "sep_type": 81,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "electric-from-guitar",
+      "sep_type": 81,
+      "add_opt2": 1,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "bass-ensemble",
+      "sep_type": 41,
+      "add_opt1": 5,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "drums-ensemble",
+      "sep_type": 44,
+      "add_opt1": 6,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "strings-mvsep-bs",
+      "sep_type": 52,
+      "add_opt1": 1,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "strings-gilliaan-bs",
+      "sep_type": 52,
+      "add_opt1": 2,
+      "add_opt2": 0,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials"
+    },
+    {
+      "id": "piano-ensemble-backup",
+      "sep_type": 29,
+      "add_opt1": 4,
+      "output_format": 1,
+      "is_demo": 0,
+      "status": "not_submitted_missing_credentials",
+      "reason": "fallback if local Logic control remains unavailable; a diverse practical candidate, not claimed leaderboard runner-up"
+    }
+  ],
+  "api_base": "https://mvsep.com/api",
+  "source_documentation": "https://mvsep.com/en/full_api",
+  "concurrency": 1,
+  "no_automatic_purchase": true,
+  "no_submission_without_configured_credentials": true
+}

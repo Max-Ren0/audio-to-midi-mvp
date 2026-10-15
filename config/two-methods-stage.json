@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0-local-stage",
+  "routes": {
+    "piano": "sw",
+    "acoustic_guitar": "baseline",
+    "electric_guitar": "baseline",
+    "bass": "baseline",
+    "drums": "baseline",
+    "strings": "sw"
+  },
+  "selection": "whole-track category F1 on disclosed previously seen development excerpt; not blind",
+  "status": "partial_local_control_not_two_top_methods_completed"
+}

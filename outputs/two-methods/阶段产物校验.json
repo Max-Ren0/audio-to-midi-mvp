@@ -1,0 +1,122 @@
+{
+  "outputs/runs/two-methods/sw-local-control/单轨/acoustic_guitar.mid": {
+    "bytes": 410,
+    "sha256": "bfaeb51a86e31fecb4563c7afc07685ba714ab5158a46a9a0347665e1b6a3f2e"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/acoustic_guitar.wav": {
+    "bytes": 2432160,
+    "sha256": "74376af70354fc240f5e4494a76b615c2a1d7fa667ae6a10dc7782ff86e4de20"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/bass.mid": {
+    "bytes": 515,
+    "sha256": "14bf7a18866b34422c881b495982b5a4bf10645c4d0b1dab873f97d95cae955e"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/bass.wav": {
+    "bytes": 10853972,
+    "sha256": "3daa8792d4ef71e4dbb9798b61af7fb7a158ded45cd9efbb8017a01214eb4cc6"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/drums.mid": {
+    "bytes": 806,
+    "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/drums.wav": {
+    "bytes": 10760444,
+    "sha256": "dcfe132e858e98e0cef9c2df98ebc6a9e6052ff05e8a98e0bdac261966283662"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/electric_guitar.mid": {
+    "bytes": 357,
+    "sha256": "afe842d5f47a32d0b5ee5eeaf4282979fa26af27665f005e68cac4d749a0880d"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/electric_guitar.wav": {
+    "bytes": 10741152,
+    "sha256": "d40288e60502fbd36745499b0e804d6b0c559aaaa93191857164854c1019cdd4"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/piano.mid": {
+    "bytes": 2141,
+    "sha256": "051470b03b4e531c1d550d2209909e3378fdafc1ec98ec864f9ccb2d4c5c76fa"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/piano.wav": {
+    "bytes": 10850296,
+    "sha256": "c9dcc27bcd7dcdeff5af5789477d7f738ba70e549c98173490c60eab5579a608"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/strings.mid": {
+    "bytes": 451,
+    "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf"
+  },
+  "outputs/runs/two-methods/sw-local-control/单轨/strings.wav": {
+    "bytes": 10379896,
+    "sha256": "75b2e4fae7b9dee9a5ec8301ca632dfcfc91623ac90edbd4ffaf749ebac64e92"
+  },
+  "outputs/runs/two-methods/sw-local-control/多乐器.mid": {
+    "bytes": 4132,
+    "sha256": "08386c643056ee18ec36c25b064e08e2544c434b2a8ee5dfb49c3fabfc2ba966"
+  },
+  "outputs/runs/two-methods/sw-local-control/运行报告.json": {
+    "bytes": 80110,
+    "sha256": "5a511e3a273e4ab0fd008726ae4bd946fd40ba53537834ace092a2136e5bacd6"
+  },
+  "outputs/runs/two-methods/sw-local-control/音色试听.wav": {
+    "bytes": 10853972,
+    "sha256": "ef22539255f55266d28c259d8fc905eca1944bf1b083ad2e87322fd3ae5e8385"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/01-钢琴.mid": {
+    "bytes": 2141,
+    "sha256": "051470b03b4e531c1d550d2209909e3378fdafc1ec98ec864f9ccb2d4c5c76fa"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/01-钢琴.wav": {
+    "bytes": 10850296,
+    "sha256": "c9dcc27bcd7dcdeff5af5789477d7f738ba70e549c98173490c60eab5579a608"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/02-木吉他.mid": {
+    "bytes": 736,
+    "sha256": "bb1601024033c9f9edc4510c58bc769e932fbef0fcbb570cbbe2ba74a7083398"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/02-木吉他.wav": {
+    "bytes": 10741152,
+    "sha256": "60593b7d47ac8e90c2fd012717181c1fbddf498deb210ae57565705d2cb15f07"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/03-电吉他清音.mid": {
+    "bytes": 357,
+    "sha256": "afe842d5f47a32d0b5ee5eeaf4282979fa26af27665f005e68cac4d749a0880d"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/03-电吉他清音.wav": {
+    "bytes": 10741152,
+    "sha256": "d40288e60502fbd36745499b0e804d6b0c559aaaa93191857164854c1019cdd4"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/04-贝斯.mid": {
+    "bytes": 631,
+    "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/04-贝斯.wav": {
+    "bytes": 10853972,
+    "sha256": "b4ebc08bea884c8b269d348e72411ddbb3b2f81c335ab31e97e79a28f1bed491"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/05-鼓.mid": {
+    "bytes": 637,
+    "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/05-鼓.wav": {
+    "bytes": 10760444,
+    "sha256": "11e7b4e7a01b364eb93d51e90c5b2d099f5ac5e09a011010bb7791f5f6958ec1"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/06-弦乐.mid": {
+    "bytes": 451,
+    "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf"
+  },
+  "outputs/runs/two-methods/阶段六轨/单轨/06-弦乐.wav": {
+    "bytes": 10379896,
+    "sha256": "75b2e4fae7b9dee9a5ec8301ca632dfcfc91623ac90edbd4ffaf749ebac64e92"
+  },
+  "outputs/runs/two-methods/阶段六轨/多乐器.mid": {
+    "bytes": 4405,
+    "sha256": "8eb5eef156b5bda49d5c99bdbef2f9aaf12230797898a1d6fad167690c935874"
+  },
+  "outputs/runs/two-methods/阶段六轨/选择与限制.json": {
+    "bytes": 2567,
+    "sha256": "ddeada107a9765e85f2cbb85364e4f0e7cc5997515383fe49d36540525c352f2"
+  },
+  "outputs/runs/two-methods/阶段六轨/音色试听.wav": {
+    "bytes": 10853972,
+    "sha256": "4e9a94202484a8e28da8c5e34f5c592ea5449551324637c212038415c2bffab7"
+  }
+}

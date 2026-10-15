@@ -1,0 +1,99 @@
+{
+  "overall": {
+    "reference": 494,
+    "predicted": 508,
+    "matched": 345,
+    "extra": 163,
+    "missed": 149,
+    "precision": 0.6791338582677166,
+    "recall": 0.6983805668016194,
+    "f1": 0.688622754491018
+  },
+  "per_category": {
+    "piano": {
+      "reference": 269,
+      "predicted": 269,
+      "matched": 268,
+      "extra": 1,
+      "missed": 1,
+      "precision": 0.9962825278810409,
+      "recall": 0.9962825278810409,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "reference": 24,
+      "predicted": 70,
+      "matched": 8,
+      "extra": 62,
+      "missed": 16,
+      "precision": 0.11428571428571428,
+      "recall": 0.3333333333333333,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "reference": 64,
+      "predicted": 23,
+      "matched": 6,
+      "extra": 17,
+      "missed": 58,
+      "precision": 0.2608695652173913,
+      "recall": 0.09375,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "reference": 36,
+      "predicted": 51,
+      "matched": 18,
+      "extra": 33,
+      "missed": 18,
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "f1": 0.41379310344827586
+    },
+    "drums": {
+      "reference": 94,
+      "predicted": 56,
+      "matched": 42,
+      "extra": 14,
+      "missed": 52,
+      "precision": 0.75,
+      "recall": 0.44680851063829785,
+      "f1": 0.56
+    },
+    "strings": {
+      "reference": 7,
+      "predicted": 39,
+      "matched": 3,
+      "extra": 36,
+      "missed": 4,
+      "precision": 0.07692307692307693,
+      "recall": 0.42857142857142855,
+      "f1": 0.13043478260869565
+    }
+  },
+  "macro_f1": 0.4014423690630364,
+  "alignment": {
+    "scale": 0.9995,
+    "shift_seconds": 0.14,
+    "duration_seconds": 60.0304375
+  },
+  "reference_window": [
+    0.14,
+    60.140422281250004
+  ],
+  "selection": "whole-category maximum F1 on this disclosed development excerpt, not blind validation",
+  "routes": {
+    "piano": "SW本地对照",
+    "acoustic_guitar": "旧v0.1",
+    "electric_guitar": "旧v0.1",
+    "bass": "旧v0.1",
+    "drums": "旧v0.1",
+    "strings": "SW本地对照"
+  },
+  "source_midi_sha256": {
+    "outputs/runs/v01/development/多乐器.mid": "ba7661c8c1f62efd649e66ac8474dc2915c816af3997a5f50886729b909d7e32",
+    "outputs/runs/two-methods/sw-local-control/多乐器.mid": "08386c643056ee18ec36c25b064e08e2544c434b2a8ee5dfb49c3fabfc2ba966"
+  },
+  "prediction_sha256": "8eb5eef156b5bda49d5c99bdbef2f9aaf12230797898a1d6fad167690c935874",
+  "status": "partial_local_stage_not_requested_two_top_methods_complete"
+}

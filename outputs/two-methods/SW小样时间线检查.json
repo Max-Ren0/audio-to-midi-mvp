@@ -1,0 +1,7 @@
+{
+  "frames": 661500,
+  "sample_rate": 44100,
+  "all_stems_same_shape_and_finite": true,
+  "mixture_sum_cross_correlation_lag_samples_within_half_second": 0,
+  "not_a_source_separation_quality_score": true
+}

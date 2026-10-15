@@ -27,6 +27,24 @@ def read_notes(path: Path) -> list[NoteEvent]:
     return sorted(notes,key=lambda n:(n.onset,n.category,n.pitch))
 
 
+def load_reference_tracks(manifest_path: Path) -> list[NoteEvent]:
+    """Load six hash-bound single-category references on their original timelines."""
+    import hashlib,json
+    tracks=json.loads(manifest_path.read_text())['tracks']
+    if set(tracks)!=set(INSTRUMENTS):raise ValueError('Reference manifest must contain all six categories')
+    result=[]
+    for category,entry in tracks.items():
+        path=Path(entry['path'])
+        if not path.is_absolute():path=manifest_path.parent/path
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=entry['sha256']:
+            raise ValueError(f'Reference hash mismatch: {category}')
+        notes=read_notes(path)
+        if any(n.category!=category for n in notes):
+            raise ValueError(f'Reference category mismatch: {category}')
+        result.extend(notes)
+    return sorted(result,key=lambda n:(n.onset,n.category,n.pitch))
+
+
 def assemble(candidates: dict[str,list[NoteEvent]],routes: dict[str,str],duration: float) -> list[NoteEvent]:
     """Select whole category routes, never relabel individual model predictions."""
     result=[]

@@ -1,0 +1,48 @@
+{
+  "input_sha256": "e2028082414f0ec63a731db15df4ac7b6d0d71156320ec0fc705f5f49658cfd3",
+  "duration_seconds": 15.0,
+  "weight_sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e",
+  "config_sha256": "e17a3b4bac1b924bcb521f569dcbf8b0318c23effec026de81eb95351b5fc8af",
+  "code_commit": "6fdad13686bb7e84d029ec66f9dbe76e65c93ebf",
+  "cpu_threads": 2,
+  "amp": false,
+  "elapsed_seconds": 148.03488408299745,
+  "files": {
+    "Bass": {
+      "path": "work/two-methods/sw-probe/bass.wav",
+      "sha256": "59e033a65370014c6f1e97e95f131f91f52f3ff4aa5629c3cf961551362aa865",
+      "rms": 0.040944647043943405,
+      "peak": 0.20394717156887054
+    },
+    "Drums": {
+      "path": "work/two-methods/sw-probe/drums.wav",
+      "sha256": "75000e7f672fe24d6d7fa013e3124d127e0caf5c0c665998a30aa73fe2b4a617",
+      "rms": 0.0024790025781840086,
+      "peak": 0.11352090537548065
+    },
+    "Other": {
+      "path": "work/two-methods/sw-probe/other.wav",
+      "sha256": "d3f7f784f00c9ecdc9dce4eb97fb8d4b2179f90316ed60d780f3433e40eabe0f",
+      "rms": 0.02957569807767868,
+      "peak": 0.2947470545768738
+    },
+    "Vocals": {
+      "path": "work/two-methods/sw-probe/vocals.wav",
+      "sha256": "52b5c7673a9594e13db7b2a37626b47c989db39cf5ef05b443afeb72cd62c58c",
+      "rms": 0.03203163295984268,
+      "peak": 0.35944896936416626
+    },
+    "Guitar": {
+      "path": "work/two-methods/sw-probe/guitar.wav",
+      "sha256": "5fd76d35981e3772ca84680dc754dc9e5e835e91161094cebb4cac3f7e9bca04",
+      "rms": 0.04832925647497177,
+      "peak": 0.2706608176231384
+    },
+    "Piano": {
+      "path": "work/two-methods/sw-probe/piano.wav",
+      "sha256": "3be698b099f2e4581f0c2be391fad99c3275e1ad7e1de197263b85139637e02a",
+      "rms": 0.0480470210313797,
+      "peak": 0.37163877487182617
+    }
+  }
+}

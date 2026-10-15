@@ -1,5 +1,5 @@
 {
-  "status": "running_local_SW_probe_API_credentials_missing",
+  "status": "local_stage_completed_provider_pairs_pending_credentials",
   "input": "existing AudioTrimmer 60.0304375s MP3",
   "reference": "six uploaded MID files, same note data as prior reference within 1us",
   "limits": {
@@ -23,9 +23,61 @@
     },
     {
       "id": "sw-full60",
-      "status": "registered_before_start",
+      "status": "passed",
       "model": "same SW weight/config",
-      "input": "work/two-methods/input-60.wav"
+      "input": "work/two-methods/input-60.wav",
+      "success": true,
+      "peak_memory_bytes": 2963914752,
+      "attempts": 1,
+      "elapsed_seconds": 323.49016733299504
+    },
+    {
+      "id": "sw-local-bass",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 587546624,
+      "attempts": 1,
+      "elapsed_seconds": 6.500725459001842
+    },
+    {
+      "id": "sw-local-drums_mt3",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 2441707520,
+      "attempts": 1,
+      "elapsed_seconds": 25.81178654100222
+    },
+    {
+      "id": "sw-local-guitar",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 2612756480,
+      "attempts": 1,
+      "elapsed_seconds": 28.218903417000547
+    },
+    {
+      "id": "sw-local-mix",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 2936061952,
+      "attempts": 1,
+      "elapsed_seconds": 44.74176379200071
+    },
+    {
+      "id": "sw-local-piano",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 1811709952,
+      "attempts": 1,
+      "elapsed_seconds": 21.81492708299629
+    },
+    {
+      "id": "sw-local-strings",
+      "status": "passed",
+      "purpose": "local control with existing transcriber; not a completed top-method pair",
+      "peak_memory_bytes": 2558148608,
+      "attempts": 1,
+      "elapsed_seconds": 28.857771708004293
     }
   ],
   "constraints": [
@@ -33,5 +85,7 @@
     "No vocal score",
     "No per-note reference-based relabeling",
     "Whole-track candidate selection on disclosed development excerpt only; no blind-quality claim"
-  ]
+  ],
+  "actual_new_model_process_attempts": 8,
+  "local_source_separation_plus_transcription_seconds_excluding_probe_download_assembly": 480.9390460829891
 }

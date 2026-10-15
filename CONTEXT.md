@@ -222,3 +222,10 @@
 - work/two-methods/run_sw.py scratch调用上游demix，首/中/尾identity时线测试通过。15秒探测由session2732正在运行，日志sw-probe.log，结束写sw-probe-run.json，模型产物sw-probe/。任务事前登记outputs/two-methods/实验执行登记.json（CPU2/RSS6GiB/1800s/总20尝试）。其余方案未启动，不拿旧产物冒充。
 - Logic Pro12.3.1已由主agent开独立空音频项目，为钢琴B对照；保存到work/two-methods对话框保存灰且随后控制超时，未导入音频/分离、未强退。不要干扰用户进程/界面。
 - 两方法实施计划.md记录A/B矩阵：pianoSWvsLogic；木/电各专用直接vs从guitar提取；bass ensemblevsSW；drums ensemblevsSW；strings官方BSvsGilliaan。木电是两流程而非两模型，均非全球前二实证。尚无本轮六轨MID。
+
+- SW15秒实测通过：150.573秒/RSS3090366464字节/1次；完整60秒已注册运行session32838，日志sw-full.log，结束sw-full-run.json。计划随后现有run_v01配sw-local-control做六轨本地对照，electric仍原mix，不冒充完整双Top方法。新六标准loader经历4RED后4GREEN，全套71通过（4.46s）。THIRD_PARTY/requirements-roformer-experiment.txt记录源与许可不确定性。实验脚本与原配置复制outputs/two-methods便于复现。
+
+- SW60实际323.49秒/RSS2963914752/1次；后续六模型转谱157.45秒/各1次。SW对照F1 69.7723%，piano268/269TP/pred（99.6283%），wood0、bass32.88、drums55.49、strings13.04，eG仍原mix13.79。
+- 按整轨开发F1在旧v0.1/SW间选择，阶段稿508音/345TP/494ref，micro68.8623%、macro40.1442%；piano/strings用SW，其余旧版。没有逐音oracle。config/two-methods-stage.json +阶段候选来源.json由现有runner重建MID字节完全一致。
+- outputs/runs/two-methods/阶段六轨/多乐器.mid、音色试听.wav、单轨6套、六轨阶段版.zip已产出（不上传媒体）；报告阶段交付报告.md明确双Top任务未完成，远程8项仍缺API访问，追加钢琴API29/4组合作为Logic受控入口不可用时替代（未提交，不称榜第二）。
+- 本轮新模型实际8进程尝试（probe/full+6），<=20。71测试已通过；小样真实分离总和互相关峰值0样本，非SDR。待冻结后独立验证。新凭据文件work/private/mvsep-api-token.txt为空/0600/忽略Git，未读取或泄露任何用户密钥。

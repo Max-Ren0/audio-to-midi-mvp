@@ -27,3 +27,12 @@ User-supplied music is used only locally with user approval; no ownership or red
 - ADTOF-PyTorch 0.1.0，官方原作者仓库链接的移植 https://github.com/xavriley/ADTOF-pytorch ，固定Git提交 `85c192e78f716ea0b111cc8a5ee4a8f6a3a4f8a9`。随包权重SHA256 `1bc986e596ec47ba0b44916f87cd4a39f0b2bec23596df3fb5d0e87749217320`（3,617,805字节）。原始ADTOF https://github.com/MZehren/ADTOF 内容采用CC BY-NC-SA 4.0；移植不能消除原权重非商业约束。仅作研究对照，未进入v0.1锁定交付路线，也不默认用于商用发行。
 - 新组件使用项目work/sep-env隔离环境（torch/torchaudio2.5.1、numpy1.26.4）；完整当前环境固定于requirements-v01-specialists.txt。基线YourMT3仍使用项目.venv及原固定权重，不改全局环境。
 - 两套方案列出的MVSEP、Klangio、RipX、Logic、Aria-AMT等未在本轮调用或安装。公开能力与本曲成绩分开，不声称未测工具达到任何准确率。
+
+
+## BS-Roformer-SW本地对照（2026-10-15）
+
+- 推理源码：[ZFTurbo/MSST](https://github.com/ZFTurbo/Music-Source-Separation-Training)，固定6fdad13686bb7e84d029ec66f9dbe76e65c93ebf。架构BSRoformer；仅本地CPU推理，torch.load(weights_only=True)，1939个state键strict加载通过。
+- 原jarredou模型地址401，使用[Blakus重托管](https://huggingface.co/Blakus/bs_roformer_sw_6stem/tree/dd755f5f5eaa1b01deb970fb296a55f6fec458a6)，权重699412152字节，SHA256 24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e，与LFS元数据一致。上传者称恢复原模型；没有验证其与MVSEP服务当前checkpoint字节相同。
+- 重托管模型卡写MIT，但[另一转换提供者的来源说明](https://huggingface.co/elicwhite/bs-roformer-sw-6stem-onnx)明确原权重无独立许可和训练来源信息，因此本实验不构成商用授权审计。代码许可与模型权重许可分开。未用ONNX转换权重。
+- config原件在outputs/two-methods/SW-config.yaml；CPU2线程、float32/AMP关、chunk588800、overlap2、batch1；记录与榜单服务配置未必相同。
+- 额外依赖固定requirements-roformer-experiment.txt，仅work/sep-env，不修改全局。原有torch2.5.1/numpy1.26.4环境沿用。
