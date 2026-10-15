@@ -191,3 +191,5 @@
 - 共用旧映射评分19TP/1339pred/494ref，F1 2.0731%。起音例RipX第一组55/64为0，Transkun约.284，参考.424，提示导出原点疑点；没有按新文件另搜偏移。不能把分数当RipX分离质量排名。
 - outputs/ripx-comparison/RipX多轨对照报告.md、新检查/评分/试听校验JSON已保存；outputs/runs/ripx-comparison/RipX-器乐试听.mid/.wav仅移除Voice，不改其他音符或时间。C2仍缺分层WAV。
 - 旧单轨d57c1a2审查已返回通过，提示旧状态段落阅读矛盾；已将对照进度.md旧段标历史并链接最新报告。新多轨结果待冻结后独立复核。
+
+- 冻结45d119f后verify_ripx_multitrack独立复算所有逐类指标/全tempo一致，1699音配对完整、Voice排除正确、去Voice副本其余整轨逐事件相同、WAV结构/哈希通过；另8层MID与主文件tick/pitch/velocity/tempo相同。发现报告第二个例子将持续55误说为新起音，已改为只比较重新起音的64，并说明55延续。评分不变。待修正文案冻结复验。
