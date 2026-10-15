@@ -178,3 +178,9 @@
 - 用户要求主agent直接导出并评估；本轮成功重新连接RipX、通过File > Export打开导出框。窗口显示WAV16bit/44.1kHz/Stereo、Full Rip、Single File，默认路径Documents/RipX/Rips。没有成功改变选项或导出文件。
 - AX只暴露一个dialog，没有内部控件；坐标点击持续报noWindowsAvailable。Tab无可观察焦点变化，AX Raise不解决，Escape能关闭窗口，重开仍相同。说明当前不能把问题笼统说成应用卡住，是自绘导出框自动控制阻塞。
 - 已停留Export窗口，并异步请求用户手动WAV Full Rip/Separate Layers，以及MIDI Simple Full Rip/Filter Notes关闭/Single File，保存Desktop/吉他产品/v0.0/test/RipX对照（目录已创建）。等待导出后主agent继续，无新增模型推理或分数。
+
+
+## RipX用户MIDI新交付（2026-10-15）
+- 收到Documents/RipX/Rips/李荣浩 - 不将就-[AudioTrimmer.com].mid，SHA98c09bfc94fdfd0139d470674928ee75e7ae854c4dd157418eaaf1f0cd99217b。本地副本outputs/runs/ripx-comparison/RipX-用户导出-单Piano轨.mid，原文件不改。
+- 实际仅一条Piano音符轨624音，Program0/channel0，另有节拍轨，256PPQ/59.780949秒，1403pitchwheel/20008polytouch；不能确认Simple导出。无其他五类音符轨，不能证明人声已排除。
+- 原样机械评分同时间映射14TP/624pred/494ref，F1=2.50447%，钢琴单类3.13550%。不作为RipX完整多轨/分离质量结论，不能直接与C0/C1排名。C2缺WAV，C3完整多轨仍缺。检查与JSON已写outputs/ripx-comparison，待冻结后独立复核。

@@ -1,0 +1,45 @@
+{
+  "source": "/Users/ringscherry/Documents/RipX/Rips/李荣浩 - 不将就-[AudioTrimmer.com].mid",
+  "local_copy": "outputs/runs/ripx-comparison/RipX-用户导出-单Piano轨.mid",
+  "sha256": "98c09bfc94fdfd0139d470674928ee75e7ae854c4dd157418eaaf1f0cd99217b",
+  "type": 1,
+  "ticks_per_beat": 256,
+  "duration_seconds": 59.78094871484527,
+  "event_counts": {
+    "copyright": 1,
+    "time_signature": 1,
+    "set_tempo": 36,
+    "end_of_track": 2,
+    "track_name": 1,
+    "control_change": 5,
+    "program_change": 1,
+    "key_signature": 1,
+    "note_on": 624,
+    "polytouch": 20008,
+    "pitchwheel": 1403,
+    "note_off": 624
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "name": "",
+      "programs": [],
+      "note_on_count": 0,
+      "channels": []
+    },
+    {
+      "index": 1,
+      "name": "Piano",
+      "programs": [
+        {
+          "channel": 0,
+          "program": 0
+        }
+      ],
+      "note_on_count": 624,
+      "channels": [
+        0
+      ]
+    }
+  ]
+}

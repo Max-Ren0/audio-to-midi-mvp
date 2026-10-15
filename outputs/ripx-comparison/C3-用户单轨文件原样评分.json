@@ -1,0 +1,94 @@
+{
+  "overall": {
+    "reference": 494,
+    "predicted": 624,
+    "matched": 14,
+    "extra": 610,
+    "missed": 480,
+    "precision": 0.022435897435897436,
+    "recall": 0.02834008097165992,
+    "f1": 0.025044722719141325
+  },
+  "per_category": {
+    "piano": {
+      "reference": 269,
+      "predicted": 624,
+      "matched": 14,
+      "extra": 610,
+      "missed": 255,
+      "precision": 0.022435897435897436,
+      "recall": 0.05204460966542751,
+      "f1": 0.03135498320268757
+    },
+    "acoustic_guitar": {
+      "reference": 24,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 24,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "electric_guitar": {
+      "reference": 64,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 64,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "bass": {
+      "reference": 36,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 36,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "drums": {
+      "reference": 94,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 94,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "strings": {
+      "reference": 7,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 7,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  },
+  "macro_f1": 0.005225830533781262,
+  "alignment": {
+    "scale": 0.9995,
+    "shift_seconds": 0.14,
+    "duration_seconds": 60.0304375
+  },
+  "reference_window": [
+    0.14,
+    60.140422281250004
+  ],
+  "status": "provisional_literal_file_score_not_validated_multitrack_export",
+  "prediction_sha256": "98c09bfc94fdfd0139d470674928ee75e7ae854c4dd157418eaaf1f0cd99217b",
+  "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3",
+  "warnings": [
+    "Only Piano track; not a six-instrument export",
+    "Vocal contamination cannot be excluded from collapsed track",
+    "Many pitchwheel/polytouch events; plain note-pitch metric does not model continuous bends",
+    "Fixed prior alignment not independently verified for this export",
+    "Do not treat this score as RipX separation or full-system quality"
+  ]
+}
