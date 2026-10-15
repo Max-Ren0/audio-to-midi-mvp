@@ -213,3 +213,12 @@
 - outputs/separation-top6/六轨分离优先名单.md保存依据。仅建议，无推理/上传/付费，无新MID。冻结后独立资料核对。
 
 - 005d25a冻结后verify_top6_separation独立浏览官方榜/API，所有数值、排除原始stem参考与木电模式一致，无关键错误。独立核对.md保存结果，依旧没有本曲实测/免费部署/全球冠军结论。
+
+
+## 六轨双方法实际执行（2026-10-15）
+- 用户要求每轨两优先方法实测、合成六轨MID并用新上传六个MID评估。分支codex/v01-two-methods，起点e900269，开始工作区干净。六标准在outputs/two-methods/六轨标准校验.json；各类别音高/起止/力度与旧整标准在1us内相同，沿用60秒MP3而非缺失的原313秒音频。
+- MVSEP API官方要求账号key（免费单并发也要），本机未配置；已异步询问用户账号/额度，尚无回复，未上传/付费。IAB不可用。木电专用/多模型服务尚未实际调用。
+- 本地SW已下载/哈希核验/strict1939键加载成功：Blakus重托管固定dd755f5、699412152bytes、SHA24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e；原jarredou路径401，权重许可/训练来源未完整核实。MSST固定6fdad13686bb7e84d029ec66f9dbe76e65c93ebf。work/sep-env按上游加4依赖（einops调0.8.1），不改全局。
+- work/two-methods/run_sw.py scratch调用上游demix，首/中/尾identity时线测试通过。15秒探测由session2732正在运行，日志sw-probe.log，结束写sw-probe-run.json，模型产物sw-probe/。任务事前登记outputs/two-methods/实验执行登记.json（CPU2/RSS6GiB/1800s/总20尝试）。其余方案未启动，不拿旧产物冒充。
+- Logic Pro12.3.1已由主agent开独立空音频项目，为钢琴B对照；保存到work/two-methods对话框保存灰且随后控制超时，未导入音频/分离、未强退。不要干扰用户进程/界面。
+- 两方法实施计划.md记录A/B矩阵：pianoSWvsLogic；木/电各专用直接vs从guitar提取；bass ensemblevsSW；drums ensemblevsSW；strings官方BSvsGilliaan。木电是两流程而非两模型，均非全球前二实证。尚无本轮六轨MID。

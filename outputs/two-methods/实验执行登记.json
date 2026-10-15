@@ -1,0 +1,37 @@
+{
+  "status": "running_local_SW_probe_API_credentials_missing",
+  "input": "existing AudioTrimmer 60.0304375s MP3",
+  "reference": "six uploaded MID files, same note data as prior reference within 1us",
+  "limits": {
+    "cpu_threads": 2,
+    "rss_GiB": 6,
+    "timeout_seconds_per_stage": 1800,
+    "max_new_model_process_attempts": 20,
+    "max_retry": 1
+  },
+  "tasks": [
+    {
+      "id": "sw-probe15",
+      "status": "passed",
+      "model": "BS-Roformer-SW rehost dd755f5",
+      "weight_sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e",
+      "purpose": "15s resource and output validation; not a leaderboard-equivalence claim",
+      "success": true,
+      "peak_memory_bytes": 3090366464,
+      "attempts": 1,
+      "elapsed_seconds": 150.573189499999
+    },
+    {
+      "id": "sw-full60",
+      "status": "registered_before_start",
+      "model": "same SW weight/config",
+      "input": "work/two-methods/input-60.wav"
+    }
+  ],
+  "constraints": [
+    "No payment or external audio upload yet",
+    "No vocal score",
+    "No per-note reference-based relabeling",
+    "Whole-track candidate selection on disclosed development excerpt only; no blind-quality claim"
+  ]
+}

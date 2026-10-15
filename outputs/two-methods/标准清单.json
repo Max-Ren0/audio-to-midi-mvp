@@ -1,0 +1,28 @@
+{
+  "tracks": {
+    "piano": {
+      "path": "/Users/ringscherry/.codex/attachments/859c99bf-3bd7-40ff-8605-92ea139b7b2a/01-钢琴.mid",
+      "sha256": "a5a62b19513a3b025c5f85a04253b644eb7b47bc772914768284702d6635d7dd"
+    },
+    "acoustic_guitar": {
+      "path": "/Users/ringscherry/.codex/attachments/0a02e9a1-3434-48e9-81e3-05edd7350e1d/02-木吉他.mid",
+      "sha256": "0a34be1fd55852269a63324a7dc2865eb664d9e383bf41cf4cb0ae58ff955c51"
+    },
+    "electric_guitar": {
+      "path": "/Users/ringscherry/.codex/attachments/e40bf3fb-c82a-4807-aa6c-de379fd751b7/03-电吉他清音.mid",
+      "sha256": "23510775ebb9a944cbaf48e13a42ed940645e63b4bf843ec160ca221d591882f"
+    },
+    "bass": {
+      "path": "/Users/ringscherry/.codex/attachments/0169a6c6-4b9d-46d9-ac59-5248c94a49c0/04-贝斯.mid",
+      "sha256": "6e42978457f00deb4edd6260aa873463a379059e5bd7ccd3cf8e40683332d3f8"
+    },
+    "drums": {
+      "path": "/Users/ringscherry/.codex/attachments/10d35748-73f5-4eae-be23-78b229d287c0/05-鼓.mid",
+      "sha256": "1071658e4d2adad7e31a0bcc3fbdc9ea80bdbc13ab2c8469cb8eb3618b7780c6"
+    },
+    "strings": {
+      "path": "/Users/ringscherry/.codex/attachments/892492b7-6157-4e77-a757-de3de435e2c7/06-弦乐.mid",
+      "sha256": "cce70eebf4470fa127a998d71b2a4d2311c48e2f27b7d01fcc32ecc18ba5690c"
+    }
+  }
+}
