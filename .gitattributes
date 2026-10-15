@@ -1,0 +1,2 @@
+# Preserve the downloaded model configuration byte-for-byte (upstream CRLF).
+outputs/two-methods/SW-config.yaml -text whitespace=cr-at-eol
