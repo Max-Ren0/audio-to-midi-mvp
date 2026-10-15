@@ -28,3 +28,22 @@ def test_assembly_cleans_duplicate_notes_and_clips_at_end():
     n=NoteEvent('bass',40,.2,2)
     got=assemble({'a':[n,n]}, {'bass':'a'},1)
     assert len(got)==1 and got[0].offset==1
+
+
+def test_metric_macro_penalizes_absent_category_false_positives():
+    from audio_midi.quality import metrics
+    ref=[NoteEvent('piano',60,.2,.7)]
+    pred=[NoteEvent('piano',60,.2,.7),NoteEvent('strings',64,.4,.8)]
+    got=metrics(ref,pred,1,0,1)
+    assert got['overall']['matched']==1 and got['overall']['f1']==pytest.approx(2/3)
+    assert got['macro_f1']==.5 and got['per_category']['strings']['f1']==0
+    assert got['per_category']['drums']['f1'] is None
+
+
+def test_metrics_fixed_affine_window_and_one_to_one():
+    from audio_midi.quality import metrics
+    ref=[NoteEvent('piano',60,10.3,10.7),NoteEvent('piano',61,11.2,11.5)]
+    pred=[NoteEvent('piano',60,.2,.6),NoteEvent('piano',60,.2,.6)]
+    got=metrics(ref,pred,1,10.1,1)
+    assert got['overall']['reference']==1 and got['overall']['matched']==1
+    assert got['overall']['predicted']==2
