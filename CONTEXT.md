@@ -172,3 +172,9 @@
 - 多次AX/截图/重新连接均-10005，重置控制会话也无效。已异步询问用户应用是否仍可操作，等待回答；不得把工程保存等同完成分轨导出或质量提升。对照进度.md明确C2电吉他原混音不变、other不是专用弦乐。
 
 - 冻结281f78c后独立verify_ripx_baselines自行解析/双指针匹配复算所有逐类分数一致、原生工程三份SHA一致、实际解码时长一致；没有必须修正项。只通过基线/部分成果，不是完整RipX对比通过。详见outputs/ripx-comparison/独立核对记录.md。尚待用户回复窗口状态或恢复导出。
+
+
+## RipX导出重试与具体阻点（2026-10-15）
+- 用户要求主agent直接导出并评估；本轮成功重新连接RipX、通过File > Export打开导出框。窗口显示WAV16bit/44.1kHz/Stereo、Full Rip、Single File，默认路径Documents/RipX/Rips。没有成功改变选项或导出文件。
+- AX只暴露一个dialog，没有内部控件；坐标点击持续报noWindowsAvailable。Tab无可观察焦点变化，AX Raise不解决，Escape能关闭窗口，重开仍相同。说明当前不能把问题笼统说成应用卡住，是自绘导出框自动控制阻塞。
+- 已停留Export窗口，并异步请求用户手动WAV Full Rip/Separate Layers，以及MIDI Simple Full Rip/Filter Notes关闭/Single File，保存Desktop/吉他产品/v0.0/test/RipX对照（目录已创建）。等待导出后主agent继续，无新增模型推理或分数。
