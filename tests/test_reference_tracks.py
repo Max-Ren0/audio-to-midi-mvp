@@ -37,3 +37,17 @@ def test_requires_all_six_explicit_references(tmp_path):
     from audio_midi.quality import load_reference_tracks
     p,t=manifest(tmp_path);del t['strings'];p.write_text(json.dumps({'tracks':t}))
     with pytest.raises(ValueError,match='six'):load_reference_tracks(p)
+
+
+@pytest.mark.parametrize('kind',['empty','unsupported_only','mixed'])
+def test_rejects_empty_or_unsupported_reference_notes(tmp_path,kind):
+    import mido
+    from audio_midi.quality import load_reference_tracks
+    p,t=manifest(tmp_path);path=tmp_path/t['piano']['path']
+    mid=mido.MidiFile();track=mido.MidiTrack();mid.tracks.append(track)
+    if kind=='mixed':
+        track.extend([mido.Message('note_on',note=60,velocity=80),mido.Message('note_off',note=60,time=240)])
+    if kind!='empty':
+        track.extend([mido.Message('program_change',program=53),mido.Message('note_on',note=64,velocity=80),mido.Message('note_off',note=64,time=240)])
+    mid.save(path);t['piano']['sha256']=hashlib.sha256(path.read_bytes()).hexdigest();p.write_text(json.dumps({'tracks':t}))
+    with pytest.raises(ValueError,match='empty|Unsupported'):load_reference_tracks(p)

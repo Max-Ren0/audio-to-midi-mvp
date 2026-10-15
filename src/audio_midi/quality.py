@@ -8,7 +8,7 @@ from .stitching import clean_notes
 INSTRUMENTS=('piano','acoustic_guitar','electric_guitar','bass','drums','strings')
 
 
-def read_notes(path: Path) -> list[NoteEvent]:
+def read_notes(path: Path, *, reject_unsupported: bool = False) -> list[NoteEvent]:
     """Read seconds using the complete MIDI tempo map; omit unsupported programs."""
     programs=defaultdict(int);active=defaultdict(deque);notes=[];now=0.
     for msg in mido.MidiFile(path):
@@ -17,6 +17,8 @@ def read_notes(path: Path) -> list[NoteEvent]:
         if msg.type=='note_on' and msg.velocity:
             program=programs[msg.channel]
             cat=category_for(program,msg.channel==9)
+            if reject_unsupported and cat not in INSTRUMENTS:
+                raise ValueError(f'Unsupported reference instrument: program={program}, channel={msg.channel}')
             active[msg.channel,msg.note].append((cat,program,now,msg.velocity))
         elif msg.type=='note_off' or (msg.type=='note_on' and not msg.velocity):
             q=active[msg.channel,msg.note]
@@ -38,7 +40,8 @@ def load_reference_tracks(manifest_path: Path) -> list[NoteEvent]:
         if not path.is_absolute():path=manifest_path.parent/path
         if hashlib.sha256(path.read_bytes()).hexdigest()!=entry['sha256']:
             raise ValueError(f'Reference hash mismatch: {category}')
-        notes=read_notes(path)
+        notes=read_notes(path,reject_unsupported=True)
+        if not notes:raise ValueError(f'Reference track is empty: {category}')
         if any(n.category!=category for n in notes):
             raise ValueError(f'Reference category mismatch: {category}')
         result.extend(notes)
