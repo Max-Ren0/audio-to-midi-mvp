@@ -58,3 +58,11 @@ def test_candidate_manifest_rejects_wrong_input_and_tampering(tmp_path):
     with pytest.raises(ValueError,match='input'):load_sources(m,'other')
     data.write_text('{}')
     with pytest.raises(ValueError,match='hash'):load_sources(m,'correct')
+
+
+def test_bass_attacks_use_audio_and_preserve_pitch():
+    from audio_midi.quality import snap_bass_attacks
+    ns=[NoteEvent('bass',42,.9,.98),NoteEvent('bass',43,1,2),NoteEvent('bass',41,2.2,3)]
+    got=snap_bass_attacks(ns,[.75,.96,2.05],3)
+    assert [(n.pitch,n.onset) for n in got]==[(43,.75),(41,2.05)]
+    with pytest.raises(ValueError):snap_bass_attacks([NoteEvent('piano',60,1,2)],[.8],3)

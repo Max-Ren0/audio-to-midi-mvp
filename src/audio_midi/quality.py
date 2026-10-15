@@ -68,3 +68,18 @@ def load_sources(manifest_path: Path,input_sha256: str) -> dict[str,list[NoteEve
         if path.suffix.lower() in ('.mid','.midi'):result[name]=read_notes(path)
         else:result[name]=[NoteEvent(**n) for n in json.loads(path.read_text())['notes']]
     return result
+
+
+def snap_bass_attacks(notes: list[NoteEvent], attacks: list[float], duration: float) -> list[NoteEvent]:
+    """Remove <120ms unstable pitch fragments; snap to audio attacks within 300ms."""
+    from dataclasses import replace
+    if any(n.category!='bass' for n in notes):raise ValueError('Bass-only refinement')
+    out=[]
+    attacks=sorted(set(t for t in attacks if 0<=t<duration))
+    for n in sorted(notes,key=lambda n:n.onset):
+        if n.offset is None or n.offset-n.onset<.12:continue
+        earlier=[t for t in attacks if n.onset-.3<=t<=n.onset]
+        start=earlier[0] if earlier else n.onset
+        if out and out[-1].offset>start:out[-1]=replace(out[-1],offset=start)
+        out.append(replace(n,onset=start))
+    return clean_notes(out,duration)

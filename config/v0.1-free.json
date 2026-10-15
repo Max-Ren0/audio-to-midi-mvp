@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0rc1",
+  "routes": {
+    "piano": "piano",
+    "acoustic_guitar": "guitar",
+    "electric_guitar": "mix",
+    "bass": "bass",
+    "drums": "drums_mt3",
+    "strings": "strings"
+  },
+  "selection": "maximize each category onset F1 on disclosed development excerpt; then freeze for subsequent runs",
+  "development_input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14
+  },
+  "limitations": [
+    "Not globally best; only these registered free candidates were measured",
+    "Development-score selection is optimistic; no blind multi-song test yet"
+  ]
+}
