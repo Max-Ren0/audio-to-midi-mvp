@@ -28,6 +28,14 @@
       "input": "bass60s",
       "deadline": 300,
       "memory_gib": 4
+    },
+    {
+      "id": "extra-baseline-piano-bp",
+      "model": "BasicPitch0.4 ONNX v0.0 params",
+      "input": "work/v01/runtime/1792053303771012000/stems/htdemucs_6s/bujiangjiu-60-120/piano.wav",
+      "registered_before_run": true,
+      "deadline": 300,
+      "memory_gib": 4
     }
   ],
   "actual_development_attempts": [
@@ -104,5 +112,49 @@
     "Initial launch failures and three DSP variants were not added to the registry before running; now reconstructed from logs, not falsely backdated",
     "Specialists ran the 60-second excerpt directly with bounded workers and native segment inference instead of a separate 15-second probe",
     "Planned120-180s unavailable because original long input no longer exists at recorded path; using retained60-120s as extra within-song regression, not a new blind dataset"
-  ]
+  ],
+  "extra_actual_stages": {
+    "separation": {
+      "peak_memory_bytes": 1818722304,
+      "attempts": 1,
+      "elapsed_seconds": 35.79872783399696
+    },
+    "bass": {
+      "peak_memory_bytes": 565559296,
+      "attempts": 1,
+      "elapsed_seconds": 5.360789915997884
+    },
+    "drums_mt3": {
+      "peak_memory_bytes": 2424684544,
+      "attempts": 1,
+      "elapsed_seconds": 25.672604916999262
+    },
+    "guitar": {
+      "peak_memory_bytes": 2730541056,
+      "attempts": 1,
+      "elapsed_seconds": 64.27686866600197
+    },
+    "mix": {
+      "peak_memory_bytes": 3122151424,
+      "attempts": 1,
+      "elapsed_seconds": 53.8312557499994
+    },
+    "piano": {
+      "peak_memory_bytes": 1795702784,
+      "attempts": 1,
+      "elapsed_seconds": 18.667017542000394
+    },
+    "strings": {
+      "peak_memory_bytes": 2998452224,
+      "attempts": 1,
+      "elapsed_seconds": 70.88742266699774
+    }
+  },
+  "extra_baseline_piano_actual": {
+    "peak_memory_bytes": 341655552,
+    "attempts": 1,
+    "elapsed_seconds": 2.2460438340021938
+  },
+  "total_actual_process_attempts": 14,
+  "within_24_limit": true
 }

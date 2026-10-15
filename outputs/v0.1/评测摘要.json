@@ -1,0 +1,525 @@
+{
+  "status": "experimental_quality_failed",
+  "not_a_blind_multisong_test": true,
+  "scoring": "six instrumental categories, exact category/pitch, onset50ms, maximum one-to-one matching",
+  "first_excerpt": {
+    "baseline": {
+      "overall": {
+        "reference": 494,
+        "predicted": 476,
+        "matched": 220,
+        "extra": 256,
+        "missed": 274,
+        "precision": 0.46218487394957986,
+        "recall": 0.44534412955465585,
+        "f1": 0.4536082474226804
+      },
+      "per_category": {
+        "piano": {
+          "reference": 269,
+          "predicted": 227,
+          "matched": 148,
+          "extra": 79,
+          "missed": 121,
+          "precision": 0.6519823788546255,
+          "recall": 0.550185873605948,
+          "f1": 0.5967741935483871
+        },
+        "acoustic_guitar": {
+          "reference": 24,
+          "predicted": 70,
+          "matched": 8,
+          "extra": 62,
+          "missed": 16,
+          "precision": 0.11428571428571428,
+          "recall": 0.3333333333333333,
+          "f1": 0.1702127659574468
+        },
+        "electric_guitar": {
+          "reference": 64,
+          "predicted": 1,
+          "matched": 0,
+          "extra": 1,
+          "missed": 64,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "bass": {
+          "reference": 36,
+          "predicted": 51,
+          "matched": 18,
+          "extra": 33,
+          "missed": 18,
+          "precision": 0.35294117647058826,
+          "recall": 0.5,
+          "f1": 0.41379310344827586
+        },
+        "drums": {
+          "reference": 94,
+          "predicted": 56,
+          "matched": 42,
+          "extra": 14,
+          "missed": 52,
+          "precision": 0.75,
+          "recall": 0.44680851063829785,
+          "f1": 0.56
+        },
+        "strings": {
+          "reference": 7,
+          "predicted": 71,
+          "matched": 4,
+          "extra": 67,
+          "missed": 3,
+          "precision": 0.056338028169014086,
+          "recall": 0.5714285714285714,
+          "f1": 0.10256410256410256
+        }
+      },
+      "macro_f1": 0.30722402758636874,
+      "alignment": {
+        "scale": 0.9995,
+        "shift_seconds": 0.14,
+        "duration_seconds": 60.0304375
+      },
+      "reference_window": [
+        0.14,
+        60.140422281250004
+      ],
+      "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3",
+      "prediction_sha256": "3ce04b8315a5cf54eaac5db70ab9986cd1ef114682b98a38326c13b02de266c8",
+      "scope": "six instruments, exact pitch/category, 50ms onset, one-to-one; shared alignment; no vocals"
+    },
+    "v01": {
+      "overall": {
+        "reference": 494,
+        "predicted": 568,
+        "matched": 324,
+        "extra": 244,
+        "missed": 170,
+        "precision": 0.5704225352112676,
+        "recall": 0.6558704453441295,
+        "f1": 0.6101694915254238
+      },
+      "per_category": {
+        "piano": {
+          "reference": 269,
+          "predicted": 297,
+          "matched": 246,
+          "extra": 51,
+          "missed": 23,
+          "precision": 0.8282828282828283,
+          "recall": 0.9144981412639405,
+          "f1": 0.8692579505300353
+        },
+        "acoustic_guitar": {
+          "reference": 24,
+          "predicted": 70,
+          "matched": 8,
+          "extra": 62,
+          "missed": 16,
+          "precision": 0.11428571428571428,
+          "recall": 0.3333333333333333,
+          "f1": 0.1702127659574468
+        },
+        "electric_guitar": {
+          "reference": 64,
+          "predicted": 23,
+          "matched": 6,
+          "extra": 17,
+          "missed": 58,
+          "precision": 0.2608695652173913,
+          "recall": 0.09375,
+          "f1": 0.13793103448275862
+        },
+        "bass": {
+          "reference": 36,
+          "predicted": 51,
+          "matched": 18,
+          "extra": 33,
+          "missed": 18,
+          "precision": 0.35294117647058826,
+          "recall": 0.5,
+          "f1": 0.41379310344827586
+        },
+        "drums": {
+          "reference": 94,
+          "predicted": 56,
+          "matched": 42,
+          "extra": 14,
+          "missed": 52,
+          "precision": 0.75,
+          "recall": 0.44680851063829785,
+          "f1": 0.56
+        },
+        "strings": {
+          "reference": 7,
+          "predicted": 71,
+          "matched": 4,
+          "extra": 67,
+          "missed": 3,
+          "precision": 0.056338028169014086,
+          "recall": 0.5714285714285714,
+          "f1": 0.10256410256410256
+        }
+      },
+      "macro_f1": 0.37562649283043653,
+      "alignment": {
+        "scale": 0.9995,
+        "shift_seconds": 0.14,
+        "duration_seconds": 60.0304375
+      },
+      "reference_window": [
+        0.14,
+        60.140422281250004
+      ],
+      "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3",
+      "prediction_sha256": "ba7661c8c1f62efd649e66ac8474dc2915c816af3997a5f50886729b909d7e32",
+      "scope": "six instruments, exact pitch/category, 50ms onset, one-to-one; shared alignment; no vocals"
+    },
+    "role": "development/regression; used for route selection; optimistic"
+  },
+  "extra_excerpt": {
+    "baseline": {
+      "overall": {
+        "reference": 1228,
+        "predicted": 1360,
+        "matched": 208,
+        "extra": 1152,
+        "missed": 1020,
+        "precision": 0.15294117647058825,
+        "recall": 0.16938110749185667,
+        "f1": 0.160741885625966
+      },
+      "per_category": {
+        "piano": {
+          "reference": 261,
+          "predicted": 135,
+          "matched": 47,
+          "extra": 88,
+          "missed": 214,
+          "precision": 0.34814814814814815,
+          "recall": 0.18007662835249041,
+          "f1": 0.23737373737373738
+        },
+        "acoustic_guitar": {
+          "reference": 150,
+          "predicted": 156,
+          "matched": 17,
+          "extra": 139,
+          "missed": 133,
+          "precision": 0.10897435897435898,
+          "recall": 0.11333333333333333,
+          "f1": 0.1111111111111111
+        },
+        "electric_guitar": {
+          "reference": 333,
+          "predicted": 200,
+          "matched": 10,
+          "extra": 190,
+          "missed": 323,
+          "precision": 0.05,
+          "recall": 0.03003003003003003,
+          "f1": 0.0375234521575985
+        },
+        "bass": {
+          "reference": 99,
+          "predicted": 105,
+          "matched": 46,
+          "extra": 59,
+          "missed": 53,
+          "precision": 0.4380952380952381,
+          "recall": 0.46464646464646464,
+          "f1": 0.45098039215686275
+        },
+        "drums": {
+          "reference": 254,
+          "predicted": 205,
+          "matched": 85,
+          "extra": 120,
+          "missed": 169,
+          "precision": 0.4146341463414634,
+          "recall": 0.3346456692913386,
+          "f1": 0.37037037037037035
+        },
+        "strings": {
+          "reference": 131,
+          "predicted": 559,
+          "matched": 3,
+          "extra": 556,
+          "missed": 128,
+          "precision": 0.005366726296958855,
+          "recall": 0.022900763358778626,
+          "f1": 0.008695652173913044
+        }
+      },
+      "macro_f1": 0.20267578589059884,
+      "alignment": {
+        "scale": 0.9995,
+        "shift_seconds": 60.11,
+        "duration_seconds": 60
+      },
+      "reference_window": [
+        60.11,
+        120.08000000000001
+      ]
+    },
+    "v01": {
+      "overall": {
+        "reference": 1228,
+        "predicted": 1230,
+        "matched": 221,
+        "extra": 1009,
+        "missed": 1007,
+        "precision": 0.1796747967479675,
+        "recall": 0.17996742671009772,
+        "f1": 0.17982099267697316
+      },
+      "per_category": {
+        "piano": {
+          "reference": 261,
+          "predicted": 160,
+          "matched": 65,
+          "extra": 95,
+          "missed": 196,
+          "precision": 0.40625,
+          "recall": 0.24904214559386972,
+          "f1": 0.3087885985748218
+        },
+        "acoustic_guitar": {
+          "reference": 150,
+          "predicted": 156,
+          "matched": 17,
+          "extra": 139,
+          "missed": 133,
+          "precision": 0.10897435897435898,
+          "recall": 0.11333333333333333,
+          "f1": 0.1111111111111111
+        },
+        "electric_guitar": {
+          "reference": 333,
+          "predicted": 45,
+          "matched": 5,
+          "extra": 40,
+          "missed": 328,
+          "precision": 0.1111111111111111,
+          "recall": 0.015015015015015015,
+          "f1": 0.026455026455026454
+        },
+        "bass": {
+          "reference": 99,
+          "predicted": 105,
+          "matched": 46,
+          "extra": 59,
+          "missed": 53,
+          "precision": 0.4380952380952381,
+          "recall": 0.46464646464646464,
+          "f1": 0.45098039215686275
+        },
+        "drums": {
+          "reference": 254,
+          "predicted": 205,
+          "matched": 85,
+          "extra": 120,
+          "missed": 169,
+          "precision": 0.4146341463414634,
+          "recall": 0.3346456692913386,
+          "f1": 0.37037037037037035
+        },
+        "strings": {
+          "reference": 131,
+          "predicted": 559,
+          "matched": 3,
+          "extra": 556,
+          "missed": 128,
+          "precision": 0.005366726296958855,
+          "recall": 0.022900763358778626,
+          "f1": 0.008695652173913044
+        }
+      },
+      "macro_f1": 0.2127335251403509,
+      "alignment": {
+        "scale": 0.9995,
+        "shift_seconds": 60.11,
+        "duration_seconds": 60.0
+      },
+      "reference_window": [
+        60.11,
+        120.08000000000001
+      ],
+      "reference_sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3",
+      "prediction_sha256": "4acb9a96524258daa5eccf2dec7d32bdda6a1a805b5586f759d023e6dfd70e51",
+      "scope": "six instruments, exact pitch/category, 50ms onset, one-to-one; shared alignment; no vocals"
+    },
+    "role": "additional within-song regression after route lock; prior old transcription; sync prior not independently audio-verified"
+  },
+  "conditional_aggregate": {
+    "baseline": {
+      "overall": {
+        "reference": 1722,
+        "predicted": 1836,
+        "matched": 428,
+        "extra": 1408,
+        "missed": 1294,
+        "f1": 0.24058459808881394,
+        "precision": 0.23311546840958605,
+        "recall": 0.24854819976771197
+      },
+      "per_category": {
+        "piano": {
+          "reference": 530,
+          "predicted": 362,
+          "matched": 195,
+          "extra": 167,
+          "missed": 335,
+          "f1": 0.437219730941704
+        },
+        "acoustic_guitar": {
+          "reference": 174,
+          "predicted": 226,
+          "matched": 25,
+          "extra": 201,
+          "missed": 149,
+          "f1": 0.125
+        },
+        "electric_guitar": {
+          "reference": 397,
+          "predicted": 201,
+          "matched": 10,
+          "extra": 191,
+          "missed": 387,
+          "f1": 0.033444816053511704
+        },
+        "bass": {
+          "reference": 135,
+          "predicted": 156,
+          "matched": 64,
+          "extra": 92,
+          "missed": 71,
+          "f1": 0.43986254295532645
+        },
+        "drums": {
+          "reference": 348,
+          "predicted": 261,
+          "matched": 127,
+          "extra": 134,
+          "missed": 221,
+          "f1": 0.41707717569786534
+        },
+        "strings": {
+          "reference": 138,
+          "predicted": 630,
+          "matched": 7,
+          "extra": 623,
+          "missed": 131,
+          "f1": 0.018229166666666668
+        }
+      },
+      "macro_f1": 0.2451389053858457
+    },
+    "v01": {
+      "overall": {
+        "reference": 1722,
+        "predicted": 1798,
+        "matched": 545,
+        "extra": 1253,
+        "missed": 1177,
+        "f1": 0.3096590909090909,
+        "precision": 0.3031145717463849,
+        "recall": 0.3164924506387921
+      },
+      "per_category": {
+        "piano": {
+          "reference": 530,
+          "predicted": 457,
+          "matched": 311,
+          "extra": 146,
+          "missed": 219,
+          "f1": 0.630192502532928
+        },
+        "acoustic_guitar": {
+          "reference": 174,
+          "predicted": 226,
+          "matched": 25,
+          "extra": 201,
+          "missed": 149,
+          "f1": 0.125
+        },
+        "electric_guitar": {
+          "reference": 397,
+          "predicted": 68,
+          "matched": 11,
+          "extra": 57,
+          "missed": 386,
+          "f1": 0.047311827956989246
+        },
+        "bass": {
+          "reference": 135,
+          "predicted": 156,
+          "matched": 64,
+          "extra": 92,
+          "missed": 71,
+          "f1": 0.43986254295532645
+        },
+        "drums": {
+          "reference": 348,
+          "predicted": 261,
+          "matched": 127,
+          "extra": 134,
+          "missed": 221,
+          "f1": 0.41707717569786534
+        },
+        "strings": {
+          "reference": 138,
+          "predicted": 630,
+          "matched": 7,
+          "extra": 623,
+          "missed": 131,
+          "f1": 0.018229166666666668
+        }
+      },
+      "macro_f1": 0.2796122026349626
+    },
+    "warning": "aggregate assumes both shared mappings correct; not proof of cross-song quality"
+  },
+  "extra_fresh_runtime": {
+    "seconds": 275.710831417,
+    "stages": {
+      "separation": {
+        "peak_memory_bytes": 1818722304,
+        "attempts": 1,
+        "elapsed_seconds": 35.79872783399696
+      },
+      "bass": {
+        "peak_memory_bytes": 565559296,
+        "attempts": 1,
+        "elapsed_seconds": 5.360789915997884
+      },
+      "drums_mt3": {
+        "peak_memory_bytes": 2424684544,
+        "attempts": 1,
+        "elapsed_seconds": 25.672604916999262
+      },
+      "guitar": {
+        "peak_memory_bytes": 2730541056,
+        "attempts": 1,
+        "elapsed_seconds": 64.27686866600197
+      },
+      "mix": {
+        "peak_memory_bytes": 3122151424,
+        "attempts": 1,
+        "elapsed_seconds": 53.8312557499994
+      },
+      "piano": {
+        "peak_memory_bytes": 1795702784,
+        "attempts": 1,
+        "elapsed_seconds": 18.667017542000394
+      },
+      "strings": {
+        "peak_memory_bytes": 2998452224,
+        "attempts": 1,
+        "elapsed_seconds": 70.88742266699774
+      }
+    }
+  }
+}

@@ -5,5 +5,14 @@
   "outputs/runs/v01/development/运行报告.json": "27c0b9bf4a3a42b54454651ff2f4af73239c3c94edd8a837afc307b3273b97c9",
   "work/v01/final-development-metrics.json": "a592c8416316fcc11394c125adcea1307b6b45ee0883d746da26d6583c459182",
   "work/v01/baseline-development-metrics.json": "3e436047d6c6f759f17c289d00fec12fd89bb9fab03f4fb94a867376bc6ad3c6",
-  "work/v01/candidates.json": "544f6f32352440a64eff7b16a1b27c488cfc14a67e62d46be9f1d74e16f54649"
+  "work/v01/candidates.json": "544f6f32352440a64eff7b16a1b27c488cfc14a67e62d46be9f1d74e16f54649",
+  "outputs/runs/v01/extra-60-120/多乐器.mid": "4acb9a96524258daa5eccf2dec7d32bdda6a1a805b5586f759d023e6dfd70e51",
+  "outputs/runs/v01/extra-60-120/音色试听.wav": "3e0a8c9b6bb60bc1626bdea85c731d6193ac058aea0d2e8fbfce1dd6e17f9062",
+  "outputs/runs/v01/extra-60-120/运行报告.json": "ebbd124d79c2dfcd3d9847d312b530d6c9b10855db549092a07d88bab6284f11",
+  "work/v01/extra-v00-control.mid": "a0734595fe8dd6eee0d4777ca0b87fc0e39952c42be9be14de42cc2b15217ba6",
+  "work/v01/extra-baseline-metrics.json": "31169e2e998bf64d0c8a15e0df331f04c17d4baa0713c5646e13e5431f978e56",
+  "work/v01/extra-metrics-preliminary.json": "62cc4c08813d77445c910de584fad05693f6c2bb93f92d3f99aac709701e5d13",
+  "work/v01/extra-baseline-piano.json": "3953600f7d96c359cff256c85706dd00464893a305cb5c2ab57db20a8f3e1415",
+  "outputs/v0.1/评测摘要.json": "8b35dd4f559c7a46db62265befd49ae4731db39e68565e63b2d1d206e4e2978e",
+  "outputs/v0.1/最终对照报告.md": "058987aa0fa5e315655e9d047ed3338e9ceb5f81a5523ef5bf05d52321cb0466"
 }

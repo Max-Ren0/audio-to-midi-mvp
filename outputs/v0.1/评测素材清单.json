@@ -1,0 +1,29 @@
+{
+  "reference": {
+    "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/不将就 - 李荣浩（改编）.mid",
+    "sha256": "6d1a84059f8fa5ca50479082dfd68093e790edb9a4a747fdf69b07a2f6e3aae3"
+  },
+  "clips": [
+    {
+      "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+      "role": "development/regression",
+      "duration": 60.0304375,
+      "reference_mapping": {
+        "scale": 0.9995,
+        "shift": 0.14
+      }
+    },
+    {
+      "path": "work/spike/bujiangjiu-60-120.mp3",
+      "sha256": "6fdbe7a427b2f21647319b5159a8131cfb21d3f42b2f1e95c8571d3a24505e1f",
+      "role": "additional within-song regression, not blind",
+      "duration": 60.0,
+      "reference_mapping": {
+        "scale": 0.9995,
+        "shift": 60.11
+      },
+      "mapping_confidence": "timestamp prior from earlier crop; independent audio sync unverified"
+    }
+  ]
+}
