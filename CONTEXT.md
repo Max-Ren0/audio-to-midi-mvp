@@ -205,3 +205,9 @@
 - 5795bae冻结后verify_lingpu_page_review独立核对文档，无后台模型/流程等过度断言；建议把导出写音符的肯定语气收窄为入口用途、字节内容未解析，已采纳。验证者未操作Chrome，也未重新取证页面；这是资料推理审查，不是后台架构实证。
 
 - 294d818收窄措辞后独立复验通过；outputs/lingpu-page-review/独立核对.md记录范围与未知。本轮没有新模型/质量评测结论；恢复原页面，未删除网站自动副本。
+
+
+## 六轨Top分离建议更新（2026-10-15）
+- 用户明确只对比前六轨，要求逐轨Top。官方MVSEP公开榜：钢琴BSRoformerSW7.8031、总吉他9.0120；BassEnsemble SCNetXL+SW14.8705；DrumsEnsemble MelBand+SCNetXL+SW14.3505；StringsBSRoformer2025.09为5.4176。Bass/Drums排除原始stem参考，不当模型冠军。
+- 官方API新增可确认木吉他66/电吉他81，混音直出或guitar二次提取；专属冠军未确认。弦乐API52默认BSRoformer。修正早前缺专用方案的认知，不将榜单SDR当本曲F1/全球冠军/权重免费商用可用。
+- outputs/separation-top6/六轨分离优先名单.md保存依据。仅建议，无推理/上传/付费，无新MID。冻结后独立资料核对。
