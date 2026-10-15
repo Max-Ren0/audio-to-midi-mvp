@@ -115,3 +115,11 @@
 
 - 四条细化固定为bf51e1b后，独立验证者复验通过，无新增矛盾，方案哈希8c7ea035828e14b580aebe26c82dc9b6ab32601a6e18e6a5e283f17ffddbbd1d。outputs/v0.1/规划独立验证.md记录审查与未确定事项。
 - 本轮只完成规划并准备v0.1.0-planning标签；没有新的MIDI/准确率、没有新增费用。等待用户评审这份具体方案，再按已选主agent实现+冻结后独立验证方式推进详细工程计划和实现。
+
+
+## 候选方案追问与资料补充（2026-10-15）
+- 用户询问各模型是否有更好替代，本轮仅查官方资料和建议，没有批准或执行新的模型实验。
+- MVSEP官方算法页 https://mvsep.com/en/algorithms?page=2 自报同一吉他验证集Demucs4HT6源SDR5.22、BS Roformer SW9.05；这是分离指标，不是本曲MIDI准确率，也不保证对应服务checkpoint可免费本地获取。另有专门Strings/Acoustic Guitar分离方向。
+- Transkun V2和EleutherAI/aria-amt均可作为钢琴专用候选，不能因发布时间或单钢琴数据成绩断言混音分离后更好。torchcrepe可作为pYIN音高跟踪对照，仍需单独识别起音/关音，本曲贝斯未测。
+- Apple官方Logic Stem Splitter可分人声/鼓/贝斯/吉他/钢琴/其他，Apple Silicon M1及以上；只作为已有Logic用户的分离质量人工对照，非六类MIDI转谱API，也不默认操控UI。
+- 维持先试更干净的分离、钢琴专用、鼓专用，再处理木电和弦乐的建议；所有替代尚未经本曲对照，v0.1设计仍待用户评审，没有新MID或分数。
