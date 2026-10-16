@@ -340,3 +340,4 @@
 - 116测试通过，官方前处理脉冲确认零起点且不做forward；三阶段临时重建全部候选/证据字节相同。来源/权重/依赖SHA及完整负结果/逐音变化见outputs/bass-models；原生数据ignored work/bass-models。待冻结后独立验证/推送。
 - 仍17FP/12FN，已见开发集选择不代表泛化/录音真值/全球最优；没有完整新歌CLI或商用许可结论。不继续扩候选。
 - 420e4a5冻结后verify_bass_models独立只读核验通过：116测试、3阶段候选/证据重建、独立评分、7增3失、原生时间格/单位、9任务/兼容披露、源/权重、92产物/93ZIP/8WAV及保护轨全部一致，无须修正，主agent接受。详outputs/bass-models/独立验证.md。当前贝斯SHA54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32；六轨b28231c5d0ba9e46dd5a0c47b1fca44cf304cd6b2cfa5517b5b3851963520a87；ZIP5c743ae5ee940dd33c1727a6e55971216e28c7dddab4da3453ecff5611f9fe91。准备安全FF main并发布v0.1.0-bass-models.1研究标签，原基线/旧标签不移动。
+- Git同步已实时确认：origin/main、origin/codex/bass-model-comparison、v0.1.0-bass-models.1均为ead25190d2db17b8f666a9fc15e7d4d287ccee7f。安全快进，无force push，模型/媒体/缓存/批量包未上传；本状态行另作文档提交，不移动标签。当前研究贝斯62.34%，下一步宜先核听7新增/3丢失及剩余错误；不自动继续扩参/60–120。
