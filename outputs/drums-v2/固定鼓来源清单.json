@@ -1,0 +1,31 @@
+{
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "sources": {
+    "general": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/outputs/runs/v01/development/\u5355\u8f68/drums.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27"
+    },
+    "mix": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/v01/mix.json",
+      "sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a"
+    },
+    "oaf_sw": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/drums-v2/decoded/oaf-sw-t0.5.json",
+      "sha256": "f4ad0ed4449d423700936c8edece9032415a561f431cd4b324b4107133242b55"
+    },
+    "oaf_demucs": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/drums-v2/decoded/oaf-demucs-t0.35.json",
+      "sha256": "eb087fffffc81cc551b17929f1e87ed0373981a69d75860f49ae55af434ab7bd"
+    },
+    "adtof": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+      "sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda"
+    },
+    "weak_cymbal": {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/drums-v2/decoded/cymbal-0.15.json",
+      "sha256": "51d4cb07f9ff8b9e1f69af49d19c0f3ec3f978c8636261a19282912cd475f375"
+    }
+  },
+  "recipe": "audio_midi.drums.optimized_drums_v2",
+  "status": "seen-development research, not blind or commercial approval"
+}

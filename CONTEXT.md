@@ -270,3 +270,11 @@
 
 - 鼓v2阶段1：OaF ONNX（HF thebluescreen固定771fd55，5966247bytes SHA23d4b05ce7e9715bdb4396823d68bc886e8a958fa9f6266c0f7132b78098b521）3推理均通过；单模型44–48%，但36/48可作补充。原混音MT3缓存与当前0–60解码波形逐采样完全相同（960487），有ride51，专用ADTOF粗cymbal49可以不改key地支持原ride。12组军鼓/HH阈值×9整键策略+6control=114无参考生成候选，最佳79TP/95pred/94ref F183.5979%，比旧77.25提升；候选生成和评分分开。src/drums新增整键路由/一次性模型一致支持/短末窗几何，9用例先RED后GREEN。
 - YODO作者公开Colab/256231380byte权重已下载（11类，含开镲/ride；原35/40等GM不改），CPU OpenCV4.11仅装work/drums-v2/yodo-deps。初FFTfloat32校验失败2尝试，修成float64误差<4e-14；随后CV错喂3channel失败2尝试，按cfg改1channel。修正后15秒probe8.25秒/1.2GiB通过，两个60秒full正运行session记录见work logs。已计8次进程含4失败，full两次后预计10<=20；不涉及60–120。Omnizart官方ARM不兼容；MVSEPkey仍空，不调用/不支付。
+
+## 鼓v2当前冻结候选（2026-10-16）
+- 后续补IDM官方小checkpoint，15秒/两源全片均strict encoder成功；单独约69%，缺失鼓件替换无净提升，不进入最终。YODO两源全片零事件且适配器Darknet等价未验证，不能推断作者模型差。总13模型进程含4失败，<=20；没有远程音频上传/付费/训练/UI播放。
+- 188开发评分候选，129不同MID：阶段1 114、阶段2 26、阶段3 8、IDM24、阶段4 15、最终组合1。最终80TP/93pred/94ref F185.5615%，FP13/FN14，较H2 73/95/94 F177.2487提升8.31pp。开镲0/4、crash0/2仍缺。全部固定.9995/.14映射和50ms最大匹配，不按候选优化shift。
+- src/audio_midi/drums.py optimized_drums_v2冻结整键来源+一致性：kickOAFsw.5由DemucsMT3支持30ms；snareADTOF.18由OAFdemucs.35支持50ms；hatADTOF.165；tom48OAFsw.5；ride mix由ADTOF49.15支持30ms；55Demucs由ADTOF49.225支持30ms，其余Demucs。无GM改键，无逐音参考抄写。最终组合函数两回归先RED后GREEN，错误类别也拒绝。
+- scripts/build_drums_v2.py是hash-bound缓存重建入口，不是任意新音频自动运行全模型。真实重建与最终MID字节一致。新增模型wrapper/生成/评分脚本及来源收据存outputs/drums-v2，权重/缓存不上传。
+- 本地outputs/runs/drums-v2/交付/含鼓MID/WAV、六轨仅换鼓MID/WAV、9额外代表方案试听、188候选及评分。六轨383TP/545pred/494ref F173.7247，其他五轨原MIDI消息/tick完全相同。初次用秒重写其他轨引入浮点差，改为直接保留原track消息，避免重编码其他轨。
+- 阶段1 ae7735a独立验证114候选/18原始解码/来源/97测试通过，无阻断。新增阶段2–4/IDM/最终包装待冻结后复验。钢琴B不改、60–120不访问、ADTOF NC和SW权重限制持续。当前新开发分85.56不能作独立泛化质量。

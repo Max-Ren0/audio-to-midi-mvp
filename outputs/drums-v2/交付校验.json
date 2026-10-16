@@ -1,0 +1,1320 @@
+{
+  "scope": "current0-60 only; same key onset50ms, fixed .9995/.14 alignment; seen development",
+  "score": {
+    "reference": 94,
+    "predicted": 93,
+    "matched": 80,
+    "extra": 13,
+    "missed": 14,
+    "precision": 0.8602150537634409,
+    "recall": 0.851063829787234,
+    "f1": 0.8556149732620321
+  },
+  "per_key": {
+    "36": {
+      "reference": 18,
+      "predicted": 19,
+      "matched": 18,
+      "extra": 1,
+      "missed": 0,
+      "precision": 0.9473684210526315,
+      "recall": 1.0,
+      "f1": 0.972972972972973
+    },
+    "38": {
+      "reference": 14,
+      "predicted": 16,
+      "matched": 13,
+      "extra": 3,
+      "missed": 1,
+      "precision": 0.8125,
+      "recall": 0.9285714285714286,
+      "f1": 0.8666666666666667
+    },
+    "42": {
+      "reference": 45,
+      "predicted": 44,
+      "matched": 40,
+      "extra": 4,
+      "missed": 5,
+      "precision": 0.9090909090909091,
+      "recall": 0.8888888888888888,
+      "f1": 0.898876404494382
+    },
+    "43": {
+      "reference": 1,
+      "predicted": 1,
+      "matched": 1,
+      "extra": 0,
+      "missed": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "46": {
+      "reference": 4,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 4,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "47": {
+      "reference": 0,
+      "predicted": 1,
+      "matched": 0,
+      "extra": 1,
+      "missed": 0,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0
+    },
+    "48": {
+      "reference": 1,
+      "predicted": 2,
+      "matched": 1,
+      "extra": 1,
+      "missed": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "49": {
+      "reference": 2,
+      "predicted": 0,
+      "matched": 0,
+      "extra": 0,
+      "missed": 2,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "51": {
+      "reference": 9,
+      "predicted": 9,
+      "matched": 7,
+      "extra": 2,
+      "missed": 2,
+      "precision": 0.7777777777777778,
+      "recall": 0.7777777777777778,
+      "f1": 0.7777777777777778
+    },
+    "55": {
+      "reference": 0,
+      "predicted": 1,
+      "matched": 0,
+      "extra": 1,
+      "missed": 0,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0
+    }
+  },
+  "six_track_score": {
+    "overall": {
+      "reference": 494,
+      "predicted": 545,
+      "matched": 383,
+      "extra": 162,
+      "missed": 111,
+      "precision": 0.7027522935779816,
+      "recall": 0.7753036437246964,
+      "f1": 0.737247353224254
+    },
+    "per_category": {
+      "piano": {
+        "reference": 269,
+        "predicted": 269,
+        "matched": 268,
+        "extra": 1,
+        "missed": 1,
+        "precision": 0.9962825278810409,
+        "recall": 0.9962825278810409,
+        "f1": 0.9962825278810409
+      },
+      "acoustic_guitar": {
+        "reference": 24,
+        "predicted": 70,
+        "matched": 8,
+        "extra": 62,
+        "missed": 16,
+        "precision": 0.11428571428571428,
+        "recall": 0.3333333333333333,
+        "f1": 0.1702127659574468
+      },
+      "electric_guitar": {
+        "reference": 64,
+        "predicted": 23,
+        "matched": 6,
+        "extra": 17,
+        "missed": 58,
+        "precision": 0.2608695652173913,
+        "recall": 0.09375,
+        "f1": 0.13793103448275862
+      },
+      "bass": {
+        "reference": 36,
+        "predicted": 51,
+        "matched": 18,
+        "extra": 33,
+        "missed": 18,
+        "precision": 0.35294117647058826,
+        "recall": 0.5,
+        "f1": 0.41379310344827586
+      },
+      "drums": {
+        "reference": 94,
+        "predicted": 93,
+        "matched": 80,
+        "extra": 13,
+        "missed": 14,
+        "precision": 0.8602150537634409,
+        "recall": 0.851063829787234,
+        "f1": 0.8556149732620321
+      },
+      "strings": {
+        "reference": 7,
+        "predicted": 39,
+        "matched": 3,
+        "extra": 36,
+        "missed": 4,
+        "precision": 0.07692307692307693,
+        "recall": 0.42857142857142855,
+        "f1": 0.13043478260869565
+      }
+    },
+    "macro_f1": 0.450711531273375,
+    "alignment": {
+      "scale": 0.9995,
+      "shift_seconds": 0.14,
+      "duration_seconds": 60.0304375
+    },
+    "reference_window": [
+      0.14,
+      60.140422281250004
+    ]
+  },
+  "other_five_identical": true,
+  "old_six_path": "outputs/runs/drums/\u94a2\u7434B\u56fa\u5b9a-\u9f13\u5347\u7ea7\u516d\u8f68/\u591a\u4e50\u5668.mid",
+  "old_six_sha256": "24eab6f2d68b7b3ed1822b81b2337fa9739f69b179ea7b882e75ed9a2127e99a",
+  "render": {
+    "sample_rate": 44100,
+    "duration_seconds": 61.33020408163265,
+    "soundfont": "GeneralUser-GS.sf2",
+    "gain": 24.013661049939056,
+    "source": "MIDI_only_no_original_audio"
+  },
+  "artifacts": {
+    "\u65b0\u589e\u6a21\u578b\u6765\u6e90.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u65b0\u589e\u6a21\u578b\u6765\u6e90.json",
+      "sha256": "ce9538345db3165ad937bf95523c38feb9148dbeff1eacca40d8ab8425f816d1",
+      "bytes": 1072
+    },
+    "\u6700\u7ec8\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u6700\u7ec8\u8bc4\u5206.json",
+      "sha256": "9aeb3da4f4afd2948920e141d473d38d0193cc49c4fc1d2ebcf6feb1f4a5c2ee",
+      "bytes": 565
+    },
+    "\u9636\u6bb5\u4e00\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9636\u6bb5\u4e00\u8bc4\u5206.json",
+      "sha256": "70c37a76f449e30b7df029a5c5e09c722a47d473ba53e00862512fb4334de99e",
+      "bytes": 95759
+    },
+    "\u56fa\u5b9a\u9f13\u6765\u6e90\u6e05\u5355.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u56fa\u5b9a\u9f13\u6765\u6e90\u6e05\u5355.json",
+      "sha256": "52e29417cc45b91369194a05bada961013b510738bfd016874d4aa96165e3e6d",
+      "bytes": 1623
+    },
+    "IDM\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/IDM\u8bc4\u5206.json",
+      "sha256": "5b5e25ddf5dbf6917584b09b341b9f1cac653c4670ebf72143ce87f892d272de",
+      "bytes": 19514
+    },
+    "\u516d\u8f68-\u4ec5\u66ff\u6362\u9f13\u8bd5\u542c.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u516d\u8f68-\u4ec5\u66ff\u6362\u9f13\u8bd5\u542c.wav",
+      "sha256": "052338e6cea9ba45b2c1d60d7c0f74e67135ad618d9a3b1cd581dd1ed37de4f6",
+      "bytes": 10853972
+    },
+    "\u5b9e\u9a8c\u767b\u8bb0.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5b9e\u9a8c\u767b\u8bb0.json",
+      "sha256": "d36d3d0b3e9d447e574edf988e076d729ef0856132b7c0a68922d69b7fb3b14c",
+      "bytes": 7732
+    },
+    "\u516d\u8f68-\u4ec5\u66ff\u6362\u9f13.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u516d\u8f68-\u4ec5\u66ff\u6362\u9f13.mid",
+      "sha256": "a375592ab6268d71bea976831c4ddc5575a6a4cb9cdc7814d2f913b830bc809d",
+      "bytes": 4671
+    },
+    "\u9636\u6bb5\u4e8c\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9636\u6bb5\u4e8c\u8bc4\u5206.json",
+      "sha256": "a3312de1a820232b523ff049691f5047252289569a569062337b3408de93f5b0",
+      "bytes": 28627
+    },
+    "\u9f13\u5f3a\u5316\u8bc4\u4f30\u62a5\u544a.md": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9f13\u5f3a\u5316\u8bc4\u4f30\u62a5\u544a.md",
+      "sha256": "4eaee43510d4757878dbeba56de532c7d7875ef6891c4b84cd90a8e908048f96",
+      "bytes": 6717
+    },
+    "\u9636\u6bb5\u56db\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9636\u6bb5\u56db\u8bc4\u5206.json",
+      "sha256": "da8d96ea550acbc75b64fc5bcb5e14987c1a30c25b6c5052e268c816d29b8da5",
+      "bytes": 16283
+    },
+    "\u9636\u6bb5\u4e09\u8bc4\u5206.json": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9636\u6bb5\u4e09\u8bc4\u5206.json",
+      "sha256": "5d4c91d48a965a3f32e1b29bc4c802a001bbd14a06614c2e266e6ce3276257e5",
+      "bytes": 10018
+    },
+    "\u9f13-v0.1-\u5f3a\u5316\u7248.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9f13-v0.1-\u5f3a\u5316\u7248.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d",
+      "bytes": 903
+    },
+    "\u9f13-v0.1-\u5f3a\u5316\u7248\u8bd5\u542c.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9f13-v0.1-\u5f3a\u5316\u7248\u8bd5\u542c.wav",
+      "sha256": "aacf8f2486e34809544bc1f6dd881d5411eafc7e02259d9a375dece76ee76061",
+      "bytes": 10818692
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/05-\u9636\u6bb5\u4e0083.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/05-\u9636\u6bb5\u4e0083.wav",
+      "sha256": "52c6133f9508a166a6e00f2782eddf219c5abb75122e7c0938f2a3d73ee7a7e3",
+      "bytes": 10818692
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/02-\u4e0a\u7248\u9f1377.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/02-\u4e0a\u7248\u9f1377.wav",
+      "sha256": "e2796a070c2c0a4783f4e6daf07e631e10027525d096a33e3e7e4115f75a753e",
+      "bytes": 10818692
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/01-\u539f\u59cb\u9f1356.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/01-\u539f\u59cb\u9f1356.wav",
+      "sha256": "11e7b4e7a01b364eb93d51e90c5b2d099f5ac5e09a011010bb7791f5f6958ec1",
+      "bytes": 10760444
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/03-OAF-SW.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/03-OAF-SW.mid",
+      "sha256": "e49853b0db0ef12627fd9113dfef3738e331557dc0c50521c54f383c2491ae62",
+      "bytes": 561
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/06-\u9636\u6bb5\u4e8c84.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/06-\u9636\u6bb5\u4e8c84.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/07-\u9636\u6bb5\u4e0984.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/07-\u9636\u6bb5\u4e0984.wav",
+      "sha256": "9664a538051d81ee5931ec94d4f606fea6d32cf1edd13b4a759b539bc3ab0e78",
+      "bytes": 10818692
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-demucs.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-demucs.wav",
+      "sha256": "56ab4a5bfaf01ab562acfe454fa00710a1ed0d6368093d9945c8fbd8db6c9ee5",
+      "bytes": 10847908
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/05-\u9636\u6bb5\u4e0083.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/05-\u9636\u6bb5\u4e0083.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/02-\u4e0a\u7248\u9f1377.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/02-\u4e0a\u7248\u9f1377.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955",
+      "bytes": 903
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/01-\u539f\u59cb\u9f1356.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/01-\u539f\u59cb\u9f1356.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+      "bytes": 637
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/03-OAF-SW.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/03-OAF-SW.wav",
+      "sha256": "081dfc0abc676abd9706aa2b1e513d6b2b303497208a1a6a3c30343995313f2b",
+      "bytes": 10767428
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/06-\u9636\u6bb5\u4e8c84.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/06-\u9636\u6bb5\u4e8c84.wav",
+      "sha256": "84a622f32232a63117079c62ca3e78b71f1d5f2a52a5a61f7396ebdf140ce7af",
+      "bytes": 10818692
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/07-\u9636\u6bb5\u4e0984.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/07-\u9636\u6bb5\u4e0984.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-demucs.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-demucs.mid",
+      "sha256": "ba1b00e522e1d5a0908a443bb8c530b7bcf1cebcaf0c70947ae7451a0e447c13",
+      "bytes": 768
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-sw.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-sw.mid",
+      "sha256": "0bf8e1a719aabec3b743bc1b6a35eb106f3aed88c1a7b333598634470c89e0d7",
+      "bytes": 903
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/04-OAF-Demucs.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/04-OAF-Demucs.wav",
+      "sha256": "7e8fe828d2cf923810e0bdb59c71370c96290918d64b4077aed064c2230cc5ef",
+      "bytes": 10767428
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-sw.wav": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/08-IDM-sw.wav",
+      "sha256": "20d55a34b111b789f1d58a5f6a44cd9ef879fb00af792979241221e44d953e31",
+      "bytes": 10846808
+    },
+    "\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/04-OAF-Demucs.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u4ee3\u8868\u65b9\u6848\u8bd5\u542c/04-OAF-Demucs.mid",
+      "sha256": "53ff5cdad15c87a53da4063b5097d95eadcf41b0b7143ecef23865f2f981f9e1",
+      "bytes": 499
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.5-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.5-tol0.08.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "bytes": 907
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.35-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.35-tol0.05.mid",
+      "sha256": "ed859a3f8012dd1294c75987230a0fc40faa9721a187593aa2be748d115d1593",
+      "bytes": 945
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.5-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.5-tol0.05.mid",
+      "sha256": "badf03cb0645a61c107bbf37d8e50e9ad824ff3005a93c3bb09b56bbc83260ab",
+      "bytes": 938
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.35-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.35-tol0.05.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "bytes": 907
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-sw-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-sw-tol0.08.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-mix-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-mix-tol0.05.mid",
+      "sha256": "51cee85531582e0cc63f3b6bb9372aa588a35593b11ba9dbaac8c2847b250d13",
+      "bytes": 928
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-oaf-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-oaf-tol0.08.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.225-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-oaf-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-oaf-tol0.05.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-mix-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-mix-tol0.08.mid",
+      "sha256": "51cee85531582e0cc63f3b6bb9372aa588a35593b11ba9dbaac8c2847b250d13",
+      "bytes": 928
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-sw-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/hat-sw-tol0.05.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.35-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.35-tol0.08.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "bytes": 907
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.5-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.5-tol0.08.mid",
+      "sha256": "badf03cb0645a61c107bbf37d8e50e9ad824ff3005a93c3bb09b56bbc83260ab",
+      "bytes": 938
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.15-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.35-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-sw-0.35-tol0.08.mid",
+      "sha256": "ed859a3f8012dd1294c75987230a0fc40faa9721a187593aa2be748d115d1593",
+      "bytes": 945
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.5-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/snare-demucs-0.5-tol0.05.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "bytes": 907
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e8c\u8bc4\u5206/ride-cy0.3-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "bytes": 923
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-solo.mid",
+      "sha256": "2327f10c7ed9256c82764df923a79df9025e68a2514af739d99bb0c584fe008a",
+      "bytes": 26
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace46-49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-solo.mid",
+      "sha256": "0bf8e1a719aabec3b743bc1b6a35eb106f3aed88c1a7b333598634470c89e0d7",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace46.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace46.mid",
+      "sha256": "9638ca576c866965e2d1912c46f3cd6e4ecf8f8958c3cc40bd16361bd7aef87a",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-solo.mid",
+      "sha256": "0d59e5b4409f2de4f2676ed480b2bbd1cc2383428f7dcdccb94e9b8192aaab06",
+      "bytes": 419
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace46.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace46-49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace46-49.mid",
+      "sha256": "9638ca576c866965e2d1912c46f3cd6e4ecf8f8958c3cc40bd16361bd7aef87a",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace46-49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.7-replace46.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace46.mid",
+      "sha256": "e6427d96c4ff9a60cf3840a8acc4a81ad836aeb637f32bf9277764711552201b",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-replace46-49.mid",
+      "sha256": "e6427d96c4ff9a60cf3840a8acc4a81ad836aeb637f32bf9277764711552201b",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.5-solo.mid",
+      "sha256": "6d928bf7a8e2c905af780eacc7b7ebaa990776021295dd2b0157a2bdde3cf4c0",
+      "bytes": 398
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.3-replace49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace46-49.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace46-49.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-demucs-0.3-solo.mid",
+      "sha256": "ba1b00e522e1d5a0908a443bb8c530b7bcf1cebcaf0c70947ae7451a0e447c13",
+      "bytes": 768
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-solo.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.7-solo.mid",
+      "sha256": "2327f10c7ed9256c82764df923a79df9025e68a2514af739d99bb0c584fe008a",
+      "bytes": 26
+    },
+    "\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace46.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/IDM\u8bc4\u5206/idm-sw-0.5-replace46.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__same.mid",
+      "sha256": "652f8aa4a65f65aac60b3300ec24da55485a130ad975fb35538d8631aa521ac3",
+      "bytes": 862
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-ride.mid",
+      "sha256": "2a78506b71d98cbb7e2c52badb0d253f5324b970f758e93405acea4aab72f8b1",
+      "bytes": 964
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-cymbals.mid",
+      "sha256": "8d9e78dc4854baa0bae4a2a97cc984a9718207ca9249936babf133f9b5c7bdf6",
+      "bytes": 1027
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-demu-mix-ride.mid",
+      "sha256": "496b5e39b71bfac9914e1b03fd6450ce030d43ced03b04d29ecca0699e5a8c45",
+      "bytes": 992
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-ride.mid",
+      "sha256": "a257f515aa199124a44de80a311dbe12ac7cbe9ea0c731d1bf35b33ae1950049",
+      "bytes": 1013
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-demu-mix-ride.mid",
+      "sha256": "c47e3345cd58ea96036878b3b3b5a95b033e9ad7c90e00726dd97bd92a3ff782",
+      "bytes": 1012
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-gated-cymbals.mid",
+      "sha256": "634bd0afc908374745e6550e43996b81f7b29e91646ad14adef616387d078c67",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-sw-mix-ride.mid",
+      "sha256": "91ff7d6588113818beff04e2b479f1e9398c585a95a5bc85896963b2a23b2e76",
+      "bytes": 950
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-oafsw.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-oafsw.mid",
+      "sha256": "e49853b0db0ef12627fd9113dfef3738e331557dc0c50521c54f383c2491ae62",
+      "bytes": 561
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-all-fine.mid",
+      "sha256": "5e03df75f3f0e1d0958cec4284cd98731cb0329096683682a2c2fa4509bca58f",
+      "bytes": 1128
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-ride.mid",
+      "sha256": "f8f7e170e8c516714592e5140914d2183ebe0a85bbd26425e0c2da5c9316a0c9",
+      "bytes": 994
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__same.mid",
+      "sha256": "44c9fad384f8bade0e29486298b86d76d79532838ed62ba837877eae30cca76e",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-gated-cymbals.mid",
+      "sha256": "e8196688a8720ed150bceaa35db2e0e3169401a9e698531287f8eaae0182068b",
+      "bytes": 891
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-cymbals.mid",
+      "sha256": "9709d59b63e40b322e08394ae434f33e7e73f7522277769612e9384637487252",
+      "bytes": 1013
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-all-fine.mid",
+      "sha256": "f92d3941bc102cacc620993b6c7c4f5fbd86614fe6b067e047079a1dbbb93363",
+      "bytes": 1099
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__gated-ride.mid",
+      "sha256": "9c94906f49eccfa2c6caae731f749771d777649ae3e33bb2367091a6010c3081",
+      "bytes": 936
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-gated-ride.mid",
+      "sha256": "18a7bb16fc7cd5a05ce184fca4a4dbc3b9b326c0c51557b13566e95986f38bcf",
+      "bytes": 889
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-gated-cymbals.mid",
+      "sha256": "12afa7c3f71c56003a3c578f05526d4c50d6b7bf0c9ecd3e9472ca7956ffeb79",
+      "bytes": 905
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-gated-ride.mid",
+      "sha256": "ed859a3f8012dd1294c75987230a0fc40faa9721a187593aa2be748d115d1593",
+      "bytes": 945
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-gated-cymbals.mid",
+      "sha256": "da2fed7377fec0153c2cc79cfb3349dbd229169d3dbb5f1288abc802ea6c9c3f",
+      "bytes": 875
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-demu-mix-ride.mid",
+      "sha256": "e0614611fdb2dce227a315d5af598103faf8b9059c3ec81850e819bb92bbb2e1",
+      "bytes": 978
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__same.mid",
+      "sha256": "ea23be08b0b4f8e1eec9e8cc6b094784e0789a04bc157aea10f0fff032a3abeb",
+      "bytes": 881
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-gated-cymbals.mid",
+      "sha256": "eae9417624244d6dac85d405b3bdc405de5271c32d1980a715fa0918b1ad786e",
+      "bytes": 947
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-sw-mix-ride.mid",
+      "sha256": "76c847acd3c401b93fae72af8fcec7dc2e33e066f7b3f28ec537b4cd20f7f073",
+      "bytes": 1033
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-sw-mix-ride.mid",
+      "sha256": "31e432998aea4e5fb88fde9fae8713198c266deac017c7ef4a9ef1525b2c340c",
+      "bytes": 934
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-gated-cymbals.mid",
+      "sha256": "e1b1aa11c19bed09d1c3886ad57e097a940d3f2ed7e2e583971618a39cc7ba09",
+      "bytes": 917
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-ride.mid",
+      "sha256": "110da56f6570d65f045f46a42be6b3a20d6127c64376e777ad67b4214b356fbc",
+      "bytes": 980
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-demucs.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-demucs.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+      "bytes": 637
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__mix-all-fine.mid",
+      "sha256": "f0ea8661d23165c08f9a2fd408b0cd2305f5baf3e7239f785ea86d273ff06ba8",
+      "bytes": 1079
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-demu-mix-ride.mid",
+      "sha256": "6b97a6aef59094d90aa3341e94b0e2b14e42f602f438ebc8c8dc3ae39bd30eb8",
+      "bytes": 1042
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__same.mid",
+      "sha256": "b072b70cda1390a057c252ab6d14918596ec03cfdbc3755bd366399d3283f590",
+      "bytes": 889
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-cymbals.mid",
+      "sha256": "df2dd85fe21f804be86a254a6f1714e31213b7ecd53625a9721a7c815e26204a",
+      "bytes": 997
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-all-fine.mid",
+      "sha256": "dc1d7b0fda820a81a0daece2ea102e17c8787f0c054d6d730d296a6a2266f13e",
+      "bytes": 1030
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-demu-mix-ride.mid",
+      "sha256": "cfb0f7919d01d4ea19a330b53ccdd388e3a6a11ef2b23024fbf9469034973e7b",
+      "bytes": 962
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-sw-mix-ride.mid",
+      "sha256": "1bb0ac0a241530309fea67e7de0d540446cd144cd049a9ebf391ecfad3c2b825",
+      "bytes": 1006
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-gated-ride.mid",
+      "sha256": "5ce94ffdc840d1c0f21c2e4d96a5efc7de811c9a92a9dfcf29b122e9e2542881",
+      "bytes": 986
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__same.mid",
+      "sha256": "0ae81c86b9c08b4ddf581033706e0df6ea50aea11659a036cb0ca9016aff2e45",
+      "bytes": 895
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__gated-ride.mid",
+      "sha256": "bbdc26cd1672dcc76046a9e51b3e7ad6f6d471e58496c2f5e6f0ec5df56d2de8",
+      "bytes": 985
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-gated-ride.mid",
+      "sha256": "3a569b9b80f4c0b6bcba78739482ee097fcfaa01fa4fe03ae35ed38ec554e81f",
+      "bytes": 906
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-cymbals.mid",
+      "sha256": "118dbe3f2028518318d4814852fa426fa85c6fe55d33c81053073ba12fbac479",
+      "bytes": 1021
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-cymbals.mid",
+      "sha256": "6464ac76cd0f6402aacd1619deabc4f4f66389462785df38c2f393b4d377578f",
+      "bytes": 980
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-ride.mid",
+      "sha256": "d399e726eb7140554d4b9fe32903ca9fde4fafd2d61468d62fb6f606ba29667c",
+      "bytes": 1062
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__same.mid",
+      "sha256": "0c82d6c5d729d5e9cc90516628c97c5b061a37465286e88c81192160b73c7365",
+      "bytes": 873
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__mix-all-fine.mid",
+      "sha256": "bf3a44c6c4e74fb6a4fc8555c215108106d6ea900da1052d72442e509dce5302",
+      "bytes": 1046
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__same.mid",
+      "sha256": "870baa2e7a97db37adc3b34fd9d46bbcd843487acb0a505b5760c19b3561c3cc",
+      "bytes": 947
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-sw-mix-ride.mid",
+      "sha256": "838971de5da90557ce55ad1635531cc3a082f7f4ee8bbfd795fd723ec04cd3f7",
+      "bytes": 983
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-gated-ride.mid",
+      "sha256": "9af9651189e47c3e7dc80b505a7ab7bb82694594726eb85198d835b736c37967",
+      "bytes": 972
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-demu-mix-ride.mid",
+      "sha256": "2da1466cd9527bf87e4331d79fdcdd2988175f074efc69e7f8e10adabd56325a",
+      "bytes": 1028
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-mix.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-mix.mid",
+      "sha256": "6aa7fc02baa013a8aab3b8c559381425e5f2779dcd6c9e6990046e6b24ca7f4d",
+      "bytes": 992
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-oafdemucs.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-oafdemucs.mid",
+      "sha256": "53ff5cdad15c87a53da4063b5097d95eadcf41b0b7143ecef23865f2f981f9e1",
+      "bytes": 499
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-ride.mid",
+      "sha256": "3bb0d4115047b40617dbe3270375f7cb05293c0743ef2fd4bfc0ff9a49f1ac28",
+      "bytes": 1027
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-all-fine.mid",
+      "sha256": "4d72b9f5d1a0c31eb22c766fe046f4540ad0982cf58dd389f1cd44177cf78b63",
+      "bytes": 1112
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-all-fine.mid",
+      "sha256": "a261e1cb6ef69d9a58704b66ea5edaaea8c0af2af682c3dbb8a5cf73ad1a8bda",
+      "bytes": 1087
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-gated-cymbals.mid",
+      "sha256": "dfef8195723f3fc78774b60423b6a505c6138cab1033efb37dbcee14f905828b",
+      "bytes": 958
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__gated-ride.mid",
+      "sha256": "b038e6278cb1f1dc5dabdd8820243f6ac6e975525f00ee37418199029c54d0c9",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-sw-mix-ride.mid",
+      "sha256": "1dfa18aa1c7f8d92430cc2e1f581f34cd36d767e9a10f0a74904e3cacf3d7de1",
+      "bytes": 997
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__mix-all-fine.mid",
+      "sha256": "88f2644d735a0fcfcfdd6d2b25c939a2ee2f913bf1a3cda5bef9b8ba42f4917c",
+      "bytes": 1091
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-sw-mix-ride.mid",
+      "sha256": "e0078a71b7a6d4985ed0cdea41cc1631f9b00c134383d72aeb2f2bde64385f11",
+      "bytes": 1017
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-gated-cymbals.mid",
+      "sha256": "71022c1e3b64c88e12227ad9bfab12cfd54b84ce4d3b5ce17f832f0f8d908ee3",
+      "bytes": 938
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-ride.mid",
+      "sha256": "299eb8fd215cdb2fb529b84067c616f3c4694e837cf9b570a1771ee7dad886d5",
+      "bytes": 1035
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-ride.mid",
+      "sha256": "74fd16eaf1a0c921d5564daffc661c3749e0728fd9fc08f93efbabbb8362fabe",
+      "bytes": 1046
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__oaf-demu-mix-ride.mid",
+      "sha256": "e6ed1085272ef086ebf0b37838d7271095a7b0c8661928a7b5a81327c341e20e",
+      "bytes": 945
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-ride.mid",
+      "sha256": "c9a69ad0734f91417c6258f201735bb50e92c91c38530ff4295ee4febf943ab6",
+      "bytes": 1005
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-gated-ride.mid",
+      "sha256": "608502a2fa2580b17de5352abd1e50997911b329a9a2fecc736cd129baf4957c",
+      "bytes": 873
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-demu-mix-ride.mid",
+      "sha256": "078f1bd79535e451e665a27ed31b6cb51436a6ad819c80b995f88d5e55812982",
+      "bytes": 987
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__same.mid",
+      "sha256": "b4c21c7339114a214f23e0a96bff2f9c8a35392323bfb10f0430bfa2c42a082a",
+      "bytes": 848
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-gated-ride.mid",
+      "sha256": "8232a5960c4d1b6e5e178a6e692646da6b95ab466f0eed163a3a99e20ca35a46",
+      "bytes": 922
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-sw-mix-ride.mid",
+      "sha256": "747a95e11760afa69ed46f5c3cfdc61d2892745ceae8e53b61ac646ae620fd2e",
+      "bytes": 976
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__gated-ride.mid",
+      "sha256": "04b46030a47dcaa6f1b7b1c2cd6fb4dc882803a05b6c79f5eddf09d10a188682",
+      "bytes": 952
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__mix-cymbals.mid",
+      "sha256": "ad2ff40fb3e83a92f39cfd4d0b98e782639ae12a10c59e165b9fba95b7033734",
+      "bytes": 1035
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-sw.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-sw.mid",
+      "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+      "bytes": 806
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__gated-ride.mid",
+      "sha256": "8e3aeaca7f57f760e10f4a3433be1b13516e1117466e3ccaec8dc4eb395a67f5",
+      "bytes": 1015
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__gated-ride.mid",
+      "sha256": "e4090a293d3992f21962d4e097ef47f735f35c3195a91cd1e6929ee033fc2504",
+      "bytes": 944
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__same.mid",
+      "sha256": "7ebf980b5fdf0174f8de19a75fd2fecf4ab610dec7dace22d7bbcc31a74ca3db",
+      "bytes": 832
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__mix-cymbals.mid",
+      "sha256": "182f6a091f37a974df3b7a80fd625d11b0364f4b0e03de5af0ee3c14c9242f3a",
+      "bytes": 1062
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-sw-mix-ride.mid",
+      "sha256": "af4d2f3ef5f44abca0f24023a109b566e7d4ea6473c54e841b3bf6602ee5acc8",
+      "bytes": 992
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.22__oaf-gated-cymbals.mid",
+      "sha256": "c7cf8fe261a9d1c87fdcc157c0745a39c8328556b71aa65bcf2cf5b74f814c5b",
+      "bytes": 924
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__oaf-demu-mix-ride.mid",
+      "sha256": "f0da804a5017e9f4ec64abb9d497e4f03fcebd312ce0a7cacf1e386e332d05f4",
+      "bytes": 1001
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-cymbals.mid",
+      "sha256": "cfaf9a56f542b4907d86eed600f4f44348df693b6c208cc13249436e11896d22",
+      "bytes": 1076
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__oaf-demu-mix-ride.mid",
+      "sha256": "0cc7b263d6b19569bfbd007b346a89192098dc644395dd779f3fa4712d92e254",
+      "bytes": 971
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-demu-mix-ride.mid",
+      "sha256": "accbb6b6c32c068b4f3f8d72f07cbb3f982af937095f91ea1fa84b7a6228013f",
+      "bytes": 959
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-demu-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__oaf-demu-mix-ride.mid",
+      "sha256": "d32f7ca84936394aafa1a51615bc2f1d7267791be74150c8eff61629d28d5396",
+      "bytes": 929
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__oaf-gated-ride.mid",
+      "sha256": "549a0963bd4a488ff8da47f78998412e4c630c81e8fb36ad6b95c8ba074d2e34",
+      "bytes": 956
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__oaf-gated-ride.mid",
+      "sha256": "9a0e3f3316907bbb9043ba229bfbeb0c4e69180efc64dc1692e1f3e42cdc0961",
+      "bytes": 936
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-all-fine.mid",
+      "sha256": "98031ce1a3b5a6d612c12928993cc34c5fc20d8886b40541ebaff83f7103287f",
+      "bytes": 1071
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-cymbals.mid",
+      "sha256": "50ac8780b08e9f68bbcc56fbff6ba745f2c95ac53f7b46069633db32c3a2cd46",
+      "bytes": 994
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__oaf-gated-ride.mid",
+      "sha256": "3f63c081ac53e1ec3d021a497eb36aa22cbb5daa2cc9eb87b707e814ad28c0e1",
+      "bytes": 931
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-gated-cymbals.mid",
+      "sha256": "bfa0e6083afdea19c151df4f0f24e04a1b220ca853c2f1010f03a8b413a520c5",
+      "bytes": 908
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__oaf-sw-mix-ride.mid",
+      "sha256": "4aaee6706d254c159879d949742b01126708a4374447b5d8c2e4e576d99c4257",
+      "bytes": 967
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__gated-ride.mid",
+      "sha256": "8b2a3e0c130ce6071ad465a13ee2e80d3fc0f71a93e3d3b7973fb0c8436246e7",
+      "bytes": 933
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-gated-cymbals.mid",
+      "sha256": "977532e69424cf9b2adcacebd6d18b255343935429827b8c3c73e0ea96f0242d",
+      "bytes": 988
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__oaf-sw-mix-ride.mid",
+      "sha256": "447a89662974a230edc0f78a8990a03414b8ed8788cc6dd12a378d1e0617a1c9",
+      "bytes": 1047
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__same.mid",
+      "sha256": "2f190b82a0bbef083479e34e13a661eb38ab980985650dedac0be4f018c27f83",
+      "bytes": 917
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.275__gated-ride.mid",
+      "sha256": "c9b148d933a0bea2d37eed2557526693ffd9f313060229d9f0a0e61b80f31c38",
+      "bytes": 919
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__mix-all-fine.mid",
+      "sha256": "218ce5298f459a2f81eccc1809e070dd566a0400e77e6909188c345507651e8f",
+      "bytes": 1058
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-all-fine.mid",
+      "sha256": "053bcbbf351f0077189ec48bd25204bd4817b82a15ce076f30ab4cfea894be8a",
+      "bytes": 1140
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.22__gated-ride.mid",
+      "sha256": "6f33e5504526465f41a103b33f0cd5606097e3040451861817f174bb75ffa61b",
+      "bytes": 966
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__mix-ride.mid",
+      "sha256": "e0428d511e747d9db8fcf7cc28780d7d22d79f545adf79cf3c6652bdae4ebcd2",
+      "bytes": 1021
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__same.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-all-fine.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-all-fine.mid",
+      "sha256": "88c1112c0d16596cecdb7e373589057b1792f3db3c64f6e29d9ddf3799257feb",
+      "bytes": 1063
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-gated-ride.mid",
+      "sha256": "f71f176eeea878049a133a5943e4ae88a357d4ad7844f1b3052ecb46b99b6376",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__gated-ride.mid",
+      "sha256": "245624bdda78f09917918837ef334c5acc8a16c19a4d43736423b59790d12357",
+      "bytes": 1001
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.165__gated-ride.mid",
+      "sha256": "41e4e88012b274b9f8a2356e5b8ab21eeefd10b8693211d6c28282b96483f1a5",
+      "bytes": 974
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.275__mix-cymbals.mid",
+      "sha256": "5ef0b466f734d780cd508bb8fae98f098eba8ab8ea445f784342e13b2c305bbb",
+      "bytes": 964
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__mix-ride.mid",
+      "sha256": "f7ee4f1cc91135fcbee45ed3c239b6b25844fd0449f873ce788341fe5f21e725",
+      "bytes": 997
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-sw-mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.275__oaf-sw-mix-ride.mid",
+      "sha256": "ae0b8f64fc7c77969b6620755e8743179b3d467000cce4d108705d6cb6ad376a",
+      "bytes": 964
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__same.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.22__same.mid",
+      "sha256": "5a6ba29402e69bcc89bb5e4db3d31b239f7790930efefeb2b4685b5662ab2673",
+      "bytes": 865
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.165__mix-cymbals.mid",
+      "sha256": "0d863d1a88ad4815f58b9cedc1ec6287cb632cd3aebf2b3785bf383c955fe212",
+      "bytes": 1005
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-prev.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/control-prev.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-gated-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.11__oaf-gated-cymbals.mid",
+      "sha256": "dd2c99cc9cc19b6ca3b87aa21194c3a2479fac98f9d398a7cdefa6bfb6d899d6",
+      "bytes": 974
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-cymbals.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.3-h0.11__mix-cymbals.mid",
+      "sha256": "e240c2e6d6c35afe2c2c8a721e5978039273379976a09c79ad537edfc4ee4426",
+      "bytes": 1046
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.18-h0.11__mix-ride.mid",
+      "sha256": "85a828bd18dabd18bcf4946f9273527d87a58fe1ba0788cef59fe6de28ae171b",
+      "bytes": 1076
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__gated-ride.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e00\u8bc4\u5206/adtof-s0.24-h0.165__gated-ride.mid",
+      "sha256": "b714d6fded1ce5923fc67fc0574f1c4a0c605f74c2d3be84c1033c2fb6c7b4b4",
+      "bytes": 960
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.05.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.05.mid",
+      "sha256": "84f28f4e4b5011c19267154d3fc643e5e924312d976c9cff92f4ac8ca21beb5c",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.08.mid",
+      "sha256": "95a14564cfe4df30dc74768d40e94e08092f92f8eeb387d26d23905ffcd8a664",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.03.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.03.mid",
+      "sha256": "84f28f4e4b5011c19267154d3fc643e5e924312d976c9cff92f4ac8ca21beb5c",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-baseline.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.08.mid",
+      "sha256": "2abb60af2d59a67afffdf8fc8f79944a0f11fa7a43e0573dddcd7b282b9e50e8",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.05.mid",
+      "sha256": "2abb60af2d59a67afffdf8fc8f79944a0f11fa7a43e0573dddcd7b282b9e50e8",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-sw-tol0.03.mid",
+      "sha256": "2abb60af2d59a67afffdf8fc8f79944a0f11fa7a43e0573dddcd7b282b9e50e8",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.03.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.03.mid",
+      "sha256": "95a14564cfe4df30dc74768d40e94e08092f92f8eeb387d26d23905ffcd8a664",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.05.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-demucs-tol0.05.mid",
+      "sha256": "95a14564cfe4df30dc74768d40e94e08092f92f8eeb387d26d23905ffcd8a664",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-coarse-tol0.08.mid",
+      "sha256": "84f28f4e4b5011c19267154d3fc643e5e924312d976c9cff92f4ac8ca21beb5c",
+      "bytes": 909
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key36-baseline.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.08.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key48-coarse-tol0.08.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-baseline.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u56db\u8bc4\u5206/key55-baseline.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u6700\u7ec8\u8bc4\u5206/selected-combined.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u6700\u7ec8\u8bc4\u5206/selected-combined.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d",
+      "bytes": 903
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-8.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-8.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-3.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-3.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-2.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-2.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-1.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-1.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-5.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-5.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-4.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-4.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-6.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-6.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    },
+    "\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-7.mid": {
+      "path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u5168\u90e8\u5019\u9009MID/\u9636\u6bb5\u4e09\u8bc4\u5206/combo-7.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "bytes": 915
+    }
+  },
+  "declared_candidates": 188,
+  "unique_candidate_midi_hashes": 129,
+  "representative_auditions": 11,
+  "zip": {
+    "path": "outputs/runs/drums-v2/\u9f13\u5f3a\u5316\u7248-\u542b\u516d\u8f68\u4e0e\u5bf9\u7167.zip",
+    "sha256": "2607ae67ca55efc28e1f9736f075be9fedbdb7fb8c7fe00b2dac4abf5795f344",
+    "bytes": 33695278,
+    "entries": 220
+  }
+}

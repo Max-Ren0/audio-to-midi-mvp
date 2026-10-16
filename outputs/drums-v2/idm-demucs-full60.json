@@ -1,0 +1,39 @@
+{
+  "input_path": "work/new/stems/htdemucs_6s/\u674e\u8363\u6d69 - \u4e0d\u5c06\u5c31-[AudioTrimmer.com]/drums.wav",
+  "input_sha256": "8f5d1679444dda595e035a16691e0e957ee9fd4d502c56cdea90cad833d88512",
+  "model_sha256": "5856a9bee7c6d503842795756d238dc8470f6f3e010e9e4f33ede0362850cb4c",
+  "config_sha256": "2300e60bfaa8c4c4756568d8ede8992d2e56231b2a519acf30fda1d1bb36f2e6",
+  "repo_revision": "456656868538205ef756912c7cf5b0fd936de8af",
+  "classes": [
+    "CY_CR",
+    "CY_RD",
+    "HH_CHH",
+    "HH_OHH",
+    "KD",
+    "SD",
+    "TT_HFT",
+    "TT_HMT",
+    "TT_LMT"
+  ],
+  "fps": 172.265625,
+  "duration_seconds": 60.03045351473923,
+  "shape": [
+    9,
+    10355
+  ],
+  "max_probability_per_class": [
+    0.1498100906610489,
+    0.2736673355102539,
+    0.5196045637130737,
+    0.3421880304813385,
+    0.6759366989135742,
+    0.586081862449646,
+    0.43899714946746826,
+    0.35178858041763306,
+    0.061775580048561096
+  ],
+  "activation_sha256": "8e3b20fa2d66e2a9889520d14c91500c9f08cdab23f717989e4dae68bce5105e",
+  "script_sha256": "13da4598be4a3ce4101d06b349125f758f1ab2fc0aa3d1f1e31fd6a5a611bb36",
+  "reference_used": false,
+  "elapsed_seconds": 0.883696166005393
+}

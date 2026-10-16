@@ -1,0 +1,39 @@
+{
+  "input_path": "work/two-methods/sw-full/drums.wav",
+  "input_sha256": "0cec5940389ad4eae5c5b57381e671498ea85d3269ca1d777c6bfd07e54ea55a",
+  "model_sha256": "5856a9bee7c6d503842795756d238dc8470f6f3e010e9e4f33ede0362850cb4c",
+  "config_sha256": "2300e60bfaa8c4c4756568d8ede8992d2e56231b2a519acf30fda1d1bb36f2e6",
+  "repo_revision": "456656868538205ef756912c7cf5b0fd936de8af",
+  "classes": [
+    "CY_CR",
+    "CY_RD",
+    "HH_CHH",
+    "HH_OHH",
+    "KD",
+    "SD",
+    "TT_HFT",
+    "TT_HMT",
+    "TT_LMT"
+  ],
+  "fps": 172.265625,
+  "duration_seconds": 60.03045351473923,
+  "shape": [
+    9,
+    10355
+  ],
+  "max_probability_per_class": [
+    0.2105260193347931,
+    0.4487166106700897,
+    0.5660318732261658,
+    0.4606003761291504,
+    0.6613858342170715,
+    0.5700263381004333,
+    0.481751948595047,
+    0.48037269711494446,
+    0.04760342091321945
+  ],
+  "activation_sha256": "19f7bea38898f36c95fd3cca973aa4aecc09a311ddafe4d0c3e4bc47e9d7aa17",
+  "script_sha256": "13da4598be4a3ce4101d06b349125f758f1ab2fc0aa3d1f1e31fd6a5a611bb36",
+  "reference_used": false,
+  "elapsed_seconds": 0.9918467909956235
+}

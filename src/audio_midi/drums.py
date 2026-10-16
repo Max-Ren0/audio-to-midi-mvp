@@ -59,3 +59,19 @@ def augment_supported_drums(base: list[NoteEvent], weak: list[NoteEvent], suppor
     corroborated=consensus_drums(weak,support,tolerance)
     novel=[n for n in corroborated if not any(n.pitch==m.pitch and abs(n.onset-m.onset)<=.05+1e-9 for m in base)]
     return clean_notes([*base,*novel],duration)
+
+
+def optimized_drums_v2(general: list[NoteEvent], mix: list[NoteEvent], oaf_sw: list[NoteEvent], oaf_demucs: list[NoteEvent], adtof: list[NoteEvent], weak_cymbal: list[NoteEvent], duration: float) -> list[NoteEvent]:
+    """Frozen seen-development recipe; callers provide hash-verified decodes.
+
+    OAF SW=.5, OAF Demucs=.35; ADTOF snare=.18/hat=.165/cymbal=.225;
+    weak cymbal=.15. Preserve all original GM keys, attacks, and velocities.
+    """
+    if any(n.category!='drums' for notes in (general,mix,oaf_sw,oaf_demucs,adtof,weak_cymbal) for n in notes):
+        raise ValueError('Drum-only sources required')
+    only=lambda notes,key:[n for n in notes if n.pitch==key]
+    kick=consensus_drums(only(oaf_sw,36),only(general,36),.03)
+    snare=consensus_drums(only(adtof,38),only(oaf_demucs,38),.05)
+    ride=consensus_drums(only(mix,51),only(weak_cymbal,49),.03,families=({49,51,53,55,57,59},))
+    splash=consensus_drums(only(general,55),only(adtof,49),.03,families=({49,51,53,55,57,59},))
+    return route_drum_keys({'general':general,'kick':kick,'snare':snare,'hat':only(adtof,42),'tom':only(oaf_sw,48),'ride':ride,'splash':splash},'general',{36:'kick',38:'snare',42:'hat',48:'tom',51:'ride',55:'splash'},duration)

@@ -1,0 +1,20 @@
+{
+  "IDM": {
+    "repo": "https://github.com/bernardo-torres/inverse-drum-machine",
+    "revision": "456656868538205ef756912c7cf5b0fd936de8af",
+    "checkpoint_sha256": "5856a9bee7c6d503842795756d238dc8470f6f3e010e9e4f33ede0362850cb4c",
+    "checkpoint_bytes": 2544694,
+    "inference": "official encoder strict state loading, no manual onset overrides; onset logits sigmoid; no waveform decoder needed",
+    "dependency_overlay": "rich13.9.4 markdown-it-py3.0.0 mdurl0.1.2 pygments2.19.1 lightning-utilities0.14.3, work/drums-v2/idm-deps only"
+  },
+  "YODO": {
+    "repo": "https://github.com/varsaav/yodo",
+    "revision": "0cb980a11e9ba1a37cbafddec1e85c66d8ffa236",
+    "checkpoint_sha256": "1cdc360b6c0b72e669d6736c1df0c9e171d157aadddbebe3b67130874264f588",
+    "checkpoint_bytes": 256231380,
+    "backend": "OpenCV4.11 CPU, not independently parity-tested against Darknet",
+    "result": "zero detections both sources with candidate cutoff0.20; adapter not proven valid-positive, cannot infer upstream model quality",
+    "attempts": 7,
+    "failed_attempts": 4
+  }
+}
