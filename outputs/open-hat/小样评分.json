@@ -1,0 +1,327 @@
+{
+  "scope": "2 synthetic kit controls, samekey50ms, fixed synthesis time, no fitted shift; not real-song benchmark",
+  "rows": [
+    {
+      "kit": 0,
+      "model": "mt3",
+      "threshold": null,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-mt3.json",
+      "output_sha256": "252f8976c4cf39c41b36df2fc87e462df6f7e62ec5418174cece5e860836305f",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 0,
+      "model": "idm",
+      "threshold": 0.1,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 31,
+          "fn": 0,
+          "f1": 0.16216216216216217,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.16216216216216217,
+          "onset_error_median_seconds": 0.0027210884353743303
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 0,
+      "model": "idm",
+      "threshold": 0.2,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 28,
+          "fn": 0,
+          "f1": 0.17647058823529413,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.17647058823529413,
+          "onset_error_median_seconds": 0.0027210884353743303
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 0,
+      "model": "idm",
+      "threshold": 0.3,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 2,
+          "fp": 21,
+          "fn": 1,
+          "f1": 0.15384615384615385,
+          "onset_only_tp": 2,
+          "onset_only_f1": 0.15384615384615385,
+          "onset_error_median_seconds": 0.0034920634920635463
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 0,
+      "model": "idm",
+      "threshold": 0.5,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 0,
+      "model": "yodo",
+      "threshold": null,
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-yodo.json",
+      "output_sha256": "3d89c8b253c5f330db1afcc18b74013a4d99cc7c4b9e51edc75b00b94b586496",
+      "numerically_valid": false,
+      "score": null,
+      "invalid_reason": "OpenCV nonfinite objectness, not valid zero detections"
+    },
+    {
+      "kit": 8,
+      "model": "mt3",
+      "threshold": null,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-mt3.json",
+      "output_sha256": "d37c931150f3794168afb9126df158ed58edbf2e2e07dc0243be0907eedd2501",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 8,
+      "model": "idm",
+      "threshold": 0.1,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 41,
+          "fn": 0,
+          "f1": 0.1276595744680851,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.1276595744680851,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 8,
+      "model": "idm",
+      "threshold": 0.2,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 30,
+          "fn": 0,
+          "f1": 0.16666666666666666,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.16666666666666666,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 8,
+      "model": "idm",
+      "threshold": 0.3,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 24,
+          "fn": 0,
+          "f1": 0.2,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.2,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 8,
+      "model": "idm",
+      "threshold": 0.5,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "numerically_valid": true,
+      "score": {
+        "42": {
+          "tp": 1,
+          "fp": 8,
+          "fn": 2,
+          "f1": 0.16666666666666666,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.16666666666666666,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      },
+      "invalid_reason": null
+    },
+    {
+      "kit": 8,
+      "model": "yodo",
+      "threshold": null,
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-yodo.json",
+      "output_sha256": "48b4a3c7026cd7dd1c8d5a609cd85c49ea1548d247ea804d16f5d142afc225c4",
+      "numerically_valid": false,
+      "score": null,
+      "invalid_reason": "OpenCV nonfinite objectness, not valid zero detections"
+    }
+  ]
+}
