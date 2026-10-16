@@ -1,0 +1,31 @@
+{
+  "input_sha256": "63ff3d3aefce4f648a8f16e5d4fdeb3b9df1193f812722d9fcb788f356c50170",
+  "weight_sha256": "1bc986e596ec47ba0b44916f87cd4a39f0b2bec23596df3fb5d0e87749217320",
+  "package_version": "0.1.0",
+  "code_sha256": {
+    "__init__.py": "9c0a061a9a3335def7b89a4a6000f7c0b141a789d06a96d8f3bf94a4e7d83194",
+    "audio.py": "9aac619b430a3bd7551918bd1f187f53f0ad4e17cd615fbeb868cdf4c088cb0e",
+    "cli.py": "6d237f6c4704f6c5d8af7f5985a04908e016eb1123d664f3f2f39fd80ea702c2",
+    "model.py": "7537ddd224996fee8eeeade3c2965ba2d502465a724b27a38a41b97c85e62865",
+    "post_processing.py": "b6b4a41fe5f13c61b35eb2dc4cad5e2fbc6c4ac47a9c9046cf9d0aced697db66"
+  },
+  "strict_load": true,
+  "labels": [
+    35,
+    38,
+    47,
+    42,
+    49
+  ],
+  "fps": 100,
+  "shape": [
+    1,
+    1501,
+    5
+  ],
+  "cpu_threads": 2,
+  "elapsed_seconds": 1.5522494169999845,
+  "activation_sha256": "77a01a64a483f8f0de75a33e0f511534a0f45ef8026a0a84ff91f8ced7d467c1",
+  "script_sha256": "e831359db5dc7b16718d728fd35c69b9d2d3801140b2728768628013f25544b1",
+  "reference_used": false
+}

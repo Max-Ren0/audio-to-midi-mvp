@@ -1,0 +1,36 @@
+{
+  "version": "drums-research-1",
+  "status": "research_noncommercial_component_not_production_approval",
+  "general": {
+    "separation": "htdemucs_6s",
+    "transcription": "YourMT3 yptf_moe_nops",
+    "keys": "all original GM keys except38/42"
+  },
+  "specialist": {
+    "separation": "locked BS-Roformer SW",
+    "transcription": "ADTOF-pytorch0.1.0 strict weights",
+    "activation_weight_sha256": "1bc986e596ec47ba0b44916f87cd4a39f0b2bec23596df3fb5d0e87749217320",
+    "fps": 100,
+    "labels": [
+      35,
+      38,
+      47,
+      42,
+      49
+    ],
+    "thresholds": [
+      0.165,
+      0.18,
+      0.24,
+      0.165,
+      0.225
+    ],
+    "selected_keys": [
+      38,
+      42
+    ]
+  },
+  "gm_remapping": false,
+  "reference_in_generation": false,
+  "selection": "whole candidate chosen on first known60s development only; freeze before extra60-120 inference; not song-level blind"
+}

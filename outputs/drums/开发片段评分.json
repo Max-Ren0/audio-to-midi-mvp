@@ -1,0 +1,270 @@
+{
+  "role": "development/regression, same known excerpt; whole candidate selection only, not blind",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375
+  },
+  "hybrid_rule": {
+    "specialist_keys": [
+      38,
+      42
+    ],
+    "general_keys": "all other original keys",
+    "gm_remapping": false,
+    "per_note_reference_selection": false
+  },
+  "baseline_score": {
+    "reference": 94,
+    "predicted": 56,
+    "matched": 42,
+    "extra": 14,
+    "missed": 52,
+    "precision": 0.75,
+    "recall": 0.44680851063829785,
+    "f1": 0.56
+  },
+  "candidates": [
+    {
+      "id": "H2-Demucs-YourMT3-SW-ADTOF-lower075",
+      "midi": "outputs/runs/drums/development/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955",
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 73,
+        "extra": 22,
+        "missed": 21,
+        "precision": 0.7684210526315789,
+        "recall": 0.776595744680851,
+        "f1": 0.7724867724867724
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H1-Demucs-YourMT3-SW-ADTOF-default",
+      "midi": "outputs/runs/drums/development/H1-Demucs-YourMT3-SW-ADTOF-default/鼓.mid",
+      "sha256": "ea23be08b0b4f8e1eec9e8cc6b094784e0789a04bc157aea10f0fff032a3abeb",
+      "score": {
+        "reference": 94,
+        "predicted": 92,
+        "matched": 71,
+        "extra": 21,
+        "missed": 23,
+        "precision": 0.7717391304347826,
+        "recall": 0.7553191489361702,
+        "f1": 0.7634408602150538
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H0-Demucs-YourMT3-ADTOF",
+      "midi": "outputs/runs/drums/development/H0-Demucs-YourMT3-ADTOF/鼓.mid",
+      "sha256": "e1da3a372c374d03376db694d59f05ddb093f2dafe4cfee3027ce029ac323625",
+      "score": {
+        "reference": 94,
+        "predicted": 80,
+        "matched": 65,
+        "extra": 15,
+        "missed": 29,
+        "precision": 0.8125,
+        "recall": 0.6914893617021277,
+        "f1": 0.7471264367816092
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H3-Demucs-YourMT3-SW-ADTOF-lower050",
+      "midi": "outputs/runs/drums/development/H3-Demucs-YourMT3-SW-ADTOF-lower050/鼓.mid",
+      "sha256": "20d1cc1a05696840c72cef7fe732c46103fc5189dceb3bb9ea60a2220b6b12a4",
+      "score": {
+        "reference": 94,
+        "predicted": 102,
+        "matched": 73,
+        "extra": 29,
+        "missed": 21,
+        "precision": 0.7156862745098039,
+        "recall": 0.776595744680851,
+        "f1": 0.7448979591836735
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H5-SW-YourMT3-ADTOF-lower075",
+      "midi": "outputs/runs/drums/development/H5-SW-YourMT3-ADTOF-lower075/鼓.mid",
+      "sha256": "ac24b4911a0b79d7f030ed85740988424ee564125d1d44f2d26b199dec229c9c",
+      "score": {
+        "reference": 94,
+        "predicted": 100,
+        "matched": 72,
+        "extra": 28,
+        "missed": 22,
+        "precision": 0.72,
+        "recall": 0.7659574468085106,
+        "f1": 0.7422680412371134
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H4-SW-YourMT3-ADTOF-default",
+      "midi": "outputs/runs/drums/development/H4-SW-YourMT3-ADTOF-default/鼓.mid",
+      "sha256": "35f79cdd4a3cfc83d4dad5c18adfa1b68b13616bf66a35cfa6dfa37b50af0758",
+      "score": {
+        "reference": 94,
+        "predicted": 97,
+        "matched": 70,
+        "extra": 27,
+        "missed": 24,
+        "precision": 0.7216494845360825,
+        "recall": 0.7446808510638298,
+        "f1": 0.7329842931937173
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "H6-SW-YourMT3-ADTOF-lower050",
+      "midi": "outputs/runs/drums/development/H6-SW-YourMT3-ADTOF-lower050/鼓.mid",
+      "sha256": "16470601df489dd4e0ae44f61362861f03066d5a3d2db0b696bf6b9ba41452e5",
+      "score": {
+        "reference": 94,
+        "predicted": 107,
+        "matched": 72,
+        "extra": 35,
+        "missed": 22,
+        "precision": 0.6728971962616822,
+        "recall": 0.7659574468085106,
+        "f1": 0.7164179104477612
+      },
+      "generation": "fixed key routing"
+    },
+    {
+      "id": "D4-SW-ADTOF-lower075",
+      "midi": "outputs/runs/drums/development/D4-SW-ADTOF-lower075/鼓.mid",
+      "sha256": "d05db133884df148f2046ce69b08d4a5231182304c9ae14fb5ca020329df0957",
+      "score": {
+        "reference": 94,
+        "predicted": 97,
+        "matched": 55,
+        "extra": 42,
+        "missed": 39,
+        "precision": 0.5670103092783505,
+        "recall": 0.5851063829787234,
+        "f1": 0.5759162303664922
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    },
+    {
+      "id": "D3-SW-ADTOF-default",
+      "midi": "outputs/runs/drums/development/D3-SW-ADTOF-default/鼓.mid",
+      "sha256": "45a27ea8bad082cae3061f4a12bc09b433b3fa5048ef131650fadb0b4a0e326a",
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 53,
+        "extra": 41,
+        "missed": 41,
+        "precision": 0.5638297872340425,
+        "recall": 0.5638297872340425,
+        "f1": 0.5638297872340425
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    },
+    {
+      "id": "D0-Demucs-YourMT3",
+      "midi": "outputs/runs/drums/development/D0-Demucs-YourMT3/鼓.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+      "score": {
+        "reference": 94,
+        "predicted": 56,
+        "matched": 42,
+        "extra": 14,
+        "missed": 52,
+        "precision": 0.75,
+        "recall": 0.44680851063829785,
+        "f1": 0.56
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    },
+    {
+      "id": "D1-SW-YourMT3",
+      "midi": "outputs/runs/drums/development/D1-SW-YourMT3/鼓.mid",
+      "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+      "score": {
+        "reference": 94,
+        "predicted": 79,
+        "matched": 48,
+        "extra": 31,
+        "missed": 46,
+        "precision": 0.6075949367088608,
+        "recall": 0.5106382978723404,
+        "f1": 0.5549132947976878
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    },
+    {
+      "id": "D5-SW-ADTOF-lower050",
+      "midi": "outputs/runs/drums/development/D5-SW-ADTOF-lower050/鼓.mid",
+      "sha256": "62f2c7b011d62fd17b7544f9bb176e386cbe3069777fa3bb447309410b55a174",
+      "score": {
+        "reference": 94,
+        "predicted": 106,
+        "matched": 55,
+        "extra": 51,
+        "missed": 39,
+        "precision": 0.5188679245283019,
+        "recall": 0.5851063829787234,
+        "f1": 0.55
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    },
+    {
+      "id": "D2-Demucs-ADTOF-default",
+      "midi": "outputs/runs/drums/development/D2-Demucs-ADTOF-default/鼓.mid",
+      "sha256": "eab095e0ef79236f674fde0e90e4d2ec47bb6897610352fdfa079392e8247009",
+      "score": {
+        "reference": 94,
+        "predicted": 81,
+        "matched": 47,
+        "extra": 34,
+        "missed": 47,
+        "precision": 0.5802469135802469,
+        "recall": 0.5,
+        "f1": 0.5371428571428571
+      },
+      "generation": "raw model candidate canonical MIDI serialization"
+    }
+  ],
+  "best_development": "H2-Demucs-YourMT3-SW-ADTOF-lower075",
+  "source_hashes": {
+    "D0-Demucs-YourMT3": {
+      "path": "outputs/runs/v01/development/单轨/drums.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27"
+    },
+    "D1-SW-YourMT3": {
+      "path": "outputs/runs/two-methods/sw-local-control/单轨/drums.mid",
+      "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f"
+    },
+    "D2-Demucs-ADTOF-default": {
+      "path": "work/v01/adtof.mid",
+      "sha256": "92651e14c4646b02b44b97594371b8bdb6f743ec10b57d360d4f46e4cb2ab383"
+    },
+    "D3-SW-ADTOF-default": {
+      "path": "work/drums/sw-decoded/default.json",
+      "sha256": "d50d13ba3826c97c75c5b9b5e74ea0cc5f2010baf96ac7858314c95dd0405a77"
+    },
+    "D4-SW-ADTOF-lower075": {
+      "path": "work/drums/sw-decoded/lower075.json",
+      "sha256": "470de7f941540d276c1ff2bcbb9bfc2d9d43b4094f4d568a46417af482d7f13e"
+    },
+    "D5-SW-ADTOF-lower050": {
+      "path": "work/drums/sw-decoded/lower050.json",
+      "sha256": "536cdbf27d9b6a4d6f79252782130846f627bce2948dd46b55e48eaa878a753f"
+    }
+  },
+  "limitations": [
+    "ADTOF five coarse classes, research noncommercial license",
+    "No manual listening or independent original-audio sync",
+    "No new source separation; cached stems were hash-verified",
+    "Same-song development selection is optimistic"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "registered_before_new_inference",
+  "status": "drum_decoding_in_progress",
   "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
   "limits": {
     "cpu_threads": 2,
@@ -24,19 +24,43 @@
       "id": "sw-adtof-probe15",
       "source": "first15s of existing SW drums; preserve zero",
       "purpose": "new-input resource check",
-      "status": "registered"
+      "status": "passed",
+      "run": {
+        "peak_memory_bytes": 605143040,
+        "attempts": 1,
+        "elapsed_seconds": 2.61231137499999
+      }
     },
     {
       "id": "sw-adtof-full60",
       "source": "existing SW drums",
       "purpose": "save raw 5-class activations for decode-only comparison",
-      "status": "registered"
+      "status": "passed",
+      "run": {
+        "peak_memory_bytes": 1178222592,
+        "attempts": 1,
+        "elapsed_seconds": 2.2097087919974
+      }
+    },
+    {
+      "id": "sw-extra60-separation",
+      "input_sha256": "6fdbe7a427b2f21647319b5159a8131cfb21d3f42b2f1e95c8571d3a24505e1f",
+      "status": "registered",
+      "source": "work/spike/bujiangjiu-60-120.mp3",
+      "purpose": "new source separation for frozen-rule same-song additional regression; no retuning"
+    },
+    {
+      "id": "extra-sw-adtof-full60",
+      "status": "registered",
+      "source": "new SW extra drums",
+      "purpose": "same frozen thresholds/routing, no tuning using extra score"
     }
   ],
   "decode_only_candidates": [
     "ADTOF upstream per-class thresholds",
     "upstream thresholds scaled0.75",
-    "upstream thresholds scaled0.50"
+    "upstream thresholds scaled0.50",
+    "fixed hybrid: YourMT3 all keys except38/42; ADTOF38/42 only, no GM remapping"
   ],
   "notes": [
     "No reference used during model inference/decoding",
@@ -44,5 +68,7 @@
     "ADTOF research noncommercial restriction remains",
     "No external uploads/payment; no user UI/audio device"
   ],
-  "actual_new_process_attempts": 1
+  "actual_new_process_attempts": 3,
+  "hybrid_rule_reason": "Complementary model class coverage; 5-class ADTOF has no fine tom/ride/open hat resolution, preserve YourMT3 those keys. Chosen on disclosed development results, never per-note oracle.",
+  "hybrid_selection_scope": "Only input-source and predeclared threshold whole candidates selected by development F1. No note-level selection using reference."
 }
