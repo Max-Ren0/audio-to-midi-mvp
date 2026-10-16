@@ -278,3 +278,5 @@
 - scripts/build_drums_v2.py是hash-bound缓存重建入口，不是任意新音频自动运行全模型。真实重建与最终MID字节一致。新增模型wrapper/生成/评分脚本及来源收据存outputs/drums-v2，权重/缓存不上传。
 - 本地outputs/runs/drums-v2/交付/含鼓MID/WAV、六轨仅换鼓MID/WAV、9额外代表方案试听、188候选及评分。六轨383TP/545pred/494ref F173.7247，其他五轨原MIDI消息/tick完全相同。初次用秒重写其他轨引入浮点差，改为直接保留原track消息，避免重编码其他轨。
 - 阶段1 ae7735a独立验证114候选/18原始解码/来源/97测试通过，无阻断。新增阶段2–4/IDM/最终包装待冻结后复验。钢琴B不改、60–120不访问、ADTOF NC和SW权重限制持续。当前新开发分85.56不能作独立泛化质量。
+
+- d0c0b934冻结独立复核通过：188评分/129唯一MID、阶段2/3/4和IDM原始解码/组件来源、真实缓存重建、其他5轨原消息、100测试、220产物及ZIP/11WAV均一致，无阻断项。详outputs/drums-v2/独立验证.md。主agent另测CLI错误MP3hash拒绝及不覆盖已有文件通过。最终鼓SHA3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d，六轨SHAa375592ab6268d71bea976831c4ddc5575a6a4cb9cdc7814d2f913b830bc809d，ZIP SHA2607ae67ca55efc28e1f9736f075be9fedbdb7fb8c7fe00b2dac4abf5795f344。origin/codex/drums-v2已同步d0c0b93；准备安全FF main并推送v0.1.0-drums.2，不改冻结媒体。
