@@ -1,0 +1,51 @@
+{
+  "prediction_path": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9f13-v0.1-\u5f3a\u5316\u7248.mid",
+  "prediction_sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d",
+  "reference_manifest_sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375
+  },
+  "same_key_tp_by_tolerance_seconds": {
+    "0.03": 64,
+    "0.05": 80,
+    "0.1": 80,
+    "0.15": 80
+  },
+  "matched_median_absolute_time_error_ms": 22.18005000004819,
+  "time_only_full_tp_50ms": 86,
+  "residual_cross_key_nearby": [
+    {
+      "reference_key": 49,
+      "prediction_key": 55,
+      "delta_ms": -7.0868708333478025
+    },
+    {
+      "reference_key": 42,
+      "prediction_key": 38,
+      "delta_ms": -21.572608333400467
+    },
+    {
+      "reference_key": 46,
+      "prediction_key": 42,
+      "delta_ms": -22.864150000110328
+    },
+    {
+      "reference_key": 49,
+      "prediction_key": 42,
+      "delta_ms": -32.8009916667753
+    },
+    {
+      "reference_key": 46,
+      "prediction_key": 38,
+      "delta_ms": 3.396620833186148
+    },
+    {
+      "reference_key": 46,
+      "prediction_key": 42,
+      "delta_ms": -36.54060833349604
+    }
+  ],
+  "caveat": "Residual cross-key proximity is diagnostic only; simultaneous drum hits and reference arrangement differences prevent treating pairs as proven misclassification. Official score stays same-key50ms. No prediction modified."
+}
