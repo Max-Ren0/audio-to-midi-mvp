@@ -317,3 +317,4 @@
 - 18FN中15个±150ms窗口有目标估计帧被低置信度过滤（这15个窗口无目标帧低能量拒绝）；5个窗口目标帧全被过滤。3个窗口无原始目标估计。33FP中23与标准同音高时段重叠；FP起始触发retrigger10/voicing12/pitch11。全部8短段被删除，补1帧，平滑改0帧。清理仅裁片尾结束，非起音原因。
 - 归因不是唯一因果：±150ms邻近、帧级正确音高、改编长音重叠不能证明同一次演奏；标准不是原录音真值，无原贝斯wav不算SDR。pYIN raw已含其内部voiced/解码，16ms步长不等于256ms分析窗起音精度。优先下轮验证置信度保持逻辑+onset/F0解耦，暂不支持优先全局八度修正或仅换分离器。
 - outputs/bass-diagnostics/含报告、51个错误详情/CSV、18匹配对/全部预测与标准事件、源码/产物校验。work/bass-diagnostics/replay/存逐帧NPZ/CSV和完整trace；outputs/runs/bass-diagnostics/clips/有102局部WAV（51错误×原曲/贝斯），均本地保留。原鼓/六轨/贝斯哈希不变，不访问60–120。待冻结后独立只读验证及GitHub同步。
+- 41f0bc9冻结后独立verify_bass_diagnostics复核通过，无必须修正项：107测试、修改前contour同帧回放与新trace同音符/原MID同字节、独立最大匹配所有计数、3752帧/51错误完整、全部过滤/切分声明与102片段PCM、118项ZIP来源均一致。详outputs/bass-diagnostics/独立验证.md。ZIP SHA7bf2d5ac4f467b8840bc743f0cda3738df011d2c27cbbecf8754d62020853765。未人工听辨或新歌验证；报告只给排查优先级。主agent接受，产物不修改；新增审查记录后安全FF main并发布v0.1.0-bass-diagnostics.1诊断标签，不表示贝斯质量提升。
