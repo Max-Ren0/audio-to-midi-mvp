@@ -1,0 +1,582 @@
+{
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "stem_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1",
+  "separation_receipt_sha256": "4e96511872a8e6b35d892ae9f9b1266d42c86e8277c8bc7249d2f0bc7f897af1",
+  "reference_manifest_sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732",
+  "baseline_sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0",
+  "source_sha256": {
+    "contour.py": "5e16b6307f413dbef1583b383cb40d5fff8a056d863a13c1a83290367bd2be86",
+    "stitching.py": "242472e5ea13ee6eb28803f290d13c439fd9cecb601ab2865bdb2f424f60e0d6",
+    "bass_diagnostics.py": "bf327bfbbd8dd6a844f2f179f70519c5d4b0e40d6955e8eb135b75659b3670ea",
+    "analyze.py": "362557db7946b264a28de8974fdab49eaaa2e152ea7b598fbfc4b5b5a37bda33",
+    "replay.py": "ced903f2493ef3214ad9a1f2c147e5cbdd31486d5bfa0096b754a1fc85ce82c8"
+  },
+  "files": [
+    {
+      "path": "work/bass-diagnostics/replay/trace.json",
+      "sha256": "c17e95eb5fb85f23654780c82d4b3145659717af2eaade6be94910b9352cd711",
+      "bytes": 36211
+    },
+    {
+      "path": "work/bass-diagnostics/replay/frames.npz",
+      "sha256": "677dc4e3e0fac813623b24c8cb7bf7c8a370fe772c36a1795c3d136c1bad5465",
+      "bytes": 40307
+    },
+    {
+      "path": "work/bass-diagnostics/replay/frames.csv",
+      "sha256": "a2d5bf400cd1860fd58d049db22cbc7cbf905d008f844366b549291b350b5767",
+      "bytes": 477947
+    },
+    {
+      "path": "work/bass-diagnostics/replay/replayed-bass.mid",
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0",
+      "bytes": 631
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-00-5.305s-bass.wav",
+      "sha256": "b97466132c8aa1046fdd85c23d59c43d415ba4e0e8c8e7caa1fdd3f2c992e73d",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-00-5.305s-mix.wav",
+      "sha256": "17c926981d2c8b99fc2a02cc88b8c2fea7cc47913474d258c66ddacf9b44014f",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-01-6.136s-bass.wav",
+      "sha256": "1a17e820c74bab9e83cdf1f89d2b6c682c0f393834697937522e1957857cf007",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-01-6.136s-mix.wav",
+      "sha256": "9ae5c3885e40f270ba68611342271e6a5cd8c0461d2db778c83e7400ac7a1492",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-02-6.966s-bass.wav",
+      "sha256": "c11a1dffbb97c1205f29adb757d6142b079707f9d5f0a36eb7b67ffd52bedae1",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-02-6.966s-mix.wav",
+      "sha256": "9f60cb14b88db534aed0a3932037dc5bad6163bbc09924c973371b1c8f0f518b",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-03-8.637s-bass.wav",
+      "sha256": "1968957408bfe873b8410e8747b51c646a4d0d5857f6eccd46b9a81c31fd799f",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-03-8.637s-mix.wav",
+      "sha256": "577a95b3c11b54fb195b42e383a8a3e0b7b835427bfed0701fef49c54773f218",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-05-11.988s-bass.wav",
+      "sha256": "25705fb73e206c653da5b95dfc271f3b2ad672726a687174f681bda12d1a7870",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-05-11.988s-mix.wav",
+      "sha256": "8b1ac24bff71b88f07a035ce950c42770d453ba6d4ef3355b48190d39d9412a8",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-08-41.774s-bass.wav",
+      "sha256": "0310be5b10fe83f8104e6d320fc38f78a90e7055f2823ad3fba282846471fd20",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-08-41.774s-mix.wav",
+      "sha256": "b58c4a408b42a9039df1f8912152fc48bba150f7970f2e2d7436e4b318d3cbf9",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-09-41.983s-bass.wav",
+      "sha256": "7edd4a00febcaea59c5685023d7e6297ec5dc0de8ad4ac8ae65758977f45bcc8",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-09-41.983s-mix.wav",
+      "sha256": "391eefbbe07a635dbdc9ba20415ef3123dea1bad7c81a15c64f3984e434886c7",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-12-44.915s-bass.wav",
+      "sha256": "c0afce19d1f7fe4e30b39f39887b038d2b70deb961b4eb05e19c468cdba6cd55",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-12-44.915s-mix.wav",
+      "sha256": "b91c66df70f52bc28986be3a07d5a87a523bed5b2c2c5ea1e2c1f7aea47053ce",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-14-45.314s-bass.wav",
+      "sha256": "6e61ecb5404f0f6468c6ed68ebff052b4cb5c8db83157a35af666674d596a69f",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-14-45.314s-mix.wav",
+      "sha256": "58e690145580da7593172e182882ae8f2676df72a861841d4a68c5e60545bd6d",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-16-46.565s-bass.wav",
+      "sha256": "be7fa29da241d545fee6f8638f738a1eadec0d75ca26c364a94528d3af00c67c",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-16-46.565s-mix.wav",
+      "sha256": "f73be8757c76500c785939c8133654e910a07d0b86484aa8335b82e74ef7799d",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-17-46.777s-bass.wav",
+      "sha256": "b0cd8a862205a565941c724737627f89484d5d5c06864668a24538dccc29d79f",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-17-46.777s-mix.wav",
+      "sha256": "d0aacdb6d631debdcc540ab6e70d6ef701676cbb4a7ccdfda86690aba117f4dc",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-18-46.985s-bass.wav",
+      "sha256": "9d945d9b9051a75b8bdd0b1474bb3fd36384f926530630be060fb59c143dc7f2",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-18-46.985s-mix.wav",
+      "sha256": "0456c7f2d9501a529f4915e7778725fc21cd893e259c1d3b3b0f981657699f17",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-19-48.236s-bass.wav",
+      "sha256": "7ca16379e0b711500d0d6beaabb1cce7129737ceddc4515c6dc29653981e9fde",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-19-48.236s-mix.wav",
+      "sha256": "aa3d69324dd3e5c09c28a994424843a4a61f591ed1014090ed9e22122f4b9549",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-20-48.446s-bass.wav",
+      "sha256": "4ec8fe98918548767ff289259f3a01412445ff82465d831ad5bc654afe337174",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-20-48.446s-mix.wav",
+      "sha256": "a9930b4875510eb6581d6ba3e2891921a0bd63d004c97952c970d5299af527bd",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-21-48.656s-bass.wav",
+      "sha256": "90dbfffc32be2a87da6376aab2325bc13573e41a562efbeda3860f6b1f95fcc4",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-21-48.656s-mix.wav",
+      "sha256": "c9bee51c5d7dd0344ecc9dd8dfd174f5220a64ff5bde0d444fe1fe4755eacabd",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-25-51.988s-bass.wav",
+      "sha256": "7f0cf34d121a8a12525bd4ca0bd1f296f83440ae3a7758ca520bd0adab86a405",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-25-51.988s-mix.wav",
+      "sha256": "1929d683f0c3cba25022b83d90f575fce3714d95d778b353900d73729656d4b8",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-32-56.990s-bass.wav",
+      "sha256": "9e86a120e32a28ada3cc7026900689411cd6740f428def99f5e4e0aed7443a57",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-32-56.990s-mix.wav",
+      "sha256": "889fe9e46915b664379b1a937b8c6a7419979fa8d27e01db24fc6881e8991bda",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-33-57.821s-bass.wav",
+      "sha256": "0e31baab39a319b0a4b1d82ad377df500dcf01a0a1fb42fe38a8e2ba4ab05efd",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FN-33-57.821s-mix.wav",
+      "sha256": "4cb0c6659b5bb936d96d0a6d883fccca9bd0bb0b995a9814657a2a6b306a75e5",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-00-5.456s-bass.wav",
+      "sha256": "47b14b5d289a81d6f454d24ee730673b9cc51a784d4a1ff792dba21055b3f9aa",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-00-5.456s-mix.wav",
+      "sha256": "e0b6224a59ecf225129284a86e2001d6ea707b0923027a7ac6e3699abab389fb",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-01-5.552s-bass.wav",
+      "sha256": "00b1bedc54852b9417d3de4f36a7b99bdf72f468af6a6f058af15c0eddb6fc5a",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-01-5.552s-mix.wav",
+      "sha256": "0975d54308583dbae8bf1b9378915b34bf352ed474cda948eaed97cb03b0a738",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-02-6.272s-bass.wav",
+      "sha256": "c1afa3bc1e5d42ed070f314b83234bc44c53207bf1ae88d8dd729de68a9fe01c",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-02-6.272s-mix.wav",
+      "sha256": "c11260ba14ed7eac1be822d3c62067901c138da1d0bf26a23e9ef3359b5d4e74",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-03-7.120s-bass.wav",
+      "sha256": "7286f640808a8f3707e132b7610f0af66ca86ae883810136e6bae5f6350079a2",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-03-7.120s-mix.wav",
+      "sha256": "2c974b37ba0c024e77037b605164529ce246a1f1308ecb5b217c270931708f3e",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-04-8.768s-bass.wav",
+      "sha256": "35426f19025c9ffa9a813ea427e2cdd1ab3fc13b4baa7965ddb874ef0600290b",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-04-8.768s-mix.wav",
+      "sha256": "3c54d6841847090fbe9990635d8c3a804877396716000b7273a394fd7a6f5e05",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-06-12.048s-bass.wav",
+      "sha256": "b90befc4f1b441f336f249ccf923db5e26f3cc2461277ad4ba4bb50dcc5d803a",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-06-12.048s-mix.wav",
+      "sha256": "43166aa7027bf6cd0d20805a18d87f6fe9c6264593fa8bea9507e441db92d20e",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-07-12.144s-bass.wav",
+      "sha256": "51883e765c9949643ec0138b43453da0c8c5035133339a37b8c2bb08805c65c5",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-07-12.144s-mix.wav",
+      "sha256": "ea04bea9d074206bf8934f740d6f345a0ec9f9fd88d59adc1645011d8d207c5a",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-08-13.392s-bass.wav",
+      "sha256": "ebf9a9f135a7af77da1e229fc2ecaeb0744c1312a902e2c17cb4c69e16c1a5f5",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-08-13.392s-mix.wav",
+      "sha256": "7816c6a9ff84819916ecf34bd47200fbfdd09c960588c51a610328fb83694c68",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-09-13.472s-bass.wav",
+      "sha256": "60a945b95a5a3d86f54526aaa3f1e2eb65b078476dfffeff12173fd9164f7d89",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-09-13.472s-mix.wav",
+      "sha256": "38905e08b2d32cbe736a8e2b0c0388796d0981126a32e409bd716dc363ab9e42",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-10-13.552s-bass.wav",
+      "sha256": "573cf1ef5f770476552fc373ce43a7bfee3ff384371f35d33c59f645512c7a06",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-10-13.552s-mix.wav",
+      "sha256": "cd034abaf02ff1ecc38f0fb474d03e2b05810faf720fef09d2b2402fb25b9c67",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-13-42.064s-bass.wav",
+      "sha256": "f373f23ae511c9533848be7477476554e66c21b3b6564ae0378e8d7c04d0e153",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-13-42.064s-mix.wav",
+      "sha256": "7f7a4e8d5f12df6047a97695857f361eba041cf3456200077e10987d39082a3d",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-15-42.880s-bass.wav",
+      "sha256": "e75b2d700c4072850ba2735c40351dc5b6385f4c24599a7bcc0c0f579fe5936e",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-15-42.880s-mix.wav",
+      "sha256": "b7ee8fd05668a5161408ab2e7bec573d44aa7fb5d674a14b4b0c966fdc68323e",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-16-43.408s-bass.wav",
+      "sha256": "99c4c1db6c1778ca580647d6aa68248f34e62224d22da22b8266d47977d1e3c4",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-16-43.408s-mix.wav",
+      "sha256": "b826ac973f85a1794d4687e768f60a82d01649ded75611e344ce00422f78a55e",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-18-43.712s-bass.wav",
+      "sha256": "75a95754172818ce92c9cf1bf5d78e57ae8ceadcd227108e40a886a9a7c379a2",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-18-43.712s-mix.wav",
+      "sha256": "e3da5a640b8abe83ec2dbdef4d179eea58117d41e80be4979521d1fe4ca6aab3",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-19-44.528s-bass.wav",
+      "sha256": "c616596047e1ca359a5a56702eb7343420bd124f5a9b740aaada053010c1db94",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-19-44.528s-mix.wav",
+      "sha256": "774d9f2021c483a11dac066ec705725937d0417ae98d869c11ac4af8ace64527",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-21-45.440s-bass.wav",
+      "sha256": "f67ac628e3a0e08d4e6c2aafc8b981f7f77e4e8196b452c38366a19f09847fd3",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-21-45.440s-mix.wav",
+      "sha256": "e95d34ab226ab3543e581c9f95992aef6f5a1cfb4bccb2eaa875fd36f3feee0d",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-23-47.072s-bass.wav",
+      "sha256": "bf552dd7892bbb9b2f691de924ff6b85387083a2acb06c1981f368d06ca8ba40",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-23-47.072s-mix.wav",
+      "sha256": "ac71b80a6ab67c8d13a3db4f0555ea4c5f18eb09c51b4fe5a2e50aaaf85e9f55",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-24-47.872s-bass.wav",
+      "sha256": "3507baffeb405bdc5f1da53f19cfa99c5ef8cdf695e6225cc29feb3a2a52400f",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-24-47.872s-mix.wav",
+      "sha256": "0dce9a5ff2ad693faf11a177a9f71955111a13fd6a95f201a5886e11718f6494",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-26-49.552s-bass.wav",
+      "sha256": "46b87d27bff923bd9fc76853d63a31f2c587bc8b7967adc93a83bf2de6fd9fcf",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-26-49.552s-mix.wav",
+      "sha256": "e192db6551e7e34f024a23c5d2380288f31aadf05545f1da9fad932de42d1b59",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-28-50.368s-bass.wav",
+      "sha256": "15b113f7318d76ab30af3161d1d1de7f81108b46a65e3e8cd13ab22cd535c06d",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-28-50.368s-mix.wav",
+      "sha256": "d714ecc4b9925f100356e030ef1515245435ebb6db607724c92d06e972ec6005",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-29-51.216s-bass.wav",
+      "sha256": "b8b98c6961a5211e7825f11985bb5d3140cf078d7f26ac3f15e7923edbb6958d",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-29-51.216s-mix.wav",
+      "sha256": "60436324133a6274bcdcc4c9ecc4cbfc0b3e14352d9e3c0dc985fc457fd92e5b",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-31-52.128s-bass.wav",
+      "sha256": "211f0a939f814984f7f4dd7cbe226d7d739d9948c23a7f530380733c1b40537e",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-31-52.128s-mix.wav",
+      "sha256": "8d0e5a8d7aad5a20ef9d2347984c7203d5bcdd680c12abc59910e04680f388d5",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-32-52.352s-bass.wav",
+      "sha256": "04cab3ea943c642faa7586ae297f679369f0b0ce8493ffe8a3dfff4aed6498a3",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-32-52.352s-mix.wav",
+      "sha256": "b1d1ba286c86ff9c1f8fe4f64bfcbf54883ee8e4c5fe356f7134dc94a8f1734a",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-35-52.880s-bass.wav",
+      "sha256": "69343792dd2129218c9472aa718d4ffd25246fc91b6dc49a0f7b1586da2e6e97",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-35-52.880s-mix.wav",
+      "sha256": "30f5a9eddc03a840c1f85c9e79906f281e8a7a2b20d1fef23fc447a6f3c5c09a",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-36-53.456s-bass.wav",
+      "sha256": "4a9d2502e5d923884c44de05b6f951db96d0af1ac495a5cb09c00cee0329948b",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-36-53.456s-mix.wav",
+      "sha256": "01fa552765bea693c952ba6a2052fcaef8171ae1d07f02308b14cdf11da5aa47",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-37-53.568s-bass.wav",
+      "sha256": "d72d758a1f9692def9a9c5e8b71b708427dbbfcc4ba4c9808fd9488abb9ef95a",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-37-53.568s-mix.wav",
+      "sha256": "87218454a3b439c4caf63671dbd90113391a311ac08a4e4ca49e8d05e24c4812",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-39-54.512s-bass.wav",
+      "sha256": "d571dc4ec72dd6e57e219a22b47d05573297ad8c7ceb54e354ce149565bc7c40",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-39-54.512s-mix.wav",
+      "sha256": "282d79b3b4012989d33e50ed4a8e5ca01df2ecb0327bfd757acdd4c4f40942be",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-41-55.232s-bass.wav",
+      "sha256": "c4b26bb75e6d28f0852ce6454f47d0ed4533b0d43bdb8ea0483f2ac21de844aa",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-41-55.232s-mix.wav",
+      "sha256": "c72caaf059b951a954707d6b162a6bbdfc6b5c808690b4e5d911ad36bdb7ed26",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-43-55.680s-bass.wav",
+      "sha256": "dc3eea767f805e514f66ef923bb0a72a9c65b01a97b80b55d696634da8de7cc2",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-43-55.680s-mix.wav",
+      "sha256": "2bf71a50b2cb116d8b552a682b337cfd6a000d502bb8ca1000dca2b76e11b07a",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-45-56.720s-bass.wav",
+      "sha256": "68a373bb8d1bd2f6639b310d60e3a532555676d5455ccc8339c4177e7000fb82",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-45-56.720s-mix.wav",
+      "sha256": "c5bbf98dd0fef7afc52065ef9d49e0969dc1b4d99c4ef4a51533b800d87c3f9b",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-46-57.087s-bass.wav",
+      "sha256": "cd759a5b5a3a5379434ca7da3f29e556f5543e9fa798a9656c6dee3a99842edb",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-46-57.087s-mix.wav",
+      "sha256": "9082d6fc153c78c8db4b174291f495d0e39bd790abdf58b7d7c4ca06cd14c990",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-47-57.872s-bass.wav",
+      "sha256": "cb64c3b064cf5614ee93276ee908d9086e4e92f052c0582af5d4cc270821ab25",
+      "bytes": 423448
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-47-57.872s-mix.wav",
+      "sha256": "93607c833eb08acca35b3be9072f09925e4d31ead39f9fb6a514ecf6ad8db6c4",
+      "bytes": 76880
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-50-59.536s-bass.wav",
+      "sha256": "a4a9bba6bb71fd45b28b65fbea2251c4b16d14e36d835251705a844716ca8ba6",
+      "bytes": 297840
+    },
+    {
+      "path": "outputs/runs/bass-diagnostics/clips/FP-50-59.536s-mix.wav",
+      "sha256": "c41a08e9ee7c106c949510842931f4fc5d8e69382cb4eb7d8489df00a92c65eb",
+      "bytes": 54096
+    },
+    {
+      "path": "outputs/bass-diagnostics/逐音归因.json",
+      "sha256": "c510f788b939c1d0e6badcabcb71ed4a8a2708eb4151d8689ffad02757d02200",
+      "bytes": 174598
+    },
+    {
+      "path": "outputs/bass-diagnostics/逐音错误清单.csv",
+      "sha256": "ca047e79fbe9e2f0a78eea768153349c7ee64687223e4b8fb15b65e4d4b2834e",
+      "bytes": 12197
+    },
+    {
+      "path": "outputs/bass-diagnostics/诊断汇总.json",
+      "sha256": "54c211a44dbb067b48d027aeae369ab38e07f7535d309937b5bdc44bb2e3180a",
+      "bytes": 1717
+    },
+    {
+      "path": "outputs/bass-diagnostics/贝斯诊断报告.md",
+      "sha256": "d681a62d3e03aeea0405d1ac954c5e15b2b70cdfb752ca3711ee06053d086db9",
+      "bytes": 10071
+    },
+    {
+      "path": "outputs/bass-diagnostics/实施计划.md",
+      "sha256": "3a124f9bc8047681b0c8f8032dcb9ac2e9ada503a82ae3e105a6e99021e4033a",
+      "bytes": 1467
+    },
+    {
+      "path": "outputs/bass-diagnostics/write_report.py",
+      "sha256": "5abc2acf2d8eb5186157c429f428c777facc9f2ce6322068a4cd57b161f2ac33",
+      "bytes": 7879
+    },
+    {
+      "path": "outputs/bass-diagnostics/回放运行.json",
+      "sha256": "e4c22064a3224f92a3ffc13272de9dc85858c3ca354470a6028688a0a3047845",
+      "bytes": 93
+    }
+  ],
+  "limits": "No studio bass reference; no causal proof from note proximity; same seen development excerpt."
+}

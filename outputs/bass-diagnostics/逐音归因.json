@@ -1,0 +1,6312 @@
+{
+  "counts": {
+    "matched": 18,
+    "predicted": 51,
+    "reference": 36,
+    "extra": 33,
+    "missed": 18,
+    "f1": 0.41379310344827586
+  },
+  "matched_pairs": [
+    {
+      "reference_index": 4,
+      "prediction_index": 5,
+      "delta_ms": 28.347854166670036
+    },
+    {
+      "reference_index": 6,
+      "prediction_index": 11,
+      "delta_ms": 33.509654166668106
+    },
+    {
+      "reference_index": 7,
+      "prediction_index": 12,
+      "delta_ms": 40.70576250000305
+    },
+    {
+      "reference_index": 10,
+      "prediction_index": 14,
+      "delta_ms": -2.9857999999946365
+    },
+    {
+      "reference_index": 11,
+      "prediction_index": 17,
+      "delta_ms": -21.338279166667466
+    },
+    {
+      "reference_index": 13,
+      "prediction_index": 20,
+      "delta_ms": 15.732720833331694
+    },
+    {
+      "reference_index": 15,
+      "prediction_index": 22,
+      "delta_ms": -38.73608333333259
+    },
+    {
+      "reference_index": 22,
+      "prediction_index": 25,
+      "delta_ms": 21.299050000001348
+    },
+    {
+      "reference_index": 23,
+      "prediction_index": 27,
+      "delta_ms": -44.94613750000388
+    },
+    {
+      "reference_index": 24,
+      "prediction_index": 30,
+      "delta_ms": 20.22491666666395
+    },
+    {
+      "reference_index": 26,
+      "prediction_index": 33,
+      "delta_ms": 24.065720833323013
+    },
+    {
+      "reference_index": 27,
+      "prediction_index": 34,
+      "delta_ms": -33.75838750001004
+    },
+    {
+      "reference_index": 28,
+      "prediction_index": 38,
+      "delta_ms": -10.945091666682202
+    },
+    {
+      "reference_index": 29,
+      "prediction_index": 40,
+      "delta_ms": -37.38398750002253
+    },
+    {
+      "reference_index": 30,
+      "prediction_index": 42,
+      "delta_ms": 24.280924999976687
+    },
+    {
+      "reference_index": 31,
+      "prediction_index": 44,
+      "delta_ms": 29.271708333309913
+    },
+    {
+      "reference_index": 34,
+      "prediction_index": 48,
+      "delta_ms": -5.227925000019827
+    },
+    {
+      "reference_index": 35,
+      "prediction_index": 49,
+      "delta_ms": -35.507625000019225
+    }
+  ],
+  "same_pitch_onset_tolerance": {
+    "0.03": {
+      "matched": 11,
+      "f1": 0.25287356321839083
+    },
+    "0.05": {
+      "matched": 18,
+      "f1": 0.41379310344827586
+    },
+    "0.1": {
+      "matched": 22,
+      "f1": 0.5057471264367817
+    },
+    "0.15": {
+      "matched": 26,
+      "f1": 0.5977011494252874
+    },
+    "0.3": {
+      "matched": 29,
+      "f1": 0.6666666666666666
+    }
+  },
+  "time_only_50ms_matched": 18,
+  "octave_only_50ms_matched": 0,
+  "false_positives": [
+    {
+      "kind": "FP",
+      "index": 0,
+      "pitch": 42,
+      "onset": 5.45625,
+      "offset": 5.552083333333333,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 5.3062499999999995,
+        "end": 5.60625,
+        "frames": 19,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 5.45625,
+        "end": 5.552083333333333,
+        "frames": 6,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 2,
+          "start_frame": 341,
+          "end_frame": 347,
+          "onset": 5.456,
+          "offset": 5.5520000000000005,
+          "pitch": 42,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        5.328,
+        5.584
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 0,
+        "segment_index": 2,
+        "start_reason": "voicing_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 5.10625,
+        "end": 6.3062499999999995,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-00-5.456s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-00-5.456s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 1,
+      "pitch": 43,
+      "onset": 5.552083333333333,
+      "offset": 6.032291666666667,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        0
+      ],
+      "nearest_same_pitch_event": {
+        "index": 0,
+        "onset": 5.305482991495747,
+        "offset": 6.135777838919459,
+        "delta_ms": -246.47704166666696,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 5.402083333333333,
+        "end": 5.702083333333333,
+        "frames": 19,
+        "raw_target_frames": 10,
+        "raw_target_longest_run_ms": 160.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 5.552083333333333,
+        "end": 6.032291666666667,
+        "frames": 30,
+        "raw_target_frames": 30,
+        "raw_target_longest_run_ms": 480.0,
+        "kept_target_frames": 29,
+        "filled_target_frames": 29,
+        "smoothed_target_frames": 29,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 3,
+          "start_frame": 347,
+          "end_frame": 377,
+          "onset": 5.5520000000000005,
+          "offset": 6.032,
+          "pitch": 43,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        5.584
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 1,
+        "segment_index": 3,
+        "start_reason": "pitch_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 5.202083333333333,
+        "end": 6.402083333333333,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-01-5.552s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-01-5.552s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 2,
+      "pitch": 41,
+      "onset": 6.271875,
+      "offset": 6.847916666666666,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 1,
+          "pitch": 41,
+          "onset": 6.135777838919459,
+          "delta_ms": -136.0291125000001,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        1
+      ],
+      "nearest_same_pitch_event": {
+        "index": 1,
+        "onset": 6.135777838919459,
+        "offset": 6.966072686343171,
+        "delta_ms": -136.0291125000001,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 6.121874999999999,
+        "end": 6.421875,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 6.271875,
+        "end": 6.771875,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 6,
+          "start_frame": 392,
+          "end_frame": 428,
+          "onset": 6.272,
+          "offset": 6.848,
+          "pitch": 41,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        6.208
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 2,
+        "segment_index": 6,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 5.921875,
+        "end": 7.121874999999999,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-02-6.272s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-02-6.272s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 3,
+      "pitch": 40,
+      "onset": 7.119791666666666,
+      "offset": 8.5125,
+      "evidence_flags": [
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        2
+      ],
+      "nearest_same_pitch_event": {
+        "index": 2,
+        "onset": 6.966072686343171,
+        "offset": 8.637084492246123,
+        "delta_ms": -153.6421208333331,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 6.969791666666666,
+        "end": 7.269791666666666,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 7.119791666666666,
+        "end": 7.619791666666666,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 9,
+          "start_frame": 445,
+          "end_frame": 532,
+          "onset": 7.12,
+          "offset": 8.512,
+          "pitch": 40,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        7.008,
+        7.04
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 3,
+        "segment_index": 9,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 6.769791666666666,
+        "end": 7.969791666666666,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-03-7.120s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-03-7.120s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 4,
+      "pitch": 33,
+      "onset": 8.767708333333333,
+      "offset": 10.208333333333334,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 3,
+          "pitch": 33,
+          "onset": 8.637084492246123,
+          "delta_ms": -130.5585291666669,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        3
+      ],
+      "nearest_same_pitch_event": {
+        "index": 3,
+        "onset": 8.637084492246123,
+        "offset": 10.308096298149072,
+        "delta_ms": -130.5585291666669,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 8.617708333333333,
+        "end": 8.917708333333334,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 8.767708333333333,
+        "end": 9.267708333333333,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 12,
+          "start_frame": 548,
+          "end_frame": 638,
+          "onset": 8.768,
+          "offset": 10.208,
+          "pitch": 33,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        8.688,
+        8.72
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 4,
+        "segment_index": 12,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 8.417708333333334,
+        "end": 9.617708333333333,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-04-8.768s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-04-8.768s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 6,
+      "pitch": 42,
+      "onset": 12.047916666666667,
+      "offset": 12.14375,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [
+        {
+          "index": 5,
+          "pitch": 43,
+          "onset": 11.987793196598297,
+          "delta_ms": -60.09340833333664,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 11.897916666666667,
+        "end": 12.197916666666668,
+        "frames": 19,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 12.047916666666667,
+        "end": 12.14375,
+        "frames": 6,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 17,
+          "start_frame": 753,
+          "end_frame": 759,
+          "onset": 12.048,
+          "offset": 12.144,
+          "pitch": 42,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 6,
+        "segment_index": 17,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 11.697916666666668,
+        "end": 12.897916666666667,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-06-12.048s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-06-12.048s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 7,
+      "pitch": 43,
+      "onset": 12.14375,
+      "offset": 13.391666666666667,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        5
+      ],
+      "nearest_same_pitch_event": {
+        "index": 5,
+        "onset": 11.987793196598297,
+        "offset": 13.637960780390193,
+        "delta_ms": -155.8788250000032,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 11.99375,
+        "end": 12.293750000000001,
+        "frames": 19,
+        "raw_target_frames": 10,
+        "raw_target_longest_run_ms": 160.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 12.14375,
+        "end": 12.64375,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 18,
+          "start_frame": 759,
+          "end_frame": 837,
+          "onset": 12.144,
+          "offset": 13.392,
+          "pitch": 43,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 7,
+        "segment_index": 18,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 11.793750000000001,
+        "end": 12.99375,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-07-12.144s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-07-12.144s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 8,
+      "pitch": 42,
+      "onset": 13.391666666666667,
+      "offset": 13.471875,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 13.241666666666667,
+        "end": 13.541666666666668,
+        "frames": 19,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 13.391666666666667,
+        "end": 13.471875,
+        "frames": 5,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 19,
+          "start_frame": 837,
+          "end_frame": 842,
+          "onset": 13.392,
+          "offset": 13.472,
+          "pitch": 42,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 8,
+        "segment_index": 19,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 13.041666666666668,
+        "end": 14.241666666666667,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-08-13.392s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-08-13.392s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 9,
+      "pitch": 41,
+      "onset": 13.471875,
+      "offset": 13.552083333333334,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 1,
+        "onset": 6.135777838919459,
+        "offset": 6.966072686343171,
+        "delta_ms": -7332.429112500002,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 13.321875,
+        "end": 13.621875000000001,
+        "frames": 19,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 13.471875,
+        "end": 13.552083333333334,
+        "frames": 6,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 20,
+          "start_frame": 842,
+          "end_frame": 847,
+          "onset": 13.472,
+          "offset": 13.552,
+          "pitch": 41,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 9,
+        "segment_index": 20,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 13.121875000000001,
+        "end": 14.321875,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-09-13.472s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-09-13.472s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 10,
+      "pitch": 40,
+      "onset": 13.552083333333334,
+      "offset": 13.695833333333335,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 2,
+        "onset": 6.966072686343171,
+        "offset": 8.637084492246123,
+        "delta_ms": -6582.717641666668,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 13.402083333333334,
+        "end": 13.702083333333334,
+        "frames": 19,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 9,
+        "filled_target_frames": 9,
+        "smoothed_target_frames": 9,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 13.552083333333334,
+        "end": 13.695833333333335,
+        "frames": 8,
+        "raw_target_frames": 8,
+        "raw_target_longest_run_ms": 128.0,
+        "kept_target_frames": 8,
+        "filled_target_frames": 8,
+        "smoothed_target_frames": 8,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 21,
+          "start_frame": 847,
+          "end_frame": 856,
+          "onset": 13.552,
+          "offset": 13.696,
+          "pitch": 40,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 10,
+        "segment_index": 21,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 13.202083333333334,
+        "end": 14.402083333333334,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-10-13.552s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-10-13.552s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 13,
+      "pitch": 29,
+      "onset": 42.063541666666666,
+      "offset": 42.25625,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 9,
+          "pitch": 29,
+          "onset": 41.9826288144072,
+          "delta_ms": -80.87239583333648,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        9
+      ],
+      "nearest_same_pitch_event": {
+        "index": 9,
+        "onset": 41.9826288144072,
+        "offset": 42.40298729364682,
+        "delta_ms": -80.87239583333648,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 41.91354166666667,
+        "end": 42.213541666666664,
+        "frames": 19,
+        "raw_target_frames": 14,
+        "raw_target_longest_run_ms": 224.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 42.063541666666666,
+        "end": 42.25625,
+        "frames": 13,
+        "raw_target_frames": 13,
+        "raw_target_longest_run_ms": 208.00000000000003,
+        "kept_target_frames": 12,
+        "filled_target_frames": 12,
+        "smoothed_target_frames": 12,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 30,
+          "start_frame": 2629,
+          "end_frame": 2641,
+          "onset": 42.064,
+          "offset": 42.256,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        42.032
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 13,
+        "segment_index": 30,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 41.713541666666664,
+        "end": 42.91354166666667,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-13-42.064s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-13-42.064s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 15,
+      "pitch": 29,
+      "onset": 42.88020833333333,
+      "offset": 43.40833333333333,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        10
+      ],
+      "nearest_same_pitch_event": {
+        "index": 10,
+        "onset": 42.40298729364682,
+        "offset": 43.65364062031015,
+        "delta_ms": -476.98242916666874,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 42.73020833333333,
+        "end": 43.03020833333333,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 42.88020833333333,
+        "end": 43.38020833333333,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 31,
+        "filled_target_frames": 31,
+        "smoothed_target_frames": 31,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 32,
+          "start_frame": 2650,
+          "end_frame": 2680,
+          "onset": 42.4,
+          "offset": 42.88,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 33,
+          "start_frame": 2680,
+          "end_frame": 2713,
+          "onset": 42.88,
+          "offset": 43.408,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        42.88
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 15,
+        "segment_index": 33,
+        "start_reason": "retrigger",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 42.53020833333333,
+        "end": 43.73020833333333,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-15-42.880s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-15-42.880s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 16,
+      "pitch": 30,
+      "onset": 43.40833333333333,
+      "offset": 43.51979166666666,
+      "evidence_flags": [
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 43.25833333333333,
+        "end": 43.55833333333333,
+        "frames": 19,
+        "raw_target_frames": 8,
+        "raw_target_longest_run_ms": 128.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 2,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 43.40833333333333,
+        "end": 43.51979166666666,
+        "frames": 6,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 34,
+          "start_frame": 2713,
+          "end_frame": 2720,
+          "onset": 43.408,
+          "offset": 43.52,
+          "pitch": 30,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 16,
+        "segment_index": 34,
+        "start_reason": "pitch_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 43.05833333333333,
+        "end": 44.25833333333333,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-16-43.408s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-16-43.408s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 18,
+      "pitch": 31,
+      "onset": 43.71249999999999,
+      "offset": 44.52812499999999,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 11,
+          "pitch": 31,
+          "onset": 43.65364062031015,
+          "delta_ms": -58.82994999999731,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        11
+      ],
+      "nearest_same_pitch_event": {
+        "index": 11,
+        "onset": 43.65364062031015,
+        "offset": 44.914716058029015,
+        "delta_ms": -58.82994999999731,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 43.56249999999999,
+        "end": 43.86249999999999,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 15,
+        "filled_target_frames": 15,
+        "smoothed_target_frames": 15,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 43.71249999999999,
+        "end": 44.21249999999999,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 31,
+        "filled_target_frames": 31,
+        "smoothed_target_frames": 31,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 36,
+          "start_frame": 2727,
+          "end_frame": 2732,
+          "onset": 43.632,
+          "offset": 43.712,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 37,
+          "start_frame": 2732,
+          "end_frame": 2783,
+          "onset": 43.712,
+          "offset": 44.528,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        43.68,
+        43.712
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 18,
+        "segment_index": 37,
+        "start_reason": "retrigger",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 43.36249999999999,
+        "end": 44.56249999999999,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-18-43.712s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-18-43.712s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 19,
+      "pitch": 31,
+      "onset": 44.52812499999999,
+      "offset": 44.88020833333332,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        11
+      ],
+      "nearest_same_pitch_event": {
+        "index": 13,
+        "onset": 45.10405107553776,
+        "offset": 45.31423031515757,
+        "delta_ms": 575.6381125000036,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 44.37812499999999,
+        "end": 44.67812499999999,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 44.52812499999999,
+        "end": 44.88020833333332,
+        "frames": 22,
+        "raw_target_frames": 22,
+        "raw_target_longest_run_ms": 352.0,
+        "kept_target_frames": 21,
+        "filled_target_frames": 21,
+        "smoothed_target_frames": 21,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 37,
+          "start_frame": 2732,
+          "end_frame": 2783,
+          "onset": 43.712,
+          "offset": 44.528,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 38,
+          "start_frame": 2783,
+          "end_frame": 2805,
+          "onset": 44.528,
+          "offset": 44.88,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        44.528
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 19,
+        "segment_index": 38,
+        "start_reason": "retrigger",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 44.17812499999999,
+        "end": 45.37812499999999,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-19-44.528s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-19-44.528s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 21,
+      "pitch": 36,
+      "onset": 45.439583333333324,
+      "offset": 45.584374999999994,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 14,
+          "pitch": 36,
+          "onset": 45.31423031515757,
+          "delta_ms": -125.29034166666331,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        14
+      ],
+      "nearest_same_pitch_event": {
+        "index": 14,
+        "onset": 45.31423031515757,
+        "offset": 45.73458879439719,
+        "delta_ms": -125.29034166666331,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 45.289583333333326,
+        "end": 45.58958333333332,
+        "frames": 19,
+        "raw_target_frames": 13,
+        "raw_target_longest_run_ms": 208.00000000000003,
+        "kept_target_frames": 9,
+        "filled_target_frames": 9,
+        "smoothed_target_frames": 9,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 45.439583333333324,
+        "end": 45.584374999999994,
+        "frames": 10,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 9,
+        "filled_target_frames": 9,
+        "smoothed_target_frames": 9,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 43,
+          "start_frame": 2840,
+          "end_frame": 2849,
+          "onset": 45.44,
+          "offset": 45.584,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        45.376
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 21,
+        "segment_index": 43,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 45.08958333333332,
+        "end": 46.289583333333326,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-21-45.440s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-21-45.440s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 23,
+      "pitch": 36,
+      "onset": 47.07187499999999,
+      "offset": 47.87187499999999,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 18,
+          "pitch": 36,
+          "onset": 46.98524212106052,
+          "delta_ms": -86.58956249999886,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        18
+      ],
+      "nearest_same_pitch_event": {
+        "index": 18,
+        "onset": 46.98524212106052,
+        "offset": 48.235895447723856,
+        "delta_ms": -86.58956249999886,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 46.92187499999999,
+        "end": 47.22187499999999,
+        "frames": 19,
+        "raw_target_frames": 14,
+        "raw_target_longest_run_ms": 224.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 47.07187499999999,
+        "end": 47.57187499999999,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 50,
+          "start_frame": 2942,
+          "end_frame": 2992,
+          "onset": 47.072,
+          "offset": 47.872,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        47.024
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 23,
+        "segment_index": 50,
+        "start_reason": "voicing_change",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 46.72187499999999,
+        "end": 47.92187499999999,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-23-47.072s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-23-47.072s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 24,
+      "pitch": 36,
+      "onset": 47.87187499999999,
+      "offset": 48.35208333333332,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        18,
+        19
+      ],
+      "nearest_same_pitch_event": {
+        "index": 19,
+        "onset": 48.235895447723856,
+        "offset": 48.44607468734366,
+        "delta_ms": 363.83843750000494,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 47.72187499999999,
+        "end": 48.02187499999999,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 47.87187499999999,
+        "end": 48.35208333333332,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 30,
+        "filled_target_frames": 30,
+        "smoothed_target_frames": 30,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 50,
+          "start_frame": 2942,
+          "end_frame": 2992,
+          "onset": 47.072,
+          "offset": 47.872,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 51,
+          "start_frame": 2992,
+          "end_frame": 3022,
+          "onset": 47.872,
+          "offset": 48.352000000000004,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        47.872
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 24,
+        "segment_index": 51,
+        "start_reason": "retrigger",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 47.52187499999999,
+        "end": 48.72187499999999,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-24-47.872s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-24-47.872s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 26,
+      "pitch": 29,
+      "onset": 49.552083333333314,
+      "offset": 50.12812499999998,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        22
+      ],
+      "nearest_same_pitch_event": {
+        "index": 22,
+        "onset": 49.06619029514756,
+        "offset": 50.31684362181089,
+        "delta_ms": -485.6500916666647,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 49.402083333333316,
+        "end": 49.70208333333331,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 49.552083333333314,
+        "end": 50.052083333333314,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 31,
+        "filled_target_frames": 31,
+        "smoothed_target_frames": 31,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 56,
+          "start_frame": 3068,
+          "end_frame": 3097,
+          "onset": 49.088,
+          "offset": 49.552,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 57,
+          "start_frame": 3097,
+          "end_frame": 3133,
+          "onset": 49.552,
+          "offset": 50.128,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        49.552
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 26,
+        "segment_index": 57,
+        "start_reason": "retrigger",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 49.20208333333331,
+        "end": 50.402083333333316,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-26-49.552s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-26-49.552s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 28,
+      "pitch": 31,
+      "onset": 50.36770833333331,
+      "offset": 51.21562499999998,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 23,
+          "pitch": 31,
+          "onset": 50.31684362181089,
+          "delta_ms": -50.8392791666609,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        23
+      ],
+      "nearest_same_pitch_event": {
+        "index": 23,
+        "onset": 50.31684362181089,
+        "offset": 51.577919059529755,
+        "delta_ms": -50.8392791666609,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 50.21770833333331,
+        "end": 50.51770833333331,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 16,
+        "filled_target_frames": 16,
+        "smoothed_target_frames": 16,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 3,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 50.36770833333331,
+        "end": 50.86770833333331,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 60,
+          "start_frame": 3142,
+          "end_frame": 3148,
+          "onset": 50.272,
+          "offset": 50.368,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 61,
+          "start_frame": 3148,
+          "end_frame": 3201,
+          "onset": 50.368,
+          "offset": 51.216,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        50.368
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 28,
+        "segment_index": 61,
+        "start_reason": "retrigger",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 50.01770833333331,
+        "end": 51.21770833333331,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-28-50.368s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-28-50.368s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 29,
+      "pitch": 31,
+      "onset": 51.21562499999998,
+      "offset": 51.632291666666646,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        23
+      ],
+      "nearest_same_pitch_event": {
+        "index": 24,
+        "onset": 51.78809829914956,
+        "offset": 51.9895924462231,
+        "delta_ms": 572.1870625000038,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 51.06562499999998,
+        "end": 51.36562499999998,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 51.21562499999998,
+        "end": 51.632291666666646,
+        "frames": 27,
+        "raw_target_frames": 27,
+        "raw_target_longest_run_ms": 432.0,
+        "kept_target_frames": 26,
+        "filled_target_frames": 26,
+        "smoothed_target_frames": 26,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 61,
+          "start_frame": 3148,
+          "end_frame": 3201,
+          "onset": 50.368,
+          "offset": 51.216,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 62,
+          "start_frame": 3201,
+          "end_frame": 3227,
+          "onset": 51.216,
+          "offset": 51.632,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        51.216
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 29,
+        "segment_index": 62,
+        "start_reason": "retrigger",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 50.86562499999998,
+        "end": 52.06562499999998,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-29-51.216s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-29-51.216s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 31,
+      "pitch": 36,
+      "onset": 52.12812499999998,
+      "offset": 52.239583333333314,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 25,
+          "pitch": 36,
+          "onset": 51.987855427713846,
+          "delta_ms": -140.19943749999362,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        25
+      ],
+      "nearest_same_pitch_event": {
+        "index": 25,
+        "onset": 51.987855427713846,
+        "offset": 52.40821390695346,
+        "delta_ms": -140.19943749999362,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 51.978124999999984,
+        "end": 52.27812499999998,
+        "frames": 19,
+        "raw_target_frames": 11,
+        "raw_target_longest_run_ms": 176.0,
+        "kept_target_frames": 7,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 52.12812499999998,
+        "end": 52.239583333333314,
+        "frames": 6,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 67,
+          "start_frame": 3258,
+          "end_frame": 3265,
+          "onset": 52.128,
+          "offset": 52.24,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        52.064
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 31,
+        "segment_index": 67,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 51.77812499999998,
+        "end": 52.978124999999984,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-31-52.128s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-31-52.128s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 32,
+      "pitch": 36,
+      "onset": 52.35208333333331,
+      "offset": 52.43229166666664,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 26,
+          "pitch": 36,
+          "onset": 52.40821390695346,
+          "delta_ms": 56.10250833334177,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        25,
+        26
+      ],
+      "nearest_same_pitch_event": {
+        "index": 26,
+        "onset": 52.40821390695346,
+        "offset": 52.81988729364681,
+        "delta_ms": 56.10250833334177,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 52.20208333333331,
+        "end": 52.50208333333331,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 12,
+        "filled_target_frames": 12,
+        "smoothed_target_frames": 12,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 7,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 52.35208333333331,
+        "end": 52.43229166666664,
+        "frames": 5,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 67,
+          "start_frame": 3258,
+          "end_frame": 3265,
+          "onset": 52.128,
+          "offset": 52.24,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        },
+        {
+          "index": 69,
+          "start_frame": 3272,
+          "end_frame": 3277,
+          "onset": 52.352000000000004,
+          "offset": 52.432,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 70,
+          "start_frame": 3277,
+          "end_frame": 3299,
+          "onset": 52.432,
+          "offset": 52.784,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        52.4,
+        52.432
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 32,
+        "segment_index": 69,
+        "start_reason": "voicing_change",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 52.00208333333331,
+        "end": 53.20208333333331,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-32-52.352s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-32-52.352s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 35,
+      "pitch": 35,
+      "onset": 52.88020833333331,
+      "offset": 53.456249999999976,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [
+        {
+          "index": 27,
+          "pitch": 35,
+          "onset": 52.818150275137555,
+          "delta_ms": -62.027029166654735,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        27
+      ],
+      "nearest_same_pitch_event": {
+        "index": 27,
+        "onset": 52.818150275137555,
+        "offset": 53.658867233616796,
+        "delta_ms": -62.027029166654735,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 52.73020833333331,
+        "end": 53.030208333333306,
+        "frames": 19,
+        "raw_target_frames": 16,
+        "raw_target_longest_run_ms": 256.0,
+        "kept_target_frames": 16,
+        "filled_target_frames": 16,
+        "smoothed_target_frames": 16,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 52.88020833333331,
+        "end": 53.38020833333331,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 31,
+        "filled_target_frames": 31,
+        "smoothed_target_frames": 31,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 71,
+          "start_frame": 3299,
+          "end_frame": 3305,
+          "onset": 52.784,
+          "offset": 52.88,
+          "pitch": 35,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 72,
+          "start_frame": 3305,
+          "end_frame": 3341,
+          "onset": 52.88,
+          "offset": 53.456,
+          "pitch": 35,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        52.88
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 35,
+        "segment_index": 72,
+        "start_reason": "retrigger",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 52.530208333333306,
+        "end": 53.73020833333331,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-35-52.880s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-35-52.880s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 36,
+      "pitch": 36,
+      "onset": 53.456249999999976,
+      "offset": 53.56770833333331,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 26,
+        "onset": 52.40821390695346,
+        "offset": 52.81988729364681,
+        "delta_ms": -1047.5120749999894,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 53.30624999999998,
+        "end": 53.606249999999974,
+        "frames": 19,
+        "raw_target_frames": 7,
+        "raw_target_longest_run_ms": 112.0,
+        "kept_target_frames": 7,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 53.456249999999976,
+        "end": 53.56770833333331,
+        "frames": 6,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 73,
+          "start_frame": 3341,
+          "end_frame": 3348,
+          "onset": 53.456,
+          "offset": 53.568,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 36,
+        "segment_index": 73,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 53.106249999999974,
+        "end": 54.30624999999998,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-36-53.456s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-36-53.456s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 37,
+      "pitch": 37,
+      "onset": 53.56770833333331,
+      "offset": 53.64791666666664,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [
+        {
+          "index": 28,
+          "pitch": 38,
+          "onset": 53.658867233616796,
+          "delta_ms": 91.11332083334699,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 53.41770833333331,
+        "end": 53.717708333333306,
+        "frames": 19,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 53.56770833333331,
+        "end": 53.64791666666664,
+        "frames": 5,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 74,
+          "start_frame": 3348,
+          "end_frame": 3353,
+          "onset": 53.568,
+          "offset": 53.648,
+          "pitch": 37,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 37,
+        "segment_index": 74,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 53.217708333333306,
+        "end": 54.41770833333331,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-37-53.568s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-37-53.568s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 39,
+      "pitch": 38,
+      "onset": 54.512499999999974,
+      "offset": 54.97604166666664,
+      "evidence_flags": [
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        28
+      ],
+      "nearest_same_pitch_event": {
+        "index": 29,
+        "onset": 55.109277688844415,
+        "offset": 55.31945692846422,
+        "delta_ms": 596.4793000000183,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 54.362499999999976,
+        "end": 54.66249999999997,
+        "frames": 19,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 19,
+        "filled_target_frames": 19,
+        "smoothed_target_frames": 19,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 54.512499999999974,
+        "end": 54.97604166666664,
+        "frames": 29,
+        "raw_target_frames": 29,
+        "raw_target_longest_run_ms": 464.0,
+        "kept_target_frames": 28,
+        "filled_target_frames": 28,
+        "smoothed_target_frames": 28,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 75,
+          "start_frame": 3353,
+          "end_frame": 3407,
+          "onset": 53.648,
+          "offset": 54.512,
+          "pitch": 38,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 76,
+          "start_frame": 3407,
+          "end_frame": 3436,
+          "onset": 54.512,
+          "offset": 54.976,
+          "pitch": 38,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        54.512,
+        54.544
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 39,
+        "segment_index": 76,
+        "start_reason": "retrigger",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 54.16249999999997,
+        "end": 55.362499999999976,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-39-54.512s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-39-54.512s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 41,
+      "pitch": 39,
+      "onset": 55.23229166666663,
+      "offset": 55.328124999999964,
+      "evidence_flags": [
+        "nearby_short_segment_discarded"
+      ],
+      "nearby_events": [
+        {
+          "index": 30,
+          "pitch": 40,
+          "onset": 55.31945692846422,
+          "delta_ms": 87.12167916668808,
+          "already_matched": true
+        },
+        {
+          "index": 29,
+          "pitch": 38,
+          "onset": 55.109277688844415,
+          "delta_ms": -122.95247083330702,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 55.082291666666634,
+        "end": 55.38229166666663,
+        "frames": 19,
+        "raw_target_frames": 7,
+        "raw_target_longest_run_ms": 112.0,
+        "kept_target_frames": 7,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 55.23229166666663,
+        "end": 55.328124999999964,
+        "frames": 6,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 6,
+        "filled_target_frames": 6,
+        "smoothed_target_frames": 6,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 80,
+          "start_frame": 3452,
+          "end_frame": 3458,
+          "onset": 55.232,
+          "offset": 55.328,
+          "pitch": 39,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 81,
+          "start_frame": 3458,
+          "end_frame": 3459,
+          "onset": 55.328,
+          "offset": 55.344,
+          "pitch": 39,
+          "status": "short",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        55.136,
+        55.168,
+        55.2,
+        55.328
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 41,
+        "segment_index": 80,
+        "start_reason": "pitch_change",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 54.88229166666663,
+        "end": 56.082291666666634,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-41-55.232s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-41-55.232s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 43,
+      "pitch": 40,
+      "onset": 55.6802083333333,
+      "offset": 55.76041666666663,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 31,
+          "pitch": 40,
+          "onset": 55.731130315157564,
+          "delta_ms": 50.89652083335486,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        30,
+        31
+      ],
+      "nearest_same_pitch_event": {
+        "index": 31,
+        "onset": 55.731130315157564,
+        "offset": 56.99220575287642,
+        "delta_ms": 50.89652083335486,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 55.5302083333333,
+        "end": 55.830208333333296,
+        "frames": 19,
+        "raw_target_frames": 17,
+        "raw_target_longest_run_ms": 224.0,
+        "kept_target_frames": 11,
+        "filled_target_frames": 11,
+        "smoothed_target_frames": 11,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 6,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 55.6802083333333,
+        "end": 55.76041666666663,
+        "frames": 5,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 82,
+          "start_frame": 3459,
+          "end_frame": 3472,
+          "onset": 55.344,
+          "offset": 55.552,
+          "pitch": 40,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        },
+        {
+          "index": 84,
+          "start_frame": 3480,
+          "end_frame": 3485,
+          "onset": 55.68,
+          "offset": 55.76,
+          "pitch": 40,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 85,
+          "start_frame": 3485,
+          "end_frame": 3545,
+          "onset": 55.76,
+          "offset": 56.72,
+          "pitch": 40,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        55.76
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 43,
+        "segment_index": 84,
+        "start_reason": "voicing_change",
+        "end_reason": "retrigger"
+      },
+      "audio_clips": {
+        "start": 55.330208333333296,
+        "end": 56.5302083333333,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-43-55.680s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-43-55.680s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 45,
+      "pitch": 39,
+      "onset": 56.71979166666663,
+      "offset": 56.79999999999996,
+      "evidence_flags": [
+        "unresolved"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": null,
+      "onset_window": {
+        "start": 56.56979166666663,
+        "end": 56.86979166666663,
+        "frames": 19,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 56.71979166666663,
+        "end": 56.79999999999996,
+        "frames": 5,
+        "raw_target_frames": 5,
+        "raw_target_longest_run_ms": 80.0,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 86,
+          "start_frame": 3545,
+          "end_frame": 3550,
+          "onset": 56.72,
+          "offset": 56.800000000000004,
+          "pitch": 39,
+          "status": "emitted",
+          "end_reason": "pitch_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        56.784
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 45,
+        "segment_index": 86,
+        "start_reason": "pitch_change",
+        "end_reason": "pitch_change"
+      },
+      "audio_clips": {
+        "start": 56.36979166666663,
+        "end": 57.56979166666663,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-45-56.720s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-45-56.720s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 46,
+      "pitch": 29,
+      "onset": 57.08749999999996,
+      "offset": 57.6802083333333,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 32,
+          "pitch": 29,
+          "onset": 56.99046873436716,
+          "delta_ms": -96.98274999998412,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        32
+      ],
+      "nearest_same_pitch_event": {
+        "index": 32,
+        "onset": 56.99046873436716,
+        "offset": 57.82076358179088,
+        "delta_ms": -96.98274999998412,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 56.937499999999964,
+        "end": 57.23749999999996,
+        "frames": 19,
+        "raw_target_frames": 17,
+        "raw_target_longest_run_ms": 272.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 7,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 57.08749999999996,
+        "end": 57.58749999999996,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 90,
+          "start_frame": 3568,
+          "end_frame": 3605,
+          "onset": 57.088,
+          "offset": 57.68,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        57.04
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 46,
+        "segment_index": 90,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 56.73749999999996,
+        "end": 57.937499999999964,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-46-57.087s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-46-57.087s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 47,
+      "pitch": 31,
+      "onset": 57.87187499999997,
+      "offset": 58.54374999999997,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 33,
+          "pitch": 31,
+          "onset": 57.82076358179088,
+          "delta_ms": -51.08586249998472,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        33
+      ],
+      "nearest_same_pitch_event": {
+        "index": 33,
+        "onset": 57.82076358179088,
+        "offset": 58.66148054027012,
+        "delta_ms": -51.08586249998472,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 57.72187499999997,
+        "end": 58.021874999999966,
+        "frames": 19,
+        "raw_target_frames": 16,
+        "raw_target_longest_run_ms": 256.0,
+        "kept_target_frames": 10,
+        "filled_target_frames": 10,
+        "smoothed_target_frames": 10,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 6,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 57.87187499999997,
+        "end": 58.37187499999997,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 32,
+        "filled_target_frames": 32,
+        "smoothed_target_frames": 32,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 93,
+          "start_frame": 3617,
+          "end_frame": 3659,
+          "onset": 57.872,
+          "offset": 58.544000000000004,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        57.856
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 47,
+        "segment_index": 93,
+        "start_reason": "voicing_change",
+        "end_reason": "voicing_change"
+      },
+      "audio_clips": {
+        "start": 57.521874999999966,
+        "end": 58.72187499999997,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-47-57.872s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-47-57.872s-bass.wav"
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 50,
+      "pitch": 35,
+      "onset": 59.53645833333329,
+      "offset": 60.03020833333329,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event"
+      ],
+      "nearby_events": [
+        {
+          "index": 35,
+          "pitch": 35,
+          "onset": 59.49177538769383,
+          "delta_ms": -44.660604166645555,
+          "already_matched": true
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        35
+      ],
+      "nearest_same_pitch_event": {
+        "index": 35,
+        "onset": 59.49177538769383,
+        "offset": 60.32207023511754,
+        "delta_ms": -44.660604166645555,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 59.386458333333294,
+        "end": 59.68645833333329,
+        "frames": 19,
+        "raw_target_frames": 15,
+        "raw_target_longest_run_ms": 240.0,
+        "kept_target_frames": 15,
+        "filled_target_frames": 15,
+        "smoothed_target_frames": 15,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 59.53645833333329,
+        "end": 60.03020833333329,
+        "frames": 30,
+        "raw_target_frames": 30,
+        "raw_target_longest_run_ms": 480.0,
+        "kept_target_frames": 30,
+        "filled_target_frames": 30,
+        "smoothed_target_frames": 30,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 96,
+          "start_frame": 3716,
+          "end_frame": 3721,
+          "onset": 59.456,
+          "offset": 59.536,
+          "pitch": 35,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        },
+        {
+          "index": 97,
+          "start_frame": 3721,
+          "end_frame": 3752,
+          "onset": 59.536,
+          "offset": 60.032000000000004,
+          "pitch": 35,
+          "status": "emitted",
+          "end_reason": "end_of_audio"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        59.536
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "prediction_provenance": {
+        "prediction_index": 50,
+        "segment_index": 97,
+        "start_reason": "retrigger",
+        "end_reason": "end_of_audio"
+      },
+      "audio_clips": {
+        "start": 59.18645833333329,
+        "end": 60.0304375,
+        "mix": "outputs/runs/bass-diagnostics/clips/FP-50-59.536s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FP-50-59.536s-bass.wav"
+      }
+    }
+  ],
+  "false_negatives": [
+    {
+      "kind": "FN",
+      "index": 0,
+      "pitch": 43,
+      "onset": 5.305482991495747,
+      "offset": 6.135777838919459,
+      "evidence_flags": [
+        "overlapping_same_pitch_event",
+        "no_target_pitch_in_raw_onset_window"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        1
+      ],
+      "nearest_same_pitch_event": {
+        "index": 1,
+        "onset": 5.552083333333333,
+        "offset": 6.032291666666667,
+        "delta_ms": 246.47704166666696,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 5.155482991495747,
+        "end": 5.455482991495748,
+        "frames": 18,
+        "raw_target_frames": 0,
+        "raw_target_longest_run_ms": 0.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 5.305482991495747,
+        "end": 5.805482991495747,
+        "frames": 31,
+        "raw_target_frames": 16,
+        "raw_target_longest_run_ms": 256.0,
+        "kept_target_frames": 16,
+        "filled_target_frames": 16,
+        "smoothed_target_frames": 16,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        5.328
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 4.955482991495748,
+        "end": 6.155482991495747,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-00-5.305s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-00-5.305s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 1,
+      "pitch": 41,
+      "onset": 6.135777838919459,
+      "offset": 6.966072686343171,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 2,
+          "pitch": 41,
+          "onset": 6.271875,
+          "delta_ms": 136.0291125000001,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        2
+      ],
+      "nearest_same_pitch_event": {
+        "index": 2,
+        "onset": 6.271875,
+        "offset": 6.847916666666666,
+        "delta_ms": 136.0291125000001,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 5.985777838919459,
+        "end": 6.28577783891946,
+        "frames": 18,
+        "raw_target_frames": 10,
+        "raw_target_longest_run_ms": 160.0,
+        "kept_target_frames": 1,
+        "filled_target_frames": 1,
+        "smoothed_target_frames": 1,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 6.135777838919459,
+        "end": 6.635777838919459,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 23,
+        "filled_target_frames": 23,
+        "smoothed_target_frames": 23,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 8,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 6,
+          "start_frame": 392,
+          "end_frame": 428,
+          "onset": 6.272,
+          "offset": 6.848,
+          "pitch": 41,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        6.208
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 5.78577783891946,
+        "end": 6.985777838919459,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-01-6.136s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-01-6.136s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 2,
+      "pitch": 40,
+      "onset": 6.966072686343171,
+      "offset": 8.637084492246123,
+      "evidence_flags": [
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        3
+      ],
+      "nearest_same_pitch_event": {
+        "index": 3,
+        "onset": 7.119791666666666,
+        "offset": 8.5125,
+        "delta_ms": 153.6421208333331,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 6.816072686343171,
+        "end": 7.116072686343172,
+        "frames": 18,
+        "raw_target_frames": 12,
+        "raw_target_longest_run_ms": 192.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 12,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 6.966072686343171,
+        "end": 7.466072686343171,
+        "frames": 31,
+        "raw_target_frames": 31,
+        "raw_target_longest_run_ms": 496.0,
+        "kept_target_frames": 22,
+        "filled_target_frames": 22,
+        "smoothed_target_frames": 22,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        7.008,
+        7.04
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 6.616072686343172,
+        "end": 7.816072686343171,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-02-6.966s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-02-6.966s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 3,
+      "pitch": 33,
+      "onset": 8.637084492246123,
+      "offset": 10.308096298149072,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 4,
+          "pitch": 33,
+          "onset": 8.767708333333333,
+          "delta_ms": 130.5585291666669,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        4
+      ],
+      "nearest_same_pitch_event": {
+        "index": 4,
+        "onset": 8.767708333333333,
+        "offset": 10.208333333333334,
+        "delta_ms": 130.5585291666669,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 8.487084492246122,
+        "end": 8.787084492246123,
+        "frames": 19,
+        "raw_target_frames": 15,
+        "raw_target_longest_run_ms": 240.0,
+        "kept_target_frames": 2,
+        "filled_target_frames": 2,
+        "smoothed_target_frames": 2,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 13,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 8.637084492246123,
+        "end": 9.137084492246123,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 24,
+        "filled_target_frames": 24,
+        "smoothed_target_frames": 24,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 8,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 12,
+          "start_frame": 548,
+          "end_frame": 638,
+          "onset": 8.768,
+          "offset": 10.208,
+          "pitch": 33,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        8.688,
+        8.72
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 8.287084492246123,
+        "end": 9.487084492246122,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-03-8.637s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-03-8.637s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 5,
+      "pitch": 43,
+      "onset": 11.987793196598297,
+      "offset": 13.637960780390193,
+      "evidence_flags": [
+        "overlapping_same_pitch_event",
+        "no_target_pitch_in_raw_onset_window"
+      ],
+      "nearby_events": [
+        {
+          "index": 6,
+          "pitch": 42,
+          "onset": 12.047916666666667,
+          "delta_ms": 60.09340833333664,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        7
+      ],
+      "nearest_same_pitch_event": {
+        "index": 7,
+        "onset": 12.14375,
+        "offset": 13.391666666666667,
+        "delta_ms": 155.8788250000032,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 11.837793196598296,
+        "end": 12.137793196598297,
+        "frames": 19,
+        "raw_target_frames": 0,
+        "raw_target_longest_run_ms": 0.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 11.987793196598297,
+        "end": 12.487793196598297,
+        "frames": 31,
+        "raw_target_frames": 22,
+        "raw_target_longest_run_ms": 352.0,
+        "kept_target_frames": 22,
+        "filled_target_frames": 22,
+        "smoothed_target_frames": 22,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 11.637793196598297,
+        "end": 12.837793196598296,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-05-11.988s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-05-11.988s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 8,
+      "pitch": 31,
+      "onset": 41.77418659329664,
+      "offset": 41.98436583291645,
+      "evidence_flags": [
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 17,
+        "onset": 43.63229166666666,
+        "offset": 43.71249999999999,
+        "delta_ms": 1857.1760208333346,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 41.62418659329664,
+        "end": 41.92418659329664,
+        "frames": 19,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 41.77418659329664,
+        "end": 41.98436583291645,
+        "frames": 14,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        41.808,
+        41.84
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 41.42418659329664,
+        "end": 42.62418659329664,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-08-41.774s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-08-41.774s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 9,
+      "pitch": 29,
+      "onset": 41.9826288144072,
+      "offset": 42.40298729364682,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 13,
+          "pitch": 29,
+          "onset": 42.063541666666666,
+          "delta_ms": 80.87239583333648,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        13,
+        14
+      ],
+      "nearest_same_pitch_event": {
+        "index": 13,
+        "onset": 42.063541666666666,
+        "offset": 42.25625,
+        "delta_ms": 80.87239583333648,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 41.8326288144072,
+        "end": 42.1326288144072,
+        "frames": 19,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 5,
+        "filled_target_frames": 5,
+        "smoothed_target_frames": 5,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 41.9826288144072,
+        "end": 42.40298729364682,
+        "frames": 27,
+        "raw_target_frames": 26,
+        "raw_target_longest_run_ms": 416.00000000000006,
+        "kept_target_frames": 13,
+        "filled_target_frames": 13,
+        "smoothed_target_frames": 13,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 13,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 30,
+          "start_frame": 2629,
+          "end_frame": 2641,
+          "onset": 42.064,
+          "offset": 42.256,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        41.84,
+        42.032
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 41.6326288144072,
+        "end": 42.8326288144072,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-09-41.983s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-09-41.983s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 12,
+      "pitch": 43,
+      "onset": 44.914716058029015,
+      "offset": 45.10405107553776,
+      "evidence_flags": [
+        "no_target_pitch_in_raw_onset_window"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 7,
+        "onset": 12.14375,
+        "offset": 13.391666666666667,
+        "delta_ms": -32754.580575000007,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 44.764716058029016,
+        "end": 45.06471605802901,
+        "frames": 19,
+        "raw_target_frames": 0,
+        "raw_target_longest_run_ms": 0.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 19,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 44.914716058029015,
+        "end": 45.10405107553776,
+        "frames": 12,
+        "raw_target_frames": 0,
+        "raw_target_longest_run_ms": 0.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 12,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 0,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        44.944
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 44.56471605802901,
+        "end": 45.764716058029016,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-12-44.915s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-12-44.915s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 14,
+      "pitch": 36,
+      "onset": 45.31423031515757,
+      "offset": 45.73458879439719,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 21,
+          "pitch": 36,
+          "onset": 45.439583333333324,
+          "delta_ms": 125.29034166666331,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        21,
+        22
+      ],
+      "nearest_same_pitch_event": {
+        "index": 21,
+        "onset": 45.439583333333324,
+        "offset": 45.584374999999994,
+        "delta_ms": 125.29034166666331,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 45.164230315157575,
+        "end": 45.46423031515757,
+        "frames": 19,
+        "raw_target_frames": 6,
+        "raw_target_longest_run_ms": 96.0,
+        "kept_target_frames": 2,
+        "filled_target_frames": 2,
+        "smoothed_target_frames": 2,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 45.31423031515757,
+        "end": 45.73458879439719,
+        "frames": 26,
+        "raw_target_frames": 21,
+        "raw_target_longest_run_ms": 208.00000000000003,
+        "kept_target_frames": 12,
+        "filled_target_frames": 12,
+        "smoothed_target_frames": 12,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 43,
+          "start_frame": 2840,
+          "end_frame": 2849,
+          "onset": 45.44,
+          "offset": 45.584,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        45.216,
+        45.376
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 44.96423031515757,
+        "end": 46.164230315157575,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-14-45.314s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-14-45.314s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 16,
+      "pitch": 29,
+      "onset": 46.564883641820906,
+      "offset": 46.77679989994997,
+      "evidence_flags": [
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 25,
+        "onset": 49.087499999999984,
+        "offset": 49.552083333333314,
+        "delta_ms": 2521.355049999989,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 46.41488364182091,
+        "end": 46.714883641820904,
+        "frames": 19,
+        "raw_target_frames": 11,
+        "raw_target_longest_run_ms": 176.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 11,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 46.564883641820906,
+        "end": 46.77679989994997,
+        "frames": 13,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 9,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        46.624
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 46.214883641820904,
+        "end": 47.41488364182091,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-16-46.565s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-16-46.565s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 17,
+      "pitch": 31,
+      "onset": 46.77679989994997,
+      "offset": 46.986979139569776,
+      "evidence_flags": [
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 20,
+        "onset": 45.11979166666666,
+        "offset": 45.19999999999999,
+        "delta_ms": -1656.1797291666721,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 46.62679989994997,
+        "end": 46.92679989994997,
+        "frames": 18,
+        "raw_target_frames": 8,
+        "raw_target_longest_run_ms": 128.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 8,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 46.77679989994997,
+        "end": 46.986979139569776,
+        "frames": 13,
+        "raw_target_frames": 10,
+        "raw_target_longest_run_ms": 160.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 10,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [
+        46.832
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 46.42679989994997,
+        "end": 47.62679989994997,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-17-46.777s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-17-46.777s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 18,
+      "pitch": 36,
+      "onset": 46.98524212106052,
+      "offset": 48.235895447723856,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 23,
+          "pitch": 36,
+          "onset": 47.07187499999999,
+          "delta_ms": 86.58956249999886,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        23,
+        24
+      ],
+      "nearest_same_pitch_event": {
+        "index": 23,
+        "onset": 47.07187499999999,
+        "offset": 47.87187499999999,
+        "delta_ms": 86.58956249999886,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 46.835242121060524,
+        "end": 47.13524212106052,
+        "frames": 18,
+        "raw_target_frames": 8,
+        "raw_target_longest_run_ms": 128.0,
+        "kept_target_frames": 4,
+        "filled_target_frames": 4,
+        "smoothed_target_frames": 4,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 46.98524212106052,
+        "end": 47.48524212106052,
+        "frames": 31,
+        "raw_target_frames": 30,
+        "raw_target_longest_run_ms": 480.0,
+        "kept_target_frames": 26,
+        "filled_target_frames": 26,
+        "smoothed_target_frames": 26,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 4,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 50,
+          "start_frame": 2942,
+          "end_frame": 2992,
+          "onset": 47.072,
+          "offset": 47.872,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "retrigger"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        47.024
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 46.63524212106052,
+        "end": 47.835242121060524,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-18-46.985s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-18-46.985s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 19,
+      "pitch": 36,
+      "onset": 48.235895447723856,
+      "offset": 48.44607468734366,
+      "evidence_flags": [
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [
+        24
+      ],
+      "nearest_same_pitch_event": {
+        "index": 24,
+        "onset": 47.87187499999999,
+        "offset": 48.35208333333332,
+        "delta_ms": -363.83843750000494,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 48.08589544772386,
+        "end": 48.385895447723854,
+        "frames": 19,
+        "raw_target_frames": 18,
+        "raw_target_longest_run_ms": 288.00000000000006,
+        "kept_target_frames": 16,
+        "filled_target_frames": 16,
+        "smoothed_target_frames": 16,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 2,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 48.235895447723856,
+        "end": 48.44607468734366,
+        "frames": 13,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 7,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 2,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 51,
+          "start_frame": 2992,
+          "end_frame": 3022,
+          "onset": 47.872,
+          "offset": 48.352000000000004,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 47.885895447723854,
+        "end": 49.08589544772386,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-19-48.236s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-19-48.236s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 20,
+      "pitch": 31,
+      "onset": 48.44607468734366,
+      "offset": 48.65625392696347,
+      "evidence_flags": [
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 27,
+        "onset": 50.27187499999998,
+        "offset": 50.36770833333331,
+        "delta_ms": 1824.8874124999913,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 48.29607468734366,
+        "end": 48.59607468734366,
+        "frames": 19,
+        "raw_target_frames": 7,
+        "raw_target_longest_run_ms": 112.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 7,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 48.44607468734366,
+        "end": 48.65625392696347,
+        "frames": 14,
+        "raw_target_frames": 7,
+        "raw_target_longest_run_ms": 112.0,
+        "kept_target_frames": 0,
+        "filled_target_frames": 0,
+        "smoothed_target_frames": 0,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 7,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [],
+      "nearby_detected_audio_onsets": [],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 48.09607468734366,
+        "end": 49.29607468734366,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-20-48.446s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-20-48.446s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 21,
+      "pitch": 29,
+      "onset": 48.65625392696347,
+      "offset": 49.06792731365682,
+      "evidence_flags": [
+        "target_frames_removed_by_filter",
+        "nearby_short_segment_discarded"
+      ],
+      "nearby_events": [],
+      "same_pitch_overlap_indices": [],
+      "nearest_same_pitch_event": {
+        "index": 25,
+        "onset": 49.087499999999984,
+        "offset": 49.552083333333314,
+        "delta_ms": 431.0304499999935,
+        "already_matched": true
+      },
+      "onset_window": {
+        "start": 48.506253926963474,
+        "end": 48.80625392696347,
+        "frames": 19,
+        "raw_target_frames": 9,
+        "raw_target_longest_run_ms": 144.00000000000003,
+        "kept_target_frames": 4,
+        "filled_target_frames": 4,
+        "smoothed_target_frames": 4,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 5,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 48.65625392696347,
+        "end": 49.06792731365682,
+        "frames": 25,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 192.0,
+        "kept_target_frames": 4,
+        "filled_target_frames": 4,
+        "smoothed_target_frames": 4,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 15,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 54,
+          "start_frame": 3047,
+          "end_frame": 3051,
+          "onset": 48.752,
+          "offset": 48.816,
+          "pitch": 29,
+          "status": "short",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        48.704
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 48.30625392696347,
+        "end": 49.506253926963474,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-21-48.656s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-21-48.656s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 25,
+      "pitch": 36,
+      "onset": 51.987855427713846,
+      "offset": 52.40821390695346,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 31,
+          "pitch": 36,
+          "onset": 52.12812499999998,
+          "delta_ms": 140.19943749999362,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        31,
+        32
+      ],
+      "nearest_same_pitch_event": {
+        "index": 31,
+        "onset": 52.12812499999998,
+        "offset": 52.239583333333314,
+        "delta_ms": 140.19943749999362,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 51.83785542771385,
+        "end": 52.137855427713845,
+        "frames": 19,
+        "raw_target_frames": 2,
+        "raw_target_longest_run_ms": 32.0,
+        "kept_target_frames": 1,
+        "filled_target_frames": 1,
+        "smoothed_target_frames": 1,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 1,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 51.987855427713846,
+        "end": 52.40821390695346,
+        "frames": 26,
+        "raw_target_frames": 19,
+        "raw_target_longest_run_ms": 304.0,
+        "kept_target_frames": 11,
+        "filled_target_frames": 11,
+        "smoothed_target_frames": 11,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 8,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 67,
+          "start_frame": 3258,
+          "end_frame": 3265,
+          "onset": 52.128,
+          "offset": 52.24,
+          "pitch": 36,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        51.84,
+        51.872,
+        52.064
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 51.637855427713845,
+        "end": 52.83785542771385,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-25-51.988s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-25-51.988s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 32,
+      "pitch": 29,
+      "onset": 56.99046873436716,
+      "offset": 57.82076358179088,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 46,
+          "pitch": 29,
+          "onset": 57.08749999999996,
+          "delta_ms": 96.98274999998412,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        46
+      ],
+      "nearest_same_pitch_event": {
+        "index": 46,
+        "onset": 57.08749999999996,
+        "offset": 57.6802083333333,
+        "delta_ms": 96.98274999998412,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 56.840468734367164,
+        "end": 57.14046873436716,
+        "frames": 19,
+        "raw_target_frames": 11,
+        "raw_target_longest_run_ms": 176.0,
+        "kept_target_frames": 4,
+        "filled_target_frames": 4,
+        "smoothed_target_frames": 4,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 7,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 56.99046873436716,
+        "end": 57.49046873436716,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 26,
+        "filled_target_frames": 26,
+        "smoothed_target_frames": 26,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 6,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 90,
+          "start_frame": 3568,
+          "end_frame": 3605,
+          "onset": 57.088,
+          "offset": 57.68,
+          "pitch": 29,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        57.04
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 56.64046873436716,
+        "end": 57.840468734367164,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-32-56.990s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-32-56.990s-bass.wav"
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 33,
+      "pitch": 31,
+      "onset": 57.82076358179088,
+      "offset": 58.66148054027012,
+      "evidence_flags": [
+        "nearby_same_pitch_onset",
+        "overlapping_same_pitch_event",
+        "target_frames_removed_by_filter"
+      ],
+      "nearby_events": [
+        {
+          "index": 47,
+          "pitch": 31,
+          "onset": 57.87187499999997,
+          "delta_ms": 51.08586249998472,
+          "already_matched": false
+        }
+      ],
+      "same_pitch_overlap_indices": [
+        47
+      ],
+      "nearest_same_pitch_event": {
+        "index": 47,
+        "onset": 57.87187499999997,
+        "offset": 58.54374999999997,
+        "delta_ms": 51.08586249998472,
+        "already_matched": false
+      },
+      "onset_window": {
+        "start": 57.67076358179088,
+        "end": 57.97076358179088,
+        "frames": 19,
+        "raw_target_frames": 13,
+        "raw_target_longest_run_ms": 208.00000000000003,
+        "kept_target_frames": 7,
+        "filled_target_frames": 7,
+        "smoothed_target_frames": 7,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 6,
+        "raw_target_rejected_low_energy": 0
+      },
+      "first_500ms_or_note_end": {
+        "start": 57.82076358179088,
+        "end": 58.32076358179088,
+        "frames": 32,
+        "raw_target_frames": 32,
+        "raw_target_longest_run_ms": 512.0,
+        "kept_target_frames": 29,
+        "filled_target_frames": 29,
+        "smoothed_target_frames": 29,
+        "raw_octave_frames": 0,
+        "raw_target_rejected_unvoiced": 0,
+        "raw_target_rejected_low_probability": 3,
+        "raw_target_rejected_low_energy": 0
+      },
+      "nearby_contour_segments": [
+        {
+          "index": 93,
+          "start_frame": 3617,
+          "end_frame": 3659,
+          "onset": 57.872,
+          "offset": 58.544000000000004,
+          "pitch": 31,
+          "status": "emitted",
+          "end_reason": "voicing_change"
+        }
+      ],
+      "nearby_detected_audio_onsets": [
+        57.856
+      ],
+      "interpretation": "Non-exclusive diagnostic evidence. Does not prove event identity, studio truth, or separation causality.",
+      "audio_clips": {
+        "start": 57.47076358179088,
+        "end": 58.67076358179088,
+        "mix": "outputs/runs/bass-diagnostics/clips/FN-33-57.821s-mix.wav",
+        "bass": "outputs/runs/bass-diagnostics/clips/FN-33-57.821s-bass.wav"
+      }
+    }
+  ],
+  "prediction_provenance": [
+    {
+      "prediction_index": 0,
+      "segment_index": 2,
+      "start_reason": "voicing_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 1,
+      "segment_index": 3,
+      "start_reason": "pitch_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 2,
+      "segment_index": 6,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 3,
+      "segment_index": 9,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 4,
+      "segment_index": 12,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 5,
+      "segment_index": 14,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 6,
+      "segment_index": 17,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 7,
+      "segment_index": 18,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 8,
+      "segment_index": 19,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 9,
+      "segment_index": 20,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 10,
+      "segment_index": 21,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 11,
+      "segment_index": 25,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 12,
+      "segment_index": 26,
+      "start_reason": "retrigger",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 13,
+      "segment_index": 30,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 14,
+      "segment_index": 32,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 15,
+      "segment_index": 33,
+      "start_reason": "retrigger",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 16,
+      "segment_index": 34,
+      "start_reason": "pitch_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 17,
+      "segment_index": 36,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 18,
+      "segment_index": 37,
+      "start_reason": "retrigger",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 19,
+      "segment_index": 38,
+      "start_reason": "retrigger",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 20,
+      "segment_index": 40,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 21,
+      "segment_index": 43,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 22,
+      "segment_index": 45,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 23,
+      "segment_index": 50,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 24,
+      "segment_index": 51,
+      "start_reason": "retrigger",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 25,
+      "segment_index": 56,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 26,
+      "segment_index": 57,
+      "start_reason": "retrigger",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 27,
+      "segment_index": 60,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 28,
+      "segment_index": 61,
+      "start_reason": "retrigger",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 29,
+      "segment_index": 62,
+      "start_reason": "retrigger",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 30,
+      "segment_index": 64,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 31,
+      "segment_index": 67,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 32,
+      "segment_index": 69,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 33,
+      "segment_index": 70,
+      "start_reason": "retrigger",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 34,
+      "segment_index": 71,
+      "start_reason": "pitch_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 35,
+      "segment_index": 72,
+      "start_reason": "retrigger",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 36,
+      "segment_index": 73,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 37,
+      "segment_index": 74,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 38,
+      "segment_index": 75,
+      "start_reason": "pitch_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 39,
+      "segment_index": 76,
+      "start_reason": "retrigger",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 40,
+      "segment_index": 78,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 41,
+      "segment_index": 80,
+      "start_reason": "pitch_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 42,
+      "segment_index": 82,
+      "start_reason": "pitch_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 43,
+      "segment_index": 84,
+      "start_reason": "voicing_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 44,
+      "segment_index": 85,
+      "start_reason": "retrigger",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 45,
+      "segment_index": 86,
+      "start_reason": "pitch_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 46,
+      "segment_index": 90,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 47,
+      "segment_index": 93,
+      "start_reason": "voicing_change",
+      "end_reason": "voicing_change"
+    },
+    {
+      "prediction_index": 48,
+      "segment_index": 95,
+      "start_reason": "voicing_change",
+      "end_reason": "pitch_change"
+    },
+    {
+      "prediction_index": 49,
+      "segment_index": 96,
+      "start_reason": "pitch_change",
+      "end_reason": "retrigger"
+    },
+    {
+      "prediction_index": 50,
+      "segment_index": 97,
+      "start_reason": "retrigger",
+      "end_reason": "end_of_audio"
+    }
+  ],
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375
+  },
+  "event_times": "source audio seconds; all evaluation deltas converted to reference time",
+  "reference_events": [
+    {
+      "category": "bass",
+      "pitch": 43,
+      "onset": 5.305482991495747,
+      "offset": 6.135777838919459,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 41,
+      "onset": 6.135777838919459,
+      "offset": 6.966072686343171,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 6.966072686343171,
+      "offset": 8.637084492246123,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 33,
+      "onset": 8.637084492246123,
+      "offset": 10.308096298149072,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 32,
+      "onset": 10.308096298149072,
+      "offset": 11.989530215107552,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 43,
+      "onset": 11.987793196598297,
+      "offset": 13.637960780390193,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 40.30293191595798,
+      "offset": 41.14364887443722,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 41.14364887443722,
+      "offset": 41.77418659329664,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 41.77418659329664,
+      "offset": 41.98436583291645,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 41.9826288144072,
+      "offset": 42.40298729364682,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 42.40298729364682,
+      "offset": 43.65364062031015,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 43.65364062031015,
+      "offset": 44.914716058029015,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 43,
+      "onset": 44.914716058029015,
+      "offset": 45.10405107553776,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 45.10405107553776,
+      "offset": 45.31423031515757,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 45.31423031515757,
+      "offset": 45.73458879439719,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 45.73458879439719,
+      "offset": 46.564883641820906,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 46.564883641820906,
+      "offset": 46.77679989994997,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 46.77679989994997,
+      "offset": 46.986979139569776,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 46.98524212106052,
+      "offset": 48.235895447723856,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 48.235895447723856,
+      "offset": 48.44607468734366,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 48.44607468734366,
+      "offset": 48.65625392696347,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 48.65625392696347,
+      "offset": 49.06792731365682,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 49.06619029514756,
+      "offset": 50.31684362181089,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 50.31684362181089,
+      "offset": 51.577919059529755,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 51.78809829914956,
+      "offset": 51.9895924462231,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 51.987855427713846,
+      "offset": 52.40821390695346,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 52.40821390695346,
+      "offset": 52.81988729364681,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 52.818150275137555,
+      "offset": 53.658867233616796,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 38,
+      "onset": 53.658867233616796,
+      "offset": 54.90952056028013,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 38,
+      "onset": 55.109277688844415,
+      "offset": 55.31945692846422,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 55.31945692846422,
+      "offset": 55.731130315157564,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 55.731130315157564,
+      "offset": 56.99220575287642,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 56.99046873436716,
+      "offset": 57.82076358179088,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 57.82076358179088,
+      "offset": 58.66148054027012,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 58.66148054027012,
+      "offset": 59.49351240620308,
+      "velocity": 100,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 59.49177538769383,
+      "offset": 60.32207023511754,
+      "velocity": 100,
+      "program": 33
+    }
+  ],
+  "prediction_events": [
+    {
+      "category": "bass",
+      "pitch": 42,
+      "onset": 5.45625,
+      "offset": 5.552083333333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 43,
+      "onset": 5.552083333333333,
+      "offset": 6.032291666666667,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 41,
+      "onset": 6.271875,
+      "offset": 6.847916666666666,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 7.119791666666666,
+      "offset": 8.5125,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 33,
+      "onset": 8.767708333333333,
+      "offset": 10.208333333333334,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 32,
+      "onset": 10.336458333333335,
+      "offset": 11.600000000000001,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 42,
+      "onset": 12.047916666666667,
+      "offset": 12.14375,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 43,
+      "onset": 12.14375,
+      "offset": 13.391666666666667,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 42,
+      "onset": 13.391666666666667,
+      "offset": 13.471875,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 41,
+      "onset": 13.471875,
+      "offset": 13.552083333333334,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 13.552083333333334,
+      "offset": 13.695833333333335,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 40.33645833333333,
+      "offset": 41.184375,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 41.184375,
+      "offset": 41.66354166666667,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 42.063541666666666,
+      "offset": 42.25625,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 42.4,
+      "offset": 42.88020833333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 42.88020833333333,
+      "offset": 43.40833333333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 30,
+      "onset": 43.40833333333333,
+      "offset": 43.51979166666666,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 43.63229166666666,
+      "offset": 43.71249999999999,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 43.71249999999999,
+      "offset": 44.52812499999999,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 44.52812499999999,
+      "offset": 44.88020833333332,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 45.11979166666666,
+      "offset": 45.19999999999999,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 45.439583333333324,
+      "offset": 45.584374999999994,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 45.695833333333326,
+      "offset": 46.44791666666666,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 47.07187499999999,
+      "offset": 47.87187499999999,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 47.87187499999999,
+      "offset": 48.35208333333332,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 49.087499999999984,
+      "offset": 49.552083333333314,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 49.552083333333314,
+      "offset": 50.12812499999998,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 50.27187499999998,
+      "offset": 50.36770833333331,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 50.36770833333331,
+      "offset": 51.21562499999998,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 51.21562499999998,
+      "offset": 51.632291666666646,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 51.808333333333316,
+      "offset": 51.91979166666665,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 52.12812499999998,
+      "offset": 52.239583333333314,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 52.35208333333331,
+      "offset": 52.43229166666664,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 52.43229166666664,
+      "offset": 52.784374999999976,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 52.784374999999976,
+      "offset": 52.88020833333331,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 52.88020833333331,
+      "offset": 53.456249999999976,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 53.456249999999976,
+      "offset": 53.56770833333331,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 37,
+      "onset": 53.56770833333331,
+      "offset": 53.64791666666664,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 38,
+      "onset": 53.64791666666664,
+      "offset": 54.512499999999974,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 38,
+      "onset": 54.512499999999974,
+      "offset": 54.97604166666664,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 38,
+      "onset": 55.07187499999997,
+      "offset": 55.1677083333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 39,
+      "onset": 55.23229166666663,
+      "offset": 55.328124999999964,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 55.343749999999964,
+      "offset": 55.5520833333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 55.6802083333333,
+      "offset": 55.76041666666663,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 40,
+      "onset": 55.76041666666663,
+      "offset": 56.71979166666663,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 39,
+      "onset": 56.71979166666663,
+      "offset": 56.79999999999996,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 29,
+      "onset": 57.08749999999996,
+      "offset": 57.6802083333333,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 31,
+      "onset": 57.87187499999997,
+      "offset": 58.54374999999997,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 36,
+      "onset": 58.656249999999964,
+      "offset": 59.45624999999996,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 59.45624999999996,
+      "offset": 59.53645833333329,
+      "velocity": 80,
+      "program": 33
+    },
+    {
+      "category": "bass",
+      "pitch": 35,
+      "onset": 59.53645833333329,
+      "offset": 60.03020833333329,
+      "velocity": 80,
+      "program": 33
+    }
+  ],
+  "cleanup_provenance": [
+    {
+      "raw_note_index": 0,
+      "cleaned_note_index": 0,
+      "before": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 5.456,
+        "offset": 5.5520000000000005,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 5.456,
+        "offset": 5.5520000000000005,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 1,
+      "cleaned_note_index": 1,
+      "before": {
+        "category": "bass",
+        "pitch": 43,
+        "onset": 5.5520000000000005,
+        "offset": 6.032,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 43,
+        "onset": 5.5520000000000005,
+        "offset": 6.032,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 2,
+      "cleaned_note_index": 2,
+      "before": {
+        "category": "bass",
+        "pitch": 41,
+        "onset": 6.272,
+        "offset": 6.848,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 41,
+        "onset": 6.272,
+        "offset": 6.848,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 3,
+      "cleaned_note_index": 3,
+      "before": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 7.12,
+        "offset": 8.512,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 7.12,
+        "offset": 8.512,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 4,
+      "cleaned_note_index": 4,
+      "before": {
+        "category": "bass",
+        "pitch": 33,
+        "onset": 8.768,
+        "offset": 10.208,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 33,
+        "onset": 8.768,
+        "offset": 10.208,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 5,
+      "cleaned_note_index": 5,
+      "before": {
+        "category": "bass",
+        "pitch": 32,
+        "onset": 10.336,
+        "offset": 11.6,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 32,
+        "onset": 10.336,
+        "offset": 11.6,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 6,
+      "cleaned_note_index": 6,
+      "before": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 12.048,
+        "offset": 12.144,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 12.048,
+        "offset": 12.144,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 7,
+      "cleaned_note_index": 7,
+      "before": {
+        "category": "bass",
+        "pitch": 43,
+        "onset": 12.144,
+        "offset": 13.392,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 43,
+        "onset": 12.144,
+        "offset": 13.392,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 8,
+      "cleaned_note_index": 8,
+      "before": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 13.392,
+        "offset": 13.472,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 42,
+        "onset": 13.392,
+        "offset": 13.472,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 9,
+      "cleaned_note_index": 9,
+      "before": {
+        "category": "bass",
+        "pitch": 41,
+        "onset": 13.472,
+        "offset": 13.552,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 41,
+        "onset": 13.472,
+        "offset": 13.552,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 10,
+      "cleaned_note_index": 10,
+      "before": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 13.552,
+        "offset": 13.696,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 13.552,
+        "offset": 13.696,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 11,
+      "cleaned_note_index": 11,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 40.336,
+        "offset": 41.184,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 40.336,
+        "offset": 41.184,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 12,
+      "cleaned_note_index": 12,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 41.184,
+        "offset": 41.664,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 41.184,
+        "offset": 41.664,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 13,
+      "cleaned_note_index": 13,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.064,
+        "offset": 42.256,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.064,
+        "offset": 42.256,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 14,
+      "cleaned_note_index": 14,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.4,
+        "offset": 42.88,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.4,
+        "offset": 42.88,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 15,
+      "cleaned_note_index": 15,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.88,
+        "offset": 43.408,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 42.88,
+        "offset": 43.408,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 16,
+      "cleaned_note_index": 16,
+      "before": {
+        "category": "bass",
+        "pitch": 30,
+        "onset": 43.408,
+        "offset": 43.52,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 30,
+        "onset": 43.408,
+        "offset": 43.52,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 17,
+      "cleaned_note_index": 17,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 43.632,
+        "offset": 43.712,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 43.632,
+        "offset": 43.712,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 18,
+      "cleaned_note_index": 18,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 43.712,
+        "offset": 44.528,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 43.712,
+        "offset": 44.528,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 19,
+      "cleaned_note_index": 19,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 44.528,
+        "offset": 44.88,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 44.528,
+        "offset": 44.88,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 20,
+      "cleaned_note_index": 20,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 45.12,
+        "offset": 45.2,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 45.12,
+        "offset": 45.2,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 21,
+      "cleaned_note_index": 21,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 45.44,
+        "offset": 45.584,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 45.44,
+        "offset": 45.584,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 22,
+      "cleaned_note_index": 22,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 45.696,
+        "offset": 46.448,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 45.696,
+        "offset": 46.448,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 23,
+      "cleaned_note_index": 23,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 47.072,
+        "offset": 47.872,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 47.072,
+        "offset": 47.872,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 24,
+      "cleaned_note_index": 24,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 47.872,
+        "offset": 48.352000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 47.872,
+        "offset": 48.352000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 25,
+      "cleaned_note_index": 25,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 49.088,
+        "offset": 49.552,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 49.088,
+        "offset": 49.552,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 26,
+      "cleaned_note_index": 26,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 49.552,
+        "offset": 50.128,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 49.552,
+        "offset": 50.128,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 27,
+      "cleaned_note_index": 27,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 50.272,
+        "offset": 50.368,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 50.272,
+        "offset": 50.368,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 28,
+      "cleaned_note_index": 28,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 50.368,
+        "offset": 51.216,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 50.368,
+        "offset": 51.216,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 29,
+      "cleaned_note_index": 29,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 51.216,
+        "offset": 51.632,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 51.216,
+        "offset": 51.632,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 30,
+      "cleaned_note_index": 30,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 51.808,
+        "offset": 51.92,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 51.808,
+        "offset": 51.92,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 31,
+      "cleaned_note_index": 31,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.128,
+        "offset": 52.24,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.128,
+        "offset": 52.24,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 32,
+      "cleaned_note_index": 32,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.352000000000004,
+        "offset": 52.432,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.352000000000004,
+        "offset": 52.432,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 33,
+      "cleaned_note_index": 33,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.432,
+        "offset": 52.784,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 52.432,
+        "offset": 52.784,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 34,
+      "cleaned_note_index": 34,
+      "before": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 52.784,
+        "offset": 52.88,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 52.784,
+        "offset": 52.88,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 35,
+      "cleaned_note_index": 35,
+      "before": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 52.88,
+        "offset": 53.456,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 52.88,
+        "offset": 53.456,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 36,
+      "cleaned_note_index": 36,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 53.456,
+        "offset": 53.568,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 53.456,
+        "offset": 53.568,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 37,
+      "cleaned_note_index": 37,
+      "before": {
+        "category": "bass",
+        "pitch": 37,
+        "onset": 53.568,
+        "offset": 53.648,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 37,
+        "onset": 53.568,
+        "offset": 53.648,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 38,
+      "cleaned_note_index": 38,
+      "before": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 53.648,
+        "offset": 54.512,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 53.648,
+        "offset": 54.512,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 39,
+      "cleaned_note_index": 39,
+      "before": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 54.512,
+        "offset": 54.976,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 54.512,
+        "offset": 54.976,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 40,
+      "cleaned_note_index": 40,
+      "before": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 55.072,
+        "offset": 55.168,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 38,
+        "onset": 55.072,
+        "offset": 55.168,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 41,
+      "cleaned_note_index": 41,
+      "before": {
+        "category": "bass",
+        "pitch": 39,
+        "onset": 55.232,
+        "offset": 55.328,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 39,
+        "onset": 55.232,
+        "offset": 55.328,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 42,
+      "cleaned_note_index": 42,
+      "before": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.344,
+        "offset": 55.552,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.344,
+        "offset": 55.552,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 43,
+      "cleaned_note_index": 43,
+      "before": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.68,
+        "offset": 55.76,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.68,
+        "offset": 55.76,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 44,
+      "cleaned_note_index": 44,
+      "before": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.76,
+        "offset": 56.72,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 40,
+        "onset": 55.76,
+        "offset": 56.72,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 45,
+      "cleaned_note_index": 45,
+      "before": {
+        "category": "bass",
+        "pitch": 39,
+        "onset": 56.72,
+        "offset": 56.800000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 39,
+        "onset": 56.72,
+        "offset": 56.800000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 46,
+      "cleaned_note_index": 46,
+      "before": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 57.088,
+        "offset": 57.68,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 29,
+        "onset": 57.088,
+        "offset": 57.68,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 47,
+      "cleaned_note_index": 47,
+      "before": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 57.872,
+        "offset": 58.544000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 31,
+        "onset": 57.872,
+        "offset": 58.544000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 48,
+      "cleaned_note_index": 48,
+      "before": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 58.656,
+        "offset": 59.456,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 36,
+        "onset": 58.656,
+        "offset": 59.456,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 49,
+      "cleaned_note_index": 49,
+      "before": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 59.456,
+        "offset": 59.536,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 59.456,
+        "offset": 59.536,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": false
+    },
+    {
+      "raw_note_index": 50,
+      "cleaned_note_index": 50,
+      "before": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 59.536,
+        "offset": 60.032000000000004,
+        "velocity": null,
+        "program": 33
+      },
+      "after": {
+        "category": "bass",
+        "pitch": 35,
+        "onset": 59.536,
+        "offset": 60.03045351473923,
+        "velocity": null,
+        "program": 33
+      },
+      "changed": true
+    }
+  ],
+  "observations": {
+    "frames": 3752,
+    "raw_notes": 51,
+    "cleaned_notes": 51,
+    "cleanup_changed_notes": 1,
+    "replay_midi_byte_identical": true,
+    "segment_status_counts": {
+      "unvoiced": 39,
+      "emitted": 51,
+      "short": 8
+    },
+    "segment_end_reason_counts": {
+      "retrigger": 29,
+      "voicing_change": 49,
+      "pitch_change": 19,
+      "end_of_audio": 1
+    },
+    "filter_rejected_unvoiced": 1485,
+    "filter_rejected_low_probability": 2322,
+    "filter_rejected_low_energy": 1979,
+    "filter_kept_frames": 1422,
+    "gap_filled_frames": 1,
+    "smoothing_changed_frames": 0
+  }
+}

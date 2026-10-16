@@ -1,0 +1,74 @@
+{
+  "counts": {
+    "matched": 18,
+    "predicted": 51,
+    "reference": 36,
+    "extra": 33,
+    "missed": 18,
+    "f1": 0.41379310344827586
+  },
+  "same_pitch_onset_tolerance": {
+    "0.03": {
+      "matched": 11,
+      "f1": 0.25287356321839083
+    },
+    "0.05": {
+      "matched": 18,
+      "f1": 0.41379310344827586
+    },
+    "0.1": {
+      "matched": 22,
+      "f1": 0.5057471264367817
+    },
+    "0.15": {
+      "matched": 26,
+      "f1": 0.5977011494252874
+    },
+    "0.3": {
+      "matched": 29,
+      "f1": 0.6666666666666666
+    }
+  },
+  "time_only_50ms_matched": 18,
+  "octave_only_50ms_matched": 0,
+  "observations": {
+    "frames": 3752,
+    "raw_notes": 51,
+    "cleaned_notes": 51,
+    "cleanup_changed_notes": 1,
+    "replay_midi_byte_identical": true,
+    "segment_status_counts": {
+      "unvoiced": 39,
+      "emitted": 51,
+      "short": 8
+    },
+    "segment_end_reason_counts": {
+      "retrigger": 29,
+      "voicing_change": 49,
+      "pitch_change": 19,
+      "end_of_audio": 1
+    },
+    "filter_rejected_unvoiced": 1485,
+    "filter_rejected_low_probability": 2322,
+    "filter_rejected_low_energy": 1979,
+    "filter_kept_frames": 1422,
+    "gap_filled_frames": 1,
+    "smoothing_changed_frames": 0
+  },
+  "nonexclusive_evidence_counts": {
+    "FP": {
+      "unresolved": 8,
+      "overlapping_same_pitch_event": 23,
+      "nearby_same_pitch_onset": 14,
+      "target_frames_removed_by_filter": 14,
+      "nearby_short_segment_discarded": 1
+    },
+    "FN": {
+      "overlapping_same_pitch_event": 12,
+      "no_target_pitch_in_raw_onset_window": 3,
+      "nearby_same_pitch_onset": 8,
+      "target_frames_removed_by_filter": 15,
+      "nearby_short_segment_discarded": 1
+    }
+  }
+}
