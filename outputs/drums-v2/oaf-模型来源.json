@@ -1,0 +1,38 @@
+{
+  "repo": "thebluescreen/oaf-drums-onnx",
+  "revision": "771fd5529062b9f6f0b58f01cc4b9819db046f4a",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358
+    },
+    {
+      "rfilename": "NOTICE.md",
+      "blobId": "0db148530148a87898d7342a207122646192b9e6",
+      "size": 1623
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "43b0d861fb7a04fb6ec5b1903e57426b6f303a64",
+      "size": 1444
+    },
+    {
+      "rfilename": "oaf_drums.onnx",
+      "blobId": "3a875b4273f18447328b0136b87001a0e30d4024",
+      "size": 5966247,
+      "lfs": {
+        "sha256": "23d4b05ce7e9715bdb4396823d68bc886e8a958fa9f6266c0f7132b78098b521",
+        "size": 5966247,
+        "pointerSize": 132
+      }
+    }
+  ],
+  "author_claim": "Converted E-GMD8-class OAF, Apache2.0 card; provider parity claim not independently reproduced",
+  "source_url": "https://huggingface.co/thebluescreen/oaf-drums-onnx"
+}

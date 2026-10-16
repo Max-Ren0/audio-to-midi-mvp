@@ -265,3 +265,8 @@
 ## 用户确定的下一轮顺序（2026-10-16）
 - 先只完成0–60全部六轨的逐轨方案与评估；钢琴固定B。六轨都确定后冻结完整Git版本/模型/参数，再统一用该版本跑60–120所有轨。当前不继续用60–120调参。
 - 60–120历史已见且同曲，称冻结整版后的回归，不称盲测；启动前仍需确认音频来源/标准对应/公共同步。真正泛化需未见歌曲。详outputs/drums/后续评测流程.md。本轮只记录流程，不新推理/改模型。
+
+- 用户要求集中优化鼓，范围固定0–60，不碰60–120；分支codex/drums-v2，a15b1d3快照。沿系统排错/执行计划技能，事前登记outputs/drums-v2/实验登记.json（CPU2/6GiB/1800s/20新模型尝试上限）。发现原混音YourMT3缓存有18个ride51预测，Demucs/SW分离转谱无ride。优先新OaF8类ONNX及多源整键/一致性融合；Omnizart官方ARM不兼容，YODO/IDM先审可运行性，不冒称已执行。不改钢琴B/其他轨，不上传/付费。
+
+- 鼓v2阶段1：OaF ONNX（HF thebluescreen固定771fd55，5966247bytes SHA23d4b05ce7e9715bdb4396823d68bc886e8a958fa9f6266c0f7132b78098b521）3推理均通过；单模型44–48%，但36/48可作补充。原混音MT3缓存与当前0–60解码波形逐采样完全相同（960487），有ride51，专用ADTOF粗cymbal49可以不改key地支持原ride。12组军鼓/HH阈值×9整键策略+6control=114无参考生成候选，最佳79TP/95pred/94ref F183.5979%，比旧77.25提升；候选生成和评分分开。src/drums新增整键路由/一次性模型一致支持/短末窗几何，9用例先RED后GREEN。
+- YODO作者公开Colab/256231380byte权重已下载（11类，含开镲/ride；原35/40等GM不改），CPU OpenCV4.11仅装work/drums-v2/yodo-deps。初FFTfloat32校验失败2尝试，修成float64误差<4e-14；随后CV错喂3channel失败2尝试，按cfg改1channel。修正后15秒probe8.25秒/1.2GiB通过，两个60秒full正运行session记录见work logs。已计8次进程含4失败，full两次后预计10<=20；不涉及60–120。Omnizart官方ARM不兼容；MVSEPkey仍空，不调用/不支付。

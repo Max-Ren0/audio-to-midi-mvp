@@ -1,0 +1,37 @@
+{
+  "input_sha256": "63ff3d3aefce4f648a8f16e5d4fdeb3b9df1193f812722d9fcb788f356c50170",
+  "model_sha256": "23d4b05ce7e9715bdb4396823d68bc886e8a958fa9f6266c0f7132b78098b521",
+  "model_revision": "771fd5529062b9f6f0b58f01cc4b9819db046f4a",
+  "sample_rate": 44100,
+  "duration_seconds": 15.0,
+  "clipped_samples": 0,
+  "labels": [
+    36,
+    38,
+    48,
+    42,
+    51,
+    53,
+    49,
+    75
+  ],
+  "fps": 100,
+  "outputs": {
+    "onset_probs": [
+      1,
+      1501,
+      8
+    ],
+    "velocity": [
+      1,
+      1501,
+      8
+    ]
+  },
+  "onnxruntime": "1.31.0",
+  "cpu_threads": 2,
+  "elapsed_seconds": 0.18540000000211876,
+  "activation_sha256": "4b5bbe854ab013288bb40a4d326365eb3661a5f5fd729310b1e585dad71e6688",
+  "script_sha256": "238bd96bd9ad36e7451eefb78502d1b8b3770a2db47d31abdf27133b02ae004e",
+  "reference_used": false
+}
