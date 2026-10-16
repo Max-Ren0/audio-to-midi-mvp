@@ -1,0 +1,44 @@
+{
+  "status": "selected frozen research drum baseline; not a production release",
+  "selected_release_tag": "v0.1.0-drums.2",
+  "selected_release_commit": "7400db8e4ce582621dd162e0442d50019ab7e27a",
+  "recipe": "audio_midi.drums.optimized_drums_v2",
+  "rebuild_script": "scripts/build_drums_v2.py",
+  "source_manifest": "outputs/drums-v2/固定鼓来源清单.json",
+  "source_manifest_sha256": "52e29417cc45b91369194a05bada961013b510738bfd016874d4aa96165e3e6d",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "assets": {
+    "drum_midi": {
+      "path": "outputs/runs/drums-v2/交付/鼓-v0.1-强化版.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    "six_track_midi": {
+      "path": "outputs/runs/drums-v2/交付/六轨-仅替换鼓.mid",
+      "sha256": "a375592ab6268d71bea976831c4ddc5575a6a4cb9cdc7814d2f913b830bc809d"
+    },
+    "bass_midi": {
+      "path": "outputs/runs/v01/development/单轨/bass.mid",
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0"
+    }
+  },
+  "evaluation": {
+    "scope": "current 0–60s seen development excerpt, reference arrangement MIDI",
+    "duration": 60.0304375,
+    "scale": 0.9995,
+    "shift_seconds": 0.14,
+    "onset_tolerance_seconds": 0.05,
+    "same_gm_key": true,
+    "one_to_one_maximum_matching": true,
+    "matched": 80,
+    "predicted": 93,
+    "reference": 94,
+    "f1": 0.8556149732620321
+  },
+  "bass_route": "Demucs htdemucs_6s bass -> librosa pYIN -> contour_to_notes -> GM33 MIDI",
+  "limitations": [
+    "cached rebuild is not an arbitrary-input full inference CLI",
+    "ADTOF noncommercial and SW weight licensing unresolved",
+    "no 60–120 or new-song validation this round",
+    "input audio, weights, and bulk outputs remain local"
+  ]
+}
