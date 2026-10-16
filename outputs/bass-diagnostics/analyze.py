@@ -78,7 +78,7 @@ def main():
   sf.write(row['audio_clips']['bass'],stem[round(start*sr):round(end*sr)],sr,subtype='FLOAT')
  (root/'逐音归因.json').write_text(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
  with (root/'逐音错误清单.csv').open('w',encoding='utf-8-sig') as f:
-  w=csv.writer(f);w.writerow(['类型','索引','音频秒','MIDI音高','结束秒','证据标签（可重叠，不是确定根因）','±150ms原始目标帧','过滤后目标帧','平滑后目标帧','原曲片段','贝斯片段'])
+  w=csv.writer(f,lineterminator="\n");w.writerow(['类型','索引','音频秒','MIDI音高','结束秒','证据标签（可重叠，不是确定根因）','±150ms原始目标帧','过滤后目标帧','平滑后目标帧','原曲片段','贝斯片段'])
   for row in errors:
    e=row['onset_window'];w.writerow([row['kind'],row['index'],row['onset'],row['pitch'],row['offset'],
          '；'.join(tags[t] for t in row['evidence_flags']),e['raw_target_frames'],e['kept_target_frames'],e['smoothed_target_frames'],row['audio_clips']['mix'],row['audio_clips']['bass']])
