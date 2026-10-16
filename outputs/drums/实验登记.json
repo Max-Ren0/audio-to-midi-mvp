@@ -1,0 +1,48 @@
+{
+  "status": "registered_before_new_inference",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "limits": {
+    "cpu_threads": 2,
+    "rss_GiB": 6,
+    "per_stage_seconds": 1800,
+    "max_new_process_attempts": 20,
+    "max_retry": 1
+  },
+  "new_tasks": [
+    {
+      "id": "piano-b-reproduction",
+      "source": "verified cached SW piano",
+      "transcriber": "locked Transkun2.0",
+      "status": "passed",
+      "run": {
+        "peak_memory_bytes": 1832632320,
+        "attempts": 1,
+        "elapsed_seconds": 18.884915542003
+      }
+    },
+    {
+      "id": "sw-adtof-probe15",
+      "source": "first15s of existing SW drums; preserve zero",
+      "purpose": "new-input resource check",
+      "status": "registered"
+    },
+    {
+      "id": "sw-adtof-full60",
+      "source": "existing SW drums",
+      "purpose": "save raw 5-class activations for decode-only comparison",
+      "status": "registered"
+    }
+  ],
+  "decode_only_candidates": [
+    "ADTOF upstream per-class thresholds",
+    "upstream thresholds scaled0.75",
+    "upstream thresholds scaled0.50"
+  ],
+  "notes": [
+    "No reference used during model inference/decoding",
+    "No automatic GM relabel to match reference",
+    "ADTOF research noncommercial restriction remains",
+    "No external uploads/payment; no user UI/audio device"
+  ],
+  "actual_new_process_attempts": 1
+}

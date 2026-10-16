@@ -1,0 +1,76 @@
+{
+  "version": "piano-b-1",
+  "route": [
+    "bs-roformer-sw",
+    "transkun-2.0"
+  ],
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "duration_seconds": 60.0304375,
+  "lock_sha256": "71282cb83d6b18d3ba4d3144e8a4b6cb2484165325837d0a561c9786c0abb21c",
+  "lock": {
+    "version": "piano-b-1",
+    "pipeline": [
+      "bs-roformer-sw",
+      "transkun-2.0"
+    ],
+    "automatic_fallback": false,
+    "sample_rate": 44100,
+    "channels": 2,
+    "cpu_threads": 2,
+    "amp": false,
+    "msst_commit": "6fdad13686bb7e84d029ec66f9dbe76e65c93ebf",
+    "model_assets": {
+      "sw_weights": {
+        "path": "work/models/BS-Rofo-SW-Fixed.ckpt",
+        "sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e"
+      },
+      "sw_config": {
+        "path": "work/two-methods/BS-Rofo-SW-Fixed.yaml",
+        "sha256": "e17a3b4bac1b924bcb521f569dcbf8b0318c23effec026de81eb95351b5fc8af"
+      },
+      "sw_wrapper": {
+        "path": "outputs/two-methods/run_sw_experiment.py",
+        "sha256": "b3bcc49f58d28c6311cfe7cc7d0f07bafd9f02b85870aacf5b9bb4c5177ddc8d"
+      },
+      "transkun_weights": {
+        "path": "work/sep-env/lib/python3.11/site-packages/transkun/pretrained/2.0.pt",
+        "sha256": "50a80010effc2a59ffcd068a95cd2b29bd7f23a27a3515bc3ccd209c89a3d44c"
+      },
+      "transkun_config": {
+        "path": "work/sep-env/lib/python3.11/site-packages/transkun/pretrained/2.0.conf",
+        "sha256": "d3d989214eb148230ee5df476d994dcde6af595904d3f968f1221d2e3bea5ac6"
+      }
+    },
+    "transkun_package_version": "2.0.1",
+    "transkun_pretrained_version": "2.0"
+  },
+  "piano_stem_sha256": "a3c4f8d51308d368adedee0aaee2b705a62ebb95932cac0ca0d212970ba21622",
+  "separation_receipt_sha256": "a661ccc60aed3a3f879dd52bacfc5a7b77283bc4d3acf3d6265c967d9afbef25",
+  "separation_cache_reused": true,
+  "raw_midi_sha256": "798d917a3c235ef8b25a07ff714e8169235d8b31713288d9e76ef09598b20227",
+  "midi_sha256": "cdfa0e93bb5a9940481c87e81bc4a0002694c7bc0d48568ed70f27d24f1e01cb",
+  "notes": 269,
+  "runs": {
+    "transkun": {
+      "peak_memory_bytes": 1832632320,
+      "attempts": 1,
+      "elapsed_seconds": 18.884915542003
+    }
+  },
+  "scratch": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/piano-b/1792121244512139000",
+  "elapsed_seconds": 19.06039679099922,
+  "render": {
+    "sample_rate": 44100,
+    "duration_seconds": 61.530204081632654,
+    "soundfont": "GeneralUser-GS.sf2",
+    "gain": 38.50566410030679,
+    "source": "MIDI_only_no_original_audio"
+  },
+  "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+  "warnings": [
+    "MIDI contains GM instructions, not sampled sound",
+    "Default120BPM/4-4, not detected",
+    "Cached run timing excludes separation",
+    "No reference MIDI or automatic alternative route"
+  ]
+}

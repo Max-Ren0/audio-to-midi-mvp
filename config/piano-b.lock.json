@@ -1,0 +1,37 @@
+{
+  "version": "piano-b-1",
+  "pipeline": [
+    "bs-roformer-sw",
+    "transkun-2.0"
+  ],
+  "automatic_fallback": false,
+  "sample_rate": 44100,
+  "channels": 2,
+  "cpu_threads": 2,
+  "amp": false,
+  "msst_commit": "6fdad13686bb7e84d029ec66f9dbe76e65c93ebf",
+  "model_assets": {
+    "sw_weights": {
+      "path": "work/models/BS-Rofo-SW-Fixed.ckpt",
+      "sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e"
+    },
+    "sw_config": {
+      "path": "work/two-methods/BS-Rofo-SW-Fixed.yaml",
+      "sha256": "e17a3b4bac1b924bcb521f569dcbf8b0318c23effec026de81eb95351b5fc8af"
+    },
+    "sw_wrapper": {
+      "path": "outputs/two-methods/run_sw_experiment.py",
+      "sha256": "b3bcc49f58d28c6311cfe7cc7d0f07bafd9f02b85870aacf5b9bb4c5177ddc8d"
+    },
+    "transkun_weights": {
+      "path": "work/sep-env/lib/python3.11/site-packages/transkun/pretrained/2.0.pt",
+      "sha256": "50a80010effc2a59ffcd068a95cd2b29bd7f23a27a3515bc3ccd209c89a3d44c"
+    },
+    "transkun_config": {
+      "path": "work/sep-env/lib/python3.11/site-packages/transkun/pretrained/2.0.conf",
+      "sha256": "d3d989214eb148230ee5df476d994dcde6af595904d3f968f1221d2e3bea5ac6"
+    }
+  },
+  "transkun_package_version": "2.0.1",
+  "transkun_pretrained_version": "2.0"
+}
