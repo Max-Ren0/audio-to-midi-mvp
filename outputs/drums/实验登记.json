@@ -1,5 +1,5 @@
 {
-  "status": "local_piano_lock_and_drum_experiments_complete_pending_independent_final_review",
+  "status": "independently_verified_local_research_milestone",
   "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
   "limits": {
     "cpu_threads": 2,
