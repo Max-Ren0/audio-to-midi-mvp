@@ -328,3 +328,4 @@
 - outputs/bass-refinement/含登记/源码入口/12候选清单/逐步评分/36标准逐音变化CSV/JSON/报告；outputs/runs/bass-refinement/交付含原版/置信度/起音/组合4份贝斯MID/WAV及仅换贝斯六轨MID/WAV。WAV是采样库MIDI-only，未播放/人工听辨。CLI仅在现有哈希缓存下重建，不是任意新歌完整入口；真实临时12候选MID/证据JSON字节重建一致，错误输入/已有输出拒绝通过。
 - 仍未达标：19FP/16FN，开发样本反复选择有过拟合风险；投票窗可跨下一起音、有邻音竞争，累计支持不等于连续稳定80ms。起音F1不检验力度/结束时间。待冻结后独立只读验证、GitHub同步；不在本轮继续其他分离模型或八度修正。
 - 6e503f7冻结后verify_bass_refinement独立只读核验通过：113测试，临时重建12候选与帧/证据一致，自写评分确认所有F1及8新增6丢失，C/O逐帧规则、保护5轨+conductor、62项包和5WAV通过。无必须修正项，主agent接受且产物不改。详outputs/bass-refinement/独立验证.md。贝斯SHA892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23；ZIPc028b224e842dad1f8d9a165dcd12fd1347a2343511132f6f3d4e1940249753c。准备main安全快进并发布v0.1.0-bass-refinement.1研究标签。
+- Git同步已实时确认：origin/main、origin/codex/bass-refinement及v0.1.0-bass-refinement.1均为14d943c7295b41dcb7657d72f38870b0a01318db。无force push，旧标签不移动，媒体/缓存/批量包未上传。本行作为后续文档提交保存，不移动研究标签。当前选用研究贝斯53.33%但仍19FP/16FN，下一步应先核听8新增/6丢失位置；等待用户决定，不在本轮继续新实验。
