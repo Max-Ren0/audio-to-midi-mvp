@@ -38,7 +38,7 @@ def test_assets_fail_closed_without_fallback(tmp_path):
     with pytest.raises(ValueError,match='transkun_weights'):verify_assets(tmp_path,lock)
 
 
-@pytest.mark.parametrize('change',['original_input','decoded_input','amp','cpu_threads'])
+@pytest.mark.parametrize('change',['original_input','decoded_input','decoded_absent','amp','cpu_threads'])
 def test_rejects_internally_inconsistent_receipt_chain(tmp_path,change):
     from audio_midi.piano_lock import verify_piano_cache
     root,lock=cache(tmp_path)
@@ -46,6 +46,8 @@ def test_rejects_internally_inconsistent_receipt_chain(tmp_path,change):
     receipt=json.loads((root/'separation-receipt.json').read_text())
     if change=='original_input':receipt['configuration']['original_input_sha256']='other'
     elif change=='decoded_input':upstream['input_sha256']='other'
+    elif change=='decoded_absent':
+        upstream.pop('input_sha256');receipt['configuration'].pop('source_wav_sha256')
     elif change=='amp':upstream['amp']=True
     else:upstream['cpu_threads']=8
     (root/'receipt.json').write_text(json.dumps(upstream))

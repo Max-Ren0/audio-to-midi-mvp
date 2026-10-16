@@ -1,0 +1,48 @@
+{
+  "input_sha256": "d08e3db001ec4426db26851b0e94330d6d62453164cac2b6e9a59127ca370637",
+  "duration_seconds": 60.0,
+  "weight_sha256": "24e7d35ee9c64415673d3fd33e06a67cac2c103c5df6267ba1576459c775916e",
+  "config_sha256": "e17a3b4bac1b924bcb521f569dcbf8b0318c23effec026de81eb95351b5fc8af",
+  "code_commit": "6fdad13686bb7e84d029ec66f9dbe76e65c93ebf",
+  "cpu_threads": 2,
+  "amp": false,
+  "elapsed_seconds": 267.6700297910065,
+  "files": {
+    "Bass": {
+      "path": "work/drums/extra-sw-full/bass.wav",
+      "sha256": "53f2fc161f340edaa3a650357a50ca1231b5687d2bc3ec3b3623a140119fdcec",
+      "rms": 0.10450633615255356,
+      "peak": 0.38631999492645264
+    },
+    "Drums": {
+      "path": "work/drums/extra-sw-full/drums.wav",
+      "sha256": "de96f863916fb5f3069ef28e2d1c69705b7c27b878022ec9393fd3086a03cb9e",
+      "rms": 0.1100916936993599,
+      "peak": 1.0809513330459595
+    },
+    "Other": {
+      "path": "work/drums/extra-sw-full/other.wav",
+      "sha256": "66cdbec0e82a95e147601ef8d6bae53df24518534a6e51e3b5fc73c8618c731f",
+      "rms": 0.051693763583898544,
+      "peak": 0.42540857195854187
+    },
+    "Vocals": {
+      "path": "work/drums/extra-sw-full/vocals.wav",
+      "sha256": "7e9b5ca2a31adda498d91ed301ccf28215b33ef9a30c40b18c394daa8c7946c2",
+      "rms": 0.16850289702415466,
+      "peak": 1.1880797147750854
+    },
+    "Guitar": {
+      "path": "work/drums/extra-sw-full/guitar.wav",
+      "sha256": "0290cd792aa18a75e40ef1b9406173ff1fab96009cf5814c212a7597c2d8eeb7",
+      "rms": 0.06380558013916016,
+      "peak": 0.4602711498737335
+    },
+    "Piano": {
+      "path": "work/drums/extra-sw-full/piano.wav",
+      "sha256": "00688f026ea62c28ebcfca1bcebb6361fb596be5d9d77dceca87f43d7f5f0dbe",
+      "rms": 0.05478882044553757,
+      "peak": 0.4142284095287323
+    }
+  }
+}

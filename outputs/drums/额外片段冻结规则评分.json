@@ -1,0 +1,52 @@
+{
+  "role": "same-song60-120 regression, not blind; no retuning after rule frozen at1f44858",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 60.11,
+    "duration": 60.0
+  },
+  "alignment_limitation": "timestamp prior; independent original-audio synchronization not verified",
+  "policy_sha256": "e60658a80bb5cb4745ce1acc3e71feedbb565d8179d61632da391e6c4d2d09f4",
+  "sources": {
+    "general": {
+      "path": "outputs/runs/v01/extra-60-120/多乐器.mid",
+      "sha256": "4acb9a96524258daa5eccf2dec7d32bdda6a1a805b5586f759d023e6dfd70e51"
+    },
+    "specialist": {
+      "path": "work/drums/extra-sw-adtof-frozen.json",
+      "sha256": "eca29f80dabc338343de8ccb356217c7f532dd5027e49b898fb47b08455bb254"
+    }
+  },
+  "candidates": [
+    {
+      "id": "旧版",
+      "path": "outputs/runs/drums/extra-60-120/鼓-旧版.mid",
+      "sha256": "4aa04f71eba98fd9f3b02ed75defdbd032a24448ba2d85c2d29a7774bb562ac2",
+      "score": {
+        "reference": 254,
+        "predicted": 205,
+        "matched": 85,
+        "extra": 120,
+        "missed": 169,
+        "precision": 0.4146341463414634,
+        "recall": 0.3346456692913386,
+        "f1": 0.37037037037037035
+      }
+    },
+    {
+      "id": "固定规则升级",
+      "path": "outputs/runs/drums/extra-60-120/鼓-固定规则升级.mid",
+      "sha256": "79fc310e710802d27cac104afd453c1d50e61365200b852db5deb63709272adb",
+      "score": {
+        "reference": 254,
+        "predicted": 218,
+        "matched": 104,
+        "extra": 114,
+        "missed": 150,
+        "precision": 0.47706422018348627,
+        "recall": 0.4094488188976378,
+        "f1": 0.4406779661016949
+      }
+    }
+  ]
+}

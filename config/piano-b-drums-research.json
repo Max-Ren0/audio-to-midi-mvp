@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0-piano-b-drums-research",
+  "routes": {
+    "piano": "piano_b",
+    "acoustic_guitar": "baseline",
+    "electric_guitar": "baseline",
+    "bass": "baseline",
+    "drums": "drums_research",
+    "strings": "sw"
+  },
+  "piano_lock": "config/piano-b.lock.json",
+  "drums_policy": "config/drums-hybrid-research.json",
+  "status": "research_noncommercial_component; not six-track quality acceptance",
+  "selection": "piano fixed by user; drum whole pipeline development selection; other routes preserved"
+}

@@ -1,5 +1,5 @@
 {
-  "status": "drum_decoding_in_progress",
+  "status": "local_piano_lock_and_drum_experiments_complete_pending_independent_final_review",
   "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
   "limits": {
     "cpu_threads": 2,
@@ -45,15 +45,25 @@
     {
       "id": "sw-extra60-separation",
       "input_sha256": "6fdbe7a427b2f21647319b5159a8131cfb21d3f42b2f1e95c8571d3a24505e1f",
-      "status": "registered",
+      "status": "passed",
       "source": "work/spike/bujiangjiu-60-120.mp3",
-      "purpose": "new source separation for frozen-rule same-song additional regression; no retuning"
+      "purpose": "new source separation for frozen-rule same-song additional regression; no retuning",
+      "run": {
+        "peak_memory_bytes": 3098755072,
+        "attempts": 1,
+        "elapsed_seconds": 270.2112656669997
+      }
     },
     {
       "id": "extra-sw-adtof-full60",
-      "status": "registered",
+      "status": "passed",
       "source": "new SW extra drums",
-      "purpose": "same frozen thresholds/routing, no tuning using extra score"
+      "purpose": "same frozen thresholds/routing, no tuning using extra score",
+      "run": {
+        "peak_memory_bytes": 1176305664,
+        "attempts": 1,
+        "elapsed_seconds": 2.4747779589961283
+      }
     }
   ],
   "decode_only_candidates": [
@@ -68,7 +78,7 @@
     "ADTOF research noncommercial restriction remains",
     "No external uploads/payment; no user UI/audio device"
   ],
-  "actual_new_process_attempts": 3,
+  "actual_new_process_attempts": 5,
   "hybrid_rule_reason": "Complementary model class coverage; 5-class ADTOF has no fine tom/ride/open hat resolution, preserve YourMT3 those keys. Chosen on disclosed development results, never per-note oracle.",
   "hybrid_selection_scope": "Only input-source and predeclared threshold whole candidates selected by development F1. No note-level selection using reference."
 }

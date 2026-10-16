@@ -36,3 +36,11 @@ User-supplied music is used only locally with user approval; no ownership or red
 - 重托管模型卡写MIT，但[另一转换提供者的来源说明](https://huggingface.co/elicwhite/bs-roformer-sw-6stem-onnx)明确原权重无独立许可和训练来源信息，因此本实验不构成商用授权审计。代码许可与模型权重许可分开。未用ONNX转换权重。
 - config原件在outputs/two-methods/SW-config.yaml；CPU2线程、float32/AMP关、chunk588800、overlap2、batch1；记录与榜单服务配置未必相同。
 - 额外依赖固定requirements-roformer-experiment.txt，仅work/sep-env，不修改全局。原有torch2.5.1/numpy1.26.4环境沿用。
+
+## Locked piano B and drum research update (2026-10-16)
+
+The piano entrypoint pins the existing SW model/config/wrapper and Transkun pretrained 2.0 (package 2.0.1) by hashes in `config/piano-b.lock.json`; upstream source is checked at its recorded Git revision. Pinning is reproducibility, not a new commercial-license clearance for the rehosted SW weights. Existing Transkun and GeneralUser GS license notes remain applicable.
+
+Drum research reuses installed `adtof-pytorch==0.1.0` and its bundled `adtof_frame_rnn_pytorch_weights.pth` (3,617,805 bytes, SHA256 `1bc986e596ec47ba0b44916f87cd4a39f0b2bec23596df3fb5d0e87749217320`). Per-file package code hashes, strict model load, input and activation hashes are in `outputs/drums/*activation-receipt.json`. Model forward is run once per registered input; threshold variants reuse the same activations. No checkpoint or input media is distributed in Git.
+
+The original [ADTOF project](https://github.com/MZehren/ADTOF) declares CC BY-NC-SA 4.0; the existing noncommercial research restriction remains unresolved for product deployment regardless of the PyTorch port's code license. The hybrid and generated comparisons are explicitly research artifacts, not automatic commercial-production approval. No remote service was invoked or newly purchased in this update.

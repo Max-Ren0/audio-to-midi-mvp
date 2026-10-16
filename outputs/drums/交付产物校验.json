@@ -1,0 +1,261 @@
+{
+  "zip": {
+    "path": "outputs/runs/drums/钢琴B固定-鼓首轮升级对照.zip",
+    "sha256": "7882e7c87e8799ad63217a29be4f07f04722a77dd4bc392c66a0231da1705560",
+    "bytes": 68964395
+  },
+  "files": [
+    {
+      "source": "outputs/runs/drums/development/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓.mid",
+      "archive": "鼓主片段-13方案/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955",
+      "bytes": 903
+    },
+    {
+      "source": "outputs/runs/drums/development/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓试听.wav",
+      "sha256": "e2796a070c2c0a4783f4e6daf07e631e10027525d096a33e3e7e4115f75a753e",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/H1-Demucs-YourMT3-SW-ADTOF-default/鼓.mid",
+      "archive": "鼓主片段-13方案/H1-Demucs-YourMT3-SW-ADTOF-default/鼓.mid",
+      "sha256": "ea23be08b0b4f8e1eec9e8cc6b094784e0789a04bc157aea10f0fff032a3abeb",
+      "bytes": 881
+    },
+    {
+      "source": "outputs/runs/drums/development/H1-Demucs-YourMT3-SW-ADTOF-default/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H1-Demucs-YourMT3-SW-ADTOF-default/鼓试听.wav",
+      "sha256": "1f08b9c953496e49691deaae8de5809026f44af75674350b91d8f23992a9985f",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/H0-Demucs-YourMT3-ADTOF/鼓.mid",
+      "archive": "鼓主片段-13方案/H0-Demucs-YourMT3-ADTOF/鼓.mid",
+      "sha256": "e1da3a372c374d03376db694d59f05ddb093f2dafe4cfee3027ce029ac323625",
+      "bytes": 784
+    },
+    {
+      "source": "outputs/runs/drums/development/H0-Demucs-YourMT3-ADTOF/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H0-Demucs-YourMT3-ADTOF/鼓试听.wav",
+      "sha256": "48bc8fd2db8c4dd71935094c06fb9c53c81279f6385e83f0e940d821a6f5752d",
+      "bytes": 10767612
+    },
+    {
+      "source": "outputs/runs/drums/development/H3-Demucs-YourMT3-SW-ADTOF-lower050/鼓.mid",
+      "archive": "鼓主片段-13方案/H3-Demucs-YourMT3-SW-ADTOF-lower050/鼓.mid",
+      "sha256": "20d1cc1a05696840c72cef7fe732c46103fc5189dceb3bb9ea60a2220b6b12a4",
+      "bytes": 954
+    },
+    {
+      "source": "outputs/runs/drums/development/H3-Demucs-YourMT3-SW-ADTOF-lower050/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H3-Demucs-YourMT3-SW-ADTOF-lower050/鼓试听.wav",
+      "sha256": "d3805f6e10df17ba4ecebd586b9ecc672825a1b7ffe6314732449392a65032b6",
+      "bytes": 10845152
+    },
+    {
+      "source": "outputs/runs/drums/development/H5-SW-YourMT3-ADTOF-lower075/鼓.mid",
+      "archive": "鼓主片段-13方案/H5-SW-YourMT3-ADTOF-lower075/鼓.mid",
+      "sha256": "ac24b4911a0b79d7f030ed85740988424ee564125d1d44f2d26b199dec229c9c",
+      "bytes": 939
+    },
+    {
+      "source": "outputs/runs/drums/development/H5-SW-YourMT3-ADTOF-lower075/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H5-SW-YourMT3-ADTOF-lower075/鼓试听.wav",
+      "sha256": "d96a958cc6a39000d844b66dd0daccdb73ba7dfab87ebf73edabb1ad232dd37a",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/H4-SW-YourMT3-ADTOF-default/鼓.mid",
+      "archive": "鼓主片段-13方案/H4-SW-YourMT3-ADTOF-default/鼓.mid",
+      "sha256": "35f79cdd4a3cfc83d4dad5c18adfa1b68b13616bf66a35cfa6dfa37b50af0758",
+      "bytes": 917
+    },
+    {
+      "source": "outputs/runs/drums/development/H4-SW-YourMT3-ADTOF-default/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H4-SW-YourMT3-ADTOF-default/鼓试听.wav",
+      "sha256": "f608e59258055da2e7574318c735e462562df018b1830147d1de6c66353ddb57",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/H6-SW-YourMT3-ADTOF-lower050/鼓.mid",
+      "archive": "鼓主片段-13方案/H6-SW-YourMT3-ADTOF-lower050/鼓.mid",
+      "sha256": "16470601df489dd4e0ae44f61362861f03066d5a3d2db0b696bf6b9ba41452e5",
+      "bytes": 990
+    },
+    {
+      "source": "outputs/runs/drums/development/H6-SW-YourMT3-ADTOF-lower050/鼓试听.wav",
+      "archive": "鼓主片段-13方案/H6-SW-YourMT3-ADTOF-lower050/鼓试听.wav",
+      "sha256": "215d5421c95bc1c6b127d558650b044855c4291b72ac5b1ecfc3d0aede40c128",
+      "bytes": 10845152
+    },
+    {
+      "source": "outputs/runs/drums/development/D4-SW-ADTOF-lower075/鼓.mid",
+      "archive": "鼓主片段-13方案/D4-SW-ADTOF-lower075/鼓.mid",
+      "sha256": "d05db133884df148f2046ce69b08d4a5231182304c9ae14fb5ca020329df0957",
+      "bytes": 934
+    },
+    {
+      "source": "outputs/runs/drums/development/D4-SW-ADTOF-lower075/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D4-SW-ADTOF-lower075/鼓试听.wav",
+      "sha256": "21f510e786ee7898305e5c605c48d2f9196257a095015dabece563f7178ab8f0",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/D3-SW-ADTOF-default/鼓.mid",
+      "archive": "鼓主片段-13方案/D3-SW-ADTOF-default/鼓.mid",
+      "sha256": "45a27ea8bad082cae3061f4a12bc09b433b3fa5048ef131650fadb0b4a0e326a",
+      "bytes": 911
+    },
+    {
+      "source": "outputs/runs/drums/development/D3-SW-ADTOF-default/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D3-SW-ADTOF-default/鼓试听.wav",
+      "sha256": "28a7673bdafd2eeeba78295a588f46e2473ef391d414da47bc4c7bb1528bd476",
+      "bytes": 10818692
+    },
+    {
+      "source": "outputs/runs/drums/development/D0-Demucs-YourMT3/鼓.mid",
+      "archive": "鼓主片段-13方案/D0-Demucs-YourMT3/鼓.mid",
+      "sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+      "bytes": 637
+    },
+    {
+      "source": "outputs/runs/drums/development/D0-Demucs-YourMT3/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D0-Demucs-YourMT3/鼓试听.wav",
+      "sha256": "11e7b4e7a01b364eb93d51e90c5b2d099f5ac5e09a011010bb7791f5f6958ec1",
+      "bytes": 10760444
+    },
+    {
+      "source": "outputs/runs/drums/development/D1-SW-YourMT3/鼓.mid",
+      "archive": "鼓主片段-13方案/D1-SW-YourMT3/鼓.mid",
+      "sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+      "bytes": 806
+    },
+    {
+      "source": "outputs/runs/drums/development/D1-SW-YourMT3/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D1-SW-YourMT3/鼓试听.wav",
+      "sha256": "dcfe132e858e98e0cef9c2df98ebc6a9e6052ff05e8a98e0bdac261966283662",
+      "bytes": 10760444
+    },
+    {
+      "source": "outputs/runs/drums/development/D5-SW-ADTOF-lower050/鼓.mid",
+      "archive": "鼓主片段-13方案/D5-SW-ADTOF-lower050/鼓.mid",
+      "sha256": "62f2c7b011d62fd17b7544f9bb176e386cbe3069777fa3bb447309410b55a174",
+      "bytes": 996
+    },
+    {
+      "source": "outputs/runs/drums/development/D5-SW-ADTOF-lower050/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D5-SW-ADTOF-lower050/鼓试听.wav",
+      "sha256": "1318ed2ad68b6a58558922b455b0a9a1ddecf6641a08494c5864b185ad2c24ae",
+      "bytes": 10845152
+    },
+    {
+      "source": "outputs/runs/drums/development/D2-Demucs-ADTOF-default/鼓.mid",
+      "archive": "鼓主片段-13方案/D2-Demucs-ADTOF-default/鼓.mid",
+      "sha256": "eab095e0ef79236f674fde0e90e4d2ec47bb6897610352fdfa079392e8247009",
+      "bytes": 808
+    },
+    {
+      "source": "outputs/runs/drums/development/D2-Demucs-ADTOF-default/鼓试听.wav",
+      "archive": "鼓主片段-13方案/D2-Demucs-ADTOF-default/鼓试听.wav",
+      "sha256": "5fb2cce0de5eb10ecee2414959c1f5d2bcba9ed3920c36efe911580f084981e1",
+      "bytes": 10767612
+    },
+    {
+      "source": "outputs/runs/drums/extra-60-120/鼓-固定规则升级.mid",
+      "archive": "鼓额外60-120/鼓-固定规则升级.mid",
+      "sha256": "79fc310e710802d27cac104afd453c1d50e61365200b852db5deb63709272adb",
+      "bytes": 1896
+    },
+    {
+      "source": "outputs/runs/drums/extra-60-120/鼓-固定规则升级试听.wav",
+      "archive": "鼓额外60-120/鼓-固定规则升级试听.wav",
+      "sha256": "fbb8f6a41b5a106fef3a41fa13e4e3d4bf2ce681e63eb95ecadf12bc11fcf487",
+      "bytes": 10767428
+    },
+    {
+      "source": "outputs/runs/drums/extra-60-120/鼓-旧版.mid",
+      "archive": "鼓额外60-120/鼓-旧版.mid",
+      "sha256": "4aa04f71eba98fd9f3b02ed75defdbd032a24448ba2d85c2d29a7774bb562ac2",
+      "bytes": 1816
+    },
+    {
+      "source": "outputs/runs/drums/extra-60-120/鼓-旧版试听.wav",
+      "archive": "鼓额外60-120/鼓-旧版试听.wav",
+      "sha256": "daf62d13c9262bcbea8bea02434572fdd17db6919d95242106a55c4727354ac2",
+      "bytes": 10758608
+    },
+    {
+      "source": "outputs/runs/drums/钢琴B固定-鼓升级六轨/多乐器.mid",
+      "archive": "钢琴B固定-鼓升级六轨/多乐器.mid",
+      "sha256": "24eab6f2d68b7b3ed1822b81b2337fa9739f69b179ea7b882e75ed9a2127e99a",
+      "bytes": 4671
+    },
+    {
+      "source": "outputs/runs/drums/钢琴B固定-鼓升级六轨/运行报告.json",
+      "archive": "钢琴B固定-鼓升级六轨/运行报告.json",
+      "sha256": "452ee138b49ae36396f91446e042f72ad11f1ea9b8fd80f7f50b0ccc801081ea",
+      "bytes": 95914
+    },
+    {
+      "source": "outputs/runs/drums/钢琴B固定-鼓升级六轨/音色试听.wav",
+      "archive": "钢琴B固定-鼓升级六轨/音色试听.wav",
+      "sha256": "d64027ff6f7030ef2747eb8da0046072f6c3ceb550cae9846063fecae68d1c37",
+      "bytes": 10853972
+    },
+    {
+      "source": "outputs/runs/piano-b/locked-reproduction/运行报告.json",
+      "archive": "固定钢琴B/运行报告.json",
+      "sha256": "cd187b8f86acbcfe0a27ec3cc851c0775921560b83686703eb92555d57bfd197",
+      "bytes": 2860
+    },
+    {
+      "source": "outputs/runs/piano-b/locked-reproduction/钢琴-B.mid",
+      "archive": "固定钢琴B/钢琴-B.mid",
+      "sha256": "cdfa0e93bb5a9940481c87e81bc4a0002694c7bc0d48568ed70f27d24f1e01cb",
+      "bytes": 2143
+    },
+    {
+      "source": "outputs/runs/piano-b/locked-reproduction/钢琴-B试听.wav",
+      "archive": "固定钢琴B/钢琴-B试听.wav",
+      "sha256": "c226917bfd69494ea4a9da96134354cf4cd4f1c130bcde3bbf024f3ab7fb4584",
+      "bytes": 10853972
+    },
+    {
+      "source": "outputs/drums/鼓轨升级报告.md",
+      "archive": "报告/鼓轨升级报告.md",
+      "sha256": "692df7a0cb90f71b1fbf7a8ed676d4ab7249a23a933981c43b1491911e9068bc",
+      "bytes": 4699
+    },
+    {
+      "source": "outputs/drums/开发片段评分.json",
+      "archive": "报告/开发片段评分.json",
+      "sha256": "b43e39e0db761ca6016e96604e4ce9ed88fe93db30170225a16b97d629b5e637",
+      "bytes": 8780
+    },
+    {
+      "source": "outputs/drums/额外片段冻结规则评分.json",
+      "archive": "报告/额外片段冻结规则评分.json",
+      "sha256": "7447df654d10b297f65170f58e0b391337059120bbbb2238b487c9a7e7ed0075",
+      "bytes": 1648
+    },
+    {
+      "source": "outputs/drums/钢琴B鼓升级六轨评分.json",
+      "archive": "报告/钢琴B鼓升级六轨评分.json",
+      "sha256": "fe8a6284ede10ef5373cb1e1e2191c2c6bf2dff06cded733fb5c94707a35a165",
+      "bytes": 3536
+    },
+    {
+      "source": "outputs/drums/两段鼓汇总.json",
+      "archive": "报告/两段鼓汇总.json",
+      "sha256": "d6a6d3b78da3fffd2b36df35c44e52708571db183ac22fc9502257ae965521f3",
+      "bytes": 315
+    },
+    {
+      "source": "docs/钢琴B固定路径.md",
+      "archive": "报告/钢琴B固定路径.md",
+      "sha256": "1bd5609bb0b24def76c36e899fd4b3f773b100d9698179cd43032791594dc1cc",
+      "bytes": 2360
+    }
+  ]
+}

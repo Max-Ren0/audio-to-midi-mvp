@@ -111,3 +111,9 @@ sh scripts/setup_v01.sh
 ## 当前固定钢琴路线（2026-10-16）
 
 钢琴已固定为 **BS-Roformer SW → Transkun预训练2.0**。使用 `scripts/run_piano_b.py`；模型哈希、缓存校验、命令和限制见 [固定钢琴B实现](docs/钢琴B固定路径.md)。历史v0.1入口保留复现，不自动替换。
+
+## 鼓轨首轮研究升级（2026-10-16）
+
+钢琴B保持固定，鼓实验组合采用YourMT3细鼓键＋SW/ADTOF军鼓/闭镲。开发片段鼓F1 56.00%→77.25%，冻结规则的同曲额外片段37.04%→44.07%，尚未通过多曲质量验收。含非商业研究模型，不能直接当作商用默认。[报告与边界](outputs/drums/鼓轨升级报告.md)，[固定研究规则](config/drums-hybrid-research.json)。
+
+`config/piano-b-drums-research.json`配`outputs/drums/六轨组装来源.json`供`run_v01.py --candidates`重建此次六轨；这是显式缓存组装，不是对任意新音频直接执行全部研究步骤。其他四类预测没有改变。每个鼓候选的MID/试听保存在本机outputs/runs/drums，不推送用户媒体。

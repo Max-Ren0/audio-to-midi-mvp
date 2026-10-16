@@ -22,7 +22,8 @@ def verify_piano_cache(root: Path, input_sha256: str, lock: dict) -> Path:
         raise ValueError('Piano cache upstream receipt mismatch')
     upstream=json.loads(upstream_path.read_text())
     configuration=receipt['configuration']
-    if configuration.get('original_input_sha256')!=input_sha256 or configuration.get('source_wav_sha256')!=upstream.get('input_sha256'):
+    decoded_sha=configuration.get('source_wav_sha256')
+    if not isinstance(decoded_sha,str) or not decoded_sha or configuration.get('original_input_sha256')!=input_sha256 or decoded_sha!=upstream.get('input_sha256'):
         raise ValueError('Piano cache decoded/original input chain mismatch')
     if upstream.get('amp') is not lock['amp'] or upstream.get('cpu_threads')!=lock['cpu_threads']:
         raise ValueError('Piano cache execution settings mismatch')

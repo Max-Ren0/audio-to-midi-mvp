@@ -1,0 +1,21 @@
+{
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "sources": {
+    "piano_b": {
+      "path": "../../outputs/runs/piano-b/locked-reproduction/钢琴-B.mid",
+      "sha256": "cdfa0e93bb5a9940481c87e81bc4a0002694c7bc0d48568ed70f27d24f1e01cb"
+    },
+    "drums_research": {
+      "path": "../../outputs/runs/drums/development/H2-Demucs-YourMT3-SW-ADTOF-lower075/鼓.mid",
+      "sha256": "67a97a2c4ef130f65ae86a4faee2a6db509cd0175672006906deeb07f2233955"
+    },
+    "baseline": {
+      "path": "../../outputs/runs/v01/development/多乐器.mid",
+      "sha256": "ba7661c8c1f62efd649e66ac8474dc2915c816af3997a5f50886729b909d7e32"
+    },
+    "sw": {
+      "path": "../../outputs/runs/two-methods/sw-local-control/多乐器.mid",
+      "sha256": "08386c643056ee18ec36c25b064e08e2544c434b2a8ee5dfb49c3fabfc2ba966"
+    }
+  }
+}

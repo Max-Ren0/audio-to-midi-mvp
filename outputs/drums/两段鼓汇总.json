@@ -1,0 +1,15 @@
+{
+  "scope": "same-song conditional aggregate, original audio sync not independently verified",
+  "old": {
+    "matched": 127,
+    "predicted": 261,
+    "reference": 348,
+    "f1": 0.41707717569786534
+  },
+  "new": {
+    "matched": 177,
+    "predicted": 313,
+    "reference": 348,
+    "f1": 0.5355521936459909
+  }
+}
