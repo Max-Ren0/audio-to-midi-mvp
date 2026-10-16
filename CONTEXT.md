@@ -339,3 +339,4 @@
 - 新六轨389/535/494 F175.61；其他5轨+conductor原消息/tick相同，钢琴B/鼓85.56不变。outputs/runs/bass-models/交付含7贝斯方案和新六轨MID/WAV，仅MIDI合成、未人工听辨。
 - 116测试通过，官方前处理脉冲确认零起点且不做forward；三阶段临时重建全部候选/证据字节相同。来源/权重/依赖SHA及完整负结果/逐音变化见outputs/bass-models；原生数据ignored work/bass-models。待冻结后独立验证/推送。
 - 仍17FP/12FN，已见开发集选择不代表泛化/录音真值/全球最优；没有完整新歌CLI或商用许可结论。不继续扩候选。
+- 420e4a5冻结后verify_bass_models独立只读核验通过：116测试、3阶段候选/证据重建、独立评分、7增3失、原生时间格/单位、9任务/兼容披露、源/权重、92产物/93ZIP/8WAV及保护轨全部一致，无须修正，主agent接受。详outputs/bass-models/独立验证.md。当前贝斯SHA54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32；六轨b28231c5d0ba9e46dd5a0c47b1fca44cf304cd6b2cfa5517b5b3851963520a87；ZIP5c743ae5ee940dd33c1727a6e55971216e28c7dddab4da3453ecff5611f9fe91。准备安全FF main并发布v0.1.0-bass-models.1研究标签，原基线/旧标签不移动。
