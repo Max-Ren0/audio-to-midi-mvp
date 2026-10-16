@@ -1,0 +1,22 @@
+{
+  "crepe": {
+    "sample_rate": 16000,
+    "impulse_seconds": 1,
+    "native_frame_index": 100,
+    "frame_center_sample_in_window": 512,
+    "native_step": 0.01,
+    "origin_seconds": 0,
+    "total_frames": 301,
+    "forward_calls": 0
+  },
+  "penn": {
+    "sample_rate": 8000,
+    "impulse_seconds": 1,
+    "native_frame_index": 100,
+    "frame_center_sample_in_window": 512,
+    "native_step": 0.01,
+    "origin_seconds": 0,
+    "total_frames": 301,
+    "forward_calls": 0
+  }
+}

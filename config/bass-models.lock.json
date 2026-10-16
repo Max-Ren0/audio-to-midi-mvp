@@ -1,0 +1,37 @@
+{
+  "status": "seen 0–60 development research, not production/generalization/commercial approval",
+  "selected": "S2-short-0",
+  "recipe": {
+    "id": "S2-short-0",
+    "source": "demucs",
+    "model": "pyin",
+    "high": 0.2,
+    "low": 0.05,
+    "onset": "short",
+    "guard": 0
+  },
+  "source_ledger": "outputs/bass-models/phase3-ledger.json",
+  "source_ledger_sha256": "04d05194e47523436458583029b20e905eb06ba2c31c06a11f908fdc4860517a",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "bass": {
+    "path": "outputs/runs/bass-models/交付/04-贝斯新版-62.34.mid",
+    "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+  },
+  "six_track": {
+    "path": "outputs/runs/bass-models/交付/六轨-仅替换贝斯.mid",
+    "sha256": "b28231c5d0ba9e46dd5a0c47b1fca44cf304cd6b2cfa5517b5b3851963520a87"
+  },
+  "score": {
+    "matched": 24,
+    "predicted": 41,
+    "reference": 36,
+    "extra": 17,
+    "missed": 12,
+    "f1": 0.6233766233766234
+  },
+  "implementation_sha256": {
+    "bass_models.py": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279",
+    "bass_refinement.py": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+  },
+  "entrypoint": "outputs/bass-models/generate.py: cached research rebuild only; existing default runner unchanged"
+}

@@ -1,0 +1,60 @@
+{
+  "phase": 3,
+  "registration_sha256": "4422840220dc235cb62045d8aca27e22ba3c459b50c743c1b9aa20da69c643b1",
+  "generator_sha256": "5963189c0210cd8497845d4463f41dde24ece7cbe572942787112c65679162f3",
+  "rows": [
+    {
+      "id": "S2-short-0",
+      "recipe": {
+        "id": "S2-short-0",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "short",
+        "guard": 0
+      },
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "provenance_path": "outputs/runs/bass-models/phase2/S2-short-0.json",
+      "provenance_sha256": "ce4993fc3889e329db7207b8a1afdd02cc69119e754c5beecaf85382e4887ff2",
+      "predicted": 41
+    },
+    {
+      "id": "S3-ft",
+      "recipe": {
+        "id": "S3-ft",
+        "source": "ft",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "short",
+        "guard": 0
+      },
+      "path": "outputs/runs/bass-models/phase3/S3-ft.mid",
+      "sha256": "1ca8fa149b8b9ec27e0b7745a630fd1639b9090945ff97c8cee57e08390a83a4",
+      "provenance_path": "outputs/runs/bass-models/phase3/S3-ft.json",
+      "provenance_sha256": "a2bb4b831754f7af1545524e9813365ef1e6907064f4f9ae76b5e027b4196d28",
+      "predicted": 36
+    },
+    {
+      "id": "S3-sw",
+      "recipe": {
+        "id": "S3-sw",
+        "source": "sw",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "short",
+        "guard": 0
+      },
+      "path": "outputs/runs/bass-models/phase3/S3-sw.mid",
+      "sha256": "c42d82e624ca15b5c2524190a897eda35a534aed13b0c93d03f9dd367e41d48a",
+      "provenance_path": "outputs/runs/bass-models/phase3/S3-sw.json",
+      "provenance_sha256": "d26e4aa29f23eda6e2ac541e99193be62563d5ecf4bfb14defd22a079a2dc84e",
+      "predicted": 30
+    }
+  ],
+  "initial_generator_sha256": "4834405702f0b6937b9bca70f2fe38eb78eb9d83d5df0cea8db474315905d097",
+  "reproduction": "Current generator with source receipt checks reproduced every candidate MIDI/provenance byte-for-byte in temporary directories; no model forward."
+}

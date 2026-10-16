@@ -1,0 +1,19 @@
+{
+  "row": {
+    "id": "S2-short-0",
+    "recipe": {
+      "id": "S2-short-0",
+      "source": "demucs",
+      "model": "pyin",
+      "high": 0.2,
+      "low": 0.05,
+      "onset": "short",
+      "guard": 0
+    },
+    "path": "outputs/runs/bass-models/phase2/S2-short-0.mid",
+    "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+    "provenance_path": "outputs/runs/bass-models/phase2/S2-short-0.json",
+    "provenance_sha256": "ce4993fc3889e329db7207b8a1afdd02cc69119e754c5beecaf85382e4887ff2",
+    "predicted": 41
+  }
+}

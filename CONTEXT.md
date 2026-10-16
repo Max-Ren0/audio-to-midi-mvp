@@ -329,3 +329,13 @@
 - 仍未达标：19FP/16FN，开发样本反复选择有过拟合风险；投票窗可跨下一起音、有邻音竞争，累计支持不等于连续稳定80ms。起音F1不检验力度/结束时间。待冻结后独立只读验证、GitHub同步；不在本轮继续其他分离模型或八度修正。
 - 6e503f7冻结后verify_bass_refinement独立只读核验通过：113测试，临时重建12候选与帧/证据一致，自写评分确认所有F1及8新增6丢失，C/O逐帧规则、保护5轨+conductor、62项包和5WAV通过。无必须修正项，主agent接受且产物不改。详outputs/bass-refinement/独立验证.md。贝斯SHA892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23；ZIPc028b224e842dad1f8d9a165dcd12fd1347a2343511132f6f3d4e1940249753c。准备main安全快进并发布v0.1.0-bass-refinement.1研究标签。
 - Git同步已实时确认：origin/main、origin/codex/bass-refinement及v0.1.0-bass-refinement.1均为14d943c7295b41dcb7657d72f38870b0a01318db。无force push，旧标签不移动，媒体/缓存/批量包未上传。本行作为后续文档提交保存，不移动研究标签。当前选用研究贝斯53.33%但仍19FP/16FN，下一步应先核听8新增/6丢失位置；等待用户决定，不在本轮继续新实验。
+
+## 2026-10-17：贝斯音高模型→投票边界→分离器对照
+- 用户授权按顺序再改一版。c99adc8快照，codex/bass-model-comparison；登记见outputs/bass-models/实验登记.json。只用当前0–60，固定.9995/.14/同音高50ms，不训练、付费、外传或看60–120。
+- 真实跑CREPE full/PENN；PENN1.0/torbi不兼容pt25cpu，改官方0.0.14与同一FCNF0++权重，项目隔离目录安装，不改系统/旧环境。初始控制发现batch解码/旧PENN默认不同，保存后改分批forward64+整段官方Viterbi再控制检查。共9模型进程：4控制+2神经全片+1ft分离+2源pYIN，均一次成功。
+- 评分前Hz转MIDI漏/440被越界清理拦截，新增频率基准回归先RED后GREEN修复；原native数据不改不重跑。一次批处理未失败即停使ft独立波形提前生成，但转写/评估均在阶段1/2确定后；兼容/异常/偏离详outputs/bass-models/依赖与兼容记录.md。
+- 阶段1 pYIN53.33，CREPE41.03、PENN46.15，保留pYIN；阶段2旧起音+硬边界58.33、32ms余量56.76，短窗起音+硬边界62.34、余量60.76；阶段3固定转写ft61.11/SW60.61，保留原Demucs。11候选/11不同MID，不因负结果扩参。
+- 最高贝斯24TP/41pred/36ref F162.33766、FP17/FN12，相对53.33新增7丢3净+4。仍原Demucs6s+pYIN/C3(.2/.05/128ms)，新增8k FFT512窗64ms/hop32步长4ms/64mel30–2000Hz起音，谷值回溯<=32ms；投票硬截下一起音、至少80ms累计支持。config/bass-models.lock.json固定新研究版；旧53.33文件/默认runner保留。
+- 新六轨389/535/494 F175.61；其他5轨+conductor原消息/tick相同，钢琴B/鼓85.56不变。outputs/runs/bass-models/交付含7贝斯方案和新六轨MID/WAV，仅MIDI合成、未人工听辨。
+- 116测试通过，官方前处理脉冲确认零起点且不做forward；三阶段临时重建全部候选/证据字节相同。来源/权重/依赖SHA及完整负结果/逐音变化见outputs/bass-models；原生数据ignored work/bass-models。待冻结后独立验证/推送。
+- 仍17FP/12FN，已见开发集选择不代表泛化/录音真值/全球最优；没有完整新歌CLI或商用许可结论。不继续扩候选。

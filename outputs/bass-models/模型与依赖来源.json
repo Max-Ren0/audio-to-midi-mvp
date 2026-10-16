@@ -1,0 +1,246 @@
+{
+  "installed_packages": [
+    {
+      "root": "work/bass-models/penn-legacy",
+      "name": "penn",
+      "version": "0.0.14",
+      "metadata_sha256": "304fb4afe7e5c97d1d1d5886f67d3f0164a76c64d11386f1c7ed5171ae404708"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "yapecs",
+      "version": "0.5.0",
+      "metadata_sha256": "9df12037746f42b337f73a8374e88c57ed070e76ba6b1037e4350fab4990573c"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "torchutil",
+      "version": "0.1.2",
+      "metadata_sha256": "f31f516b75c3b110e8a7ebb97051beec0b67ba80e7f6dd9d76febea53e7a0b0b"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "huggingface-hub",
+      "version": "0.26.5",
+      "metadata_sha256": "bf0bb33eb414f78e6e4ab638fd0dbd266ddeda5bf1fc4a67791ca3d8e6442e99"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "penn",
+      "version": "1.0.0",
+      "metadata_sha256": "1b78f9fdffbdceeaa0bda7abf589ac539db8be17a6bd19299490460fb9b8dfd7"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "torbi",
+      "version": "1.4.0",
+      "metadata_sha256": "07d8549225ac2d4ceb5b288c8abfd5a53bc19bc21a276e51a4f87beae96dc927"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "resampy",
+      "version": "0.4.3",
+      "metadata_sha256": "ff3e4ce6f2d5b8151c1236fbb664b4171ce6f485602a7aa92e59d657b62e2f85"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "psutil",
+      "version": "7.2.2",
+      "metadata_sha256": "525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f"
+    },
+    {
+      "root": "work/bass-models/deps",
+      "name": "torchcrepe",
+      "version": "0.0.24",
+      "metadata_sha256": "23b9abe3a52f7ee9f015d527cc119b5598bcffe2df6db4a86ed0e11925381aa5"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "oauthlib",
+      "version": "4.0.0",
+      "metadata_sha256": "0ceb96b8070da85ab74d5b1351561b048a3bad7a287e97bbf07251355858b95c"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "click",
+      "version": "8.5.0",
+      "metadata_sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "packaging",
+      "version": "26.3",
+      "metadata_sha256": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "metadata_sha256": "445916389cc3a87d5f815d763192372a17a221339d474cb661523157bf07d61c"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "requests",
+      "version": "2.34.2",
+      "metadata_sha256": "8c384ba3e979480faae2859d3c5e6c1276dd2c3616e322e124d52c8cfc556f27"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "numpy",
+      "version": "1.26.4",
+      "metadata_sha256": "c7e07fd91847cb89b28c262e481e5656b4cd417b34d121a056b817b10b66fc01"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "grpcio",
+      "version": "1.84.0",
+      "metadata_sha256": "ac85e3d2b9220d642241116c6dd46bdc7e76d43393124a91dfff90f9aaa36529"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "Markdown",
+      "version": "3.11.1",
+      "metadata_sha256": "0d1f5ae018d81316aa7a40f9e44fcb26cfa46af90c1b2b8127d3d5bffa523919"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "setuptools",
+      "version": "84.0.0",
+      "metadata_sha256": "3ef2975718dd31cabdd5829455e9b868ca14dbf79ed8fed2de0af4e87347006e"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "metadata_sha256": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "tensorboard",
+      "version": "2.20.0",
+      "metadata_sha256": "965d3d732fbd7f3f4c674fc63f627d5888a61d721968ff206147c37604a745f2"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "metadata_sha256": "ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "absl-py",
+      "version": "2.5.1",
+      "metadata_sha256": "f4423215be1e33c57b319888bdff71fa3a909930bfdbb0d705dffe77dae3eee7"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "metadata_sha256": "66767d76388ece15d49d50dafb655891ef5d868715e7128e7f7d737a70b353c4"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "apprise",
+      "version": "1.9.2",
+      "metadata_sha256": "c7fa3f413aca6bd66fae23b33f4bb6013b2021b2bb580414fd3130236439f20e"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "tensorboard-data-server",
+      "version": "0.7.2",
+      "metadata_sha256": "6b38aea33eeccd55a2644d9b7eb6c61d574a496188f4ac498e68e6230b1b9096"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "metadata_sha256": "89ce6362bb7be88558f4be99a98f5d1b4da93d19cd0323e5ee0bac05cf883dfb"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "pillow",
+      "version": "12.3.0",
+      "metadata_sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "requests-oauthlib",
+      "version": "2.0.0",
+      "metadata_sha256": "7d85ea39c166d9f2326f89cee906331d2c80ed2ddea4d31efc020006b47fcaca"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "idna",
+      "version": "3.20",
+      "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85"
+    },
+    {
+      "root": "work/bass-models/aux",
+      "name": "Werkzeug",
+      "version": "3.1.9",
+      "metadata_sha256": "9f04352e946ecb0883fbf379994c1cacf6720a124acdd7fd59029a889f4eebba"
+    }
+  ],
+  "active_penn_version": "0.0.14",
+  "active_torch_version": "2.5.1",
+  "active_numpy_version": "1.26.4",
+  "files": [
+    {
+      "path": "work/bass-models/deps/torchcrepe/assets/full.pth",
+      "sha256": "133225604dedd2e4005f8bbd1bd0a2ec073ba8b7a6cd31ff6d5edbbfa3539986",
+      "bytes": 88991291
+    },
+    {
+      "path": "work/bass-models/fcnf0-plus-plus.pt",
+      "sha256": "28d89add04722461f831249a338b74516a96dedd3301ed794c18953d51d1b960",
+      "bytes": 107245425
+    },
+    {
+      "path": "work/bass-models/ftrepo/d12395a8-e57c48e6.th",
+      "sha256": "e57c48e6b0e38af4f7118d7bd08c49f0a0c0edf7d09143bdd902ea0d237303e6",
+      "bytes": 84141271
+    },
+    {
+      "path": "work/bass-models/penn-legacy/penn/core.py",
+      "sha256": "776f935464917b79f20f41b17229e784707cfd70799794dfe4efa2d8ee8220cd",
+      "bytes": 25021
+    },
+    {
+      "path": "work/bass-models/penn-legacy/penn/decode.py",
+      "sha256": "29d2bb1eed210deee0d02d503702d80aa140c43bdd58e5edc5154ad05b7b9c7f",
+      "bytes": 4982
+    },
+    {
+      "path": "work/bass-models/deps/torchcrepe/core.py",
+      "sha256": "a94d90e76670322889efedaf86c5812a599f96140535d49b1b4e9e6dc1b05840",
+      "bytes": 26368
+    },
+    {
+      "path": "work/bass-models/deps/torchcrepe/decode.py",
+      "sha256": "cf3380cf1ece5bc9c73936a7927ad42e224b71b4936366264b24f725c1550522",
+      "bytes": 2670
+    },
+    {
+      "path": "work/sep-env/lib/python3.11/site-packages/demucs/remote/htdemucs_ft.yaml",
+      "sha256": "69470b8c1bbd674437b51bc9fb491327a10ab0396b702c93389b9cf750016346",
+      "bytes": 149
+    },
+    {
+      "path": "work/bass-models/control15.wav",
+      "sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1",
+      "bytes": 480080
+    }
+  ]
+}

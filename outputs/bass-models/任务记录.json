@@ -1,0 +1,136 @@
+[
+  {
+    "id": "crepe-probes",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "crepe",
+      "work/bass-models/control15.wav",
+      "work/bass-models/crepe-probes.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 4863836160,
+    "attempts": 1,
+    "elapsed_seconds": 50.271596500009764
+  },
+  {
+    "id": "penn-probes",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "penn",
+      "work/bass-models/control15.wav",
+      "work/bass-models/penn-probes.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 3039412224,
+    "attempts": 1,
+    "elapsed_seconds": 8.954387457997655
+  },
+  {
+    "id": "crepe-global-probes",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "crepe",
+      "work/bass-models/control15.wav",
+      "work/bass-models/crepe-global-probes.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 3056123904,
+    "attempts": 1,
+    "elapsed_seconds": 44.15686408399779
+  },
+  {
+    "id": "penn-global-probes",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "penn",
+      "work/bass-models/control15.wav",
+      "work/bass-models/penn-global-probes.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 1878687744,
+    "attempts": 1,
+    "elapsed_seconds": 17.80536500000744
+  },
+  {
+    "id": "crepe-full",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "crepe",
+      "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+      "work/bass-models/crepe-full.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 2925068288,
+    "attempts": 1,
+    "elapsed_seconds": 168.8297847089998
+  },
+  {
+    "id": "penn-full",
+    "command": [
+      "env",
+      "PYTHONPATH=work/bass-models/penn-legacy:work/bass-models/deps:work/bass-models/aux:src",
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "penn",
+      "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+      "work/bass-models/penn-full.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 1948008448,
+    "attempts": 1,
+    "elapsed_seconds": 56.56612612500612
+  },
+  {
+    "id": "ft-separation",
+    "command": [
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_ft.py",
+      "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 1905557504,
+    "attempts": 1,
+    "elapsed_seconds": 34.48351691699645
+  },
+  {
+    "id": "pyin-ft",
+    "command": [
+      ".venv/bin/python",
+      "outputs/bass-models/run_pyin.py",
+      "work/bass-models/ft-bass.wav",
+      "work/bass-models/pyin-ft.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 556204032,
+    "attempts": 1,
+    "elapsed_seconds": 4.663710082997568
+  },
+  {
+    "id": "pyin-sw",
+    "command": [
+      ".venv/bin/python",
+      "outputs/bass-models/run_pyin.py",
+      "work/two-methods/sw-full/bass.wav",
+      "work/bass-models/pyin-sw.npz"
+    ],
+    "status": "ok",
+    "peak_memory_bytes": 537231360,
+    "attempts": 1,
+    "elapsed_seconds": 4.648720875004074
+  }
+]

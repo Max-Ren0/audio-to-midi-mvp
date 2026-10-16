@@ -1,0 +1,105 @@
+{
+  "overall": {
+    "matched": 389,
+    "predicted": 535,
+    "reference": 494,
+    "f1": 0.7560738581146744
+  },
+  "per_category": {
+    "piano": {
+      "matched": 268,
+      "predicted": 269,
+      "reference": 269,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "matched": 8,
+      "predicted": 70,
+      "reference": 24,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "matched": 6,
+      "predicted": 23,
+      "reference": 64,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "matched": 24,
+      "predicted": 41,
+      "reference": 36,
+      "f1": 0.6233766233766234
+    },
+    "drums": {
+      "matched": 80,
+      "predicted": 93,
+      "reference": 94,
+      "f1": 0.8556149732620321
+    },
+    "strings": {
+      "matched": 3,
+      "predicted": 39,
+      "reference": 7,
+      "f1": 0.13043478260869565
+    }
+  },
+  "other_five_tracks_conductor_messages_unchanged": true,
+  "rendered": {
+    "00-上版贝斯-53.33": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.025338193596017,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "01-CREPE-41.03": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.458654620528993,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "02-PENN-46.15": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.51562358276644,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.458654620528993,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "03-仅限制投票-58.33": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.025338193596017,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "04-贝斯新版-62.34": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.20271478199246,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "05-ft对照-61.11": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.62833327628178,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "06-SW对照-60.61": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.677620969080543,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "六轨-仅替换贝斯": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 12.400197670696798,
+      "source": "MIDI_only_no_original_audio"
+    }
+  }
+}

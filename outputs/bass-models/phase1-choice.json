@@ -1,0 +1,19 @@
+{
+  "row": {
+    "id": "S1-pyin-0",
+    "recipe": {
+      "id": "S1-pyin-0",
+      "source": "demucs",
+      "model": "pyin",
+      "high": 0.2,
+      "low": 0.05,
+      "onset": "legacy",
+      "guard": null
+    },
+    "path": "outputs/runs/bass-models/phase1/S1-pyin-0.mid",
+    "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23",
+    "provenance_path": "outputs/runs/bass-models/phase1/S1-pyin-0.json",
+    "provenance_sha256": "f06de0d5a511655ffb362d46a6a85242b0ddecb1d09c23014151461e9db03d1b",
+    "predicted": 39
+  }
+}

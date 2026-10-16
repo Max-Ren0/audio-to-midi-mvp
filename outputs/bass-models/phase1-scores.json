@@ -1,0 +1,578 @@
+{
+  "phase": 1,
+  "rows": [
+    {
+      "id": "S1-pyin-0",
+      "recipe": {
+        "id": "S1-pyin-0",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-pyin-0.mid",
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-pyin-0.json",
+      "provenance_sha256": "f06de0d5a511655ffb362d46a6a85242b0ddecb1d09c23014151461e9db03d1b",
+      "predicted": 39,
+      "matched": 20,
+      "reference": 36,
+      "extra": 19,
+      "missed": 16,
+      "f1": 0.5333333333333333,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          30,
+          32
+        ],
+        [
+          31,
+          33
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          34,
+          37
+        ],
+        [
+          35,
+          38
+        ]
+      ]
+    },
+    {
+      "id": "S1-crepe-0",
+      "recipe": {
+        "id": "S1-crepe-0",
+        "source": "demucs",
+        "model": "crepe",
+        "high": 0.21,
+        "low": 0.1,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-0.mid",
+      "sha256": "ad5d1391f288ad150fba9024f3ae58a70d183b4d4e4dfdf311f5a331a704802f",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-crepe-0.json",
+      "provenance_sha256": "99286d6be590d7d502f346e03ed8748f68bdc524bd6f53801e720f2937e5c575",
+      "predicted": 42,
+      "matched": 16,
+      "reference": 36,
+      "extra": 26,
+      "missed": 20,
+      "f1": 0.41025641025641024,
+      "matched_reference_indices": [
+        3,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        21,
+        22,
+        24,
+        30,
+        31,
+        32,
+        33,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          30,
+          35
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          32,
+          38
+        ],
+        [
+          33,
+          39
+        ],
+        [
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "id": "S1-crepe-1",
+      "recipe": {
+        "id": "S1-crepe-1",
+        "source": "demucs",
+        "model": "crepe",
+        "high": 0.5,
+        "low": 0.2,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-1.mid",
+      "sha256": "0adb8a331cbf45c1d9b22920700d5af80c04caeef096cef5f1aea9fa9b8618f0",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-crepe-1.json",
+      "provenance_sha256": "dc91e95ca9d72030098d55c90d0e9cf136b557c3b673e7dc719eaaeccb9aa631",
+      "predicted": 42,
+      "matched": 16,
+      "reference": 36,
+      "extra": 26,
+      "missed": 20,
+      "f1": 0.41025641025641024,
+      "matched_reference_indices": [
+        3,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        21,
+        22,
+        24,
+        30,
+        31,
+        32,
+        33,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          30,
+          35
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          32,
+          38
+        ],
+        [
+          33,
+          39
+        ],
+        [
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "id": "S1-penn-0",
+      "recipe": {
+        "id": "S1-penn-0",
+        "source": "demucs",
+        "model": "penn",
+        "high": 0.065,
+        "low": 0.0325,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-penn-0.mid",
+      "sha256": "0366713de6779f82a9c25d6c013d5b430c4772695a23d988176c0b31282d7434",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-penn-0.json",
+      "provenance_sha256": "557dbdb1477dd9b310ac5231b94424080bd97cf38d60cf350ca97b5a94b8420e",
+      "predicted": 42,
+      "matched": 18,
+      "reference": 36,
+      "extra": 24,
+      "missed": 18,
+      "f1": 0.46153846153846156,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        18,
+        21,
+        22,
+        25,
+        29,
+        30,
+        31,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          25,
+          29
+        ],
+        [
+          29,
+          33
+        ],
+        [
+          30,
+          35
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          34,
+          40
+        ],
+        [
+          35,
+          41
+        ]
+      ]
+    },
+    {
+      "id": "S1-penn-1",
+      "recipe": {
+        "id": "S1-penn-1",
+        "source": "demucs",
+        "model": "penn",
+        "high": 0.2,
+        "low": 0.1,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-penn-1.mid",
+      "sha256": "75024fdde086d58c10039122a81b348e58de2059bcc0c2dffd3997a9f040eff6",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-penn-1.json",
+      "provenance_sha256": "a7a2653a0e5a5051d7b3fc97135ec1074c967b3becbf1190648efffe2c01f088",
+      "predicted": 42,
+      "matched": 18,
+      "reference": 36,
+      "extra": 24,
+      "missed": 18,
+      "f1": 0.46153846153846156,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        18,
+        21,
+        22,
+        25,
+        29,
+        30,
+        31,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          25,
+          29
+        ],
+        [
+          29,
+          33
+        ],
+        [
+          30,
+          35
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          34,
+          40
+        ],
+        [
+          35,
+          41
+        ]
+      ]
+    }
+  ],
+  "selected": "S1-pyin-0",
+  "ledger_sha256": "fb771f11d4fae5f5fe982a9efb670bce65e1a947e2db6c9710232e81b1842ea3",
+  "evaluation": "same-pitch50ms max one-to-one; .9995/.14 fixed; seen development arrangement"
+}

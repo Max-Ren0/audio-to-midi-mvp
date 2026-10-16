@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-17",
+  "scope": "same current 0–60 only; ignore vocals; preserve 53.33 bass and frozen other five tracks",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "stage1": {
+    "source": "original Demucs6s bass verified in work/bass-diagnostics/replay/trace.json",
+    "pitch_models": [
+      "existing pYIN C3",
+      "torchcrepe 0.0.24 full Viterbi pad=true",
+      "penn0.0.14 FCNF0++ default viterbi-normal, center=zero, interp=None"
+    ],
+    "native_hop_seconds": 0.01,
+    "common_grid_seconds": 0.016,
+    "grid_conversion": "nearest native frame; no interpolation across unvoiced gaps; original pYIN grid unchanged",
+    "frequency_bounds": "32–261Hz; torchcrepe effective floor max(32,model minimum)",
+    "confidence_profiles": {
+      "pyin": [
+        [
+          0.2,
+          0.05
+        ]
+      ],
+      "crepe": [
+        [
+          0.21,
+          0.1
+        ],
+        [
+          0.5,
+          0.2
+        ]
+      ],
+      "penn": [
+        [
+          0.065,
+          0.0325
+        ],
+        [
+          0.2,
+          0.1
+        ]
+      ]
+    },
+    "extension_seconds": 0.128,
+    "note_method": "existing O2: original audio onset envelope backtrack<=96ms, spacing80ms, pitch lookahead320ms/cumulative support80ms",
+    "selection": "best 50ms development F1; never replace 53.33 baseline with worse candidate"
+  },
+  "stage2": {
+    "pitch": "fixed stage1 selected stream/profile",
+    "controls": "selected stage1 original onset/voting",
+    "variants": [
+      "original O2 + hard next-onset vote cap",
+      "original O2 + next-onset32ms guarded vote cap",
+      "new short-flux onsets + hard cap",
+      "new short-flux onsets + guarded cap"
+    ],
+    "short_flux": {
+      "sample_rate": 8000,
+      "n_fft": 512,
+      "hop_length": 32,
+      "n_mels": 64,
+      "fmin": 30,
+      "fmax": 2000,
+      "backtrack_max_seconds": 0.032
+    },
+    "unchanged": "minimum onset spacing80ms, lookahead<=320ms, cumulative support>=80ms; no global timing offset changes"
+  },
+  "stage3": {
+    "fixed": "best stage2 recipe including selected pitch model/profile/onset/cap; control original53.33 remains selectable",
+    "separators": [
+      "original Demucs6s",
+      "htdemucs_ft bass-specialist d12395a8 (official bag bass output uses only this specialist)",
+      "existing SW BS-Roformer bass"
+    ],
+    "ft_settings": {
+      "segment": 6,
+      "overlap": 0.25,
+      "shifts": 1,
+      "device": "cpu",
+      "seed": 0
+    },
+    "no_claim": "separator comparison scored by MIDI F1, no SDR without studio bass reference"
+  },
+  "limits": {
+    "threads": 2,
+    "rss_gib": 6,
+    "seconds_per_process": 1800,
+    "maximum_inference_process_attempts": 12,
+    "retry_per_implementation": 1,
+    "sequential_models": true
+  },
+  "evaluation": "same pitch 50ms maximum one-to-one; reference=prediction*.9995+.14, same36 reference notes; gain/loss versus original53.33; report all failures/negative results",
+  "prohibited": [
+    "read60–120",
+    "per-candidate alignment fitting",
+    "reference-based event editing",
+    "external audio upload",
+    "paid API",
+    "modify frozen other tracks"
+  ],
+  "setup": "local --target deps only; import preflight missing HF dependency occurred before inference, fixed with pinned HF library; no global environment changed",
+  "compatibility_update_before_inference": "PENN1.0/torbi lacks pt25cpu binary; use official penn0.0.14 same FCNF0++ checkpoint with librosa Viterbi; no numerical equivalence claim to1.0. Import preflights only, no model forward yet. numpy1.26.4 kept in isolated aux.",
+  "decoder_preflight_correction": "Before any reference scoring: initial probe used CREPE per-batch Viterbi and PENN legacy default local_expected_value, discovered by code inspection; archive initial wrapper/results, switch both to official pre/infer/post with 64-frame forward batching and whole-file Viterbi decoding, recheck same known-tone controls. No weights modified; 2 extra probes count towards12."
+}

@@ -1,0 +1,465 @@
+{
+  "files": [
+    {
+      "path": "config/bass-models.lock.json",
+      "bytes": 1354,
+      "sha256": "cf76351605ed80cf6a028130b800bc7c9269065c3f074b78d3a7a4ff3c395956"
+    },
+    {
+      "path": "outputs/bass-models/check_time_grid.py",
+      "bytes": 786,
+      "sha256": "0fb6c97b3a93a6141ec2aec4ecc313d6badfbdebc2797294540b42e0a448a6b3"
+    },
+    {
+      "path": "outputs/bass-models/generate.py",
+      "bytes": 6438,
+      "sha256": "5963189c0210cd8497845d4463f41dde24ece7cbe572942787112c65679162f3"
+    },
+    {
+      "path": "outputs/bass-models/jobs.py",
+      "bytes": 1652,
+      "sha256": "56c06741f24d089ccfd05cb7609572cc464134bb5a5aa2844feef346946eb598"
+    },
+    {
+      "path": "outputs/bass-models/package.py",
+      "bytes": 4092,
+      "sha256": "699ad7026f56de12dfe0acf2f2fa2344aff955726a79a9f1f51ae686a8a1053e"
+    },
+    {
+      "path": "outputs/bass-models/phase1-choice.json",
+      "bytes": 551,
+      "sha256": "ef8d3bfc74a1949fcb9116f88636f7f6f414f78de7298d780e29d3c21d494b34"
+    },
+    {
+      "path": "outputs/bass-models/phase1-ledger.json",
+      "bytes": 3368,
+      "sha256": "fb771f11d4fae5f5fe982a9efb670bce65e1a947e2db6c9710232e81b1842ea3"
+    },
+    {
+      "path": "outputs/bass-models/phase1-scores.json",
+      "bytes": 9329,
+      "sha256": "60f7ea9f8940145a8de7f4ff6a55a475ebbabbc75bf122191bcd31c28561b42e"
+    },
+    {
+      "path": "outputs/bass-models/phase2-choice.json",
+      "bytes": 551,
+      "sha256": "64333b0fff3a84efc36bd55c9630c9b664eeb42f5665a76602c05cef1bac7d91"
+    },
+    {
+      "path": "outputs/bass-models/phase2-ledger.json",
+      "bytes": 3406,
+      "sha256": "036662e691a5e3c8318bef0f9712afb0fa618a0e156975aaa83e8c2d0064cd79"
+    },
+    {
+      "path": "outputs/bass-models/phase2-scores.json",
+      "bytes": 10659,
+      "sha256": "1481227867de166687bbed25d9c79ded9213e5676c5a4698031656e8304719be"
+    },
+    {
+      "path": "outputs/bass-models/phase3-choice.json",
+      "bytes": 551,
+      "sha256": "64333b0fff3a84efc36bd55c9630c9b664eeb42f5665a76602c05cef1bac7d91"
+    },
+    {
+      "path": "outputs/bass-models/phase3-ledger.json",
+      "bytes": 2158,
+      "sha256": "04d05194e47523436458583029b20e905eb06ba2c31c06a11f908fdc4860517a"
+    },
+    {
+      "path": "outputs/bass-models/phase3-scores.json",
+      "bytes": 6400,
+      "sha256": "091a88a703c72bcb54d313f5a3ee3095b0abc7c4f019273a8b1a48fa8242c40f"
+    },
+    {
+      "path": "outputs/bass-models/run_ft.py",
+      "bytes": 2060,
+      "sha256": "d041dd569a6210216f07327e8dc98ef80cefa22d4254698f47751d9e608188e3"
+    },
+    {
+      "path": "outputs/bass-models/run_pitch.py",
+      "bytes": 3102,
+      "sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+    },
+    {
+      "path": "outputs/bass-models/run_pitch_initial.py",
+      "bytes": 2633,
+      "sha256": "1d57772082b6b07535cc3f58a859123804ed7562ea022baa8a41ae76fb6d028a"
+    },
+    {
+      "path": "outputs/bass-models/run_pyin.py",
+      "bytes": 779,
+      "sha256": "ffccc6d211ad7587e4367e49317adfe8acdf9f6a7640065fe3a607212bae5a4c"
+    },
+    {
+      "path": "outputs/bass-models/run_sources.py",
+      "bytes": 1636,
+      "sha256": "615e4c64b88ff1837d1c600e021aebb5f47003a456818eabdc0771f05b0fc6d5"
+    },
+    {
+      "path": "outputs/bass-models/score.py",
+      "bytes": 1997,
+      "sha256": "d4d5fdc769f61bc80906d505d2c8717e879fd1b1a6b135fde32fb31f97b02c01"
+    },
+    {
+      "path": "outputs/bass-models/write_report.py",
+      "bytes": 8523,
+      "sha256": "cb7ef57d51f52728705e5c6cb746aa3a9a92ecc16738fd8770c16ea532d95b7f"
+    },
+    {
+      "path": "outputs/bass-models/任务记录.json",
+      "bytes": 3830,
+      "sha256": "9da11dd44d4fd0f73b2504b0af4dbc639b838ba81c6f1445beb8783973fb838d"
+    },
+    {
+      "path": "outputs/bass-models/依赖与兼容记录.md",
+      "bytes": 2576,
+      "sha256": "0666cb5d37f86443725f19c0bd93c2b939f7efdd99b8e995c03312ece2b3245d"
+    },
+    {
+      "path": "outputs/bass-models/六轨评分与试听.json",
+      "bytes": 2802,
+      "sha256": "f5bb5c5e8eee39c3abd312d9c917390f7ca37129d6eb126afeb69885e395e01c"
+    },
+    {
+      "path": "outputs/bass-models/原始推理收据.json",
+      "bytes": 6784,
+      "sha256": "0ae591626da558f0a681de2472edbf6e332a9aadee5fd31398e870ca53d5b227"
+    },
+    {
+      "path": "outputs/bass-models/实施计划.md",
+      "bytes": 1665,
+      "sha256": "a460bfd142a030e6f3cafab62b7acdc90fd983d07efe2b2a9c19d9b4170c7c7f"
+    },
+    {
+      "path": "outputs/bass-models/实验登记.json",
+      "bytes": 4048,
+      "sha256": "4422840220dc235cb62045d8aca27e22ba3c459b50c743c1b9aa20da69c643b1"
+    },
+    {
+      "path": "outputs/bass-models/时间轴核对.json",
+      "bytes": 483,
+      "sha256": "dc12ab96451dc8770d17a887f4ba18243e25253fe62fe15a8ace5bb863b61cb3"
+    },
+    {
+      "path": "outputs/bass-models/模型与依赖来源.json",
+      "bytes": 8077,
+      "sha256": "337065920d29fc14f809dfa7402b2ee50a5770e34824c33c0ab90f171935ba8f"
+    },
+    {
+      "path": "outputs/bass-models/逐步对比报告.md",
+      "bytes": 6557,
+      "sha256": "fa02a1806c7699581110a0184c2bb5667e1967704df7782207a3a0954858981e"
+    },
+    {
+      "path": "outputs/bass-models/逐音变化.csv",
+      "bytes": 1783,
+      "sha256": "ed0b32247a678a20f8dfddf528612bf443e02a561d61176fb3d62647d5e07446"
+    },
+    {
+      "path": "outputs/bass-models/逐音变化.json",
+      "bytes": 8951,
+      "sha256": "76360b828edb75521c76def851325683e727b7c4ee4d6eccab87f4cb9545a900"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-0.json",
+      "bytes": 45433,
+      "sha256": "99286d6be590d7d502f346e03ed8748f68bdc524bd6f53801e720f2937e5c575"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-0.mid",
+      "bytes": 560,
+      "sha256": "ad5d1391f288ad150fba9024f3ae58a70d183b4d4e4dfdf311f5a331a704802f"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-1.json",
+      "bytes": 44755,
+      "sha256": "dc91e95ca9d72030098d55c90d0e9cf136b557c3b673e7dc719eaaeccb9aa631"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-crepe-1.mid",
+      "bytes": 562,
+      "sha256": "0adb8a331cbf45c1d9b22920700d5af80c04caeef096cef5f1aea9fa9b8618f0"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-penn-0.json",
+      "bytes": 47768,
+      "sha256": "557dbdb1477dd9b310ac5231b94424080bd97cf38d60cf350ca97b5a94b8420e"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-penn-0.mid",
+      "bytes": 562,
+      "sha256": "0366713de6779f82a9c25d6c013d5b430c4772695a23d988176c0b31282d7434"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-penn-1.json",
+      "bytes": 46364,
+      "sha256": "a7a2653a0e5a5051d7b3fc97135ec1074c967b3becbf1190648efffe2c01f088"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-penn-1.mid",
+      "bytes": 563,
+      "sha256": "75024fdde086d58c10039122a81b348e58de2059bcc0c2dffd3997a9f040eff6"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-pyin-0.json",
+      "bytes": 43081,
+      "sha256": "f06de0d5a511655ffb362d46a6a85242b0ddecb1d09c23014151461e9db03d1b"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase1/S1-pyin-0.mid",
+      "bytes": 532,
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.032.json",
+      "bytes": 42476,
+      "sha256": "f5b28c932df669a330f061ef9c64d7ebe4bb7920a7cce5ea9504a90eb863676e"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.032.mid",
+      "bytes": 525,
+      "sha256": "19da468fc100572c98891b8e68c3d0997b922afe7e6696cb6a6fce26f2fb7994"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.json",
+      "bytes": 41446,
+      "sha256": "9c6a2e8b427977af6002354ef66a1db91c814d0465482638be859df129adf037"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.mid",
+      "bytes": 508,
+      "sha256": "169600aec51e111147e2e897fad337d75e8757ecbab3af47ffa8a1c4aa645f67"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.032.json",
+      "bytes": 45954,
+      "sha256": "0a24ee393ad8198fa19f037a78527da2d5b49f7ecc8d5f933422a5be300ff0bc"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.032.mid",
+      "bytes": 566,
+      "sha256": "7aaadbc60dc009aab0c343003904328f8c7aa25e959b3b6f16c00640de61ca3c"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.json",
+      "bytes": 44939,
+      "sha256": "ce4993fc3889e329db7207b8a1afdd02cc69119e754c5beecaf85382e4887ff2"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.mid",
+      "bytes": 549,
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase3/S3-ft.json",
+      "bytes": 41156,
+      "sha256": "a2bb4b831754f7af1545524e9813365ef1e6907064f4f9ae76b5e027b4196d28"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase3/S3-ft.mid",
+      "bytes": 509,
+      "sha256": "1ca8fa149b8b9ec27e0b7745a630fd1639b9090945ff97c8cee57e08390a83a4"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase3/S3-sw.json",
+      "bytes": 36893,
+      "sha256": "d26e4aa29f23eda6e2ac541e99193be62563d5ecf4bfb14defd22a079a2dc84e"
+    },
+    {
+      "path": "outputs/runs/bass-models/phase3/S3-sw.mid",
+      "bytes": 452,
+      "sha256": "c42d82e624ca15b5c2524190a897eda35a534aed13b0c93d03f9dd367e41d48a"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/00-上版贝斯-53.33.mid",
+      "bytes": 532,
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/00-上版贝斯-53.33.wav",
+      "bytes": 10853972,
+      "sha256": "6e5206f5e0df0074718d7fcf474b0283b682dd24c71695ca531a7daf4e150c1d"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/01-CREPE-41.03.mid",
+      "bytes": 560,
+      "sha256": "ad5d1391f288ad150fba9024f3ae58a70d183b4d4e4dfdf311f5a331a704802f"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/01-CREPE-41.03.wav",
+      "bytes": 10853972,
+      "sha256": "26459886f831d53d9f63c59de95ef8ab5b0c21f1f2ce1cac067d9e9d760c0427"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/02-PENN-46.15.mid",
+      "bytes": 562,
+      "sha256": "0366713de6779f82a9c25d6c013d5b430c4772695a23d988176c0b31282d7434"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/02-PENN-46.15.wav",
+      "bytes": 10851400,
+      "sha256": "4e355c22a1a0d34c324b4e3805a13b409cb76662f0822bc08137227d14f81b30"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/03-仅限制投票-58.33.mid",
+      "bytes": 508,
+      "sha256": "169600aec51e111147e2e897fad337d75e8757ecbab3af47ffa8a1c4aa645f67"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/03-仅限制投票-58.33.wav",
+      "bytes": 10853972,
+      "sha256": "cd7d043e37da16508fc6b8c3225c21e0affcaaf75704a8cc93609ac936198bc2"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/04-贝斯新版-62.34.mid",
+      "bytes": 549,
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/04-贝斯新版-62.34.wav",
+      "bytes": 10853972,
+      "sha256": "e499eddb35b228853c7852a9dbbca535694e7c3f45c043bdd4004ed69f62fed4"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/05-ft对照-61.11.mid",
+      "bytes": 509,
+      "sha256": "1ca8fa149b8b9ec27e0b7745a630fd1639b9090945ff97c8cee57e08390a83a4"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/05-ft对照-61.11.wav",
+      "bytes": 10853972,
+      "sha256": "1b5419784b55f80fc5b60cba9b134d826964fb815299ea88ef1df2147e991816"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/06-SW对照-60.61.mid",
+      "bytes": 452,
+      "sha256": "c42d82e624ca15b5c2524190a897eda35a534aed13b0c93d03f9dd367e41d48a"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/06-SW对照-60.61.wav",
+      "bytes": 10853972,
+      "sha256": "76bad9700560a2d0229eec1ac97ecadcd9063237c2429c2b22521ee1801e9d49"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/六轨-仅替换贝斯.mid",
+      "bytes": 4589,
+      "sha256": "b28231c5d0ba9e46dd5a0c47b1fca44cf304cd6b2cfa5517b5b3851963520a87"
+    },
+    {
+      "path": "outputs/runs/bass-models/交付/六轨-仅替换贝斯.wav",
+      "bytes": 10853972,
+      "sha256": "9b57ea6c7519631a1248d2d7653e83780e8f1cf58f14c069f85af1569a266a38"
+    },
+    {
+      "path": "requirements-bass-neural.txt",
+      "bytes": 312,
+      "sha256": "f3268c418efac610c9f8d466b26ab7f70988c607471f02d553fd4af9db9882e1"
+    },
+    {
+      "path": "src/audio_midi/bass_models.py",
+      "bytes": 899,
+      "sha256": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279"
+    },
+    {
+      "path": "src/audio_midi/bass_refinement.py",
+      "bytes": 4937,
+      "sha256": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+    },
+    {
+      "path": "tests/test_bass_models.py",
+      "bytes": 1344,
+      "sha256": "f1db4864b047d1bda21361b824ad6d06a7bcb478633800dc2fdce74ba784539a"
+    },
+    {
+      "path": "work/bass-models/control15.wav",
+      "bytes": 480080,
+      "sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1"
+    },
+    {
+      "path": "work/bass-models/crepe-full.json",
+      "bytes": 835,
+      "sha256": "9324cfd1609498d202a0ce6195a172305b016b1b9c5d3154db2649b3a9db6301"
+    },
+    {
+      "path": "work/bass-models/crepe-full.npz",
+      "bytes": 55272,
+      "sha256": "2b9939c60fc5ad9b293b4abe28e2c34685cab648fe45a2bdfddfcb3a3af929fc"
+    },
+    {
+      "path": "work/bass-models/crepe-global-probes.json",
+      "bytes": 821,
+      "sha256": "2279a577cfd5db476ddd4557dd7beae2954c6dabb23012fc916fc83d65e6654b"
+    },
+    {
+      "path": "work/bass-models/crepe-global-probes.npz",
+      "bytes": 13997,
+      "sha256": "39591f9ab9ebb192cd87c529fa86b679087b9b38fc951a748717a5b1f838afea"
+    },
+    {
+      "path": "work/bass-models/crepe-probes.json",
+      "bytes": 765,
+      "sha256": "c5afd64b711275ca893725b59b3702c2527f141db6fe68d0f9715ce5d61dc465"
+    },
+    {
+      "path": "work/bass-models/crepe-probes.npz",
+      "bytes": 14043,
+      "sha256": "0c5f6c54a7dec9cc00fd67985e5216372eed9855badbc2cc0ee9633d4b4fdb45"
+    },
+    {
+      "path": "work/bass-models/ft-receipt.json",
+      "bytes": 821,
+      "sha256": "df6b5b8cb91b95e8453bf9c3ed0c622765db8fa2ed2f86318eed6d134cf3fda8"
+    },
+    {
+      "path": "work/bass-models/penn-full.json",
+      "bytes": 825,
+      "sha256": "90d22c1fb16d95cff917c3345b3b8d311e25c97ad57cdb6579e98298ddbbb21e"
+    },
+    {
+      "path": "work/bass-models/penn-full.npz",
+      "bytes": 41315,
+      "sha256": "2126c7d787fee7e6cc56a8e84e82ed848384cfe6e4045fa29b9f78a3ecb73936"
+    },
+    {
+      "path": "work/bass-models/penn-global-probes.json",
+      "bytes": 812,
+      "sha256": "06057922245a35d5d837674d286b1a48bb6d9ec82e5442907793e5d6e2816c9d"
+    },
+    {
+      "path": "work/bass-models/penn-global-probes.npz",
+      "bytes": 11367,
+      "sha256": "6fdc66e103958b1e1836d8b999ca71261d4a45c8461895018ee57e2d23ee0a88"
+    },
+    {
+      "path": "work/bass-models/penn-probes.json",
+      "bytes": 760,
+      "sha256": "9cd79b9da478847399a26f7101594b38494ac424318a7ff747c456bdbe1b23cd"
+    },
+    {
+      "path": "work/bass-models/penn-probes.npz",
+      "bytes": 11280,
+      "sha256": "e028d0ccbc2000d30c6b92764488a3d09664f6a1d95c1617e911ce9d9afbff84"
+    },
+    {
+      "path": "work/bass-models/pyin-ft.json",
+      "bytes": 244,
+      "sha256": "d5d18049f2f6e1af921f6111ca8c244cbc0e8a574b305dc3d5ead93855ef1e44"
+    },
+    {
+      "path": "work/bass-models/pyin-ft.npz",
+      "bytes": 41589,
+      "sha256": "db5420b554a3dd0a999a99779c66fa4325680ee879175e380f03c59c9be0f46f"
+    },
+    {
+      "path": "work/bass-models/pyin-sw.json",
+      "bytes": 244,
+      "sha256": "e183eb63bf87a2e24860e5ff17b19ad02f3520862d405ec89d9a7059c09b74f2"
+    },
+    {
+      "path": "work/bass-models/pyin-sw.npz",
+      "bytes": 36826,
+      "sha256": "13fe8e0233ad0453b865be889982fdd3ea0efa8b26ec22ddbfd2a4c08311ee5a"
+    }
+  ],
+  "scope": "freeze before independent verification; weights and original MP3 excluded; cached native evidence included"
+}

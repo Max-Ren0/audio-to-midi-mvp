@@ -43,11 +43,12 @@ def bounded_backtrack(attacks,envelope,frame_seconds,maximum=.096):
     return np.array(out)
 
 
-def attack_led_notes(pitches,probability,attacks,frame_seconds,duration,lookahead=.32,minimum_support=.08,minimum_spacing=.08):
+def attack_led_notes(pitches,probability,attacks,frame_seconds,duration,lookahead=.32,minimum_support=.08,minimum_spacing=.08,vote_guard=None):
     pitches=np.asarray(pitches);probability=np.asarray(probability)
     if frame_seconds<=0 or duration<=0 or lookahead<=0 or minimum_support<=0 or minimum_spacing<=0:
         raise ValueError('Invalid timing bounds')
     if pitches.ndim!=1 or pitches.shape!=probability.shape:raise ValueError('Mismatched pitch/probability')
+    if vote_guard is not None and (not math.isfinite(vote_guard) or vote_guard<0):raise ValueError('Invalid vote guard')
     clean=[]
     for t in sorted(set(float(t) for t in attacks if math.isfinite(t) and 0<=t<duration)):
         if not clean or t-clean[-1]>=minimum_spacing-1e-9:clean.append(t)
@@ -58,7 +59,8 @@ def attack_led_notes(pitches,probability,attacks,frame_seconds,duration,lookahea
     notes=[];evidence=[]
     for j,t in enumerate(clean):
         end=clean[j+1] if j+1<len(clean) else duration
-        window=(times>=t)&(times<min(duration,t+lookahead))&np.isfinite(rounded)
+        vote_end=min(duration,t+lookahead) if vote_guard is None else min(duration,t+lookahead,end+vote_guard)
+        window=(times>=t)&(times<vote_end)&np.isfinite(rounded)
         candidates=[]
         for pitch in np.unique(rounded[window]):
             idx=np.flatnonzero(window&(rounded==pitch))

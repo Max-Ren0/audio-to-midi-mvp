@@ -1,0 +1,12 @@
+# Research-only isolated runtime; do not install into global Python or main .venv.
+# Existing sep-env torch/torchaudio2.5.1, numpy1.26.4 retained.
+torchcrepe==0.0.24
+penn==0.0.14
+huggingface_hub==0.26.5
+torchutil==0.1.2
+yapecs==0.5.0
+resampy==0.4.3
+psutil==7.2.2
+apprise==1.9.2
+tensorboard==2.20.0
+numpy==1.26.4

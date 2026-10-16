@@ -1,0 +1,159 @@
+{
+  "work/bass-models/crepe-full.json": {
+    "model": "crepe",
+    "source_audio_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1",
+    "weight_path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/bass-models/deps/torchcrepe/assets/full.pth",
+    "weight_sha256": "133225604dedd2e4005f8bbd1bd0a2ec073ba8b7a6cd31ff6d5edbbfa3539986",
+    "config": {
+      "package": "torchcrepe0.0.24",
+      "decoder": "viterbi",
+      "pad": true,
+      "forward_batch": 64,
+      "whole_file_decode": true,
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 16000
+    },
+    "frames": 6004,
+    "duration": 60.03045351473923,
+    "elapsed_seconds": 167.99225950000982,
+    "output_sha256": "2b9939c60fc5ad9b293b4abe28e2c34685cab648fe45a2bdfddfcb3a3af929fc",
+    "wrapper_sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+  },
+  "work/bass-models/crepe-global-probes.json": {
+    "model": "crepe",
+    "source_audio_sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1",
+    "weight_path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/bass-models/deps/torchcrepe/assets/full.pth",
+    "weight_sha256": "133225604dedd2e4005f8bbd1bd0a2ec073ba8b7a6cd31ff6d5edbbfa3539986",
+    "config": {
+      "package": "torchcrepe0.0.24",
+      "decoder": "viterbi",
+      "pad": true,
+      "forward_batch": 64,
+      "whole_file_decode": true,
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 16000
+    },
+    "frames": 1501,
+    "duration": 15.0,
+    "elapsed_seconds": 43.37100745900534,
+    "output_sha256": "39591f9ab9ebb192cd87c529fa86b679087b9b38fc951a748717a5b1f838afea",
+    "wrapper_sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+  },
+  "work/bass-models/crepe-probes.json": {
+    "model": "crepe",
+    "source_audio_sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1",
+    "weight_path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/bass-models/deps/torchcrepe/assets/full.pth",
+    "weight_sha256": "133225604dedd2e4005f8bbd1bd0a2ec073ba8b7a6cd31ff6d5edbbfa3539986",
+    "config": {
+      "package": "torchcrepe0.0.24",
+      "decoder": "viterbi",
+      "pad": true,
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 16000
+    },
+    "frames": 1501,
+    "duration": 15.0,
+    "elapsed_seconds": 49.15397408300487,
+    "output_sha256": "0c5f6c54a7dec9cc00fd67985e5216372eed9855badbc2cc0ee9633d4b4fdb45",
+    "wrapper_sha256": "1d57772082b6b07535cc3f58a859123804ed7562ea022baa8a41ae76fb6d028a"
+  },
+  "work/bass-models/ft-receipt.json": {
+    "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+    "bass_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a",
+    "weight_sha256": "e57c48e6b0e38af4f7118d7bd08c49f0a0c0edf7d09143bdd902ea0d237303e6",
+    "model": "d12395a8",
+    "official_bag": "htdemucs_ft bass weights [0,1,0,0]",
+    "settings": {
+      "seed": 0,
+      "shifts": 1,
+      "segment": 6,
+      "overlap": 0.25,
+      "normalization": "official mono mean/std, restore each output"
+    },
+    "sample_rate": 44100,
+    "duration": 60.03045351473923,
+    "elapsed_seconds": 33.47123924999323,
+    "wrapper_sha256": "d041dd569a6210216f07327e8dc98ef80cefa22d4254698f47751d9e608188e3",
+    "caveat": "Only bass specialist checkpoint run; full bag was not executed, random-shift sequence not bitwise-equivalent to full bag."
+  },
+  "work/bass-models/penn-full.json": {
+    "model": "penn",
+    "source_audio_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1",
+    "weight_path": "work/bass-models/fcnf0-plus-plus.pt",
+    "weight_sha256": "28d89add04722461f831249a338b74516a96dedd3301ed794c18953d51d1b960",
+    "config": {
+      "package": "penn0.0.14",
+      "forward_batch": 64,
+      "whole_file_decode": true,
+      "decoder": "viterbi-normal",
+      "periodicity": "entropy",
+      "center": "zero",
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 8000,
+      "max_octaves_per_second": 35.92
+    },
+    "frames": 6004,
+    "duration": 60.03045351473923,
+    "elapsed_seconds": 55.609744667002815,
+    "output_sha256": "2126c7d787fee7e6cc56a8e84e82ed848384cfe6e4045fa29b9f78a3ecb73936",
+    "wrapper_sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+  },
+  "work/bass-models/penn-global-probes.json": {
+    "model": "penn",
+    "source_audio_sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1",
+    "weight_path": "work/bass-models/fcnf0-plus-plus.pt",
+    "weight_sha256": "28d89add04722461f831249a338b74516a96dedd3301ed794c18953d51d1b960",
+    "config": {
+      "package": "penn0.0.14",
+      "forward_batch": 64,
+      "whole_file_decode": true,
+      "decoder": "viterbi-normal",
+      "periodicity": "entropy",
+      "center": "zero",
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 8000,
+      "max_octaves_per_second": 35.92
+    },
+    "frames": 1501,
+    "duration": 15.0,
+    "elapsed_seconds": 16.851588167002774,
+    "output_sha256": "6fdc66e103958b1e1836d8b999ca71261d4a45c8461895018ee57e2d23ee0a88",
+    "wrapper_sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+  },
+  "work/bass-models/penn-probes.json": {
+    "model": "penn",
+    "source_audio_sha256": "a4417c7791cf923317a161f57098547dda6a06d1983735ce4997892995e993c1",
+    "weight_path": "work/bass-models/fcnf0-plus-plus.pt",
+    "weight_sha256": "28d89add04722461f831249a338b74516a96dedd3301ed794c18953d51d1b960",
+    "config": {
+      "package": "penn0.0.14",
+      "decoder": "local_expected_value",
+      "periodicity": "entropy",
+      "center": "zero",
+      "native_step": 0.01,
+      "origin_seconds": 0,
+      "sample_rate": 8000,
+      "max_octaves_per_second": 35.92
+    },
+    "frames": 1501,
+    "duration": 15.0,
+    "elapsed_seconds": 8.10532291700656,
+    "output_sha256": "e028d0ccbc2000d30c6b92764488a3d09664f6a1d95c1617e911ce9d9afbff84",
+    "wrapper_sha256": "1d57772082b6b07535cc3f58a859123804ed7562ea022baa8a41ae76fb6d028a"
+  },
+  "work/bass-models/pyin-ft.json": {
+    "source_audio_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a",
+    "output_sha256": "db5420b554a3dd0a999a99779c66fa4325680ee879175e380f03c59c9be0f46f",
+    "config": "unchanged pYIN32–261Hz,16ms,256ms window"
+  },
+  "work/bass-models/pyin-sw.json": {
+    "source_audio_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb",
+    "output_sha256": "13fe8e0233ad0453b865be889982fdd3ea0efa8b26ec22ddbfd2a4c08311ee5a",
+    "config": "unchanged pYIN32–261Hz,16ms,256ms window"
+  }
+}

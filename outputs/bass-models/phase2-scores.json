@@ -1,0 +1,688 @@
+{
+  "phase": 2,
+  "rows": [
+    {
+      "id": "S1-pyin-0",
+      "recipe": {
+        "id": "S1-pyin-0",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "legacy",
+        "guard": null
+      },
+      "path": "outputs/runs/bass-models/phase1/S1-pyin-0.mid",
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23",
+      "provenance_path": "outputs/runs/bass-models/phase1/S1-pyin-0.json",
+      "provenance_sha256": "f06de0d5a511655ffb362d46a6a85242b0ddecb1d09c23014151461e9db03d1b",
+      "predicted": 39,
+      "matched": 20,
+      "reference": 36,
+      "extra": 19,
+      "missed": 16,
+      "f1": 0.5333333333333333,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          30,
+          32
+        ],
+        [
+          31,
+          33
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          34,
+          37
+        ],
+        [
+          35,
+          38
+        ]
+      ]
+    },
+    {
+      "id": "S2-legacy-0",
+      "recipe": {
+        "id": "S2-legacy-0",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "legacy",
+        "guard": 0
+      },
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.mid",
+      "sha256": "169600aec51e111147e2e897fad337d75e8757ecbab3af47ffa8a1c4aa645f67",
+      "provenance_path": "outputs/runs/bass-models/phase2/S2-legacy-0.json",
+      "provenance_sha256": "9c6a2e8b427977af6002354ef66a1db91c814d0465482638be859df129adf037",
+      "predicted": 36,
+      "matched": 21,
+      "reference": 36,
+      "extra": 15,
+      "missed": 15,
+      "f1": 0.5833333333333334,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          21,
+          18
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          24,
+          23
+        ],
+        [
+          25,
+          24
+        ],
+        [
+          29,
+          28
+        ],
+        [
+          30,
+          29
+        ],
+        [
+          31,
+          30
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          35,
+          35
+        ]
+      ]
+    },
+    {
+      "id": "S2-legacy-0.032",
+      "recipe": {
+        "id": "S2-legacy-0.032",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "legacy",
+        "guard": 0.032
+      },
+      "path": "outputs/runs/bass-models/phase2/S2-legacy-0.032.mid",
+      "sha256": "19da468fc100572c98891b8e68c3d0997b922afe7e6696cb6a6fce26f2fb7994",
+      "provenance_path": "outputs/runs/bass-models/phase2/S2-legacy-0.032.json",
+      "provenance_sha256": "f5b28c932df669a330f061ef9c64d7ebe4bb7920a7cce5ea9504a90eb863676e",
+      "predicted": 38,
+      "matched": 21,
+      "reference": 36,
+      "extra": 17,
+      "missed": 15,
+      "f1": 0.5675675675675675,
+      "matched_reference_indices": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          18,
+          17
+        ],
+        [
+          21,
+          19
+        ],
+        [
+          22,
+          20
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          31,
+          32
+        ],
+        [
+          32,
+          34
+        ],
+        [
+          33,
+          35
+        ],
+        [
+          34,
+          36
+        ],
+        [
+          35,
+          37
+        ]
+      ]
+    },
+    {
+      "id": "S2-short-0",
+      "recipe": {
+        "id": "S2-short-0",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "short",
+        "guard": 0
+      },
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "provenance_path": "outputs/runs/bass-models/phase2/S2-short-0.json",
+      "provenance_sha256": "ce4993fc3889e329db7207b8a1afdd02cc69119e754c5beecaf85382e4887ff2",
+      "predicted": 41,
+      "matched": 24,
+      "reference": 36,
+      "extra": 17,
+      "missed": 12,
+      "f1": 0.6233766233766234,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          24,
+          26
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          26,
+          28
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          33,
+          38
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          35,
+          40
+        ]
+      ]
+    },
+    {
+      "id": "S2-short-0.032",
+      "recipe": {
+        "id": "S2-short-0.032",
+        "source": "demucs",
+        "model": "pyin",
+        "high": 0.2,
+        "low": 0.05,
+        "onset": "short",
+        "guard": 0.032
+      },
+      "path": "outputs/runs/bass-models/phase2/S2-short-0.032.mid",
+      "sha256": "7aaadbc60dc009aab0c343003904328f8c7aa25e959b3b6f16c00640de61ca3c",
+      "provenance_path": "outputs/runs/bass-models/phase2/S2-short-0.032.json",
+      "provenance_sha256": "0a24ee393ad8198fa19f037a78527da2d5b49f7ecc8d5f933422a5be300ff0bc",
+      "predicted": 43,
+      "matched": 24,
+      "reference": 36,
+      "extra": 19,
+      "missed": 12,
+      "f1": 0.6075949367088608,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          18,
+          20
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          25,
+          29
+        ],
+        [
+          26,
+          30
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          29,
+          34
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          33,
+          40
+        ],
+        [
+          34,
+          41
+        ],
+        [
+          35,
+          42
+        ]
+      ]
+    }
+  ],
+  "selected": "S2-short-0",
+  "ledger_sha256": "036662e691a5e3c8318bef0f9712afb0fa618a0e156975aaa83e8c2d0064cd79",
+  "evaluation": "same-pitch50ms max one-to-one; .9995/.14 fixed; seen development arrangement"
+}
