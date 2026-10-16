@@ -1,0 +1,15 @@
+{
+  "id": "fullhh-yodo",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_rgb.py",
+    "work/open-hat/hh-normalized.wav",
+    "work/open-hat/fullhh-yodo.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 1378009088,
+    "attempts": 1,
+    "elapsed_seconds": 29.464418707997538
+  }
+}

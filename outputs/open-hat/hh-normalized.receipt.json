@@ -1,0 +1,10 @@
+{
+  "source": "work/open-hat/drumsep-full60/hh.wav",
+  "source_sha256": "0c303bf3551beeb3a2a98c9f0eccb8e87d9d2d41fe8bffab4f44d0f94ddd7b48",
+  "gain": 6.9240176650903305,
+  "normalization": "single shared0.9peak no clipping/timechange",
+  "output_sha256": "087b3c9ed3c05ab802d6b63be54ee2114c575257962ea9fc79e9b9841dcdbfae",
+  "samples": 2647343,
+  "sample_rate": 44100,
+  "reference_used": false
+}

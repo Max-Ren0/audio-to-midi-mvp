@@ -109,12 +109,13 @@
         "work/open-hat/control-kit0.wav",
         "work/open-hat/control0-yodo.json"
       ],
-      "status": "completed",
+      "status": "completed_but_invalid_nonfinite",
       "run": {
         "peak_memory_bytes": 1154449408,
         "attempts": 1,
         "elapsed_seconds": 8.032893750001676
-      }
+      },
+      "invalid_reason": "one-channel cfg caused weight misalignment, not meaningful zero detections"
     },
     {
       "id": "control8-yodo-fixed",
@@ -124,12 +125,13 @@
         "work/open-hat/control-kit8.wav",
         "work/open-hat/control8-yodo.json"
       ],
-      "status": "completed",
+      "status": "completed_but_invalid_nonfinite",
       "run": {
         "peak_memory_bytes": 1296465920,
         "attempts": 1,
         "elapsed_seconds": 7.568655291994219
-      }
+      },
+      "invalid_reason": "one-channel cfg caused weight misalignment, not meaningful zero detections"
     },
     {
       "id": "control0-mt3",
@@ -173,6 +175,241 @@
         "attempts": 1,
         "elapsed_seconds": 1.3986641660012538
       }
+    },
+    {
+      "id": "control0-yodo-rgb",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_yodo_rgb.py",
+        "work/open-hat/control-kit0.wav",
+        "work/open-hat/control0-yodo-rgb.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 1234894848,
+        "attempts": 1,
+        "elapsed_seconds": 7.967049459010013
+      }
+    },
+    {
+      "id": "control8-yodo-rgb",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_yodo_rgb.py",
+        "work/open-hat/control-kit8.wav",
+        "work/open-hat/control8-yodo-rgb.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 1398439936,
+        "attempts": 1,
+        "elapsed_seconds": 7.831663290999131
+      }
+    },
+    {
+      "id": "level-idm",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/drums-v2/run_idm.py",
+        "work/open-hat/control-hats-level.wav",
+        "work/open-hat/level-idm.npz"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 457457664,
+        "attempts": 1,
+        "elapsed_seconds": 1.9939774999947986
+      }
+    },
+    {
+      "id": "level-mt3",
+      "command": [
+        ".venv/bin/python",
+        "work/open-hat/run_mt3_wav.py",
+        "work/open-hat/control-hats-level.wav",
+        "work/open-hat/level-mt3.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 2414657536,
+        "attempts": 1,
+        "elapsed_seconds": 10.489196124995942
+      }
+    },
+    {
+      "id": "level-yodo-rgb",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_yodo_rgb.py",
+        "work/open-hat/control-hats-level.wav",
+        "work/open-hat/level-yodo-rgb.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 1577631744,
+        "attempts": 1,
+        "elapsed_seconds": 11.177620542002842
+      }
+    },
+    {
+      "id": "drumsep-probe15",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_drumsep.py",
+        "work/drums/sw-probe15.wav",
+        "work/open-hat/drumsep-probe15"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 2400026624,
+        "attempts": 1,
+        "elapsed_seconds": 45.56104616700031
+      }
+    },
+    {
+      "id": "drumsep-full60",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_drumsep.py",
+        "work/two-methods/sw-full/drums.wav",
+        "work/open-hat/drumsep-full60"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 2379972608,
+        "attempts": 1,
+        "elapsed_seconds": 147.1821625409939
+      }
+    },
+    {
+      "id": "fullhh-idm",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/drums-v2/run_idm.py",
+        "work/open-hat/hh-normalized.wav",
+        "work/open-hat/fullhh-idm.npz"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 672776192,
+        "attempts": 1,
+        "elapsed_seconds": 2.5180519170098705
+      }
+    },
+    {
+      "id": "fullhh-mt3",
+      "command": [
+        ".venv/bin/python",
+        "work/open-hat/run_mt3_wav.py",
+        "work/open-hat/hh-normalized.wav",
+        "work/open-hat/fullhh-mt3.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 2324840448,
+        "attempts": 1,
+        "elapsed_seconds": 20.48103875000379
+      }
+    },
+    {
+      "id": "fullhh-yodo",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_yodo_rgb.py",
+        "work/open-hat/hh-normalized.wav",
+        "work/open-hat/fullhh-yodo.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 1378009088,
+        "attempts": 1,
+        "elapsed_seconds": 29.464418707997538
+      }
+    },
+    {
+      "id": "fullSW-yodo-rgb",
+      "command": [
+        "work/sep-env/bin/python",
+        "work/open-hat/run_yodo_rgb.py",
+        "work/two-methods/sw-full/drums.wav",
+        "work/open-hat/fullSW-yodo.json"
+      ],
+      "status": "completed",
+      "run": {
+        "peak_memory_bytes": 1418952704,
+        "attempts": 1,
+        "elapsed_seconds": 29.830902916000923
+      }
     }
+  ],
+  "yodo_correction": {
+    "evidence": "1channel cfg under-consumes firstconv by576 floats; subsequent BN variance contains negative values;3channel cfg aligns all BN variances nonnegative",
+    "new_config": "copied officialcfg with channels3 only, grayscale replicatedRGB",
+    "tasks": [
+      "control0-yodo-rgb",
+      "control8-yodo-rgb",
+      "fullhh-yodo-rgb"
+    ],
+    "guard": "all raw outputs finite or raise before confidence filtering"
+  },
+  "level_control": {
+    "purpose": "first controls hat level~10x lower than kick/snare; additional known hats-only sharedgain0.9peak robustness check, not GT song tuning",
+    "tasks": [
+      "level-mt3",
+      "level-idm",
+      "level-yodo-rgb"
+    ]
+  },
+  "full_hh_preprocessing": {
+    "source": "newDrumSep hh stem from SW drums of current0-60",
+    "method": "one shared constant gain to0.9peak across channels, no timeline change, no GT access",
+    "rationale": "level-only known controls exposed amplitude sensitivity; same normalization for all3 models",
+    "unprocessed_hh_preserved": true
+  },
+  "song_candidate_grid": {
+    "IDM_thresholds": [
+      0.1,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "YODO_author_multipliers": [
+      1,
+      0.75,
+      0.5
+    ],
+    "YourMT3": "fixed model no decode threshold",
+    "policies": [
+      "hats-only standalone diagnostic",
+      "replace entire42/46",
+      "replace46 only",
+      "replace46 plus suppress old42 within30ms",
+      "replace46 plus suppress old42 within50ms"
+    ],
+    "consensus_candidates": {
+      "anchor": "YODO46",
+      "support": "IDM46",
+      "YODO_multipliers": [
+        0.75,
+        0.5
+      ],
+      "IDM_thresholds": [
+        0.2,
+        0.3
+      ],
+      "tolerances": [
+        0.03,
+        0.05
+      ],
+      "policies": [
+        "replace46 only",
+        "suppress30ms",
+        "suppress50ms"
+      ]
+    },
+    "selection": "whole rules only; adopt only if full drumF1 improves and recovers openhat; fixed50ms official scoring; no per-note reference selection"
+  },
+  "conditional_actual_tasks": [
+    "fullSW-yodo-rgb: compare corrected backend on unprocessed SW drum source after allhh no true open hits; no preprocessing chosen from GT, same author threshold multipliers"
   ]
 }

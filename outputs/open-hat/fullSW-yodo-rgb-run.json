@@ -1,0 +1,15 @@
+{
+  "id": "fullSW-yodo-rgb",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_rgb.py",
+    "work/two-methods/sw-full/drums.wav",
+    "work/open-hat/fullSW-yodo.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 1418952704,
+    "attempts": 1,
+    "elapsed_seconds": 29.830902916000923
+  }
+}

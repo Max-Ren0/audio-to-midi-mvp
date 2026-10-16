@@ -1,0 +1,15 @@
+{
+  "id": "level-idm",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/drums-v2/run_idm.py",
+    "work/open-hat/control-hats-level.wav",
+    "work/open-hat/level-idm.npz"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 457457664,
+    "attempts": 1,
+    "elapsed_seconds": 1.9939774999947986
+  }
+}

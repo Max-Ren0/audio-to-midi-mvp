@@ -1,0 +1,50 @@
+{
+  "purpose": "known synthetic positive/negative class controls, not song reference or training",
+  "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+  "bank": 128,
+  "kit": 8,
+  "duration": 14,
+  "audio_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+  "notes": [
+    {
+      "pitch": 42,
+      "onset": 1.0,
+      "velocity": 80
+    },
+    {
+      "pitch": 42,
+      "onset": 2.0,
+      "velocity": 100
+    },
+    {
+      "pitch": 42,
+      "onset": 3.0,
+      "velocity": 60
+    },
+    {
+      "pitch": 46,
+      "onset": 5.0,
+      "velocity": 80
+    },
+    {
+      "pitch": 46,
+      "onset": 7.0,
+      "velocity": 100
+    },
+    {
+      "pitch": 46,
+      "onset": 9.0,
+      "velocity": 60
+    },
+    {
+      "pitch": 38,
+      "onset": 11.0,
+      "velocity": 90
+    },
+    {
+      "pitch": 36,
+      "onset": 12.0,
+      "velocity": 90
+    }
+  ]
+}

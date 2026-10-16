@@ -1,0 +1,4 @@
+{
+  "negative_variance_layers": [],
+  "rationale": "published weight float count matches3channel firstconv,1channel cfg misaligns subsequent BN weights; only channels changed in copied config"
+}

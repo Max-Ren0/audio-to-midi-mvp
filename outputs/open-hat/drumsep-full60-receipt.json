@@ -1,0 +1,63 @@
+{
+  "input_sha256": "0cec5940389ad4eae5c5b57381e671498ea85d3269ca1d777c6bfd07e54ea55a",
+  "input_path": "work/two-methods/sw-full/drums.wav",
+  "weight_sha256": "d2a4aa53eb584d21eead358a4e66d1882ad182911be018f052b5da73be9096d0",
+  "config_sha256": "17d1649a227f841165bdb4c11a42082898192a1ea3ceab7e7e0b9293d6589dd6",
+  "code_revision": "mdxnet-infer-cb4779eedeca4f55ba498df8e234e2b5f4b90aaf",
+  "script_sha256": "7585b174bfc47f8afc56e3e334dd7c629ad98675ee1779c4cbe27791e1441da1",
+  "sample_rate": 44100,
+  "duration": 60.03045351473923,
+  "stems": {
+    "kick": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "ebe8dd5637603b86961a38e03faef81901e2df140fa2430993aa0439863981ca",
+      "rms": 0.03826208785176277
+    },
+    "snare": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "fc67dd538e4ce5e9045650ad83fabd80465bc1d42281017d60eea408ce398952",
+      "rms": 0.020810700953006744
+    },
+    "toms": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "3ce2d8e9f8aa617f35c02ccc0a7ff3951d7b659db184d96be2ed6954095b1ccb",
+      "rms": 0.007444166578352451
+    },
+    "hh": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "0c303bf3551beeb3a2a98c9f0eccb8e87d9d2d41fe8bffab4f44d0f94ddd7b48",
+      "rms": 0.002202663803473115
+    },
+    "ride": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "da2a2448685de914667aa7df35b5965cef3c2e606278c942c53ffca210ec2b65",
+      "rms": 0.0013423142954707146
+    },
+    "crash": {
+      "shape": [
+        2647343,
+        2
+      ],
+      "sha256": "85ea875130a71de0009202f1752907d55478973ef0376775e0c40f9aa0afcf27",
+      "rms": 0.0022103572264313698
+    }
+  },
+  "elapsed_seconds": 146.05481958300516,
+  "forward_finiteness_checks": 88,
+  "reference_used": false
+}

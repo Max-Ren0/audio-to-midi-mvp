@@ -1,0 +1,15 @@
+{
+  "id": "drumsep-probe15",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_drumsep.py",
+    "work/drums/sw-probe15.wav",
+    "work/open-hat/drumsep-probe15"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 2400026624,
+    "attempts": 1,
+    "elapsed_seconds": 45.56104616700031
+  }
+}

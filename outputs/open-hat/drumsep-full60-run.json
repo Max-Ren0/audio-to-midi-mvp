@@ -1,0 +1,15 @@
+{
+  "id": "drumsep-full60",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_drumsep.py",
+    "work/two-methods/sw-full/drums.wav",
+    "work/open-hat/drumsep-full60"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 2379972608,
+    "attempts": 1,
+    "elapsed_seconds": 147.1821625409939
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "model": "YourMT3 yptf_moe_nops",
+  "model_revision": "d8cbd287470291dee335f84315c5a9b9ff6e6c8a",
+  "weight_sha256": "ae38e415c79efd5592dcb9b658cdb99ddb11d4c4e1eaa364cab04a052473fc25",
+  "device": "cpu",
+  "sample_rate": 16000,
+  "model_window_samples": 32767,
+  "batch_size": 2,
+  "dropped_programs": {},
+  "decode_errors": {
+    "missing_tie": 2,
+    "note_off_without_onset": 1
+  },
+  "model_load_seconds": 2.459273957996629,
+  "inference_seconds": 15.78426445799414,
+  "velocity_source": "default_80_binary_model",
+  "drum_duration_source": "fixed_50ms_rendering_only",
+  "source_wav_sha256": "087b3c9ed3c05ab802d6b63be54ee2114c575257962ea9fc79e9b9841dcdbfae",
+  "source_wav_path": "work/open-hat/hh-normalized.wav",
+  "wav_wrapper_sha256": "a99490f0a7f427f86997fd868563ef8894af171bb2948d9cedd63973b41d3b23",
+  "reference_used": false,
+  "note_count": 5,
+  "detection_count": 0,
+  "raw_output_path": "work/open-hat/fullhh-mt3.json",
+  "raw_output_sha256": "39794b32912d0673d46d66402d53bc728f0660748fd5786e5a8d95a3b719fc33"
+}

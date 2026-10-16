@@ -1,0 +1,15 @@
+{
+  "id": "fullhh-mt3",
+  "command": [
+    ".venv/bin/python",
+    "work/open-hat/run_mt3_wav.py",
+    "work/open-hat/hh-normalized.wav",
+    "work/open-hat/fullhh-mt3.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 2324840448,
+    "attempts": 1,
+    "elapsed_seconds": 20.48103875000379
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "baseline": "outputs/runs/drums-v2/\u4ea4\u4ed8/\u9f13-v0.1-\u5f3a\u5316\u7248.mid",
+  "baseline_sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d",
+  "decoded_sources": "work/open-hat/decoded-hat-sources.json",
+  "decoded_sources_sha256": "fdd3dd51f27b9e9d5f1757c8934ffa7f2735c33e5db295a2fa01eb4fbbd0ee9b",
+  "raw_provenance": {
+    "YourMT3": {
+      "raw": "work/open-hat/fullhh-mt3.json",
+      "sha256": "39794b32912d0673d46d66402d53bc728f0660748fd5786e5a8d95a3b719fc33"
+    },
+    "IDM-t0.1": {
+      "raw": "work/open-hat/fullhh-idm.npz",
+      "sha256": "007dcc3f13470d5351ce75c0f42b178c00ce7d455cc21ec0c705264b15a98392",
+      "threshold": 0.1,
+      "peak_distance": 0.05
+    },
+    "IDM-t0.2": {
+      "raw": "work/open-hat/fullhh-idm.npz",
+      "sha256": "007dcc3f13470d5351ce75c0f42b178c00ce7d455cc21ec0c705264b15a98392",
+      "threshold": 0.2,
+      "peak_distance": 0.05
+    },
+    "IDM-t0.3": {
+      "raw": "work/open-hat/fullhh-idm.npz",
+      "sha256": "007dcc3f13470d5351ce75c0f42b178c00ce7d455cc21ec0c705264b15a98392",
+      "threshold": 0.3,
+      "peak_distance": 0.05
+    },
+    "IDM-t0.5": {
+      "raw": "work/open-hat/fullhh-idm.npz",
+      "sha256": "007dcc3f13470d5351ce75c0f42b178c00ce7d455cc21ec0c705264b15a98392",
+      "threshold": 0.5,
+      "peak_distance": 0.05
+    },
+    "YODO-x1.0": {
+      "raw": "work/open-hat/fullhh-yodo.json",
+      "sha256": "6e9fe4347ca39355b5cb3190ceb4fcb5b573d73d5e292e79b7d61651888a1769",
+      "multiplier": 1.0,
+      "thresholds": [
+        0.65,
+        0.7,
+        0.68,
+        0.78,
+        0.82,
+        0.72,
+        0.52,
+        0.67,
+        0.6,
+        0.41,
+        0.79
+      ]
+    },
+    "YODO-x0.75": {
+      "raw": "work/open-hat/fullhh-yodo.json",
+      "sha256": "6e9fe4347ca39355b5cb3190ceb4fcb5b573d73d5e292e79b7d61651888a1769",
+      "multiplier": 0.75,
+      "thresholds": [
+        0.65,
+        0.7,
+        0.68,
+        0.78,
+        0.82,
+        0.72,
+        0.52,
+        0.67,
+        0.6,
+        0.41,
+        0.79
+      ]
+    },
+    "YODO-x0.5": {
+      "raw": "work/open-hat/fullhh-yodo.json",
+      "sha256": "6e9fe4347ca39355b5cb3190ceb4fcb5b573d73d5e292e79b7d61651888a1769",
+      "multiplier": 0.5,
+      "thresholds": [
+        0.65,
+        0.7,
+        0.68,
+        0.78,
+        0.82,
+        0.72,
+        0.52,
+        0.67,
+        0.6,
+        0.41,
+        0.79
+      ]
+    },
+    "consensus-y0.75-i0.2-tol0.03": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.75",
+      "support": "IDM-t0.2",
+      "tolerance": 0.03
+    },
+    "consensus-y0.75-i0.2-tol0.05": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.75",
+      "support": "IDM-t0.2",
+      "tolerance": 0.05
+    },
+    "consensus-y0.75-i0.3-tol0.03": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.75",
+      "support": "IDM-t0.3",
+      "tolerance": 0.03
+    },
+    "consensus-y0.75-i0.3-tol0.05": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.75",
+      "support": "IDM-t0.3",
+      "tolerance": 0.05
+    },
+    "consensus-y0.5-i0.2-tol0.03": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.5",
+      "support": "IDM-t0.2",
+      "tolerance": 0.03
+    },
+    "consensus-y0.5-i0.2-tol0.05": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.5",
+      "support": "IDM-t0.2",
+      "tolerance": 0.05
+    },
+    "consensus-y0.5-i0.3-tol0.03": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.5",
+      "support": "IDM-t0.3",
+      "tolerance": 0.03
+    },
+    "consensus-y0.5-i0.3-tol0.05": {
+      "method": "YODO original open46 anchors supported once byIDM46, originalkey/time retained",
+      "anchor": "YODO-x0.5",
+      "support": "IDM-t0.3",
+      "tolerance": 0.05
+    }
+  },
+  "reference_in_generation": false,
+  "candidates": [
+    {
+      "id": "baseline85",
+      "model": "baseline",
+      "policy": "unchanged",
+      "path": "outputs/runs/open-hat/candidates/baseline85.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "YourMT3__hats-only",
+      "model": "YourMT3",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/YourMT3__hats-only.mid",
+      "sha256": "2327f10c7ed9256c82764df923a79df9025e68a2514af739d99bb0c584fe008a"
+    },
+    {
+      "id": "YourMT3__replace-hats",
+      "model": "YourMT3",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/YourMT3__replace-hats.mid",
+      "sha256": "bfb6b82d398d2906a0b470a90851e11898e3aecf23794d059bd8fe168369be24"
+    },
+    {
+      "id": "YourMT3__replace-open",
+      "model": "YourMT3",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/YourMT3__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "YourMT3__suppress30ms",
+      "model": "YourMT3",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/YourMT3__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "YourMT3__suppress50ms",
+      "model": "YourMT3",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/YourMT3__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "IDM-t0.1__hats-only",
+      "model": "IDM-t0.1",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.1__hats-only.mid",
+      "sha256": "3820685c2503a0232d1b001456ec31d6f5c4cdc8fe3e82b4ab0446ce4fd7c114"
+    },
+    {
+      "id": "IDM-t0.1__replace-hats",
+      "model": "IDM-t0.1",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.1__replace-hats.mid",
+      "sha256": "3e74dedde1b0837b84eb666517f184ea90e11621675a1801d8b6cda01983e903"
+    },
+    {
+      "id": "IDM-t0.1__replace-open",
+      "model": "IDM-t0.1",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.1__replace-open.mid",
+      "sha256": "f81038c220fd76e2555e087d9c9319b89f2a785535723ce52d990215ff088875"
+    },
+    {
+      "id": "IDM-t0.1__suppress30ms",
+      "model": "IDM-t0.1",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.1__suppress30ms.mid",
+      "sha256": "a92291956d357c15bfa0efa4508da9c3a419f2f430e1cd8042d8769fc8a5381f"
+    },
+    {
+      "id": "IDM-t0.1__suppress50ms",
+      "model": "IDM-t0.1",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.1__suppress50ms.mid",
+      "sha256": "a92291956d357c15bfa0efa4508da9c3a419f2f430e1cd8042d8769fc8a5381f"
+    },
+    {
+      "id": "IDM-t0.2__hats-only",
+      "model": "IDM-t0.2",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.2__hats-only.mid",
+      "sha256": "39cc85f65183f3ee12bb55ed7e9c7950e9bed42d8a504b2c6afa98bb055b9af0"
+    },
+    {
+      "id": "IDM-t0.2__replace-hats",
+      "model": "IDM-t0.2",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.2__replace-hats.mid",
+      "sha256": "27fbb6caf3d7d2ff8ab036b0661905577a3b77ae5f88d970d33116565dd616a2"
+    },
+    {
+      "id": "IDM-t0.2__replace-open",
+      "model": "IDM-t0.2",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.2__replace-open.mid",
+      "sha256": "6f9c03ac610935fa93af6f6d8efbc0945bbece68717714b05b87495e8008983c"
+    },
+    {
+      "id": "IDM-t0.2__suppress30ms",
+      "model": "IDM-t0.2",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.2__suppress30ms.mid",
+      "sha256": "916af763b78ed88de0b376b7305886e62bf621f77b78a40b2769993fca6d40c9"
+    },
+    {
+      "id": "IDM-t0.2__suppress50ms",
+      "model": "IDM-t0.2",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.2__suppress50ms.mid",
+      "sha256": "916af763b78ed88de0b376b7305886e62bf621f77b78a40b2769993fca6d40c9"
+    },
+    {
+      "id": "IDM-t0.3__hats-only",
+      "model": "IDM-t0.3",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.3__hats-only.mid",
+      "sha256": "026304f3739834ed1997c781c17b3110b63377847d0ab4ce2616222c0ab470f1"
+    },
+    {
+      "id": "IDM-t0.3__replace-hats",
+      "model": "IDM-t0.3",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.3__replace-hats.mid",
+      "sha256": "c77f3848db98621829f34416003b40b89aa928a1d29b16563aeb6d7e2052cd69"
+    },
+    {
+      "id": "IDM-t0.3__replace-open",
+      "model": "IDM-t0.3",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.3__replace-open.mid",
+      "sha256": "eeea78bd21854a13a5f758cef418c72682937d2409360ee2a82bc15c2e081a46"
+    },
+    {
+      "id": "IDM-t0.3__suppress30ms",
+      "model": "IDM-t0.3",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.3__suppress30ms.mid",
+      "sha256": "a70a0e72e002d5b00ac450820575d8110881a68900cd53bad4c267ea06d637c2"
+    },
+    {
+      "id": "IDM-t0.3__suppress50ms",
+      "model": "IDM-t0.3",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.3__suppress50ms.mid",
+      "sha256": "a70a0e72e002d5b00ac450820575d8110881a68900cd53bad4c267ea06d637c2"
+    },
+    {
+      "id": "IDM-t0.5__hats-only",
+      "model": "IDM-t0.5",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.5__hats-only.mid",
+      "sha256": "39ee223ea26ec5eaaff69c3b91ba28b5f551ac92b680afecebfc485154cfd410"
+    },
+    {
+      "id": "IDM-t0.5__replace-hats",
+      "model": "IDM-t0.5",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.5__replace-hats.mid",
+      "sha256": "3c7fcfeb5942cd6dda572ab9e8b9c85e6f405887f49e8cffeb3059ed8062db6f"
+    },
+    {
+      "id": "IDM-t0.5__replace-open",
+      "model": "IDM-t0.5",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.5__replace-open.mid",
+      "sha256": "ccaf0d1e55a61e25fece6c809d1fba195bc0ad59a6ec4698bbba540f4578e988"
+    },
+    {
+      "id": "IDM-t0.5__suppress30ms",
+      "model": "IDM-t0.5",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.5__suppress30ms.mid",
+      "sha256": "c4d48ccc15635b6162c79dbe5ee6617add6b5d694d171c79d2bd429bf3f41503"
+    },
+    {
+      "id": "IDM-t0.5__suppress50ms",
+      "model": "IDM-t0.5",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/IDM-t0.5__suppress50ms.mid",
+      "sha256": "c4d48ccc15635b6162c79dbe5ee6617add6b5d694d171c79d2bd429bf3f41503"
+    },
+    {
+      "id": "YODO-x1.0__hats-only",
+      "model": "YODO-x1.0",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/YODO-x1.0__hats-only.mid",
+      "sha256": "f03ce59d21b20fa33a4515dbd685979763fe79d5d7be14dcc5fb25ddafeb7ded"
+    },
+    {
+      "id": "YODO-x1.0__replace-hats",
+      "model": "YODO-x1.0",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/YODO-x1.0__replace-hats.mid",
+      "sha256": "68332e75d4d9de505fb4e1c8535984fe3c0d80e07c4fcc4be5f95183aed4f814"
+    },
+    {
+      "id": "YODO-x1.0__replace-open",
+      "model": "YODO-x1.0",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/YODO-x1.0__replace-open.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x1.0__suppress30ms",
+      "model": "YODO-x1.0",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x1.0__suppress30ms.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x1.0__suppress50ms",
+      "model": "YODO-x1.0",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x1.0__suppress50ms.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x0.75__hats-only",
+      "model": "YODO-x0.75",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.75__hats-only.mid",
+      "sha256": "b8c5ff4b0c7414fb8802c98426342aa024a586580629b29d2718f97eeb40ade3"
+    },
+    {
+      "id": "YODO-x0.75__replace-hats",
+      "model": "YODO-x0.75",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.75__replace-hats.mid",
+      "sha256": "4d3d9a7274c3cab71abe077af5bd3a3f6dd28e1d07e5a3457312fb102db96ed4"
+    },
+    {
+      "id": "YODO-x0.75__replace-open",
+      "model": "YODO-x0.75",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.75__replace-open.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x0.75__suppress30ms",
+      "model": "YODO-x0.75",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.75__suppress30ms.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x0.75__suppress50ms",
+      "model": "YODO-x0.75",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.75__suppress50ms.mid",
+      "sha256": "426394acc97ce4bac5a2928879d19ea4afa7d5ada398e1fd84a1b8c6596e065b"
+    },
+    {
+      "id": "YODO-x0.5__hats-only",
+      "model": "YODO-x0.5",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.5__hats-only.mid",
+      "sha256": "9ea8f1d42e79cca502ff4e4648c22d01d5a2635d1d8cba2826b423196be345ac"
+    },
+    {
+      "id": "YODO-x0.5__replace-hats",
+      "model": "YODO-x0.5",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.5__replace-hats.mid",
+      "sha256": "95064d12723a58cd30605dbb1bbd6e7498461655d3df09ff67077bc2177bd305"
+    },
+    {
+      "id": "YODO-x0.5__replace-open",
+      "model": "YODO-x0.5",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.5__replace-open.mid",
+      "sha256": "911b87ca4e57d8192b10497f4b47c5d91ede9354f173ca82aaf0eba74dcd170a"
+    },
+    {
+      "id": "YODO-x0.5__suppress30ms",
+      "model": "YODO-x0.5",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.5__suppress30ms.mid",
+      "sha256": "911b87ca4e57d8192b10497f4b47c5d91ede9354f173ca82aaf0eba74dcd170a"
+    },
+    {
+      "id": "YODO-x0.5__suppress50ms",
+      "model": "YODO-x0.5",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/YODO-x0.5__suppress50ms.mid",
+      "sha256": "911b87ca4e57d8192b10497f4b47c5d91ede9354f173ca82aaf0eba74dcd170a"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.03__replace-open",
+      "model": "consensus-y0.75-i0.2-tol0.03",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.03__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.03__suppress30ms",
+      "model": "consensus-y0.75-i0.2-tol0.03",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.03__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.03__suppress50ms",
+      "model": "consensus-y0.75-i0.2-tol0.03",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.03__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.05__replace-open",
+      "model": "consensus-y0.75-i0.2-tol0.05",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.05__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.05__suppress30ms",
+      "model": "consensus-y0.75-i0.2-tol0.05",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.05__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.2-tol0.05__suppress50ms",
+      "model": "consensus-y0.75-i0.2-tol0.05",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.2-tol0.05__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.03__replace-open",
+      "model": "consensus-y0.75-i0.3-tol0.03",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.03__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.03__suppress30ms",
+      "model": "consensus-y0.75-i0.3-tol0.03",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.03__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.03__suppress50ms",
+      "model": "consensus-y0.75-i0.3-tol0.03",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.03__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.05__replace-open",
+      "model": "consensus-y0.75-i0.3-tol0.05",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.05__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.05__suppress30ms",
+      "model": "consensus-y0.75-i0.3-tol0.05",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.05__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.75-i0.3-tol0.05__suppress50ms",
+      "model": "consensus-y0.75-i0.3-tol0.05",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.75-i0.3-tol0.05__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.03__replace-open",
+      "model": "consensus-y0.5-i0.2-tol0.03",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.03__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.03__suppress30ms",
+      "model": "consensus-y0.5-i0.2-tol0.03",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.03__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.03__suppress50ms",
+      "model": "consensus-y0.5-i0.2-tol0.03",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.03__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.05__replace-open",
+      "model": "consensus-y0.5-i0.2-tol0.05",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.05__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.05__suppress30ms",
+      "model": "consensus-y0.5-i0.2-tol0.05",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.05__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.2-tol0.05__suppress50ms",
+      "model": "consensus-y0.5-i0.2-tol0.05",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.2-tol0.05__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.03__replace-open",
+      "model": "consensus-y0.5-i0.3-tol0.03",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.03__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.03__suppress30ms",
+      "model": "consensus-y0.5-i0.3-tol0.03",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.03__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.03__suppress50ms",
+      "model": "consensus-y0.5-i0.3-tol0.03",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.03__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.05__replace-open",
+      "model": "consensus-y0.5-i0.3-tol0.05",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.05__replace-open.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.05__suppress30ms",
+      "model": "consensus-y0.5-i0.3-tol0.05",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.05__suppress30ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "consensus-y0.5-i0.3-tol0.05__suppress50ms",
+      "model": "consensus-y0.5-i0.3-tol0.05",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/candidates/consensus-y0.5-i0.3-tol0.05__suppress50ms.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    },
+    {
+      "id": "YODO-SW-x1.0__hats-only",
+      "model": "YODO-SW-x1.0",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x1.0__hats-only.mid",
+      "sha256": "7830a9cf8255f344592b0437b283c2cfd3a7b6fa4cc833c5c67b6731f171f553",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 1.0
+    },
+    {
+      "id": "YODO-SW-x1.0__replace-hats",
+      "model": "YODO-SW-x1.0",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x1.0__replace-hats.mid",
+      "sha256": "fedc12db79046a7b737810839608c5102a14e8d633344615e7c2c0b61a1fa519",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 1.0
+    },
+    {
+      "id": "YODO-SW-x1.0__replace-open",
+      "model": "YODO-SW-x1.0",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x1.0__replace-open.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 1.0
+    },
+    {
+      "id": "YODO-SW-x1.0__suppress30ms",
+      "model": "YODO-SW-x1.0",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x1.0__suppress30ms.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 1.0
+    },
+    {
+      "id": "YODO-SW-x1.0__suppress50ms",
+      "model": "YODO-SW-x1.0",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x1.0__suppress50ms.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 1.0
+    },
+    {
+      "id": "YODO-SW-x0.75__hats-only",
+      "model": "YODO-SW-x0.75",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.75__hats-only.mid",
+      "sha256": "c5a6252ef16e2df22b801fd897aafb282c8247a70e876dd430c3eb97beccfc80",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.75
+    },
+    {
+      "id": "YODO-SW-x0.75__replace-hats",
+      "model": "YODO-SW-x0.75",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.75__replace-hats.mid",
+      "sha256": "9177ee68c729826e19a86172cd697e38e5a27adbf8b30485b1f93aa23ba21b78",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.75
+    },
+    {
+      "id": "YODO-SW-x0.75__replace-open",
+      "model": "YODO-SW-x0.75",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.75__replace-open.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.75
+    },
+    {
+      "id": "YODO-SW-x0.75__suppress30ms",
+      "model": "YODO-SW-x0.75",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.75__suppress30ms.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.75
+    },
+    {
+      "id": "YODO-SW-x0.75__suppress50ms",
+      "model": "YODO-SW-x0.75",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.75__suppress50ms.mid",
+      "sha256": "4a9651b2b91874e51b43d9e83089804051599de679a845378063d4c5d8362fd0",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.75
+    },
+    {
+      "id": "YODO-SW-x0.5__hats-only",
+      "model": "YODO-SW-x0.5",
+      "policy": "hats-only",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.5__hats-only.mid",
+      "sha256": "23e6c69ce3e3ffd06263776d4a410a39428382789ec67b75b87ea2d411827733",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.5
+    },
+    {
+      "id": "YODO-SW-x0.5__replace-hats",
+      "model": "YODO-SW-x0.5",
+      "policy": "replace-hats",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.5__replace-hats.mid",
+      "sha256": "cfb34298302d8abf8fde8ac08567e6ad7a5ff39130e953edc6eac47351761f5e",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.5
+    },
+    {
+      "id": "YODO-SW-x0.5__replace-open",
+      "model": "YODO-SW-x0.5",
+      "policy": "replace-open",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.5__replace-open.mid",
+      "sha256": "7619917c76750161efb76d306c721d1f31a20cb1a698a288524c0899627b2235",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.5
+    },
+    {
+      "id": "YODO-SW-x0.5__suppress30ms",
+      "model": "YODO-SW-x0.5",
+      "policy": "suppress30ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.5__suppress30ms.mid",
+      "sha256": "df46319e5be270840b43e6224a92c2e980a3bf4e20bc53c81c37612e1629297b",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.5
+    },
+    {
+      "id": "YODO-SW-x0.5__suppress50ms",
+      "model": "YODO-SW-x0.5",
+      "policy": "suppress50ms",
+      "path": "outputs/runs/open-hat/sw-control/YODO-SW-x0.5__suppress50ms.mid",
+      "sha256": "df46319e5be270840b43e6224a92c2e980a3bf4e20bc53c81c37612e1629297b",
+      "raw_sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+      "multiplier": 0.5
+    }
+  ],
+  "supplemental_control": {
+    "raw_path": "work/open-hat/fullSW-yodo.json",
+    "sha256": "973135ef16b99dbf81fe3bdc6aa9898003ec9a979687699c25c4aedc2fb96f50",
+    "reason": "corrected backend directSW comparison, no HH preprocessing"
+  }
+}

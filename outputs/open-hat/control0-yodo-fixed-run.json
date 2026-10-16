@@ -1,0 +1,15 @@
+{
+  "id": "control0-yodo-fixed",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_diagnostic.py",
+    "work/open-hat/control-kit0.wav",
+    "work/open-hat/control0-yodo.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 1154449408,
+    "attempts": 1,
+    "elapsed_seconds": 8.032893750001676
+  }
+}

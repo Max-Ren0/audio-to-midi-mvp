@@ -289,3 +289,12 @@
 - 50efe99新增诊断独立复验通过：64/80/80/80、22.18ms、时间匹配86与残余6对均一致，MID/参考hash不变，无需修正。OAF有crash输出，不能把crash漏检归因于无类别；开镲类别覆盖不足是待验证原因。仅增加诊断文档，不改变v0.1.0-drums.2冻结音频/MID。
 
 - 用户已授权按三步实测YourMT3/YODO/IDM开镲：两套已知合成鼓kit先验证类别→新鼓件分离Hi-hat→本曲同一0–60转谱校对；保留85.56原版。分支codex/open-hat-three-models，空快照提交保留起点。新登记outputs/open-hat/实验登记.json限定本轮24模型进程含失败、CPU2/6GiB/1800s、最多自动重试1、顺序运行；不访问60–120，不改五轨，无外传或新增付费。
+
+- 本轮开镲小样进展：GeneralUser GS两kit原生14s（各3closed/3open+kick/snare）、21s两kit hats-only共享0.9peak增益小样，真值仅来自合成时刻、无本曲参考。IDM与YourMT3均跑完；归一化小样IDM阈值.3开镲5TP/1FP/1FN，YourMT3开镲0/6；不推断真实歌曲效果。YODO初两任务因sep-env找不到项目模块各2失败（4计预算），补local src路径。
+- YODO重大根因：1channel公开cfg与三通道权重布局不匹配，第一卷积少读576float导致后续BN出现负variance，OpenCV原始objectness NaN。之前v2的零检测不能作为模型有效效果。复制cfg只改channels3并将灰度复制RGB后，所有BNvariance非负、小样raw输出有限并有真实开镲。新增require_finite_detector_outputs先RED后GREEN两用例，防止NaN被confidence过滤隐藏；全102测试通过。新输出保留原GM/时间，没有按标准改号。原85.56方案未使用YODO所以其分数不变。
+- 新DrumSep6stem MDX23C固定openmirlab/mdxnet-infer cb4779e，checkpoint437652699bytes SHAd2a4aa53eb584d21eead358a4e66d1882ad182911be018f052b5da73be9096d0，config2417bytes SHA17d1649a227f841165bdb4c11a42082898192a1ea3ceab7e7e0b9293d6589dd6。仅ignored work下载，无额外安装；weights_only=True/strict加载+逐forward有限性hook，源码自身nan_to_num不能掩盖forward失败。模拟identity首中尾时间线通过；SW当前片段15s探测45.56s/2.24GiB完成，full60正在分离。分离输出不等于原录音groundtruth，权重许可未知/不作商用批准。
+- 模型进程完成17尝试+full分离运行中，之后同份归一化hh三模型，总预计21<=24。decode全规则已登记，不按标准逐音拼接；独立验证待最终可检查版本冻结后启动。
+
+- 三步实际完成：DrumSepfull147.18s/2.22GiB；同份hh共享gain6.924，IDM2.52s/.63GiB、MT320.48s/2.17GiB、YODO29.46s/1.28GiB均一次通过。65初始候选没有净提升；注意IDM.3开镲1TP/6pred/4ref、5FP，整体83.94%，并非所有候选零命中。MT3开闭镲输出为空、替换开镲是noop；IDM.5整体84.21但open0TP；YODOhh默认85.11/open0TP。
+- 注册并补修复YODO直接SW鼓29.83s/1.32GiB，原鼓默认open0TP/3pred、整体84.21，不能将hh分离认定唯一根因。新增15control共80候选、36不同MID。全部最大匹配同GM50ms，.9995/.14映射不改。原85版SHA3c13d77...aa50d不变且被选回；本轮22模型进程含4导入失败、2数值无效、1层级诊断，其余有效执行，<=24。不新跑60–120。
+- outputs/runs/open-hat/交付/已含三个模型代表开镲替换MID／试听、原SW鼓对照、三个仅开闭镲MID（MT3为空不造音频）、hh和已知小样、80候选。outputs/open-hat/开镲三模型测试报告.md讲清负结果、YODO修复、控制域差和未来核对参考；待最终文件/ZIP打包与冻结后独立验证。需要人工核对标准4开镲对应音频53.223/56.766/59.476/59.897s，不能抄标准补音。

@@ -1,0 +1,80 @@
+{
+  "purpose": "level robustness control, bothkits hats only, single shared gain, known synthesis timing unchanged",
+  "notes": [
+    {
+      "pitch": 42,
+      "onset": 1.0,
+      "velocity": 80,
+      "kit": 0
+    },
+    {
+      "pitch": 42,
+      "onset": 2.0,
+      "velocity": 100,
+      "kit": 0
+    },
+    {
+      "pitch": 42,
+      "onset": 3.0,
+      "velocity": 60,
+      "kit": 0
+    },
+    {
+      "pitch": 46,
+      "onset": 5.0,
+      "velocity": 80,
+      "kit": 0
+    },
+    {
+      "pitch": 46,
+      "onset": 7.0,
+      "velocity": 100,
+      "kit": 0
+    },
+    {
+      "pitch": 46,
+      "onset": 9.0,
+      "velocity": 60,
+      "kit": 0
+    },
+    {
+      "pitch": 42,
+      "onset": 11.5,
+      "velocity": 80,
+      "kit": 8
+    },
+    {
+      "pitch": 42,
+      "onset": 12.5,
+      "velocity": 100,
+      "kit": 8
+    },
+    {
+      "pitch": 42,
+      "onset": 13.5,
+      "velocity": 60,
+      "kit": 8
+    },
+    {
+      "pitch": 46,
+      "onset": 15.5,
+      "velocity": 80,
+      "kit": 8
+    },
+    {
+      "pitch": 46,
+      "onset": 17.5,
+      "velocity": 100,
+      "kit": 8
+    },
+    {
+      "pitch": 46,
+      "onset": 19.5,
+      "velocity": 60,
+      "kit": 8
+    }
+  ],
+  "gain": 19.175032509752928,
+  "duration": 21.0,
+  "audio_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3"
+}

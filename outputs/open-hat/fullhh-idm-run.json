@@ -1,0 +1,15 @@
+{
+  "id": "fullhh-idm",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/drums-v2/run_idm.py",
+    "work/open-hat/hh-normalized.wav",
+    "work/open-hat/fullhh-idm.npz"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 672776192,
+    "attempts": 1,
+    "elapsed_seconds": 2.5180519170098705
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "control8-yodo-rgb",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_rgb.py",
+    "work/open-hat/control-kit8.wav",
+    "work/open-hat/control8-yodo-rgb.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 1398439936,
+    "attempts": 1,
+    "elapsed_seconds": 7.831663290999131
+  }
+}

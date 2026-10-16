@@ -1,0 +1,15 @@
+{
+  "id": "level-yodo-rgb",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_rgb.py",
+    "work/open-hat/control-hats-level.wav",
+    "work/open-hat/level-yodo-rgb.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 1577631744,
+    "attempts": 1,
+    "elapsed_seconds": 11.177620542002842
+  }
+}

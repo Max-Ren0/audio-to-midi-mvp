@@ -1,0 +1,15 @@
+{
+  "id": "level-mt3",
+  "command": [
+    ".venv/bin/python",
+    "work/open-hat/run_mt3_wav.py",
+    "work/open-hat/control-hats-level.wav",
+    "work/open-hat/level-mt3.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 2414657536,
+    "attempts": 1,
+    "elapsed_seconds": 10.489196124995942
+  }
+}

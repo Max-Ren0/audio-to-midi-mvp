@@ -1,0 +1,187 @@
+{
+  "raw_stats": [
+    {
+      "objectness_max": 0.6144453883171082,
+      "class_max": 0.6141099333763123,
+      "per_class_max": [
+        0.0,
+        0.4510997235774994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6141099333763123,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.9023503661155701,
+      "class_max": 0.9023253917694092,
+      "per_class_max": [
+        0.0,
+        0.41490739583969116,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9023253917694092,
+        0.0,
+        0.6263799071311951,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.483279824256897,
+      "class_max": 0.4643789529800415,
+      "per_class_max": [
+        0.0,
+        0.4643789529800415,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.483279824256897,
+      "class_max": 0.4643789529800415,
+      "per_class_max": [
+        0.0,
+        0.4643789529800415,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.9790725111961365,
+      "class_max": 0.9790217280387878,
+      "per_class_max": [
+        0.9790217280387878,
+        0.554396390914917,
+        0.0,
+        0.7098845839500427,
+        0.0,
+        0.7097468376159668,
+        0.9617295265197754,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.9689198732376099,
+      "class_max": 0.9689004421234131,
+      "per_class_max": [
+        0.9590845108032227,
+        0.8335416316986084,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9689004421234131,
+        0.41482076048851013,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "objectness_max": 0.9728518724441528,
+      "class_max": 0.9726693630218506,
+      "per_class_max": [
+        0.8958802819252014,
+        0.8743197321891785,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9726693630218506,
+        0.8851513862609863,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "author_thresholds": [
+    0.65,
+    0.7,
+    0.68,
+    0.78,
+    0.82,
+    0.72,
+    0.52,
+    0.67,
+    0.6,
+    0.41,
+    0.79
+  ],
+  "pitches": [
+    35,
+    40,
+    37,
+    48,
+    45,
+    43,
+    42,
+    46,
+    51,
+    53,
+    49
+  ],
+  "input_sha256": "087b3c9ed3c05ab802d6b63be54ee2114c575257962ea9fc79e9b9841dcdbfae",
+  "weight_sha256": "1cdc360b6c0b72e669d6736c1df0c9e171d157aadddbebe3b67130874264f588",
+  "code_commit": "0cb980a11e9ba1a37cbafddec1e85c66d8ffa236",
+  "adapter": "OpenCV4.11 CPU; FFT equivalent sliding dot; correct short final-patch geometry; author templates and velocity, no reference",
+  "opencv": "4.11.0",
+  "fft_max_abs_errors": [
+    1.9131948672901813e-14,
+    3.102273850532274e-14,
+    4.369260109715201e-14
+  ],
+  "source_code_hashes": {
+    "spectrogram.py": "ff8c04c1a01cdb90ec47187f616e7a2f1de5811475dbabb6ee4e4272233d86d9",
+    "tri2.cfg": "9017478edc59c752efc7c94054e8ac15b7b60aeffe803c3931467a7f1437d15b",
+    "classes.names": "15363f92ad17d2896cac2f56ab370ca1ece72a5a0bf07c814d58cf890028f4d1"
+  },
+  "template_hashes": {
+    "0.png": "820c8d40f1f2659802fbd1544688d42245752b79acfa69c27f8a2240f1cc1935",
+    "1.png": "a05af5f94c8c0d72571f68a7060da296c85ee65278b5d5e4e9192798291f5830",
+    "10.png": "d578b8c88f2cc204f8a6713e282e76d989d501ea87c6878d6ad554a50df6424d",
+    "2.png": "325acb715fe5bdd38ba91c7e3e1fd75b96188f669ca0c473f57a58c60decfcd8",
+    "3.png": "3592b7ad6c9f5fe7290a43d996423bc9455b1ff95546100838aadec472181b6d",
+    "4.png": "398a917ba242cc95bcfede0b41d326709ea0d706fd0bfc96b9caef13f56e3a0d",
+    "5.png": "2d9f6346aa2332db1efd5a3e70f301b7432b25d83f06828a0f1b4b72843246f5",
+    "6.png": "52e590845ffa6c88bf004e3ff4aa303993f0086bb715587ea6036da9db174294",
+    "7.png": "1634e451958bd53a914c173640c35665065774aa8fbb2b47fc9ef822e0117836",
+    "8.png": "38ee9269e5e26ea0c0b27581a70f34cd8334f004726096d57d66a0c7cc7c0ffb",
+    "9.png": "2b2bd9c651fd96831907f0d1894b0493004e32305fdd9da33ef72c14d232acab"
+  },
+  "detector_config_sha256": "28cefc79b6f8069542c6d2f9283d2a81e1d1f4e387178c43d4f538564d7b656b",
+  "weight_compatible_input_channels": 3,
+  "script_sha256": "f8dcebea8e38a1adb7e4b86ed416fa94836249fa6fa021d1c6ef80b56375d017",
+  "duration_seconds": 60.03045351473923,
+  "elapsed_seconds": 28.512603416995262,
+  "reference_used": false,
+  "note_count": 275,
+  "detection_count": 275,
+  "raw_output_path": "work/open-hat/fullhh-yodo.json",
+  "raw_output_sha256": "6e9fe4347ca39355b5cb3190ceb4fcb5b573d73d5e292e79b7d61651888a1769"
+}

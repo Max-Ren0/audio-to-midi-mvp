@@ -1,0 +1,27 @@
+{
+  "drumsep": {
+    "repo": "https://github.com/openmirlab/mdxnet-infer",
+    "revision": "cb4779eedeca4f55ba498df8e234e2b5f4b90aaf",
+    "checkpoint_sha256": "d2a4aa53eb584d21eead358a4e66d1882ad182911be018f052b5da73be9096d0",
+    "config_sha256": "17d1649a227f841165bdb4c11a42082898192a1ea3ceab7e7e0b9293d6589dd6",
+    "config_names": [
+      "kick",
+      "snare",
+      "toms",
+      "hh",
+      "ride",
+      "crash"
+    ],
+    "license": "original weights unknown; noncommercial research only, not commercial clearance"
+  },
+  "yodo": {
+    "original_config_sha256": "9017478edc59c752efc7c94054e8ac15b7b60aeffe803c3931467a7f1437d15b",
+    "corrected_config_sha256": "28cefc79b6f8069542c6d2f9283d2a81e1d1f4e387178c43d4f538564d7b656b",
+    "delta": "channels=1 changed to channels=3 only, no learned weight edits",
+    "weight_sha256": "1cdc360b6c0b72e669d6736c1df0c9e171d157aadddbebe3b67130874264f588",
+    "compatibility": "aligned BN and finite positive-control outputs; not full Darknet parity proof"
+  },
+  "IDM": "same strict official encoder and checkpoint as outputs/drums-v2",
+  "YourMT3": "same fixed checkpoint and decoder as audio_midi.backends.selected",
+  "controls": "GeneralUser GS2.0.3, not song GT or training"
+}

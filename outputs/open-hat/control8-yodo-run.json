@@ -1,0 +1,15 @@
+{
+  "id": "control8-yodo",
+  "command": [
+    "work/sep-env/bin/python",
+    "work/open-hat/run_yodo_diagnostic.py",
+    "work/open-hat/control-kit8.wav",
+    "work/open-hat/control8-yodo.json"
+  ],
+  "status": "failed",
+  "run": {
+    "attempts": 2,
+    "peak_memory_bytes": 116883456
+  },
+  "error": "\u6a21\u578b\u6267\u884c\u5931\u8d25\uff0c\u8be6\u60c5\u89c1 work/open-hat/control8-yodo.log: Traceback (most recent call last):\n  File \"/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/open-hat/run_yodo_diagnostic.py\", line 9, in <module>\n    from audio_midi.drums import detection_region\nModuleNotFoundError: No module named 'audio_midi'\nTraceback (most recent call last):\n  File \"/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/open-hat/run_yodo_diagnostic.py\", line 9, in <module>\n    from audio_midi.drums import detection_region\nModuleNotFoundError: No module named 'audio_midi'\n"
+}

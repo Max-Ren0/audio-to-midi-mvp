@@ -1,0 +1,701 @@
+{
+  "scope": "known synthetic2kits controls plus sharedgain hats-only control, samekey50ms synthesis timing, no fitted shift; no song GT in model generation",
+  "rows": [
+    {
+      "control": "control0",
+      "model": "mt3",
+      "threshold_or_multiplier": null,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-mt3.json",
+      "output_sha256": "252f8976c4cf39c41b36df2fc87e462df6f7e62ec5418174cece5e860836305f",
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "idm",
+      "threshold_or_multiplier": 0.1,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 31,
+          "fn": 0,
+          "f1": 0.16216216216216217,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.16216216216216217,
+          "onset_error_median_seconds": 0.0027210884353743303
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "idm",
+      "threshold_or_multiplier": 0.2,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 28,
+          "fn": 0,
+          "f1": 0.17647058823529413,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.17647058823529413,
+          "onset_error_median_seconds": 0.0027210884353743303
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "idm",
+      "threshold_or_multiplier": 0.3,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "score": {
+        "42": {
+          "tp": 2,
+          "fp": 21,
+          "fn": 1,
+          "f1": 0.15384615384615385,
+          "onset_only_tp": 2,
+          "onset_only_f1": 0.15384615384615385,
+          "onset_error_median_seconds": 0.0034920634920635463
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "idm",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-idm.npz",
+      "output_sha256": "1bfe75f0ccd75ec31470f02df4b4ab78167e83fffcd31de4332ec6045f96bc56",
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 1.0,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-yodo-rgb.json",
+      "output_sha256": "7f1c7e2164cb46a857af2b69c2e0547b3990f690103240bb349961ad4f7a1b03",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "f1": 1.0,
+          "onset_only_tp": 3,
+          "onset_only_f1": 1.0,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.75,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-yodo-rgb.json",
+      "output_sha256": "7f1c7e2164cb46a857af2b69c2e0547b3990f690103240bb349961ad4f7a1b03",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "f1": 1.0,
+          "onset_only_tp": 3,
+          "onset_only_f1": 1.0,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control0",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "9723b338b489687667a754afd88f3b03931fd9c012ff32b958e8fb44fa880e8b",
+      "input_sha256": "78ec9bf11d880671c52b11d31f9e91a8a82f0a2331cbde1c1f90fd700f4dc2e4",
+      "output_path": "work/open-hat/control0-yodo-rgb.json",
+      "output_sha256": "7f1c7e2164cb46a857af2b69c2e0547b3990f690103240bb349961ad4f7a1b03",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "f1": 0.8571428571428571,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.8571428571428571,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.5,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.5,
+          "onset_error_median_seconds": 0.019999999999999574
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "mt3",
+      "threshold_or_multiplier": null,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-mt3.json",
+      "output_sha256": "d37c931150f3794168afb9126df158ed58edbf2e2e07dc0243be0907eedd2501",
+      "score": {
+        "42": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "idm",
+      "threshold_or_multiplier": 0.1,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 41,
+          "fn": 0,
+          "f1": 0.1276595744680851,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.1276595744680851,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "idm",
+      "threshold_or_multiplier": 0.2,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 30,
+          "fn": 0,
+          "f1": 0.16666666666666666,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.16666666666666666,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "idm",
+      "threshold_or_multiplier": 0.3,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "score": {
+        "42": {
+          "tp": 3,
+          "fp": 24,
+          "fn": 0,
+          "f1": 0.2,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.2,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "idm",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-idm.npz",
+      "output_sha256": "d698bdf1cf0d34e7f00a076f935bef8c6003e70a31b908e80325abeef366858e",
+      "score": {
+        "42": {
+          "tp": 1,
+          "fp": 8,
+          "fn": 2,
+          "f1": 0.16666666666666666,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.16666666666666666,
+          "onset_error_median_seconds": 0.004263038548752762
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 1.0,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-yodo-rgb.json",
+      "output_sha256": "79a851c1a20c3cf895c929f6efad2bf2764a9473f0358f9d7237640965c8f191",
+      "score": {
+        "42": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.5,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.5,
+          "onset_error_median_seconds": 0.010000000000000009
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.75,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-yodo-rgb.json",
+      "output_sha256": "79a851c1a20c3cf895c929f6efad2bf2764a9473f0358f9d7237640965c8f191",
+      "score": {
+        "42": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.5,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.5,
+          "onset_error_median_seconds": 0.010000000000000009
+        },
+        "46": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.5,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.5,
+          "onset_error_median_seconds": 0.019999999999999574
+        }
+      }
+    },
+    {
+      "control": "control8",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "96d4e5969e93fd5c7a2672aee1bdd2fa25915f0dd1171fada56a0992d6275657",
+      "input_sha256": "5b519c85984d1dc3782b36bdc3516825344aed0231126195b2d982d05f02b591",
+      "output_path": "work/open-hat/control8-yodo-rgb.json",
+      "output_sha256": "79a851c1a20c3cf895c929f6efad2bf2764a9473f0358f9d7237640965c8f191",
+      "score": {
+        "42": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "f1": 0.8,
+          "onset_only_tp": 2,
+          "onset_only_f1": 0.8,
+          "onset_error_median_seconds": 0.009999999999999898
+        },
+        "46": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "f1": 0.8,
+          "onset_only_tp": 2,
+          "onset_only_f1": 0.8,
+          "onset_error_median_seconds": 0.029999999999999805
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "mt3",
+      "threshold_or_multiplier": null,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-mt3.json",
+      "output_sha256": "00d6e36c4a24717bd0493459a20f5082c30be7d0363ada9e494227d08671e97f",
+      "score": {
+        "42": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 5,
+          "f1": 0.2857142857142857,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.2857142857142857,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "f1": 0.0,
+          "onset_only_tp": 0,
+          "onset_only_f1": 0.0,
+          "onset_error_median_seconds": null
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "idm",
+      "threshold_or_multiplier": 0.1,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-idm.npz",
+      "output_sha256": "9ecec06e97c44744d47d23ad8c47852f37c33f3cfe74015f91f86c207a66f76d",
+      "score": {
+        "42": {
+          "tp": 6,
+          "fp": 106,
+          "fn": 0,
+          "f1": 0.1016949152542373,
+          "onset_only_tp": 6,
+          "onset_only_f1": 0.1016949152542373,
+          "onset_error_median_seconds": 0.0025623582766443054
+        },
+        "46": {
+          "tp": 6,
+          "fp": 12,
+          "fn": 0,
+          "f1": 0.5,
+          "onset_only_tp": 6,
+          "onset_only_f1": 0.5,
+          "onset_error_median_seconds": 0.003718820861678296
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "idm",
+      "threshold_or_multiplier": 0.2,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-idm.npz",
+      "output_sha256": "9ecec06e97c44744d47d23ad8c47852f37c33f3cfe74015f91f86c207a66f76d",
+      "score": {
+        "42": {
+          "tp": 6,
+          "fp": 82,
+          "fn": 0,
+          "f1": 0.1276595744680851,
+          "onset_only_tp": 6,
+          "onset_only_f1": 0.1276595744680851,
+          "onset_error_median_seconds": 0.0025623582766443054
+        },
+        "46": {
+          "tp": 6,
+          "fp": 5,
+          "fn": 0,
+          "f1": 0.7058823529411765,
+          "onset_only_tp": 6,
+          "onset_only_f1": 0.7058823529411765,
+          "onset_error_median_seconds": 0.003718820861678296
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "idm",
+      "threshold_or_multiplier": 0.3,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-idm.npz",
+      "output_sha256": "9ecec06e97c44744d47d23ad8c47852f37c33f3cfe74015f91f86c207a66f76d",
+      "score": {
+        "42": {
+          "tp": 5,
+          "fp": 61,
+          "fn": 1,
+          "f1": 0.1388888888888889,
+          "onset_only_tp": 5,
+          "onset_only_f1": 0.1388888888888889,
+          "onset_error_median_seconds": 0.0024036281179142804
+        },
+        "46": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "f1": 0.8333333333333334,
+          "onset_only_tp": 5,
+          "onset_only_f1": 0.8333333333333334,
+          "onset_error_median_seconds": 0.003537414965986585
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "idm",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-idm.npz",
+      "output_sha256": "9ecec06e97c44744d47d23ad8c47852f37c33f3cfe74015f91f86c207a66f76d",
+      "score": {
+        "42": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "f1": 0.8333333333333334,
+          "onset_only_tp": 5,
+          "onset_only_f1": 0.8333333333333334,
+          "onset_error_median_seconds": 0.0024036281179142804
+        },
+        "46": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "f1": 0.6666666666666666,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.6666666666666666,
+          "onset_error_median_seconds": 0.0020408163265308588
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 1.0,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-yodo-rgb.json",
+      "output_sha256": "913c13e992f66cd23ac8d6cb009169ee1b315ad047c93991e6d88f836c84fa38",
+      "score": {
+        "42": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.8,
+          "onset_only_tp": 4,
+          "onset_only_f1": 0.8,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 5,
+          "f1": 0.25,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.25,
+          "onset_error_median_seconds": 0.019999999999999574
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.75,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-yodo-rgb.json",
+      "output_sha256": "913c13e992f66cd23ac8d6cb009169ee1b315ad047c93991e6d88f836c84fa38",
+      "score": {
+        "42": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "f1": 0.8,
+          "onset_only_tp": 4,
+          "onset_only_f1": 0.8,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 5,
+          "f1": 0.2,
+          "onset_only_tp": 1,
+          "onset_only_f1": 0.2,
+          "onset_error_median_seconds": 0.019999999999999574
+        }
+      }
+    },
+    {
+      "control": "level",
+      "model": "yodo-rgb",
+      "threshold_or_multiplier": 0.5,
+      "truth_sha256": "d04df06d3b50243eeb0ddf2325722eb1f98325cf66349010960c92b0865c87f4",
+      "input_sha256": "61b8a5336f40a1a751126140a2ca64980b911e2a2958009c9e818c27e6123fc3",
+      "output_path": "work/open-hat/level-yodo-rgb.json",
+      "output_sha256": "913c13e992f66cd23ac8d6cb009169ee1b315ad047c93991e6d88f836c84fa38",
+      "score": {
+        "42": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "f1": 0.8333333333333334,
+          "onset_only_tp": 5,
+          "onset_only_f1": 0.8333333333333334,
+          "onset_error_median_seconds": 0.0
+        },
+        "46": {
+          "tp": 3,
+          "fp": 5,
+          "fn": 3,
+          "f1": 0.42857142857142855,
+          "onset_only_tp": 3,
+          "onset_only_f1": 0.42857142857142855,
+          "onset_error_median_seconds": 0.019999999999999574
+        }
+      }
+    }
+  ]
+}

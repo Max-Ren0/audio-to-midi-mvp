@@ -1,0 +1,15 @@
+{
+  "id": "control0-mt3",
+  "command": [
+    ".venv/bin/python",
+    "work/open-hat/run_mt3_wav.py",
+    "work/open-hat/control-kit0.wav",
+    "work/open-hat/control0-mt3.json"
+  ],
+  "status": "completed",
+  "run": {
+    "peak_memory_bytes": 2251571200,
+    "attempts": 1,
+    "elapsed_seconds": 8.987398665994988
+  }
+}

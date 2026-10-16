@@ -75,3 +75,10 @@ def optimized_drums_v2(general: list[NoteEvent], mix: list[NoteEvent], oaf_sw: l
     ride=consensus_drums(only(mix,51),only(weak_cymbal,49),.03,families=({49,51,53,55,57,59},))
     splash=consensus_drums(only(general,55),only(adtof,49),.03,families=({49,51,53,55,57,59},))
     return route_drum_keys({'general':general,'kick':kick,'snare':snare,'hat':only(adtof,42),'tom':only(oaf_sw,48),'ride':ride,'splash':splash},'general',{36:'kick',38:'snare',42:'hat',48:'tom',51:'ride',55:'splash'},duration)
+
+
+def require_finite_detector_outputs(outputs) -> None:
+    """Reject numeric model failure before confidence filtering can hide it."""
+    import numpy as np
+    if any(not np.isfinite(values).all() for values in outputs):
+        raise ValueError('Nonfinite detector output; not a valid empty prediction')
