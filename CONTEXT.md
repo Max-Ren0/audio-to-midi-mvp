@@ -319,3 +319,11 @@
 - outputs/bass-diagnostics/含报告、51个错误详情/CSV、18匹配对/全部预测与标准事件、源码/产物校验。work/bass-diagnostics/replay/存逐帧NPZ/CSV和完整trace；outputs/runs/bass-diagnostics/clips/有102局部WAV（51错误×原曲/贝斯），均本地保留。原鼓/六轨/贝斯哈希不变，不访问60–120。待冻结后独立只读验证及GitHub同步。
 - 41f0bc9冻结后独立verify_bass_diagnostics复核通过，无必须修正项：107测试、修改前contour同帧回放与新trace同音符/原MID同字节、独立最大匹配所有计数、3752帧/51错误完整、全部过滤/切分声明与102片段PCM、118项ZIP来源均一致。详outputs/bass-diagnostics/独立验证.md。ZIP SHA7bf2d5ac4f467b8840bc743f0cda3738df011d2c27cbbecf8754d62020853765。未人工听辨或新歌验证；报告只给排查优先级。主agent接受，产物不修改；新增审查记录后安全FF main并发布v0.1.0-bass-diagnostics.1诊断标签，不表示贝斯质量提升。
 - Git同步已实时核实：origin/main、origin/codex/bass-diagnostics、v0.1.0-bass-diagnostics.1标签均为2a556b048d3068dc45a0d696bea65fe983acc9c9；main安全快进，未force push，模型/媒体/帧缓存/ZIP不上传。本行随后作为文档状态提交，不移动已发布标签。下一步等待用户决定是否按诊断优化起音/置信度，当前不自动开启优化。
+
+## 2026-10-17：贝斯逐步修改与评估
+- 用户授权按诊断逐步修改并评估。94a89bc快照后codex/bass-refinement；先登记12候选：原版、3置信度局部扩展、2起音引导、3×2组合。所有候选无标准生成后统一评分，不继续扩参数。无分离/pYIN/神经模型新推理、训练、API或付费，不访问60–120。
+- 新独立模块src/audio_midi/bass_refinement.py：同音高/voiced/能量约束下高门槛种子周围扩展低置信度；音频起音包络谷值回溯≤96ms、80ms起音间距、随后320ms按置信度投票且至少80ms累计音高支持。原transcribe_monophonic默认未改。新增5测试先RED后GREEN，补片首片尾边界，共113测试通过。
+- 正式同音高50ms/.9995/.14：原18TP/51pred/36ref F141.38；仅置信度最佳C1/C2为18/55/36 F139.56（退步）；仅起音O2为18/37/36 F149.32；组合C3-O2为20/39/36 F153.33，FP19/FN16，+11.95pp。C3参数high.2/low.05/128ms；新增8标准索引命中、丢原6，净+2，不能说各处都提高。阶段是消融对照，不是根据评分不断调参。
+- 新六轨385/533/494 F174.98，原73.72；其他5轨和conductor消息/tick完全一致。原鼓85.56、钢琴B和旧贝斯/六轨文件哈希不变。新研究选用config/bass-research.lock.json，旧config/drums-selected.lock.json保留为历史基线，不覆盖。默认通用runner未静默启用新研究逻辑。
+- outputs/bass-refinement/含登记/源码入口/12候选清单/逐步评分/36标准逐音变化CSV/JSON/报告；outputs/runs/bass-refinement/交付含原版/置信度/起音/组合4份贝斯MID/WAV及仅换贝斯六轨MID/WAV。WAV是采样库MIDI-only，未播放/人工听辨。CLI仅在现有哈希缓存下重建，不是任意新歌完整入口；真实临时12候选MID/证据JSON字节重建一致，错误输入/已有输出拒绝通过。
+- 仍未达标：19FP/16FN，开发样本反复选择有过拟合风险；投票窗可跨下一起音、有邻音竞争，累计支持不等于连续稳定80ms。起音F1不检验力度/结束时间。待冻结后独立只读验证、GitHub同步；不在本轮继续其他分离模型或八度修正。

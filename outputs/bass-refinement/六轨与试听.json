@@ -1,0 +1,86 @@
+{
+  "source_six_sha256": "a375592ab6268d71bea976831c4ddc5575a6a4cb9cdc7814d2f913b830bc809d",
+  "prediction_sha256": "00f1a266aec68b7b3bea84d9cce9b97154ec0acbb95a36a2ee145eb46fd46042",
+  "overall": {
+    "matched": 385,
+    "predicted": 533,
+    "reference": 494,
+    "f1": 0.7497565725413826
+  },
+  "per_category": {
+    "piano": {
+      "matched": 268,
+      "reference": 269,
+      "predicted": 269,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "matched": 8,
+      "reference": 24,
+      "predicted": 70,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "matched": 6,
+      "reference": 64,
+      "predicted": 23,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "matched": 20,
+      "reference": 36,
+      "predicted": 39,
+      "f1": 0.5333333333333333
+    },
+    "drums": {
+      "matched": 80,
+      "reference": 94,
+      "predicted": 93,
+      "f1": 0.8556149732620321
+    },
+    "strings": {
+      "matched": 3,
+      "reference": 7,
+      "predicted": 39,
+      "f1": 0.13043478260869565
+    }
+  },
+  "other_five_tracks_and_conductor_exact_messages_unchanged": true,
+  "renders": {
+    "00-原贝斯-41.38": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 20.454230382965797,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "01-仅置信度-39.56": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 20.46590900735154,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "02-仅起音-49.32": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.53320216025328,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "03-贝斯优化版-53.33": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.025338193596017,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "六轨-仅替换贝斯": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 14.716494861876868,
+      "source": "MIDI_only_no_original_audio"
+    }
+  }
+}

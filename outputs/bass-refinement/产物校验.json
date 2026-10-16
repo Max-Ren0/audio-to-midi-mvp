@@ -1,0 +1,312 @@
+{
+  "files": [
+    {
+      "path": "config/bass-research.lock.json",
+      "bytes": 1460,
+      "sha256": "b813647d3d12f5f7b877774f54c45ab2e5545ac458614cf9caae1d7ddaefb5f7"
+    },
+    {
+      "path": "outputs/bass-refinement/generate.py",
+      "bytes": 4859,
+      "sha256": "9315b723b686d63b5e7792a62d45efb21513c6e9ae4d6f2a1c555c991fa32309"
+    },
+    {
+      "path": "outputs/bass-refinement/package.py",
+      "bytes": 4377,
+      "sha256": "0b2c6e4c286add27f72bd04f064ae6b5fd0a6a56d03220db0a16c80564f914a5"
+    },
+    {
+      "path": "outputs/bass-refinement/score.py",
+      "bytes": 3348,
+      "sha256": "c625f4941ace87a318fd728354b61ce528d1d5fd31724dc7ff5a42ee621fd0ee"
+    },
+    {
+      "path": "outputs/bass-refinement/write_report.py",
+      "bytes": 8018,
+      "sha256": "50bc429077edacc39095df7235a51598083007a7282423d0b545e73c04473bd1"
+    },
+    {
+      "path": "outputs/bass-refinement/候选清单.json",
+      "bytes": 7909,
+      "sha256": "64bfcc52acfc0edc369dfa970512b0e987efc00788d01293679791709d053847"
+    },
+    {
+      "path": "outputs/bass-refinement/六轨与试听.json",
+      "bytes": 2312,
+      "sha256": "aef64c76ea0b671d2b444a13f9a1b0f4f90463c98f7b89f6d75cb0f9f66352be"
+    },
+    {
+      "path": "outputs/bass-refinement/实施计划.md",
+      "bytes": 1479,
+      "sha256": "18a16158d45ba5cc0559ec75cf9291e282d0a803b6ebafc91f8283b2160149ca"
+    },
+    {
+      "path": "outputs/bass-refinement/实验登记.json",
+      "bytes": 2076,
+      "sha256": "f205b683718010ddb14817c93b94eaaff68d00f334d3f71b42962aafae57f123"
+    },
+    {
+      "path": "outputs/bass-refinement/逐步优化报告.md",
+      "bytes": 5625,
+      "sha256": "6724df8d3f46b3b0336b8b87ef3b8420ad07eb2050b250d0c0341935c6a48c99"
+    },
+    {
+      "path": "outputs/bass-refinement/逐步评分.json",
+      "bytes": 41784,
+      "sha256": "0128f83680f22b2c49283e56a731a1eb396c727fa8ace6983d3a72dc5e00c988"
+    },
+    {
+      "path": "outputs/bass-refinement/逐音变化.csv",
+      "bytes": 2636,
+      "sha256": "94c64a16bf1918d6fd5d72eddb47a5a39b904d554096f8a869f46565a8deac22"
+    },
+    {
+      "path": "outputs/bass-refinement/逐音变化.json",
+      "bytes": 33900,
+      "sha256": "b11a18f9b20d04e6099bb985e55a711f8208b9746f335d483f8d7b3047af3e5a"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O1.json",
+      "bytes": 43957,
+      "sha256": "9a76e7fdb59e6ffa5a8b53913bfe6818c04acc4e6b7accb5d78a88281df5ae8d"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O1.mid",
+      "bytes": 521,
+      "sha256": "d6fd201afc8f4b0a80236cd29e031063ad99e6a7101e153aa37b1b7b368cb336"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O1.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O2.json",
+      "bytes": 44484,
+      "sha256": "1121632d62c86a4feeeb9180eeaf9bb0c4be050461d962ef7472e6a3ddcdc23a"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O2.mid",
+      "bytes": 526,
+      "sha256": "b12328dda8e51c6f35af3ba6ef2660e65ea47974d0b1820b08bc2fb7e9fcd198"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1-O2.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1.json",
+      "bytes": 46820,
+      "sha256": "210792d29c4fc34fc4a8ad6940e97cf48c2075ca3f084d32c11bfaa656ffa670"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1.mid",
+      "bytes": 663,
+      "sha256": "242843db9fd312fa5f3a6373f7b2ad90f2b34e5dc121cac8c9045a2b77c09514"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C1.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O1.json",
+      "bytes": 43957,
+      "sha256": "4cebc36e657912c833fc69d4bf0e273783690b4b2cc99d1926821cf290a1b5cd"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O1.mid",
+      "bytes": 521,
+      "sha256": "d6fd201afc8f4b0a80236cd29e031063ad99e6a7101e153aa37b1b7b368cb336"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O1.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O2.json",
+      "bytes": 44484,
+      "sha256": "e2dd5bc89c4be6e90b6b063582c4776faaa6950b3537e570f1b1336b19db50f7"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O2.mid",
+      "bytes": 526,
+      "sha256": "b12328dda8e51c6f35af3ba6ef2660e65ea47974d0b1820b08bc2fb7e9fcd198"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2-O2.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2.json",
+      "bytes": 46820,
+      "sha256": "512875c204e0135d4148242c2c5a6c278bb0cda78a3397fd456c476a037769f9"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2.mid",
+      "bytes": 663,
+      "sha256": "242843db9fd312fa5f3a6373f7b2ad90f2b34e5dc121cac8c9045a2b77c09514"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C2.npz",
+      "bytes": 1197,
+      "sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O1.json",
+      "bytes": 45085,
+      "sha256": "0e580ff3ee62468a0a5596241829bc5f825f60dcdc856ba2c2f5611f7b7a2391"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O1.mid",
+      "bytes": 529,
+      "sha256": "a8250fef5a68f36991eb2acd7c9201d15280593c045103a3bd2bfa83d8a54852"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O1.npz",
+      "bytes": 1227,
+      "sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O2.json",
+      "bytes": 45605,
+      "sha256": "4a4bc502d7a67ddac89c3baf61cb24b451f90da6b9608a91104ea559d50e963e"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O2.mid",
+      "bytes": 532,
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3-O2.npz",
+      "bytes": 1227,
+      "sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3.json",
+      "bytes": 48137,
+      "sha256": "7c9f0d86d53c5b2f40fde628d39247d16347cf09573a5cf0b3aa4f5130c122cc"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3.mid",
+      "bytes": 687,
+      "sha256": "75af70b5c44389ecb09da76fcec42467f1a87717bacfd997e5f62b078e34b0ca"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/C3.npz",
+      "bytes": 1227,
+      "sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O1.json",
+      "bytes": 25771,
+      "sha256": "a78ce850607c7734d8ade43692182f427c89fb99e60b140f3e4daed0965a86f8"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O1.mid",
+      "bytes": 513,
+      "sha256": "b5eb78b9991dfabfb385b2559568c4a09aee7fe009f5a7b6a063c482ddf599f4"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O1.npz",
+      "bytes": 1161,
+      "sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O2.json",
+      "bytes": 26253,
+      "sha256": "6feee35f3c88a10ca2c92c07f471a415c521499b5235e64e0fba3a4e4c03727b"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O2.mid",
+      "bytes": 517,
+      "sha256": "3d23aba58299e17969e75b494237915917e79a0eecb00447798e5f80af99d25d"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/O2.npz",
+      "bytes": 1161,
+      "sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/baseline.json",
+      "bytes": 28707,
+      "sha256": "d862eb045c548b3c26a505e98344cd261c6a542b427c98b4976d40b4335675cf"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/baseline.mid",
+      "bytes": 631,
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/candidates/baseline.npz",
+      "bytes": 1161,
+      "sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/00-原贝斯-41.38.mid",
+      "bytes": 631,
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/00-原贝斯-41.38.wav",
+      "bytes": 10853972,
+      "sha256": "b4ebc08bea884c8b269d348e72411ddbb3b2f81c335ab31e97e79a28f1bed491"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/01-仅置信度-39.56.mid",
+      "bytes": 663,
+      "sha256": "242843db9fd312fa5f3a6373f7b2ad90f2b34e5dc121cac8c9045a2b77c09514"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/01-仅置信度-39.56.wav",
+      "bytes": 10853972,
+      "sha256": "32635ca3a5ef0ba20736aaeb712bf6127526c24ad6d705c9e379f9f93a049750"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/02-仅起音-49.32.mid",
+      "bytes": 517,
+      "sha256": "3d23aba58299e17969e75b494237915917e79a0eecb00447798e5f80af99d25d"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/02-仅起音-49.32.wav",
+      "bytes": 10853972,
+      "sha256": "b83ee3143e9884084781486937ce74d6c9c31641ed95d76a3525934e2693fe3f"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/03-贝斯优化版-53.33.mid",
+      "bytes": 532,
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/03-贝斯优化版-53.33.wav",
+      "bytes": 10853972,
+      "sha256": "6e5206f5e0df0074718d7fcf474b0283b682dd24c71695ca531a7daf4e150c1d"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/六轨-仅替换贝斯.mid",
+      "bytes": 4572,
+      "sha256": "00f1a266aec68b7b3bea84d9cce9b97154ec0acbb95a36a2ee145eb46fd46042"
+    },
+    {
+      "path": "outputs/runs/bass-refinement/交付/六轨-仅替换贝斯.wav",
+      "bytes": 10853972,
+      "sha256": "45643f8a970b4c841cdd880936f3058a202171a5402d6357f2e3644c50250405"
+    },
+    {
+      "path": "src/audio_midi/bass_refinement.py",
+      "bytes": 4706,
+      "sha256": "d679f7491a0f1350d74a8d870679e7b4623e7b8335e4d023fdb86dd441189602"
+    },
+    {
+      "path": "tests/test_bass_refinement.py",
+      "bytes": 2769,
+      "sha256": "f364b306ea5a666d2fdd95aca473dbe76defdcb2a6c9431af48b2d953de06897"
+    }
+  ],
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "diagnostic_cache_manifest_sha256": "57f4d91dd9468f949df84a6a98f4d372d9a4361a280eeb2b16840277ab99952c",
+  "status": "freeze before independent verification; current 0–60 development only"
+}

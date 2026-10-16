@@ -1,0 +1,1546 @@
+{
+  "reference_manifest_sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732",
+  "ledger_sha256": "64bfcc52acfc0edc369dfa970512b0e987efc00788d01293679791709d053847",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375,
+    "tolerance": 0.05
+  },
+  "rows": [
+    {
+      "id": "baseline",
+      "confidence": "base",
+      "onset": "base",
+      "path": "outputs/runs/bass-refinement/candidates/baseline.mid",
+      "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0",
+      "predicted": 51,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/baseline.json",
+      "provenance_sha256": "d862eb045c548b3c26a505e98344cd261c6a542b427c98b4976d40b4335675cf",
+      "frame_path": "outputs/runs/bass-refinement/candidates/baseline.npz",
+      "frame_sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580",
+      "matched": 18,
+      "reference": 36,
+      "extra": 33,
+      "missed": 18,
+      "precision": 0.35294117647058826,
+      "recall": 0.5,
+      "f1": 0.41379310344827586,
+      "median_abs_onset_error_ms": 26.314389583323994,
+      "mean_nearest_baseline_onset_change": 0.0,
+      "matched_pairs": [
+        {
+          "reference_index": 4,
+          "prediction_index": 5,
+          "delta_ms": 28.34785416666996
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 11,
+          "delta_ms": 33.50965416667151
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 12,
+          "delta_ms": 40.70576250000357
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 14,
+          "delta_ms": -2.985799999997596
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 17,
+          "delta_ms": -21.338279166670304
+        },
+        {
+          "reference_index": 13,
+          "prediction_index": 20,
+          "delta_ms": 15.732720833327107
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 22,
+          "delta_ms": -38.73608333333323
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 25,
+          "delta_ms": 21.2990499999961
+        },
+        {
+          "reference_index": 23,
+          "prediction_index": 27,
+          "delta_ms": -44.946137500005534
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 30,
+          "delta_ms": 20.224916666663262
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 33,
+          "delta_ms": 24.06572083332037
+        },
+        {
+          "reference_index": 27,
+          "prediction_index": 34,
+          "delta_ms": -33.758387500007814
+        },
+        {
+          "reference_index": 28,
+          "prediction_index": 38,
+          "delta_ms": -10.945091666684448
+        },
+        {
+          "reference_index": 29,
+          "prediction_index": 40,
+          "delta_ms": -37.383987500021476
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 42,
+          "delta_ms": 24.280924999978026
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 44,
+          "delta_ms": 29.271708333311608
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 48,
+          "delta_ms": -5.227925000021116
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 49,
+          "delta_ms": -35.50762500002236
+        }
+      ],
+      "gained_reference_indices": [],
+      "lost_reference_indices": []
+    },
+    {
+      "id": "O1",
+      "confidence": "base",
+      "onset": "O1",
+      "path": "outputs/runs/bass-refinement/candidates/O1.mid",
+      "sha256": "b5eb78b9991dfabfb385b2559568c4a09aee7fe009f5a7b6a063c482ddf599f4",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/O1.json",
+      "provenance_sha256": "a78ce850607c7734d8ade43692182f427c89fb99e60b140f3e4daed0965a86f8",
+      "frame_path": "outputs/runs/bass-refinement/candidates/O1.npz",
+      "frame_sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580",
+      "matched": 16,
+      "reference": 36,
+      "extra": 20,
+      "missed": 20,
+      "precision": 0.4444444444444444,
+      "recall": 0.4444444444444444,
+      "f1": 0.4444444444444444,
+      "median_abs_onset_error_ms": 32.37019166668986,
+      "mean_nearest_baseline_onset_change": 0.04389467592593083,
+      "matched_pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "delta_ms": 22.630687500000413
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 3,
+          "delta_ms": 42.239516666666255
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 7,
+          "delta_ms": 40.70576250000357
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 8,
+          "delta_ms": 49.63802083334201
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 9,
+          "delta_ms": 12.631387500007918
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 11,
+          "delta_ms": 26.554429166672833
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": 9.15662500000991
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 18,
+          "delta_ms": 38.69685416668034
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 20,
+          "delta_ms": 21.299050000017417
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 26,
+          "delta_ms": -8.209799999981726
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 30,
+          "delta_ms": 8.66373750002225
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 31,
+          "delta_ms": 29.27170833335424
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 32,
+          "delta_ms": 49.09004166669462
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 33,
+          "delta_ms": 35.468675000025485
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 34,
+          "delta_ms": 42.66478333336465
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 35,
+          "delta_ms": 44.66060416669393
+        }
+      ],
+      "gained_reference_indices": [
+        0,
+        2,
+        9,
+        18,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        6,
+        13,
+        23,
+        24,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "O2",
+      "confidence": "base",
+      "onset": "O2",
+      "path": "outputs/runs/bass-refinement/candidates/O2.mid",
+      "sha256": "3d23aba58299e17969e75b494237915917e79a0eecb00447798e5f80af99d25d",
+      "predicted": 37,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/O2.json",
+      "provenance_sha256": "6feee35f3c88a10ca2c92c07f471a415c521499b5235e64e0fba3a4e4c03727b",
+      "frame_path": "outputs/runs/bass-refinement/candidates/O2.npz",
+      "frame_sha256": "2562edea4fde33f245c91d94b890d9f35c194f402620dc893a86480528e46580",
+      "matched": 18,
+      "reference": 36,
+      "extra": 19,
+      "missed": 18,
+      "precision": 0.4864864864864865,
+      "recall": 0.5,
+      "f1": 0.4931506849315068,
+      "median_abs_onset_error_ms": 15.882170833332765,
+      "mean_nearest_baseline_onset_change": 0.05619369369369535,
+      "matched_pairs": [
+        {
+          "reference_index": 3,
+          "prediction_index": 5,
+          "delta_ms": -13.119595833332554
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 7,
+          "delta_ms": 16.851320833332295
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 8,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 9,
+          "delta_ms": -14.913020833333235
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 10,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 12,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 14,
+          "prediction_index": 15,
+          "delta_ms": -1.7294499999920276
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": -6.4605624999956035
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 17,
+          "delta_ms": -9.195854166662798
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 19,
+          "delta_ms": -9.935324999986506
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 23,
+          "delta_ms": -12.050604166653045
+        },
+        {
+          "reference_index": 25,
+          "prediction_index": 24,
+          "delta_ms": 12.138500000006047
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 30,
+          "delta_ms": -39.2289708333351
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 31,
+          "delta_ms": -18.621000000003107
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 33,
+          "delta_ms": -30.037041666659547
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 34,
+          "delta_ms": 35.46867500000417
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 35,
+          "delta_ms": -5.2279249999998
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 36,
+          "delta_ms": 44.66060416666551
+        }
+      ],
+      "gained_reference_indices": [
+        3,
+        9,
+        14,
+        18,
+        25,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        13,
+        23,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C1",
+      "confidence": "C1",
+      "onset": "base",
+      "path": "outputs/runs/bass-refinement/candidates/C1.mid",
+      "sha256": "242843db9fd312fa5f3a6373f7b2ad90f2b34e5dc121cac8c9045a2b77c09514",
+      "predicted": 55,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C1.json",
+      "provenance_sha256": "210792d29c4fc34fc4a8ad6940e97cf48c2075ca3f084d32c11bfaa656ffa670",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C1.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 18,
+      "reference": 36,
+      "extra": 37,
+      "missed": 18,
+      "precision": 0.32727272727272727,
+      "recall": 0.5,
+      "f1": 0.3956043956043956,
+      "median_abs_onset_error_ms": 25.417677083318324,
+      "mean_nearest_baseline_onset_change": 0.01946969696969961,
+      "matched_pairs": [
+        {
+          "reference_index": 4,
+          "prediction_index": 5,
+          "delta_ms": -20.585999999997995
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 12,
+          "delta_ms": 16.8513208333394
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 14,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 16,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 20,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 13,
+          "prediction_index": 22,
+          "delta_ms": -16.54280000000341
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 27,
+          "delta_ms": 47.88878333332747
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 28,
+          "delta_ms": -9.935325000000716
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 33,
+          "delta_ms": -12.050604166674361
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 36,
+          "delta_ms": 24.065720833313264
+        },
+        {
+          "reference_index": 27,
+          "prediction_index": 37,
+          "delta_ms": -33.75838750001492
+        },
+        {
+          "reference_index": 28,
+          "prediction_index": 41,
+          "delta_ms": -10.945091666691553
+        },
+        {
+          "reference_index": 29,
+          "prediction_index": 44,
+          "delta_ms": 27.16705416663956
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 46,
+          "delta_ms": 24.28092499997092
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 48,
+          "delta_ms": 29.271708333304503
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 51,
+          "delta_ms": 35.46867499997575
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 52,
+          "delta_ms": -21.88625833336033
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 53,
+          "delta_ms": -35.50762500002236
+        }
+      ],
+      "gained_reference_indices": [
+        21,
+        33
+      ],
+      "lost_reference_indices": [
+        15,
+        23
+      ]
+    },
+    {
+      "id": "C1-O1",
+      "confidence": "C1",
+      "onset": "O1",
+      "path": "outputs/runs/bass-refinement/candidates/C1-O1.mid",
+      "sha256": "d6fd201afc8f4b0a80236cd29e031063ad99e6a7101e153aa37b1b7b368cb336",
+      "predicted": 37,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C1-O1.json",
+      "provenance_sha256": "9a76e7fdb59e6ffa5a8b53913bfe6818c04acc4e6b7accb5d78a88281df5ae8d",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C1-O1.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 17,
+      "reference": 36,
+      "extra": 20,
+      "missed": 19,
+      "precision": 0.4594594594594595,
+      "recall": 0.4722222222222222,
+      "f1": 0.4657534246575342,
+      "median_abs_onset_error_ms": 35.468675000025485,
+      "mean_nearest_baseline_onset_change": 0.05306869369369788,
+      "matched_pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "delta_ms": 22.630687500000413
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 3,
+          "delta_ms": 42.239516666666255
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 7,
+          "delta_ms": 40.70576250000357
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 8,
+          "delta_ms": 49.63802083334201
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 9,
+          "delta_ms": 12.631387500007918
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 11,
+          "delta_ms": 26.554429166672833
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": 9.15662500000991
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 18,
+          "delta_ms": 38.69685416668034
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 20,
+          "delta_ms": 47.88878333334878
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 21,
+          "delta_ms": 21.299050000017417
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 27,
+          "delta_ms": -8.209799999981726
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 31,
+          "delta_ms": 8.66373750002225
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 32,
+          "delta_ms": 29.27170833335424
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 33,
+          "delta_ms": 49.09004166669462
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 34,
+          "delta_ms": 35.468675000025485
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 35,
+          "delta_ms": 42.66478333336465
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 36,
+          "delta_ms": 44.66060416669393
+        }
+      ],
+      "gained_reference_indices": [
+        0,
+        2,
+        9,
+        18,
+        21,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        6,
+        13,
+        23,
+        24,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C1-O2",
+      "confidence": "C1",
+      "onset": "O2",
+      "path": "outputs/runs/bass-refinement/candidates/C1-O2.mid",
+      "sha256": "b12328dda8e51c6f35af3ba6ef2660e65ea47974d0b1820b08bc2fb7e9fcd198",
+      "predicted": 38,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C1-O2.json",
+      "provenance_sha256": "1121632d62c86a4feeeb9180eeaf9bb0c4be050461d962ef7472e6a3ddcdc23a",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C1-O2.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 19,
+      "reference": 36,
+      "extra": 19,
+      "missed": 17,
+      "precision": 0.5,
+      "recall": 0.5277777777777778,
+      "f1": 0.5135135135135135,
+      "median_abs_onset_error_ms": 16.662258333319357,
+      "mean_nearest_baseline_onset_change": 0.0665021929824575,
+      "matched_pairs": [
+        {
+          "reference_index": 3,
+          "prediction_index": 5,
+          "delta_ms": -13.119595833332554
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 7,
+          "delta_ms": 16.851320833332295
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 8,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 9,
+          "delta_ms": -14.913020833333235
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 10,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 12,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 14,
+          "prediction_index": 15,
+          "delta_ms": -1.7294499999920276
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": -6.4605624999956035
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 17,
+          "delta_ms": -9.195854166662798
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 19,
+          "delta_ms": -16.662258333319357
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 20,
+          "delta_ms": -9.9353249999794
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 24,
+          "delta_ms": -12.05060416664594
+        },
+        {
+          "reference_index": 25,
+          "prediction_index": 25,
+          "delta_ms": 12.138500000020258
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 31,
+          "delta_ms": -39.228970833320886
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 32,
+          "delta_ms": -18.620999999988896
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 34,
+          "delta_ms": -30.037041666645337
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 35,
+          "delta_ms": 35.46867500001838
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 36,
+          "delta_ms": -5.227924999985589
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 37,
+          "delta_ms": 44.66060416667972
+        }
+      ],
+      "gained_reference_indices": [
+        3,
+        9,
+        14,
+        18,
+        21,
+        25,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        13,
+        23,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C2",
+      "confidence": "C2",
+      "onset": "base",
+      "path": "outputs/runs/bass-refinement/candidates/C2.mid",
+      "sha256": "242843db9fd312fa5f3a6373f7b2ad90f2b34e5dc121cac8c9045a2b77c09514",
+      "predicted": 55,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C2.json",
+      "provenance_sha256": "512875c204e0135d4148242c2c5a6c278bb0cda78a3397fd456c476a037769f9",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C2.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 18,
+      "reference": 36,
+      "extra": 37,
+      "missed": 18,
+      "precision": 0.32727272727272727,
+      "recall": 0.5,
+      "f1": 0.3956043956043956,
+      "median_abs_onset_error_ms": 25.417677083318324,
+      "mean_nearest_baseline_onset_change": 0.01946969696969961,
+      "matched_pairs": [
+        {
+          "reference_index": 4,
+          "prediction_index": 5,
+          "delta_ms": -20.585999999997995
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 12,
+          "delta_ms": 16.8513208333394
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 14,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 16,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 20,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 13,
+          "prediction_index": 22,
+          "delta_ms": -16.54280000000341
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 27,
+          "delta_ms": 47.88878333332747
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 28,
+          "delta_ms": -9.935325000000716
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 33,
+          "delta_ms": -12.050604166674361
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 36,
+          "delta_ms": 24.065720833313264
+        },
+        {
+          "reference_index": 27,
+          "prediction_index": 37,
+          "delta_ms": -33.75838750001492
+        },
+        {
+          "reference_index": 28,
+          "prediction_index": 41,
+          "delta_ms": -10.945091666691553
+        },
+        {
+          "reference_index": 29,
+          "prediction_index": 44,
+          "delta_ms": 27.16705416663956
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 46,
+          "delta_ms": 24.28092499997092
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 48,
+          "delta_ms": 29.271708333304503
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 51,
+          "delta_ms": 35.46867499997575
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 52,
+          "delta_ms": -21.88625833336033
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 53,
+          "delta_ms": -35.50762500002236
+        }
+      ],
+      "gained_reference_indices": [
+        21,
+        33
+      ],
+      "lost_reference_indices": [
+        15,
+        23
+      ]
+    },
+    {
+      "id": "C2-O1",
+      "confidence": "C2",
+      "onset": "O1",
+      "path": "outputs/runs/bass-refinement/candidates/C2-O1.mid",
+      "sha256": "d6fd201afc8f4b0a80236cd29e031063ad99e6a7101e153aa37b1b7b368cb336",
+      "predicted": 37,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C2-O1.json",
+      "provenance_sha256": "4cebc36e657912c833fc69d4bf0e273783690b4b2cc99d1926821cf290a1b5cd",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C2-O1.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 17,
+      "reference": 36,
+      "extra": 20,
+      "missed": 19,
+      "precision": 0.4594594594594595,
+      "recall": 0.4722222222222222,
+      "f1": 0.4657534246575342,
+      "median_abs_onset_error_ms": 35.468675000025485,
+      "mean_nearest_baseline_onset_change": 0.05306869369369788,
+      "matched_pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "delta_ms": 22.630687500000413
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 3,
+          "delta_ms": 42.239516666666255
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 7,
+          "delta_ms": 40.70576250000357
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 8,
+          "delta_ms": 49.63802083334201
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 9,
+          "delta_ms": 12.631387500007918
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 11,
+          "delta_ms": 26.554429166672833
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": 9.15662500000991
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 18,
+          "delta_ms": 38.69685416668034
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 20,
+          "delta_ms": 47.88878333334878
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 21,
+          "delta_ms": 21.299050000017417
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 27,
+          "delta_ms": -8.209799999981726
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 31,
+          "delta_ms": 8.66373750002225
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 32,
+          "delta_ms": 29.27170833335424
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 33,
+          "delta_ms": 49.09004166669462
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 34,
+          "delta_ms": 35.468675000025485
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 35,
+          "delta_ms": 42.66478333336465
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 36,
+          "delta_ms": 44.66060416669393
+        }
+      ],
+      "gained_reference_indices": [
+        0,
+        2,
+        9,
+        18,
+        21,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        6,
+        13,
+        23,
+        24,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C2-O2",
+      "confidence": "C2",
+      "onset": "O2",
+      "path": "outputs/runs/bass-refinement/candidates/C2-O2.mid",
+      "sha256": "b12328dda8e51c6f35af3ba6ef2660e65ea47974d0b1820b08bc2fb7e9fcd198",
+      "predicted": 38,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C2-O2.json",
+      "provenance_sha256": "e2dd5bc89c4be6e90b6b063582c4776faaa6950b3537e570f1b1336b19db50f7",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C2-O2.npz",
+      "frame_sha256": "8bcaa53ffbe310b438c8917944fc8b4a4637a3e4ca1fcd77f18f1ceddddeef3b",
+      "matched": 19,
+      "reference": 36,
+      "extra": 19,
+      "missed": 17,
+      "precision": 0.5,
+      "recall": 0.5277777777777778,
+      "f1": 0.5135135135135135,
+      "median_abs_onset_error_ms": 16.662258333319357,
+      "mean_nearest_baseline_onset_change": 0.0665021929824575,
+      "matched_pairs": [
+        {
+          "reference_index": 3,
+          "prediction_index": 5,
+          "delta_ms": -13.119595833332554
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 7,
+          "delta_ms": 16.851320833332295
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 8,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 9,
+          "delta_ms": -14.913020833333235
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 10,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 12,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 14,
+          "prediction_index": 15,
+          "delta_ms": -1.7294499999920276
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 16,
+          "delta_ms": -6.4605624999956035
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 17,
+          "delta_ms": -9.195854166662798
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 19,
+          "delta_ms": -16.662258333319357
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 20,
+          "delta_ms": -9.9353249999794
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 24,
+          "delta_ms": -12.05060416664594
+        },
+        {
+          "reference_index": 25,
+          "prediction_index": 25,
+          "delta_ms": 12.138500000020258
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 31,
+          "delta_ms": -39.228970833320886
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 32,
+          "delta_ms": -18.620999999988896
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 34,
+          "delta_ms": -30.037041666645337
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 35,
+          "delta_ms": 35.46867500001838
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 36,
+          "delta_ms": -5.227924999985589
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 37,
+          "delta_ms": 44.66060416667972
+        }
+      ],
+      "gained_reference_indices": [
+        3,
+        9,
+        14,
+        18,
+        21,
+        25,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        13,
+        23,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C3",
+      "confidence": "C3",
+      "onset": "base",
+      "path": "outputs/runs/bass-refinement/candidates/C3.mid",
+      "sha256": "75af70b5c44389ecb09da76fcec42467f1a87717bacfd997e5f62b078e34b0ca",
+      "predicted": 58,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C3.json",
+      "provenance_sha256": "7c9f0d86d53c5b2f40fde628d39247d16347cf09573a5cf0b3aa4f5130c122cc",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C3.npz",
+      "frame_sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46",
+      "matched": 18,
+      "reference": 36,
+      "extra": 40,
+      "missed": 18,
+      "precision": 0.3103448275862069,
+      "recall": 0.5,
+      "f1": 0.3829787234042553,
+      "median_abs_onset_error_ms": 27.417422916659717,
+      "mean_nearest_baseline_onset_change": 0.027298850574715518,
+      "matched_pairs": [
+        {
+          "reference_index": 4,
+          "prediction_index": 5,
+          "delta_ms": -36.20318749999818
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 12,
+          "delta_ms": -15.424199999998223
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 14,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 20,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 13,
+          "prediction_index": 22,
+          "delta_ms": -32.15998750000182
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 25,
+          "delta_ms": 9.1566249999957
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 28,
+          "delta_ms": 47.88878333332747
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 29,
+          "delta_ms": -42.210845833331234
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 35,
+          "delta_ms": -27.667791666679875
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 39,
+          "delta_ms": -8.209800000017253
+        },
+        {
+          "reference_index": 27,
+          "prediction_index": 40,
+          "delta_ms": -33.75838750001492
+        },
+        {
+          "reference_index": 28,
+          "prediction_index": 44,
+          "delta_ms": -10.945091666691553
+        },
+        {
+          "reference_index": 29,
+          "prediction_index": 47,
+          "delta_ms": 27.16705416663956
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 49,
+          "delta_ms": 24.28092499997092
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 51,
+          "delta_ms": 29.271708333304503
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 54,
+          "delta_ms": 18.810341666636532
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 55,
+          "delta_ms": -21.886258333367437
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 56,
+          "delta_ms": -35.50762500002946
+        }
+      ],
+      "gained_reference_indices": [
+        21,
+        33
+      ],
+      "lost_reference_indices": [
+        10,
+        23
+      ]
+    },
+    {
+      "id": "C3-O1",
+      "confidence": "C3",
+      "onset": "O1",
+      "path": "outputs/runs/bass-refinement/candidates/C3-O1.mid",
+      "sha256": "a8250fef5a68f36991eb2acd7c9201d15280593c045103a3bd2bfa83d8a54852",
+      "predicted": 38,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C3-O1.json",
+      "provenance_sha256": "0e580ff3ee62468a0a5596241829bc5f825f60dcdc856ba2c2f5611f7b7a2391",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C3-O1.npz",
+      "frame_sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46",
+      "matched": 17,
+      "reference": 36,
+      "extra": 21,
+      "missed": 19,
+      "precision": 0.4473684210526316,
+      "recall": 0.4722222222222222,
+      "f1": 0.4594594594594595,
+      "median_abs_onset_error_ms": 35.46867500003259,
+      "mean_nearest_baseline_onset_change": 0.05838815789474173,
+      "matched_pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "delta_ms": 22.630687500000413
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 3,
+          "delta_ms": 42.239516666666255
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 7,
+          "delta_ms": 40.70576250000357
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 9,
+          "delta_ms": 49.63802083334912
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 10,
+          "delta_ms": 12.631387500015023
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 12,
+          "delta_ms": 26.554429166679938
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 17,
+          "delta_ms": 9.156625000017016
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 19,
+          "delta_ms": 38.696854166687444
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 21,
+          "delta_ms": 47.88878333335589
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 22,
+          "delta_ms": 21.299050000024522
+        },
+        {
+          "reference_index": 26,
+          "prediction_index": 28,
+          "delta_ms": -8.20979999997462
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 32,
+          "delta_ms": 8.663737500029356
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 33,
+          "delta_ms": 29.271708333361346
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 34,
+          "delta_ms": 49.09004166670172
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 35,
+          "delta_ms": 35.46867500003259
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 36,
+          "delta_ms": 42.66478333337176
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 37,
+          "delta_ms": 44.660604166701035
+        }
+      ],
+      "gained_reference_indices": [
+        0,
+        2,
+        9,
+        18,
+        21,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        6,
+        13,
+        23,
+        24,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "id": "C3-O2",
+      "confidence": "C3",
+      "onset": "O2",
+      "path": "outputs/runs/bass-refinement/candidates/C3-O2.mid",
+      "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23",
+      "predicted": 39,
+      "provenance_path": "outputs/runs/bass-refinement/candidates/C3-O2.json",
+      "provenance_sha256": "4a4bc502d7a67ddac89c3baf61cb24b451f90da6b9608a91104ea559d50e963e",
+      "frame_path": "outputs/runs/bass-refinement/candidates/C3-O2.npz",
+      "frame_sha256": "c3119452576eed54399b7b4be20b0e498662b205af8079f6bfce067d61245b46",
+      "matched": 20,
+      "reference": 36,
+      "extra": 19,
+      "missed": 16,
+      "precision": 0.5128205128205128,
+      "recall": 0.5555555555555556,
+      "f1": 0.5333333333333333,
+      "median_abs_onset_error_ms": 16.75678958332938,
+      "mean_nearest_baseline_onset_change": 0.06522435897436064,
+      "matched_pairs": [
+        {
+          "reference_index": 3,
+          "prediction_index": 5,
+          "delta_ms": -13.119595833332554
+        },
+        {
+          "reference_index": 6,
+          "prediction_index": 7,
+          "delta_ms": 16.851320833332295
+        },
+        {
+          "reference_index": 7,
+          "prediction_index": 8,
+          "delta_ms": 40.70576249999647
+        },
+        {
+          "reference_index": 9,
+          "prediction_index": 9,
+          "delta_ms": -14.913020833333235
+        },
+        {
+          "reference_index": 10,
+          "prediction_index": 10,
+          "delta_ms": -35.26132083333522
+        },
+        {
+          "reference_index": 11,
+          "prediction_index": 12,
+          "delta_ms": 26.554429166665727
+        },
+        {
+          "reference_index": 13,
+          "prediction_index": 15,
+          "delta_ms": 32.39105416666632
+        },
+        {
+          "reference_index": 14,
+          "prediction_index": 16,
+          "delta_ms": -1.729449999999133
+        },
+        {
+          "reference_index": 15,
+          "prediction_index": 17,
+          "delta_ms": -6.460562500002709
+        },
+        {
+          "reference_index": 18,
+          "prediction_index": 18,
+          "delta_ms": -9.195854166669903
+        },
+        {
+          "reference_index": 21,
+          "prediction_index": 20,
+          "delta_ms": -16.662258333326463
+        },
+        {
+          "reference_index": 22,
+          "prediction_index": 21,
+          "delta_ms": -9.935324999993611
+        },
+        {
+          "reference_index": 24,
+          "prediction_index": 25,
+          "delta_ms": -12.050604166653045
+        },
+        {
+          "reference_index": 25,
+          "prediction_index": 26,
+          "delta_ms": 12.138500000013153
+        },
+        {
+          "reference_index": 30,
+          "prediction_index": 32,
+          "delta_ms": -39.22897083332799
+        },
+        {
+          "reference_index": 31,
+          "prediction_index": 33,
+          "delta_ms": -18.620999999996002
+        },
+        {
+          "reference_index": 32,
+          "prediction_index": 35,
+          "delta_ms": -30.037041666652442
+        },
+        {
+          "reference_index": 33,
+          "prediction_index": 36,
+          "delta_ms": 35.468675000011274
+        },
+        {
+          "reference_index": 34,
+          "prediction_index": 37,
+          "delta_ms": -5.227924999992695
+        },
+        {
+          "reference_index": 35,
+          "prediction_index": 38,
+          "delta_ms": 44.66060416667261
+        }
+      ],
+      "gained_reference_indices": [
+        3,
+        9,
+        14,
+        18,
+        21,
+        25,
+        32,
+        33
+      ],
+      "lost_reference_indices": [
+        4,
+        23,
+        26,
+        27,
+        28,
+        29
+      ]
+    }
+  ],
+  "stage_best": {
+    "baseline": "baseline",
+    "confidence_only_best": "C1",
+    "onset_only_best": "O2",
+    "combined_best": "C3-O2"
+  },
+  "selected": "C3-O2",
+  "caveat": "Seen development reference arrangement; no new-song/generalization or studio-truth claim."
+}

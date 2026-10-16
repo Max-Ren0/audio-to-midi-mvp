@@ -1,0 +1,31 @@
+{
+  "status": "research selected on seen development excerpt; not production or commercial approval",
+  "recipe": "extend_confidence(high=.2,low=.05,extension=.128) -> bounded_backtrack(.096) -> attack_led_notes(.32,.08,.08)",
+  "implementation": "src/audio_midi/bass_refinement.py",
+  "implementation_sha256": "d679f7491a0f1350d74a8d870679e7b4623e7b8335e4d023fdb86dd441189602",
+  "selected_candidate": "C3-O2",
+  "source_ledger": "outputs/bass-refinement/候选清单.json",
+  "source_ledger_sha256": "64bfcc52acfc0edc369dfa970512b0e987efc00788d01293679791709d053847",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "baseline_bass": {
+    "path": "outputs/runs/v01/development/单轨/bass.mid",
+    "sha256": "2d6443a2bb4735204d1c5e3060382afd07ff2b79ea4030a67b366d74a99267e0"
+  },
+  "selected_bass": {
+    "path": "outputs/runs/bass-refinement/交付/03-贝斯优化版-53.33.mid",
+    "sha256": "892f29b02a478f502a17b277111b1c63a38dbba3c53123b4fdf6eda633af9d23"
+  },
+  "selected_six_track": {
+    "path": "outputs/runs/bass-refinement/交付/六轨-仅替换贝斯.mid",
+    "sha256": "00f1a266aec68b7b3bea84d9cce9b97154ec0acbb95a36a2ee145eb46fd46042"
+  },
+  "score": {
+    "matched": 20,
+    "predicted": 39,
+    "reference": 36,
+    "extra": 19,
+    "missed": 16,
+    "f1": 0.5333333333333333
+  },
+  "limits": "Cached 0–60 research rebuild; original default pYIN untouched; no 60–120 or new-song validation."
+}

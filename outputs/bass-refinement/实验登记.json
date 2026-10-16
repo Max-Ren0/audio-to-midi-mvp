@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-17",
+  "scope": "current 0–60 development only; fixed Demucs bass and cached pYIN; no 60–120",
+  "baseline": "config/drums-selected.lock.json bass_midi",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "frame_manifest": "outputs/bass-diagnostics/来源与产物校验.json",
+  "confidence_candidates": [
+    {"id": "C1", "high": 0.2, "low": 0.1, "extension_seconds": 0.064},
+    {"id": "C2", "high": 0.2, "low": 0.1, "extension_seconds": 0.128},
+    {"id": "C3", "high": 0.2, "low": 0.05, "extension_seconds": 0.128}
+  ],
+  "onset_candidates": [
+    {"id": "O1", "method": "attack-led weighted pitch voting", "lookahead_seconds": 0.32, "minimum_pitch_support_seconds": 0.08, "minimum_attack_spacing_seconds": 0.08},
+    {"id": "O2", "method": "O1 with bounded local onset-envelope minimum backtracking", "maximum_backtrack_seconds": 0.096, "lookahead_seconds": 0.32, "minimum_pitch_support_seconds": 0.08, "minimum_attack_spacing_seconds": 0.08}
+  ],
+  "stages": ["baseline", "C1/C2/C3 separately", "O1/O2 separately on baseline frames", "all 3 confidence x 2 onset combinations"],
+  "maximum_candidates": 12,
+  "evaluation": "same pitch 50ms maximum one-to-one; standard=prediction*.9995+.14; fixed 36 reference events; score written after all candidates generated",
+  "selection": "maximum onset F1 on disclosed seen development; ties fewer FP then smaller onset change from baseline; keep original if no improvement",
+  "invariants": ["no reference passed into generation", "no global shift optimization", "no pitch relabel or octave edits", "no other five tracks changed", "no new separation/pYIN/model inference or paid API"],
+  "outputs": ["all 12 MIDI and event provenance", "stepwise scores and matched-event gains/losses", "representative MIDI-rendered WAV", "selected bass and six-track only-bass replacement", "report/hashes/independent verification"],
+  "limits": "CPU2; no dependency installation; preserve existing files; any post-score expansion requires a new separately disclosed experiment"
+}
