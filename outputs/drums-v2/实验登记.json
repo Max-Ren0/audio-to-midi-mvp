@@ -45,22 +45,32 @@
       "id": "yodo-probe15",
       "status": "failed_preflight_before_model_load",
       "input": "work/drums/sw-probe15.wav",
-      "purpose": "11-class detector, unchanged author class→GM mapping, CPU OpenCV backend; no reference",
+      "purpose": "11-class detector, unchanged author class\u2192GM mapping, CPU OpenCV backend; no reference",
       "attempts": 2,
       "failure": "FFT validation used mixed float32/complex128: ~1e-5 error; promote signal tofloat64 matches direct dot ~1e-13",
       "failed_script_sha256": "3d7d909e7f5277078ce0729eafc0babf011b10c5b6d234dc75e6bfd9ba36cb26"
     },
     {
       "id": "yodo-sw-full60",
-      "status": "registered",
+      "status": "completed_zero_detections",
       "input": "work/two-methods/sw-full/drums.wav",
-      "purpose": "11-class detector, unchanged author class→GM mapping, CPU OpenCV backend; no reference"
+      "purpose": "11-class detector, unchanged author class\u2192GM mapping, CPU OpenCV backend; no reference",
+      "run": {
+        "peak_memory_bytes": 1062240256,
+        "attempts": 1,
+        "elapsed_seconds": 29.80659620899678
+      }
     },
     {
       "id": "yodo-demucs-full60",
-      "status": "registered",
-      "input": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/drums.wav",
-      "purpose": "11-class detector, unchanged author class→GM mapping, CPU OpenCV backend; no reference"
+      "status": "completed_zero_detections",
+      "input": "work/new/stems/htdemucs_6s/\u674e\u8363\u6d69 - \u4e0d\u5c06\u5c31-[AudioTrimmer.com]/drums.wav",
+      "purpose": "11-class detector, unchanged author class\u2192GM mapping, CPU OpenCV backend; no reference",
+      "run": {
+        "peak_memory_bytes": 1175814144,
+        "attempts": 1,
+        "elapsed_seconds": 29.79655124999408
+      }
     },
     {
       "id": "yodo-probe15-corrected",
@@ -78,6 +88,39 @@
         "peak_memory_bytes": 1293385728,
         "attempts": 1,
         "elapsed_seconds": 8.250053957999626
+      }
+    },
+    {
+      "id": "idm-probe15",
+      "input": "work/drums/sw-probe15.wav",
+      "status": "passed",
+      "purpose": "official checkpoint strict encoder only, nine classes, sigmoid logits, no reference",
+      "run": {
+        "peak_memory_bytes": 403685376,
+        "attempts": 1,
+        "elapsed_seconds": 2.125749624996388
+      }
+    },
+    {
+      "id": "idm-sw-full60",
+      "input": "work/two-methods/sw-full/drums.wav",
+      "status": "passed",
+      "purpose": "official checkpoint strict encoder only, nine classes, sigmoid logits, no reference",
+      "run": {
+        "peak_memory_bytes": 660848640,
+        "attempts": 1,
+        "elapsed_seconds": 2.0891405410002335
+      }
+    },
+    {
+      "id": "idm-demucs-full60",
+      "input": "work/new/stems/htdemucs_6s/\u674e\u8363\u6d69 - \u4e0d\u5c06\u5c31-[AudioTrimmer.com]/drums.wav",
+      "status": "passed",
+      "purpose": "official checkpoint strict encoder only, nine classes, sigmoid logits, no reference",
+      "run": {
+        "peak_memory_bytes": 650084352,
+        "attempts": 1,
+        "elapsed_seconds": 1.821466415996838
       }
     }
   ],
@@ -113,6 +156,83 @@
   },
   "reference_policy": "reference used only for scoring and choosing whole parameter sets on disclosed development; no training, no per-note reference assembly, no candidate-specific time-shift optimization",
   "payment": "no new payment; credentials not currently configured",
-  "new_model_attempts": 8,
-  "attempt_count_note": "3 successful OAF +4 failed YODO preflight/shape attempts +1 successful YODO probe; full tasks in progress"
+  "new_model_attempts": 13,
+  "attempt_count_note": "3 OAF +4 failed YODO +3 corrected YODO +3 IDM",
+  "second_decode_grid": {
+    "snare_consensus": {
+      "anchor": "ADTOF threshold0.18",
+      "supports": [
+        "OAFsw0.35",
+        "OAFsw0.5",
+        "OAFdemucs0.35",
+        "OAFdemucs0.5"
+      ],
+      "tolerances": [
+        0.05,
+        0.08
+      ]
+    },
+    "hat_augmentation": {
+      "base": "ADTOF hat0.165",
+      "weak": "ADTOF hat0.11",
+      "supports": [
+        "SWYourMT3",
+        "mixYourMT3",
+        "OAFsw0.35"
+      ],
+      "tolerances": [
+        0.05,
+        0.08
+      ],
+      "base_preserved": true
+    },
+    "ride_support": {
+      "anchor": "mixYourMT3 key51",
+      "coarse_cymbal_thresholds": [
+        0.15,
+        0.225,
+        0.3
+      ],
+      "tolerances": [
+        0.03,
+        0.05,
+        0.08
+      ],
+      "pitch_remap": false
+    },
+    "selection": "reference-free event sources, score whole candidates only; disclosed seen development, no validation claims"
+  },
+  "third_decode_grid": {
+    "combined": "8 Cartesian choices from phase2 top2 whole components/group, no per-note reference selection",
+    "idm_thresholds": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "idm_peaks": "local maxima, 50ms minimum distance; original nine class representative GM36/38/42/46/49/51/41/48/45 mapping fixed before scoring"
+  },
+  "idm_decode_controls": {
+    "sources": [
+      "sw",
+      "demucs"
+    ],
+    "thresholds": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "modes": [
+      "solo",
+      "replace46-49",
+      "replace46",
+      "replace49"
+    ],
+    "source": "strict official encoder, peak separation50ms, no reference access"
+  },
+  "fourth_decode_grid": {
+    "kick36": "baseline or same-key Demucs/SW MT3 support +/-30/50/80ms",
+    "tom48": "baseline or coarse ADTOF47 tom-family support +/-30/50/80ms, keep48",
+    "cymbal55": "baseline or coarse ADTOF49 cymbal-family support +/-30/50/80ms, keep55",
+    "combination": "whole-group best after single factors, at most1 selected combination; no per-note GT edits"
+  }
 }

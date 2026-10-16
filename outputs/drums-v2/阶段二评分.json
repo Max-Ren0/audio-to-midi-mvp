@@ -1,0 +1,698 @@
+{
+  "scope": "0-60 seen development, one factor at a time, whole component chosen not per-note oracle",
+  "candidates": [
+    {
+      "id": "ride-cy0.15-tol0.03",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.15-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+      "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.15.json",
+        "support_sha256": "51d4cb07f9ff8b9e1f69af49d19c0f3ec3f978c8636261a19282912cd475f375",
+        "tolerance": 0.03
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.15-tol0.05",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.15-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+      "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.15.json",
+        "support_sha256": "51d4cb07f9ff8b9e1f69af49d19c0f3ec3f978c8636261a19282912cd475f375",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.15-tol0.08",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.15-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.15-tol0.08.json",
+      "component_sha256": "0f35ebf2694d510dc3ad4c0bb63b1ebe03c8689a7db0f5f0c9465c66fb64885b",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.15.json",
+        "support_sha256": "51d4cb07f9ff8b9e1f69af49d19c0f3ec3f978c8636261a19282912cd475f375",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.225-tol0.03",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.225-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.225-tol0.03.json",
+      "component_sha256": "38fb58b2eab25d7455434e804519702e8393e57206888073965f10a8b6a9abda",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.225.json",
+        "support_sha256": "615a3c6b0420585ab44c9b1b62b7697e87abde5e5921c25748e6aee52ec596f4",
+        "tolerance": 0.03
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.225-tol0.05",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.225-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.225-tol0.05.json",
+      "component_sha256": "69a064a0346ab3b5e81f14d9be7e1e7f611bf65ff0730515c2e7f362b270169e",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.225.json",
+        "support_sha256": "615a3c6b0420585ab44c9b1b62b7697e87abde5e5921c25748e6aee52ec596f4",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.225-tol0.08",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.225-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.225-tol0.08.json",
+      "component_sha256": "2e2646a2b2cc66c1410794d8eae0ee8bbc7fd7caa205986fe887993be7bccda5",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.225.json",
+        "support_sha256": "615a3c6b0420585ab44c9b1b62b7697e87abde5e5921c25748e6aee52ec596f4",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.3-tol0.03",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.3-tol0.03.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.3-tol0.03.json",
+      "component_sha256": "f999bb448f3f96db625da81f6e985c6714d680402a7198f5246f7a9ac5b1ec14",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.3.json",
+        "support_sha256": "6150292efa6348ada3b96a489728cd1e3545cd09669c5df9c77212437055c127",
+        "tolerance": 0.03
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.3-tol0.05",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.3-tol0.05.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.3-tol0.05.json",
+      "component_sha256": "3364b35888cdc9d20d75004c2f4179c8779c144dde5a71970393ec712ad8268d",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.3.json",
+        "support_sha256": "6150292efa6348ada3b96a489728cd1e3545cd09669c5df9c77212437055c127",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "ride-cy0.3-tol0.08",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-cy0.3-tol0.08.mid",
+      "sha256": "cd6b5549df72623163c02271fbfecf8b1f749b960198367a09ac2f41aee1230f",
+      "component_path": "work/drums-v2/components/ride-cy0.3-tol0.08.json",
+      "component_sha256": "7316d2822d222ce6b04824148f51de09d17e9387ad4b6daed1478bf4d10b8191",
+      "rule": {
+        "method": "original ride key/time supported by coarse cymbal49; no relabel",
+        "anchor": "work/v01/mix.json",
+        "anchor_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "support": "work/drums-v2/decoded/cymbal-0.3.json",
+        "support_sha256": "6150292efa6348ada3b96a489728cd1e3545cd09669c5df9c77212437055c127",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 96,
+        "matched": 80,
+        "extra": 16,
+        "missed": 14,
+        "precision": 0.8333333333333334,
+        "recall": 0.851063829787234,
+        "f1": 0.8421052631578947
+      }
+    },
+    {
+      "id": "snare-demucs-0.35-tol0.05",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-demucs-0.35-tol0.05.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+      "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-demucs-t0.35.json",
+        "support_sha256": "eb087fffffc81cc551b17929f1e87ed0373981a69d75860f49ae55af434ab7bd",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 79,
+        "extra": 15,
+        "missed": 15,
+        "precision": 0.8404255319148937,
+        "recall": 0.8404255319148937,
+        "f1": 0.8404255319148937
+      }
+    },
+    {
+      "id": "snare-demucs-0.35-tol0.08",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-demucs-0.35-tol0.08.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+      "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-demucs-t0.35.json",
+        "support_sha256": "eb087fffffc81cc551b17929f1e87ed0373981a69d75860f49ae55af434ab7bd",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 79,
+        "extra": 15,
+        "missed": 15,
+        "precision": 0.8404255319148937,
+        "recall": 0.8404255319148937,
+        "f1": 0.8404255319148937
+      }
+    },
+    {
+      "id": "snare-demucs-0.5-tol0.05",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-demucs-0.5-tol0.05.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "component_path": "work/drums-v2/components/snare-demucs-0.5-tol0.05.json",
+      "component_sha256": "7fc2a9029bbbb5820a7b2d41639590bdeacef510c4897d691be4c872347d56ee",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-demucs-t0.5.json",
+        "support_sha256": "662ec5a611ee187bd80485cdd9eca785947759b3eb1e0f352d80aee96c4369a3",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 79,
+        "extra": 15,
+        "missed": 15,
+        "precision": 0.8404255319148937,
+        "recall": 0.8404255319148937,
+        "f1": 0.8404255319148937
+      }
+    },
+    {
+      "id": "snare-demucs-0.5-tol0.08",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-demucs-0.5-tol0.08.mid",
+      "sha256": "8fed9da1ec78507759703770680d57f72718ad52094514ee56d3a633b345b965",
+      "component_path": "work/drums-v2/components/snare-demucs-0.5-tol0.08.json",
+      "component_sha256": "d549506c3029164b81bc6ee6a7a728755e7d31183c4d64c9b2da7c3363a76856",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-demucs-t0.5.json",
+        "support_sha256": "662ec5a611ee187bd80485cdd9eca785947759b3eb1e0f352d80aee96c4369a3",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 79,
+        "extra": 15,
+        "missed": 15,
+        "precision": 0.8404255319148937,
+        "recall": 0.8404255319148937,
+        "f1": 0.8404255319148937
+      }
+    },
+    {
+      "id": "snare-baseline",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/snare-baseline.json",
+      "component_sha256": "90de2d88b9ca8f7624a34ebec9db2e538967e4362d3468ad27cf9e5ae7d3103c",
+      "rule": {
+        "baseline_sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "hat-baseline",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/hat-baseline.json",
+      "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1",
+      "rule": {
+        "baseline_sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "ride-baseline",
+      "group": "ride",
+      "key": 51,
+      "path": "outputs/runs/drums-v2/stage2/ride-baseline.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/ride-baseline.json",
+      "component_sha256": "93fe60a3479ead656bffaf4518bf5ac93fcfa82b637f574ec6a51ae2b14f769c",
+      "rule": {
+        "baseline_sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "hat-sw-tol0.05",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-sw-tol0.05.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+      "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "outputs/runs/two-methods/sw-local-control/单轨/drums.mid",
+        "support_sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "hat-sw-tol0.08",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-sw-tol0.08.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/hat-sw-tol0.08.json",
+      "component_sha256": "943e923891cc8cea184216fbebb2940f048d585309c3d633f0bd91f7234203ae",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "outputs/runs/two-methods/sw-local-control/单轨/drums.mid",
+        "support_sha256": "4bdfcb4496289febbf2913990a57324a05fa68042a100a6baf4999d9d11e789f",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "hat-oaf-tol0.05",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-oaf-tol0.05.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/hat-oaf-tol0.05.json",
+      "component_sha256": "0fcb3da6fc4236269b1ff5c8de6445ed92ba383bd05f3af520dd65fd3d5a276e",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.35.json",
+        "support_sha256": "098fe96336088d9ddd9e8cc6af127569baed7f66746071f572665cc900df7940",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "hat-oaf-tol0.08",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-oaf-tol0.08.mid",
+      "sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+      "component_path": "work/drums-v2/components/hat-oaf-tol0.08.json",
+      "component_sha256": "be128ca980b81788dcdaa4dbe0e71a5e09c9430c9134d58d876cc7908bf80e93",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.35.json",
+        "support_sha256": "098fe96336088d9ddd9e8cc6af127569baed7f66746071f572665cc900df7940",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 79,
+        "extra": 16,
+        "missed": 15,
+        "precision": 0.8315789473684211,
+        "recall": 0.8404255319148937,
+        "f1": 0.8359788359788359
+      }
+    },
+    {
+      "id": "snare-sw-0.5-tol0.05",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-sw-0.5-tol0.05.mid",
+      "sha256": "badf03cb0645a61c107bbf37d8e50e9ad824ff3005a93c3bb09b56bbc83260ab",
+      "component_path": "work/drums-v2/components/snare-sw-0.5-tol0.05.json",
+      "component_sha256": "0287c4cbe0c625ac236ed59635310a0c31001c24e1041d1e7358f590831e0a37",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.5.json",
+        "support_sha256": "f4ad0ed4449d423700936c8edece9032415a561f431cd4b324b4107133242b55",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 98,
+        "matched": 80,
+        "extra": 18,
+        "missed": 14,
+        "precision": 0.8163265306122449,
+        "recall": 0.851063829787234,
+        "f1": 0.8333333333333334
+      }
+    },
+    {
+      "id": "snare-sw-0.5-tol0.08",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-sw-0.5-tol0.08.mid",
+      "sha256": "badf03cb0645a61c107bbf37d8e50e9ad824ff3005a93c3bb09b56bbc83260ab",
+      "component_path": "work/drums-v2/components/snare-sw-0.5-tol0.08.json",
+      "component_sha256": "a7e5b3ded128b41bca3ed20fd0f609d7a39ace437e44f49245253bca76a99a25",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.5.json",
+        "support_sha256": "f4ad0ed4449d423700936c8edece9032415a561f431cd4b324b4107133242b55",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 98,
+        "matched": 80,
+        "extra": 18,
+        "missed": 14,
+        "precision": 0.8163265306122449,
+        "recall": 0.851063829787234,
+        "f1": 0.8333333333333334
+      }
+    },
+    {
+      "id": "snare-sw-0.35-tol0.05",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-sw-0.35-tol0.05.mid",
+      "sha256": "ed859a3f8012dd1294c75987230a0fc40faa9721a187593aa2be748d115d1593",
+      "component_path": "work/drums-v2/components/snare-sw-0.35-tol0.05.json",
+      "component_sha256": "f2121899f0f12d9b7a8c89d0837a47b548f4d217b671cf949866a6abeeb08bad",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.35.json",
+        "support_sha256": "098fe96336088d9ddd9e8cc6af127569baed7f66746071f572665cc900df7940",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 99,
+        "matched": 80,
+        "extra": 19,
+        "missed": 14,
+        "precision": 0.8080808080808081,
+        "recall": 0.851063829787234,
+        "f1": 0.8290155440414507
+      }
+    },
+    {
+      "id": "snare-sw-0.35-tol0.08",
+      "group": "snare",
+      "key": 38,
+      "path": "outputs/runs/drums-v2/stage2/snare-sw-0.35-tol0.08.mid",
+      "sha256": "ed859a3f8012dd1294c75987230a0fc40faa9721a187593aa2be748d115d1593",
+      "component_path": "work/drums-v2/components/snare-sw-0.35-tol0.08.json",
+      "component_sha256": "482ee373554cbb690899d06f3df38d591a589c0129eef310ee0dacb55ff7f53b",
+      "rule": {
+        "method": "same-key greedy one-use consensus; keep original ADTOF anchor",
+        "anchor": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "anchor_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "support": "work/drums-v2/decoded/oaf-sw-t0.35.json",
+        "support_sha256": "098fe96336088d9ddd9e8cc6af127569baed7f66746071f572665cc900df7940",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 99,
+        "matched": 80,
+        "extra": 19,
+        "missed": 14,
+        "precision": 0.8080808080808081,
+        "recall": 0.851063829787234,
+        "f1": 0.8290155440414507
+      }
+    },
+    {
+      "id": "hat-mix-tol0.05",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-mix-tol0.05.mid",
+      "sha256": "51cee85531582e0cc63f3b6bb9372aa588a35593b11ba9dbaac8c2847b250d13",
+      "component_path": "work/drums-v2/components/hat-mix-tol0.05.json",
+      "component_sha256": "19e920b410efa5fda90d2f44367fb1d5a4e09d2b0c57938395ad1c1c6715ab92",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "work/v01/mix.json",
+        "support_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "tolerance": 0.05
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 97,
+        "matched": 79,
+        "extra": 18,
+        "missed": 15,
+        "precision": 0.8144329896907216,
+        "recall": 0.8404255319148937,
+        "f1": 0.8272251308900523
+      }
+    },
+    {
+      "id": "hat-mix-tol0.08",
+      "group": "hat",
+      "key": 42,
+      "path": "outputs/runs/drums-v2/stage2/hat-mix-tol0.08.mid",
+      "sha256": "51cee85531582e0cc63f3b6bb9372aa588a35593b11ba9dbaac8c2847b250d13",
+      "component_path": "work/drums-v2/components/hat-mix-tol0.08.json",
+      "component_sha256": "2b0db0444a835a41f0af3432617c40435b8fc06a53c919af48d80a265d6a4847",
+      "rule": {
+        "method": "preserve baseline; add novel weak events only if independent model corroborates; no replacing attacks",
+        "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+        "weak": "work/drums-v2/decoded/adtof-s0.18-h0.11.json",
+        "weak_sha256": "e0fcdc2d1963f6d0013c0aa26da62d21a0580a37537941ae2c2662ef3a399116",
+        "support": "work/v01/mix.json",
+        "support_sha256": "71d37e7c90ad6d589a252a1050a296b0f37900ebbe99262d1f89230a7791077a",
+        "tolerance": 0.08
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 97,
+        "matched": 79,
+        "extra": 18,
+        "missed": 15,
+        "precision": 0.8144329896907216,
+        "recall": 0.8404255319148937,
+        "f1": 0.8272251308900523
+      }
+    }
+  ]
+}

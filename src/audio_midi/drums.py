@@ -51,3 +51,11 @@ def detection_region(box: tuple[float,float,float,float], start: int, width: int
     x1=max(0,min(width,int((cx-bw/2)*width)));x2=max(0,min(width,int((cx+bw/2)*width)))
     y1=max(0,min(height,int((cy-bh/2)*height)));y2=max(0,min(height,int((cy+bh/2)*height)))
     return start+x1,start+x2,y1,y2
+
+
+def augment_supported_drums(base: list[NoteEvent], weak: list[NoteEvent], support: list[NoteEvent], tolerance: float, duration: float) -> list[NoteEvent]:
+    """Add corroborated weak hits without shifting or replacing existing attacks."""
+    if any(n.category!='drums' for n in base):raise ValueError('Drum-only base required')
+    corroborated=consensus_drums(weak,support,tolerance)
+    novel=[n for n in corroborated if not any(n.pitch==m.pitch and abs(n.onset-m.onset)<=.05+1e-9 for m in base)]
+    return clean_notes([*base,*novel],duration)

@@ -1,0 +1,207 @@
+{
+  "baseline": "outputs/runs/drums-v2/candidates/adtof-s0.3-h0.165__oaf-gated-ride.mid",
+  "baseline_sha256": "01db24bd6598e5597d212be2df6ffed032d9933d4461353d82277ba8ce10cbe1",
+  "selection_policy": "development whole-component shortlist, no reference notes read in generation",
+  "candidates": [
+    {
+      "id": "combo-1",
+      "path": "outputs/runs/drums-v2/stage3/combo-1.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ]
+    },
+    {
+      "id": "combo-2",
+      "path": "outputs/runs/drums-v2/stage3/combo-2.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ]
+    },
+    {
+      "id": "combo-3",
+      "path": "outputs/runs/drums-v2/stage3/combo-3.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ]
+    },
+    {
+      "id": "combo-4",
+      "path": "outputs/runs/drums-v2/stage3/combo-4.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ]
+    },
+    {
+      "id": "combo-5",
+      "path": "outputs/runs/drums-v2/stage3/combo-5.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ]
+    },
+    {
+      "id": "combo-6",
+      "path": "outputs/runs/drums-v2/stage3/combo-6.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ]
+    },
+    {
+      "id": "combo-7",
+      "path": "outputs/runs/drums-v2/stage3/combo-7.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ]
+    },
+    {
+      "id": "combo-8",
+      "path": "outputs/runs/drums-v2/stage3/combo-8.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ]
+    }
+  ]
+}

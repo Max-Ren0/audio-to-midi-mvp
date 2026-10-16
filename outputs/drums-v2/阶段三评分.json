@@ -1,0 +1,285 @@
+{
+  "scope": "0-60 seen development; fixed .9995 scale +.14s, same key onset50ms maximum matching",
+  "candidates": [
+    {
+      "id": "combo-1",
+      "path": "outputs/runs/drums-v2/stage3/combo-1.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-2",
+      "path": "outputs/runs/drums-v2/stage3/combo-2.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-3",
+      "path": "outputs/runs/drums-v2/stage3/combo-3.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-4",
+      "path": "outputs/runs/drums-v2/stage3/combo-4.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.05",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.05.json",
+          "component_sha256": "bf4968f484c5e562b839f7709876f7f205be3fd6edabdc9f5cda84fdd017e53a"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-5",
+      "path": "outputs/runs/drums-v2/stage3/combo-5.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-6",
+      "path": "outputs/runs/drums-v2/stage3/combo-6.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-baseline",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-baseline.json",
+          "component_sha256": "3e2183b032340c4005c98e1ec05e681aa8ae805f5ce469108766adcac5e48dd1"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-7",
+      "path": "outputs/runs/drums-v2/stage3/combo-7.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.03",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.03.json",
+          "component_sha256": "01d92f7aeb0253290f47b5ff82558c95cb866887bcbabb195ab3823a2aa347f5"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "combo-8",
+      "path": "outputs/runs/drums-v2/stage3/combo-8.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "components": [
+        {
+          "id": "snare-demucs-0.35-tol0.08",
+          "key": 38,
+          "component_path": "work/drums-v2/components/snare-demucs-0.35-tol0.08.json",
+          "component_sha256": "9a43a9f9e9ab8881f4c349d8fb82204cfc6c912b74c509c53dcca32815b417f8"
+        },
+        {
+          "id": "hat-sw-tol0.05",
+          "key": 42,
+          "component_path": "work/drums-v2/components/hat-sw-tol0.05.json",
+          "component_sha256": "abfb2bddb70c95e546237cef722110e7e6fddc917ee683800adf641f10e082ee"
+        },
+        {
+          "id": "ride-cy0.15-tol0.05",
+          "key": 51,
+          "component_path": "work/drums-v2/components/ride-cy0.15-tol0.05.json",
+          "component_sha256": "9f882f9b455bf9a049b9565a96d75126aa4336bae811a8d6d39097f6c0d38861"
+        }
+      ],
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    }
+  ]
+}

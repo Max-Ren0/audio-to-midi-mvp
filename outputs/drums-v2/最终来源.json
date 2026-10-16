@@ -1,0 +1,97 @@
+{
+  "baseline": "outputs/runs/drums-v2/stage3/combo-1.mid",
+  "baseline_sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+  "components": [
+    {
+      "id": "key36-demucs-tol0.03",
+      "key": 36,
+      "path": "outputs/runs/drums-v2/stage4/key36-demucs-tol0.03.mid",
+      "sha256": "95a14564cfe4df30dc74768d40e94e08092f92f8eeb387d26d23905ffcd8a664",
+      "component_path": "work/drums-v2/components/key36-demucs-tol0.03.json",
+      "component_sha256": "8e89ce7ff42be6bbcba7c36826c1c7f81f1cc1c112b6e014337de491d1bc0b34",
+      "rule": {
+        "anchor": "outputs/runs/drums-v2/stage3/combo-1.mid",
+        "anchor_sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+        "support": "outputs/runs/v01/development/\u5355\u8f68/drums.mid",
+        "support_sha256": "9d44e2e66491adc6ee49dc81a2247f82023e125e91f1342f84a54d9b7e9a0e27",
+        "tolerance": 0.03,
+        "family": null,
+        "method": "one-use greedy support, unchanged anchor"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 80,
+        "extra": 14,
+        "missed": 14,
+        "precision": 0.851063829787234,
+        "recall": 0.851063829787234,
+        "f1": 0.851063829787234
+      }
+    },
+    {
+      "id": "key48-baseline",
+      "key": 48,
+      "path": "outputs/runs/drums-v2/stage4/key48-baseline.mid",
+      "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+      "component_path": "work/drums-v2/components/key48-baseline.json",
+      "component_sha256": "c2943f317f6c047183cbe1971740bbce322aa2720a428ac32e3ae90a782fe593",
+      "rule": {
+        "baseline": "outputs/runs/drums-v2/stage3/combo-1.mid",
+        "sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 95,
+        "matched": 80,
+        "extra": 15,
+        "missed": 14,
+        "precision": 0.8421052631578947,
+        "recall": 0.851063829787234,
+        "f1": 0.8465608465608465
+      }
+    },
+    {
+      "id": "key55-coarse-tol0.03",
+      "key": 55,
+      "path": "outputs/runs/drums-v2/stage4/key55-coarse-tol0.03.mid",
+      "sha256": "84f28f4e4b5011c19267154d3fc643e5e924312d976c9cff92f4ac8ca21beb5c",
+      "component_path": "work/drums-v2/components/key55-coarse-tol0.03.json",
+      "component_sha256": "d8f8ea1b57102bd1502fd36551ff41e87bbd969a50d62c56626db548eb2cff83",
+      "rule": {
+        "anchor": "outputs/runs/drums-v2/stage3/combo-1.mid",
+        "anchor_sha256": "dee1d03c048228fdfc6b33fe538777f31dd42611d8c0ac465f4c19bee7d7be92",
+        "support": "work/drums-v2/decoded/adtof-s0.18-h0.165.json",
+        "support_sha256": "b964526a236e043a0a3ea3855b30269a0c4e0b35192710058308e6427daeffda",
+        "tolerance": 0.03,
+        "family": [
+          49,
+          51,
+          53,
+          55,
+          57,
+          59
+        ],
+        "method": "one-use greedy support, unchanged anchor"
+      },
+      "score": {
+        "reference": 94,
+        "predicted": 94,
+        "matched": 80,
+        "extra": 14,
+        "missed": 14,
+        "precision": 0.851063829787234,
+        "recall": 0.851063829787234,
+        "f1": 0.851063829787234
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "selected-combined",
+      "path": "outputs/runs/drums-v2/selected-combined.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d"
+    }
+  ],
+  "selection": "whole-components selected on seen development; final generation no reference notes"
+}

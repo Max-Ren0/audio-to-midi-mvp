@@ -40,6 +40,15 @@ def test_detection_geometry_rejects_invalid_dimensions():
     from audio_midi.drums import detection_region
     with pytest.raises(ValueError):detection_region((.5,.5,.2,.5),0,0,120)
 
+
+def test_supported_augmentation_preserves_existing_attacks_and_only_adds_new_hits():
+    from audio_midi.drums import augment_supported_drums
+    base=[note(42,1)]
+    weak=[note(42,.98),note(42,1.2),note(42,1.5)]
+    support=[note(42,1),note(42,1.21)]
+    result=augment_supported_drums(base,weak,support,.05,10)
+    assert [(n.pitch,n.onset) for n in result]==[(42,1),(42,1.2)]
+
 @pytest.mark.parametrize('tolerance',[-1,float('nan')])
 def test_consensus_rejects_invalid_tolerance(tolerance):
     from audio_midi.drums import consensus_drums

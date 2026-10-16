@@ -1,0 +1,20 @@
+{
+  "scope": "0-60 seen development; fixed .9995 scale +.14s, same key onset50ms maximum matching",
+  "candidates": [
+    {
+      "id": "selected-combined",
+      "path": "outputs/runs/drums-v2/selected-combined.mid",
+      "sha256": "3c13d77e0fa3d8d04cee1089829322939c9f7711246d4fafa0bdb992106aa50d",
+      "score": {
+        "reference": 94,
+        "predicted": 93,
+        "matched": 80,
+        "extra": 13,
+        "missed": 14,
+        "precision": 0.8602150537634409,
+        "recall": 0.851063829787234,
+        "f1": 0.8556149732620321
+      }
+    }
+  ]
+}
