@@ -353,3 +353,9 @@
 - 3e3270d冻结后verify_bass_evidence独立只读验收通过：自写tempo解析/SciPy最大匹配复算全部评分及3新增零丢失，120测试/临时重建、106清单+8源/107ZIP、44片段逐采样/5WAV临时重渲染相同，5保护轨+conductor无变。无必须修复；主agent仅改路径文档『鼓与其余5轨』为『包括鼓在内的其他5轨』并核对差异，无源代码/媒体改动。
 - 审查记录outputs/bass-evidence/独立验证.md。贝斯SHA41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a，六轨363ee4d3e0086a0c9ca7ad29a29bd6c89d2b9d5a9469552bf2dd3404f0126bfe，ZIP6e1dcac53b2556bbff7817d4878877bf5fb8f8f4e526d334bef5b8d57d82a316。准备安全快进main、发布v0.1.0-bass-evidence.1研究标签并推送；冻结包保持原字节，审查记录另附。
 - Git同步已实时确认：origin/main、origin/codex/bass-evidence-refinement、v0.1.0-bass-evidence.1均为8c82da8d111f91361bdd3712a0856ce273548cbc；安全快进、无force push，媒体/模型/缓存/批量包不上传。本同步状态行作为后续文档提交保存，不移动已发布标签。当前研究贝斯75.00%、整体76.56%，后续仍需逐步解决9FP/9FN；未自动进入60–120或其他轨优化。
+
+## 2026-10-17：贝斯多源与音符序列实验（进行中）
+- 用户批准『剩余错误归因→当前75规则下多分离源对照→音符序列联合判断→证据约束弱短音』。0930e3c快照后codex/bass-multisource-sequence；只用0–60，旧75配置/媒体和其他5轨不变，不访问60–120。
+- outputs/bass-sequence/实验登记.json先登记10ID：D75/FT75/SW75、F2/F1局部择优、J1/J2/J3音符级DP、W64/W48弱短音。生成不读标准，阶段完整生成后单独评分，分数未提高保留前版，不在评分后扩参。
+- 四项新增序列/来源计数边界测试先RED后GREEN：起音聚类不传递链接、3估计器不算3分离源、跳过弱候选同时允许真实跳音、80ms冲突与空输入。新模块src/audio_midi/bass_sequence.py；旧pYIN/PENN内部Viterbi不等于本轮新增音符级多源DP。
+- 4个新任务顺序补ft/SW的CREPE/PENN，隔离既有依赖，CPU2/6GiB/1800s，单次不自动重试；不新分离/下载权重/API/训练。infer.py任务进行中，剩余FN/FP归因脚本与来源生成入口已写，尚无本轮新评分/最终交付/独立审查结论。

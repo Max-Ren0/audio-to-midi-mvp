@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-17",
+  "scope": "same current0–60 only; bass only; fixed .9995/.14 same-key50ms max matching; preserve75 baseline and all other tracks; no reference-driven event edits",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "diagnosis": "9FP/9FN from frozen75; report raw model/energy/anchor coverage, rejected proposals and nearby events; attribution signals not studio truth or human listening; diagnostic reference access separate from generation",
+  "inference": {
+    "sources": [
+      "original Demucs6s cached",
+      "htdemucs_ft bass cached",
+      "SW BS-Roformer bass cached"
+    ],
+    "new": "CREPE-full and PENN whole-file Viterbi on ft/SW,4 sequential processes; existing pYIN reused",
+    "threads": 2,
+    "timeout_seconds": 1800,
+    "rss_gib": 6,
+    "max_attempts": 4,
+    "retry": 0,
+    "no_new_dependencies": true
+  },
+  "stage1": {
+    "individual": [
+      "D75",
+      "FT75",
+      "SW75"
+    ],
+    "same_recipe": "C3 .2/.05/128ms; short flux8k FFT512 hop32,backtrack32ms; hard next onset pitch cap,80ms support; M2 rise1.2/flux.8; A3 CREPE.21/PENN.2 continuous80ms + energy; R1 as frozen75",
+    "control": "D75 byte-identical frozen R1",
+    "local_fusion": [
+      {
+        "id": "F2",
+        "minimum_sources": 2
+      },
+      {
+        "id": "F1",
+        "minimum_sources": 1
+      }
+    ],
+    "fusion": "union full-recipe notes, cluster onsets within40ms of cluster first (no transitive chaining); pick highest independent-source same-pitch frame support then neural fraction then strongest normalized attack, ties control-source then earlier; require source criterion and credible attack (rise>=1.1 OR flux>=.5); keep primary frozen winner note unless alternative source support is strictly higher; no-anchor weak alternates rejected; enforce80ms onset spacing, clip monophony"
+  },
+  "stage2": {
+    "fixed": "best complete stage1 output; baseline if no improvement",
+    "proposal_pool": "stage1 notes + 80ms consecutive pYIN/neural rounded-pitch runs; model valid thresholds pYIN.05 voiced, CREPE.21 PENN.2; energy gated; anchor[-256,+32]ms nearest credible; same40ms first-anchor clusters",
+    "joint_decoding": "note-level dynamic program over each onset cluster: silence or evidence-backed pitch; previous pitch state retained through silence; sum emission - onset cost - bounded pitch-jump penalty; no forced scale/chord/key, no beat quantization; multiple-source support required for new events; original note candidate allowed; no reference inputs",
+    "emission": "per source maximum of model support fraction within first min320ms/event duration; source votes require >=64ms cumulative exact rounded pitch support; neural agreement fraction; audio attack capped at2; sum over3 sources /3",
+    "profiles": [
+      {
+        "id": "J1",
+        "onset_cost": 0.2,
+        "jump_penalty": 0.0,
+        "minimum_sources": 2
+      },
+      {
+        "id": "J2",
+        "onset_cost": 0.35,
+        "jump_penalty": 0.05,
+        "minimum_sources": 2
+      },
+      {
+        "id": "J3",
+        "onset_cost": 0.5,
+        "jump_penalty": 0.1,
+        "minimum_sources": 2
+      }
+    ],
+    "jump": "min(abs(semitones)/12,2), penalized only at emitted notes, allowing true leaps; states include silence and all pool pitches"
+  },
+  "stage3": {
+    "fixed": "best stage2 output",
+    "weak_short_profiles": [
+      {
+        "id": "W64",
+        "minimum_run_seconds": 0.064
+      },
+      {
+        "id": "W48",
+        "minimum_run_seconds": 0.048
+      }
+    ],
+    "rule": "only add absent notes with same-pitch support from both neural estimators in at least2 sources; corresponding audio attack present in2 sources within40ms; onset spacing/retained durations use profile minimum; no global confidence reduction; do not replace pitch of existing overlapping same-pitch note; preserve monophony"
+  },
+  "maximum_unique_candidate_ids": 10,
+  "selection": "highest formal F1 whole recipe; ties fewerFP; keep previous selected if no strictly higherF1; register profiles before any new score, no post-score expansion",
+  "delivery": "all positive/negative scores; every reference gain/loss; selected bass+six-trackMID and MIDI-onlyWAV; per-edit source evidence and local original/stem clips; hash manifest; frozen commit then read-only independent verification; private GitHub code/compact records only",
+  "limits": "no60–120, vocals ignored, no paid API/external upload/training, no new separation or weight download, no studio SDR/generalization claims; old default runner unchanged",
+  "clarifications_before_first_score": {
+    "phases": "phase1 source recipes; phase2 F2/F1 around best phase1; phase3 J1/J2/J3 around bestphase2; phase4 W64/W48 around bestphase3;10 uniqueIDs",
+    "emission_formula": "mean3source(max3model exact-pitch fractions) + .2*mean3source(neural agreement fraction) + .05*mean3source(min(2,max(rise-1,flux,0)))",
+    "local_fusion": "prefer primary unless alternate source_count strictly higher; no primary in cluster accepts strongest eligible alternate; pitch changes not tied to reference",
+    "DP_candidates": "original base candidates may survive minimum_sources gate but emission threshold still applies; source-specific recipe candidates and raw-run candidates share same acoustic scoring; skip retains last emitted pitch and onset; require80ms onset spacing",
+    "monophony": "sort selected onsets; resolve spacing by stronger evidence, clip offsets to next onset, drop shorter-than-minimum remnants; pitch can jump any interval",
+    "weak_short": "two-source neural AND support >=profile run duration, at least2 source attacks near candidate +/-40ms; raw-run proposal must be consecutive, support aggregate may be cumulative; distinctness spacing use profile minimum"
+  }
+}
