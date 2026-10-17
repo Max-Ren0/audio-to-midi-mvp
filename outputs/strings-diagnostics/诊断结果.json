@@ -1,0 +1,1607 @@
+{
+  "scope": "diagnosis only,0–60; no note edits/new inference/alignment fitting; vocals ignored",
+  "reference_type": "user says high-similarity MIDI extracted from sameMP3, not original session or studio truth",
+  "alignment": {
+    "scale": 0.9995,
+    "shift": 0.14,
+    "duration": 60.0304375
+  },
+  "strict_reference_count": 7,
+  "duration_reference_count_including_leading_carry": 7,
+  "reference_notes_source_timeline": [
+    {
+      "category": "strings",
+      "pitch": 79,
+      "onset": 6.976494797398699,
+      "offset": 8.647506603301649,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 79,
+      "onset": 8.647506603301649,
+      "offset": 10.320255427713855,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 72,
+      "onset": 10.320255427713855,
+      "offset": 11.99995232616308,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 57,
+      "onset": 11.99995232616308,
+      "offset": 13.65185692846423,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 60,
+      "onset": 11.99995232616308,
+      "offset": 13.65185692846423,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 65,
+      "onset": 11.99995232616308,
+      "offset": 13.65185692846423,
+      "velocity": 100,
+      "program": 48
+    },
+    {
+      "category": "strings",
+      "pitch": 67,
+      "onset": 11.99995232616308,
+      "offset": 13.65185692846423,
+      "velocity": 100,
+      "program": 48
+    }
+  ],
+  "current_source": "B",
+  "rows": {
+    "A": {
+      "path": "outputs/runs/v01/development/单轨/strings.mid",
+      "sha256": "903d5c89f0960df7f2f47eeaf661376f5eb782a96eb31715144f4579be243436",
+      "count": 71,
+      "strict": {
+        "matched": 4,
+        "extra": 67,
+        "missed": 3,
+        "f1": 0.10256410256410256
+      },
+      "onset_diagnostic": {
+        "0.05": 4,
+        "0.1": 4,
+        "0.15": 4,
+        "0.3": 4
+      },
+      "onset_only_50ms": 4,
+      "pitch_class_onset_50ms": 4,
+      "duration_absolute_pitch": {
+        "matched_pitch_seconds": 5.449679260463567,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 29.784374999999986,
+        "precision": 0.18297107998618636,
+        "recall": 0.46854472359460736,
+        "f1": 0.26317131104649616,
+        "meaning": "active absolute-pitch/time overlap"
+      },
+      "duration_pitch_class": {
+        "matched_pitch_seconds": 6.7985899199599835,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 19.334375,
+        "precision": 0.35163225705304585,
+        "recall": 0.584519433646407,
+        "f1": 0.4391080842697329,
+        "meaning": "active pitch-class/time overlap"
+      },
+      "activity_time": {
+        "matched_pitch_seconds": 4.456250000000001,
+        "reference_pitch_seconds": 6.675362131065532,
+        "prediction_pitch_seconds": 7.496874999999995,
+        "precision": 0.5944143393080455,
+        "recall": 0.6675667795252161,
+        "f1": 0.628870369411461,
+        "meaning": "active-time overlap"
+      },
+      "duration_summary": {
+        "min": 0.02916666666666501,
+        "median": 0.2197916666666675,
+        "max": 1.180208333333331,
+        "under150ms": 8,
+        "under300ms": 36
+      },
+      "raw_note_counts": {
+        "piano": 332,
+        "bass": 19,
+        "strings": 78,
+        "vocal": 39
+      },
+      "raw_strings_count": 78,
+      "raw_strings_programs": {
+        "48": 44,
+        "40": 13,
+        "42": 11,
+        "41": 10
+      },
+      "decode_errors": {
+        "missing_tie": 70,
+        "note_off_without_onset": 76
+      },
+      "raw_to_clean_midi_byte_identical": true,
+      "model": {
+        "model": "YourMT3 yptf_moe_nops",
+        "model_revision": "d8cbd287470291dee335f84315c5a9b9ff6e6c8a",
+        "weight_sha256": "ae38e415c79efd5592dcb9b658cdb99ddb11d4c4e1eaa364cab04a052473fc25",
+        "sample_rate": 16000,
+        "model_window_samples": 32767
+      },
+      "longest_fast_ascending_run": {
+        "count": 1,
+        "notes": [
+          {
+            "category": "strings",
+            "pitch": 57,
+            "onset": 4.460416666666666,
+            "offset": 5.199999999999999,
+            "velocity": 80,
+            "program": 48
+          }
+        ]
+      },
+      "cross_reference_coincidence": {
+        "piano": {
+          "same_pitch_overlap_seconds": 6.508943430048411,
+          "fraction_of_predicted_pitch_seconds": 0.21853550494339444,
+          "not_causal_proof_of_leakage": true
+        },
+        "acoustic_guitar": {
+          "same_pitch_overlap_seconds": 0.0,
+          "fraction_of_predicted_pitch_seconds": 0.0,
+          "not_causal_proof_of_leakage": true
+        },
+        "electric_guitar": {
+          "same_pitch_overlap_seconds": 3.355903968650993,
+          "fraction_of_predicted_pitch_seconds": 0.11267330500139736,
+          "not_causal_proof_of_leakage": true
+        },
+        "bass": {
+          "same_pitch_overlap_seconds": 0.0,
+          "fraction_of_predicted_pitch_seconds": 0.0,
+          "not_causal_proof_of_leakage": true
+        }
+      },
+      "notes": [
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 0,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 1,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 2,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 4.460416666666666,
+          "offset": 4.880208333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 3,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 69,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 4,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 72,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 5,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 74,
+          "onset": 4.460416666666666,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 6,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 77,
+          "onset": 4.460416666666666,
+          "offset": 4.880208333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 7,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 4.880208333333333,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 8,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 77,
+          "onset": 4.880208333333333,
+          "offset": 5.199999999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 9,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 10,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 11,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 12,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 13,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 71,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 14,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 74,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 15,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 79,
+          "onset": 5.199999999999999,
+          "offset": 6.143749999999999,
+          "velocity": 80,
+          "program": 48,
+          "index": 16,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 8.580208333333331,
+          "offset": 9.360416666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 17,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 9.339583333333332,
+          "offset": 10.239583333333332,
+          "velocity": 80,
+          "program": 48,
+          "index": 18,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 9.360416666666666,
+          "offset": 10.239583333333332,
+          "velocity": 80,
+          "program": 48,
+          "index": 19,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 10.289583333333333,
+          "offset": 10.639583333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 20,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 10.289583333333333,
+          "offset": 11.469791666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 21,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 10.289583333333333,
+          "offset": 10.639583333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 22,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 72,
+          "onset": 10.289583333333333,
+          "offset": 11.469791666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 23,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 56,
+          "onset": 10.669791666666665,
+          "offset": 11.469791666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 24,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 63,
+          "onset": 10.669791666666665,
+          "offset": 11.019791666666665,
+          "velocity": 80,
+          "program": 48,
+          "index": 25,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 11.060416666666665,
+          "offset": 11.439583333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 26,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 11.499999999999996,
+          "offset": 11.919791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 27,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 56,
+          "onset": 11.499999999999996,
+          "offset": 11.919791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 28,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 11.499999999999996,
+          "offset": 11.919791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 29,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 11.949999999999996,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 30,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 11.949999999999996,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 31,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 11.949999999999996,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 32,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 50,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 33,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 34,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 35,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 36,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 37,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 12.380208333333329,
+          "offset": 12.589583333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 38,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 50,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 39,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 40,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 41,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 42,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 43,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 12.589583333333328,
+          "offset": 12.799999999999995,
+          "velocity": 80,
+          "program": 48,
+          "index": 44,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 50,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 45,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 46,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 47,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 48,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 49,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 12.799999999999995,
+          "offset": 13.019791666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 50,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 50,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 51,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 52,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 53,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 54,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 55,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 13.019791666666663,
+          "offset": 13.23958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 56,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 30.88020833333333,
+          "offset": 31.03958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 57,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 30.88020833333333,
+          "offset": 31.03958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 58,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 31.110416666666662,
+          "offset": 31.139583333333327,
+          "velocity": 80,
+          "program": 48,
+          "index": 59,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 31.110416666666662,
+          "offset": 31.16979166666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 60,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 31.269791666666663,
+          "offset": 31.330208333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 61,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 31.269791666666663,
+          "offset": 31.330208333333328,
+          "velocity": 80,
+          "program": 48,
+          "index": 62,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 31.399999999999995,
+          "offset": 31.46041666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 63,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 31.399999999999995,
+          "offset": 31.46041666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 64,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 31.51979166666666,
+          "offset": 31.680208333333326,
+          "velocity": 80,
+          "program": 48,
+          "index": 65,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 31.51979166666666,
+          "offset": 31.680208333333326,
+          "velocity": 80,
+          "program": 48,
+          "index": 66,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 31.780208333333327,
+          "offset": 31.81041666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 67,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 31.780208333333327,
+          "offset": 31.81041666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 68,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 52,
+          "onset": 31.939583333333328,
+          "offset": 32.76666666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 69,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 64,
+          "onset": 31.939583333333328,
+          "offset": 32.76666666666666,
+          "velocity": 80,
+          "program": 48,
+          "index": 70,
+          "strict_matched": false
+        }
+      ],
+      "missing_reference_indices": [
+        0,
+        1,
+        6
+      ],
+      "raw_path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/quality/1792048217664781000/other.json",
+      "raw_sha256": "54081f20aac7bf9d3df92edad8a1fa4c388c9e4eadd291eea74833980f869c6f",
+      "stem_path": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/other.wav",
+      "stem_sha256": "2d3e7faa8311d77b7b87afbf52ce9567058f0915288f24073de677acb04cc2ad"
+    },
+    "B": {
+      "path": "outputs/runs/two-methods/sw-local-control/单轨/strings.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+      "count": 39,
+      "strict": {
+        "matched": 3,
+        "extra": 36,
+        "missed": 4,
+        "f1": 0.13043478260869565
+      },
+      "onset_diagnostic": {
+        "0.05": 3,
+        "0.1": 3,
+        "0.15": 3,
+        "0.3": 3
+      },
+      "onset_only_50ms": 6,
+      "pitch_class_onset_50ms": 3,
+      "duration_absolute_pitch": {
+        "matched_pitch_seconds": 4.102756586626642,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 16.31145833333332,
+        "precision": 0.25152604401057405,
+        "recall": 0.35274093372853205,
+        "f1": 0.2936567275388673,
+        "meaning": "active absolute-pitch/time overlap"
+      },
+      "duration_pitch_class": {
+        "matched_pitch_seconds": 5.245238515090875,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 13.745833333333323,
+        "precision": 0.3815875245898184,
+        "recall": 0.45096760979507433,
+        "f1": 0.41338670986403353,
+        "meaning": "active pitch-class/time overlap"
+      },
+      "activity_time": {
+        "matched_pitch_seconds": 4.859148595130899,
+        "reference_pitch_seconds": 6.675362131065532,
+        "prediction_pitch_seconds": 5.6093749999999964,
+        "precision": 0.8662549027531412,
+        "recall": 0.7279228451918119,
+        "f1": 0.7910871096855836,
+        "meaning": "active-time overlap"
+      },
+      "duration_summary": {
+        "min": 0.05937499999999929,
+        "median": 0.3270833333333325,
+        "max": 1.630208333333334,
+        "under150ms": 15,
+        "under300ms": 18
+      },
+      "raw_note_counts": {
+        "strings": 39
+      },
+      "raw_strings_count": 39,
+      "raw_strings_programs": {
+        "41": 5,
+        "42": 3,
+        "40": 4,
+        "48": 27
+      },
+      "decode_errors": {
+        "note_off_without_onset": 22,
+        "missing_tie": 14
+      },
+      "raw_to_clean_midi_byte_identical": true,
+      "model": {
+        "model": "YourMT3 yptf_moe_nops",
+        "model_revision": "d8cbd287470291dee335f84315c5a9b9ff6e6c8a",
+        "weight_sha256": "ae38e415c79efd5592dcb9b658cdb99ddb11d4c4e1eaa364cab04a052473fc25",
+        "sample_rate": 16000,
+        "model_window_samples": 32767
+      },
+      "longest_fast_ascending_run": {
+        "count": 23,
+        "notes": [
+          {
+            "category": "strings",
+            "pitch": 57,
+            "onset": 12.410416666666663,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 59,
+            "onset": 12.48958333333333,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 60,
+            "onset": 12.560416666666663,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 62,
+            "onset": 12.63020833333333,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 65,
+            "onset": 12.699999999999998,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 67,
+            "onset": 12.769791666666665,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 69,
+            "onset": 12.839583333333332,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 71,
+            "onset": 12.910416666666665,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 72,
+            "onset": 12.969791666666664,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 74,
+            "onset": 13.03020833333333,
+            "offset": 13.08958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 76,
+            "onset": 13.08958333333333,
+            "offset": 13.160416666666663,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 77,
+            "onset": 13.160416666666663,
+            "offset": 13.23020833333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 79,
+            "onset": 13.23020833333333,
+            "offset": 13.299999999999997,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 81,
+            "onset": 13.299999999999997,
+            "offset": 13.369791666666664,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 83,
+            "onset": 13.369791666666664,
+            "offset": 13.439583333333331,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 84,
+            "onset": 13.439583333333331,
+            "offset": 13.510416666666664,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 86,
+            "onset": 13.510416666666664,
+            "offset": 13.580208333333331,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 88,
+            "onset": 13.580208333333331,
+            "offset": 13.63958333333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 89,
+            "onset": 13.63958333333333,
+            "offset": 13.699999999999998,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 91,
+            "onset": 13.699999999999998,
+            "offset": 13.760416666666664,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 93,
+            "onset": 13.760416666666664,
+            "offset": 13.819791666666664,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 95,
+            "onset": 13.819791666666664,
+            "offset": 13.88020833333333,
+            "velocity": 80,
+            "program": 48
+          },
+          {
+            "category": "strings",
+            "pitch": 96,
+            "onset": 13.88020833333333,
+            "offset": 13.93958333333333,
+            "velocity": 80,
+            "program": 48
+          }
+        ]
+      },
+      "cross_reference_coincidence": {
+        "piano": {
+          "same_pitch_overlap_seconds": 4.4676864473904665,
+          "fraction_of_predicted_pitch_seconds": 0.2738986518612205,
+          "not_causal_proof_of_leakage": true
+        },
+        "acoustic_guitar": {
+          "same_pitch_overlap_seconds": 0.4624999999999986,
+          "fraction_of_predicted_pitch_seconds": 0.02835430104093486,
+          "not_causal_proof_of_leakage": true
+        },
+        "electric_guitar": {
+          "same_pitch_overlap_seconds": 0.9765006920126549,
+          "fraction_of_predicted_pitch_seconds": 0.059865934244341876,
+          "not_causal_proof_of_leakage": true
+        },
+        "bass": {
+          "same_pitch_overlap_seconds": 0.0,
+          "fraction_of_predicted_pitch_seconds": 0.0,
+          "not_causal_proof_of_leakage": true
+        }
+      },
+      "notes": [
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 8.680208333333333,
+          "offset": 9.389583333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 0,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 9.389583333333333,
+          "offset": 10.239583333333332,
+          "velocity": 80,
+          "program": 48,
+          "index": 1,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 9.389583333333333,
+          "offset": 10.239583333333332,
+          "velocity": 80,
+          "program": 48,
+          "index": 2,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 64,
+          "onset": 9.389583333333333,
+          "offset": 10.239583333333332,
+          "velocity": 80,
+          "program": 48,
+          "index": 3,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 74,
+          "onset": 9.389583333333333,
+          "offset": 10.269791666666665,
+          "velocity": 80,
+          "program": 48,
+          "index": 4,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 56,
+          "onset": 10.299999999999997,
+          "offset": 11.930208333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 5,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 10.299999999999997,
+          "offset": 11.930208333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 6,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 72,
+          "onset": 10.299999999999997,
+          "offset": 11.930208333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 7,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 11.960416666666664,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 8,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 11.960416666666664,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 9,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 11.960416666666664,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 10,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 11.960416666666664,
+          "offset": 12.287499999999996,
+          "velocity": 80,
+          "program": 48,
+          "index": 11,
+          "strict_matched": true
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 12.33958333333333,
+          "offset": 12.48958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 12,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 12.410416666666663,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 13,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 12.48958333333333,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 14,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 12.560416666666663,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 15,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 12.63020833333333,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 16,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 12.699999999999998,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 17,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 12.769791666666665,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 18,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 69,
+          "onset": 12.839583333333332,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 19,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 71,
+          "onset": 12.910416666666665,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 20,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 72,
+          "onset": 12.969791666666664,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 21,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 74,
+          "onset": 13.03020833333333,
+          "offset": 13.08958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 22,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 76,
+          "onset": 13.08958333333333,
+          "offset": 13.160416666666663,
+          "velocity": 80,
+          "program": 48,
+          "index": 23,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 77,
+          "onset": 13.160416666666663,
+          "offset": 13.23020833333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 24,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 79,
+          "onset": 13.23020833333333,
+          "offset": 13.299999999999997,
+          "velocity": 80,
+          "program": 48,
+          "index": 25,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 81,
+          "onset": 13.299999999999997,
+          "offset": 13.369791666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 26,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 83,
+          "onset": 13.369791666666664,
+          "offset": 13.439583333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 27,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 84,
+          "onset": 13.439583333333331,
+          "offset": 13.510416666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 28,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 86,
+          "onset": 13.510416666666664,
+          "offset": 13.580208333333331,
+          "velocity": 80,
+          "program": 48,
+          "index": 29,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 88,
+          "onset": 13.580208333333331,
+          "offset": 13.63958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 30,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 89,
+          "onset": 13.63958333333333,
+          "offset": 13.699999999999998,
+          "velocity": 80,
+          "program": 48,
+          "index": 31,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 91,
+          "onset": 13.699999999999998,
+          "offset": 13.760416666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 32,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 93,
+          "onset": 13.760416666666664,
+          "offset": 13.819791666666664,
+          "velocity": 80,
+          "program": 48,
+          "index": 33,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 95,
+          "onset": 13.819791666666664,
+          "offset": 13.88020833333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 34,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 96,
+          "onset": 13.88020833333333,
+          "offset": 13.93958333333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 35,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 56.88020833333333,
+          "offset": 57.34270833333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 36,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 56.88020833333333,
+          "offset": 57.34270833333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 37,
+          "strict_matched": false
+        },
+        {
+          "category": "strings",
+          "pitch": 69,
+          "onset": 56.88020833333333,
+          "offset": 57.34270833333333,
+          "velocity": 80,
+          "program": 48,
+          "index": 38,
+          "strict_matched": false
+        }
+      ],
+      "missing_reference_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "raw_path": "work/v01/runtime/1792079033121801000/strings.json",
+      "raw_sha256": "73217372d51f51b62ee73cb51e519e7a5507e138c45d9ad4c7ce644a3a2e1046",
+      "stem_path": "work/two-methods/sw-full/other.wav",
+      "stem_sha256": "46df7f6e5f8cc033528e940b992f66d090511f37db82223dd626573752c93d69"
+    }
+  },
+  "bass_frozen_config_sha256": "89b1cb5aeb97d540e9337dd4095065ddb4b797bb166e7fc5dbc1225adc40aef9",
+  "SW_model_input_exact_resample_verified": true,
+  "protected": [
+    {
+      "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+      "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+    }
+  ],
+  "limits": "duration/chroma/activity are objective overlap diagnostics, not listening scores or evidence a source is truly strings; decoder errors not localized without raw tokens"
+}

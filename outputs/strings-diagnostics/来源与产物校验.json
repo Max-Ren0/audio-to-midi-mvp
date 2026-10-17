@@ -1,0 +1,306 @@
+{
+  "files": [
+    {
+      "path": "config/bass-frozen.lock.json",
+      "sha256": "89b1cb5aeb97d540e9337dd4095065ddb4b797bb166e7fc5dbc1225adc40aef9",
+      "bytes": 1997
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/A-现有弦乐.mid",
+      "sha256": "903d5c89f0960df7f2f47eeaf661376f5eb782a96eb31715144f4579be243436",
+      "bytes": 658
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/A-现有弦乐.wav",
+      "sha256": "447cb5edee9619e7c36498be3417f6784805772eb8fb942768199cdbeabbea80",
+      "bytes": 6044684
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/B-现有弦乐.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+      "bytes": 451
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/B-现有弦乐.wav",
+      "sha256": "75b2e4fae7b9dee9a5ec8301ca632dfcfc91623ac90edbd4ffaf749ebac64e92",
+      "bytes": 10379896
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-A-other.wav",
+      "sha256": "86dbbcacac7874e72c5b886c0089f1785c00b63d7bc9de94a1548876700f2243",
+      "bytes": 352844
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-B-other.wav",
+      "sha256": "6021f594bf12bde50b05e67f85d693054b9e9aac479658dd93c16572f6b188ec",
+      "bytes": 352844
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-原曲.wav",
+      "sha256": "204979557099d74f9356d88e22d6c3e9037a35b667a41acc0bc0a03162d76727",
+      "bytes": 128044
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-A-other.wav",
+      "sha256": "3be91d3a82659bff73b5b582a625e476c51dc44f06fb7181066ab1b2498d6cfa",
+      "bytes": 396944
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-B-other.wav",
+      "sha256": "5f39f55e07390856a0dec593d5dbb7e916af976360c61e9a8d04b20450e86e3a",
+      "bytes": 396944
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-原曲.wav",
+      "sha256": "4d64fad5dedee094429ff248dd60cb02c9e83b239e39ad620ae17af4eb0f5a65",
+      "bytes": 144044
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-A-other.wav",
+      "sha256": "d910da303a457b0e86065d309f86152c086dd78c2eb8c909d7f9ef5b8256996b",
+      "bytes": 123524
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-B-other.wav",
+      "sha256": "95ee4f6de8ed71c4a0bca5079c6a9f0468bc10e9faba6b9d8ac040e2b01bf578",
+      "bytes": 123524
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-原曲.wav",
+      "sha256": "d5861aeb9257de13116cb7ac99c41536341e7970909649b2b4682c1a1f2186cd",
+      "bytes": 44844
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/参考弦乐-仅当前片段对齐.mid",
+      "sha256": "bffba095ee1c6ab2df5a7cbd2d5c110110715fb157e3a871d050cd572ef75040",
+      "bytes": 224
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/参考弦乐-仅当前片段对齐.wav",
+      "sha256": "0a5c9e09d5e2497754c8c5361b7c6aca84affa0b48a4c42b9145d9f51e8b1091",
+      "bytes": 2672872
+    },
+    {
+      "path": "outputs/strings-diagnostics/analyze.py",
+      "sha256": "5c665195b88254bf132fd864a3da98a0e3e2805f3e8d56dd487e2d65d3090987",
+      "bytes": 7965
+    },
+    {
+      "path": "outputs/strings-diagnostics/boundaries.py",
+      "sha256": "21d9e51e96355fc760761a3914365997dba5efccc7254809ab2eec960ca0622e",
+      "bytes": 1147
+    },
+    {
+      "path": "outputs/strings-diagnostics/bundle.py",
+      "sha256": "cfae05c2a1eac8cbe8593d6eb603f751c13fa71ea869b7ba59e4fdd8d2ceed40",
+      "bytes": 2612
+    },
+    {
+      "path": "outputs/strings-diagnostics/metrics.py",
+      "sha256": "edf8cb258fba285493b950fd0ba68326b204fd7c722f2a2d21e2e3b2b23e8744",
+      "bytes": 1339
+    },
+    {
+      "path": "outputs/strings-diagnostics/package.py",
+      "sha256": "9b20f3df04cc5ef96ffc2585b78118bb735f69915b933ec427e3249ddc27ee61",
+      "bytes": 3202
+    },
+    {
+      "path": "outputs/strings-diagnostics/verify_rebuild.py",
+      "sha256": "765665018ea6933cafef1a9c8d40199f59ae6f672d9d83ccabfa9545c5fc6c1c",
+      "bytes": 888
+    },
+    {
+      "path": "outputs/strings-diagnostics/弦乐诊断报告.md",
+      "sha256": "feef03440408a456656649f61c8001071f0703c592579149bd9d62af760288c8",
+      "bytes": 6729
+    },
+    {
+      "path": "outputs/strings-diagnostics/窗口衔接诊断.json",
+      "sha256": "806327438d20634fe83ce8e3f39300d0c83bc249b805a15aed50a3797a74b2aa",
+      "bytes": 5475
+    },
+    {
+      "path": "outputs/strings-diagnostics/诊断结果.json",
+      "sha256": "17d8ec15cc222d3c99dfd610383c896e76cfe0f01a604730e2751a1bf92a8a4f",
+      "bytes": 44326
+    },
+    {
+      "path": "outputs/strings-diagnostics/试听与片段.json",
+      "sha256": "9a56442476745244493d233be90983b7c61fd0745a1dc9bdd6f6bffc6d02e5db",
+      "bytes": 4639
+    },
+    {
+      "path": "outputs/strings-diagnostics/逐音持续覆盖.json",
+      "sha256": "29792d95652566a63e489b9423aa133b22aadb565a4ca75fdcc497fc49805766",
+      "bytes": 3363
+    },
+    {
+      "path": "tests/test_strings_diagnostics.py",
+      "sha256": "d5d933a3d441a224be48fa254e256431a9f49cf5a04f917969b781e281dd1662",
+      "bytes": 1095
+    }
+  ],
+  "sources_not_bundled": [
+    {
+      "path": "/Users/ringscherry/.codex/attachments/0169a6c6-4b9d-46d9-ac59-5248c94a49c0/04-贝斯.mid",
+      "sha256": "6e42978457f00deb4edd6260aa873463a379059e5bd7ccd3cf8e40683332d3f8"
+    },
+    {
+      "path": "/Users/ringscherry/.codex/attachments/0a02e9a1-3434-48e9-81e3-05edd7350e1d/02-木吉他.mid",
+      "sha256": "0a34be1fd55852269a63324a7dc2865eb664d9e383bf41cf4cb0ae58ff955c51"
+    },
+    {
+      "path": "/Users/ringscherry/.codex/attachments/10d35748-73f5-4eae-be23-78b229d287c0/05-鼓.mid",
+      "sha256": "1071658e4d2adad7e31a0bcc3fbdc9ea80bdbc13ab2c8469cb8eb3618b7780c6"
+    },
+    {
+      "path": "/Users/ringscherry/.codex/attachments/859c99bf-3bd7-40ff-8605-92ea139b7b2a/01-钢琴.mid",
+      "sha256": "a5a62b19513a3b025c5f85a04253b644eb7b47bc772914768284702d6635d7dd"
+    },
+    {
+      "path": "/Users/ringscherry/.codex/attachments/892492b7-6157-4e77-a757-de3de435e2c7/06-弦乐.mid",
+      "sha256": "cce70eebf4470fa127a998d71b2a4d2311c48e2f27b7d01fcc32ecc18ba5690c"
+    },
+    {
+      "path": "/Users/ringscherry/.codex/attachments/e40bf3fb-c82a-4807-aa6c-de379fd751b7/03-电吉他清音.mid",
+      "sha256": "23510775ebb9a944cbaf48e13a42ed940645e63b4bf843ec160ca221d591882f"
+    },
+    {
+      "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+    },
+    {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/quality/1792048217664781000/other.json",
+      "sha256": "54081f20aac7bf9d3df92edad8a1fa4c388c9e4eadd291eea74833980f869c6f"
+    },
+    {
+      "path": "config/bass-sequence.lock.json",
+      "sha256": "4ce29a2ad5269f2ee66503b60cb0baed46cb9a4208c9c5f06e8d1cd61e56e627"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+      "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    {
+      "path": "outputs/runs/two-methods/sw-local-control/单轨/strings.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf"
+    },
+    {
+      "path": "outputs/runs/two-methods/sw-local-control/运行报告.json",
+      "sha256": "5a511e3a273e4ab0fd008726ae4bd946fd40ba53537834ace092a2136e5bacd6"
+    },
+    {
+      "path": "outputs/runs/v01/development/单轨/strings.mid",
+      "sha256": "903d5c89f0960df7f2f47eeaf661376f5eb782a96eb31715144f4579be243436"
+    },
+    {
+      "path": "outputs/runs/v01/development/运行报告.json",
+      "sha256": "27c0b9bf4a3a42b54454651ff2f4af73239c3c94edd8a837afc307b3273b97c9"
+    },
+    {
+      "path": "outputs/two-methods/标准清单.json",
+      "sha256": "735b9a1e7d4e536aff1569e7e44bd12a787564bf9ccf3ef6447ac754008cb732"
+    },
+    {
+      "path": "scripts/run_v01.py",
+      "sha256": "17ffcc2828de602791bd65872d273da533c4bee1cf81a637a6783011df07888f"
+    },
+    {
+      "path": "src/audio_midi/backends/selected.py",
+      "sha256": "e88da4cf8411c40422079ef523ea66ca17fcefadec3faf0232baf6d13619195b"
+    },
+    {
+      "path": "src/audio_midi/quality.py",
+      "sha256": "2989f43c623c5b0ca57c79c3826f0d253f12ece5816e01862938d52ba63ef4f5"
+    },
+    {
+      "path": "src/audio_midi/stitching.py",
+      "sha256": "242472e5ea13ee6eb28803f290d13c439fd9cecb601ab2865bdb2f424f60e0d6"
+    },
+    {
+      "path": "work/models/GeneralUser-GS.sf2",
+      "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe"
+    },
+    {
+      "path": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/other.wav",
+      "sha256": "2d3e7faa8311d77b7b87afbf52ce9567058f0915288f24073de677acb04cc2ad"
+    },
+    {
+      "path": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/separation-receipt.json",
+      "sha256": "4e96511872a8e6b35d892ae9f9b1266d42c86e8277c8bc7249d2f0bc7f897af1"
+    },
+    {
+      "path": "work/two-methods/sw-full/other.wav",
+      "sha256": "46df7f6e5f8cc033528e940b992f66d090511f37db82223dd626573752c93d69"
+    },
+    {
+      "path": "work/two-methods/sw-full/separation-receipt.json",
+      "sha256": "a661ccc60aed3a3f879dd52bacfc5a7b77283bc4d3acf3d6265c967d9afbef25"
+    },
+    {
+      "path": "work/v01/runtime/1792079033121801000/strings.json",
+      "sha256": "73217372d51f51b62ee73cb51e519e7a5507e138c45d9ad4c7ce644a3a2e1046"
+    },
+    {
+      "path": "work/v01/runtime/1792079033121801000/strings.npy",
+      "sha256": "610b47a9ab02402556c7f7a01f17a758b74d0318c6a1d1883ee58a3d60c7adec"
+    }
+  ],
+  "protected_bass": {
+    "status": "explicitly frozen by user2026-10-17; no future bass changes without new authorization",
+    "selected": "D75+W64",
+    "release_tag": "v0.1.0-bass-sequence.1",
+    "release_commit": "531cc594fa5297d66b35044729f46301e4578ca7",
+    "lock_path": "config/bass-sequence.lock.json",
+    "lock_sha256": "4ce29a2ad5269f2ee66503b60cb0baed46cb9a4208c9c5f06e8d1cd61e56e627",
+    "bass": {
+      "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    "six_track": {
+      "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+      "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+    },
+    "implementation": [
+      {
+        "path": "src/audio_midi/bass_sequence.py",
+        "sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d"
+      },
+      {
+        "path": "src/audio_midi/bass_evidence.py",
+        "sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e"
+      },
+      {
+        "path": "src/audio_midi/bass_models.py",
+        "sha256": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279"
+      },
+      {
+        "path": "src/audio_midi/bass_refinement.py",
+        "sha256": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+      },
+      {
+        "path": "outputs/bass-sequence/common.py",
+        "sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d"
+      },
+      {
+        "path": "outputs/bass-sequence/generate.py",
+        "sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010"
+      },
+      {
+        "path": "outputs/bass-evidence/generate.py",
+        "sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe"
+      },
+      {
+        "path": "outputs/bass-models/generate.py",
+        "sha256": "5963189c0210cd8497845d4463f41dde24ece7cbe572942787112c65679162f3"
+      }
+    ],
+    "note": "research selection and hash guard, not a new production CLI or new model weights"
+  },
+  "note": "analysis only; no prediction edits/model forward; source WAVs/reference not recording-session truth"
+}

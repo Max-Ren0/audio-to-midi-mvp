@@ -192,3 +192,9 @@
 - Selected evidence-constrained W64 additions: 29 TP / 39 predicted / 36 reference, F1 77.3333% vs 75%; two new reference matches, none lost, one new false positive. 10 preregistered IDs / 9 distinct MIDIs, full negative results retained.
 - Only bass replaced in six-track output, F1 76.7283%; five tracks/conductor and old 75% artifacts unchanged. Added 18-event diagnostics and 84 local excerpts. No short-note or held-out accuracy claim.
 - 124 tests and four-stage temporary rebuild passed. Frozen c0bafd9 independently verified: own tempo parser/SciPy matching, source hashes, 84 PCM excerpts, 12 WAV re-renders, unchanged old notes/protected tracks and 176-file ZIP; no required fixes.
+
+## 2026-10-17 — freeze bass and diagnose strings
+- Explicitly froze selected D75+W64 bass path via release/implementation/artifact hash guard; no bass or other existing prediction changed.
+- Diagnosed current SW-other→YourMT3 strings: 3/39/7 strict F1 13.04%; segmentation-invariant absolute-pitch/time F1 29.37%, pitch-class/time 41.34%, activity-time 79.11%, not listening scores.
+- Traced missing sustained high notes, a raw 23-note ascending run and 10 raw block-end terminations; decoder logs are evidence signals, not proof of root cause. No new inference or string edits.
+- 127 tests and temporary diagnostic/freeze byte rebuild passed. Added aligned-reference/old-output listening copies and 9 source excerpts; independent verification pending frozen commit.

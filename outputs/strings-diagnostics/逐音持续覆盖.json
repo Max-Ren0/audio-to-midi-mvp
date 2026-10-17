@@ -1,0 +1,128 @@
+[
+  {
+    "source": "A",
+    "reference_index": 0,
+    "pitch": 79,
+    "start": 6.976494797398699,
+    "end": 8.647506603301649,
+    "exact_pitch_time_coverage": 0.0,
+    "nearest_same_pitch_onset_delta": -1.7764947973986995
+  },
+  {
+    "source": "A",
+    "reference_index": 1,
+    "pitch": 79,
+    "start": 8.647506603301649,
+    "end": 10.320255427713855,
+    "exact_pitch_time_coverage": 0.0,
+    "nearest_same_pitch_onset_delta": -3.4475066033016493
+  },
+  {
+    "source": "A",
+    "reference_index": 2,
+    "pitch": 72,
+    "start": 10.320255427713855,
+    "end": 11.99995232616308,
+    "exact_pitch_time_coverage": 0.6843712338899449,
+    "nearest_same_pitch_onset_delta": -0.030672094380522097
+  },
+  {
+    "source": "A",
+    "reference_index": 3,
+    "pitch": 57,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.694303213538616,
+    "nearest_same_pitch_onset_delta": -0.04995232616308343
+  },
+  {
+    "source": "A",
+    "reference_index": 4,
+    "pitch": 60,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.694303213538616,
+    "nearest_same_pitch_onset_delta": -0.04995232616308343
+  },
+  {
+    "source": "A",
+    "reference_index": 5,
+    "pitch": 65,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.694303213538616,
+    "nearest_same_pitch_onset_delta": -0.04995232616308343
+  },
+  {
+    "source": "A",
+    "reference_index": 6,
+    "pitch": 67,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.5202328262799604,
+    "nearest_same_pitch_onset_delta": 0.38025600717024943
+  },
+  {
+    "source": "B",
+    "reference_index": 0,
+    "pitch": 79,
+    "start": 6.976494797398699,
+    "end": 8.647506603301649,
+    "exact_pitch_time_coverage": 0.0,
+    "nearest_same_pitch_onset_delta": 6.253713535934631
+  },
+  {
+    "source": "B",
+    "reference_index": 1,
+    "pitch": 79,
+    "start": 8.647506603301649,
+    "end": 10.320255427713855,
+    "exact_pitch_time_coverage": 0.0,
+    "nearest_same_pitch_onset_delta": 4.5827017300316815
+  },
+  {
+    "source": "B",
+    "reference_index": 2,
+    "pitch": 72,
+    "start": 10.320255427713855,
+    "end": 11.99995232616308,
+    "exact_pitch_time_coverage": 0.958478227295568,
+    "nearest_same_pitch_onset_delta": -0.0202554277138578
+  },
+  {
+    "source": "B",
+    "reference_index": 3,
+    "pitch": 57,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.41114157907216203,
+    "nearest_same_pitch_onset_delta": 0.4104643405035837
+  },
+  {
+    "source": "B",
+    "reference_index": 4,
+    "pitch": 60,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.3203373039396598,
+    "nearest_same_pitch_onset_delta": 0.5604643405035841
+  },
+  {
+    "source": "B",
+    "reference_index": 5,
+    "pitch": 65,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.40990926850557,
+    "nearest_same_pitch_onset_delta": -0.039535659496415576
+  },
+  {
+    "source": "B",
+    "reference_index": 6,
+    "pitch": 67,
+    "start": 11.99995232616308,
+    "end": 13.65185692846423,
+    "exact_pitch_time_coverage": 0.36766005715919725,
+    "nearest_same_pitch_onset_delta": -0.039535659496415576
+  }
+]

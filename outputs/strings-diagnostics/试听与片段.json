@@ -1,0 +1,103 @@
+{
+  "reference_midi": "outputs/runs/strings-diagnostics/参考弦乐-仅当前片段对齐.mid",
+  "reference_sha256": "bffba095ee1c6ab2df5a7cbd2d5c110110715fb157e3a871d050cd572ef75040",
+  "reference_transform": "(referenceTime-.14)/.9995; clip to0–60.0304375; original user file untouched; diagnostic only, not predictions",
+  "rendered": {
+    "reference": {
+      "sample_rate": 44100,
+      "duration_seconds": 15.152086167800453,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 162.65870406797558,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "A": {
+      "sample_rate": 44100,
+      "duration_seconds": 34.266666666666666,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 128.59488965905578,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "B": {
+      "sample_rate": 44100,
+      "duration_seconds": 58.84269841269841,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 182.6875519709989,
+      "source": "MIDI_only_no_original_audio"
+    }
+  },
+  "clips": [
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-原曲.wav",
+      "sha256": "204979557099d74f9356d88e22d6c3e9037a35b667a41acc0bc0a03162d76727",
+      "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+      "start": 6.5,
+      "end": 10.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-A-other.wav",
+      "sha256": "86dbbcacac7874e72c5b886c0089f1785c00b63d7bc9de94a1548876700f2243",
+      "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/other.wav",
+      "source_sha256": "2d3e7faa8311d77b7b87afbf52ce9567058f0915288f24073de677acb04cc2ad",
+      "start": 6.5,
+      "end": 10.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/00-B-other.wav",
+      "sha256": "6021f594bf12bde50b05e67f85d693054b9e9aac479658dd93c16572f6b188ec",
+      "source": "work/two-methods/sw-full/other.wav",
+      "source_sha256": "46df7f6e5f8cc033528e940b992f66d090511f37db82223dd626573752c93d69",
+      "start": 6.5,
+      "end": 10.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-原曲.wav",
+      "sha256": "4d64fad5dedee094429ff248dd60cb02c9e83b239e39ad620ae17af4eb0f5a65",
+      "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+      "start": 10.0,
+      "end": 14.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-A-other.wav",
+      "sha256": "3be91d3a82659bff73b5b582a625e476c51dc44f06fb7181066ab1b2498d6cfa",
+      "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/other.wav",
+      "source_sha256": "2d3e7faa8311d77b7b87afbf52ce9567058f0915288f24073de677acb04cc2ad",
+      "start": 10.0,
+      "end": 14.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/01-B-other.wav",
+      "sha256": "5f39f55e07390856a0dec593d5dbb7e916af976360c61e9a8d04b20450e86e3a",
+      "source": "work/two-methods/sw-full/other.wav",
+      "source_sha256": "46df7f6e5f8cc033528e940b992f66d090511f37db82223dd626573752c93d69",
+      "start": 10.0,
+      "end": 14.5
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-原曲.wav",
+      "sha256": "d5861aeb9257de13116cb7ac99c41536341e7970909649b2b4682c1a1f2186cd",
+      "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+      "start": 56.4,
+      "end": 57.8
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-A-other.wav",
+      "sha256": "d910da303a457b0e86065d309f86152c086dd78c2eb8c909d7f9ef5b8256996b",
+      "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/other.wav",
+      "source_sha256": "2d3e7faa8311d77b7b87afbf52ce9567058f0915288f24073de677acb04cc2ad",
+      "start": 56.4,
+      "end": 57.8
+    },
+    {
+      "path": "outputs/runs/strings-diagnostics/clips/02-B-other.wav",
+      "sha256": "95ee4f6de8ed71c4a0bca5079c6a9f0468bc10e9faba6b9d8ac040e2b01bf578",
+      "source": "work/two-methods/sw-full/other.wav",
+      "source_sha256": "46df7f6e5f8cc033528e940b992f66d090511f37db82223dd626573752c93d69",
+      "start": 56.4,
+      "end": 57.8
+    }
+  ],
+  "listening_status": "not manually heard; MIDI-only synth for3WAV, source excerpts for9clips; independent peak normalization prevents loudness comparison"
+}

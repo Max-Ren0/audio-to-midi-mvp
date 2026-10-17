@@ -1,0 +1,229 @@
+{
+  "rows": {
+    "A": {
+      "window_seconds": 2.0479375,
+      "raw_strings": 78,
+      "exact_boundary_end_count": 15,
+      "events": [
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 71,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 74,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 79,
+          "onset": 5.2,
+          "offset": 6.1438125,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 9.34,
+          "offset": 10.2396875,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 9.36,
+          "offset": 10.2396875,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 11.95,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 40
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 11.95,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 41
+        },
+        {
+          "category": "strings",
+          "pitch": 57,
+          "onset": 11.95,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 42
+        },
+        {
+          "category": "strings",
+          "pitch": 64,
+          "onset": 31.94,
+          "offset": 32.767,
+          "velocity": null,
+          "program": 40
+        },
+        {
+          "category": "strings",
+          "pitch": 52,
+          "onset": 31.94,
+          "offset": 32.767,
+          "velocity": null,
+          "program": 41
+        },
+        {
+          "category": "strings",
+          "pitch": 52,
+          "onset": 31.94,
+          "offset": 32.767,
+          "velocity": null,
+          "program": 42
+        }
+      ],
+      "decode_errors": {
+        "missing_tie": 70,
+        "note_off_without_onset": 76
+      },
+      "raw_sha256": "54081f20aac7bf9d3df92edad8a1fa4c388c9e4eadd291eea74833980f869c6f"
+    },
+    "B": {
+      "window_seconds": 2.0479375,
+      "raw_strings": 39,
+      "exact_boundary_end_count": 10,
+      "events": [
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 9.39,
+          "offset": 10.2396875,
+          "velocity": null,
+          "program": 41
+        },
+        {
+          "category": "strings",
+          "pitch": 64,
+          "onset": 9.39,
+          "offset": 10.2396875,
+          "velocity": null,
+          "program": 41
+        },
+        {
+          "category": "strings",
+          "pitch": 59,
+          "onset": 9.39,
+          "offset": 10.2396875,
+          "velocity": null,
+          "program": 42
+        },
+        {
+          "category": "strings",
+          "pitch": 65,
+          "onset": 11.96,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 40
+        },
+        {
+          "category": "strings",
+          "pitch": 67,
+          "onset": 11.96,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 40
+        },
+        {
+          "category": "strings",
+          "pitch": 62,
+          "onset": 11.96,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 41
+        },
+        {
+          "category": "strings",
+          "pitch": 55,
+          "onset": 11.96,
+          "offset": 12.287625,
+          "velocity": null,
+          "program": 42
+        },
+        {
+          "category": "strings",
+          "pitch": 53,
+          "onset": 56.88,
+          "offset": 57.34225,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 60,
+          "onset": 56.88,
+          "offset": 57.34225,
+          "velocity": null,
+          "program": 48
+        },
+        {
+          "category": "strings",
+          "pitch": 69,
+          "onset": 56.88,
+          "offset": 57.34225,
+          "velocity": null,
+          "program": 48
+        }
+      ],
+      "decode_errors": {
+        "note_off_without_onset": 22,
+        "missing_tie": 14
+      },
+      "raw_sha256": "73217372d51f51b62ee73cb51e519e7a5507e138c45d9ad4c7ce644a3a2e1046"
+    }
+  },
+  "limits": "raw event/tie tokens were not saved; matching a boundary does not prove corruption or justify extending notes. Need controlled token/tie replay before any repair."
+}

@@ -1,0 +1,51 @@
+{
+  "status": "explicitly frozen by user2026-10-17; no future bass changes without new authorization",
+  "selected": "D75+W64",
+  "release_tag": "v0.1.0-bass-sequence.1",
+  "release_commit": "531cc594fa5297d66b35044729f46301e4578ca7",
+  "lock_path": "config/bass-sequence.lock.json",
+  "lock_sha256": "4ce29a2ad5269f2ee66503b60cb0baed46cb9a4208c9c5f06e8d1cd61e56e627",
+  "bass": {
+    "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+    "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+  },
+  "six_track": {
+    "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+    "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+  },
+  "implementation": [
+    {
+      "path": "src/audio_midi/bass_sequence.py",
+      "sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d"
+    },
+    {
+      "path": "src/audio_midi/bass_evidence.py",
+      "sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e"
+    },
+    {
+      "path": "src/audio_midi/bass_models.py",
+      "sha256": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279"
+    },
+    {
+      "path": "src/audio_midi/bass_refinement.py",
+      "sha256": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+    },
+    {
+      "path": "outputs/bass-sequence/common.py",
+      "sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d"
+    },
+    {
+      "path": "outputs/bass-sequence/generate.py",
+      "sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010"
+    },
+    {
+      "path": "outputs/bass-evidence/generate.py",
+      "sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe"
+    },
+    {
+      "path": "outputs/bass-models/generate.py",
+      "sha256": "5963189c0210cd8497845d4463f41dde24ece7cbe572942787112c65679162f3"
+    }
+  ],
+  "note": "research selection and hash guard, not a new production CLI or new model weights"
+}
