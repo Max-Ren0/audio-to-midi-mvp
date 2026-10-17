@@ -352,3 +352,4 @@
 - 120测试通过；临时重建3阶段14控制行/12ID，MIDI字节、音符、全部修改提案、特征数组、评分/选择一致；拒绝覆盖已有输出。待打包、冻结提交、独立审查后同步。仍9FP/9FN，标准是改编和已见开发集，不代表原录音真值/新歌泛化。
 - 3e3270d冻结后verify_bass_evidence独立只读验收通过：自写tempo解析/SciPy最大匹配复算全部评分及3新增零丢失，120测试/临时重建、106清单+8源/107ZIP、44片段逐采样/5WAV临时重渲染相同，5保护轨+conductor无变。无必须修复；主agent仅改路径文档『鼓与其余5轨』为『包括鼓在内的其他5轨』并核对差异，无源代码/媒体改动。
 - 审查记录outputs/bass-evidence/独立验证.md。贝斯SHA41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a，六轨363ee4d3e0086a0c9ca7ad29a29bd6c89d2b9d5a9469552bf2dd3404f0126bfe，ZIP6e1dcac53b2556bbff7817d4878877bf5fb8f8f4e526d334bef5b8d57d82a316。准备安全快进main、发布v0.1.0-bass-evidence.1研究标签并推送；冻结包保持原字节，审查记录另附。
+- Git同步已实时确认：origin/main、origin/codex/bass-evidence-refinement、v0.1.0-bass-evidence.1均为8c82da8d111f91361bdd3712a0856ce273548cbc；安全快进、无force push，媒体/模型/缓存/批量包不上传。本同步状态行作为后续文档提交保存，不移动已发布标签。当前研究贝斯75.00%、整体76.56%，后续仍需逐步解决9FP/9FN；未自动进入60–120或其他轨优化。
