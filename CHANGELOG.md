@@ -185,4 +185,4 @@
 - Added audio-supported same-pitch retrigger merging, neural-consensus additions and local onset refinement; 12 preregistered profiles, 4 distinct MIDIs, no new inference or paid calls.
 - Seen 0–60 bass onset F1 62.34→70.59→72.22→75.00 (27 TP / 36 predicted / 36 reference; 9 FP / 9 FN). No previous matched reference lost. Octave profiles made no edits.
 - New six-track F1 76.5625%, only bass replaced; other five tracks and conductor messages preserved. Old artifacts/locks retained; default runner unchanged.
-- 120 tests and temporary three-stage byte/evidence/score rebuild passed. Independent verification pending frozen commit; no held-out or recording-truth claim.
+- 120 tests and temporary three-stage byte/evidence/score rebuild passed. Frozen commit 3e3270d independently verified: own tempo parser/SciPy maximum matching, sources, byte rebuild, protected tracks, 44 clips, 5 re-rendered WAVs and 107-member ZIP passed; no blocking findings. No held-out or recording-truth claim.
