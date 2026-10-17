@@ -1,0 +1,21 @@
+{
+  "parent": {
+    "id": "A-S80",
+    "path": "outputs/runs/strings-bounded/A-post/A-S80.mid",
+    "sha256": "90ba530150a1d48661ead2950066be127779c18a7c1292fd7863e6eeb9778c8d",
+    "detail_path": "outputs/runs/strings-bounded/A-post/A-S80.json",
+    "detail_sha256": "24cc21e66e4857077efb7c20a4c284889be5ca91d9134affc2ae1317cd5c0e71",
+    "predicted": 25
+  },
+  "rows": [
+    {
+      "id": "A-M",
+      "path": "outputs/runs/strings-bounded/A-merge/A-M.mid",
+      "sha256": "c64ef2b6be3ff23d1fb8c2185652c3251349592da1f928ee1cd71fa75e451d4a",
+      "detail_path": "outputs/runs/strings-bounded/A-merge/A-M.json",
+      "detail_sha256": "9da5da69ba4e04f9754bec2e4fe4d8cbb2e6a0b7cdd2dc42d26505564fdf607f",
+      "predicted": 24
+    }
+  ],
+  "registration_sha256": "9b67b56b5dc000bb6caaac53ee06d5f2ce690672cf0955f1e6ad11856afb745f"
+}

@@ -1,0 +1,29 @@
+{
+  "parent": {
+    "id": "A",
+    "path": "outputs/runs/strings-bounded/matrix/A.mid",
+    "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+    "detail_path": "outputs/runs/strings-bounded/matrix/A.json",
+    "detail_sha256": "743b0f42ad5f6ba2fffc5d443135706ca8a7933685e52a24c93dfb1cfe93f104",
+    "predicted": 39
+  },
+  "rows": [
+    {
+      "id": "A-S80",
+      "path": "outputs/runs/strings-bounded/A-post/A-S80.mid",
+      "sha256": "90ba530150a1d48661ead2950066be127779c18a7c1292fd7863e6eeb9778c8d",
+      "detail_path": "outputs/runs/strings-bounded/A-post/A-S80.json",
+      "detail_sha256": "24cc21e66e4857077efb7c20a4c284889be5ca91d9134affc2ae1317cd5c0e71",
+      "predicted": 25
+    },
+    {
+      "id": "A-S120",
+      "path": "outputs/runs/strings-bounded/A-post/A-S120.mid",
+      "sha256": "90ba530150a1d48661ead2950066be127779c18a7c1292fd7863e6eeb9778c8d",
+      "detail_path": "outputs/runs/strings-bounded/A-post/A-S120.json",
+      "detail_sha256": "fcc2716159a3d9657641f9434f3b92816bf54a1fc4a2f4de5246f98b234010ed",
+      "predicted": 25
+    }
+  ],
+  "registration_sha256": "9b67b56b5dc000bb6caaac53ee06d5f2ce690672cf0955f1e6ad11856afb745f"
+}

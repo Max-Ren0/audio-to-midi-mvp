@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "id": "A",
+      "path": "outputs/runs/strings-bounded/matrix/A.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+      "detail_path": "outputs/runs/strings-bounded/matrix/A.json",
+      "detail_sha256": "743b0f42ad5f6ba2fffc5d443135706ca8a7933685e52a24c93dfb1cfe93f104",
+      "predicted": 39
+    },
+    {
+      "id": "B",
+      "path": "outputs/runs/strings-bounded/matrix/B.mid",
+      "sha256": "d91ce64a401fe0e93d8365ed376d07e6dd841553cc7252efdba99336d9e062cf",
+      "detail_path": "outputs/runs/strings-bounded/matrix/B.json",
+      "detail_sha256": "c1ce23afe77e8a2bf8e28e710b72c2df563c507ae69333e14ca5b04ce21f86e8",
+      "predicted": 39
+    },
+    {
+      "id": "C",
+      "path": "outputs/runs/strings-bounded/matrix/C.mid",
+      "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+      "detail_path": "outputs/runs/strings-bounded/matrix/C.json",
+      "detail_sha256": "b202441723935f36ac22b9d1f963fed4def05dd095ded26521d4bc9057b2a78b",
+      "predicted": 40
+    },
+    {
+      "id": "D",
+      "path": "outputs/runs/strings-bounded/matrix/D.mid",
+      "sha256": "f418c8896dbb4088ad6b723477fa4a204ef6bca77a845f383253db264726c6bd",
+      "detail_path": "outputs/runs/strings-bounded/matrix/D.json",
+      "detail_sha256": "6d83ef159518261b92b98a8c08d205a21eb7f8c360c204fc5b6ad6cd8d42ad0e",
+      "predicted": 334
+    }
+  ],
+  "source_hashes": {
+    "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+    "work/v01/runtime/1792079033121801000/mix.npy": "391353fc2adb5e0be35dfd5330c7222f829e82cc6e600c0640e3aeaa425b385f",
+    "work/v01/runtime/1792079033121801000/strings.npy": "610b47a9ab02402556c7f7a01f17a758b74d0318c6a1d1883ee58a3d60c7adec",
+    "work/v01/runtime/1792079033121801000/strings.json": "73217372d51f51b62ee73cb51e519e7a5507e138c45d9ad4c7ce644a3a2e1046",
+    "work/v01/runtime/1792079033121801000/mix.json": "83d51f93ac022cfbcd3e968055beff7c0d8f0e1ca60f34717dc180d3608218d6"
+  },
+  "registration_sha256": "4f90b081d706461b633e86772135e6f3451c15c1395719eb1581a15e10dd77ac"
+}

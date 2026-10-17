@@ -1,0 +1,21 @@
+{
+  "parent": {
+    "id": "C",
+    "path": "outputs/runs/strings-bounded/matrix/C.mid",
+    "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+    "detail_path": "outputs/runs/strings-bounded/matrix/C.json",
+    "detail_sha256": "b202441723935f36ac22b9d1f963fed4def05dd095ded26521d4bc9057b2a78b",
+    "predicted": 40
+  },
+  "rows": [
+    {
+      "id": "H",
+      "path": "outputs/runs/strings-bounded/harmonic/H.mid",
+      "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+      "detail_path": "outputs/runs/strings-bounded/harmonic/H.json",
+      "detail_sha256": "e1d848bd7e29d8b6908be1728129454ff11b3ec56e402ccf8e6330f0627c85db",
+      "predicted": 40
+    }
+  ],
+  "registration_sha256": "4f90b081d706461b633e86772135e6f3451c15c1395719eb1581a15e10dd77ac"
+}

@@ -1,0 +1,21 @@
+{
+  "parent": {
+    "id": "C",
+    "path": "outputs/runs/strings-bounded/matrix/C.mid",
+    "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+    "detail_path": "outputs/runs/strings-bounded/matrix/C.json",
+    "detail_sha256": "b202441723935f36ac22b9d1f963fed4def05dd095ded26521d4bc9057b2a78b",
+    "predicted": 40
+  },
+  "rows": [
+    {
+      "id": "M",
+      "path": "outputs/runs/strings-bounded/merge/M.mid",
+      "sha256": "685a6598b3408412db73ca29f3a6d457a78a81e586330219671363392740e678",
+      "detail_path": "outputs/runs/strings-bounded/merge/M.json",
+      "detail_sha256": "1885aa6674041cea002ddecd0c6da6921421d33b8608bd28b27b25f41a988d33",
+      "predicted": 22
+    }
+  ],
+  "registration_sha256": "4f90b081d706461b633e86772135e6f3451c15c1395719eb1581a15e10dd77ac"
+}

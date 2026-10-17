@@ -1,0 +1,236 @@
+{
+  "stage": "merge",
+  "rows": [
+    {
+      "id": "C",
+      "path": "outputs/runs/strings-bounded/matrix/C.mid",
+      "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+      "detail_path": "outputs/runs/strings-bounded/matrix/C.json",
+      "detail_sha256": "b202441723935f36ac22b9d1f963fed4def05dd095ded26521d4bc9057b2a78b",
+      "predicted": 40,
+      "score": {
+        "reference": 7,
+        "predicted": 40,
+        "onset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "offset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "chroma_onset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "near_onset_coverage": 0.5714285714285714,
+        "sustained_presence_coverage": 1.0,
+        "per_reference": [
+          {
+            "reference_index": 0,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 1.6710118059029497,
+            "duration_coverage": 1.0,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 1,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 0.6722850633650186,
+            "duration_coverage": 0.40190437055082395,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 2,
+            "near_onset_prediction_indices": [
+              8
+            ],
+            "overlap_seconds": 1.5401612389528108,
+            "duration_coverage": 0.9169280721865717,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 3,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 0.6604166666666629,
+            "duration_coverage": 0.39979104468059673,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 4,
+            "near_onset_prediction_indices": [
+              12
+            ],
+            "overlap_seconds": 1.0500476738369162,
+            "duration_coverage": 0.6356587858488736,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 5,
+            "near_onset_prediction_indices": [
+              13
+            ],
+            "overlap_seconds": 0.9302560071702501,
+            "duration_coverage": 0.5631414827916675,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 6,
+            "near_onset_prediction_indices": [
+              14
+            ],
+            "overlap_seconds": 1.0500476738369162,
+            "duration_coverage": 0.6356587858488736,
+            "present_80ms": true
+          }
+        ]
+      },
+      "duration_pitch": {
+        "matched_pitch_seconds": 7.5742261297315245,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 30.29166666666662,
+        "precision": 0.25004322849182514,
+        "recall": 0.6512059735596682,
+        "f1": 0.3613421097547184,
+        "meaning": "active absolute-pitch/time overlap"
+      },
+      "duration_chroma": {
+        "matched_pitch_seconds": 8.554386789227939,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 27.502083333333303,
+        "precision": 0.3110450464987058,
+        "recall": 0.7354768238854524,
+        "f1": 0.4371937736957092,
+        "meaning": "active pitch-class/time overlap"
+      }
+    },
+    {
+      "id": "M",
+      "path": "outputs/runs/strings-bounded/merge/M.mid",
+      "sha256": "685a6598b3408412db73ca29f3a6d457a78a81e586330219671363392740e678",
+      "detail_path": "outputs/runs/strings-bounded/merge/M.json",
+      "detail_sha256": "1885aa6674041cea002ddecd0c6da6921421d33b8608bd28b27b25f41a988d33",
+      "predicted": 22,
+      "score": {
+        "reference": 7,
+        "predicted": 22,
+        "onset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "offset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "chroma_onset": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "average_overlap": 0.0,
+          "matched": 0,
+          "pairs": []
+        },
+        "near_onset_coverage": 0.42857142857142855,
+        "sustained_presence_coverage": 1.0,
+        "per_reference": [
+          {
+            "reference_index": 0,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 1.6710118059029497,
+            "duration_coverage": 1.0,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 1,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 0.6722850633650186,
+            "duration_coverage": 0.40190437055082395,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 2,
+            "near_onset_prediction_indices": [
+              8
+            ],
+            "overlap_seconds": 1.5401612389528125,
+            "duration_coverage": 0.9169280721865727,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 3,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 0.6604166666666664,
+            "duration_coverage": 0.39979104468059884,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 4,
+            "near_onset_prediction_indices": [],
+            "overlap_seconds": 1.0500476738369215,
+            "duration_coverage": 0.6356587858488768,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 5,
+            "near_onset_prediction_indices": [
+              10
+            ],
+            "overlap_seconds": 0.9302560071702555,
+            "duration_coverage": 0.5631414827916708,
+            "present_80ms": true
+          },
+          {
+            "reference_index": 6,
+            "near_onset_prediction_indices": [
+              11
+            ],
+            "overlap_seconds": 1.0500476738369215,
+            "duration_coverage": 0.6356587858488768,
+            "present_80ms": true
+          }
+        ]
+      },
+      "duration_pitch": {
+        "matched_pitch_seconds": 7.574226129731546,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 30.301041666666656,
+        "precision": 0.24996586629111645,
+        "recall": 0.65120597355967,
+        "f1": 0.36126132246153037,
+        "meaning": "active absolute-pitch/time overlap"
+      },
+      "duration_chroma": {
+        "matched_pitch_seconds": 8.554386789227959,
+        "reference_pitch_seconds": 11.631075937968985,
+        "prediction_pitch_seconds": 27.511458333333323,
+        "precision": 0.31093905257880594,
+        "recall": 0.7354768238854541,
+        "f1": 0.43708906173199324,
+        "meaning": "active pitch-class/time overlap"
+      }
+    }
+  ],
+  "exploratory_selected": "C",
+  "data_gate_passed": false,
+  "limits": "7notes only; no deployed/frozen strings change"
+}

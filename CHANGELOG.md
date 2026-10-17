@@ -198,3 +198,9 @@
 - Diagnosed current SW-other→YourMT3 strings: 3/39/7 strict F1 13.04%; segmentation-invariant absolute-pitch/time F1 29.37%, pitch-class/time 41.34%, activity-time 79.11%, not listening scores.
 - Traced missing sustained high notes, a raw 23-note ascending run and 10 raw block-end terminations; decoder logs are evidence signals, not proof of root cause. No new inference or string edits.
 - 127 tests and temporary diagnostic/freeze rebuild passed. Frozen 32ff5ea independently verified: own tempo/SciPy matching and interval-union metrics, freeze hashes, 9 source clips, 3 WAV re-renders and 29-file ZIP. No required fixes; supplement clarifies current boundary pitches differ from reference.
+
+## v0.1.0-strings-bounded.1 — 2026-10-17
+- Add bounded strings diagnostics: mir_eval onset/offset/chroma, reference coverage, 2×2 source/label comparison, fixed postprocessing and raw-token half-block controls.
+- On this seven-note development excerpt only, exploratory A-M removes/merges 15 events (39→24), preserves three onset matches and changes onset F1 from13.04% to19.35%; missing high notes remain. No strings default or six-track replacement.
+- All four raw captures completed; only3/10 other boundary notes follow the shifted grid,0/5 mix, so conditional overlap was not run. Preserve all negative results and disclose supplemental preregistration timing.
+- 135 tests pass; no-forward temporary reconstruction checks MIDI/evidence/scores. Local media/bundle stay outside Git. Independent verification recorded separately before release.

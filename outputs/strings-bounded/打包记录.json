@@ -1,0 +1,8 @@
+{
+  "archive": "outputs/runs/strings-bounded/弦乐-有限诊断与后处理探索.zip",
+  "sha256": "7a8c7f0a14c8534f2414c571918858352f0ba452e662799ac01478957bb089c9",
+  "manifest": "outputs/runs/strings-bounded/交付清单.json",
+  "manifest_sha256": "160cb3b224be6a0cfc0910e471693ed565958ad103819000c4221214f94192e0",
+  "artifacts": 131,
+  "zip_members": 132
+}

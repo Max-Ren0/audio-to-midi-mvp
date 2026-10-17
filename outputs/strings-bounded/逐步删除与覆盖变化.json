@@ -1,0 +1,76 @@
+[
+  {
+    "parent": "C",
+    "candidate": "S80",
+    "removed_event_count": 0,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "C",
+    "candidate": "S120",
+    "removed_event_count": 6,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "C",
+    "candidate": "M",
+    "removed_event_count": 18,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [
+      4
+    ],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "C",
+    "candidate": "H",
+    "removed_event_count": 0,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "A",
+    "candidate": "A-S80",
+    "removed_event_count": 14,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "A",
+    "candidate": "A-S120",
+    "removed_event_count": 14,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "A-S80",
+    "candidate": "A-M",
+    "removed_event_count": 1,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  },
+  {
+    "parent": "A-M",
+    "candidate": "A-H",
+    "removed_event_count": 0,
+    "new_matched_reference_indices": [],
+    "lost_matched_reference_indices": [],
+    "lost_near_onset_reference_indices": [],
+    "lost_sustained_presence_indices": []
+  }
+]

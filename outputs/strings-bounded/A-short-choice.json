@@ -1,0 +1,10 @@
+{
+  "row": {
+    "id": "A-S80",
+    "path": "outputs/runs/strings-bounded/A-post/A-S80.mid",
+    "sha256": "90ba530150a1d48661ead2950066be127779c18a7c1292fd7863e6eeb9778c8d",
+    "detail_path": "outputs/runs/strings-bounded/A-post/A-S80.json",
+    "detail_sha256": "24cc21e66e4857077efb7c20a4c284889be5ca91d9134affc2ae1317cd5c0e71",
+    "predicted": 25
+  }
+}

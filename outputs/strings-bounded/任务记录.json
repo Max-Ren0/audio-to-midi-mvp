@@ -1,0 +1,74 @@
+[
+  {
+    "id": "other-0",
+    "command": [
+      ".venv/bin/python",
+      "outputs/strings-bounded/run_capture.py",
+      "work/v01/runtime/1792079033121801000/strings.npy",
+      "work/strings-bounded/other-0",
+      "--prefix-samples",
+      "0"
+    ],
+    "status": "ok",
+    "reason": null,
+    "returncode": 0,
+    "attempts": 1,
+    "peak_memory_bytes": 2521432064,
+    "elapsed_seconds": 25.87011966600039,
+    "log_path": "work/strings-bounded/other-0.log"
+  },
+  {
+    "id": "other-16384",
+    "command": [
+      ".venv/bin/python",
+      "outputs/strings-bounded/run_capture.py",
+      "work/v01/runtime/1792079033121801000/strings.npy",
+      "work/strings-bounded/other-16384",
+      "--prefix-samples",
+      "16384"
+    ],
+    "status": "ok",
+    "reason": null,
+    "returncode": 0,
+    "attempts": 1,
+    "peak_memory_bytes": 2469298176,
+    "elapsed_seconds": 20.736668833000294,
+    "log_path": "work/strings-bounded/other-16384.log"
+  },
+  {
+    "id": "mix-0",
+    "command": [
+      ".venv/bin/python",
+      "outputs/strings-bounded/run_capture.py",
+      "work/v01/runtime/1792079033121801000/mix.npy",
+      "work/strings-bounded/mix-0",
+      "--prefix-samples",
+      "0"
+    ],
+    "status": "ok",
+    "reason": null,
+    "returncode": 0,
+    "attempts": 1,
+    "peak_memory_bytes": 2565242880,
+    "elapsed_seconds": 36.063441582999076,
+    "log_path": "work/strings-bounded/mix-0.log"
+  },
+  {
+    "id": "mix-16384",
+    "command": [
+      ".venv/bin/python",
+      "outputs/strings-bounded/run_capture.py",
+      "work/v01/runtime/1792079033121801000/mix.npy",
+      "work/strings-bounded/mix-16384",
+      "--prefix-samples",
+      "16384"
+    ],
+    "status": "ok",
+    "reason": null,
+    "returncode": 0,
+    "attempts": 1,
+    "peak_memory_bytes": 2534834176,
+    "elapsed_seconds": 44.235111209000024,
+    "log_path": "work/strings-bounded/mix-16384.log"
+  }
+]

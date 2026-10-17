@@ -1,0 +1,21 @@
+{
+  "parent": {
+    "id": "A-M",
+    "path": "outputs/runs/strings-bounded/A-merge/A-M.mid",
+    "sha256": "c64ef2b6be3ff23d1fb8c2185652c3251349592da1f928ee1cd71fa75e451d4a",
+    "detail_path": "outputs/runs/strings-bounded/A-merge/A-M.json",
+    "detail_sha256": "9da5da69ba4e04f9754bec2e4fe4d8cbb2e6a0b7cdd2dc42d26505564fdf607f",
+    "predicted": 24
+  },
+  "rows": [
+    {
+      "id": "A-H",
+      "path": "outputs/runs/strings-bounded/A-harmonic/A-H.mid",
+      "sha256": "c64ef2b6be3ff23d1fb8c2185652c3251349592da1f928ee1cd71fa75e451d4a",
+      "detail_path": "outputs/runs/strings-bounded/A-harmonic/A-H.json",
+      "detail_sha256": "3ee7ccdf70453b91662a46f938a50f87fb6bbec14df2e498eba78c4e7c3b607b",
+      "predicted": 24
+    }
+  ],
+  "registration_sha256": "9b67b56b5dc000bb6caaac53ee06d5f2ce690672cf0955f1e6ad11856afb745f"
+}

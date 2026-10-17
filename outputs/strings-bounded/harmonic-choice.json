@@ -1,0 +1,10 @@
+{
+  "row": {
+    "id": "C",
+    "path": "outputs/runs/strings-bounded/matrix/C.mid",
+    "sha256": "04fd943e0b0291c4d7d95c3d614eb1fe1a03c39aae6b2c6dcd085ace8fc7781f",
+    "detail_path": "outputs/runs/strings-bounded/matrix/C.json",
+    "detail_sha256": "b202441723935f36ac22b9d1f963fed4def05dd095ded26521d4bc9057b2a78b",
+    "predicted": 40
+  }
+}
