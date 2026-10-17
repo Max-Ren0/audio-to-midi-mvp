@@ -1,13 +1,94 @@
 {
- "date":"2026-10-17",
- "authorization_update":"user explicitly declines expansion: current0–60 diagnostics only; reference is complete tool export, unedited; no new default/promoted strings pipeline from7 notes",
- "scope":"currentMP3 only; no60–120 or120–150; frozen piano/drums/bass unchanged; no API/training/new weights",
- "stage0":{"library":"installed mir_eval.transcription","onset_tolerance":0.05,"pitch_tolerance_cents":50,"offset_ratio":0.2,"offset_min_tolerance":0.05,"onset_only_offset_ratio":null,"pitch_units":"Hz from integer MIDI, not MIDI numbers passed as Hz","alignment":"reference=(prediction*.9995+.14); inverse reference to source timeline","reference_coverage":{"onset_neighborhood_seconds":0.15,"sustained_coverage":"per-reference union of same-pitch time overlap; also present if >=80ms overlap"},"auxiliary":"octave-collapsed noteF1 plus existing duration-pitch/chroma/activity overlap; all not perceptual scores","data_gate":"only7 reference notes, exploratory counts; >=30 not satisfied, no generalizable model selection or new frozen winner"},
- "stage1":{"cells":{"A":"SWother,strings labels only","B":"SWother,all pitched non-vocal non-drum labels projected to strings","C":"original mix,strings labels only","D":"original mix,all pitched non-vocal non-drum projected to strings"},"preparation":"same clean_notes after projection; merge exact-pitch unison duplicates using existing30ms/50ms cleaner; keep original source labels/provenance in evidence","target_notes":"both reference pitch79 long notes: record raw/clean presence, original program/category/onset/offset and duration coverage, not onset matches only","cache":"verify original mix.npy equals actual currentMP3 decode; otherNPY equals receipt-bound other resample; raw output provenance from prior scratch/report"},
- "stage2":{"interpretation":"B=A cannot support label-loss claim; mix pitch79 present and labeledstrings is a source-route clue, not proof all differences caused by separation; mix-only pitch matches can be other instruments","postprocess_probe":"C fixed as exploratory probe because pre-score raw mix contains sustained79; A remains unchanged control; do not choose default based7 scores"},
- "stage3":{"profiles":[{"id":"S80","minimum_duration":0.08},{"id":"S120","minimum_duration":0.12}],"selection":"exploratory only; accept step if onsetF1 strictly rises, offsetF1 and150mscoverage do not decrease; ties keep prior; no other thresholds tried","merge":{"id":"M","gap_seconds":0.12,"pitch":"exact same pitch only, preserve polyphony, not whole-track monophony"},"harmonic":{"id":"H","upper_intervals":[12,19],"maximum_short_seconds":0.15,"long_support_minimum_seconds":0.5,"time_coverage_minimum":0.8,"audio_requirement":"in probe waveform, upper fundamental-band energy <0.25 lower fundamental-band energy; no direct ghost label, accepted as pruning hypothesis only; preserve unpruned control"},"record":"every deletion/merge, counts, per-reference onset and sustained coverage loss; never edit to reference onset/pitch/duration"},
- "stage4":{"order":"only after stage3 outcomes saved","new_inference_processes":4,"jobs":["other-unshifted-capture","other-halfblock-capture","mix-unshifted-capture","mix-halfblock-capture"],"prefix_samples_16k":16384,"prefix_seconds":1.024,"window_samples":32767,"window_seconds":2.0479375,"wrapper":"same frozen YourMT3 decode and checkpoint, record token arrays + per-window events/ties; control notes must match cached unshifted notes","limits":{"threads":2,"memory_gib":3.2,"seconds_per_process":1800,"attempts":1},"comparison":"match old10boundary notes to shifted same-pitch events by onset<=150ms OR interval IoU>=.3; one-to-one maximum weighted overlap; report unmatched, old-grid/new-grid distances and offsets, never a global alignment refit","positive_signal":"at least3 comparable notes and >=half comparable offsets move by approximately halfwindow (+/-50ms) and land on shifted grid; positional sensitivity is evidence, not definitive root cause","overlap_candidate":"only if positive signal, keep original onsets and extend a boundary-ending same-pitch note using overlapping shifted-context note (>50% shorter-interval overlap); no reference durations; preserve labels; one fixed overlap candidate, exploratory only"},
- "maximum_candidate_ids":10,
- "delivery":"4cells +finite postprocess +shift/overlap exploratory MIDI evidence; no change existing strings/sixtrack; same fixed metrics every stage; immutable commit then independent read-only verification, GitHub code/compact reports only",
- "remaining":"7note gate unmet; complete tool export still not studio truth; no manual stem listening claimed; no performance deadline promise"
+  "date": "2026-10-17",
+  "authorization_update": "user explicitly declines expansion: current0–60 diagnostics only; reference is complete tool export, unedited; no new default/promoted strings pipeline from7 notes",
+  "scope": "currentMP3 only; no60–120 or120–150; frozen piano/drums/bass unchanged; no API/training/new weights",
+  "stage0": {
+    "library": "installed mir_eval.transcription",
+    "onset_tolerance": 0.05,
+    "pitch_tolerance_cents": 50,
+    "offset_ratio": 0.2,
+    "offset_min_tolerance": 0.05,
+    "onset_only_offset_ratio": null,
+    "pitch_units": "Hz from integer MIDI, not MIDI numbers passed as Hz",
+    "alignment": "reference=(prediction*.9995+.14); inverse reference to source timeline",
+    "reference_coverage": {
+      "onset_neighborhood_seconds": 0.15,
+      "sustained_coverage": "per-reference union of same-pitch time overlap; also present if >=80ms overlap"
+    },
+    "auxiliary": "octave-collapsed noteF1 plus existing duration-pitch/chroma/activity overlap; all not perceptual scores",
+    "data_gate": "only7 reference notes, exploratory counts; >=30 not satisfied, no generalizable model selection or new frozen winner"
+  },
+  "stage1": {
+    "cells": {
+      "A": "SWother,strings labels only",
+      "B": "SWother,all pitched non-vocal non-drum labels projected to strings",
+      "C": "original mix,strings labels only",
+      "D": "original mix,all pitched non-vocal non-drum projected to strings"
+    },
+    "preparation": "same clean_notes after projection; merge exact-pitch unison duplicates using existing30ms/50ms cleaner; keep original source labels/provenance in evidence",
+    "target_notes": "both reference pitch79 long notes: record raw/clean presence, original program/category/onset/offset and duration coverage, not onset matches only",
+    "cache": "verify original mix.npy equals actual currentMP3 decode; otherNPY equals receipt-bound other resample; raw output provenance from prior scratch/report"
+  },
+  "stage2": {
+    "interpretation": "B=A cannot support label-loss claim; mix pitch79 present and labeledstrings is a source-route clue, not proof all differences caused by separation; mix-only pitch matches can be other instruments",
+    "postprocess_probe": "C fixed as exploratory probe because pre-score raw mix contains sustained79; A remains unchanged control; do not choose default based7 scores"
+  },
+  "stage3": {
+    "profiles": [
+      {
+        "id": "S80",
+        "minimum_duration": 0.08
+      },
+      {
+        "id": "S120",
+        "minimum_duration": 0.12
+      }
+    ],
+    "selection": "exploratory only; accept step if onsetF1 strictly rises, offsetF1 and150mscoverage do not decrease; ties keep prior; no other thresholds tried",
+    "merge": {
+      "id": "M",
+      "gap_seconds": 0.12,
+      "pitch": "exact same pitch only, preserve polyphony, not whole-track monophony"
+    },
+    "harmonic": {
+      "id": "H",
+      "upper_intervals": [
+        12,
+        19
+      ],
+      "maximum_short_seconds": 0.15,
+      "long_support_minimum_seconds": 0.5,
+      "time_coverage_minimum": 0.8,
+      "audio_requirement": "in probe waveform, upper fundamental-band energy <0.25 lower fundamental-band energy; no direct ghost label, accepted as pruning hypothesis only; preserve unpruned control"
+    },
+    "record": "every deletion/merge, counts, per-reference onset and sustained coverage loss; never edit to reference onset/pitch/duration"
+  },
+  "stage4": {
+    "order": "only after stage3 outcomes saved",
+    "new_inference_processes": 4,
+    "jobs": [
+      "other-unshifted-capture",
+      "other-halfblock-capture",
+      "mix-unshifted-capture",
+      "mix-halfblock-capture"
+    ],
+    "prefix_samples_16k": 16384,
+    "prefix_seconds": 1.024,
+    "window_samples": 32767,
+    "window_seconds": 2.0479375,
+    "wrapper": "same frozen YourMT3 decode and checkpoint, record token arrays + per-window events/ties; control notes must match cached unshifted notes",
+    "limits": {
+      "threads": 2,
+      "memory_gib": 3.2,
+      "seconds_per_process": 1800,
+      "attempts": 1
+    },
+    "comparison": "match old10boundary notes to shifted same-pitch events by onset<=150ms OR interval IoU>=.3; one-to-one maximum weighted overlap; report unmatched, old-grid/new-grid distances and offsets, never a global alignment refit",
+    "positive_signal": "at least3 comparable notes and >=half comparable offsets move by approximately halfwindow (+/-50ms) and land on shifted grid; positional sensitivity is evidence, not definitive root cause",
+    "overlap_candidate": "only if positive signal, keep original onsets and extend a boundary-ending same-pitch note using overlapping shifted-context note (>50% shorter-interval overlap); no reference durations; preserve labels; one fixed overlap candidate, exploratory only"
+  },
+  "maximum_candidate_ids": 10,
+  "delivery": "4cells +finite postprocess +shift/overlap exploratory MIDI evidence; no change existing strings/sixtrack; same fixed metrics every stage; immutable commit then independent read-only verification, GitHub code/compact reports only",
+  "remaining": "7note gate unmet; complete tool export still not studio truth; no manual stem listening claimed; no performance deadline promise",
+  "count_clarification_before_first_score": "4matrix+2duration+merge+harmonic+at most1mix-probe overlap=9 selection candidates <=10; shifted raw/MIDI are diagnostic controls, not candidate selection. Other offset probe checks original10boundary notes only. If mix shift signal absent, do not create overlap candidate."
 }
