@@ -90,5 +90,17 @@
   "maximum_candidate_ids": 10,
   "delivery": "4cells +finite postprocess +shift/overlap exploratory MIDI evidence; no change existing strings/sixtrack; same fixed metrics every stage; immutable commit then independent read-only verification, GitHub code/compact reports only",
   "remaining": "7note gate unmet; complete tool export still not studio truth; no manual stem listening claimed; no performance deadline promise",
-  "count_clarification_before_first_score": "4matrix+2duration+merge+harmonic+at most1mix-probe overlap=9 selection candidates <=10; shifted raw/MIDI are diagnostic controls, not candidate selection. Other offset probe checks original10boundary notes only. If mix shift signal absent, do not create overlap candidate."
+  "count_clarification_before_first_score": "4matrix+2duration+merge+harmonic+at most1mix-probe overlap=9 selection candidates <=10; shifted raw/MIDI are diagnostic controls, not candidate selection. Other offset probe checks original10boundary notes only. If mix shift signal absent, do not create overlap candidate.",
+  "deviation_amendment_before_A_post_scores": {
+    "reason": "initial registration only fixedC probe and did not fully cover user-requested cleanup of currentA ascending fragments; add same4 fixed cleanup proposals onA, no new numeric threshold",
+    "timing": "after C post scores and after shifted jobs started, before viewing shift comparison or A cleanup scores",
+    "maximum_total_proposals": 14,
+    "status": "this A supplement is not claimed as original preregistration; all7note data diagnostic only; no new frozen default",
+    "IDs": [
+      "A-S80",
+      "A-S120",
+      "A-M",
+      "A-H"
+    ]
+  }
 }
