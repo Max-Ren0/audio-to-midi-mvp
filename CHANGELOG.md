@@ -191,4 +191,4 @@
 - Added three-source evidence, source-local choices and note-level sequence decoding; kept the original 75% stream after negative source/fusion/sequence trials. Four isolated new pitch jobs, all single-attempt, no new separation/API/training.
 - Selected evidence-constrained W64 additions: 29 TP / 39 predicted / 36 reference, F1 77.3333% vs 75%; two new reference matches, none lost, one new false positive. 10 preregistered IDs / 9 distinct MIDIs, full negative results retained.
 - Only bass replaced in six-track output, F1 76.7283%; five tracks/conductor and old 75% artifacts unchanged. Added 18-event diagnostics and 84 local excerpts. No short-note or held-out accuracy claim.
-- 124 tests and four-stage temporary MIDI/evidence/features/score rebuild passed; independent verification pending frozen commit.
+- 124 tests and four-stage temporary rebuild passed. Frozen c0bafd9 independently verified: own tempo parser/SciPy matching, source hashes, 84 PCM excerpts, 12 WAV re-renders, unchanged old notes/protected tracks and 176-file ZIP; no required fixes.
