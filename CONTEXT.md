@@ -382,3 +382,9 @@
 - 32ff5ea冻结后verify_strings_diagnostics独立只读通过：127测试、tmp重建、自写tempo/SciPy严格评分和区间并集持续指标、14逐音覆盖、原始23上行/边界10与15计数、冻结标签/8实现/旧MID、28产物+27源/29ZIP、9重切片/3WAV重渲染一致。无必须修复项；接受表述澄清：12.287625秒当前边界4音55/62/65/67不是参考57/60/65/67，另存独立验证与补充说明.md，不重写冻结包。
 - ZIP119562628229245be0b838c2e386776e13d73a17e3bf8dabcb50d3d5c24e2608；来源清单77de759692d6b89f8fde634e05c057f75dd855a91a92c121b77635a9249a173b。准备安全FF main，发布v0.1.0-strings-diagnostics.1诊断标签（不表示弦乐已提升）；贝斯原tag不移动，后续先补原始token/tie诊断再决定修正。
 - Git同步已实时核验：origin/main、origin/codex/strings-diagnostics、v0.1.0-strings-diagnostics.1均为ee42f0470147842998fefc9fcbc96eba110f3755。安全快进，无force push；媒体/权重/缓存/ZIP留本地。该状态行另作文档提交，不移动既有标签。贝斯继续冻结；弦乐尚未优化，下轮优先原token/tie和跨界长音诊断。
+
+## 2026-10-17：弦乐按用户有限诊断方案推进（进行中）
+- 用户要求mir_eval onset/offset双评分、2×2标签/音源诊断、有限后处理、最后半块偏移。用户随后明确『不拓展，只做现有片段诊断』，且参考是完整工具导出未删减；因此仅0–60，7音不足30门槛，本轮不冻结/推广新弦乐默认方案，不访问保留60–120/120–150。
+- 76a795b快照后codex/strings-bounded-optimization。登记outputs/strings-bounded/实验登记.json：4格A/B/C/D、C为固定后处理探索探针（原始混音已存在pitch79且标strings，非按7音分数选默认）、S80/S120、M120ms间隙合并、需声学证据泛音剪枝、最后other/mix各未偏移/半块捕获共4任务，最高10ID。不自动更换模型、无API/训练/新权重。
+- 原other归一化JSON39音全strings，标签过滤A/B预期相同；原混音595总音含380非人声/非鼓有音高音，其中41 strings。两个参考79在other中无输出，mix有strings48/pitch79从5.67到9.32覆盖部分参考，但起音/切分不同；不是仅label过滤结论，不推断分离因果。
+- mir_eval已本地安装；新评估Hz单位、onset50ms、offset20%/至少50ms，音级折叠、150ms附近起音覆盖与≥80ms持续存在覆盖分列。5单元测试先RED后GREEN（offset区分/Hz、八度/一对一、多音合并、持续与起音覆盖区别、泛音剪枝需证据且保留长上声部）。尚无本轮新评分或预测替换。
