@@ -197,4 +197,4 @@
 - Explicitly froze selected D75+W64 bass path via release/implementation/artifact hash guard; no bass or other existing prediction changed.
 - Diagnosed current SW-other→YourMT3 strings: 3/39/7 strict F1 13.04%; segmentation-invariant absolute-pitch/time F1 29.37%, pitch-class/time 41.34%, activity-time 79.11%, not listening scores.
 - Traced missing sustained high notes, a raw 23-note ascending run and 10 raw block-end terminations; decoder logs are evidence signals, not proof of root cause. No new inference or string edits.
-- 127 tests and temporary diagnostic/freeze byte rebuild passed. Added aligned-reference/old-output listening copies and 9 source excerpts; independent verification pending frozen commit.
+- 127 tests and temporary diagnostic/freeze rebuild passed. Frozen 32ff5ea independently verified: own tempo/SciPy matching and interval-union metrics, freeze hashes, 9 source clips, 3 WAV re-renders and 29-file ZIP. No required fixes; supplement clarifies current boundary pitches differ from reference.
