@@ -1,0 +1,606 @@
+{
+  "files": [
+    {
+      "path": "config/bass-evidence.lock.json",
+      "bytes": 1182,
+      "sha256": "83a5cab9f3151cd3c3d79050e5f27e32975b065b38b8fccb9463f29f836a0fa2"
+    },
+    {
+      "path": "config/bass-models.lock.json",
+      "bytes": 1354,
+      "sha256": "cf76351605ed80cf6a028130b800bc7c9269065c3f074b78d3a7a4ff3c395956"
+    },
+    {
+      "path": "outputs/bass-evidence/36标准音逐步变化.csv",
+      "bytes": 2326,
+      "sha256": "3856e25970e07d492e34c618e7f0f600ce7205bda61d3ac6aef7a10f8987161f"
+    },
+    {
+      "path": "outputs/bass-evidence/bundle.py",
+      "bytes": 2036,
+      "sha256": "35e131c9ea92832b601394635d834c1a22cebf9ca58ad5e9acb7763d80232135"
+    },
+    {
+      "path": "outputs/bass-evidence/generate.py",
+      "bytes": 8505,
+      "sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe"
+    },
+    {
+      "path": "outputs/bass-evidence/package.py",
+      "bytes": 6023,
+      "sha256": "ce9288dc87c3dd62dca32b981373f0e6a81d419a66f6461406467ed06e5642c8"
+    },
+    {
+      "path": "outputs/bass-evidence/phase1-choice.json",
+      "bytes": 427,
+      "sha256": "59dd5c4294837c9e1e7d914c0d53b07f152d5d30457acbeeca6cbeca94e00689"
+    },
+    {
+      "path": "outputs/bass-evidence/phase1-ledger.json",
+      "bytes": 2099,
+      "sha256": "dc2e609623e96c227a4c1135a8a892dfe7bb5ae6780880799a35a97ec5f2982e"
+    },
+    {
+      "path": "outputs/bass-evidence/phase1-scores.json",
+      "bytes": 8478,
+      "sha256": "88470b335ccd30633ed40bd3d7ea7dc4036358de9705a8760924caf8288b0e39"
+    },
+    {
+      "path": "outputs/bass-evidence/phase2-choice.json",
+      "bytes": 421,
+      "sha256": "ad69ad04082fb5f95d7f099f585607ad5dd1dd615ac8af9907ed9d2983e90c20"
+    },
+    {
+      "path": "outputs/bass-evidence/phase2-ledger.json",
+      "bytes": 2057,
+      "sha256": "6d5eadcea723e9163e5aea5c66265f80fd5aebc61085be6c51e39e1a17b7e3a9"
+    },
+    {
+      "path": "outputs/bass-evidence/phase2-scores.json",
+      "bytes": 8555,
+      "sha256": "65295710740b23bddd7d24152b6f0523b47d4d0045fa9d4b3546d40be9797f6d"
+    },
+    {
+      "path": "outputs/bass-evidence/phase3-choice.json",
+      "bytes": 421,
+      "sha256": "2f437d1945f3d77f155b064f367d6abef53ebbab59a7aee32064af7ec18dce3f"
+    },
+    {
+      "path": "outputs/bass-evidence/phase3-ledger.json",
+      "bytes": 2945,
+      "sha256": "e562e450cd8e8317b6db80ca0d0091addf33b6adb434ad914d4fb140c3aa4e4b"
+    },
+    {
+      "path": "outputs/bass-evidence/phase3-scores.json",
+      "bytes": 13406,
+      "sha256": "39af3bfbad0fbad1d462899ee366c9567d21b97665de20734990bd01144b66ee"
+    },
+    {
+      "path": "outputs/bass-evidence/score.py",
+      "bytes": 1999,
+      "sha256": "125ec1495e6b376b33c2fb1c3c0e669141ac1621878f15aacbf929e3dfc7c011"
+    },
+    {
+      "path": "outputs/bass-evidence/verify_rebuild.py",
+      "bytes": 2146,
+      "sha256": "f04add0415bb2f9391b87aff400eecabd35cc1ea91dd65824d75c9b923f995af"
+    },
+    {
+      "path": "outputs/bass-evidence/修改证据与片段.json",
+      "bytes": 17727,
+      "sha256": "ea57b0ce1b23ccc0d8b74b384e2a219202bb0dccf9166fdb0a852f6da664c2fe"
+    },
+    {
+      "path": "outputs/bass-evidence/六轨评分与试听.json",
+      "bytes": 2093,
+      "sha256": "c62e6ab49f19e17f3f12063c97b035ee5d2fbe1de188e3c0397b3fb7855a43fc"
+    },
+    {
+      "path": "outputs/bass-evidence/实施计划.md",
+      "bytes": 1509,
+      "sha256": "7069931ac83325558036d7e8d0487865357ed45f79693a5b86da67bdb3f97584"
+    },
+    {
+      "path": "outputs/bass-evidence/实验登记.json",
+      "bytes": 3986,
+      "sha256": "bf44aca55a3a7b9e426c5640d141488a9dc7dd4f12a873cb3086816bbf698039"
+    },
+    {
+      "path": "outputs/bass-evidence/逐步优化报告.md",
+      "bytes": 4847,
+      "sha256": "87cef62a816330fe6481f2a5e848dd34205a5177483563325181df25c1954435"
+    },
+    {
+      "path": "outputs/bass-evidence/逐步命中变化.json",
+      "bytes": 410,
+      "sha256": "60e7681c545f6696478f5f7345b370cce9057cbb458d9f1f44777f989e614b0c"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-00-原曲.wav",
+      "bytes": 32044,
+      "sha256": "2eb772240a1c838d02cf52a34ca5aa28b4e907211bfc3da49f871e792c02e4a8"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-00-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "5f3f841baae7fa2562883b615d482bc528fe5662ef8fa9b514a3492e6d8d4329"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-15-原曲.wav",
+      "bytes": 32044,
+      "sha256": "c63042c8cb0b90cc46f3988ae7670b060dc2c2ee4d49ad9b0627478e1721aa6b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-15-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "2e81afb7061f64377481ba0e6e6e97d8faea175c73ef955647ea004108941604"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-16-原曲.wav",
+      "bytes": 32044,
+      "sha256": "e610fd0ee5af0d972afd0264b88148b63dac6eb777251a18f757f0ed01ca6cea"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-16-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "d866151e9377db78ec1b8dd0e8881fb10b972d2a4d18cbb259fbfcacba0fa77b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-20-原曲.wav",
+      "bytes": 32044,
+      "sha256": "cc5a2cf3d4e0bb8f071cd1cd5f621c6010633e7445232a973bf3ad00c32d444e"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/A3-20-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "79ee37a892cecb1266c2736a5470929b98aed82c9eb730cdadfeaeaceb110dd4"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-00-原曲.wav",
+      "bytes": 32044,
+      "sha256": "6a258f7853725cc3fa7ed99f848bb091ec0761e59a79cd1e07c983610a1df854"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-00-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "de58a02214b47d3e98699993928e6c842765a851f29d91e8a71e0adebf0a55f7"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-01-原曲.wav",
+      "bytes": 32044,
+      "sha256": "4ffe34aa282f76ea45354a4d152ffdaf1c23697869095bf9faec2edc60c71132"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-01-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "d4936a40691241dae8334f7c8d55535b761b7d05722dd22709ebab3452b85d9b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-02-原曲.wav",
+      "bytes": 32044,
+      "sha256": "a27bc0d3ef6fdd4d3a491ad99c84b55836918cf529033652d852ffb33a7a3f67"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-02-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "468087c9040627d8f7047445682e76f01a16292167125de51b3bb02a785dc079"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-03-原曲.wav",
+      "bytes": 32044,
+      "sha256": "d5c9d25c7a7a5bc6070d40877edfe9f5b6d391a0a8f8598f348ed0187a77adcb"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-03-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "09daf96d853f8e6ceed3d62ba6482553a57747e98229946157b4ca8d10397aad"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-04-原曲.wav",
+      "bytes": 32044,
+      "sha256": "cc5a2cf3d4e0bb8f071cd1cd5f621c6010633e7445232a973bf3ad00c32d444e"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-04-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "79ee37a892cecb1266c2736a5470929b98aed82c9eb730cdadfeaeaceb110dd4"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-05-原曲.wav",
+      "bytes": 32044,
+      "sha256": "0942a9462be80866d0e21e6dcffe2f808672c83f74e9c4fd9799bbe85091f5c7"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-05-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "1a4d0097e0ebb894fc327908d260496f15a626c5b7fe6f06803ee5f3b0788c9d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-06-原曲.wav",
+      "bytes": 32044,
+      "sha256": "4dd07ae395dfa3f517ae5311e1c4360127aa9d80429e3a00acb1798cd2065e8c"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-06-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "373597f2ecf161f57c78d67f7c18a76d79aaca48ec42db50ed7931a289c6d4a8"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-07-原曲.wav",
+      "bytes": 32044,
+      "sha256": "5c1a57c4b1000b110dae642c1bd5047850457e7f7e183bbed152700adbda38bd"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-07-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "74287a549cbff61ed1619d63bbaad9d7bf854e127ce57f576e859923849d094d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-08-原曲.wav",
+      "bytes": 32044,
+      "sha256": "f55ea3fb2eac84ae3b2872271405755a6b1de2523c1aff9dc27866638e51813d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/M2-08-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "06fb285846a5e7ba4760ee4157b9f63e5c5874efa5dd0ec35fab3fc257aa8feb"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-00-原曲.wav",
+      "bytes": 32044,
+      "sha256": "eeae9db2948a88709eaf0f84850949e42146c6230fa495bb16f1482640fcae3b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-00-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "8b5507c100173abca91e352f14ae6766e9f36aca3a7b26ee1a60d159928ae1ee"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-01-原曲.wav",
+      "bytes": 32044,
+      "sha256": "535096ae1456942ad091c85419a12a38c111370459942f2f250d96d075a32e62"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-01-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "2019c121f73ddef552e3a60bf5f468cbc7ca78a1d82aed6b1cf22fe4b2a4508c"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-02-原曲.wav",
+      "bytes": 32044,
+      "sha256": "3053add9a93ddad251b4f811b6a7a4bc13d4b0a930e997ea3cb1bbae85f6c65b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-02-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "9d7c6e34502cda4d46ca755d578f1141d3dbf7eb1e9722161c8a24e3090308ad"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-03-原曲.wav",
+      "bytes": 32044,
+      "sha256": "246dfc794e59e5b313f5a30cc670088c7cc48e55dcd0885ec82f3c8f8ea4dda6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-03-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "17816cdf643d4377ace38c8e6ec09a06e81593a385216bc120c5fbb84867793b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-04-原曲.wav",
+      "bytes": 32044,
+      "sha256": "23cc24102d9cda3707085cb9f6932b1408f7f40eaf5fbc28d1069648c28255ed"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-04-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "083a40c0fcfb967a53e4ec11c6150ef54a30f8157e20531473c27ceabf92209c"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-05-原曲.wav",
+      "bytes": 32044,
+      "sha256": "47d47b7b11b0ecb0a6673092696c17020e794466dbde9dd27e64333685b33681"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-05-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "61556c43d20409c153914ff2588f76fb00cde400ef1fa0db6d7b1f152ae1eba9"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-06-原曲.wav",
+      "bytes": 32044,
+      "sha256": "59e453530d05209ae0e9d386110ef75a5241556d328577fa2bb4296d779321e1"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-06-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "53d650c392585769d6c8d518886b8b01836b62182b7ef4f6f6b25848002292cc"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-07-原曲.wav",
+      "bytes": 32044,
+      "sha256": "b89b8ac5c60768ce5c1aaf874123dcd3eca716f237eb7a3f900d961e432011a7"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-07-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "0a22d87f939953779361b5a77317142118950e8e7017e411f055008d8042b2da"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-08-原曲.wav",
+      "bytes": 32044,
+      "sha256": "67e648035839dbc0206849ad96202122988cb5e1723e73969daff4070349a407"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/clips/R1-08-贝斯.wav",
+      "bytes": 88244,
+      "sha256": "04227fd1b6ce3d5689fc7742483b94738b44015063d4e4457c320982c6a92764"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M1.json",
+      "bytes": 7268,
+      "sha256": "96c3c157e27b243d681b19ad78d7d64a2910107204e0cd3419827daa88b2d116"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M1.mid",
+      "bytes": 549,
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M2.json",
+      "bytes": 7799,
+      "sha256": "bf28e5569abac90249828219bf7e77d4e6d3284a9cc1d267fea53492ad19ca37"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M2.mid",
+      "bytes": 468,
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M3.json",
+      "bytes": 7799,
+      "sha256": "8a0735b4604cf53ba744a99a3bc7600657b040e11e7c9f80b9e64cab29d245d9"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/M3.mid",
+      "bytes": 468,
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/audio-evidence.npz",
+      "bytes": 182072,
+      "sha256": "46c62c8b7c07817a76d6e1b68358bddb5b17a3c368514685a44c27712326579d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/baseline.json",
+      "bytes": 7274,
+      "sha256": "f2b178229aed3254b125fc76b7ec019c25d98fa6f1377651809f0aeca07d4b77"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase1/baseline.mid",
+      "bytes": 549,
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A1.json",
+      "bytes": 17772,
+      "sha256": "fa1dc7f78e6f5a330be0375c9bda00080d25bbeff6d12a0a9c15aabd512c112a"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A1.mid",
+      "bytes": 468,
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A2.json",
+      "bytes": 12925,
+      "sha256": "d179566b3cdcac614815b2c606a91c8b54dc3b289c6687d383051100d3c97b35"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A2.mid",
+      "bytes": 468,
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A3.json",
+      "bytes": 16830,
+      "sha256": "8678d89b8e41d958a9a7fd97b01afbd9ff7553c6d747d79ecb76e21f302a27df"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/A3.mid",
+      "bytes": 502,
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase2/audio-evidence.npz",
+      "bytes": 182072,
+      "sha256": "46c62c8b7c07817a76d6e1b68358bddb5b17a3c368514685a44c27712326579d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O1+R1.json",
+      "bytes": 32930,
+      "sha256": "fdd59dc18d431fcc9affa68dcb8ee0f5d116c62637b233bfd4980d345fa12bcf"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O1+R1.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O1.json",
+      "bytes": 29152,
+      "sha256": "26fdc8d5c61ab0b239a90ee22124ca70fea5c10b39a041bc8e3dc50afb8d042f"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O1.mid",
+      "bytes": 502,
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O2+R1.json",
+      "bytes": 32930,
+      "sha256": "514fdc44a54c706e6a56a0d438ce5d9388953ade4e96b5085ba23c96d9a8302d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O2+R1.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O2.json",
+      "bytes": 29152,
+      "sha256": "ae79a84a1e037fe6cb99308320a7b97ebb4ebf5a49ee72e95518f2b9dc440a1f"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/O2.mid",
+      "bytes": 502,
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/R1.json",
+      "bytes": 10269,
+      "sha256": "3393d7d9251c554ad51da0fecf764de2d74ca903a7483aa86c40441af61ce33b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/R1.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/phase3/audio-evidence.npz",
+      "bytes": 182072,
+      "sha256": "46c62c8b7c07817a76d6e1b68358bddb5b17a3c368514685a44c27712326579d"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/00-上版贝斯-62.34.mid",
+      "bytes": 549,
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/00-上版贝斯-62.34.wav",
+      "bytes": 10853972,
+      "sha256": "e499eddb35b228853c7852a9dbbca535694e7c3f45c043bdd4004ed69f62fed4"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/01-合并弱重复-70.59.mid",
+      "bytes": 468,
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/01-合并弱重复-70.59.wav",
+      "bytes": 10853972,
+      "sha256": "3b45ac1a112617d7c689ccec6a33b67eef69b569dda5bff9cfa6de818996b375"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/02-补音-72.22.mid",
+      "bytes": 502,
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/02-补音-72.22.wav",
+      "bytes": 10853972,
+      "sha256": "bdf95f6931bc1ce9f6caa3c6a77e4d54ba2ca7661f2efdb10c7df0e7c1dda66b"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/03-贝斯新版-75.00.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/03-贝斯新版-75.00.wav",
+      "bytes": 10853972,
+      "sha256": "5c20ddfbacfa7471ba9686de9a8997bfa965a861a96d2e7ca25f880bcb175b47"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/六轨-仅替换贝斯.mid",
+      "bytes": 4542,
+      "sha256": "363ee4d3e0086a0c9ca7ad29a29bd6c89d2b9d5a9469552bf2dd3404f0126bfe"
+    },
+    {
+      "path": "outputs/runs/bass-evidence/交付/六轨-仅替换贝斯.wav",
+      "bytes": 10853972,
+      "sha256": "3ea6daff10b9c45be7bbf5df4eb36ef7fb8dde5b4a6b1f2a25b020bd27935f22"
+    },
+    {
+      "path": "src/audio_midi/bass_evidence.py",
+      "bytes": 2363,
+      "sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e"
+    },
+    {
+      "path": "tests/test_bass_evidence.py",
+      "bytes": 1792,
+      "sha256": "5b49e06e3afb43483c69d115d132126f091f32467e6402789d1f8ba827e95ef8"
+    }
+  ],
+  "sources_not_bundled": [
+    {
+      "path": "work/bass-diagnostics/replay/frames.npz",
+      "sha256": "677dc4e3e0fac813623b24c8cb7bf7c8a370fe772c36a1795c3d136c1bad5465"
+    },
+    {
+      "path": "work/bass-diagnostics/replay/trace.json",
+      "sha256": "c17e95eb5fb85f23654780c82d4b3145659717af2eaade6be94910b9352cd711"
+    },
+    {
+      "path": "work/bass-models/crepe-full.npz",
+      "sha256": "2b9939c60fc5ad9b293b4abe28e2c34685cab648fe45a2bdfddfcb3a3af929fc"
+    },
+    {
+      "path": "work/bass-models/crepe-full.json",
+      "sha256": "9324cfd1609498d202a0ce6195a172305b016b1b9c5d3154db2649b3a9db6301"
+    },
+    {
+      "path": "work/bass-models/penn-full.npz",
+      "sha256": "2126c7d787fee7e6cc56a8e84e82ed848384cfe6e4045fa29b9f78a3ecb73936"
+    },
+    {
+      "path": "work/bass-models/penn-full.json",
+      "sha256": "90d22c1fb16d95cff917c3345b3b8d311e25c97ad57cdb6579e98298ddbbb21e"
+    },
+    {
+      "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+    },
+    {
+      "path": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+      "sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+    }
+  ],
+  "protected_baseline": {
+    "status": "seen 0–60 development research, not production/generalization/commercial approval",
+    "selected": "S2-short-0",
+    "recipe": {
+      "id": "S2-short-0",
+      "source": "demucs",
+      "model": "pyin",
+      "high": 0.2,
+      "low": 0.05,
+      "onset": "short",
+      "guard": 0
+    },
+    "source_ledger": "outputs/bass-models/phase3-ledger.json",
+    "source_ledger_sha256": "04d05194e47523436458583029b20e905eb06ba2c31c06a11f908fdc4860517a",
+    "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+    "bass": {
+      "path": "outputs/runs/bass-models/交付/04-贝斯新版-62.34.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32"
+    },
+    "six_track": {
+      "path": "outputs/runs/bass-models/交付/六轨-仅替换贝斯.mid",
+      "sha256": "b28231c5d0ba9e46dd5a0c47b1fca44cf304cd6b2cfa5517b5b3851963520a87"
+    },
+    "score": {
+      "matched": 24,
+      "predicted": 41,
+      "reference": 36,
+      "extra": 17,
+      "missed": 12,
+      "f1": 0.6233766233766234
+    },
+    "implementation_sha256": {
+      "bass_models.py": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279",
+      "bass_refinement.py": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+    },
+    "entrypoint": "outputs/bass-models/generate.py: cached research rebuild only; existing default runner unchanged"
+  },
+  "note": "local-only media and evidence; no studio truth/held-out claim"
+}

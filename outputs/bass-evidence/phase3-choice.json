@@ -1,0 +1,14 @@
+{
+  "row": {
+    "id": "R1",
+    "recipe": {
+      "parent": "A3",
+      "profile": "R1"
+    },
+    "path": "outputs/runs/bass-evidence/phase3/R1.mid",
+    "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+    "predicted": 36,
+    "provenance_path": "outputs/runs/bass-evidence/phase3/R1.json",
+    "provenance_sha256": "3393d7d9251c554ad51da0fecf764de2d74ca903a7483aa86c40441af61ce33b"
+  }
+}

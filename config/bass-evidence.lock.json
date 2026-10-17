@@ -1,0 +1,32 @@
+{
+  "status": "seen 0–60 development research; not production/generalization/recording truth",
+  "selected": "R1",
+  "chain": [
+    "S2-short-0",
+    "M2",
+    "A3",
+    "R1"
+  ],
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "previous_lock": "config/bass-models.lock.json",
+  "previous_lock_sha256": "cf76351605ed80cf6a028130b800bc7c9269065c3f074b78d3a7a4ff3c395956",
+  "bass": {
+    "path": "outputs/runs/bass-evidence/交付/03-贝斯新版-75.00.mid",
+    "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+  },
+  "six_track": {
+    "path": "outputs/runs/bass-evidence/交付/六轨-仅替换贝斯.mid",
+    "sha256": "363ee4d3e0086a0c9ca7ad29a29bd6c89d2b9d5a9469552bf2dd3404f0126bfe"
+  },
+  "score": {
+    "matched": 27,
+    "predicted": 36,
+    "reference": 36,
+    "extra": 9,
+    "missed": 9,
+    "f1": 0.75
+  },
+  "implementation_sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e",
+  "registration_sha256": "bf44aca55a3a7b9e426c5640d141488a9dc7dd4f12a873cb3086816bbf698039",
+  "entrypoint": "outputs/bass-evidence/generate.py; cached research only, default runner unchanged"
+}

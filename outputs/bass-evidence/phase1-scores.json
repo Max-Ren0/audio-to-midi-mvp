@@ -1,0 +1,572 @@
+{
+  "phase": 1,
+  "rows": [
+    {
+      "id": "baseline",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "baseline"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/baseline.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "predicted": 41,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/baseline.json",
+      "provenance_sha256": "f2b178229aed3254b125fc76b7ec019c25d98fa6f1377651809f0aeca07d4b77",
+      "matched": 24,
+      "reference": 36,
+      "extra": 17,
+      "missed": 12,
+      "f1": 0.6233766233766234,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          24,
+          26
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          26,
+          28
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          33,
+          38
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          35,
+          40
+        ]
+      ]
+    },
+    {
+      "id": "M1",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M1"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M1.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "predicted": 41,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M1.json",
+      "provenance_sha256": "96c3c157e27b243d681b19ad78d7d64a2910107204e0cd3419827daa88b2d116",
+      "matched": 24,
+      "reference": 36,
+      "extra": 17,
+      "missed": 12,
+      "f1": 0.6233766233766234,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          24,
+          26
+        ],
+        [
+          25,
+          27
+        ],
+        [
+          26,
+          28
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          33,
+          38
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          35,
+          40
+        ]
+      ]
+    },
+    {
+      "id": "M2",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M2"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M2.mid",
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6",
+      "predicted": 32,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M2.json",
+      "provenance_sha256": "bf28e5569abac90249828219bf7e77d4e6d3284a9cc1d267fea53492ad19ca37",
+      "matched": 24,
+      "reference": 36,
+      "extra": 8,
+      "missed": 12,
+      "f1": 0.7058823529411765,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          21,
+          17
+        ],
+        [
+          22,
+          18
+        ],
+        [
+          23,
+          19
+        ],
+        [
+          24,
+          20
+        ],
+        [
+          25,
+          21
+        ],
+        [
+          26,
+          22
+        ],
+        [
+          27,
+          23
+        ],
+        [
+          29,
+          25
+        ],
+        [
+          31,
+          27
+        ],
+        [
+          33,
+          29
+        ],
+        [
+          34,
+          30
+        ],
+        [
+          35,
+          31
+        ]
+      ]
+    },
+    {
+      "id": "M3",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M3"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M3.mid",
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6",
+      "predicted": 32,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M3.json",
+      "provenance_sha256": "8a0735b4604cf53ba744a99a3bc7600657b040e11e7c9f80b9e64cab29d245d9",
+      "matched": 24,
+      "reference": 36,
+      "extra": 8,
+      "missed": 12,
+      "f1": 0.7058823529411765,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          21,
+          17
+        ],
+        [
+          22,
+          18
+        ],
+        [
+          23,
+          19
+        ],
+        [
+          24,
+          20
+        ],
+        [
+          25,
+          21
+        ],
+        [
+          26,
+          22
+        ],
+        [
+          27,
+          23
+        ],
+        [
+          29,
+          25
+        ],
+        [
+          31,
+          27
+        ],
+        [
+          33,
+          29
+        ],
+        [
+          34,
+          30
+        ],
+        [
+          35,
+          31
+        ]
+      ]
+    }
+  ],
+  "selected": "M2",
+  "ledger_sha256": "dc2e609623e96c227a4c1135a8a892dfe7bb5ae6780880799a35a97ec5f2982e",
+  "evaluation": "same-pitch50ms max one-to-one; .9995/.14 fixed; seen development arrangement"
+}

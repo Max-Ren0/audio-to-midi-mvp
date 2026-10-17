@@ -1,0 +1,25 @@
+[
+  {
+    "previous": "baseline",
+    "current": "M2",
+    "gained_reference_indices": [],
+    "lost_reference_indices": []
+  },
+  {
+    "previous": "M2",
+    "current": "A3",
+    "gained_reference_indices": [
+      16,
+      17
+    ],
+    "lost_reference_indices": []
+  },
+  {
+    "previous": "A3",
+    "current": "R1",
+    "gained_reference_indices": [
+      32
+    ],
+    "lost_reference_indices": []
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "phase": 3,
+  "registration_sha256": "bf44aca55a3a7b9e426c5640d141488a9dc7dd4f12a873cb3086816bbf698039",
+  "generator_sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe",
+  "implementation_sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e",
+  "rows": [
+    {
+      "id": "A3",
+      "recipe": {
+        "parent": "M2",
+        "profile": "A3"
+      },
+      "path": "outputs/runs/bass-evidence/phase2/A3.mid",
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase2/A3.json",
+      "provenance_sha256": "8678d89b8e41d958a9a7fd97b01afbd9ff7553c6d747d79ecb76e21f302a27df"
+    },
+    {
+      "id": "O1",
+      "recipe": {
+        "parent": "A3",
+        "profile": "O1"
+      },
+      "path": "outputs/runs/bass-evidence/phase3/O1.mid",
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase3/O1.json",
+      "provenance_sha256": "26fdc8d5c61ab0b239a90ee22124ca70fea5c10b39a041bc8e3dc50afb8d042f"
+    },
+    {
+      "id": "O2",
+      "recipe": {
+        "parent": "A3",
+        "profile": "O2"
+      },
+      "path": "outputs/runs/bass-evidence/phase3/O2.mid",
+      "sha256": "b3fcd1edc317e7c86b0fe7376e3d05eb713877a39a7f136194c86e4ca03a7f54",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase3/O2.json",
+      "provenance_sha256": "ae79a84a1e037fe6cb99308320a7b97ebb4ebf5a49ee72e95518f2b9dc440a1f"
+    },
+    {
+      "id": "R1",
+      "recipe": {
+        "parent": "A3",
+        "profile": "R1"
+      },
+      "path": "outputs/runs/bass-evidence/phase3/R1.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase3/R1.json",
+      "provenance_sha256": "3393d7d9251c554ad51da0fecf764de2d74ca903a7483aa86c40441af61ce33b"
+    },
+    {
+      "id": "O1+R1",
+      "recipe": {
+        "parent": "A3",
+        "profile": "O1+R1"
+      },
+      "path": "outputs/runs/bass-evidence/phase3/O1+R1.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase3/O1+R1.json",
+      "provenance_sha256": "fdd59dc18d431fcc9affa68dcb8ee0f5d116c62637b233bfd4980d345fa12bcf"
+    },
+    {
+      "id": "O2+R1",
+      "recipe": {
+        "parent": "A3",
+        "profile": "O2+R1"
+      },
+      "path": "outputs/runs/bass-evidence/phase3/O2+R1.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "predicted": 36,
+      "provenance_path": "outputs/runs/bass-evidence/phase3/O2+R1.json",
+      "provenance_sha256": "514fdc44a54c706e6a56a0d438ce5d9388953ade4e96b5085ba23c96d9a8302d"
+    }
+  ]
+}

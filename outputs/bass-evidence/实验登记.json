@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-17",
+  "scope": "current 0–60 development; frozen62.33766 baseline; same-key50ms fixed .9995/.14; no reference event editing",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "sources": "verified original Demucs bass + cached raw pYIN/CREPE/PENN; no new inference or separation",
+  "audio_features": {
+    "sample_rate": 8000,
+    "rms_window_seconds": 0.032,
+    "hop_seconds": 0.004,
+    "rise_pre_window": [
+      -0.064,
+      -0.016
+    ],
+    "rise_post_window": [
+      0.016,
+      0.064
+    ],
+    "flux": "same FFT512/hop32/64mel30–2000Hz short onset envelope",
+    "flux_peak_lookahead_seconds": 0.064,
+    "flux_normalizer": "median peak strength across frozen candidate onsets"
+  },
+  "stage1": {
+    "rule": "merge only adjacent same-pitch notes gap<=80ms, if BOTH amplitude rise and normalized local flux are below thresholds; never across another pitch or long rest",
+    "profiles": [
+      {
+        "id": "M1",
+        "rise": 1.1,
+        "flux": 0.5
+      },
+      {
+        "id": "M2",
+        "rise": 1.2,
+        "flux": 0.8
+      },
+      {
+        "id": "M3",
+        "rise": 1.35,
+        "flux": 1.0
+      }
+    ]
+  },
+  "stage2": {
+    "fixed": "winning whole stage1 recipe; retain baseline if no net improvement",
+    "candidates": "consecutive rounded pitch evidence>=80ms with energy and independent model consensus; peak anchor within [-256,+32]ms of run start; existing onset exclusion80ms; no insertion inside existing same-pitch duration; clip to next note and preserve monophony",
+    "profiles": [
+      {
+        "id": "A1",
+        "agreement": "pYIN>=.05 + either CREPE>=.21 or PENN>=.2 same rounded pitch"
+      },
+      {
+        "id": "A2",
+        "agreement": "pYIN>=.05 + both CREPE>=.21 and PENN>=.2 same rounded pitch"
+      },
+      {
+        "id": "A3",
+        "agreement": "CREPE>=.21 and PENN>=.2 same rounded pitch even without pYIN"
+      }
+    ]
+  },
+  "stage3": {
+    "fixed": "winning stage2 output",
+    "octave_profiles": [
+      {
+        "id": "O1",
+        "harmonic_score_ratio": 1.5,
+        "neural_support": "either independent model >=64ms"
+      },
+      {
+        "id": "O2",
+        "harmonic_score_ratio": 2.0,
+        "neural_support": "both independent models >=64ms"
+      }
+    ],
+    "harmonic_score": "Hann-window FFT8192 over audio within note (up to320ms), sum five harmonic band maxima/k; compare pitch and +/-12 only",
+    "retime": {
+      "id": "R1",
+      "max_move_seconds": 0.096,
+      "criterion": "local independent RMS-rise peak salience >=1.5 current rise and amplitude rise>=1.1; preserve adjacent spacing>=80ms; no constant shift"
+    },
+    "candidates": [
+      "O1",
+      "O2",
+      "R1",
+      "O1+R1",
+      "O2+R1"
+    ]
+  },
+  "maximum_unique_candidate_ids": 12,
+  "selection": "maximum formal onset F1; ties fewer FP; preserve previous best on equal/lower F1; no post-score parameter expansion",
+  "outputs": "audio evidence and every edit reason, stepwise MIDI/FP/FN/gain-loss, selected bass and only-bass-replaced six-track, MIDI-only WAV",
+  "limits": "CPU2; no API/training/new model forward; original media and five other tracks untouched; automatic acoustic analysis is not human listening",
+  "implementation_clarifications_before_scoring": {
+    "addition_anchor": "union RMS-rise onset_detect and frozen short-flux backtracked onsets; require rise>=1.1 OR flux>=.5; nearest to run start, ties earlier",
+    "octave_support": "cumulative accepted neural frames within first320ms of note,64ms; highest spectral score wins",
+    "retime": "anchors from same union; salience positive log-RMS derivative maximum within+-8ms; nearest eligible peak wins, ties stronger then earlier; truncate previous overlap",
+    "energy_gate": "original 256ms RMS >= max(.001,peak*.025) for all addition runs",
+    "candidate_count": "12 IDs; identical bytes possible for conservative no-op profiles; report dedup hashes"
+  }
+}

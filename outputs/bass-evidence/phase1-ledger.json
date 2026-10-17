@@ -1,0 +1,56 @@
+{
+  "phase": 1,
+  "registration_sha256": "bf44aca55a3a7b9e426c5640d141488a9dc7dd4f12a873cb3086816bbf698039",
+  "generator_sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe",
+  "implementation_sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e",
+  "rows": [
+    {
+      "id": "baseline",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "baseline"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/baseline.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "predicted": 41,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/baseline.json",
+      "provenance_sha256": "f2b178229aed3254b125fc76b7ec019c25d98fa6f1377651809f0aeca07d4b77"
+    },
+    {
+      "id": "M1",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M1"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M1.mid",
+      "sha256": "54ed63d8002f3b899eacd8c8efaf98abdf1cda64412e1386e14fc48757c2bd32",
+      "predicted": 41,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M1.json",
+      "provenance_sha256": "96c3c157e27b243d681b19ad78d7d64a2910107204e0cd3419827daa88b2d116"
+    },
+    {
+      "id": "M2",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M2"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M2.mid",
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6",
+      "predicted": 32,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M2.json",
+      "provenance_sha256": "bf28e5569abac90249828219bf7e77d4e6d3284a9cc1d267fea53492ad19ca37"
+    },
+    {
+      "id": "M3",
+      "recipe": {
+        "parent": "baseline",
+        "profile": "M3"
+      },
+      "path": "outputs/runs/bass-evidence/phase1/M3.mid",
+      "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6",
+      "predicted": 32,
+      "provenance_path": "outputs/runs/bass-evidence/phase1/M3.json",
+      "provenance_sha256": "8a0735b4604cf53ba744a99a3bc7600657b040e11e7c9f80b9e64cab29d245d9"
+    }
+  ]
+}

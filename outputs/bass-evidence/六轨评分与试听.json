@@ -1,0 +1,84 @@
+{
+  "overall": {
+    "matched": 392,
+    "predicted": 530,
+    "reference": 494,
+    "f1": 0.765625
+  },
+  "per_category": {
+    "piano": {
+      "matched": 268,
+      "predicted": 269,
+      "reference": 269,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "matched": 8,
+      "predicted": 70,
+      "reference": 24,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "matched": 6,
+      "predicted": 23,
+      "reference": 64,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "matched": 27,
+      "predicted": 36,
+      "reference": 36,
+      "f1": 0.75
+    },
+    "drums": {
+      "matched": 80,
+      "predicted": 93,
+      "reference": 94,
+      "f1": 0.8556149732620321
+    },
+    "strings": {
+      "matched": 3,
+      "predicted": 39,
+      "reference": 7,
+      "f1": 0.13043478260869565
+    }
+  },
+  "other_five_tracks_and_conductor_unchanged": true,
+  "rendered": {
+    "00-上版贝斯-62.34": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.20271478199246,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "01-合并弱重复-70.59": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.221622271404545,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "02-补音-72.22": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.221622271404545,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "03-贝斯新版-75.00": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "六轨-仅替换贝斯": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 12.390811823322853,
+      "source": "MIDI_only_no_original_audio"
+    }
+  }
+}

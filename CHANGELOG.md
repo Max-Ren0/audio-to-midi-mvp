@@ -180,3 +180,9 @@
 - 9模型进程、11候选；隔离兼容、初始解码、Hz转换和生成顺序偏离完整披露，评分前修正。116测试和临时重建通过，冻结后独立核验。
 - 新MID/试听和研究锁另存，保留旧基线，不改旧默认runner；无训练/付费/外传/60–120。
 - 冻结420e4a5独立只读核验通过：116测试、全部候选来源/评分与逐音得失、模型适配/时间格、保护轨和包均一致，无必须修正项。保存v0.1.0-bass-models.1研究里程碑。
+
+## 2026-10-17 — bass acoustic evidence refinement (research)
+- Added audio-supported same-pitch retrigger merging, neural-consensus additions and local onset refinement; 12 preregistered profiles, 4 distinct MIDIs, no new inference or paid calls.
+- Seen 0–60 bass onset F1 62.34→70.59→72.22→75.00 (27 TP / 36 predicted / 36 reference; 9 FP / 9 FN). No previous matched reference lost. Octave profiles made no edits.
+- New six-track F1 76.5625%, only bass replaced; other five tracks and conductor messages preserved. Old artifacts/locks retained; default runner unchanged.
+- 120 tests and temporary three-stage byte/evidence/score rebuild passed. Independent verification pending frozen commit; no held-out or recording-truth claim.

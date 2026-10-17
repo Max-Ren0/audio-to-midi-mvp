@@ -1,0 +1,652 @@
+[
+  {
+    "stage": "M2",
+    "event_index": 0,
+    "start": 8.844,
+    "end": 9.844,
+    "evidence": {
+      "removed_onset": 9.244,
+      "pitch": 33,
+      "evidence": {
+        "rise": 0.9872301816940308,
+        "flux": 0.509612500667572,
+        "rms_rise_salience": 0.05441570281982422
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-00-原曲.wav",
+        "sha256": "6a258f7853725cc3fa7ed99f848bb091ec0761e59a79cd1e07c983610a1df854"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-00-贝斯.wav",
+        "sha256": "de58a02214b47d3e98699993928e6c842765a851f29d91e8a71e0adebf0a55f7"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 1,
+    "start": 10.284,
+    "end": 11.284,
+    "evidence": {
+      "removed_onset": 10.684000000000001,
+      "pitch": 32,
+      "evidence": {
+        "rise": 0.9660452008247375,
+        "flux": 0.6138474345207214,
+        "rms_rise_salience": 0.05089139938354492
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-01-原曲.wav",
+        "sha256": "4ffe34aa282f76ea45354a4d152ffdaf1c23697869095bf9faec2edc60c71132"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-01-贝斯.wav",
+        "sha256": "d4936a40691241dae8334f7c8d55535b761b7d05722dd22709ebab3452b85d9b"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 2,
+    "start": 47.400000000000006,
+    "end": 48.400000000000006,
+    "evidence": {
+      "removed_onset": 47.800000000000004,
+      "pitch": 36,
+      "evidence": {
+        "rise": 0.9996752738952637,
+        "flux": 0.6323882341384888,
+        "rms_rise_salience": 0.021384716033935547
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-02-原曲.wav",
+        "sha256": "a27bc0d3ef6fdd4d3a491ad99c84b55836918cf529033652d852ffb33a7a3f67"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-02-贝斯.wav",
+        "sha256": "468087c9040627d8f7047445682e76f01a16292167125de51b3bb02a785dc079"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 3,
+    "start": 49.072,
+    "end": 50.072,
+    "evidence": {
+      "removed_onset": 49.472,
+      "pitch": 29,
+      "evidence": {
+        "rise": 0.972326397895813,
+        "flux": 0.6285577416419983,
+        "rms_rise_salience": 0.05629086494445801
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-03-原曲.wav",
+        "sha256": "d5c9d25c7a7a5bc6070d40877edfe9f5b6d391a0a8f8598f348ed0187a77adcb"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-03-贝斯.wav",
+        "sha256": "09daf96d853f8e6ceed3d62ba6482553a57747e98229946157b4ca8d10397aad"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 4,
+    "start": 49.516000000000005,
+    "end": 50.516000000000005,
+    "evidence": {
+      "removed_onset": 49.916000000000004,
+      "pitch": 29,
+      "evidence": {
+        "rise": 0.9073829054832458,
+        "flux": 0.5458417534828186,
+        "rms_rise_salience": 0.0698699951171875
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-04-原曲.wav",
+        "sha256": "cc5a2cf3d4e0bb8f071cd1cd5f621c6010633e7445232a973bf3ad00c32d444e"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-04-贝斯.wav",
+        "sha256": "79ee37a892cecb1266c2736a5470929b98aed82c9eb730cdadfeaeaceb110dd4"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 5,
+    "start": 50.736000000000004,
+    "end": 51.736000000000004,
+    "evidence": {
+      "removed_onset": 51.136,
+      "pitch": 31,
+      "evidence": {
+        "rise": 0.9184978008270264,
+        "flux": 0.7128421664237976,
+        "rms_rise_salience": 0.12343549728393555
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-05-原曲.wav",
+        "sha256": "0942a9462be80866d0e21e6dcffe2f808672c83f74e9c4fd9799bbe85091f5c7"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-05-贝斯.wav",
+        "sha256": "1a4d0097e0ebb894fc327908d260496f15a626c5b7fe6f06803ee5f3b0788c9d"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 6,
+    "start": 54.476,
+    "end": 55.476,
+    "evidence": {
+      "removed_onset": 54.876,
+      "pitch": 38,
+      "evidence": {
+        "rise": 0.8691543340682983,
+        "flux": 0.5328298211097717,
+        "rms_rise_salience": 0.11683440208435059
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-06-原曲.wav",
+        "sha256": "4dd07ae395dfa3f517ae5311e1c4360127aa9d80429e3a00acb1798cd2065e8c"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-06-贝斯.wav",
+        "sha256": "373597f2ecf161f57c78d67f7c18a76d79aaca48ec42db50ed7931a289c6d4a8"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 7,
+    "start": 55.736000000000004,
+    "end": 56.736000000000004,
+    "evidence": {
+      "removed_onset": 56.136,
+      "pitch": 40,
+      "evidence": {
+        "rise": 1.0010820627212524,
+        "flux": 0.6612114906311035,
+        "rms_rise_salience": 0.05626630783081055
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-07-原曲.wav",
+        "sha256": "5c1a57c4b1000b110dae642c1bd5047850457e7f7e183bbed152700adbda38bd"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-07-贝斯.wav",
+        "sha256": "74287a549cbff61ed1619d63bbaad9d7bf854e127ce57f576e859923849d094d"
+      }
+    ]
+  },
+  {
+    "stage": "M2",
+    "event_index": 8,
+    "start": 56.908,
+    "end": 57.908,
+    "evidence": {
+      "removed_onset": 57.308,
+      "pitch": 29,
+      "evidence": {
+        "rise": 0.9460608959197998,
+        "flux": 0.6209578514099121,
+        "rms_rise_salience": 0.0883026123046875
+      }
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-08-原曲.wav",
+        "sha256": "f55ea3fb2eac84ae3b2872271405755a6b1de2523c1aff9dc27866638e51813d"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/M2-08-贝斯.wav",
+        "sha256": "06fb285846a5e7ba4760ee4157b9f63e5c5874efa5dd0ec35fab3fc257aa8feb"
+      }
+    ]
+  },
+  {
+    "stage": "A3",
+    "event_index": 0,
+    "start": 4.8919999999999995,
+    "end": 5.8919999999999995,
+    "evidence": {
+      "pitch": 41,
+      "start": 5.376,
+      "end": 5.488,
+      "first_frame": 336,
+      "last_frame_exclusive": 343,
+      "accepted": true,
+      "onset": 5.292,
+      "offset": 5.488,
+      "audio": {
+        "rise": 600.2092895507812,
+        "flux": 2.990255355834961,
+        "rms_rise_salience": 2.210498809814453
+      },
+      "reason": "inserted"
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-00-原曲.wav",
+        "sha256": "2eb772240a1c838d02cf52a34ca5aa28b4e907211bfc3da49f871e792c02e4a8"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-00-贝斯.wav",
+        "sha256": "5f3f841baae7fa2562883b615d482bc528fe5662ef8fa9b514a3492e6d8d4329"
+      }
+    ]
+  },
+  {
+    "stage": "A3",
+    "event_index": 15,
+    "start": 46.144000000000005,
+    "end": 47.144000000000005,
+    "evidence": {
+      "pitch": 29,
+      "start": 46.656,
+      "end": 46.752,
+      "first_frame": 2916,
+      "last_frame_exclusive": 2922,
+      "accepted": true,
+      "onset": 46.544000000000004,
+      "offset": 46.752,
+      "audio": {
+        "rise": 1.6529475450515747,
+        "flux": 1.2820943593978882,
+        "rms_rise_salience": 0.49067044258117676
+      },
+      "reason": "inserted"
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-15-原曲.wav",
+        "sha256": "c63042c8cb0b90cc46f3988ae7670b060dc2c2ee4d49ad9b0627478e1721aa6b"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-15-贝斯.wav",
+        "sha256": "2e81afb7061f64377481ba0e6e6e97d8faea175c73ef955647ea004108941604"
+      }
+    ]
+  },
+  {
+    "stage": "A3",
+    "event_index": 16,
+    "start": 46.384,
+    "end": 47.384,
+    "evidence": {
+      "pitch": 31,
+      "start": 46.800000000000004,
+      "end": 46.928000000000004,
+      "first_frame": 2925,
+      "last_frame_exclusive": 2933,
+      "accepted": true,
+      "onset": 46.784,
+      "offset": 46.928000000000004,
+      "audio": {
+        "rise": 1.3122644424438477,
+        "flux": 0.4121846556663513,
+        "rms_rise_salience": 0.18943285942077637
+      },
+      "reason": "inserted"
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-16-原曲.wav",
+        "sha256": "e610fd0ee5af0d972afd0264b88148b63dac6eb777251a18f757f0ed01ca6cea"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-16-贝斯.wav",
+        "sha256": "d866151e9377db78ec1b8dd0e8881fb10b972d2a4d18cbb259fbfcacba0fa77b"
+      }
+    ]
+  },
+  {
+    "stage": "A3",
+    "event_index": 20,
+    "start": 49.516000000000005,
+    "end": 50.516000000000005,
+    "evidence": {
+      "pitch": 30,
+      "start": 50.160000000000004,
+      "end": 50.24,
+      "first_frame": 3135,
+      "last_frame_exclusive": 3140,
+      "accepted": true,
+      "onset": 49.916000000000004,
+      "offset": 50.24,
+      "audio": {
+        "rise": 0.9073829054832458,
+        "flux": 0.5458417534828186,
+        "rms_rise_salience": 0.0698699951171875
+      },
+      "reason": "inserted"
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-20-原曲.wav",
+        "sha256": "cc5a2cf3d4e0bb8f071cd1cd5f621c6010633e7445232a973bf3ad00c32d444e"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/A3-20-贝斯.wav",
+        "sha256": "79ee37a892cecb1266c2736a5470929b98aed82c9eb730cdadfeaeaceb110dd4"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 0,
+    "start": 5.732,
+    "end": 6.732,
+    "evidence": {
+      "kind": "retime",
+      "index": 2,
+      "old_onset": 6.132000000000001,
+      "new_onset": 6.116,
+      "current": {
+        "rise": 1.6413419246673584,
+        "flux": 1.5441296100616455,
+        "rms_rise_salience": 0.19848871231079102
+      },
+      "new": {
+        "rise": 1.4410089254379272,
+        "flux": 1.5441296100616455,
+        "rms_rise_salience": 0.5897247791290283
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-00-原曲.wav",
+        "sha256": "eeae9db2948a88709eaf0f84850949e42146c6230fa495bb16f1482640fcae3b"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-00-贝斯.wav",
+        "sha256": "8b5507c100173abca91e352f14ae6766e9f36aca3a7b26ee1a60d159928ae1ee"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 1,
+    "start": 6.568,
+    "end": 7.568,
+    "evidence": {
+      "kind": "retime",
+      "index": 3,
+      "old_onset": 6.968,
+      "new_onset": 6.956,
+      "current": {
+        "rise": 2.1088480949401855,
+        "flux": 1.9444000720977783,
+        "rms_rise_salience": 0.40793442726135254
+      },
+      "new": {
+        "rise": 1.831058144569397,
+        "flux": 1.9444000720977783,
+        "rms_rise_salience": 0.808558464050293
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-01-原曲.wav",
+        "sha256": "535096ae1456942ad091c85419a12a38c111370459942f2f250d96d075a32e62"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-01-贝斯.wav",
+        "sha256": "2019c121f73ddef552e3a60bf5f468cbc7ca78a1d82aed6b1cf22fe4b2a4508c"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 2,
+    "start": 39.896,
+    "end": 40.896,
+    "evidence": {
+      "kind": "retime",
+      "index": 6,
+      "old_onset": 40.296,
+      "new_onset": 40.312,
+      "current": {
+        "rise": 24.23488426208496,
+        "flux": 1.5071845054626465,
+        "rms_rise_salience": 0.0820164680480957
+      },
+      "new": {
+        "rise": 501.47259521484375,
+        "flux": 1.7812143564224243,
+        "rms_rise_salience": 1.0174856185913086
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-02-原曲.wav",
+        "sha256": "3053add9a93ddad251b4f811b6a7a4bc13d4b0a930e997ea3cb1bbae85f6c65b"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-02-贝斯.wav",
+        "sha256": "9d7c6e34502cda4d46ca755d578f1141d3dbf7eb1e9722161c8a24e3090308ad"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 3,
+    "start": 44.884,
+    "end": 45.884,
+    "evidence": {
+      "kind": "retime",
+      "index": 15,
+      "old_onset": 45.284,
+      "new_onset": 45.3,
+      "current": {
+        "rise": 1.3105331659317017,
+        "flux": 0.8138427734375,
+        "rms_rise_salience": 0.006369590759277344
+      },
+      "new": {
+        "rise": 1.3951668739318848,
+        "flux": 0.8138427734375,
+        "rms_rise_salience": 0.2634716033935547
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-03-原曲.wav",
+        "sha256": "246dfc794e59e5b313f5a30cc670088c7cc48e55dcd0885ec82f3c8f8ea4dda6"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-03-贝斯.wav",
+        "sha256": "17816cdf643d4377ace38c8e6ec09a06e81593a385216bc120c5fbb84867793b"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 4,
+    "start": 46.56,
+    "end": 47.56,
+    "evidence": {
+      "kind": "retime",
+      "index": 19,
+      "old_onset": 46.96,
+      "new_onset": 47.032,
+      "current": {
+        "rise": 0.8424798846244812,
+        "flux": 1.2508820295333862,
+        "rms_rise_salience": 0.014371156692504883
+      },
+      "new": {
+        "rise": 1.5591394901275635,
+        "flux": 0.6543503403663635,
+        "rms_rise_salience": 0.20336127281188965
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-04-原曲.wav",
+        "sha256": "23cc24102d9cda3707085cb9f6932b1408f7f40eaf5fbc28d1069648c28255ed"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-04-贝斯.wav",
+        "sha256": "083a40c0fcfb967a53e4ec11c6150ef54a30f8157e20531473c27ceabf92209c"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 5,
+    "start": 48.208000000000006,
+    "end": 49.208000000000006,
+    "evidence": {
+      "kind": "retime",
+      "index": 20,
+      "old_onset": 48.608000000000004,
+      "new_onset": 48.632,
+      "current": {
+        "rise": 0.8297101855278015,
+        "flux": 1.1097394227981567,
+        "rms_rise_salience": 0.0
+      },
+      "new": {
+        "rise": 1.1041399240493774,
+        "flux": 1.1097394227981567,
+        "rms_rise_salience": 0.48461151123046875
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-05-原曲.wav",
+        "sha256": "47d47b7b11b0ecb0a6673092696c17020e794466dbde9dd27e64333685b33681"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-05-贝斯.wav",
+        "sha256": "61556c43d20409c153914ff2588f76fb00cde400ef1fa0db6d7b1f152ae1eba9"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 6,
+    "start": 48.652,
+    "end": 49.652,
+    "evidence": {
+      "kind": "retime",
+      "index": 21,
+      "old_onset": 49.052,
+      "new_onset": 49.024,
+      "current": {
+        "rise": 38.311161041259766,
+        "flux": 3.9380836486816406,
+        "rms_rise_salience": 0.22831463813781738
+      },
+      "new": {
+        "rise": 187.903076171875,
+        "flux": 3.9380836486816406,
+        "rms_rise_salience": 0.4140625
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-06-原曲.wav",
+        "sha256": "59e453530d05209ae0e9d386110ef75a5241556d328577fa2bb4296d779321e1"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-06-贝斯.wav",
+        "sha256": "53d650c392585769d6c8d518886b8b01836b62182b7ef4f6f6b25848002292cc"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 7,
+    "start": 49.88,
+    "end": 50.88,
+    "evidence": {
+      "kind": "retime",
+      "index": 23,
+      "old_onset": 50.28,
+      "new_onset": 50.292,
+      "current": {
+        "rise": 1.9438691139221191,
+        "flux": 1.1263618469238281,
+        "rms_rise_salience": 0.04199028015136719
+      },
+      "new": {
+        "rise": 2.0478098392486572,
+        "flux": 1.1263618469238281,
+        "rms_rise_salience": 0.46456336975097656
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-07-原曲.wav",
+        "sha256": "b89b8ac5c60768ce5c1aaf874123dcd3eca716f237eb7a3f900d961e432011a7"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-07-贝斯.wav",
+        "sha256": "0a22d87f939953779361b5a77317142118950e8e7017e411f055008d8042b2da"
+      }
+    ]
+  },
+  {
+    "stage": "R1",
+    "event_index": 8,
+    "start": 56.54,
+    "end": 57.54,
+    "evidence": {
+      "kind": "retime",
+      "index": 32,
+      "old_onset": 56.94,
+      "new_onset": 56.964,
+      "current": {
+        "rise": 1.4460577964782715,
+        "flux": 0.9991841912269592,
+        "rms_rise_salience": 0.0
+      },
+      "new": {
+        "rise": 1.6746572256088257,
+        "flux": 0.9991841912269592,
+        "rms_rise_salience": 0.4263725280761719
+      },
+      "accepted": true
+    },
+    "files": [
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-08-原曲.wav",
+        "sha256": "67e648035839dbc0206849ad96202122988cb5e1723e73969daff4070349a407"
+      },
+      {
+        "path": "outputs/runs/bass-evidence/clips/R1-08-贝斯.wav",
+        "sha256": "04227fd1b6ce3d5689fc7742483b94738b44015063d4e4457c320982c6a92764"
+      }
+    ]
+  }
+]

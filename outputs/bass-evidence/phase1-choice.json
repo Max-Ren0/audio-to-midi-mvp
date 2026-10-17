@@ -1,0 +1,14 @@
+{
+  "row": {
+    "id": "M2",
+    "recipe": {
+      "parent": "baseline",
+      "profile": "M2"
+    },
+    "path": "outputs/runs/bass-evidence/phase1/M2.mid",
+    "sha256": "c53f98dbe2c1abc41a1f84bf5d38367e10cf7d509d8fde52929c898efd4766d6",
+    "predicted": 32,
+    "provenance_path": "outputs/runs/bass-evidence/phase1/M2.json",
+    "provenance_sha256": "bf28e5569abac90249828219bf7e77d4e6d3284a9cc1d267fea53492ad19ca37"
+  }
+}
