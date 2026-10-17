@@ -102,5 +102,11 @@
       "A-M",
       "A-H"
     ]
+  },
+  "deviation_amendment_before_shift_comparison": {
+    "reason": "complete same overlap diagnostic on both existing source branches after supplemental A cleanup; no shift comparison has been computed yet",
+    "maximum_total_proposals": 14,
+    "overlap_candidates": "at most one per source, A-overlap from A cleanup if other positive; C-overlap from C cleanup if mix positive; same previously specified extension rule, no new thresholds/forward jobs",
+    "note": "supersedes original one mix-only overlap restriction; not claimed originally preregistered. Both remain diagnostic, no new default from7notes"
   }
 }
