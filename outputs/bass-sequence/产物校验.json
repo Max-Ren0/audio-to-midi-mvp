@@ -1,0 +1,1042 @@
+{
+  "files": [
+    {
+      "path": "config/bass-evidence.lock.json",
+      "bytes": 1182,
+      "sha256": "83a5cab9f3151cd3c3d79050e5f27e32975b065b38b8fccb9463f29f836a0fa2"
+    },
+    {
+      "path": "config/bass-sequence.lock.json",
+      "bytes": 2292,
+      "sha256": "4ce29a2ad5269f2ee66503b60cb0baed46cb9a4208c9c5f06e8d1cd61e56e627"
+    },
+    {
+      "path": "outputs/bass-sequence/36标准音全候选变化.csv",
+      "bytes": 2813,
+      "sha256": "853bf3f68a515ecb24f0b755da195bd02e65f460dc993f9324f9974a8a25def6"
+    },
+    {
+      "path": "outputs/bass-sequence/75基线逐音归因.json",
+      "bytes": 24163,
+      "sha256": "0ff79f527e2e28a1ec5058a114ad03bcd148671e637c846c04c198cdab38432e"
+    },
+    {
+      "path": "outputs/bass-sequence/bundle.py",
+      "bytes": 2805,
+      "sha256": "c8531dbeb3d131055a339dea2b890a29f64cad3b62ccb77c11cb1eff3a9ee1db"
+    },
+    {
+      "path": "outputs/bass-sequence/common.py",
+      "bytes": 6508,
+      "sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d"
+    },
+    {
+      "path": "outputs/bass-sequence/diagnose.py",
+      "bytes": 3716,
+      "sha256": "4b95ac6b213e85bc049d0148e7e99a886aed86578d80ab997d324bc085e1a35a"
+    },
+    {
+      "path": "outputs/bass-sequence/diagnose_sources.py",
+      "bytes": 1260,
+      "sha256": "0c580e65675084f6838a8a73f4eefeb2c37f9d4b35836e53498c0ce57708af26"
+    },
+    {
+      "path": "outputs/bass-sequence/generate.py",
+      "bytes": 5403,
+      "sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010"
+    },
+    {
+      "path": "outputs/bass-sequence/infer.py",
+      "bytes": 2046,
+      "sha256": "ba6ca0c1f0efec4bd2ba711b39c6fc8272cf77a9ea93cf3c4f276d02cd32ab3c"
+    },
+    {
+      "path": "outputs/bass-sequence/package.py",
+      "bytes": 6741,
+      "sha256": "bd29f5f9591b01460849711d363cc6695399a916e303e778241d304717696ff8"
+    },
+    {
+      "path": "outputs/bass-sequence/phase1-choice.json",
+      "bytes": 445,
+      "sha256": "65907b2dde036846c2043061917a8f2f0c2e69176431253eebfb0ef203de844e"
+    },
+    {
+      "path": "outputs/bass-sequence/phase1-ledger.json",
+      "bytes": 1773,
+      "sha256": "8a105debe6ad21700dbe8e6098a3dc0dcd3ba3f3c2009cc9a5a0170be14b5109"
+    },
+    {
+      "path": "outputs/bass-sequence/phase1-scores.json",
+      "bytes": 6673,
+      "sha256": "55e0b2443383d04c532be027254ae7e6464a665570bf50e02fe4d5610b86b17b"
+    },
+    {
+      "path": "outputs/bass-sequence/phase2-choice.json",
+      "bytes": 445,
+      "sha256": "65907b2dde036846c2043061917a8f2f0c2e69176431253eebfb0ef203de844e"
+    },
+    {
+      "path": "outputs/bass-sequence/phase2-ledger.json",
+      "bytes": 1827,
+      "sha256": "dc463d4c3b5e7065e6bc6235b9e05b5473333c0668b85da76e66f88a3db669c7"
+    },
+    {
+      "path": "outputs/bass-sequence/phase2-scores.json",
+      "bytes": 7388,
+      "sha256": "27cb49b32eea777772de9de86224e36623c8af9e2125558e8f29547f5ef50d57"
+    },
+    {
+      "path": "outputs/bass-sequence/phase3-choice.json",
+      "bytes": 445,
+      "sha256": "65907b2dde036846c2043061917a8f2f0c2e69176431253eebfb0ef203de844e"
+    },
+    {
+      "path": "outputs/bass-sequence/phase3-ledger.json",
+      "bytes": 2410,
+      "sha256": "4d51c52dd603b1a0661ebb1ac966a31cfaa62268d1849d9b894d3bc65aae0903"
+    },
+    {
+      "path": "outputs/bass-sequence/phase3-scores.json",
+      "bytes": 9826,
+      "sha256": "c15197445b31c475075c9d90b9ed4c563b56dbb106507886176b722b1a8b47df"
+    },
+    {
+      "path": "outputs/bass-sequence/phase4-choice.json",
+      "bytes": 457,
+      "sha256": "4f3e3ed52456bdf073b37c19203b1a18a10f3d9ebd5e70df03e0b63bb5eaab40"
+    },
+    {
+      "path": "outputs/bass-sequence/phase4-ledger.json",
+      "bytes": 1803,
+      "sha256": "891a73e83c20d6b6938b6020ffdc03e7763c72bca18752c0c6fe6d0b4a74c996"
+    },
+    {
+      "path": "outputs/bass-sequence/phase4-scores.json",
+      "bytes": 7185,
+      "sha256": "e99a4f8ffe8fc73beb04e959020a6a9ec9a9b13dd6ac00a511e8c98ede921676"
+    },
+    {
+      "path": "outputs/bass-sequence/score.py",
+      "bytes": 1999,
+      "sha256": "9d1050a78ab0daebf1adcef30749d379c3271614d4b82b9b59ed9ed21ec1dcef"
+    },
+    {
+      "path": "outputs/bass-sequence/verify_rebuild.py",
+      "bytes": 2194,
+      "sha256": "fd72bbdc6fa0bb40e839cb0cf66fed4fa62e7500e12757da2d23227c8bacc547"
+    },
+    {
+      "path": "outputs/bass-sequence/三源逐音覆盖.json",
+      "bytes": 37026,
+      "sha256": "7fcdf8416ac57f7b82c925f71e54813c4966fb9630de807189d91379d15c052c"
+    },
+    {
+      "path": "outputs/bass-sequence/任务记录.json",
+      "bytes": 2084,
+      "sha256": "1d24c0287dd751ac0015aec227b4e87e940470008cd38590a35db76fe4bd7855"
+    },
+    {
+      "path": "outputs/bass-sequence/六轨评分与试听.json",
+      "bytes": 3390,
+      "sha256": "c7df234d28bd8df4cec98ab8664992fc7a952ac968c1eda9697dab07d538fe19"
+    },
+    {
+      "path": "outputs/bass-sequence/实验登记.json",
+      "bytes": 5825,
+      "sha256": "998fced489ec0dd254ebfe672138886da2b9721fac8739e58c1a0a3a82e802e7"
+    },
+    {
+      "path": "outputs/bass-sequence/局部变化与归因片段.json",
+      "bytes": 32198,
+      "sha256": "0722616175214a292c79bc8173a41c3d453fd940de5af94e54b3ee1059ce8e5f"
+    },
+    {
+      "path": "outputs/bass-sequence/归因与实施说明.md",
+      "bytes": 1845,
+      "sha256": "f9f8f0f470fbb9bc89136aadadf0f580934c9fdc677f1da41db89c54cda7a40a"
+    },
+    {
+      "path": "outputs/bass-sequence/所有候选命中变化.json",
+      "bytes": 1127,
+      "sha256": "61b7389b29969d84d92e318cea89bf9c8a574869ee99de2b4765ca279fd20f1b"
+    },
+    {
+      "path": "outputs/bass-sequence/逐步对比报告.md",
+      "bytes": 5847,
+      "sha256": "c08f6598f893bb72b986da42916d9a968376f5aa7b83772f71f04b9fb01aeefb"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/00-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "a00d309733fd109a9631d0d82d3f6ff28b0efa42f2f4b31e34ebb69413288c86"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/00-SW.wav",
+      "bytes": 88244,
+      "sha256": "f47b9246d1923fa9889d6e7ee5ae641da52377c14dde6db894256398e7694cd0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/00-ft.wav",
+      "bytes": 88244,
+      "sha256": "5083129eaa58548a63848468f3f458e697a3c275bea6ff9a62442deea70b10e2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/00-原曲.wav",
+      "bytes": 32044,
+      "sha256": "1c0d0680937a04afbcc04344ade6c841724bae7c250d3c0bc3bdb2c63bf8f9e5"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/01-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "e596da4244d9bbe18d0fc390e00cbe8badae226398d78abadf7e477145bc24b6"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/01-SW.wav",
+      "bytes": 88244,
+      "sha256": "195aa14b295f158ef80184131a23729b5c95737c33e4553d8fbc57718a3978fe"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/01-ft.wav",
+      "bytes": 88244,
+      "sha256": "e4b91d91c3e89b1b4039e3b4cb3861b5cc3ef707e549830074951758ec86f60e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/01-原曲.wav",
+      "bytes": 32044,
+      "sha256": "7996949ad267f36266a7865b29045e56649803f41280c801b2e7fd693caa5e42"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/02-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "377e210153bd27e9f4508d68f320197441b7076b58e04c683857c454a8448b37"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/02-SW.wav",
+      "bytes": 88244,
+      "sha256": "aee10835b8cb24228e4baf4428aec2cbe980ae8f8e8607494ceda98214c43df9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/02-ft.wav",
+      "bytes": 88244,
+      "sha256": "e244ee5f2256f52d0ec9ceb5c07b8859f45cfd54db2d765f92452ce6b9592f63"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/02-原曲.wav",
+      "bytes": 32044,
+      "sha256": "9a0463a4a1de3480ac036810e96017a4d937566f5beaa5118e45b2c248fc130a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/03-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "554770973d1a5ee1df27d2c7d9a80232b31c4a42e0ececdd39c192d418ec2252"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/03-SW.wav",
+      "bytes": 88244,
+      "sha256": "2605f3b37ab3b7f5429b14f6f1e2e2544e6fdd373824b373dabb6d96a8c65a55"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/03-ft.wav",
+      "bytes": 88244,
+      "sha256": "8d172487f93f9e7778fc87928c5a859fc0c571204e672e31a6218a21328c6af2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/03-原曲.wav",
+      "bytes": 32044,
+      "sha256": "0f35b86140b7ae63a57e40594c63be3c01f029b286f5b5483e17b96b00f9af08"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/04-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "0ed48b7d9606822acdfe3caa40ea6a003add1c5304397ec2f61bb399aa408df3"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/04-SW.wav",
+      "bytes": 88244,
+      "sha256": "ac951f249bb9759d0b9bb5853554173dd8624f9e9231f82a801918a432bec692"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/04-ft.wav",
+      "bytes": 88244,
+      "sha256": "18d86c364a655ac6a4ed423cc9ca308022ed2e220206fc16d0090b3858494d90"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/04-原曲.wav",
+      "bytes": 32044,
+      "sha256": "7dcd2822dbe067a363404f1b601e8279280953cfa6f87b086a60bbe0a6fb13f4"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/05-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "633d80bd08670765065ffc3ac448f45ecdf3169d6892165050e9a0bd0ef64a62"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/05-SW.wav",
+      "bytes": 88244,
+      "sha256": "c838991ee40e96ff4c0d3f7fc880fb0036978b1840d718a9c19a630dd09dbdd2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/05-ft.wav",
+      "bytes": 88244,
+      "sha256": "8cecf8b13701185426e36ee08bdb97d452a0e3632946c25c885c4b63dab5a7a0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/05-原曲.wav",
+      "bytes": 32044,
+      "sha256": "4cd14c92d83ce3a682ed3c2e7b902a2de2dd1e6e371a6e3536c04f3d45874971"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/06-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "f973f47bc32ab51c8559943a0e32dba732482dfc65369a08ed2feb83d1b01888"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/06-SW.wav",
+      "bytes": 88244,
+      "sha256": "e7aac36aab3158d85c2e6ea42cafcc05927886ad024fcc029aeb8ead0c81461c"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/06-ft.wav",
+      "bytes": 88244,
+      "sha256": "af33a5fa43fb2cb477204fe5cdfa607164cc8eee57dddadb0c8a18b515ce3adf"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/06-原曲.wav",
+      "bytes": 32044,
+      "sha256": "e31eb3abde1cdd4061730f48439556a8b876eaf4d1d44808dd997a4797b25f1e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/07-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "41080299434dcdf1ffba8c5cf56307a7cceaf87aa04788bcce3286bec1daa346"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/07-SW.wav",
+      "bytes": 88244,
+      "sha256": "adf779fcd61cc3f634d483ddcb9bb5980868034b33e85aced98029223693fd98"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/07-ft.wav",
+      "bytes": 88244,
+      "sha256": "e44160b1ae0a9526f957ded4fd4f2db9dc4a88af16e0c80785c003e293c5a48b"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/07-原曲.wav",
+      "bytes": 32044,
+      "sha256": "c599b91dafeb35bc9164f94a1f16c02424e51fd5aa25289c2b64192317c52d28"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/08-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "7e05a3df56bc35acc61e649ddb575b8c19458f5bca87b950b8982412fe7ea8ce"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/08-SW.wav",
+      "bytes": 88244,
+      "sha256": "cc4ccc820c5bb20f1e26b02deb05ed1cac8f439f51151200150bf9bcff738687"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/08-ft.wav",
+      "bytes": 88244,
+      "sha256": "45059123581302a0103539b25fd2bbcaf109e685e769c20c09aa74ddf7efe7c1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/08-原曲.wav",
+      "bytes": 32044,
+      "sha256": "cafd339e433f00824836b33eeae580f49965b76d9cfedbb6b3245d4d4e196cf4"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/09-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "2119e8b54ae0ddacd80b00e4aeeb4a295d4ef26e6716dc28bc36e28002849eeb"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/09-SW.wav",
+      "bytes": 88244,
+      "sha256": "5539a2c9a22191a97a42e65094f3b9dbc5d0bc524adcc745149337324cd9656d"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/09-ft.wav",
+      "bytes": 88244,
+      "sha256": "afc51eaeb9da0db7d63bb1699e23a3e600b05c91e6637255b292d967aa7e37d3"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/09-原曲.wav",
+      "bytes": 32044,
+      "sha256": "64e104ee033a584631999b69d510b6566486ab5cc6f74cff0bc2e4f337715fa6"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/10-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "3b0c1c6f07adb422ea48eb39bcbd3c6ac3a5e4d6cab85861d0e9a4ce3a1f30e0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/10-SW.wav",
+      "bytes": 88244,
+      "sha256": "535ddc696b2b3a8b78f2e92b9609c42d75500a6c4f22ac2f29e16e6c07961387"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/10-ft.wav",
+      "bytes": 88244,
+      "sha256": "b9062f1a49142f3bbe622bd14a0c76528da43f727972d6f8042a64bece58e547"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/10-原曲.wav",
+      "bytes": 32044,
+      "sha256": "17a26259fb226a2255d9b7c3a841a5ce48dfa95fdf6d0c2e38ddc6c4fa7df64d"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/11-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "6207c152b686f272cbdd6ed06557f1d6e0d0f89c91fbd5cf202e6b1caa79e5bf"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/11-SW.wav",
+      "bytes": 88244,
+      "sha256": "6e5913e0a0de59eb5bc5b6a17228d8609239827cc0a09ddcc798571564886e7f"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/11-ft.wav",
+      "bytes": 88244,
+      "sha256": "3322a62705ec148cf23a0fea16390646144b1f9ff2e23e7554887f20777ba8ed"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/11-原曲.wav",
+      "bytes": 32044,
+      "sha256": "9d6d2ea1bbf4e50aa2ac24472931155febf51b32dc765f1db6f2316e9687d0bd"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/12-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "e1b20dc9fecf09a2286095b4fbccca6e5181f7fec32d5c3c60ce8147174043cb"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/12-SW.wav",
+      "bytes": 88244,
+      "sha256": "e417706944dbe8026ae38e88bc36668f902a088b9c20d228548cb084ba2f9e8a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/12-ft.wav",
+      "bytes": 88244,
+      "sha256": "0863ce2cb33bd52c60501bf1c27b4c41967e4ba096664503f0f61d9db295d817"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/12-原曲.wav",
+      "bytes": 32044,
+      "sha256": "00664347b35977119f121d20053f31bc506091e02be7e3f0cc33faa402d56c75"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/13-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "29bf8817383b5c6c7fc73cd7945cd7a3ce86522502641c2e24b78a1e84a400ba"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/13-SW.wav",
+      "bytes": 88244,
+      "sha256": "950a1faec5684ff69544e5caa09f6bc2b0a5e16a75a3a358345454146f4901c8"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/13-ft.wav",
+      "bytes": 88244,
+      "sha256": "84faf44c873029979cd4d6d910bde2c084c6a5b928db07a7ff805b85dd5aae2b"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/13-原曲.wav",
+      "bytes": 32044,
+      "sha256": "b754d5654e4b38bea8d69517f16a6b7f35a7de54b2c49bb25d1e531275f9b4c1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/14-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "de93e0edcccb6944387f84787c14ddc3c59c4834456a0f0e16ddb798bdd5e666"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/14-SW.wav",
+      "bytes": 88244,
+      "sha256": "a54cb9680a3c09a776366922b60e4d2bd7a29a6bc166c1af0e30c02a402d5435"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/14-ft.wav",
+      "bytes": 88244,
+      "sha256": "591e626d3bf843b221632bb5a5ce3274160ed6c31da742ab1f977276a5c0a560"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/14-原曲.wav",
+      "bytes": 32044,
+      "sha256": "bfd51f0f41c3c04fc51a5b84f4f507db48e2ce709cc7a7656d4201701f206f05"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/15-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "2d325bc32887c498d7e598ae400bc8cf4cfb0e76675d82aecb0910e33fd59a55"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/15-SW.wav",
+      "bytes": 88244,
+      "sha256": "b8f8940caf785c348dc988357e4a3c181477c84cb0f6679a9c208a168286d0fe"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/15-ft.wav",
+      "bytes": 88244,
+      "sha256": "49048260315c5469bd91131fb1f05caaca17b18dd505d365ece80b353a8aede6"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/15-原曲.wav",
+      "bytes": 32044,
+      "sha256": "9ac991a5638a1bb7d1ece8b41644f90fa02d73a78971feb3dd07f11f7dd70e10"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/16-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "2a7fa24ebf4d1ee93665ac72b1aae454de8aa99014a518f6269ea4ce8e338485"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/16-SW.wav",
+      "bytes": 88244,
+      "sha256": "cb4cd65faf93bb01cfd408fe0c2942ee68326ff7197c5dff6f222a3c65c80215"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/16-ft.wav",
+      "bytes": 88244,
+      "sha256": "898aaece513b8bdbd81a6b28932fe3747d49d005a43d37cc5b4dbe8f0e295c75"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/16-原曲.wav",
+      "bytes": 32044,
+      "sha256": "2555e05c4a6520d26628b586361b397d6f5c5e652446b8bacb0e1befe807cc56"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/17-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "5c1984aa60623eb548a654955d4fdb6f3ead41ff5ac19361c0bfd033c856c4e7"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/17-SW.wav",
+      "bytes": 88244,
+      "sha256": "b426d4f4c95f73d41a77f7deed904b1ba7f3e0f9bb880b8d9eefa29b7e66ac6c"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/17-ft.wav",
+      "bytes": 88244,
+      "sha256": "117833e99a7123750ce4c2597d5f524247f33190102477db6e949aa8e8cf00ca"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/17-原曲.wav",
+      "bytes": 32044,
+      "sha256": "93b68ccfcf23b19cdc7b54525d0afe32991b11825aa97857c11f3701446d1c1f"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/18-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "6315db1db1b0e4f1d89f4cecfd25bac579915cfddcbaa3b8dd7e05cd5ff52ce0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/18-SW.wav",
+      "bytes": 88244,
+      "sha256": "f43b70536f96c5f522659a20645bd012872b2dae793faf004f9bc8a59b8f921e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/18-ft.wav",
+      "bytes": 88244,
+      "sha256": "932545b9524ae6fbbdb67297825b4f142c42757092ac4393cd767ba968e80e92"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/18-原曲.wav",
+      "bytes": 32044,
+      "sha256": "a7a641dd5be0a0d874cdc610fca0b66ac8b0a6d5be8d3ae6fe46389114a8f83e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/19-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "b04030cac27aa3a7df9464ebd01d5d96542d18091b84f89fe29fb39331ec0c5b"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/19-SW.wav",
+      "bytes": 88244,
+      "sha256": "9ef676a257ebd46f09d3b2b678198ea9a1b87ef2f539cf88ff400774785897d2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/19-ft.wav",
+      "bytes": 88244,
+      "sha256": "20fceda5530a894fe8298242f92befdca4b6c2dce5d5a40a829c57a1b0f99dc3"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/19-原曲.wav",
+      "bytes": 32044,
+      "sha256": "77a301f2d2bbb8eeb196a63dbaa307775d81951bf37c98154384a37617f3a95f"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/20-Demucs.wav",
+      "bytes": 88244,
+      "sha256": "4b4f0fb3ac8d8716d4b4d7308a99a674983c70020a2810ce761a548336a3a5d9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/20-SW.wav",
+      "bytes": 88244,
+      "sha256": "b52dfcb6bce5170d5226b056c620bd892478f61a76dd53620cfdff0b923e8013"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/20-ft.wav",
+      "bytes": 88244,
+      "sha256": "c4e6bb31957deeb596eeaf12e964123bab5ee14bbf8deb544bb6f629b44f7401"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/clips/20-原曲.wav",
+      "bytes": 32044,
+      "sha256": "14e3c8e28d741189c01c60d07e9c24a6492e8d0113d33e188ca59875ecd7f571"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/D75.json",
+      "bytes": 68565,
+      "sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/FT75.json",
+      "bytes": 64164,
+      "sha256": "041d946da87c927441706c14f662c8462569fc0ed996ae3dcd5d4166ef6f26a7"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/FT75.mid",
+      "bytes": 489,
+      "sha256": "2697d39be3cbefedd3c9aeb10d4486d7bde5168e1d20fcec5d936dcfbd9527bc"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/SW75.json",
+      "bytes": 58000,
+      "sha256": "9ac055d294ff5803ce3cfff4cf9e6841884c3f82a578237f9c4a5ee19efead3f"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/SW75.mid",
+      "bytes": 476,
+      "sha256": "231691c175f6c083679dd4849f38a0e2ceffb0c3acbfa4da64c9236ae3d4b92a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/demucs-features.npz",
+      "bytes": 182054,
+      "sha256": "821ea9b9f9247d3183a28be889f2299b1259075cba7a00aca246f5cfb90733e5"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/ft-features.npz",
+      "bytes": 181926,
+      "sha256": "0e361b83a06e29f60cdb5d79435fe2d11e7904d56ef9e2695e87d021f4cc2c36"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase1/sw-features.npz",
+      "bytes": 243230,
+      "sha256": "bdcec77232a4ebdc34e4508f103f0f441582cae5f129a9244c4e7443f7f7fdd0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/F1.json",
+      "bytes": 230968,
+      "sha256": "948925e478efb3ef5f32c14aa71270fd5525870067a4a6383c695e0bed760151"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/F1.mid",
+      "bytes": 588,
+      "sha256": "f431a8ef28fa912e2b7ad80d4258fd32bbbcb37b0116fb42a0e51fa38fa493a1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/F2.json",
+      "bytes": 230968,
+      "sha256": "bd6f2c4d2fd901a69ab6f0509063c99446fbbedf625269c4f8b6ac5b5a3d98a9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/F2.mid",
+      "bytes": 588,
+      "sha256": "f431a8ef28fa912e2b7ad80d4258fd32bbbcb37b0116fb42a0e51fa38fa493a1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/demucs-features.npz",
+      "bytes": 182054,
+      "sha256": "821ea9b9f9247d3183a28be889f2299b1259075cba7a00aca246f5cfb90733e5"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/ft-features.npz",
+      "bytes": 181926,
+      "sha256": "0e361b83a06e29f60cdb5d79435fe2d11e7904d56ef9e2695e87d021f4cc2c36"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase2/sw-features.npz",
+      "bytes": 243230,
+      "sha256": "bdcec77232a4ebdc34e4508f103f0f441582cae5f129a9244c4e7443f7f7fdd0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J1.json",
+      "bytes": 574710,
+      "sha256": "dc2cd77b484a62ef446f29d4d1d3ac48ef63c79b16edeec7bb2d54c2a57d3ab9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J1.mid",
+      "bytes": 641,
+      "sha256": "4a526abfc005b3b8e1b9698a708fc722089f284745e019e58b70f7e29ff80970"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J2.json",
+      "bytes": 574843,
+      "sha256": "eb918db641171742c777ab48f75ebf54e15f57ee50611df75304d06f00b275af"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J2.mid",
+      "bytes": 640,
+      "sha256": "64e3298e556a67bf82653d11e02caec0c781a8348a46f04241e9fba0a442f915"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J3.json",
+      "bytes": 573575,
+      "sha256": "b5c2457aa8380a34692e15633d912a44f619ca5d8c13b0ae3566923a4adbb5f1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/J3.mid",
+      "bytes": 631,
+      "sha256": "e4d5da829658ff604df163f072fa244616ce0545cc251aed83d59397e899dc49"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/demucs-features.npz",
+      "bytes": 182054,
+      "sha256": "821ea9b9f9247d3183a28be889f2299b1259075cba7a00aca246f5cfb90733e5"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/ft-features.npz",
+      "bytes": 181926,
+      "sha256": "0e361b83a06e29f60cdb5d79435fe2d11e7904d56ef9e2695e87d021f4cc2c36"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase3/sw-features.npz",
+      "bytes": 243230,
+      "sha256": "bdcec77232a4ebdc34e4508f103f0f441582cae5f129a9244c4e7443f7f7fdd0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/W48.json",
+      "bytes": 150459,
+      "sha256": "ef76bd78d5d77ce6213834057b3fd65cb6791602e3722a4966fb1b72cf5b9d02"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/W48.mid",
+      "bytes": 552,
+      "sha256": "b279cbdc9e50e6a31837c05f52d58b8220436b37762ebd9e4df120a6c14148f9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/W64.json",
+      "bytes": 119494,
+      "sha256": "7af99b62b31f4bbea596e645fa1713a60118424aa4c7a0602f8cf0b38d01969e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/W64.mid",
+      "bytes": 529,
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/demucs-features.npz",
+      "bytes": 182054,
+      "sha256": "821ea9b9f9247d3183a28be889f2299b1259075cba7a00aca246f5cfb90733e5"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/ft-features.npz",
+      "bytes": 181926,
+      "sha256": "0e361b83a06e29f60cdb5d79435fe2d11e7904d56ef9e2695e87d021f4cc2c36"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/phase4/sw-features.npz",
+      "bytes": 243230,
+      "sha256": "bdcec77232a4ebdc34e4508f103f0f441582cae5f129a9244c4e7443f7f7fdd0"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/D75-F1-75.00.mid",
+      "bytes": 502,
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/D75-F1-75.00.wav",
+      "bytes": 10853972,
+      "sha256": "5c20ddfbacfa7471ba9686de9a8997bfa965a861a96d2e7ca25f880bcb175b47"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/F1-F1-73.17.mid",
+      "bytes": 588,
+      "sha256": "f431a8ef28fa912e2b7ad80d4258fd32bbbcb37b0116fb42a0e51fa38fa493a1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/F1-F1-73.17.wav",
+      "bytes": 10853972,
+      "sha256": "e40ac17fb6e08330249e699a38f736f7ae0fcf3bf7fa6c61d6181e607be839a2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/F2-F1-73.17.mid",
+      "bytes": 588,
+      "sha256": "f431a8ef28fa912e2b7ad80d4258fd32bbbcb37b0116fb42a0e51fa38fa493a1"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/F2-F1-73.17.wav",
+      "bytes": 10853972,
+      "sha256": "e40ac17fb6e08330249e699a38f736f7ae0fcf3bf7fa6c61d6181e607be839a2"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/FT75-F1-71.43.mid",
+      "bytes": 489,
+      "sha256": "2697d39be3cbefedd3c9aeb10d4486d7bde5168e1d20fcec5d936dcfbd9527bc"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/FT75-F1-71.43.wav",
+      "bytes": 10853972,
+      "sha256": "4251b35dbd244440053247312d7d2db33b8dd63135ba45c1b96f85be324af460"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J1-F1-68.18.mid",
+      "bytes": 641,
+      "sha256": "4a526abfc005b3b8e1b9698a708fc722089f284745e019e58b70f7e29ff80970"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J1-F1-68.18.wav",
+      "bytes": 10853972,
+      "sha256": "5571a2f080f65c4ebbaa0d9b58c54500d58aada566966145fd8112e63d9a4b0e"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J2-F1-65.91.mid",
+      "bytes": 640,
+      "sha256": "64e3298e556a67bf82653d11e02caec0c781a8348a46f04241e9fba0a442f915"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J2-F1-65.91.wav",
+      "bytes": 10853972,
+      "sha256": "b5386b655d045642cb0960d8dcf0910a192148b34d8fce9f0bb7bfec9cff6ef3"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J3-F1-66.67.mid",
+      "bytes": 631,
+      "sha256": "e4d5da829658ff604df163f072fa244616ce0545cc251aed83d59397e899dc49"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/J3-F1-66.67.wav",
+      "bytes": 10853972,
+      "sha256": "c70732323816f8cb15f0354485611a15ec36a9d476bfa0d9be6ac3544c2dfc83"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/SW75-F1-69.57.mid",
+      "bytes": 476,
+      "sha256": "231691c175f6c083679dd4849f38a0e2ceffb0c3acbfa4da64c9236ae3d4b92a"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/SW75-F1-69.57.wav",
+      "bytes": 10853972,
+      "sha256": "a13f09034279aa192a5536b76a44dfd67b181b2a2c722eb92bc327055e466f8c"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/W48-F1-71.79.mid",
+      "bytes": 552,
+      "sha256": "b279cbdc9e50e6a31837c05f52d58b8220436b37762ebd9e4df120a6c14148f9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/W48-F1-71.79.wav",
+      "bytes": 10853972,
+      "sha256": "b795c9f8995dfca4573d251ac8e4b991e65cf047dd0f22c597774ea327e47709"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/W64-F1-77.33.mid",
+      "bytes": 529,
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/W64-F1-77.33.wav",
+      "bytes": 10853972,
+      "sha256": "8d39b9f3fe1ef8f0a606a1c0991d245eaf49cb87ad39d13ee08156f1fbb058f9"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+      "bytes": 4569,
+      "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.wav",
+      "bytes": 10853972,
+      "sha256": "00456bce9bfe8a5c834eb559c1459749929fcb353cee765505baa85bc599ac35"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+      "bytes": 529,
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+    },
+    {
+      "path": "outputs/runs/bass-sequence/交付/选用贝斯.wav",
+      "bytes": 10853972,
+      "sha256": "8d39b9f3fe1ef8f0a606a1c0991d245eaf49cb87ad39d13ee08156f1fbb058f9"
+    },
+    {
+      "path": "src/audio_midi/bass_sequence.py",
+      "bytes": 2311,
+      "sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d"
+    },
+    {
+      "path": "tests/test_bass_sequence.py",
+      "bytes": 1592,
+      "sha256": "7349584cbd753c3b935e393d5a7ecb87e6b6dab46e45db701094ce18f045a47e"
+    }
+  ],
+  "sources_not_bundled": [
+    {
+      "path": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+      "sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+    },
+    {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2/work/bass-models/deps/torchcrepe/assets/full.pth",
+      "sha256": "133225604dedd2e4005f8bbd1bd0a2ec073ba8b7a6cd31ff6d5edbbfa3539986"
+    },
+    {
+      "path": "outputs/bass-evidence/generate.py",
+      "sha256": "50a60dc9fffef29f7f9ab1a457a5835f2686ef98a6b1c1225f180a7ab5d750fe"
+    },
+    {
+      "path": "outputs/bass-models/generate.py",
+      "sha256": "5963189c0210cd8497845d4463f41dde24ece7cbe572942787112c65679162f3"
+    },
+    {
+      "path": "outputs/bass-models/run_pitch.py",
+      "sha256": "dedbcd7a1f727a0ec495b33e5f64f0671c4da04e8ac493b6495446bbe0061fab"
+    },
+    {
+      "path": "src/audio_midi/bass_evidence.py",
+      "sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e"
+    },
+    {
+      "path": "src/audio_midi/bass_models.py",
+      "sha256": "7f707f4204a8d9680b0938d964a6cace901b2d3f7549d146687aede3a6327279"
+    },
+    {
+      "path": "src/audio_midi/bass_refinement.py",
+      "sha256": "6565edad74146a9a9a3e9195492c32b5c4f63a5a402030f8dd73464ad85abd54"
+    },
+    {
+      "path": "work/bass-diagnostics/replay/frames.npz",
+      "sha256": "677dc4e3e0fac813623b24c8cb7bf7c8a370fe772c36a1795c3d136c1bad5465"
+    },
+    {
+      "path": "work/bass-diagnostics/replay/trace.json",
+      "sha256": "c17e95eb5fb85f23654780c82d4b3145659717af2eaade6be94910b9352cd711"
+    },
+    {
+      "path": "work/bass-models/crepe-full.json",
+      "sha256": "9324cfd1609498d202a0ce6195a172305b016b1b9c5d3154db2649b3a9db6301"
+    },
+    {
+      "path": "work/bass-models/crepe-full.npz",
+      "sha256": "2b9939c60fc5ad9b293b4abe28e2c34685cab648fe45a2bdfddfcb3a3af929fc"
+    },
+    {
+      "path": "work/bass-models/fcnf0-plus-plus.pt",
+      "sha256": "28d89add04722461f831249a338b74516a96dedd3301ed794c18953d51d1b960"
+    },
+    {
+      "path": "work/bass-models/ft-bass.wav",
+      "sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+    },
+    {
+      "path": "work/bass-models/ft-receipt.json",
+      "sha256": "df6b5b8cb91b95e8453bf9c3ed0c622765db8fa2ed2f86318eed6d134cf3fda8"
+    },
+    {
+      "path": "work/bass-models/penn-full.json",
+      "sha256": "90d22c1fb16d95cff917c3345b3b8d311e25c97ad57cdb6579e98298ddbbb21e"
+    },
+    {
+      "path": "work/bass-models/penn-full.npz",
+      "sha256": "2126c7d787fee7e6cc56a8e84e82ed848384cfe6e4045fa29b9f78a3ecb73936"
+    },
+    {
+      "path": "work/bass-models/pyin-ft.json",
+      "sha256": "d5d18049f2f6e1af921f6111ca8c244cbc0e8a574b305dc3d5ead93855ef1e44"
+    },
+    {
+      "path": "work/bass-models/pyin-ft.npz",
+      "sha256": "db5420b554a3dd0a999a99779c66fa4325680ee879175e380f03c59c9be0f46f"
+    },
+    {
+      "path": "work/bass-models/pyin-sw.json",
+      "sha256": "e183eb63bf87a2e24860e5ff17b19ad02f3520862d405ec89d9a7059c09b74f2"
+    },
+    {
+      "path": "work/bass-models/pyin-sw.npz",
+      "sha256": "13fe8e0233ad0453b865be889982fdd3ea0efa8b26ec22ddbfd2a4c08311ee5a"
+    },
+    {
+      "path": "work/bass-sequence/crepe-ft.json",
+      "sha256": "07d07ab9bb0e5629edae05b882fb24019ea408d38a97bb52c5d977fa2e1a319e"
+    },
+    {
+      "path": "work/bass-sequence/crepe-ft.npz",
+      "sha256": "a51316d504fe353dc1db3e3521e3a5adeb7fd746e2fc13bb7b49cbcea9edaf73"
+    },
+    {
+      "path": "work/bass-sequence/crepe-sw.json",
+      "sha256": "8c176ba2d9a49d0ffeb9759be1ff96af003182ae36b1a3c0bfd761608bd39037"
+    },
+    {
+      "path": "work/bass-sequence/crepe-sw.npz",
+      "sha256": "266b40b8d0b43a323ac053a59ad5f37b8e0e119cfc5c6bf2f65049e2c57b3de5"
+    },
+    {
+      "path": "work/bass-sequence/penn-ft.json",
+      "sha256": "a52e9d418f16e1b4e6255dcb967874f736e708a0b4e427311c0ac904dab97a73"
+    },
+    {
+      "path": "work/bass-sequence/penn-ft.npz",
+      "sha256": "958b18719647a727e4afc8cf11bd545f493b3ed52168e4c7f600df3670ef514d"
+    },
+    {
+      "path": "work/bass-sequence/penn-sw.json",
+      "sha256": "ff5a5fa1b365cc5e0fdc9ca7e2aa342b2bd8ee63ba7c6fe39ec32102e8bbe34b"
+    },
+    {
+      "path": "work/bass-sequence/penn-sw.npz",
+      "sha256": "4bacc2925045b5b1867bea3dee6d0db38ba23423347ed1a1541631517493ca90"
+    },
+    {
+      "path": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+      "sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+    },
+    {
+      "path": "work/two-methods/sw-full/bass.wav",
+      "sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+    },
+    {
+      "path": "work/two-methods/sw-full/separation-receipt.json",
+      "sha256": "a661ccc60aed3a3f879dd52bacfc5a7b77283bc4d3acf3d6265c967d9afbef25"
+    }
+  ],
+  "protected_baseline": {
+    "status": "seen 0–60 development research; not production/generalization/recording truth",
+    "selected": "R1",
+    "chain": [
+      "S2-short-0",
+      "M2",
+      "A3",
+      "R1"
+    ],
+    "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+    "previous_lock": "config/bass-models.lock.json",
+    "previous_lock_sha256": "cf76351605ed80cf6a028130b800bc7c9269065c3f074b78d3a7a4ff3c395956",
+    "bass": {
+      "path": "outputs/runs/bass-evidence/交付/03-贝斯新版-75.00.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a"
+    },
+    "six_track": {
+      "path": "outputs/runs/bass-evidence/交付/六轨-仅替换贝斯.mid",
+      "sha256": "363ee4d3e0086a0c9ca7ad29a29bd6c89d2b9d5a9469552bf2dd3404f0126bfe"
+    },
+    "score": {
+      "matched": 27,
+      "predicted": 36,
+      "reference": 36,
+      "extra": 9,
+      "missed": 9,
+      "f1": 0.75
+    },
+    "implementation_sha256": "067bf6259ebe2a1e9df15ca7f7d2f891827171880dfbe6b134cf5eb2dfae042e",
+    "registration_sha256": "bf44aca55a3a7b9e426c5640d141488a9dc7dd4f12a873cb3086816bbf698039",
+    "entrypoint": "outputs/bass-evidence/generate.py; cached research only, default runner unchanged"
+  },
+  "note": "local media, no studio reference or held-out claim"
+}

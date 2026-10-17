@@ -186,3 +186,9 @@
 - Seen 0–60 bass onset F1 62.34→70.59→72.22→75.00 (27 TP / 36 predicted / 36 reference; 9 FP / 9 FN). No previous matched reference lost. Octave profiles made no edits.
 - New six-track F1 76.5625%, only bass replaced; other five tracks and conductor messages preserved. Old artifacts/locks retained; default runner unchanged.
 - 120 tests and temporary three-stage byte/evidence/score rebuild passed. Frozen commit 3e3270d independently verified: own tempo parser/SciPy maximum matching, sources, byte rebuild, protected tracks, 44 clips, 5 re-rendered WAVs and 107-member ZIP passed; no blocking findings. No held-out or recording-truth claim.
+
+## 2026-10-17 — bass multisource and note sequence trials (research)
+- Added three-source evidence, source-local choices and note-level sequence decoding; kept the original 75% stream after negative source/fusion/sequence trials. Four isolated new pitch jobs, all single-attempt, no new separation/API/training.
+- Selected evidence-constrained W64 additions: 29 TP / 39 predicted / 36 reference, F1 77.3333% vs 75%; two new reference matches, none lost, one new false positive. 10 preregistered IDs / 9 distinct MIDIs, full negative results retained.
+- Only bass replaced in six-track output, F1 76.7283%; five tracks/conductor and old 75% artifacts unchanged. Added 18-event diagnostics and 84 local excerpts. No short-note or held-out accuracy claim.
+- 124 tests and four-stage temporary MIDI/evidence/features/score rebuild passed; independent verification pending frozen commit.

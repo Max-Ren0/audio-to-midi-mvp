@@ -1,0 +1,66 @@
+{
+  "phase": 3,
+  "registration_sha256": "998fced489ec0dd254ebfe672138886da2b9721fac8739e58c1a0a3a82e802e7",
+  "generator_sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010",
+  "common_sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d",
+  "implementation_sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d",
+  "rows": [
+    {
+      "id": "D75",
+      "recipe": {
+        "source": "demucs",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/D75.json",
+      "provenance_sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d",
+      "predicted": 36
+    },
+    {
+      "id": "J1",
+      "recipe": {
+        "id": "J1",
+        "onset_cost": 0.2,
+        "jump_penalty": 0.0,
+        "minimum_sources": 2,
+        "parent": "D75"
+      },
+      "path": "outputs/runs/bass-sequence/phase3/J1.mid",
+      "sha256": "4a526abfc005b3b8e1b9698a708fc722089f284745e019e58b70f7e29ff80970",
+      "provenance_path": "outputs/runs/bass-sequence/phase3/J1.json",
+      "provenance_sha256": "dc2cd77b484a62ef446f29d4d1d3ac48ef63c79b16edeec7bb2d54c2a57d3ab9",
+      "predicted": 52
+    },
+    {
+      "id": "J2",
+      "recipe": {
+        "id": "J2",
+        "onset_cost": 0.35,
+        "jump_penalty": 0.05,
+        "minimum_sources": 2,
+        "parent": "D75"
+      },
+      "path": "outputs/runs/bass-sequence/phase3/J2.mid",
+      "sha256": "64e3298e556a67bf82653d11e02caec0c781a8348a46f04241e9fba0a442f915",
+      "provenance_path": "outputs/runs/bass-sequence/phase3/J2.json",
+      "provenance_sha256": "eb918db641171742c777ab48f75ebf54e15f57ee50611df75304d06f00b275af",
+      "predicted": 52
+    },
+    {
+      "id": "J3",
+      "recipe": {
+        "id": "J3",
+        "onset_cost": 0.5,
+        "jump_penalty": 0.1,
+        "minimum_sources": 2,
+        "parent": "D75"
+      },
+      "path": "outputs/runs/bass-sequence/phase3/J3.mid",
+      "sha256": "e4d5da829658ff604df163f072fa244616ce0545cc251aed83d59397e899dc49",
+      "provenance_path": "outputs/runs/bass-sequence/phase3/J3.json",
+      "provenance_sha256": "b5c2457aa8380a34692e15633d912a44f619ca5d8c13b0ae3566923a4adbb5f1",
+      "predicted": 51
+    }
+  ]
+}

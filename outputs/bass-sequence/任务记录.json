@@ -1,0 +1,74 @@
+[
+  {
+    "id": "crepe-ft",
+    "command": [
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "crepe",
+      "work/bass-models/ft-bass.wav",
+      "work/bass-sequence/crepe-ft.npz"
+    ],
+    "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a",
+    "status": "ok",
+    "reason": null,
+    "attempts": 1,
+    "elapsed_seconds": 179.42453695799986,
+    "peak_memory_bytes": 2994487296,
+    "returncode": 0,
+    "log_path": "work/bass-sequence/crepe-ft.log"
+  },
+  {
+    "id": "penn-ft",
+    "command": [
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "penn",
+      "work/bass-models/ft-bass.wav",
+      "work/bass-sequence/penn-ft.npz"
+    ],
+    "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a",
+    "status": "ok",
+    "reason": null,
+    "attempts": 1,
+    "elapsed_seconds": 58.74852554200015,
+    "peak_memory_bytes": 1956069376,
+    "returncode": 0,
+    "log_path": "work/bass-sequence/penn-ft.log"
+  },
+  {
+    "id": "crepe-sw",
+    "command": [
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "crepe",
+      "work/two-methods/sw-full/bass.wav",
+      "work/bass-sequence/crepe-sw.npz"
+    ],
+    "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb",
+    "status": "ok",
+    "reason": null,
+    "attempts": 1,
+    "elapsed_seconds": 176.6916695,
+    "peak_memory_bytes": 3037593600,
+    "returncode": 0,
+    "log_path": "work/bass-sequence/crepe-sw.log"
+  },
+  {
+    "id": "penn-sw",
+    "command": [
+      "work/sep-env/bin/python",
+      "outputs/bass-models/run_pitch.py",
+      "penn",
+      "work/two-methods/sw-full/bass.wav",
+      "work/bass-sequence/penn-sw.npz"
+    ],
+    "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb",
+    "status": "ok",
+    "reason": null,
+    "attempts": 1,
+    "elapsed_seconds": 57.57961954200027,
+    "peak_memory_bytes": 1947516928,
+    "returncode": 0,
+    "log_path": "work/bass-sequence/penn-sw.log"
+  }
+]

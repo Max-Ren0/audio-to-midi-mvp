@@ -1,0 +1,58 @@
+{
+  "status": "seen0–60 development research, not recording truth or production/generalization acceptance",
+  "selected": "W64",
+  "recipe": {
+    "id": "W64",
+    "minimum_run_seconds": 0.064,
+    "parent": "D75"
+  },
+  "previous_lock": "config/bass-evidence.lock.json",
+  "previous_lock_sha256": "83a5cab9f3151cd3c3d79050e5f27e32975b065b38b8fccb9463f29f836a0fa2",
+  "input_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98",
+  "bass": {
+    "path": "outputs/runs/bass-sequence/交付/选用贝斯.mid",
+    "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768"
+  },
+  "six_track": {
+    "path": "outputs/runs/bass-sequence/交付/六轨-仅替换贝斯.mid",
+    "sha256": "1b3328983c213d18e0b417d881f88c2b85970a83c3bd1e1f8c556d9c2e5fab38"
+  },
+  "score": {
+    "matched": 29,
+    "predicted": 39,
+    "reference": 36,
+    "extra": 10,
+    "missed": 7,
+    "f1": 0.7733333333333333
+  },
+  "registration_sha256": "998fced489ec0dd254ebfe672138886da2b9721fac8739e58c1a0a3a82e802e7",
+  "implementation_sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d",
+  "common_sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d",
+  "stage_choices": [
+    {
+      "phase": 1,
+      "selected": "D75",
+      "ledger_sha256": "8a105debe6ad21700dbe8e6098a3dc0dcd3ba3f3c2009cc9a5a0170be14b5109",
+      "score_sha256": "55e0b2443383d04c532be027254ae7e6464a665570bf50e02fe4d5610b86b17b"
+    },
+    {
+      "phase": 2,
+      "selected": "D75",
+      "ledger_sha256": "dc463d4c3b5e7065e6bc6235b9e05b5473333c0668b85da76e66f88a3db669c7",
+      "score_sha256": "27cb49b32eea777772de9de86224e36623c8af9e2125558e8f29547f5ef50d57"
+    },
+    {
+      "phase": 3,
+      "selected": "D75",
+      "ledger_sha256": "4d51c52dd603b1a0661ebb1ac966a31cfaa62268d1849d9b894d3bc65aae0903",
+      "score_sha256": "c15197445b31c475075c9d90b9ed4c563b56dbb106507886176b722b1a8b47df"
+    },
+    {
+      "phase": 4,
+      "selected": "W64",
+      "ledger_sha256": "891a73e83c20d6b6938b6020ffdc03e7763c72bca18752c0c6fe6d0b4a74c996",
+      "score_sha256": "e99a4f8ffe8fc73beb04e959020a6a9ec9a9b13dd6ac00a511e8c98ede921676"
+    }
+  ],
+  "entrypoint": "outputs/bass-sequence/generate.py; verified cache rebuild only, default runner unchanged"
+}

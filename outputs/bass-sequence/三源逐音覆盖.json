@@ -1,0 +1,1432 @@
+{
+  "rows": [
+    {
+      "kind": "FN",
+      "index": 0,
+      "pitch": 43,
+      "source_time": 5.305482991495747,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 519.3171997070312,
+            "flux": 2.990255355834961,
+            "rms_rise_salience": 0.3431859016418457
+          },
+          "near_anchors": [
+            5.284,
+            5.292
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 939.2772216796875,
+            "flux": 2.7161550521850586,
+            "rms_rise_salience": 0.4036848545074463
+          },
+          "near_anchors": [
+            5.28,
+            5.296
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 658.5905151367188,
+            "flux": 2.7510857582092285,
+            "rms_rise_salience": 0.43097734451293945
+          },
+          "near_anchors": [
+            5.26,
+            5.288,
+            5.452
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 5,
+      "pitch": 43,
+      "source_time": 11.987793196598297,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            },
+            "penn": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            }
+          },
+          "audio": {
+            "rise": 0.9666010737419128,
+            "flux": 0.33162593841552734,
+            "rms_rise_salience": 0.047683000564575195
+          },
+          "near_anchors": []
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            },
+            "penn": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            }
+          },
+          "audio": {
+            "rise": 0.9573473334312439,
+            "flux": 1.0897327661514282,
+            "rms_rise_salience": 0.044615745544433594
+          },
+          "near_anchors": [
+            11.888,
+            12.028
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            },
+            "penn": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            }
+          },
+          "audio": {
+            "rise": 0.9270166754722595,
+            "flux": 0.5415544509887695,
+            "rms_rise_salience": 0.03389906883239746
+          },
+          "near_anchors": [
+            12.032
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 7,
+      "pitch": 36,
+      "source_time": 41.14364887443722,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9564720988273621,
+            "flux": 0.2798466682434082,
+            "rms_rise_salience": 0.028304576873779297
+          },
+          "near_anchors": []
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9757807850837708,
+            "flux": 0.40665245056152344,
+            "rms_rise_salience": 0.02668595314025879
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 11,
+              "qualified_exact_frames": 11
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9608093500137329,
+            "flux": 0.08527176082134247,
+            "rms_rise_salience": 0.02424478530883789
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 8,
+      "pitch": 31,
+      "source_time": 41.77418659329664,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 1.5742356777191162,
+            "flux": 1.7024470567703247,
+            "rms_rise_salience": 0.24878549575805664
+          },
+          "near_anchors": [
+            41.768,
+            41.772
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 1.6039059162139893,
+            "flux": 1.0555999279022217,
+            "rms_rise_salience": 0.2433927059173584
+          },
+          "near_anchors": [
+            41.76
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 10
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 1.5731276273727417,
+            "flux": 0.5821028351783752,
+            "rms_rise_salience": 0.20216894149780273
+          },
+          "near_anchors": [
+            41.752,
+            41.772,
+            41.9
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 12,
+      "pitch": 43,
+      "source_time": 44.914716058029015,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 6
+            }
+          },
+          "audio": {
+            "rise": 0.23326119780540466,
+            "flux": 0.24569737911224365,
+            "rms_rise_salience": 0.0
+          },
+          "near_anchors": [
+            44.872,
+            44.88,
+            44.972,
+            44.984
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            }
+          },
+          "audio": {
+            "rise": 0.26610374450683594,
+            "flux": 0.8702586889266968,
+            "rms_rise_salience": 0.0
+          },
+          "near_anchors": [
+            44.872,
+            45.024
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.1363924741744995,
+            "flux": 0.2948337197303772,
+            "rms_rise_salience": 0.0
+          },
+          "near_anchors": [
+            44.852000000000004,
+            44.872
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 19,
+      "pitch": 36,
+      "source_time": 48.235895447723856,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 18
+            },
+            "crepe": {
+              "raw_exact_frames": 15,
+              "qualified_exact_frames": 15
+            },
+            "penn": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            }
+          },
+          "audio": {
+            "rise": 0.9801933765411377,
+            "flux": 0.4632977843284607,
+            "rms_rise_salience": 0.03844785690307617
+          },
+          "near_anchors": []
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 18
+            },
+            "crepe": {
+              "raw_exact_frames": 13,
+              "qualified_exact_frames": 13
+            },
+            "penn": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            }
+          },
+          "audio": {
+            "rise": 0.98190838098526,
+            "flux": 0.4074084758758545,
+            "rms_rise_salience": 0.030993223190307617
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 18
+            },
+            "crepe": {
+              "raw_exact_frames": 5,
+              "qualified_exact_frames": 5
+            },
+            "penn": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            }
+          },
+          "audio": {
+            "rise": 0.9793576598167419,
+            "flux": 0.07759323716163635,
+            "rms_rise_salience": 0.040992021560668945
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 20,
+      "pitch": 31,
+      "source_time": 48.44607468734366,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 6
+            }
+          },
+          "audio": {
+            "rise": 1.0148706436157227,
+            "flux": 0.5884151458740234,
+            "rms_rise_salience": 0.14152812957763672
+          },
+          "near_anchors": []
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 6
+            }
+          },
+          "audio": {
+            "rise": 1.071165919303894,
+            "flux": 0.45678436756134033,
+            "rms_rise_salience": 0.1443471908569336
+          },
+          "near_anchors": [
+            48.404
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 5,
+              "qualified_exact_frames": 4
+            }
+          },
+          "audio": {
+            "rise": 0.9677411913871765,
+            "flux": 0.21639826893806458,
+            "rms_rise_salience": 0.11506223678588867
+          },
+          "near_anchors": [
+            48.552
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 28,
+      "pitch": 38,
+      "source_time": 53.658867233616796,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 11,
+              "qualified_exact_frames": 11
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 12,
+              "qualified_exact_frames": 12
+            }
+          },
+          "audio": {
+            "rise": 1.464213252067566,
+            "flux": 0.4868585169315338,
+            "rms_rise_salience": 0.11014056205749512
+          },
+          "near_anchors": [
+            53.64
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 12,
+              "qualified_exact_frames": 12
+            },
+            "crepe": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 10
+            },
+            "penn": {
+              "raw_exact_frames": 14,
+              "qualified_exact_frames": 14
+            }
+          },
+          "audio": {
+            "rise": 1.4701149463653564,
+            "flux": 0.8365485668182373,
+            "rms_rise_salience": 0.11835908889770508
+          },
+          "near_anchors": [
+            53.636,
+            53.648
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 11,
+              "qualified_exact_frames": 11
+            },
+            "crepe": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 10
+            },
+            "penn": {
+              "raw_exact_frames": 14,
+              "qualified_exact_frames": 13
+            }
+          },
+          "audio": {
+            "rise": 1.5238887071609497,
+            "flux": 0.7295631170272827,
+            "rms_rise_salience": 0.1355440616607666
+          },
+          "near_anchors": [
+            53.64,
+            53.648
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FN",
+      "index": 30,
+      "pitch": 40,
+      "source_time": 55.31945692846422,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            }
+          },
+          "audio": {
+            "rise": 1.1091028451919556,
+            "flux": 0.342210054397583,
+            "rms_rise_salience": 0.0593876838684082
+          },
+          "near_anchors": [
+            55.236000000000004
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            }
+          },
+          "audio": {
+            "rise": 1.129413366317749,
+            "flux": 0.36043572425842285,
+            "rms_rise_salience": 0.05201411247253418
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            }
+          },
+          "audio": {
+            "rise": 1.0965474843978882,
+            "flux": 0.19483281672000885,
+            "rms_rise_salience": 0.04548168182373047
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 0,
+      "pitch": 41,
+      "source_time": 5.291666666666667,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 14,
+              "qualified_exact_frames": 3
+            },
+            "crepe": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 6
+            }
+          },
+          "audio": {
+            "rise": 600.2092895507812,
+            "flux": 2.990255355834961,
+            "rms_rise_salience": 2.210498809814453
+          },
+          "near_anchors": [
+            5.284,
+            5.292
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 15,
+              "qualified_exact_frames": 2
+            },
+            "crepe": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            }
+          },
+          "audio": {
+            "rise": 1242.085205078125,
+            "flux": 2.7161550521850586,
+            "rms_rise_salience": 2.3439993858337402
+          },
+          "near_anchors": [
+            5.28,
+            5.296
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 15,
+              "qualified_exact_frames": 5
+            },
+            "crepe": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            },
+            "penn": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 5
+            }
+          },
+          "audio": {
+            "rise": 21577.662109375,
+            "flux": 2.7510857582092285,
+            "rms_rise_salience": 1.1408085823059082
+          },
+          "near_anchors": [
+            5.26,
+            5.288
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 1,
+      "pitch": 43,
+      "source_time": 5.504166666666667,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "crepe": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            }
+          },
+          "audio": {
+            "rise": 1.0317333936691284,
+            "flux": 0.7350159287452698,
+            "rms_rise_salience": 0.02945685386657715
+          },
+          "near_anchors": [
+            5.5040000000000004
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 6
+            },
+            "crepe": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            }
+          },
+          "audio": {
+            "rise": 1.0154457092285156,
+            "flux": 0.759885847568512,
+            "rms_rise_salience": 0.03949308395385742
+          },
+          "near_anchors": [
+            5.456
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 6,
+              "qualified_exact_frames": 6
+            },
+            "crepe": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "penn": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            }
+          },
+          "audio": {
+            "rise": 1.092750072479248,
+            "flux": 0.42836225032806396,
+            "rms_rise_salience": 0.021420955657958984
+          },
+          "near_anchors": [
+            5.452
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 9,
+      "pitch": 29,
+      "source_time": 42.7875,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "crepe": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "penn": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            }
+          },
+          "audio": {
+            "rise": 0.9897383451461792,
+            "flux": 1.0025891065597534,
+            "rms_rise_salience": 0.08386468887329102
+          },
+          "near_anchors": [
+            42.788000000000004
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "crepe": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "penn": {
+              "raw_exact_frames": 9,
+              "qualified_exact_frames": 9
+            }
+          },
+          "audio": {
+            "rise": 0.9743507504463196,
+            "flux": 0.4165498614311218,
+            "rms_rise_salience": 0.07993865013122559
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "crepe": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 20
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 1.0034472942352295,
+            "flux": 0.08314245194196701,
+            "rms_rise_salience": 0.07707619667053223
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 10,
+      "pitch": 30,
+      "source_time": 43.395833333333336,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "crepe": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.9430235028266907,
+            "flux": 0.5997563600540161,
+            "rms_rise_salience": 0.02999138832092285
+          },
+          "near_anchors": [
+            43.396
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 7
+            },
+            "crepe": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 1.0236488580703735,
+            "flux": 0.3170754313468933,
+            "rms_rise_salience": 0.02484130859375
+          },
+          "near_anchors": [
+            43.508
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 8,
+              "qualified_exact_frames": 8
+            },
+            "crepe": {
+              "raw_exact_frames": 7,
+              "qualified_exact_frames": 7
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.970589816570282,
+            "flux": 0.31575074791908264,
+            "rms_rise_salience": 0.05501604080200195
+          },
+          "near_anchors": [
+            43.54
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 12,
+      "pitch": 31,
+      "source_time": 44.43958333333334,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9188170433044434,
+            "flux": 1.0008158683776855,
+            "rms_rise_salience": 0.12108445167541504
+          },
+          "near_anchors": [
+            44.44
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.913422167301178,
+            "flux": 0.7942470908164978,
+            "rms_rise_salience": 0.11784100532531738
+          },
+          "near_anchors": [
+            44.452
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9632885456085205,
+            "flux": 0.07442917674779892,
+            "rms_rise_salience": 0.11594796180725098
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 13,
+      "pitch": 31,
+      "source_time": 44.880208333333336,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 16
+            },
+            "crepe": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 10
+            },
+            "penn": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 10
+            }
+          },
+          "audio": {
+            "rise": 0.5728561878204346,
+            "flux": 1.7585214376449585,
+            "rms_rise_salience": 0.22171831130981445
+          },
+          "near_anchors": [
+            44.872,
+            44.88,
+            44.972,
+            44.984
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 15
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 13
+            },
+            "penn": {
+              "raw_exact_frames": 10,
+              "qualified_exact_frames": 10
+            }
+          },
+          "audio": {
+            "rise": 0.6228618025779724,
+            "flux": 1.552363395690918,
+            "rms_rise_salience": 0.2584967613220215
+          },
+          "near_anchors": [
+            44.872,
+            45.024
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 16,
+              "qualified_exact_frames": 15
+            },
+            "crepe": {
+              "raw_exact_frames": 20,
+              "qualified_exact_frames": 10
+            },
+            "penn": {
+              "raw_exact_frames": 11,
+              "qualified_exact_frames": 10
+            }
+          },
+          "audio": {
+            "rise": 0.45092642307281494,
+            "flux": 2.2608907222747803,
+            "rms_rise_salience": 0.2073071002960205
+          },
+          "near_anchors": [
+            44.852000000000004,
+            44.872
+          ]
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 22,
+      "pitch": 30,
+      "source_time": 49.915625,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.9102423787117004,
+            "flux": 0.5458417534828186,
+            "rms_rise_salience": 0.0698699951171875
+          },
+          "near_anchors": [
+            49.916000000000004
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.898543655872345,
+            "flux": 0.25559455156326294,
+            "rms_rise_salience": 0.05861043930053711
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "crepe": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            },
+            "penn": {
+              "raw_exact_frames": 0,
+              "qualified_exact_frames": 0
+            }
+          },
+          "audio": {
+            "rise": 0.8935580849647522,
+            "flux": 0.09999162703752518,
+            "rms_rise_salience": 0.08419966697692871
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 28,
+      "pitch": 38,
+      "source_time": 54.45625,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9728415012359619,
+            "flux": 1.2632782459259033,
+            "rms_rise_salience": 0.04711413383483887
+          },
+          "near_anchors": [
+            54.456
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9789813160896301,
+            "flux": 0.34219348430633545,
+            "rms_rise_salience": 0.0602414608001709
+          },
+          "near_anchors": []
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "crepe": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            },
+            "penn": {
+              "raw_exact_frames": 19,
+              "qualified_exact_frames": 19
+            }
+          },
+          "audio": {
+            "rise": 0.9734975695610046,
+            "flux": 0.06755397468805313,
+            "rms_rise_salience": 0.0725100040435791
+          },
+          "near_anchors": []
+        }
+      }
+    },
+    {
+      "kind": "FP",
+      "index": 30,
+      "pitch": 40,
+      "source_time": 55.23645833333333,
+      "evidence": {
+        "demucs": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            },
+            "crepe": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            },
+            "penn": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            }
+          },
+          "audio": {
+            "rise": 1.0229930877685547,
+            "flux": 0.8163737654685974,
+            "rms_rise_salience": 0.10566091537475586
+          },
+          "near_anchors": [
+            55.236000000000004
+          ]
+        },
+        "ft": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 3,
+              "qualified_exact_frames": 3
+            },
+            "crepe": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            },
+            "penn": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            }
+          },
+          "audio": {
+            "rise": 1.039387583732605,
+            "flux": 0.6255389451980591,
+            "rms_rise_salience": 0.10080909729003906
+          },
+          "near_anchors": [
+            55.088
+          ]
+        },
+        "sw": {
+          "models": {
+            "pyin": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            },
+            "crepe": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            },
+            "penn": {
+              "raw_exact_frames": 4,
+              "qualified_exact_frames": 4
+            }
+          },
+          "audio": {
+            "rise": 1.0149390697479248,
+            "flux": 0.36738187074661255,
+            "rms_rise_salience": 0.10947918891906738
+          },
+          "near_anchors": []
+        }
+      }
+    }
+  ],
+  "limits": "diagnostic neighborhood support, not same-performance ground truth or generator inputs"
+}

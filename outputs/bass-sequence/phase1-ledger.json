@@ -1,0 +1,45 @@
+{
+  "phase": 1,
+  "registration_sha256": "998fced489ec0dd254ebfe672138886da2b9721fac8739e58c1a0a3a82e802e7",
+  "generator_sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010",
+  "common_sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d",
+  "implementation_sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d",
+  "rows": [
+    {
+      "id": "D75",
+      "recipe": {
+        "source": "demucs",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/D75.json",
+      "provenance_sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d",
+      "predicted": 36
+    },
+    {
+      "id": "FT75",
+      "recipe": {
+        "source": "ft",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/FT75.mid",
+      "sha256": "2697d39be3cbefedd3c9aeb10d4486d7bde5168e1d20fcec5d936dcfbd9527bc",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/FT75.json",
+      "provenance_sha256": "041d946da87c927441706c14f662c8462569fc0ed996ae3dcd5d4166ef6f26a7",
+      "predicted": 34
+    },
+    {
+      "id": "SW75",
+      "recipe": {
+        "source": "sw",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/SW75.mid",
+      "sha256": "231691c175f6c083679dd4849f38a0e2ceffb0c3acbfa4da64c9236ae3d4b92a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/SW75.json",
+      "provenance_sha256": "9ac055d294ff5803ce3cfff4cf9e6841884c3f82a578237f9c4a5ee19efead3f",
+      "predicted": 33
+    }
+  ]
+}

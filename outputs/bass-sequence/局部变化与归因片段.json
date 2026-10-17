@@ -1,0 +1,716 @@
+[
+  {
+    "kind": "baseline_FN",
+    "index": 0,
+    "pitch": 43,
+    "time": 5.305482991495747,
+    "start": 4.905482991495747,
+    "end": 5.905482991495747,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/00-原曲.wav",
+        "sha256": "1c0d0680937a04afbcc04344ade6c841724bae7c250d3c0bc3bdb2c63bf8f9e5",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/00-Demucs.wav",
+        "sha256": "a00d309733fd109a9631d0d82d3f6ff28b0efa42f2f4b31e34ebb69413288c86",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/00-ft.wav",
+        "sha256": "5083129eaa58548a63848468f3f458e697a3c275bea6ff9a62442deea70b10e2",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/00-SW.wav",
+        "sha256": "f47b9246d1923fa9889d6e7ee5ae641da52377c14dde6db894256398e7694cd0",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 5,
+    "pitch": 43,
+    "time": 11.987793196598297,
+    "start": 11.587793196598296,
+    "end": 12.587793196598296,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/01-原曲.wav",
+        "sha256": "7996949ad267f36266a7865b29045e56649803f41280c801b2e7fd693caa5e42",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/01-Demucs.wav",
+        "sha256": "e596da4244d9bbe18d0fc390e00cbe8badae226398d78abadf7e477145bc24b6",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/01-ft.wav",
+        "sha256": "e4b91d91c3e89b1b4039e3b4cb3861b5cc3ef707e549830074951758ec86f60e",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/01-SW.wav",
+        "sha256": "195aa14b295f158ef80184131a23729b5c95737c33e4553d8fbc57718a3978fe",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 7,
+    "pitch": 36,
+    "time": 41.14364887443722,
+    "start": 40.74364887443722,
+    "end": 41.74364887443722,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/02-原曲.wav",
+        "sha256": "9a0463a4a1de3480ac036810e96017a4d937566f5beaa5118e45b2c248fc130a",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/02-Demucs.wav",
+        "sha256": "377e210153bd27e9f4508d68f320197441b7076b58e04c683857c454a8448b37",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/02-ft.wav",
+        "sha256": "e244ee5f2256f52d0ec9ceb5c07b8859f45cfd54db2d765f92452ce6b9592f63",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/02-SW.wav",
+        "sha256": "aee10835b8cb24228e4baf4428aec2cbe980ae8f8e8607494ceda98214c43df9",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 8,
+    "pitch": 31,
+    "time": 41.77418659329664,
+    "start": 41.37418659329664,
+    "end": 42.37418659329664,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/03-原曲.wav",
+        "sha256": "0f35b86140b7ae63a57e40594c63be3c01f029b286f5b5483e17b96b00f9af08",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/03-Demucs.wav",
+        "sha256": "554770973d1a5ee1df27d2c7d9a80232b31c4a42e0ececdd39c192d418ec2252",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/03-ft.wav",
+        "sha256": "8d172487f93f9e7778fc87928c5a859fc0c571204e672e31a6218a21328c6af2",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/03-SW.wav",
+        "sha256": "2605f3b37ab3b7f5429b14f6f1e2e2544e6fdd373824b373dabb6d96a8c65a55",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 12,
+    "pitch": 43,
+    "time": 44.914716058029015,
+    "start": 44.514716058029016,
+    "end": 45.514716058029016,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/04-原曲.wav",
+        "sha256": "7dcd2822dbe067a363404f1b601e8279280953cfa6f87b086a60bbe0a6fb13f4",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/04-Demucs.wav",
+        "sha256": "0ed48b7d9606822acdfe3caa40ea6a003add1c5304397ec2f61bb399aa408df3",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/04-ft.wav",
+        "sha256": "18d86c364a655ac6a4ed423cc9ca308022ed2e220206fc16d0090b3858494d90",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/04-SW.wav",
+        "sha256": "ac951f249bb9759d0b9bb5853554173dd8624f9e9231f82a801918a432bec692",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 19,
+    "pitch": 36,
+    "time": 48.235895447723856,
+    "start": 47.83589544772386,
+    "end": 48.83589544772386,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/05-原曲.wav",
+        "sha256": "4cd14c92d83ce3a682ed3c2e7b902a2de2dd1e6e371a6e3536c04f3d45874971",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/05-Demucs.wav",
+        "sha256": "633d80bd08670765065ffc3ac448f45ecdf3169d6892165050e9a0bd0ef64a62",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/05-ft.wav",
+        "sha256": "8cecf8b13701185426e36ee08bdb97d452a0e3632946c25c885c4b63dab5a7a0",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/05-SW.wav",
+        "sha256": "c838991ee40e96ff4c0d3f7fc880fb0036978b1840d718a9c19a630dd09dbdd2",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 20,
+    "pitch": 31,
+    "time": 48.44607468734366,
+    "start": 48.04607468734366,
+    "end": 49.04607468734366,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/06-原曲.wav",
+        "sha256": "e31eb3abde1cdd4061730f48439556a8b876eaf4d1d44808dd997a4797b25f1e",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/06-Demucs.wav",
+        "sha256": "f973f47bc32ab51c8559943a0e32dba732482dfc65369a08ed2feb83d1b01888",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/06-ft.wav",
+        "sha256": "af33a5fa43fb2cb477204fe5cdfa607164cc8eee57dddadb0c8a18b515ce3adf",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/06-SW.wav",
+        "sha256": "e7aac36aab3158d85c2e6ea42cafcc05927886ad024fcc029aeb8ead0c81461c",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 28,
+    "pitch": 38,
+    "time": 53.658867233616796,
+    "start": 53.2588672336168,
+    "end": 54.2588672336168,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/07-原曲.wav",
+        "sha256": "c599b91dafeb35bc9164f94a1f16c02424e51fd5aa25289c2b64192317c52d28",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/07-Demucs.wav",
+        "sha256": "41080299434dcdf1ffba8c5cf56307a7cceaf87aa04788bcce3286bec1daa346",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/07-ft.wav",
+        "sha256": "e44160b1ae0a9526f957ded4fd4f2db9dc4a88af16e0c80785c003e293c5a48b",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/07-SW.wav",
+        "sha256": "adf779fcd61cc3f634d483ddcb9bb5980868034b33e85aced98029223693fd98",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FN",
+    "index": 30,
+    "pitch": 40,
+    "time": 55.31945692846422,
+    "start": 54.91945692846422,
+    "end": 55.91945692846422,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/08-原曲.wav",
+        "sha256": "cafd339e433f00824836b33eeae580f49965b76d9cfedbb6b3245d4d4e196cf4",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/08-Demucs.wav",
+        "sha256": "7e05a3df56bc35acc61e649ddb575b8c19458f5bca87b950b8982412fe7ea8ce",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/08-ft.wav",
+        "sha256": "45059123581302a0103539b25fd2bbcaf109e685e769c20c09aa74ddf7efe7c1",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/08-SW.wav",
+        "sha256": "cc4ccc820c5bb20f1e26b02deb05ed1cac8f439f51151200150bf9bcff738687",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 0,
+    "pitch": 41,
+    "time": 5.291666666666667,
+    "start": 4.891666666666667,
+    "end": 5.891666666666667,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/09-原曲.wav",
+        "sha256": "64e104ee033a584631999b69d510b6566486ab5cc6f74cff0bc2e4f337715fa6",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/09-Demucs.wav",
+        "sha256": "2119e8b54ae0ddacd80b00e4aeeb4a295d4ef26e6716dc28bc36e28002849eeb",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/09-ft.wav",
+        "sha256": "afc51eaeb9da0db7d63bb1699e23a3e600b05c91e6637255b292d967aa7e37d3",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/09-SW.wav",
+        "sha256": "5539a2c9a22191a97a42e65094f3b9dbc5d0bc524adcc745149337324cd9656d",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 1,
+    "pitch": 43,
+    "time": 5.504166666666667,
+    "start": 5.104166666666667,
+    "end": 6.104166666666667,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/10-原曲.wav",
+        "sha256": "17a26259fb226a2255d9b7c3a841a5ce48dfa95fdf6d0c2e38ddc6c4fa7df64d",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/10-Demucs.wav",
+        "sha256": "3b0c1c6f07adb422ea48eb39bcbd3c6ac3a5e4d6cab85861d0e9a4ce3a1f30e0",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/10-ft.wav",
+        "sha256": "b9062f1a49142f3bbe622bd14a0c76528da43f727972d6f8042a64bece58e547",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/10-SW.wav",
+        "sha256": "535ddc696b2b3a8b78f2e92b9609c42d75500a6c4f22ac2f29e16e6c07961387",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 9,
+    "pitch": 29,
+    "time": 42.7875,
+    "start": 42.3875,
+    "end": 43.3875,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/11-原曲.wav",
+        "sha256": "9d6d2ea1bbf4e50aa2ac24472931155febf51b32dc765f1db6f2316e9687d0bd",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/11-Demucs.wav",
+        "sha256": "6207c152b686f272cbdd6ed06557f1d6e0d0f89c91fbd5cf202e6b1caa79e5bf",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/11-ft.wav",
+        "sha256": "3322a62705ec148cf23a0fea16390646144b1f9ff2e23e7554887f20777ba8ed",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/11-SW.wav",
+        "sha256": "6e5913e0a0de59eb5bc5b6a17228d8609239827cc0a09ddcc798571564886e7f",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 10,
+    "pitch": 30,
+    "time": 43.395833333333336,
+    "start": 42.99583333333334,
+    "end": 43.99583333333334,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/12-原曲.wav",
+        "sha256": "00664347b35977119f121d20053f31bc506091e02be7e3f0cc33faa402d56c75",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/12-Demucs.wav",
+        "sha256": "e1b20dc9fecf09a2286095b4fbccca6e5181f7fec32d5c3c60ce8147174043cb",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/12-ft.wav",
+        "sha256": "0863ce2cb33bd52c60501bf1c27b4c41967e4ba096664503f0f61d9db295d817",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/12-SW.wav",
+        "sha256": "e417706944dbe8026ae38e88bc36668f902a088b9c20d228548cb084ba2f9e8a",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 12,
+    "pitch": 31,
+    "time": 44.43958333333334,
+    "start": 44.03958333333334,
+    "end": 45.03958333333334,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/13-原曲.wav",
+        "sha256": "b754d5654e4b38bea8d69517f16a6b7f35a7de54b2c49bb25d1e531275f9b4c1",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/13-Demucs.wav",
+        "sha256": "29bf8817383b5c6c7fc73cd7945cd7a3ce86522502641c2e24b78a1e84a400ba",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/13-ft.wav",
+        "sha256": "84faf44c873029979cd4d6d910bde2c084c6a5b928db07a7ff805b85dd5aae2b",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/13-SW.wav",
+        "sha256": "950a1faec5684ff69544e5caa09f6bc2b0a5e16a75a3a358345454146f4901c8",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 13,
+    "pitch": 31,
+    "time": 44.880208333333336,
+    "start": 44.48020833333334,
+    "end": 45.48020833333334,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/14-原曲.wav",
+        "sha256": "bfd51f0f41c3c04fc51a5b84f4f507db48e2ce709cc7a7656d4201701f206f05",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/14-Demucs.wav",
+        "sha256": "de93e0edcccb6944387f84787c14ddc3c59c4834456a0f0e16ddb798bdd5e666",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/14-ft.wav",
+        "sha256": "591e626d3bf843b221632bb5a5ce3274160ed6c31da742ab1f977276a5c0a560",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/14-SW.wav",
+        "sha256": "a54cb9680a3c09a776366922b60e4d2bd7a29a6bc166c1af0e30c02a402d5435",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 22,
+    "pitch": 30,
+    "time": 49.915625,
+    "start": 49.515625,
+    "end": 50.515625,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/15-原曲.wav",
+        "sha256": "9ac991a5638a1bb7d1ece8b41644f90fa02d73a78971feb3dd07f11f7dd70e10",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/15-Demucs.wav",
+        "sha256": "2d325bc32887c498d7e598ae400bc8cf4cfb0e76675d82aecb0910e33fd59a55",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/15-ft.wav",
+        "sha256": "49048260315c5469bd91131fb1f05caaca17b18dd505d365ece80b353a8aede6",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/15-SW.wav",
+        "sha256": "b8f8940caf785c348dc988357e4a3c181477c84cb0f6679a9c208a168286d0fe",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 28,
+    "pitch": 38,
+    "time": 54.45625,
+    "start": 54.05625,
+    "end": 55.05625,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/16-原曲.wav",
+        "sha256": "2555e05c4a6520d26628b586361b397d6f5c5e652446b8bacb0e1befe807cc56",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/16-Demucs.wav",
+        "sha256": "2a7fa24ebf4d1ee93665ac72b1aae454de8aa99014a518f6269ea4ce8e338485",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/16-ft.wav",
+        "sha256": "898aaece513b8bdbd81a6b28932fe3747d49d005a43d37cc5b4dbe8f0e295c75",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/16-SW.wav",
+        "sha256": "cb4cd65faf93bb01cfd408fe0c2942ee68326ff7197c5dff6f222a3c65c80215",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "baseline_FP",
+    "index": 30,
+    "pitch": 40,
+    "time": 55.23645833333333,
+    "start": 54.83645833333333,
+    "end": 55.83645833333333,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/17-原曲.wav",
+        "sha256": "93b68ccfcf23b19cdc7b54525d0afe32991b11825aa97857c11f3701446d1c1f",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/17-Demucs.wav",
+        "sha256": "5c1984aa60623eb548a654955d4fdb6f3ead41ff5ac19361c0bfd033c856c4e7",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/17-ft.wav",
+        "sha256": "117833e99a7123750ce4c2597d5f524247f33190102477db6e949aa8e8cf00ca",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/17-SW.wav",
+        "sha256": "b426d4f4c95f73d41a77f7deed904b1ba7f3e0f9bb880b8d9eefa29b7e66ac6c",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "added_or_moved",
+    "index": 6,
+    "pitch": 43,
+    "time": 12.028125,
+    "start": 11.628124999999999,
+    "end": 12.628124999999999,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/18-原曲.wav",
+        "sha256": "a7a641dd5be0a0d874cdc610fca0b66ac8b0a6d5be8d3ae6fe46389114a8f83e",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/18-Demucs.wav",
+        "sha256": "6315db1db1b0e4f1d89f4cecfd25bac579915cfddcbaa3b8dd7e05cd5ff52ce0",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/18-ft.wav",
+        "sha256": "932545b9524ae6fbbdb67297825b4f142c42757092ac4393cd767ba968e80e92",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/18-SW.wav",
+        "sha256": "f43b70536f96c5f522659a20645bd012872b2dae793faf004f9bc8a59b8f921e",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "added_or_moved",
+    "index": 8,
+    "pitch": 29,
+    "time": 41.771875,
+    "start": 41.371875,
+    "end": 42.371875,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/19-原曲.wav",
+        "sha256": "77a301f2d2bbb8eeb196a63dbaa307775d81951bf37c98154384a37617f3a95f",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/19-Demucs.wav",
+        "sha256": "b04030cac27aa3a7df9464ebd01d5d96542d18091b84f89fe29fb39331ec0c5b",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/19-ft.wav",
+        "sha256": "20fceda5530a894fe8298242f92befdca4b6c2dce5d5a40a829c57a1b0f99dc3",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/19-SW.wav",
+        "sha256": "9ef676a257ebd46f09d3b2b678198ea9a1b87ef2f539cf88ff400774785897d2",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  },
+  {
+    "kind": "added_or_moved",
+    "index": 30,
+    "pitch": 38,
+    "time": 53.64791666666667,
+    "start": 53.24791666666667,
+    "end": 54.24791666666667,
+    "files": [
+      {
+        "path": "outputs/runs/bass-sequence/clips/20-原曲.wav",
+        "sha256": "14e3c8e28d741189c01c60d07e9c24a6492e8d0113d33e188ca59875ecd7f571",
+        "source": "/Users/ringscherry/Desktop/吉他产品/v0.0/test/李荣浩 - 不将就-[AudioTrimmer.com].mp3",
+        "source_sha256": "6da0f0ec87ee0b37d83d1c8fc2aa8f89dec1cb38b5c1926484317ac91c5bab98"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/20-Demucs.wav",
+        "sha256": "4b4f0fb3ac8d8716d4b4d7308a99a674983c70020a2810ce761a548336a3a5d9",
+        "source": "work/new/stems/htdemucs_6s/李荣浩 - 不将就-[AudioTrimmer.com]/bass.wav",
+        "source_sha256": "0f86641cb8082d2c50922d84e359084a36cc8cf836ef0696e79b617966ab9af1"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/20-ft.wav",
+        "sha256": "c4e6bb31957deeb596eeaf12e964123bab5ee14bbf8deb544bb6f629b44f7401",
+        "source": "work/bass-models/ft-bass.wav",
+        "source_sha256": "adc3f8b6a5ff07b35578b603270531ccff0242ded34fd66cf73355948cdb9d7a"
+      },
+      {
+        "path": "outputs/runs/bass-sequence/clips/20-SW.wav",
+        "sha256": "b52dfcb6bce5170d5226b056c620bd892478f61a76dd53620cfdff0b923e8013",
+        "source": "work/two-methods/sw-full/bass.wav",
+        "source_sha256": "d98a6866f9933d3fef988ba37cb2811348675989b8dfdcbe3a3067aeabf510cb"
+      }
+    ]
+  }
+]

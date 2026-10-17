@@ -1,0 +1,47 @@
+{
+  "phase": 4,
+  "registration_sha256": "998fced489ec0dd254ebfe672138886da2b9721fac8739e58c1a0a3a82e802e7",
+  "generator_sha256": "0f3279ebc97a44781b1e983acd177318ddb78ac3b5ffa11bff60eb7e3a3c2010",
+  "common_sha256": "c7ff38c73e86967a8a191373affeef4c1d2f426847bb277b71dbc4e10d487e3d",
+  "implementation_sha256": "57efb9bca69281cab6e343016d07c87095572dd4374fa016ddb7f84ef3633a8d",
+  "rows": [
+    {
+      "id": "D75",
+      "recipe": {
+        "source": "demucs",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/D75.json",
+      "provenance_sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d",
+      "predicted": 36
+    },
+    {
+      "id": "W64",
+      "recipe": {
+        "id": "W64",
+        "minimum_run_seconds": 0.064,
+        "parent": "D75"
+      },
+      "path": "outputs/runs/bass-sequence/phase4/W64.mid",
+      "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768",
+      "provenance_path": "outputs/runs/bass-sequence/phase4/W64.json",
+      "provenance_sha256": "7af99b62b31f4bbea596e645fa1713a60118424aa4c7a0602f8cf0b38d01969e",
+      "predicted": 39
+    },
+    {
+      "id": "W48",
+      "recipe": {
+        "id": "W48",
+        "minimum_run_seconds": 0.048,
+        "parent": "D75"
+      },
+      "path": "outputs/runs/bass-sequence/phase4/W48.mid",
+      "sha256": "b279cbdc9e50e6a31837c05f52d58b8220436b37762ebd9e4df120a6c14148f9",
+      "provenance_path": "outputs/runs/bass-sequence/phase4/W48.json",
+      "provenance_sha256": "ef76bd78d5d77ce6213834057b3fd65cb6791602e3722a4966fb1b72cf5b9d02",
+      "predicted": 42
+    }
+  ]
+}

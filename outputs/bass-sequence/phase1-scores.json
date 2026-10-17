@@ -1,0 +1,451 @@
+{
+  "phase": 1,
+  "rows": [
+    {
+      "id": "D75",
+      "recipe": {
+        "source": "demucs",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+      "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/D75.json",
+      "provenance_sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d",
+      "predicted": 36,
+      "matched": 27,
+      "reference": 36,
+      "extra": 9,
+      "missed": 9,
+      "f1": 0.75,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          21
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          35,
+          35
+        ]
+      ]
+    },
+    {
+      "id": "FT75",
+      "recipe": {
+        "source": "ft",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/FT75.mid",
+      "sha256": "2697d39be3cbefedd3c9aeb10d4486d7bde5168e1d20fcec5d936dcfbd9527bc",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/FT75.json",
+      "provenance_sha256": "041d946da87c927441706c14f662c8462569fc0ed996ae3dcd5d4166ef6f26a7",
+      "predicted": 34,
+      "matched": 25,
+      "reference": 36,
+      "extra": 9,
+      "missed": 11,
+      "f1": 0.7142857142857143,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        31,
+        32,
+        33,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          17,
+          16
+        ],
+        [
+          18,
+          17
+        ],
+        [
+          20,
+          18
+        ],
+        [
+          21,
+          19
+        ],
+        [
+          22,
+          20
+        ],
+        [
+          23,
+          21
+        ],
+        [
+          24,
+          22
+        ],
+        [
+          25,
+          23
+        ],
+        [
+          27,
+          25
+        ],
+        [
+          28,
+          26
+        ],
+        [
+          31,
+          29
+        ],
+        [
+          32,
+          30
+        ],
+        [
+          33,
+          31
+        ],
+        [
+          35,
+          33
+        ]
+      ]
+    },
+    {
+      "id": "SW75",
+      "recipe": {
+        "source": "sw",
+        "method": "full frozen75 recipe"
+      },
+      "path": "outputs/runs/bass-sequence/phase1/SW75.mid",
+      "sha256": "231691c175f6c083679dd4849f38a0e2ceffb0c3acbfa4da64c9236ae3d4b92a",
+      "provenance_path": "outputs/runs/bass-sequence/phase1/SW75.json",
+      "provenance_sha256": "9ac055d294ff5803ce3cfff4cf9e6841884c3f82a578237f9c4a5ee19efead3f",
+      "predicted": 33,
+      "matched": 24,
+      "reference": 36,
+      "extra": 9,
+      "missed": 12,
+      "f1": 0.6956521739130435,
+      "matched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        22,
+        23,
+        24,
+        27,
+        28,
+        29,
+        31,
+        32,
+        34,
+        35
+      ],
+      "matched_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          22,
+          20
+        ],
+        [
+          23,
+          22
+        ],
+        [
+          24,
+          23
+        ],
+        [
+          27,
+          25
+        ],
+        [
+          28,
+          26
+        ],
+        [
+          29,
+          27
+        ],
+        [
+          31,
+          28
+        ],
+        [
+          32,
+          30
+        ],
+        [
+          34,
+          31
+        ],
+        [
+          35,
+          32
+        ]
+      ]
+    }
+  ],
+  "selected": "D75",
+  "ledger_sha256": "8a105debe6ad21700dbe8e6098a3dc0dcd3ba3f3c2009cc9a5a0170be14b5109",
+  "evaluation": "same-pitch50ms max one-to-one; .9995/.14 fixed; seen development arrangement"
+}

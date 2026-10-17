@@ -1,0 +1,15 @@
+{
+  "row": {
+    "id": "W64",
+    "recipe": {
+      "id": "W64",
+      "minimum_run_seconds": 0.064,
+      "parent": "D75"
+    },
+    "path": "outputs/runs/bass-sequence/phase4/W64.mid",
+    "sha256": "b814a70fb738d120f212332a5014c54eb9aa15e0b0ee0461e950a0a5e3048768",
+    "provenance_path": "outputs/runs/bass-sequence/phase4/W64.json",
+    "provenance_sha256": "7af99b62b31f4bbea596e645fa1713a60118424aa4c7a0602f8cf0b38d01969e",
+    "predicted": 39
+  }
+}

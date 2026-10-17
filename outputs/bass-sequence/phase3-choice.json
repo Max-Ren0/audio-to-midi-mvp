@@ -1,0 +1,14 @@
+{
+  "row": {
+    "id": "D75",
+    "recipe": {
+      "source": "demucs",
+      "method": "full frozen75 recipe"
+    },
+    "path": "outputs/runs/bass-sequence/phase1/D75.mid",
+    "sha256": "41e714e58bcec335fa1a32c4947b7be5f58f896c885ff436633b0d9f6c071c3a",
+    "provenance_path": "outputs/runs/bass-sequence/phase1/D75.json",
+    "provenance_sha256": "f352f8578ee227618af6262c7e5f739c048fe5798e084e837ad5bb76f737335d",
+    "predicted": 36
+  }
+}

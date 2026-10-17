@@ -1,0 +1,127 @@
+{
+  "overall": {
+    "matched": 394,
+    "predicted": 533,
+    "reference": 494,
+    "f1": 0.7672833495618305
+  },
+  "per_category": {
+    "piano": {
+      "matched": 268,
+      "predicted": 269,
+      "reference": 269,
+      "f1": 0.9962825278810409
+    },
+    "acoustic_guitar": {
+      "matched": 8,
+      "predicted": 70,
+      "reference": 24,
+      "f1": 0.1702127659574468
+    },
+    "electric_guitar": {
+      "matched": 6,
+      "predicted": 23,
+      "reference": 64,
+      "f1": 0.13793103448275862
+    },
+    "bass": {
+      "matched": 29,
+      "predicted": 39,
+      "reference": 36,
+      "f1": 0.7733333333333333
+    },
+    "drums": {
+      "matched": 80,
+      "predicted": 93,
+      "reference": 94,
+      "f1": 0.8556149732620321
+    },
+    "strings": {
+      "matched": 3,
+      "predicted": 39,
+      "reference": 7,
+      "f1": 0.13043478260869565
+    }
+  },
+  "other_five_tracks_conductor_unchanged": true,
+  "rendered": {
+    "D75": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "FT75": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 26.016728196422537,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "SW75": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.03289337871617,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "F2": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "F1": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio",
+      "same_midi_as": "outputs/runs/bass-sequence/交付/F2-F1-73.17.wav"
+    },
+    "J1": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.54045398719039,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "J2": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.54045398719039,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "J3": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 24.54045398719039,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "W64": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "W48": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 23.930276408900102,
+      "source": "MIDI_only_no_original_audio"
+    },
+    "six_track": {
+      "sample_rate": 44100,
+      "duration_seconds": 61.530204081632654,
+      "soundfont": "GeneralUser-GS.sf2",
+      "gain": 12.390811823322853,
+      "source": "MIDI_only_no_original_audio"
+    }
+  }
+}
