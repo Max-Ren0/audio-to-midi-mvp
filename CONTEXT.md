@@ -381,3 +381,4 @@
 - outputs/strings-diagnostics/含指标/逐音持续覆盖/窗口衔接/报告；outputs/runs/strings-diagnostics/含A/B副本/对齐参考MID+3音源WAV、9源片段（均未人工听辨）。冻结后待独立只读验证与GitHub同步；本轮不宣称弦乐提升或完成新的音乐相似度主验收体系。
 - 32ff5ea冻结后verify_strings_diagnostics独立只读通过：127测试、tmp重建、自写tempo/SciPy严格评分和区间并集持续指标、14逐音覆盖、原始23上行/边界10与15计数、冻结标签/8实现/旧MID、28产物+27源/29ZIP、9重切片/3WAV重渲染一致。无必须修复项；接受表述澄清：12.287625秒当前边界4音55/62/65/67不是参考57/60/65/67，另存独立验证与补充说明.md，不重写冻结包。
 - ZIP119562628229245be0b838c2e386776e13d73a17e3bf8dabcb50d3d5c24e2608；来源清单77de759692d6b89f8fde634e05c057f75dd855a91a92c121b77635a9249a173b。准备安全FF main，发布v0.1.0-strings-diagnostics.1诊断标签（不表示弦乐已提升）；贝斯原tag不移动，后续先补原始token/tie诊断再决定修正。
+- Git同步已实时核验：origin/main、origin/codex/strings-diagnostics、v0.1.0-strings-diagnostics.1均为ee42f0470147842998fefc9fcbc96eba110f3755。安全快进，无force push；媒体/权重/缓存/ZIP留本地。该状态行另作文档提交，不移动既有标签。贝斯继续冻结；弦乐尚未优化，下轮优先原token/tie和跨界长音诊断。
