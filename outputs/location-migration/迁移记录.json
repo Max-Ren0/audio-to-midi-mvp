@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-04",
+  "canonical_product_root": "/Users/ringscherry/Desktop/Codex项目/吉他产品",
+  "repository": "/Users/ringscherry/Desktop/Codex项目/吉他产品/音频转MIDI",
+  "snapshot_commit": "e2d2638",
+  "moves": [
+    {
+      "old": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2",
+      "new": "/Users/ringscherry/Desktop/Codex项目/吉他产品/音频转MIDI",
+      "files_or_links": 63844
+    },
+    {
+      "old": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0",
+      "new": "/Users/ringscherry/Desktop/Codex项目/吉他产品/历史规划/初始需求",
+      "files_or_links": 1
+    },
+    {
+      "old": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-3",
+      "new": "/Users/ringscherry/Desktop/Codex项目/吉他产品/历史规划/初始规划",
+      "files_or_links": 3
+    }
+  ],
+  "moved_files_or_links": 63848,
+  "pre_post_all_content_equal": true,
+  "existing_target_unchanged": true,
+  "local_manifest": "outputs/runs/location-migration/迁移校验.json",
+  "local_manifest_sha256": "ec7600fd064b0a9151d452d7458a96317a97fe1864f4de656fce4f08fe25e1aa",
+  "global_rules": {
+    "path": "/Users/ringscherry/.codex/AGENTS.md",
+    "sha256": "8c1398c293632bd22dd7ad34b72335ff26dc2895852800bb3c735623804654f5"
+  },
+  "product_guide": {
+    "path": "/Users/ringscherry/Desktop/Codex项目/吉他产品/项目目录说明.md",
+    "sha256": "a94a98050e3ff21bedaee2971085d9b62988b563f81f530bf1b60f3c3a679b0b"
+  },
+  "checks": [
+    "135 tests passed after move",
+    "strings 4matrix+8post+2shift no-forward reconstruction passed after move",
+    "historical paths resolve via symlinks"
+  ],
+  "limits": [
+    "not a new model release",
+    "large manifests and models stay local",
+    "global rule and product-level guide outside repository are bound by hashes",
+    "historical absolute paths retained via compatibility links"
+  ]
+}

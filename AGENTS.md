@@ -25,3 +25,8 @@
 
 ## Current target override (2026-10-15)
 - Ignore vocals from now on. Default target and acceptance cover piano, acoustic guitar, electric guitar, bass, drums, and strings. Input may contain vocals; vocal output is not required. Preserve historical artifacts.
+
+## Canonical project location
+- All project files belong under `/Users/ringscherry/Desktop/Codex项目/吉他产品/`. Repository: `音频转MIDI/`; original media/product docs: sibling `v0.0/` and Pages files; early planning: sibling `历史规划/`.
+- New projects belong under `/Users/ringscherry/Desktop/Codex项目/<项目名>/`, never in date-based project folders.
+- Old date-based paths are compatibility symlinks only. Preserve historical manifests/hashes; do not rewrite frozen artifacts solely to replace paths.

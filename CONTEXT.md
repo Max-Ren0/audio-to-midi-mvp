@@ -1,8 +1,9 @@
 # CONTEXT.md
 
-最后更新：2026-10-15（Asia/Taipei）
+最后更新：2026-11-04（Asia/Taipei；目录迁移）
 
 ## 当前目标
+- 目录要求（2026-11-04）：项目统一集中 `/Users/ringscherry/Desktop/Codex项目/吉他产品/`，仓库 `音频转MIDI/`。当前实际开发阶段与冻结结果以文末2026-10-17记录为准，早期七轨目标已被忽略人声的六轨目标取代。
 - 质量纠正：用户试听后明确反馈现有MIDI无法辨认歌曲、质量太差；当前实验在可用性上失败，不能仅凭工程跑通继续扩建。
 - 基于 outputs/v0.0-spec.md 构建MP3≤180秒到七类多轨MIDI的v0.0；先交付可运行实验版，音乐质量达标后才发布正式v0.0.0。
 
@@ -393,3 +394,10 @@
 - 4次rawtoken/tie捕获126.905秒/最高2.57GB，未偏移复现39/595原音符与错误计数。other10边界仅3跟随半块，mix5中0；缺tie闭合机制确认但不能证明解析bug/正确延音。a8241e3在比较前登记有条件重叠，均未阳性，实际未采用重叠。最终14ID/9不同MID。待最终检查、冻结、独立只读审查和GitHub同步。
 - 24fd0db冻结后verify_strings_bounded独立只读通过：135测试、临时重建、自写MIDI时间/SciPy复算14ID、4原token重新detokenize+独立事件配对、边界10中3/5中0、131产物/132ZIP、10种MID重渲染/9源片段重切一致；冻结贝斯/六轨/8实现/旧弦乐不变，无必须修复项。主agent接受，不改冻结包；审查记录outputs/strings-bounded/独立验证.md。ZIP7a8c7f0a14c8534f2414c571918858352f0ba452e662799ac01478957bb089c9，清单160cb3b224be6a0cfc0910e471693ed565958ad103819000c4221214f94192e0。准备同步诊断标签v0.1.0-strings-bounded.1；只有探索A-M，无新默认，7音/未人工听辨等限制保留。
 - Git同步已实时确认：origin/main、origin/codex/strings-bounded-optimization和v0.1.0-strings-bounded.1解析提交均为ac05d9cf5176eb5ce7b8f305882a3b2413220043。安全快进，无force push；本状态另存文档提交，不移动已发布标签，媒体/模型/缓存/ZIP留本地。下一步可研究持续多音转写，当前不自动扩样本或新模型。
+
+## 2026-11-04：集中项目文件，取消按日期存放
+- 用户明确要求所有MIDI项目文件集中 `/Users/ringscherry/Desktop/Codex项目/吉他产品/`；以后所有新项目按项目名放 `/Users/ringscherry/Desktop/Codex项目/`，不按日期建项目目录。
+- e2d2638快照后，将7.1GB主仓库整体移到 `音频转MIDI/`；两份早期规划移到同级 `历史规划/初始需求` 与 `历史规划/初始规划`。原产品文档及v0.0输入素材原样保留。迁移前后63848文件/链接校验一致，原目标997文件/链接未改。
+- 原Desktop/Codex日期目录、Documents/Codex旧仓库路径和Desktop/吉他产品只保留兼容symlink，实际数据不重复；防止虚拟环境、冻结账本、绝对素材路径失效，不改历史SHA或模型算法。
+- 全局~/.codex/AGENTS.md已更新项目默认目录，原规则备份在outputs/runs/location-migration/全局AGENTS迁移前.md；逐文件校验记录在同目录迁移校验.json（本地，不上传批量明细）。父目录项目目录说明.md为入口。待迁移后测试、冻结与独立验证。
+- 迁移后在新路径实跑135项测试全部通过；4格+8后处理+2偏移控制临时重建一致，冻结保护通过。outputs/location-migration/迁移记录.json绑定本地大清单、全局规则和父目录入口文件SHA；无模型、MIDI和算法变更。待冻结后独立只读验证。

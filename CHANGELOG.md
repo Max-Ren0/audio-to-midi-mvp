@@ -204,3 +204,8 @@
 - On this seven-note development excerpt only, exploratory A-M removes/merges 15 events (39→24), preserves three onset matches and changes onset F1 from13.04% to19.35%; missing high notes remain. No strings default or six-track replacement.
 - All four raw captures completed; only3/10 other boundary notes follow the shifted grid,0/5 mix, so conditional overlap was not run. Preserve all negative results and disclose supplemental preregistration timing.
 - 135 tests pass; no-forward temporary reconstruction checks MIDI/evidence/scores. Local media/bundle stay outside Git. Independent verification recorded separately before release.
+
+## 2026-11-04 — Consolidate project location
+- Move the repository, local model/runtime assets and outputs into Desktop/Codex项目/吉他产品/音频转MIDI; archive two early planning folders under the same product directory.
+- Verify every file/link before and after moving and preserve existing product files. Keep old absolute paths as compatibility symlinks without duplicating data or changing frozen media/model hashes.
+- Persist project-based, non-date directory preference in global/project AGENTS and add a product-directory entry guide. No model or musical-output changes.
