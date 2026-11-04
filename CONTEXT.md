@@ -409,3 +409,4 @@
 - 修复主环境及分离环境bin启动脚本与主editable pth中的旧仓库路径，原字节备份outputs/runs/location-cleanup/environment-backup，清单outputs/location-migration/旧链接清理.json；模型/MIDI/冻结源码不改。
 - 历史账本与报告保留原SHA/旧来源文字；部分归档实验脚本含旧绝对输入路径，重新运行前仍需适配，不能声称删除后历史脚本均自动可用。当前运行环境和CLI将单独验证。
 - 删除后直接从新目录运行pytest启动器：135测试通过；audio-midi --help正常；5旧链接均不存在而所有目标目录存在，64环境文件及其备份SHA匹配，冻结贝斯/六轨/实现保护通过。准备冻结并独立核验。
+- 独立核验发现2个activate.bat在文本路径替换时CRLF被转换LF；已从备份按字节仅替换前缀，恢复原换行并更新SHA。其余62文件为严格前缀替换，5旧链接/目标/冻结保护/import/CLI检查通过，修复后仅复核受影响文件。
