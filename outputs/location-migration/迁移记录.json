@@ -45,5 +45,6 @@
     "historical absolute paths retained via compatibility links",
     "Original target 997 file/link inventory was compared in memory before/after and passed, but was not persisted; independent verifier cannot retrospectively recompute this check from a saved pre-move baseline."
   ],
-  "migration_script_local": "/tmp/consolidate_midi_project.py"
+  "migration_script_local": "outputs/runs/location-migration/迁移执行脚本.py",
+  "migration_script_sha256": "09bdac12a531d238448013a3fbca09f79c32feb7356e864ebd1d0528e95887fe"
 }
