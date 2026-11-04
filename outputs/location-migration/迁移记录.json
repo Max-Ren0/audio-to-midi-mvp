@@ -42,6 +42,8 @@
     "not a new model release",
     "large manifests and models stay local",
     "global rule and product-level guide outside repository are bound by hashes",
-    "historical absolute paths retained via compatibility links"
-  ]
+    "historical absolute paths retained via compatibility links",
+    "Original target 997 file/link inventory was compared in memory before/after and passed, but was not persisted; independent verifier cannot retrospectively recompute this check from a saved pre-move baseline."
+  ],
+  "migration_script_local": "/tmp/consolidate_midi_project.py"
 }
