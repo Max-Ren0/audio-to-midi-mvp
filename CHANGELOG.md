@@ -209,3 +209,7 @@
 - Move the repository, local model/runtime assets and outputs into Desktop/Codex项目/吉他产品/音频转MIDI; archive two early planning folders under the same product directory.
 - Verify every file/link before and after moving and preserve existing product files. Keep old absolute paths as compatibility symlinks without duplicating data or changing frozen media/model hashes.
 - Persist project-based, non-date directory preference in global/project AGENTS and add a product-directory entry guide. No model or musical-output changes.
+
+## 2026-11-04 — Remove obsolete location symlinks
+- Remove only five explicitly confirmed legacy symlinks; preserve all canonical project directories.
+- Repair local virtualenv launchers/editable path with rollback copies, keeping frozen model/media content unchanged. Historical experiment scripts containing old absolute inputs require adaptation before reuse.

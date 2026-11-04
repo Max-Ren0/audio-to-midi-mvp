@@ -29,4 +29,4 @@
 ## Canonical project location
 - All project files belong under `/Users/ringscherry/Desktop/Codex项目/吉他产品/`. Repository: `音频转MIDI/`; original media/product docs: sibling `v0.0/` and Pages files; early planning: sibling `历史规划/`.
 - New projects belong under `/Users/ringscherry/Desktop/Codex项目/<项目名>/`, never in date-based project folders.
-- Old date-based paths are compatibility symlinks only. Preserve historical manifests/hashes; do not rewrite frozen artifacts solely to replace paths.
+- Obsolete date-based and Desktop/吉他产品 compatibility symlinks were removed at the user’s explicit request. Use canonical paths only. Preserve historical manifests/hashes; archived experiment scripts with old absolute input paths require path adaptation before reuse.

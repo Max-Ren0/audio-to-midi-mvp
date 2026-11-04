@@ -1,0 +1,421 @@
+{
+  "removed_links": [
+    {
+      "path": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0",
+      "target": "/Users/ringscherry/Desktop/Codex项目/吉他产品/历史规划/初始需求"
+    },
+    {
+      "path": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2",
+      "target": "/Users/ringscherry/Desktop/Codex项目/吉他产品/音频转MIDI"
+    },
+    {
+      "path": "/Users/ringscherry/Desktop/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-3",
+      "target": "/Users/ringscherry/Desktop/Codex项目/吉他产品/历史规划/初始规划"
+    },
+    {
+      "path": "/Users/ringscherry/Documents/Codex/2026-10-15/v0-0-lingpu-cn-v0-0-2",
+      "target": "/Users/ringscherry/Desktop/Codex项目/吉他产品/音频转MIDI"
+    },
+    {
+      "path": "/Users/ringscherry/Desktop/吉他产品",
+      "target": "/Users/ringscherry/Desktop/Codex项目/吉他产品"
+    }
+  ],
+  "environment_changes": [
+    {
+      "path": ".venv/bin/activate.bat",
+      "before_sha256": "9004bc5b00b609fe9fc67b85730de0c59028602e5a1204d1ca5e7317fe8850a8",
+      "after_sha256": "8e849b4c8bc49bd1a4f0c4f6310724d173b3b7c658475160f90da1e5f888b03e",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/activate.bat"
+    },
+    {
+      "path": ".venv/bin/onnxruntime_test",
+      "before_sha256": "5a2802fdc684df64fde99a9b093f09b242c6c48bdef1bca9276b6a2d22bae307",
+      "after_sha256": "777c9d3bff7052996457602094737bddf125f9b7aa0a6793147c2485e1c59feb",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/onnxruntime_test"
+    },
+    {
+      "path": ".venv/bin/bp-download",
+      "before_sha256": "e52a7ccacdd552aed2375d96a60ceeec555b26a05d4694df9728d896eb520711",
+      "after_sha256": "a0585e8f327015cf7d2f4267e1e38496454354ef3380154302bc0b1c7df48dc0",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/bp-download"
+    },
+    {
+      "path": ".venv/bin/pytest",
+      "before_sha256": "f15a8381f7aa71ea436c40d5dfc51b743ea1ed58b72f455e05ae06ec963d112a",
+      "after_sha256": "12b6b7096ce7c312b7fca1932f2400fefea1ddef7b5a50f463ba7e9638819eee",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/pytest"
+    },
+    {
+      "path": ".venv/bin/transformers-cli",
+      "before_sha256": "37bebec3b8d23c6c6da782aceb0fbd74b4f1d08c363db929cb7f6c161698e19e",
+      "after_sha256": "94846ef52e1178cbbf5a68ab9ad958571626708531d827caf555aa7c1878f342",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/transformers-cli"
+    },
+    {
+      "path": ".venv/bin/activate.fish",
+      "before_sha256": "ae4135bf99e42addcb59e2ef7c9979c17c7f0debad80c0c86135c06abfaeb75e",
+      "after_sha256": "9f7d94c6d8101bf7f10331626cb898542d2ded037b88983a702b670a392e7c51",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/activate.fish"
+    },
+    {
+      "path": ".venv/bin/tiny-agents",
+      "before_sha256": "5d302ec50db4fbf2945819f6bc8c9647a5bc0c18c2ee577b411c9e98266a9b21",
+      "after_sha256": "d6ea8cd927314e384b46087bdb7d8b916dba867742e9fcc97168ffd6d4997984",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/tiny-agents"
+    },
+    {
+      "path": ".venv/bin/isympy",
+      "before_sha256": "0419b8ea7a9dd1a41e39e6df57a39e0a94a4d3043674cda6ae694cab2ff53627",
+      "after_sha256": "9ce00b51f4f3b63f1c4b11ea3887d3c39e8af601f3959b58aca8de1f66d4dcb1",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/isympy"
+    },
+    {
+      "path": ".venv/bin/torchrun",
+      "before_sha256": "899d751de96cdbb157864cd85586cb30499716ba5a40d3c87834ae5900c6faf1",
+      "after_sha256": "91507f0e858f4a89199774d600125f9b4d08362aa436d9c94b9f4e00fc78f857",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/torchrun"
+    },
+    {
+      "path": ".venv/bin/idna",
+      "before_sha256": "0f758b6c60bb5cc72b1a9e8c08106980753a6e54e09c4664b659bf0e600c9f58",
+      "after_sha256": "12ba9bb78700a224e72919d389c7c805d6c2d99f1eafeedf3f6300e70e317d86",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/idna"
+    },
+    {
+      "path": ".venv/bin/audio-midi",
+      "before_sha256": "14f9f2229eb32e2e681b25c0efd02727437e64075e11ab80af7b88372e42920b",
+      "after_sha256": "621ce882a9935a1eb9c771f8cb8a29e6bd532b298f5691e0eafd02c41c753a57",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/audio-midi"
+    },
+    {
+      "path": ".venv/bin/mido-ports",
+      "before_sha256": "d53b556c4a906cdb073f1fc0601d61616408147705ca7d1ef9b95cfd811d4329",
+      "after_sha256": "bd7d11722937ddb4e3f1f87e2e944900998003034a4d3bbca5a540c7498c7b93",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/mido-ports"
+    },
+    {
+      "path": ".venv/bin/f2py",
+      "before_sha256": "feb23fe16f2af12f48e47fd6e8cfb30eafd068b9760a7dd0063240d9968cdde7",
+      "after_sha256": "c4db0643b417cd20994d1709cf10b6c6b2ff30dbeb324802865944874634843d",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/f2py"
+    },
+    {
+      "path": ".venv/bin/tqdm",
+      "before_sha256": "75d1fbac35807b799c01947c90793d6e4eb41ab0e43262a49d2e0803e2e84c07",
+      "after_sha256": "7b987796fa17333aa36881e76725dd8d8e266d33b4c04bf54efe0a589fdee28b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/tqdm"
+    },
+    {
+      "path": ".venv/bin/huggingface-cli",
+      "before_sha256": "b188cac2a0812895fc8a5d5fff8829b786b871dd37348141f926c22c3fc786a3",
+      "after_sha256": "e26ee1d327c6fb162c6bcdc7dbd3a507e8d49f3093bbf80c7c333b8394863704",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/huggingface-cli"
+    },
+    {
+      "path": ".venv/bin/pygmentize",
+      "before_sha256": "44285e56f5f99560780c849215b9759d6363878cd04d99ceff4edafb5e6fe4dc",
+      "after_sha256": "124145f98f03218091bc7afc8fac4df080b364b520e211bdada71de1e620cef4",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/pygmentize"
+    },
+    {
+      "path": ".venv/bin/hf",
+      "before_sha256": "13dc0a61de33dd863e1e28a806b1f28f28ca6e7363fa5467089ecd2e93d38519",
+      "after_sha256": "f8634a0308ea680a06df37e973d36c14abc49929285156e8842a6efb9a1445ad",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/hf"
+    },
+    {
+      "path": ".venv/bin/cffi-gen-src",
+      "before_sha256": "7b3d305744a2b34be8db5ab1cd96894c90c9207346d52732c2c607da57288f71",
+      "after_sha256": "fcf24309c3048e3750c3ab0fdaafdb24cc1a957a264867f04dff4b579616413f",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/cffi-gen-src"
+    },
+    {
+      "path": ".venv/bin/mido-serve",
+      "before_sha256": "37cb0e33161f166ad4815bd9325333c1f818e52d6d4064e155090eed85c19a00",
+      "after_sha256": "114434839b6792fdd9c2f18b1a67d52d20556ee61704bb598cd688922364dc4d",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/mido-serve"
+    },
+    {
+      "path": ".venv/bin/mido-connect",
+      "before_sha256": "a8e532c838fe17731f1b730c4a0e2bf4adb81175d526a64fa0d4e836d9f4ed24",
+      "after_sha256": "726fe21344d0b5cada5126cdb57d0de6d2506632d057a8983192dc16b475ca4c",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/mido-connect"
+    },
+    {
+      "path": ".venv/bin/torchfrtrace",
+      "before_sha256": "d5b816f4e1114772918d5f496a50127ff59b45d89bb79b6d6189b866b31a9ad5",
+      "after_sha256": "dccd89d2767969a57f3fa32547be31fe0fc96fc7dd0cb189526b558221c28b26",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/torchfrtrace"
+    },
+    {
+      "path": ".venv/bin/mt3-infer",
+      "before_sha256": "23f379c3095f3259893a2aa1302b6b36bbd74f1df75b4f980da5a232446fc503",
+      "after_sha256": "7fb0dff9741ab38cb467ab146af62529081b4cf2803b6f5cbfa83656232a498a",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/mt3-infer"
+    },
+    {
+      "path": ".venv/bin/numba",
+      "before_sha256": "70affffef651207431cc0f2e7174ff86b503cc9cba6e7808230edd2f0f5c1556",
+      "after_sha256": "10de6361e310a354e659328bc1ee69126ffb83a3a25ba27c52c83e75f7764192",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/numba"
+    },
+    {
+      "path": ".venv/bin/activate",
+      "before_sha256": "398aedfe9f4c350b73137abac08edbdf9da3bee0eb9d9cb09c5ea9d5ed57d807",
+      "after_sha256": "fc2c44522ce0f8c7bac34c7241a36a44a88da3f60a8743cee66de72b2b319c99",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/activate"
+    },
+    {
+      "path": ".venv/bin/activate.nu",
+      "before_sha256": "e539a247afee9806f0ff3c7792da575ea200249a92e36d1c46e34d8c48039b29",
+      "after_sha256": "e1a01081753d5c886be54fb9d75e16007f2019fcca38ae9d38c4b3683ea81468",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/activate.nu"
+    },
+    {
+      "path": ".venv/bin/normalizer",
+      "before_sha256": "1ba7b69eb369613d5431637e0b0694af994b4acff5e4a0871e167900a9bb5c63",
+      "after_sha256": "6b7bdf2ff28f902541482114753f3c3adbc83099333ecfe0c264ec2238d8461f",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/normalizer"
+    },
+    {
+      "path": ".venv/bin/numpy-config",
+      "before_sha256": "f246f6ae405faaf98b043d4e3b582929350d1282416c73fa6da3c923e6c069b1",
+      "after_sha256": "60a6e4c35b3eb4c47f6ac624813c25c273f8835fcbcc771807ca95941e1082c1",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/numpy-config"
+    },
+    {
+      "path": ".venv/bin/py.test",
+      "before_sha256": "f15a8381f7aa71ea436c40d5dfc51b743ea1ed58b72f455e05ae06ec963d112a",
+      "after_sha256": "12b6b7096ce7c312b7fca1932f2400fefea1ddef7b5a50f463ba7e9638819eee",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/py.test"
+    },
+    {
+      "path": ".venv/bin/mido-play",
+      "before_sha256": "eca80672dbb86efa25f83bb0da143b7989301c95887b33f930e932391ed5e2d5",
+      "after_sha256": "d0cd1a5f88a8bff069b3d66f48fd3961db428d9f5197c579b539d6b64094dbcf",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/mido-play"
+    },
+    {
+      "path": ".venv/bin/basic-pitch",
+      "before_sha256": "d020f772c85a686781f6d7335bdf3ac19892033e65fb4fd80fa8848ddd6123f2",
+      "after_sha256": "a7f102dfdb9789fc4f296c4f2901e3ce323cd1b47e2aae2c33d3a7c087f9cb57",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/basic-pitch"
+    },
+    {
+      "path": ".venv/bin/activate.csh",
+      "before_sha256": "9864d2e9c8a0ab2d3c43837db0aac46af12263e2a682b4226a461d73f9e31ca9",
+      "after_sha256": "75bd1900446a8b527a37d42a054dabc269bba1c20c9792d4fff5367ff480a88d",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/bin/activate.csh"
+    },
+    {
+      "path": "work/sep-env/bin/activate.bat",
+      "before_sha256": "59bacc5897dc8f0717b3a5c20fbf8e259d77e121153e1c529bd805cf697ba669",
+      "after_sha256": "80015f51d34c3e25dfce4ae8cf024c9250d250e3c06137b2a77afc8674e6ee59",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/activate.bat"
+    },
+    {
+      "path": "work/sep-env/bin/adtof",
+      "before_sha256": "3321ec19edad0ab68d8d5713c53be6413564f5cde07e92935c78f1736a227a9b",
+      "after_sha256": "1c94205c76206082a6a94465dc54dcd50a98fe18b717e6f0ba5a196549125f0b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/adtof"
+    },
+    {
+      "path": "work/sep-env/bin/pyftsubset",
+      "before_sha256": "0e52e1f82d1f63b05639d6cd34dfd6960395d6c570d037612f46a4c7f44a8f40",
+      "after_sha256": "4bb33f550f6660933b3a5c9ed8bc3b2728a3eb96b696307ce4c10016c6d9d311",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/pyftsubset"
+    },
+    {
+      "path": "work/sep-env/bin/markdown_py",
+      "before_sha256": "3f236fd6ceb79243c40a53d319a4dd11c99834573fbc42ffde9eaa3f8f37ddf2",
+      "after_sha256": "c2f2e7eefa8890bb8fe89b84335de519bc9953cd733a03cadc4717d02f1a4655",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/markdown_py"
+    },
+    {
+      "path": "work/sep-env/bin/transkunEval",
+      "before_sha256": "43b928917ea5b5d1ed43bfbdbd17849f52cffbf422249bc85839c78de7284788",
+      "after_sha256": "1f54fed89d9bd0632b0f1e3f5612c0eb92bed15e4c352693aacee88ac02a7a8f",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/transkunEval"
+    },
+    {
+      "path": "work/sep-env/bin/umx",
+      "before_sha256": "205c7b49346b47b6a66cbfc42756f25aa30c836e66233acda2a8498401fd7bc8",
+      "after_sha256": "f539410d947d79c3bdbfaa21b221f5f2d164923bfa2a949d10d43e5a21affb29",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/umx"
+    },
+    {
+      "path": "work/sep-env/bin/ttx",
+      "before_sha256": "02ae2019fc7b944aa3b9d833b2b5c656659dd74883cae525e7c2ecfc467953b2",
+      "after_sha256": "92549830216ef3d84cafd43fe787241dd0609ca5af4f0fc6b7964a4e4415e545",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/ttx"
+    },
+    {
+      "path": "work/sep-env/bin/activate.fish",
+      "before_sha256": "71261bfc5c004e7b58dab25e827997629c60211a3855c79128f4e73ca6c74dbd",
+      "after_sha256": "ab54920c65579476b20e19ec56271f929f49c5b99bcbb02e551a7cf700c9185b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/activate.fish"
+    },
+    {
+      "path": "work/sep-env/bin/dora",
+      "before_sha256": "0e83eb1554f9426159c8305f65e8de08525457c7fcb7ff902a26c5c91dc09188",
+      "after_sha256": "faa93c7d255025f10e1a5f0459a9c41addb4adfff27c320a05a27e0734b6b53a",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/dora"
+    },
+    {
+      "path": "work/sep-env/bin/isympy",
+      "before_sha256": "40c898dfbdaa72ec6cd319c51b577f5f474be277d052859cedeca2ba75eaef94",
+      "after_sha256": "da3b72e3b636f92ec84ffd288c5ceb0c76ebacfdf34d1ece24418fc1d34b192a",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/isympy"
+    },
+    {
+      "path": "work/sep-env/bin/torchrun",
+      "before_sha256": "4acd58b4253dab7eaa066bdf17223bd60661c786bf7b6e2965d86d740c1bd2c1",
+      "after_sha256": "1868685c0ad7768613fc6011407ad31ef4f0bb3edd34421628794d89b7b8f0a9",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/torchrun"
+    },
+    {
+      "path": "work/sep-env/bin/fonttools",
+      "before_sha256": "197904301442b93b93ffbe10f463ee111a2dec535b057cf4840c8f81d60cf379",
+      "after_sha256": "0e74a1cee917f5f56230726407297cd9bbf171c20080c54804600267417ef14c",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/fonttools"
+    },
+    {
+      "path": "work/sep-env/bin/idna",
+      "before_sha256": "e267a9e6e01f747631f7552e2329389e5d80ea3359bb4b72047b30f9c0ef0112",
+      "after_sha256": "9238a86cc76e38d70fa535ce259795bf21b3d25cffc84a8ff07fd33895bbb696",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/idna"
+    },
+    {
+      "path": "work/sep-env/bin/convert-onnx-to-caffe2",
+      "before_sha256": "ed3bdb48a9d5783a6b15ad3654fe0398a9f29569ee11614ddd882da24ea37e96",
+      "after_sha256": "7ba86f10337b436c179513ed2972ccc88e54ec450ce029c8b0cda3bd2aeea55c",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/convert-onnx-to-caffe2"
+    },
+    {
+      "path": "work/sep-env/bin/mido-ports",
+      "before_sha256": "bf44400c19fe3e713ca81107bdd115119d2219046b446c2d13a1b5ede8d08fa7",
+      "after_sha256": "85539c15bff78bf553c411b6506be15f40a546797642d1fbdfa400bf05db9d30",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/mido-ports"
+    },
+    {
+      "path": "work/sep-env/bin/f2py",
+      "before_sha256": "b168d7f888f0848b9e26ce76a0a95d47db3a1483794ae9360838d16a39e3da7d",
+      "after_sha256": "bb7efe7f4fd28c17066f08371972ec7cd467d28cd2ac2b312c1fa299eaf83810",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/f2py"
+    },
+    {
+      "path": "work/sep-env/bin/demucs",
+      "before_sha256": "f3a4ca2c535be9b3b6debd1f62c81f7d6a64cf11a8c35797fa5febacac9dce12",
+      "after_sha256": "3da3e7943be720abc89907695cbc19ca839fcb293cd83c93061ccb3e5d8937eb",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/demucs"
+    },
+    {
+      "path": "work/sep-env/bin/tqdm",
+      "before_sha256": "88acd735db37d233a8ba62705f5f6b54a9868ff9d52fe004b940fde478ba5c69",
+      "after_sha256": "5d96f581d527bc604c12456ad0e0b1c4911b218795f219a372e09a1f12e38d5b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/tqdm"
+    },
+    {
+      "path": "work/sep-env/bin/tensorboard",
+      "before_sha256": "a9c2140febeedbe8ccf4514d721670a016fabb6d6525f33022acf93fc1657b65",
+      "after_sha256": "b684c7b284e4b2d8fff3628c6dd586fb21d32cbe41c7444e46de25ac439b4ff9",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/tensorboard"
+    },
+    {
+      "path": "work/sep-env/bin/cffi-gen-src",
+      "before_sha256": "c705b610cb427333062c2a33d5149e52f9e116efae136c6382ab5f31bada9cfd",
+      "after_sha256": "6ac65b83862f6ad78e14421123b49f17f810983f7db5a08ac1edee544af148c0",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/cffi-gen-src"
+    },
+    {
+      "path": "work/sep-env/bin/mido-serve",
+      "before_sha256": "f2026d2646056936fc703726669471091758e0c12b5117f9498722feef6f3597",
+      "after_sha256": "f42aba119c7c8319c947cfb2201bd0051df212d1e3352129ed7eb0ebd4a6becf",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/mido-serve"
+    },
+    {
+      "path": "work/sep-env/bin/mido-connect",
+      "before_sha256": "d5594f97bdf9ed355e959ef8d100e60ceb27e6e7c07909363cb0ccc49f554f1b",
+      "after_sha256": "6bc72f15b80065971fd9cd9ae070d4f54ddb3ed0a3bb7f6295012703053fd896",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/mido-connect"
+    },
+    {
+      "path": "work/sep-env/bin/torchfrtrace",
+      "before_sha256": "f3d69ce071b9e7ebc0bb2b8ecca2efa84a24a02210679198538fe176a3b4d19c",
+      "after_sha256": "77af65424ba1392e591c9a8b6f10d3b59c3d38e3b94f4fc5487c8b3e8a215767",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/torchfrtrace"
+    },
+    {
+      "path": "work/sep-env/bin/numba",
+      "before_sha256": "91db249e21b67cc2b047d4c9f7f5f8569362d61581b9a09ad601bd61b65a0270",
+      "after_sha256": "47cc257c3c1057299e8e31cd30cda794c66e6022bf3e9d79d32e8974ccb41294",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/numba"
+    },
+    {
+      "path": "work/sep-env/bin/activate",
+      "before_sha256": "5a40a08808a5b997cdee93839480969f93206db723809fdee49585186b737c41",
+      "after_sha256": "4c74180f7e2ca9b51e5faf4247f90718b00c4d57e9bacb6fd8b08825e4cb4fd9",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/activate"
+    },
+    {
+      "path": "work/sep-env/bin/convert-caffe2-to-onnx",
+      "before_sha256": "8b9c878c1afc73ec6a34040081fbda92dd709e0958173512da913a9bfbad2824",
+      "after_sha256": "ef51913ff2a25f8a2c416c6cce358ff2f4cf0e4dc56e1f8b78171530bb21e85b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/convert-caffe2-to-onnx"
+    },
+    {
+      "path": "work/sep-env/bin/activate.nu",
+      "before_sha256": "0da7b580e3e6c2151fea849bc773de50fceae8b6d38e930776a4e7203fd8c092",
+      "after_sha256": "92bd2d4fc97bf193a996da50025f52e037b733d9ae3d3a35eeb3f3c3e576bb46",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/activate.nu"
+    },
+    {
+      "path": "work/sep-env/bin/normalizer",
+      "before_sha256": "2a9f06735fca332cb472e28fba3782769f05fabed6f1d409146d0b891374aeef",
+      "after_sha256": "77e3c3183cf48ff10465774b5e7c621ad0103ffb9dc4cdc39ff5d5bd8d7cb8af",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/normalizer"
+    },
+    {
+      "path": "work/sep-env/bin/transkun",
+      "before_sha256": "dc68a67cada0c4405a7b53c5b3c219054a0b047ef18774dc5721c9f98a6db03e",
+      "after_sha256": "939b053e8d26fad32eb4dcb8f8f79d29ce89cdc7de69f3e54785075c58530c7b",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/transkun"
+    },
+    {
+      "path": "work/sep-env/bin/pyftmerge",
+      "before_sha256": "7bc6605868b7d8fc2632abe9f0da7a9ae7eca45a193a636ad703fdddc369d007",
+      "after_sha256": "71e9b529347320eec1cc6b55a89a38460a87990e02fc1d95c43f17dd0287b16e",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/pyftmerge"
+    },
+    {
+      "path": "work/sep-env/bin/mido-play",
+      "before_sha256": "4cd0b154873cc7639b3ec1f5c0a83da7314f790301394b12ee09b2835cce1bbb",
+      "after_sha256": "c2d5eb329f6d866ea6b6e44e0a551df39572452b0d73601f6876a384e8c4ba90",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/mido-play"
+    },
+    {
+      "path": "work/sep-env/bin/activate.csh",
+      "before_sha256": "6d76bca1662c662a2e3db64ad2a8023ca1cbd1213f41162e882b9a281b218eb5",
+      "after_sha256": "e60adf0d7f4b4f25868cb141c8351be8d73d89d75b20052cd4f752ce4c621858",
+      "backup": "outputs/runs/location-cleanup/environment-backup/work/sep-env/bin/activate.csh"
+    },
+    {
+      "path": ".venv/lib/python3.11/site-packages/_editable_impl_audio_midi_mvp.pth",
+      "before_sha256": "31cf3a07bcb37290b5b67ea487c692f7f0f69a2da43d5d345f4368e2e14f340f",
+      "after_sha256": "6ce20e66f896a08b85b3815ba8030725a94c5459b090db3bbf06803bd6212acd",
+      "backup": "outputs/runs/location-cleanup/environment-backup/.venv/lib/python3.11/site-packages/_editable_impl_audio_midi_mvp.pth"
+    }
+  ],
+  "scope": "unlink only; no recursive directory deletion; no media/model/frozen result edits",
+  "history": "historical source paths stay unchanged; archived experiment scripts with absolute old inputs may need explicit path adaptation before rerunning",
+  "snapshot_commit": "f5dd41a",
+  "canonical_guide_sha256": "b233e47002aceb4c735a6ff839ff0f61ed0a5fbb524b0de780b4f2b69f730e40",
+  "validation": [
+    "135 tests passed using repaired pytest launcher",
+    "audio-midi --help succeeded after removal",
+    "all five aliases absent and all targets present",
+    "all 64 environment backups and resulting files match recorded hashes",
+    "frozen bass/six-track/implementation guards passed"
+  ]
+}
