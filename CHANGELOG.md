@@ -219,3 +219,6 @@
 
 ## 用户 NeuralNote 导出评估（研究）
 - 对用户提供的 MIDI 使用既有六轨参考和严格对齐评分，结果及限制见 outputs/neuralnote-user-eval/结果.md。
+
+## 完整标准 MIDI 评估（研究）
+- 按用户指定的完整标准 MIDI 直接重新评价 1.mid，记录固定对齐、音轨结果和限制；见 outputs/full-reference-eval/结果.md。
