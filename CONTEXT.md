@@ -421,3 +421,4 @@
 ## 2026-11-05：用户导出 NeuralNote MIDI 评估
 - 用户提供 NNTranscription.mid（SHA256 49b63b94db650c6d0fb0f48b0c0f5fcfefa1c352276047069443636598dd5089），只读评估既有0–60音频窗口、六参考、旧对齐与50ms音符匹配，忽略人声；模型版本/设置不明。
 - 严格F1：钢琴0、木吉他5.68、电吉他39.39、贝斯77.61、鼓85.06、弦乐0%；缺钢琴和弦乐轨，119个支持类别的音符在窗口外。输入参考非真值，弦乐7音，未试听，不泛化。本地结果 outputs/runs/neuralnote-user-eval/，说明和评估脚本 outputs/neuralnote-user-eval/；待固定后独立验证。
+- 0297c4d冻结后独立只读核验通过：输入/六参考SHA、mido独立解析及SciPy最大匹配六轨均一致，119个窗口外音符已排除；详 outputs/neuralnote-user-eval/独立验证.md。未试听。
