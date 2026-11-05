@@ -213,3 +213,6 @@
 ## 2026-11-04 — Remove obsolete location symlinks
 - Remove only five explicitly confirmed legacy symlinks; preserve all canonical project directories.
 - Repair local virtualenv launchers/editable path with rollback copies, keeping frozen model/media content unchanged. Historical experiment scripts containing old absolute inputs require adaptation before reuse.
+
+## MuScriptor Medium 同片段对照（研究）
+- 运行自动识别和指定六类乐器两次，与冻结Noto六轨按同一参考与对齐进行比较；结果与限制见 outputs/muscriptor-comparison/结果.md。
