@@ -222,3 +222,6 @@
 
 ## 完整标准 MIDI 评估（研究）
 - 按用户指定的完整标准 MIDI 直接重新评价 1.mid，记录固定对齐、音轨结果和限制；见 outputs/full-reference-eval/结果.md。
+
+## 《唯一》MIDI 对照评估（研究）
+- 对用户测试 MIDI 和指定标准进行起点对齐、六轨比较与限制记录，见 outputs/weiyi-eval/结果.md。
