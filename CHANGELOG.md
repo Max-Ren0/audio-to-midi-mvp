@@ -216,3 +216,6 @@
 
 ## MuScriptor Medium 同片段对照（研究）
 - 运行自动识别和指定六类乐器两次，与冻结Noto六轨按同一参考与对齐进行比较；结果与限制见 outputs/muscriptor-comparison/结果.md。
+
+## 用户 NeuralNote 导出评估（研究）
+- 对用户提供的 MIDI 使用既有六轨参考和严格对齐评分，结果及限制见 outputs/neuralnote-user-eval/结果.md。
