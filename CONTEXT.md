@@ -446,3 +446,4 @@
 - 用户明确授权更新，旧冻结贝斯/鼓及文件原样保存；新实验入口 scripts/run_muscriptor_bass_drums.py 对同源原音频运行已绑定SHA的MuScriptor Medium本地CPU两线程、六类条件，替换Noto现有基线MIDI bass和drums，保留导体和其他4轨逐消息一致；不能误称完整任意MP3六轨单命令，依赖本机编译引擎和权重、120BPM基线，需传同源输入SHA且不能仅凭该值证明基线源。空轨、哈希或长度异常拒绝。
 - 完成《唯一》完整音频新鲜推理481.6秒，产物 outputs/runs/weiyi-muscriptor/fresh-medium/Noto-MuScriptor贝斯鼓.mid SHA 207f09dcca80732fc7da930bb5a0ff53e077a288941ccd9d7ea5445603f171ae，贝斯171/鼓533个窗口内预测。固定之前同曲估计+2.15、同参考与50ms：Noto原版贝斯25.45/鼓55.22/整体50.57；新鲜Medium贝斯71.92/鼓55.99/整体54.14，其他四轨不变；未试听，参考非已核实录音室真值，不泛化。
 - 另存用户先前NeuralNote导出贝斯/鼓替换版 outputs/runs/weiyi-muscriptor/唯一-Noto-NeuralNote贝斯鼓.mid，来源不同、用户导出模型设置未确认，贝斯67.55/鼓54.23/整体53.48。不把两版混称。139项测试通过；研究详情/使用说明/哈希在 outputs/muscriptor-route/；待冻结后独立复核。模型权重非商业许可，音频、模型、产物不上GitHub。
+- 55ec691冻结后独立只读验证：9工件/6回执SHA、fresh日志→704音逐tick、其他轨/导体逐消息、三版评分独立复算及4测试通过；用户NeuralNote导出版1鼓起音因960→480 ticks量化差1 tick（约1.04ms），评分不变，已披露。历史临时WAV无哈希且已删，不能独立证明当次日志对应解码内容；已披露并在后续入口增加WAV哈希/采样率/帧数记录，不补造历史回执。详 outputs/muscriptor-route/独立验证.md；未试听。

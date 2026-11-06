@@ -30,7 +30,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix='muscriptor-input-',dir=a.output_dir) as temp:
         wav=Path(temp)/'input.wav'
         subprocess.run(['ffmpeg','-v','error','-nostdin','-threads','2','-i',str(a.audio),'-vn','-ac','1','-ar','16000','-c:a','pcm_f32le',str(wav)],check=True,timeout=a.timeout)
-        info=sf.info(wav);duration=info.frames/info.samplerate
+        info=sf.info(wav);duration=info.frames/info.samplerate;decoded_sha=sha(wav)
         midi_length=mido.MidiFile(a.baseline).length
         if abs(midi_length-duration)>.1:raise ValueError(f'Baseline and audio lengths differ: {midi_length} vs {duration}')
         log=a.output_dir/'muscriptor.log'
@@ -39,7 +39,7 @@ def main():
             subprocess.run([str(a.engine.resolve()),'--transcribe','--weights',str(a.weights.resolve()),'--audio',str(wav.resolve()),'--device','cpu','--threads','2'],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=a.timeout,env=env)
         notes=parse_note_lines(log.read_text());out=a.output_dir/'Noto-MuScriptor贝斯鼓.mid'
         replace_midi_tracks(a.baseline,notes,out,duration)
-    receipt={'audio_sha256':sha(a.audio),'baseline_midi_sha256':sha(a.baseline),'engine_sha256':sha(a.engine),'weights_sha256':sha(a.weights),'raw_log_sha256':sha(log),'output_sha256':sha(out),'duration_seconds':duration,'elapsed_seconds':time.monotonic()-start,'conditioning':['AcousticPiano','AcousticGuitar','CleanElectricGuitar','ElectricBass','StringEnsemble','Drums'],'device':'cpu','threads':2,'caveats':['No predicted velocity; fixed MIDI velocity 80','Requires baseline and audio share the same timeline; hash is user-supplied provenance, not independent proof','MuScriptor weights CC BY-NC 4.0; non-commercial use']}
+    receipt={'decoded_wav_sha256':decoded_sha,'decoded_sample_rate':info.samplerate,'decoded_frames':info.frames,'audio_sha256':sha(a.audio),'baseline_midi_sha256':sha(a.baseline),'engine_sha256':sha(a.engine),'weights_sha256':sha(a.weights),'raw_log_sha256':sha(log),'output_sha256':sha(out),'duration_seconds':duration,'elapsed_seconds':time.monotonic()-start,'conditioning':['AcousticPiano','AcousticGuitar','CleanElectricGuitar','ElectricBass','StringEnsemble','Drums'],'device':'cpu','threads':2,'caveats':['No predicted velocity; fixed MIDI velocity 80','Requires baseline and audio share the same timeline; hash is user-supplied provenance, not independent proof','MuScriptor weights CC BY-NC 4.0; non-commercial use']}
     (a.output_dir/'运行报告.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2))
     print(json.dumps(receipt,ensure_ascii=False))
 if __name__=='__main__':main()
