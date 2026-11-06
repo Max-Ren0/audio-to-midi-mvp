@@ -231,3 +231,6 @@
 
 ## MuScriptor 贝斯与鼓研究路线
 - 新增基于本地 MuScriptor Medium 的贝斯、鼓转写与 Noto MIDI 安全替换入口；保护其他轨道，记录同曲评估、使用范围与权重许可。详 outputs/muscriptor-route/实验报告.md。
+
+## Noto 作品集预览
+- 新增本地项目案例预览，展示产品问题、处理链路、模型选择与带限制说明的单曲评测。
