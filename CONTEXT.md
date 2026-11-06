@@ -441,3 +441,8 @@
 - 《唯一》两段钢琴B（528/549音）、两段旧v0.1新输入基础运行及两段SW other→YourMT3弦乐均已实际完成；两段拼成 outputs/runs/weiyi-noto/唯一-Noto-六轨.mid（262.401秒，钢琴1077/木418/电28/贝斯183/鼓313/弦乐844）。旧研究鼓/贝斯非新输入CLI，此结果仅使用v0.1基线，不冒称冻结增强模型；131秒边界有断音风险、源MP3分段重编码。无参考参与生成。
 - 以前次同曲估计对齐+2.15及同一参考窗口评估：钢琴92.36、木5.17、电8.87、贝斯25.45、鼓55.22、弦6.60，整体50.57/macro32.28%；对齐非独立校准、标准来源未知、未试听。脚本和说明 outputs/weiyi-noto/，素材与结果 outputs/runs/weiyi-noto/；待冻结独立验证及Git同步。
 - 2051e6d冻结后独立核验：17项SHA、六轨匹配、两段拼接/GM/时长、SW波形重采样和弦乐JSON到MIDI均通过；弦乐JSON缺输入哈希/日志命令，不能仅靠工件独立证明该JSON由该NPY推理生成，未重跑，已披露。报告笔误“字符串”修为“弦乐音符”，详 outputs/weiyi-noto/独立验证.md；未试听。
+
+## 2026-11-06：贝斯与鼓切换至 MuScriptor（研究）
+- 用户明确授权更新，旧冻结贝斯/鼓及文件原样保存；新实验入口 scripts/run_muscriptor_bass_drums.py 对同源原音频运行已绑定SHA的MuScriptor Medium本地CPU两线程、六类条件，替换Noto现有基线MIDI bass和drums，保留导体和其他4轨逐消息一致；不能误称完整任意MP3六轨单命令，依赖本机编译引擎和权重、120BPM基线，需传同源输入SHA且不能仅凭该值证明基线源。空轨、哈希或长度异常拒绝。
+- 完成《唯一》完整音频新鲜推理481.6秒，产物 outputs/runs/weiyi-muscriptor/fresh-medium/Noto-MuScriptor贝斯鼓.mid SHA 207f09dcca80732fc7da930bb5a0ff53e077a288941ccd9d7ea5445603f171ae，贝斯171/鼓533个窗口内预测。固定之前同曲估计+2.15、同参考与50ms：Noto原版贝斯25.45/鼓55.22/整体50.57；新鲜Medium贝斯71.92/鼓55.99/整体54.14，其他四轨不变；未试听，参考非已核实录音室真值，不泛化。
+- 另存用户先前NeuralNote导出贝斯/鼓替换版 outputs/runs/weiyi-muscriptor/唯一-Noto-NeuralNote贝斯鼓.mid，来源不同、用户导出模型设置未确认，贝斯67.55/鼓54.23/整体53.48。不把两版混称。139项测试通过；研究详情/使用说明/哈希在 outputs/muscriptor-route/；待冻结后独立复核。模型权重非商业许可，音频、模型、产物不上GitHub。

@@ -228,3 +228,6 @@
 
 ## 《唯一》新歌生成（研究）
 - 分段运行固定钢琴 B、SW 弦乐和历史可运行 v0.1 多轨基线并拼接；记录与冻结鼓、贝斯研究版差异及评估限制，见 outputs/weiyi-noto/生成报告.md。
+
+## MuScriptor 贝斯与鼓研究路线
+- 新增基于本地 MuScriptor Medium 的贝斯、鼓转写与 Noto MIDI 安全替换入口；保护其他轨道，记录同曲评估、使用范围与权重许可。详 outputs/muscriptor-route/实验报告.md。
