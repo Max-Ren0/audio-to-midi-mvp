@@ -32,4 +32,3 @@ ffmpeg -i $B/transcribed.wav -ac 2 -b:a 160k $B/transcribed.mp3
 
 页面素材在 `outputs/portfolio-preview/demo/`：`original.mp3`、`transcribed.mp3`（转写 MIDI 用同一音色重新合成）、`reference.mid`、`transcribed.mid`、`notes.json`（卷帘与分数数据）。
 
-注：`.venv` 入口脚本仍指向迁移前路径，暂用 `PYTHONPATH=src .venv/bin/python -m audio_midi.cli` 代替 `.venv/bin/audio-midi`。

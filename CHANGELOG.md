@@ -1,5 +1,20 @@
 # 版本记录
 
+## v0.1.0-public.4 — 2026-11-18（MVP 范围收窄 / 环境路径修复）
+
+- MVP 先承诺钢琴、贝斯、鼓三轨；木吉他、清音电吉他、弦乐保留为研究轨道，照常输出但不计入 MVP 验收。依据《唯一》替换后逐轨 F1（钢琴 92.36%、贝斯 71.92%、鼓 55.99%，其余三轨低于 10%）。
+- 同步：README 项目概览、作品集（FOCUS 标签、需求与范围、吉他/弦乐标"研究中"）、PRD 1.1 → 1.2（2.1、2.2、2.3）、CONTEXT。
+- 环境：`.venv` 与 `work/sep-env` 共 64 个入口脚本 / .pth 仍指向迁移前路径，改为当前路径（本地环境，不入库；备份 `work/venv-path-fix-backup-20261118.tgz`）。
+
+| 现象 | 原因 | 解决 |
+|---|---|---|
+| `.venv/bin/audio-midi` 报 bad interpreter，`import audio_midi` 失败 | 项目从 `Desktop/Codex项目` 迁到 `Desktop/AGENT/Codex项目`，入口脚本 shebang 与可编辑安装 .pth 未更新 | 备份后批量替换旧路径 |
+
+- 验证：`.venv/bin/audio-midi doctor` 正常；`import audio_midi` 指向当前 `src/`；`work/sep-env` 中 transkun 2.0.1 可读取；`pytest -q` 139 项通过。
+- 修改清单：README.md、outputs/portfolio-preview/index.html、outputs/Noto-产品需求文档.md、outputs/demo-synthetic/README.md、CONTEXT.md、CHANGELOG.md。
+- 遗留：其他非标准环境（无 pyvenv.cfg 的目录）未逐一检查；项目再迁移需重做。
+- 记录提交：以本节所在提交为准；外部状态：`gh-pages` 同步作品集。
+
 ## v0.1.0-public.3 — 2026-11-17（作品集对比演示）
 
 - 作品集新增"听一听"区块：自写 30 秒片段（钢琴/贝斯/鼓）原曲与转写结果对照试听、同步卷帘对比、逐轨 F1、两个 MIDI 下载。
