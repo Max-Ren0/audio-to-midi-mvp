@@ -3,7 +3,7 @@
 ## v0.1.0-public.6 — 2026-11-18（多曲评测）
 
 - 新增多曲评测 `outputs/multi-song-eval/`：BabySlakh 20 段（合成多轨，60 s 窗口）+ MAESTRO v3 test 最短 5 首（真实钢琴整曲），逐轨比较基线 YourMT3 与当前最优路线（钢琴 B + MuScriptor 贝斯/鼓）。
-- 结果（micro F1，基线 → 最优）：MAESTRO 钢琴 0.975 → 0.983（5 首全部提升）；BabySlakh 钢琴 0.891 → 0.794、贝斯 0.978 → 0.697、鼓 0.852 → 0.553（kit-only 0.944 → 0.762）。BabySlakh 在 YourMT3 训练预设内，结果偏向基线，不作公平对比。
+- 结果（micro F1，基线 → 最优）：MAESTRO 钢琴 0.975 → 0.983（5 首全部提升）；BabySlakh 钢琴 0.891 → 0.794、贝斯 0.978 → 0.697、鼓 0.852 → 0.553（kit-only 0.944 → 0.762）。BabySlakh 取自 Slakh train，YourMT3 的训练数据预设包含这一划分；本次所用权重的训练曲目未逐一核实，结果可能偏向基线，不作公平对比；MAESTRO 是官方测试集，各模型是否见过这些录音未核实。按参考乐器列表选轨，属条件评测。
 - 同步：README 概览新增多曲结果表；作品集"验证结果"新增多曲区块；PRD 1.2 → 1.3（P0 状态、8.1、8.4、9）；CONTEXT。
 
 | 现象 | 原因 | 解决 |
@@ -19,6 +19,12 @@
   - `score.py` 输出 `absent_category_extra_notes_total`。
   - 新增 `drum_confusions.py`、`bass_octave_check.py` 及其结果。
   - `run_routes.py` 改为按最终 MIDI 判断是否完成，失败目录改名后重试。
+- 第二轮复核（e47eb99）：复算一致，又提出 5 条意见，本版已全部处理：
+  - 对外页面的训练重叠措辞改为"预设包含、实际权重未核实"。
+  - README 概览、作品集、PRD 的结果旁注明条件评测。
+  - 原始日志回退改为要求推理完成且是缺轨拼接报错（`raw_fallback_ok`，打分和续跑共用）。
+  - 收紧贝斯证据的总括句。
+  - 作品集"暂未进行多歌曲验证"改为当前状态。
 - 修改清单：`outputs/multi-song-eval/`（prepare.py、run_routes.py、score.py、drum_confusions.py、bass_octave_check.py、README.md、results.json、drum_confusions.json、bass_octave_check.json）、README.md、outputs/portfolio-preview/index.html、outputs/Noto-产品需求文档.md、CONTEXT.md、CHANGELOG.md。
 - 不入库：数据集（`work/datasets/`）、转写产物（`outputs/runs/multi-song-eval/`）、MAESTRO 取数脚本（`work/eval-tools/`）。
 - 遗留：没有真实录音多轨数据复核贝斯/鼓；没有不依赖参考乐器列表的端到端评测；MuScriptor 入口遇缺轨报错。

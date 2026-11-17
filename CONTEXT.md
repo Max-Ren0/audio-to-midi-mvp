@@ -5,7 +5,7 @@
 ## 最近完成：多曲评测（2026-11-18，v0.1.0-public.6）
 
 - 报告 `outputs/multi-song-eval/README.md`，脚本 prepare.py → run_routes.py → score.py，另有 drum_confusions.py、bass_octave_check.py。数据在 `work/datasets/`，转写产物在 `outputs/runs/multi-song-eval/items/`，均不入库。
-- 结论：MAESTRO 测试集 5 首真实钢琴上，钢琴 B 0.983 对基线 0.975，5 首全部提升；BabySlakh 20 段上基线三轨领先（钢琴 0.891/0.794，贝斯 0.978/0.697，鼓 0.852/0.553）。BabySlakh 在 YourMT3 训练预设内，结果偏向基线，不能据此判定 MuScriptor 更差。
+- 结论：MAESTRO 测试集 5 首真实钢琴上，钢琴 B 0.983 对基线 0.975，5 首全部提升；BabySlakh 20 段上基线三轨领先（钢琴 0.891/0.794，贝斯 0.978/0.697，鼓 0.852/0.553）。BabySlakh 取自 Slakh train，YourMT3 的训练数据预设包含这一划分；本次所用权重的训练曲目未逐一核实，结果可能偏向基线，不能据此判定 MuScriptor 更差。MAESTRO 是官方测试集，但各模型是否见过这些录音未核实。这是按参考乐器列表选轨的条件评测，不是端到端评测。
 - 口径要点：
   - Slakh 贝斯参考 −12，有测频和基线偏移两组证据。
   - 这是按参考乐器列表选轨的条件评测。

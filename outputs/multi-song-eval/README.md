@@ -1,6 +1,6 @@
 # 多曲评测：基线 vs 当前最优路线（2026-11-18）
 
-**结论**：在 25 段公开数据上，当前"最优路线"没有普遍胜过基线。只在 MAESTRO 官方测试集的真实钢琴录音上，钢琴 B 小幅领先（F1 0.983 vs 0.975，5 首全部提升）；在 BabySlakh 上，基线三轨全面领先。BabySlakh 取自 Slakh2100 train，而本地 YourMT3 代码的训练数据预设包含这一划分，所以这部分结果很可能偏向基线，**不能据此判定 MuScriptor 贝斯/鼓更差**，只能说明这份数据无法证明它更好。单曲《唯一》上贝斯 25%→72% 的提升仍只是单曲结果，需要真实录音的多轨数据来复核。
+**结论**（按参考乐器列表选轨的条件评测，不是端到端评测）：在 25 段公开数据上，当前"最优路线"没有普遍胜过基线。只在 MAESTRO 官方测试集的真实钢琴录音上（各模型是否见过这些录音未核实），钢琴 B 小幅领先（F1 0.983 vs 0.975，5 首全部提升）；在 BabySlakh 上，基线三轨全面领先。BabySlakh 取自 Slakh2100 train，而本地 YourMT3 代码的训练数据预设包含这一划分，所以这部分结果很可能偏向基线，**不能据此判定 MuScriptor 贝斯/鼓更差**，只能说明这份数据无法证明它更好。单曲《唯一》上贝斯 25%→72% 的提升仍只是单曲结果，需要真实录音的多轨数据来复核。
 
 ## 1. 数据
 
@@ -51,11 +51,11 @@
   - MAESTRO 用的是官方 test 划分。上述预设训练时只用 MAESTRO 的 train 和 validation，Transkun 也按官方划分报告 MAESTRO 结果。但本次实际使用的各个权重，以及 BS-RoFormer SW 分离模型，是否接触过这 5 段录音，**未核实**。
   - MuScriptor 的训练数据与 Slakh 是否重叠，**未核实**。
   - 所以 Slakh 结果只作参考，不是公平对比；MAESTRO 结果相对更可信，但只有 5 首。
-- **Slakh 贝斯参考改低一个八度**：在本次 19 段里，Slakh 贝斯 MIDI 比分轨实际发声高一个八度，所以打分时贝斯参考统一 −12。证据有两组：
-  - 测频：`bass_octave_check.py` 用 pYIN 对每个时长 ≥ 0.2 s 的贝斯音测频，结果在 `bass_octave_check.json`。19 段中 18 段的"音频 − MIDI"众数是 −12，这 18 段里 −12 的占比都在 92% 以上（Track00019 只有 1 个音够长，Track00009 有 10 个，其余每段 32–159 个）。Track00012 测频不稳定，众数是 −43，判为测频失败；但基线在这一段 218 个参考音里有 214 个音高偏移为 0（按修正后的参考），支持同样的修正。
+- **Slakh 贝斯参考改低一个八度**：现有测频和基线偏移两组证据都支持对这 19 段的贝斯参考统一 −12，即 Slakh 贝斯 MIDI 比分轨实际发声高一个八度：
+  - 测频：`bass_octave_check.py` 用 pYIN 对时长 ≥ 0.2 s 的贝斯音测频，只统计有足够有效测频帧的音，结果在 `bass_octave_check.json`。19 段中 18 段的"音频 − MIDI"众数是 −12，这 18 段里 −12 的占比都在 92% 以上（Track00019 只有 1 个音够长，Track00009 有 10 个，其余每段 32–159 个）。Track00012 测频不稳定，众数是 −43，判为测频失败；但基线在这一段 218 个参考音里有 214 个音高偏移为 0（按修正后的参考），支持同样的修正。
   - 基线偏移：修正后，基线在全部 19 段的众数音高偏移都是 0。
   - 修正只针对本样本；不代表所有 Slakh 贝斯轨都逐音验证过。Codex 复核时，其他类别的众数偏移都集中在 0，没有发现需要同样修正的证据。
-- **两首按原始音符打分**：Track00017 没有贝斯，Track00018 没有鼓。MuScriptor 替换入口要求基线恰好有一条贝斯和一条鼓，所以这两首拼接失败（退出码 1）。MuScriptor 本身已经跑完，打分直接读取日志里的原始音符，见 `results.json` 的 `muscriptor_scored_from_raw_log`。这暴露了入口的问题：遇到缺轨歌曲会直接报错。
+- **两首按原始音符打分**：Track00017 没有贝斯，Track00018 没有鼓。MuScriptor 替换入口要求基线恰好有一条贝斯和一条鼓，所以这两首拼接失败（退出码 1）。MuScriptor 推理本身已经跑完（引擎日志末尾有 `notes <数量>` 汇总行，入口日志是这条拼接报错），打分直接读取日志里的原始音符。只有同时满足这两个条件才会这样回退，中途中断的运行不算，见 `results.json` 的 `muscriptor_scored_from_raw_log`。这暴露了入口的问题：遇到缺轨歌曲会直接报错。
 - **Slakh 是合成音频**，与真实录音的音色、混音差异很大；MAESTRO 只有 5 首、只有钢琴。
 - 只评估音符级 F1，没有做听感或人工修改时间评估。
 - MuScriptor 权重为 CC BY-NC，仅限非商业使用。
@@ -91,6 +91,6 @@ PYTHONPATH=src .venv/bin/python outputs/multi-song-eval/drum_confusions.py outpu
 PYTHONPATH=src .venv/bin/python outputs/multi-song-eval/bass_octave_check.py work/datasets/babyslakh/babyslakh_16k outputs/runs/multi-song-eval/items outputs/multi-song-eval/bass_octave_check.json
 ```
 
-`run_routes.py` 可以重跑续跑：最终 MIDI 已存在的路线会跳过。MuScriptor 拼接失败但日志里有原始音符的，也算已完成。其他失败留下的目录会改名为 `*.failed-<时间>` 后重试。
+`run_routes.py` 可以重跑续跑：最终 MIDI 已存在的路线会跳过。MuScriptor 推理完成、只因缺贝斯或缺鼓而拼接失败的，也算已完成（与打分端用同一个检查 `raw_fallback_ok`）。其他失败留下的目录会改名为 `*.failed-<时间>` 后重试。
 
 每段约 9 分钟（基线约 1 分钟，钢琴 B 约 5–9 分钟，MuScriptor 约 2–4 分钟），25 段合计约 3.5 小时。MAESTRO 的 5 首通过 HTTP 分段请求从官方 zip 里只取所需文件，脚本在本地 `work/eval-tools/maestro_fetch.py`（未纳入仓库）。

@@ -16,6 +16,8 @@ import sys
 import time
 from pathlib import Path
 
+from score import raw_fallback_ok  # same directory
+
 PY = '.venv/bin/python'
 ENV = {'PYTHONPATH': 'src'}
 
@@ -34,12 +36,12 @@ def run(cmd, log):
 
 
 def done(d, route):
-    """A route is finished when its final MIDI exists. MuScriptor also counts as finished when the
-    splice step refused (exit 1) but the raw NOTE lines are in its log; score.py scores those."""
+    """A route is finished when its final MIDI exists. MuScriptor also counts as finished when its
+    inference completed but the splice step refused a baseline without bass or drums; score.py
+    scores those raw notes (same check, raw_fallback_ok)."""
     if route == 'piano-b':
         return (d / 'piano-b/钢琴-B.mid').exists()
-    log = d / 'muscriptor/muscriptor.log'
-    return (d / 'muscriptor/Noto-MuScriptor贝斯鼓.mid').exists() or (log.exists() and 'NOTE,' in log.read_text())
+    return (d / 'muscriptor/Noto-MuScriptor贝斯鼓.mid').exists() or raw_fallback_ok(d)
 
 
 def clear_failed(path):

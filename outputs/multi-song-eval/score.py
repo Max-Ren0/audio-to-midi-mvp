@@ -29,6 +29,22 @@ KIT = {35: 36, 36: 36, 37: 38, 38: 38, 39: 38, 40: 38, 42: 42, 44: 42, 46: 42,
 SLAKH_BASS_SHIFT = -12
 
 
+SPLICE_REFUSED = 'Baseline requires exactly one bass and one drums track'
+
+
+def raw_fallback_ok(item_dir):
+    """True only when MuScriptor inference finished (engine summary line 'notes <n>' at the end of
+    its log) and the entry script then refused to splice because the baseline lacks a bass or drums
+    track. Interrupted runs with partial NOTE lines do not qualify."""
+    engine_log = item_dir / 'muscriptor/muscriptor.log'
+    runner_log = item_dir / 'muscriptor.log'
+    if not (engine_log.exists() and runner_log.exists()):
+        return False
+    tail = engine_log.read_text().splitlines()[-5:]
+    finished = any(line.split()[:1] == ['notes'] and line.split()[1:2] and line.split()[1].isdigit() for line in tail)
+    return finished and SPLICE_REFUSED in runner_log.read_text()
+
+
 def ref_notes(path, source):
     out = []
     for n in json.loads(Path(path).read_text())['notes']:
@@ -98,7 +114,7 @@ def main(items, dest):
             mu_notes = None
             if mu.exists():
                 mu_notes = clip(read_notes(mu), dur)
-            elif raw_log.exists() and 'NOTE,' in raw_log.read_text():
+            elif raw_fallback_ok(d):
                 # The entry script refuses to splice when the baseline lacks a bass or drums
                 # track; MuScriptor itself finished, so score its raw notes directly.
                 mu_notes = clip(parse_note_lines(raw_log.read_text()), dur)
