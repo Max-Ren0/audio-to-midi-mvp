@@ -2,9 +2,8 @@
 
 ## v0.1.0-public.2 — 2026-11-17（展示首页整理）
 
-- 为公开展示整理首页：README 开头新增"项目概览"（需求来源、流程、阶段性结果与限制、仓库导航），原技术说明保留在下方。
+- 为公开展示整理首页：README 开头新增"项目概览"（痛点、流程、阶段性结果与限制、仓库导航），原技术说明保留在下方。
 - 新增 GitHub Pages 在线作品集：`gh-pages` 分支只含 `outputs/portfolio-preview/index.html` 的副本（当前令牌无 `workflow` 权限，未用 Actions），地址：<https://max-ren0.github.io/audio-to-midi-mvp/>。
-- 作品集页背景段补充：需求和痛点来自一位学音乐的朋友。
 - 注意：改了作品集页面后需手动同步到 `gh-pages` 分支。
 - 仓库设置：补充简介、主页链接与 topics（GitHub 设置，不在文件中）。
 - 无模型、代码或评测变更；PRD 无需同步。
