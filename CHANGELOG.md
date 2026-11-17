@@ -1,5 +1,23 @@
 # 版本记录
 
+## v0.1.0-public.3 — 2026-11-17（作品集对比演示）
+
+- 作品集新增"听一听"区块：自写 30 秒片段（钢琴/贝斯/鼓）原曲与转写结果对照试听、同步卷帘对比、逐轨 F1、两个 MIDI 下载。
+- 转写用 YourMT3 基线路线整段转写；逐音 F1（音高一致、起音 ≤50ms）：钢琴 83.9%、贝斯 75.6%、鼓 78.2%。合成干净音频、单样本，分数偏乐观，页面已注明。
+- 版权：原曲为自写 MIDI，用 GeneralUser GS（许可允许商用）渲染；不含任何现成歌曲。
+- 修改清单：`outputs/demo-synthetic/`（compose.py、README）、`outputs/portfolio-preview/index.html`、`outputs/portfolio-preview/demo/`、`.gitignore`（仅放行 `outputs/portfolio-preview/demo/*.mp3`）。
+
+| 现象 | 原因 | 解决 |
+|---|---|---|
+| `.venv/bin/audio-midi` 报 bad interpreter | 项目迁移后 venv 入口和 .pth 仍指向旧路径 | 暂用 `PYTHONPATH=src .venv/bin/python -m audio_midi.cli`；venv 未修 |
+| 推送 Actions 发布流程被拒 | 令牌无 `workflow` 权限 | 沿用 `gh-pages` 分支手动同步 |
+| 独立核验发现 4 处页面/文档问题 | 加载失败无提示、进度线越界、播放状态不同步、复现步骤不全 | 650282d 修复，Codex 复验通过 |
+| 复验发现快速切换播放器误报"无法播放" | 被互斥暂停中断的 play() 以 AbortError 拒绝 | 忽略 AbortError |
+
+- 验证：Codex 独立核验 4b0cca2（音符、MIDI、分数、音频字节级复现通过），修复后复验 650282d；本地浏览器检查桌面/手机宽度、播放互斥与进度线。
+- 遗留：未用钢琴 B / MuScriptor 最优路线；真实录音演示与多曲评测未做；venv 入口未修。
+- 记录提交：以本节所在提交为准；外部状态：`gh-pages` 同步后上线。
+
 ## v0.1.0-public.2 — 2026-11-17（展示首页整理）
 
 - 为公开展示整理首页：README 开头新增"项目概览"（痛点、流程、阶段性结果与限制、仓库导航），原技术说明保留在下方。

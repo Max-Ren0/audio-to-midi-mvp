@@ -28,7 +28,7 @@ const players=[...document.querySelectorAll('.demo .player')].map(el=>{const a=n
  a.addEventListener('play',()=>el.classList.add('playing'));a.addEventListener('pause',()=>el.classList.remove('playing'));
  a.addEventListener('ended',()=>{head=0;draw()});
  a.addEventListener('error',()=>{el.classList.remove('playing');t.textContent='加载失败'});
- el.querySelector('button').addEventListener('click',()=>{if(a.paused){players.forEach(p=>{if(p.a!==a)p.a.pause()});a.play().catch(()=>{el.classList.remove('playing');t.textContent='无法播放'})}else a.pause()});
+ el.querySelector('button').addEventListener('click',()=>{if(a.paused){players.forEach(p=>{if(p.a!==a)p.a.pause()});a.play().catch(e=>{if(e.name==='AbortError')return;el.classList.remove('playing');t.textContent='无法播放'})}else a.pause()});
  return {a,el}});
 function draw(){if(!data)return;const dpr=window.devicePixelRatio||1,w=canvas.clientWidth,h=canvas.clientHeight;canvas.width=w*dpr;canvas.height=h*dpr;const g=canvas.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,w,h);
  const left=46,dur=data.duration,x=t=>left+(w-left-6)*t/dur,laneH=h/3;
