@@ -1,0 +1,242 @@
+[
+ {
+  "id": "slakh-Track00001",
+  "notes_checked": 75,
+  "mode_audio_minus_midi": [
+   -12,
+   74
+  ],
+  "share_at_minus_12": 0.987,
+  "histogram": {
+   "-12": 74,
+   "-10": 1
+  }
+ },
+ {
+  "id": "slakh-Track00002",
+  "notes_checked": 60,
+  "mode_audio_minus_midi": [
+   -12,
+   56
+  ],
+  "share_at_minus_12": 0.933,
+  "histogram": {
+   "-12": 56,
+   "-24": 3,
+   "-13": 1
+  }
+ },
+ {
+  "id": "slakh-Track00003",
+  "notes_checked": 144,
+  "mode_audio_minus_midi": [
+   -12,
+   144
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 144
+  }
+ },
+ {
+  "id": "slakh-Track00004",
+  "notes_checked": 75,
+  "mode_audio_minus_midi": [
+   -12,
+   75
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 75
+  }
+ },
+ {
+  "id": "slakh-Track00005",
+  "notes_checked": 51,
+  "mode_audio_minus_midi": [
+   -12,
+   47
+  ],
+  "share_at_minus_12": 0.922,
+  "histogram": {
+   "-12": 47,
+   "-10": 2,
+   "-11": 2
+  }
+ },
+ {
+  "id": "slakh-Track00006",
+  "notes_checked": 63,
+  "mode_audio_minus_midi": [
+   -12,
+   63
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 63
+  }
+ },
+ {
+  "id": "slakh-Track00007",
+  "notes_checked": 60,
+  "mode_audio_minus_midi": [
+   -12,
+   60
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 60
+  }
+ },
+ {
+  "id": "slakh-Track00008",
+  "notes_checked": 52,
+  "mode_audio_minus_midi": [
+   -12,
+   52
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 52
+  }
+ },
+ {
+  "id": "slakh-Track00009",
+  "notes_checked": 10,
+  "mode_audio_minus_midi": [
+   -12,
+   10
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 10
+  }
+ },
+ {
+  "id": "slakh-Track00010",
+  "notes_checked": 107,
+  "mode_audio_minus_midi": [
+   -12,
+   107
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 107
+  }
+ },
+ {
+  "id": "slakh-Track00011",
+  "notes_checked": 135,
+  "mode_audio_minus_midi": [
+   -12,
+   125
+  ],
+  "share_at_minus_12": 0.926,
+  "histogram": {
+   "-12": 125,
+   "-24": 9,
+   "-13": 1
+  }
+ },
+ {
+  "id": "slakh-Track00012",
+  "notes_checked": 192,
+  "mode_audio_minus_midi": [
+   -43,
+   31
+  ],
+  "share_at_minus_12": 0.125,
+  "histogram": {
+   "-43": 31,
+   "-40": 30,
+   "-12": 24,
+   "-31": 17,
+   "-36": 14
+  }
+ },
+ {
+  "id": "slakh-Track00013",
+  "notes_checked": 159,
+  "mode_audio_minus_midi": [
+   -12,
+   158
+  ],
+  "share_at_minus_12": 0.994,
+  "histogram": {
+   "-12": 158,
+   "-24": 1
+  }
+ },
+ {
+  "id": "slakh-Track00014",
+  "notes_checked": 55,
+  "mode_audio_minus_midi": [
+   -12,
+   55
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 55
+  }
+ },
+ {
+  "id": "slakh-Track00015",
+  "notes_checked": 32,
+  "mode_audio_minus_midi": [
+   -12,
+   32
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 32
+  }
+ },
+ {
+  "id": "slakh-Track00016",
+  "notes_checked": 133,
+  "mode_audio_minus_midi": [
+   -12,
+   133
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 133
+  }
+ },
+ {
+  "id": "slakh-Track00018",
+  "notes_checked": 42,
+  "mode_audio_minus_midi": [
+   -12,
+   42
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 42
+  }
+ },
+ {
+  "id": "slakh-Track00019",
+  "notes_checked": 1,
+  "mode_audio_minus_midi": [
+   -12,
+   1
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 1
+  }
+ },
+ {
+  "id": "slakh-Track00020",
+  "notes_checked": 56,
+  "mode_audio_minus_midi": [
+   -12,
+   56
+  ],
+  "share_at_minus_12": 1.0,
+  "histogram": {
+   "-12": 56
+  }
+ }
+]

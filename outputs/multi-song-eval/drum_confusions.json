@@ -1,0 +1,81 @@
+{
+ "reference_hits": 8762,
+ "same_key_nearby": 4041,
+ "top_errors": [
+  {
+   "reference_key": 42,
+   "nearest_prediction": "none nearby",
+   "count": 557
+  },
+  {
+   "reference_key": 69,
+   "nearest_prediction": 36,
+   "count": 325
+  },
+  {
+   "reference_key": 69,
+   "nearest_prediction": "none nearby",
+   "count": 268
+  },
+  {
+   "reference_key": 40,
+   "nearest_prediction": 38,
+   "count": 240
+  },
+  {
+   "reference_key": 54,
+   "nearest_prediction": "none nearby",
+   "count": 239
+  },
+  {
+   "reference_key": 69,
+   "nearest_prediction": 42,
+   "count": 201
+  },
+  {
+   "reference_key": 44,
+   "nearest_prediction": 42,
+   "count": 174
+  },
+  {
+   "reference_key": 54,
+   "nearest_prediction": 42,
+   "count": 147
+  },
+  {
+   "reference_key": 36,
+   "nearest_prediction": "none nearby",
+   "count": 142
+  },
+  {
+   "reference_key": 51,
+   "nearest_prediction": 36,
+   "count": 128
+  },
+  {
+   "reference_key": 51,
+   "nearest_prediction": 42,
+   "count": 106
+  },
+  {
+   "reference_key": 54,
+   "nearest_prediction": 38,
+   "count": 102
+  },
+  {
+   "reference_key": 54,
+   "nearest_prediction": 36,
+   "count": 102
+  },
+  {
+   "reference_key": 42,
+   "nearest_prediction": 36,
+   "count": 91
+  },
+  {
+   "reference_key": 36,
+   "nearest_prediction": 42,
+   "count": 90
+  }
+ ]
+}
