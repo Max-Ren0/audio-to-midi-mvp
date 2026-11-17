@@ -17,12 +17,17 @@
 
 ## 复现（仓库根目录）
 
+输出目录必须是新的（脚本不覆盖已有结果），每次换一个目录名。
+
 ```sh
-B=outputs/runs/demo-synthetic
+B=outputs/runs/demo-synthetic-repro
 PYTHONPATH=src .venv/bin/python outputs/demo-synthetic/compose.py $B
-# 用 audio_midi.render.render_midi 把 $B/reference.mid 渲染为 $B/original.wav（tail 1.0s），再用 ffmpeg 编码为 160k MP3
+PYTHONPATH=src .venv/bin/python -c "from pathlib import Path;from audio_midi.render import render_midi;render_midi(Path('$B/reference.mid'),Path('work/models/GeneralUser-GS.sf2'),Path('$B/original.wav'),tail_seconds=1.0)"
+ffmpeg -i $B/original.wav -ac 2 -b:a 160k $B/original.mp3
 PYTHONPATH=src .venv/bin/python -m audio_midi.cli transcribe $B/original.mp3 --output $B/yourmt3/result.mid
 PYTHONPATH=src .venv/bin/python -m audio_midi.cli evaluate $B/reference.json $B/yourmt3/result.report.json
+PYTHONPATH=src .venv/bin/python -c "from pathlib import Path;from audio_midi.render import render_midi;render_midi(Path('$B/yourmt3/result.mid'),Path('work/models/GeneralUser-GS.sf2'),Path('$B/transcribed.wav'),tail_seconds=1.0)"
+ffmpeg -i $B/transcribed.wav -ac 2 -b:a 160k $B/transcribed.mp3
 ```
 
 页面素材在 `outputs/portfolio-preview/demo/`：`original.mp3`、`transcribed.mp3`（转写 MIDI 用同一音色重新合成）、`reference.mid`、`transcribed.mid`、`notes.json`（卷帘与分数数据）。
