@@ -2,6 +2,14 @@
 
 最后更新：2026-11-17（Asia/Taipei）
 
+## 进行中：多曲评测（2026-11-18 开始，自主执行至交付）
+
+- 用户授权：自主决策、可调用子 agent，最后交付；新增下载仍需确认。已获准下载 BabySlakh（work/datasets/babyslakh）与 MAESTRO 测试集最短 5 首（work/datasets/maestro-download）。
+- 脚本：`outputs/multi-song-eval/`（prepare.py → run_routes.py → score.py）。产物：`outputs/runs/multi-song-eval/items/`（25 段：钢琴 24、贝斯 19、鼓 19），进度 `run-status.json`，日志 `run.log`；run_routes 可重跑续跑。
+- 路线：基线 YourMT3；最优＝钢琴 B（SW→Transkun）＋ MuScriptor 贝斯/鼓。约 9 分钟/段。
+- 已发现：Slakh 贝斯 MIDI 比发声高一个八度（pYIN 核实），score.py 对 Slakh 贝斯参考 −12；YourMT3 用过 Slakh 训练集，BabySlakh 结果对基线有主场优势，需分来源报告；MuScriptor 鼓把 ride(51) 多识别为闭镲(42)。
+- 剩余步骤：跑完 → score.py 出 results.json → 写报告 → 独立复核（Codex 连不上 chatgpt.com 时改用子代理）→ 更新作品集/README/PRD → 合并 main、同步 gh-pages → 交付。
+
 ## 当前目标
 
 - Noto 音频转多轨 MIDI 项目处于本地研究原型阶段；优先验证转写质量，再考虑完整前端。
@@ -35,6 +43,7 @@
 
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
 - `outputs/Noto-产品需求文档.md`：当前需求文档（PRD）。
+- `outputs/multi-song-eval/`：多曲评测脚本与报告（进行中）。
 - `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`../作品集/Noto-音频转MIDI-作品集.pdf`：作品集 PDF。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
