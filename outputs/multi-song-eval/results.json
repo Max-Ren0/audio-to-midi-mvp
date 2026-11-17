@@ -2,6 +2,18 @@
  "reference_corrections": {
   "BabySlakh bass": -12
  },
+ "conditioning": "routes are chosen and F1 is accumulated using the reference category list of each item; notes predicted for categories absent from the reference are not in any F1 and are totalled in absent_category_extra_notes_total",
+ "absent_category_extra_notes_total": {
+  "baseline": {
+   "acoustic_guitar": 11,
+   "strings": 1
+  },
+  "best": {
+   "acoustic_guitar": 11,
+   "strings": 1,
+   "bass": 58
+  }
+ },
  "metric": "one-to-one, same category and pitch (drums: GM key), onset <= 50 ms; drums_kit_piece maps GM keys to kick/snare/hi-hat/tom/cymbal; drums_kit_only additionally drops non-kit percussion keys from reference and prediction",
  "routes": {
   "baseline": "YourMT3 yptf_moe_nops whole mix",

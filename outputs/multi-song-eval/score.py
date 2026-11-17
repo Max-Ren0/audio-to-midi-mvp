@@ -131,7 +131,16 @@ def main(items, dest):
                 add(agg[route], 'drums_kit_only', ko)
                 row['tracks']['drums'][route + '_kit_only_f1'] = ko['f1']
         per_item.append(row)
+    absent = {}
+    for row in per_item:
+        for route, cats in row.get('absent_category_extra_notes', {}).items():
+            for t, n in cats.items():
+                absent.setdefault(route, {}).setdefault(t, 0)
+                absent[route][t] += n
     result = {'reference_corrections': {'BabySlakh bass': SLAKH_BASS_SHIFT},
+              'conditioning': 'routes are chosen and F1 is accumulated using the reference category list of each item; '
+                              'notes predicted for categories absent from the reference are not in any F1 and are totalled in absent_category_extra_notes_total',
+              'absent_category_extra_notes_total': absent,
               'metric': 'one-to-one, same category and pitch (drums: GM key), onset <= 50 ms; drums_kit_piece maps GM keys to kick/snare/hi-hat/tom/cymbal; drums_kit_only additionally drops non-kit percussion keys from reference and prediction',
               'routes': {'baseline': 'YourMT3 yptf_moe_nops whole mix',
                          'best': 'piano: piano-B (BS-RoFormer SW -> Transkun 2.0); bass+drums: MuScriptor Medium; other tracks: baseline'},
@@ -142,6 +151,7 @@ def main(items, dest):
     for r in ('baseline', 'best'):
         print(r, {t: (v['songs'], v['micro_f1']) for t, v in result['aggregate'][r].items()})
     print('missing:', missing)
+    print('absent-category extra notes:', absent)
 
 
 if __name__ == '__main__':

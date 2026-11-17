@@ -1,5 +1,29 @@
 # 版本记录
 
+## v0.1.0-public.6 — 2026-11-18（多曲评测）
+
+- 新增多曲评测 `outputs/multi-song-eval/`：BabySlakh 20 段（合成多轨，60 s 窗口）+ MAESTRO v3 test 最短 5 首（真实钢琴整曲），逐轨比较基线 YourMT3 与当前最优路线（钢琴 B + MuScriptor 贝斯/鼓）。
+- 结果（micro F1，基线 → 最优）：MAESTRO 钢琴 0.975 → 0.983（5 首全部提升）；BabySlakh 钢琴 0.891 → 0.794、贝斯 0.978 → 0.697、鼓 0.852 → 0.553（kit-only 0.944 → 0.762）。BabySlakh 在 YourMT3 训练预设内，结果偏向基线，不作公平对比。
+- 同步：README 概览新增多曲结果表；作品集"验证结果"新增多曲区块；PRD 1.2 → 1.3（P0 状态、8.1、8.4、9）；CONTEXT。
+
+| 现象 | 原因 | 解决 |
+|---|---|---|
+| 第一次准备数据时参考里没有任何音符 | BabySlakh metadata 中所有 stem 都标 `audio_rendered: false` | 改为按 stem WAV 是否存在筛选 |
+| 两条路线的贝斯 F1 都接近 0 | Slakh 贝斯 MIDI 比实际发声高一个八度 | Slakh 贝斯参考 −12；pYIN 测频与基线偏移两组证据，脚本 `bass_octave_check.py` |
+| Track00017/00018 的 MuScriptor 退出码 1 | 替换入口要求基线恰有一条贝斯和一条鼓，这两首分别缺贝斯、缺鼓 | MuScriptor 已识别完，打分读日志原始音符；入口改进列入下一步 |
+| MAESTRO 下载 SSL 证书校验失败 | 系统 Python 找不到 CA 证书 | 用 `.venv` 中 certifi 的证书文件；只按 HTTP 分段取 5 首 |
+| Codex 早先无法连接 | chatgpt.com 不可达 | 本次恢复连接，由 Codex 完成复核 |
+
+- 独立复核：Codex 只读复核冻结提交 852119e，在内存中重跑打分，结果与 results.json 完全一致；提出 5 条意见（训练重叠表述过度、参考选轨的条件评测、鼓混淆缺少统计脚本、续跑以目录判断、降八度证据范围）。本版全部处理：
+  - 改写报告措辞。
+  - `score.py` 输出 `absent_category_extra_notes_total`。
+  - 新增 `drum_confusions.py`、`bass_octave_check.py` 及其结果。
+  - `run_routes.py` 改为按最终 MIDI 判断是否完成，失败目录改名后重试。
+- 修改清单：`outputs/multi-song-eval/`（prepare.py、run_routes.py、score.py、drum_confusions.py、bass_octave_check.py、README.md、results.json、drum_confusions.json、bass_octave_check.json）、README.md、outputs/portfolio-preview/index.html、outputs/Noto-产品需求文档.md、CONTEXT.md、CHANGELOG.md。
+- 不入库：数据集（`work/datasets/`）、转写产物（`outputs/runs/multi-song-eval/`）、MAESTRO 取数脚本（`work/eval-tools/`）。
+- 遗留：没有真实录音多轨数据复核贝斯/鼓；没有不依赖参考乐器列表的端到端评测；MuScriptor 入口遇缺轨报错。
+- 记录提交：以本节所在提交为准；外部状态：`gh-pages` 同步作品集。
+
 ## v0.1.0-public.5 — 2026-11-18（三轨范围表述补齐）
 
 - 按独立复核意见补齐现行文档：PRD 1.2 项目阶段、P0 多轨转谱验收重点、8.5 第 3 条改为 MVP 三轨口径；README 明确吉他/弦乐"不计入 MVP 验收"，基线段与"尚未通过的验收"标注 v0.0 口径并新增三轨验收项。

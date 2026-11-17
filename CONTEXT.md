@@ -1,14 +1,17 @@
 # CONTEXT.md
 
-最后更新：2026-11-17（Asia/Taipei）
+最后更新：2026-11-18（Asia/Taipei）
 
-## 进行中：多曲评测（2026-11-18 开始，自主执行至交付）
+## 最近完成：多曲评测（2026-11-18，v0.1.0-public.6）
 
-- 用户授权：自主决策、可调用子 agent，最后交付；新增下载仍需确认。已获准下载 BabySlakh（work/datasets/babyslakh）与 MAESTRO 测试集最短 5 首（work/datasets/maestro-download）。
-- 脚本：`outputs/multi-song-eval/`（prepare.py → run_routes.py → score.py）。产物：`outputs/runs/multi-song-eval/items/`（25 段：钢琴 24、贝斯 19、鼓 19），进度 `run-status.json`，日志 `run.log`；run_routes 可重跑续跑。
-- 路线：基线 YourMT3；最优＝钢琴 B（SW→Transkun）＋ MuScriptor 贝斯/鼓。约 9 分钟/段。
-- 已发现：Slakh 贝斯 MIDI 比发声高一个八度（pYIN 核实），score.py 对 Slakh 贝斯参考 −12；YourMT3 用过 Slakh 训练集，BabySlakh 结果对基线有主场优势，需分来源报告；MuScriptor 鼓把 ride(51) 多识别为闭镲(42)。
-- 剩余步骤：跑完 → score.py 出 results.json → 写报告 → 独立复核（Codex 连不上 chatgpt.com 时改用子代理）→ 更新作品集/README/PRD → 合并 main、同步 gh-pages → 交付。
+- 报告 `outputs/multi-song-eval/README.md`，脚本 prepare.py → run_routes.py → score.py，另有 drum_confusions.py、bass_octave_check.py。数据在 `work/datasets/`，转写产物在 `outputs/runs/multi-song-eval/items/`，均不入库。
+- 结论：MAESTRO 测试集 5 首真实钢琴上，钢琴 B 0.983 对基线 0.975，5 首全部提升；BabySlakh 20 段上基线三轨领先（钢琴 0.891/0.794，贝斯 0.978/0.697，鼓 0.852/0.553）。BabySlakh 在 YourMT3 训练预设内，结果偏向基线，不能据此判定 MuScriptor 更差。
+- 口径要点：
+  - Slakh 贝斯参考 −12，有测频和基线偏移两组证据。
+  - 这是按参考乐器列表选轨的条件评测。
+  - Track00017/00018 按 MuScriptor 原始日志音符打分。
+- Codex 只读复核 852119e，结果一致；5 条意见已在 public.6 中修复。
+- 下一步候选：不在训练集里的真实录音多轨数据（URMP 在 YourMT3 预设内，不适合）；端到端评测（不依赖参考乐器列表）；钢琴 B 只对原声钢琴启用；MuScriptor 入口缺轨时只替换存在的那一轨。
 
 ## 当前目标
 
@@ -43,7 +46,7 @@
 
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
 - `outputs/Noto-产品需求文档.md`：当前需求文档（PRD）。
-- `outputs/multi-song-eval/`：多曲评测脚本与报告（进行中）。
+- `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
 - `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`../作品集/Noto-音频转MIDI-作品集.pdf`：作品集 PDF。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
@@ -58,7 +61,7 @@
 ## 未完成事项
 
 - 将各轨研究路线整合为新歌曲的统一流程，并检查长音频接缝。
-- 建立多曲、专业标注或校对的独立评测集，进行听辨和人工修改时间验证。
+- 公开数据多曲评测首轮已完成；仍需真实录音多轨、专业标注或校对的独立评测集，以及听辨和人工修改时间验证。
 - 单独确认各模型权重、依赖及商业使用许可；MuScriptor 当前权重标注为非商业使用。
 
 ## 风险与注意点
