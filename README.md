@@ -106,7 +106,7 @@ sh scripts/setup_v01.sh
 .venv/bin/python scripts/evaluate_v01.py reference.mid outputs/runs/my-v01/多乐器.mid --duration 60.0304375 --scale .9995 --shift .14 --output outputs/runs/my-v01/评测.json
 ```
 
-`--candidates`仅用于以输入及候选哈希绑定的历史候选清单复原，耗时不包括历史推理；不冒充全流程耗时。`--stems`复用必须通过输入与六个stem的来源哈希校验。所有实际产物和权重留本地，代码/配置/摘要推送私有GitHub。
+`--candidates`仅用于以输入及候选哈希绑定的历史候选清单复原，耗时不包括历史推理；不冒充全流程耗时。`--stems`复用必须通过输入与六个stem的来源哈希校验。所有实际产物和权重留本地，代码/配置/摘要推送公开 GitHub 仓库。
 
 ## 当前固定钢琴路线（2026-10-16）
 

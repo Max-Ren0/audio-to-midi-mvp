@@ -1,9 +1,9 @@
 # Noto 产品需求文档（PRD）
 
-> 文档版本：1.0（需求整理稿）
-> 更新日期：2026-11-06
+> 文档版本：1.1（需求整理稿）
+> 更新日期：2026-11-17
 > 项目阶段：本地研究原型；尚未完成任意歌曲一键生成六轨 MIDI 的产品化验收
-> GitHub：[Max-Ren0/audio-to-midi-mvp](https://github.com/Max-Ren0/audio-to-midi-mvp)（私有仓库）
+> GitHub：[Max-Ren0/audio-to-midi-mvp](https://github.com/Max-Ren0/audio-to-midi-mvp)（公开仓库）
 
 ## 1. 产品概述
 
@@ -200,7 +200,7 @@ Noto 是一个面向音乐学习和创作场景的音频转 MIDI 产品探索。
 
 ## 10. 版本维护与协作
 
-- 私有仓库：[Max-Ren0/audio-to-midi-mvp](https://github.com/Max-Ren0/audio-to-midi-mvp)，默认分支为 `main`。
+- 公开仓库：[Max-Ren0/audio-to-midi-mvp](https://github.com/Max-Ren0/audio-to-midi-mvp)，默认分支为 `main`。
 - 每个可用的阶段性版本，在完成必要检查后记录变更、提交并推送；重要节点使用清晰的版本标签。
 - 代码修改前检查 Git 状态并保留快照；不覆盖已有用户素材或历史实验结果。
 - `CHANGELOG.md` 记录版本变化，`CONTEXT.md` 记录当前目标、决策、验证结果及限制。
