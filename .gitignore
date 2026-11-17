@@ -31,3 +31,6 @@ __pycache__/
 outputs/runs/
 .pytest_cache/
 *.egg-info/
+
+# Self-composed public demo audio (original material, no third-party music)
+!outputs/portfolio-preview/demo/*.mp3
