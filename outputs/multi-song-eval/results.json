@@ -1,0 +1,2770 @@
+{
+ "reference_corrections": {
+  "BabySlakh bass": -12
+ },
+ "metric": "one-to-one, same category and pitch (drums: GM key), onset <= 50 ms; drums_kit_piece maps GM keys to kick/snare/hi-hat/tom/cymbal; drums_kit_only additionally drops non-kit percussion keys from reference and prediction",
+ "routes": {
+  "baseline": "YourMT3 yptf_moe_nops whole mix",
+  "best": "piano: piano-B (BS-RoFormer SW -> Transkun 2.0); bass+drums: MuScriptor Medium; other tracks: baseline"
+ },
+ "aggregate": {
+  "baseline": {
+   "piano": {
+    "songs": 24,
+    "tp": 9929,
+    "fp": 491,
+    "fn": 914,
+    "micro_f1": 0.9339,
+    "precision": 0.9529,
+    "recall": 0.9157,
+    "mean_song_f1": 0.9254
+   },
+   "bass": {
+    "songs": 19,
+    "tp": 2113,
+    "fp": 32,
+    "fn": 64,
+    "micro_f1": 0.9778,
+    "precision": 0.9851,
+    "recall": 0.9706,
+    "mean_song_f1": 0.9764
+   },
+   "drums": {
+    "songs": 19,
+    "tp": 7275,
+    "fp": 1046,
+    "fn": 1487,
+    "micro_f1": 0.8517,
+    "precision": 0.8743,
+    "recall": 0.8303,
+    "mean_song_f1": 0.8227
+   },
+   "electric_guitar": {
+    "songs": 15,
+    "tp": 2487,
+    "fp": 233,
+    "fn": 514,
+    "micro_f1": 0.8694,
+    "precision": 0.9143,
+    "recall": 0.8287,
+    "mean_song_f1": 0.8667
+   },
+   "drums_kit_piece": {
+    "songs": 19,
+    "tp": 7969,
+    "fp": 352,
+    "fn": 793,
+    "micro_f1": 0.933,
+    "precision": 0.9577,
+    "recall": 0.9095,
+    "mean_song_f1": 0.9263
+   },
+   "drums_kit_only": {
+    "songs": 19,
+    "tp": 6111,
+    "fp": 165,
+    "fn": 555,
+    "micro_f1": 0.9444,
+    "precision": 0.9737,
+    "recall": 0.9167,
+    "mean_song_f1": 0.9444
+   },
+   "strings": {
+    "songs": 14,
+    "tp": 943,
+    "fp": 135,
+    "fn": 292,
+    "micro_f1": 0.8154,
+    "precision": 0.8748,
+    "recall": 0.7636,
+    "mean_song_f1": 0.8087
+   },
+   "acoustic_guitar": {
+    "songs": 7,
+    "tp": 3081,
+    "fp": 274,
+    "fn": 1043,
+    "micro_f1": 0.8239,
+    "precision": 0.9183,
+    "recall": 0.7471,
+    "mean_song_f1": 0.8546
+   }
+  },
+  "best": {
+   "piano": {
+    "songs": 24,
+    "tp": 9742,
+    "fp": 1372,
+    "fn": 1101,
+    "micro_f1": 0.8874,
+    "precision": 0.8766,
+    "recall": 0.8985,
+    "mean_song_f1": 0.8206
+   },
+   "bass": {
+    "songs": 19,
+    "tp": 1573,
+    "fp": 767,
+    "fn": 604,
+    "micro_f1": 0.6965,
+    "precision": 0.6722,
+    "recall": 0.7226,
+    "mean_song_f1": 0.7468
+   },
+   "drums": {
+    "songs": 19,
+    "tp": 4040,
+    "fp": 1806,
+    "fn": 4722,
+    "micro_f1": 0.5531,
+    "precision": 0.6911,
+    "recall": 0.4611,
+    "mean_song_f1": 0.5361
+   },
+   "electric_guitar": {
+    "songs": 15,
+    "tp": 2487,
+    "fp": 233,
+    "fn": 514,
+    "micro_f1": 0.8694,
+    "precision": 0.9143,
+    "recall": 0.8287,
+    "mean_song_f1": 0.8667
+   },
+   "drums_kit_piece": {
+    "songs": 19,
+    "tp": 4731,
+    "fp": 1115,
+    "fn": 4031,
+    "micro_f1": 0.6477,
+    "precision": 0.8093,
+    "recall": 0.5399,
+    "mean_song_f1": 0.6485
+   },
+   "drums_kit_only": {
+    "songs": 19,
+    "tp": 4718,
+    "fp": 997,
+    "fn": 1948,
+    "micro_f1": 0.7621,
+    "precision": 0.8255,
+    "recall": 0.7078,
+    "mean_song_f1": 0.7443
+   },
+   "strings": {
+    "songs": 14,
+    "tp": 943,
+    "fp": 135,
+    "fn": 292,
+    "micro_f1": 0.8154,
+    "precision": 0.8748,
+    "recall": 0.7636,
+    "mean_song_f1": 0.8087
+   },
+   "acoustic_guitar": {
+    "songs": 7,
+    "tp": 3081,
+    "fp": 274,
+    "fn": 1043,
+    "micro_f1": 0.8239,
+    "precision": 0.9183,
+    "recall": 0.7471,
+    "mean_song_f1": 0.8546
+   }
+  }
+ },
+ "by_source": {
+  "baseline/BabySlakh": {
+   "piano": {
+    "songs": 19,
+    "tp": 4640,
+    "fp": 443,
+    "fn": 695,
+    "micro_f1": 0.8908,
+    "precision": 0.9128,
+    "recall": 0.8697,
+    "mean_song_f1": 0.9125
+   },
+   "bass": {
+    "songs": 19,
+    "tp": 2113,
+    "fp": 32,
+    "fn": 64,
+    "micro_f1": 0.9778,
+    "precision": 0.9851,
+    "recall": 0.9706,
+    "mean_song_f1": 0.9764
+   },
+   "drums": {
+    "songs": 19,
+    "tp": 7275,
+    "fp": 1046,
+    "fn": 1487,
+    "micro_f1": 0.8517,
+    "precision": 0.8743,
+    "recall": 0.8303,
+    "mean_song_f1": 0.8227
+   },
+   "electric_guitar": {
+    "songs": 15,
+    "tp": 2487,
+    "fp": 233,
+    "fn": 514,
+    "micro_f1": 0.8694,
+    "precision": 0.9143,
+    "recall": 0.8287,
+    "mean_song_f1": 0.8667
+   },
+   "strings": {
+    "songs": 14,
+    "tp": 943,
+    "fp": 135,
+    "fn": 292,
+    "micro_f1": 0.8154,
+    "precision": 0.8748,
+    "recall": 0.7636,
+    "mean_song_f1": 0.8087
+   },
+   "acoustic_guitar": {
+    "songs": 7,
+    "tp": 3081,
+    "fp": 274,
+    "fn": 1043,
+    "micro_f1": 0.8239,
+    "precision": 0.9183,
+    "recall": 0.7471,
+    "mean_song_f1": 0.8546
+   }
+  },
+  "best/BabySlakh": {
+   "piano": {
+    "songs": 19,
+    "tp": 4402,
+    "fp": 1356,
+    "fn": 933,
+    "micro_f1": 0.7937,
+    "precision": 0.7645,
+    "recall": 0.8251,
+    "mean_song_f1": 0.7782
+   },
+   "bass": {
+    "songs": 19,
+    "tp": 1573,
+    "fp": 767,
+    "fn": 604,
+    "micro_f1": 0.6965,
+    "precision": 0.6722,
+    "recall": 0.7226,
+    "mean_song_f1": 0.7468
+   },
+   "drums": {
+    "songs": 19,
+    "tp": 4040,
+    "fp": 1806,
+    "fn": 4722,
+    "micro_f1": 0.5531,
+    "precision": 0.6911,
+    "recall": 0.4611,
+    "mean_song_f1": 0.5361
+   },
+   "electric_guitar": {
+    "songs": 15,
+    "tp": 2487,
+    "fp": 233,
+    "fn": 514,
+    "micro_f1": 0.8694,
+    "precision": 0.9143,
+    "recall": 0.8287,
+    "mean_song_f1": 0.8667
+   },
+   "strings": {
+    "songs": 14,
+    "tp": 943,
+    "fp": 135,
+    "fn": 292,
+    "micro_f1": 0.8154,
+    "precision": 0.8748,
+    "recall": 0.7636,
+    "mean_song_f1": 0.8087
+   },
+   "acoustic_guitar": {
+    "songs": 7,
+    "tp": 3081,
+    "fp": 274,
+    "fn": 1043,
+    "micro_f1": 0.8239,
+    "precision": 0.9183,
+    "recall": 0.7471,
+    "mean_song_f1": 0.8546
+   }
+  },
+  "baseline/MAESTRO": {
+   "piano": {
+    "songs": 5,
+    "tp": 5289,
+    "fp": 48,
+    "fn": 219,
+    "micro_f1": 0.9754,
+    "precision": 0.991,
+    "recall": 0.9602,
+    "mean_song_f1": 0.9748
+   }
+  },
+  "best/MAESTRO": {
+   "piano": {
+    "songs": 5,
+    "tp": 5340,
+    "fp": 16,
+    "fn": 168,
+    "micro_f1": 0.9831,
+    "precision": 0.997,
+    "recall": 0.9695,
+    "mean_song_f1": 0.982
+   }
+  }
+ },
+ "missing_outputs": [],
+ "muscriptor_scored_from_raw_log": [
+  "slakh-Track00017",
+  "slakh-Track00018"
+ ],
+ "items": [
+  {
+   "id": "slakh-Track00001",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 89,
+      "fp": 4,
+      "fn": 8,
+      "f1": 0.9368421052631579,
+      "modal_pitch_offset": [
+       0,
+       89
+      ]
+     },
+     "best": {
+      "tp": 94,
+      "fp": 3,
+      "fn": 3,
+      "f1": 0.9690721649484536,
+      "modal_pitch_offset": [
+       0,
+       94
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 78,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.9811320754716981,
+      "modal_pitch_offset": [
+       0,
+       78
+      ]
+     },
+     "best": {
+      "tp": 79,
+      "fp": 7,
+      "fn": 2,
+      "f1": 0.9461077844311377,
+      "modal_pitch_offset": [
+       0,
+       79
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 218,
+      "fp": 43,
+      "fn": 53,
+      "f1": 0.8195488721804511,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9548872180451128,
+     "baseline_kit_only_f1": 0.9632829373650108,
+     "best": {
+      "tp": 77,
+      "fp": 194,
+      "fn": 194,
+      "f1": 0.28413284132841327,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.42066420664206644,
+     "best_kit_only_f1": 0.4523809523809524
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 52,
+      "fp": 3,
+      "fn": 17,
+      "f1": 0.8387096774193549,
+      "modal_pitch_offset": [
+       0,
+       52
+      ]
+     },
+     "best": {
+      "tp": 52,
+      "fp": 3,
+      "fn": 17,
+      "f1": 0.8387096774193549,
+      "modal_pitch_offset": [
+       0,
+       52
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00002",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 152,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.990228013029316,
+      "modal_pitch_offset": [
+       0,
+       152
+      ]
+     },
+     "best": {
+      "tp": 152,
+      "fp": 22,
+      "fn": 3,
+      "f1": 0.9240121580547113,
+      "modal_pitch_offset": [
+       0,
+       152
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 81,
+      "fp": 2,
+      "fn": 1,
+      "f1": 0.9818181818181818,
+      "modal_pitch_offset": [
+       0,
+       81
+      ]
+     },
+     "best": {
+      "tp": 77,
+      "fp": 21,
+      "fn": 5,
+      "f1": 0.8555555555555555,
+      "modal_pitch_offset": [
+       0,
+       77
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 698,
+      "fp": 19,
+      "fn": 49,
+      "f1": 0.953551912568306,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9617486338797814,
+     "baseline_kit_only_f1": 0.9860935524652339,
+     "best": {
+      "tp": 324,
+      "fp": 121,
+      "fn": 423,
+      "f1": 0.5436241610738255,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.5536912751677853,
+     "best_kit_only_f1": 0.8775235531628532
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 228,
+      "fp": 0,
+      "fn": 2,
+      "f1": 0.9956331877729258,
+      "modal_pitch_offset": [
+       0,
+       228
+      ]
+     },
+     "best": {
+      "tp": 228,
+      "fp": 0,
+      "fn": 2,
+      "f1": 0.9956331877729258,
+      "modal_pitch_offset": [
+       0,
+       228
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 6,
+      "f1": 0.8518518518518519,
+      "modal_pitch_offset": [
+       0,
+       23
+      ]
+     },
+     "best": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 6,
+      "f1": 0.8518518518518519,
+      "modal_pitch_offset": [
+       0,
+       23
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00003",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 438,
+      "fp": 158,
+      "fn": 190,
+      "f1": 0.7156862745098039,
+      "modal_pitch_offset": [
+       0,
+       438
+      ]
+     },
+     "best": {
+      "tp": 542,
+      "fp": 62,
+      "fn": 86,
+      "f1": 0.8798701298701299,
+      "modal_pitch_offset": [
+       0,
+       542
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 151,
+      "fp": 4,
+      "fn": 5,
+      "f1": 0.9710610932475884,
+      "modal_pitch_offset": [
+       0,
+       151
+      ]
+     },
+     "best": {
+      "tp": 77,
+      "fp": 171,
+      "fn": 79,
+      "f1": 0.3811881188118812,
+      "modal_pitch_offset": [
+       0,
+       77
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 349,
+      "fp": 97,
+      "fn": 124,
+      "f1": 0.7595212187159956,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9619151251360174,
+     "baseline_kit_only_f1": 0.9619151251360174,
+     "best": {
+      "tp": 275,
+      "fp": 215,
+      "fn": 198,
+      "f1": 0.5711318795430945,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.7601246105919003,
+     "best_kit_only_f1": 0.7601246105919003
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 408,
+      "fp": 78,
+      "fn": 52,
+      "f1": 0.8625792811839323,
+      "modal_pitch_offset": [
+       0,
+       408
+      ]
+     },
+     "best": {
+      "tp": 408,
+      "fp": 78,
+      "fn": 52,
+      "f1": 0.8625792811839323,
+      "modal_pitch_offset": [
+       0,
+       408
+      ]
+     }
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 446,
+      "fp": 59,
+      "fn": 109,
+      "f1": 0.8415094339622642,
+      "modal_pitch_offset": [
+       0,
+       465
+      ]
+     },
+     "best": {
+      "tp": 446,
+      "fp": 59,
+      "fn": 109,
+      "f1": 0.8415094339622642,
+      "modal_pitch_offset": [
+       0,
+       465
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00004",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 62,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.9763779527559056,
+      "modal_pitch_offset": [
+       0,
+       62
+      ]
+     },
+     "best": {
+      "tp": 65,
+      "fp": 37,
+      "fn": 0,
+      "f1": 0.7784431137724551,
+      "modal_pitch_offset": [
+       0,
+       65
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 75,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.9803921568627451,
+      "modal_pitch_offset": [
+       0,
+       75
+      ]
+     },
+     "best": {
+      "tp": 76,
+      "fp": 8,
+      "fn": 1,
+      "f1": 0.9440993788819876,
+      "modal_pitch_offset": [
+       0,
+       76
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 449,
+      "fp": 1,
+      "fn": 13,
+      "f1": 0.9846491228070176,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9846491228070176,
+     "baseline_kit_only_f1": 0.9935205183585313,
+     "best": {
+      "tp": 210,
+      "fp": 64,
+      "fn": 252,
+      "f1": 0.5706521739130435,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.6032608695652174,
+     "best_kit_only_f1": 0.8774703557312253
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 80,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.9815950920245399,
+      "modal_pitch_offset": [
+       0,
+       80
+      ]
+     },
+     "best": {
+      "tp": 80,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.9815950920245399,
+      "modal_pitch_offset": [
+       0,
+       80
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 28,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "modal_pitch_offset": [
+       0,
+       28
+      ]
+     },
+     "best": {
+      "tp": 28,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "modal_pitch_offset": [
+       0,
+       28
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00005",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 571,
+      "fp": 49,
+      "fn": 16,
+      "f1": 0.9461474730737366,
+      "modal_pitch_offset": [
+       0,
+       571
+      ]
+     },
+     "best": {
+      "tp": 579,
+      "fp": 30,
+      "fn": 8,
+      "f1": 0.9682274247491639,
+      "modal_pitch_offset": [
+       0,
+       579
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 123,
+      "fp": 11,
+      "fn": 12,
+      "f1": 0.9144981412639405,
+      "modal_pitch_offset": [
+       0,
+       123
+      ]
+     },
+     "best": {
+      "tp": 72,
+      "fp": 74,
+      "fn": 63,
+      "f1": 0.5124555160142349,
+      "modal_pitch_offset": [
+       0,
+       72
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 567,
+      "fp": 69,
+      "fn": 91,
+      "f1": 0.8763523956723338,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9690880989180835,
+     "baseline_kit_only_f1": 0.9540229885057471,
+     "best": {
+      "tp": 256,
+      "fp": 83,
+      "fn": 402,
+      "f1": 0.5135406218655968,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.6579739217652959,
+     "best_kit_only_f1": 0.9452449567723343
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 551,
+      "fp": 98,
+      "fn": 107,
+      "f1": 0.8431522570772763,
+      "modal_pitch_offset": [
+       0,
+       551
+      ]
+     },
+     "best": {
+      "tp": 551,
+      "fp": 98,
+      "fn": 107,
+      "f1": 0.8431522570772763,
+      "modal_pitch_offset": [
+       0,
+       551
+      ]
+     }
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 134,
+      "fp": 9,
+      "fn": 3,
+      "f1": 0.9571428571428572,
+      "modal_pitch_offset": [
+       0,
+       134
+      ]
+     },
+     "best": {
+      "tp": 134,
+      "fp": 9,
+      "fn": 3,
+      "f1": 0.9571428571428572,
+      "modal_pitch_offset": [
+       0,
+       134
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 74,
+      "fp": 10,
+      "fn": 20,
+      "f1": 0.8314606741573034,
+      "modal_pitch_offset": [
+       0,
+       74
+      ]
+     },
+     "best": {
+      "tp": 74,
+      "fp": 10,
+      "fn": 20,
+      "f1": 0.8314606741573034,
+      "modal_pitch_offset": [
+       0,
+       74
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00006",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 178,
+      "fp": 7,
+      "fn": 26,
+      "f1": 0.9151670951156813,
+      "modal_pitch_offset": [
+       0,
+       178
+      ]
+     },
+     "best": {
+      "tp": 196,
+      "fp": 44,
+      "fn": 8,
+      "f1": 0.8828828828828829,
+      "modal_pitch_offset": [
+       0,
+       196
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 95,
+      "fp": 0,
+      "fn": 4,
+      "f1": 0.979381443298969,
+      "modal_pitch_offset": [
+       0,
+       95
+      ]
+     },
+     "best": {
+      "tp": 79,
+      "fp": 19,
+      "fn": 20,
+      "f1": 0.8020304568527918,
+      "modal_pitch_offset": [
+       0,
+       79
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 140,
+      "fp": 49,
+      "fn": 65,
+      "f1": 0.7106598984771574,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.8984771573604061,
+     "baseline_kit_only_f1": 0.8984771573604061,
+     "best": {
+      "tp": 135,
+      "fp": 58,
+      "fn": 70,
+      "f1": 0.678391959798995,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.8944723618090452,
+     "best_kit_only_f1": 0.8944723618090452
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 55,
+      "fp": 16,
+      "fn": 49,
+      "f1": 0.6285714285714286,
+      "modal_pitch_offset": [
+       0,
+       91
+      ]
+     },
+     "best": {
+      "tp": 55,
+      "fp": 16,
+      "fn": 49,
+      "f1": 0.6285714285714286,
+      "modal_pitch_offset": [
+       0,
+       91
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 26,
+      "fp": 9,
+      "fn": 21,
+      "f1": 0.6341463414634146,
+      "modal_pitch_offset": [
+       0,
+       28
+      ]
+     },
+     "best": {
+      "tp": 26,
+      "fp": 9,
+      "fn": 21,
+      "f1": 0.6341463414634146,
+      "modal_pitch_offset": [
+       0,
+       28
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00007",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 395,
+      "fp": 30,
+      "fn": 61,
+      "f1": 0.8967082860385925,
+      "modal_pitch_offset": [
+       0,
+       397
+      ]
+     },
+     "best": {
+      "tp": 302,
+      "fp": 33,
+      "fn": 154,
+      "f1": 0.7635903919089759,
+      "modal_pitch_offset": [
+       0,
+       304
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 109,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.9864253393665159,
+      "modal_pitch_offset": [
+       0,
+       109
+      ]
+     },
+     "best": {
+      "tp": 81,
+      "fp": 72,
+      "fn": 30,
+      "f1": 0.6136363636363636,
+      "modal_pitch_offset": [
+       0,
+       81
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 318,
+      "fp": 127,
+      "fn": 119,
+      "f1": 0.7210884353741497,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.7709750566893424,
+     "baseline_kit_only_f1": 0.8513931888544891,
+     "best": {
+      "tp": 177,
+      "fp": 171,
+      "fn": 260,
+      "f1": 0.45095541401273886,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.5299363057324841,
+     "best_kit_only_f1": 0.6199701937406855
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 169,
+      "fp": 47,
+      "fn": 90,
+      "f1": 0.7115789473684211,
+      "modal_pitch_offset": [
+       0,
+       169
+      ]
+     },
+     "best": {
+      "tp": 169,
+      "fp": 47,
+      "fn": 90,
+      "f1": 0.7115789473684211,
+      "modal_pitch_offset": [
+       0,
+       169
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00008",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 403,
+      "fp": 31,
+      "fn": 205,
+      "f1": 0.7735124760076776,
+      "modal_pitch_offset": [
+       0,
+       510
+      ]
+     },
+     "best": {
+      "tp": 384,
+      "fp": 29,
+      "fn": 224,
+      "f1": 0.752203721841332,
+      "modal_pitch_offset": [
+       0,
+       492
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 47,
+      "fp": 5,
+      "fn": 5,
+      "f1": 0.9038461538461539,
+      "modal_pitch_offset": [
+       0,
+       47
+      ]
+     },
+     "best": {
+      "tp": 20,
+      "fp": 26,
+      "fn": 32,
+      "f1": 0.40816326530612246,
+      "modal_pitch_offset": [
+       -12,
+       23
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 163,
+      "fp": 132,
+      "fn": 147,
+      "f1": 0.5388429752066116,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9256198347107438,
+     "baseline_kit_only_f1": 0.9281314168377823,
+     "best": {
+      "tp": 56,
+      "fp": 107,
+      "fn": 254,
+      "f1": 0.23678646934460887,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.6849894291754757,
+     "best_kit_only_f1": 0.7921760391198044
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 84,
+      "fp": 31,
+      "fn": 59,
+      "f1": 0.6511627906976745,
+      "modal_pitch_offset": [
+       0,
+       84
+      ]
+     },
+     "best": {
+      "tp": 84,
+      "fp": 31,
+      "fn": 59,
+      "f1": 0.6511627906976745,
+      "modal_pitch_offset": [
+       0,
+       84
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 165,
+      "fp": 7,
+      "fn": 20,
+      "f1": 0.9243697478991597,
+      "modal_pitch_offset": [
+       0,
+       165
+      ]
+     },
+     "best": {
+      "tp": 165,
+      "fp": 7,
+      "fn": 20,
+      "f1": 0.9243697478991597,
+      "modal_pitch_offset": [
+       0,
+       165
+      ]
+     }
+    }
+   },
+   "absent_category_extra_notes": {
+    "baseline": {
+     "acoustic_guitar": 11
+    },
+    "best": {
+     "acoustic_guitar": 11
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00009",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 307,
+      "fp": 7,
+      "fn": 1,
+      "f1": 0.9871382636655949,
+      "modal_pitch_offset": [
+       0,
+       307
+      ]
+     },
+     "best": {
+      "tp": 308,
+      "fp": 241,
+      "fn": 0,
+      "f1": 0.7187864644107351,
+      "modal_pitch_offset": [
+       0,
+       308
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 86,
+      "fp": 0,
+      "fn": 2,
+      "f1": 0.9885057471264368,
+      "modal_pitch_offset": [
+       0,
+       86
+      ]
+     },
+     "best": {
+      "tp": 65,
+      "fp": 1,
+      "fn": 23,
+      "f1": 0.8441558441558441,
+      "modal_pitch_offset": [
+       0,
+       65
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 46,
+      "fp": 8,
+      "fn": 16,
+      "f1": 0.7931034482758621,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9310344827586207,
+     "baseline_kit_only_f1": 0.9908256880733946,
+     "best": {
+      "tp": 37,
+      "fp": 79,
+      "fn": 25,
+      "f1": 0.4157303370786517,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.4943820224719101,
+     "best_kit_only_f1": 0.5146198830409356
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 192,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.9922480620155039,
+      "modal_pitch_offset": [
+       0,
+       192
+      ]
+     },
+     "best": {
+      "tp": 192,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.9922480620155039,
+      "modal_pitch_offset": [
+       0,
+       192
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.8571428571428571,
+      "modal_pitch_offset": [
+       0,
+       9
+      ]
+     },
+     "best": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 2,
+      "f1": 0.8571428571428571,
+      "modal_pitch_offset": [
+       0,
+       9
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00010",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 55,
+      "fp": 13,
+      "fn": 13,
+      "f1": 0.8088235294117647,
+      "modal_pitch_offset": [
+       0,
+       55
+      ]
+     },
+     "best": {
+      "tp": 58,
+      "fp": 52,
+      "fn": 10,
+      "f1": 0.651685393258427,
+      "modal_pitch_offset": [
+       0,
+       58
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 106,
+      "fp": 1,
+      "fn": 1,
+      "f1": 0.9906542056074766,
+      "modal_pitch_offset": [
+       0,
+       106
+      ]
+     },
+     "best": {
+      "tp": 93,
+      "fp": 17,
+      "fn": 14,
+      "f1": 0.8571428571428571,
+      "modal_pitch_offset": [
+       0,
+       93
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 411,
+      "fp": 24,
+      "fn": 29,
+      "f1": 0.9394285714285714,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9508571428571428,
+     "baseline_kit_only_f1": 0.9607390300230947,
+     "best": {
+      "tp": 290,
+      "fp": 15,
+      "fn": 150,
+      "f1": 0.7785234899328859,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.7785234899328859,
+     "best_kit_only_f1": 0.7785234899328859
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 476,
+      "fp": 16,
+      "fn": 14,
+      "f1": 0.9694501018329938,
+      "modal_pitch_offset": [
+       0,
+       476
+      ]
+     },
+     "best": {
+      "tp": 476,
+      "fp": 16,
+      "fn": 14,
+      "f1": 0.9694501018329938,
+      "modal_pitch_offset": [
+       0,
+       476
+      ]
+     }
+    }
+   },
+   "absent_category_extra_notes": {
+    "baseline": {
+     "strings": 1
+    },
+    "best": {
+     "strings": 1
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00011",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 249,
+      "fp": 2,
+      "fn": 5,
+      "f1": 0.9861386138613861,
+      "modal_pitch_offset": [
+       0,
+       249
+      ]
+     },
+     "best": {
+      "tp": 249,
+      "fp": 176,
+      "fn": 5,
+      "f1": 0.7334315169366715,
+      "modal_pitch_offset": [
+       0,
+       249
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 156,
+      "fp": 2,
+      "fn": 5,
+      "f1": 0.9780564263322884,
+      "modal_pitch_offset": [
+       0,
+       156
+      ]
+     },
+     "best": {
+      "tp": 141,
+      "fp": 40,
+      "fn": 20,
+      "f1": 0.8245614035087719,
+      "modal_pitch_offset": [
+       0,
+       141
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 471,
+      "fp": 95,
+      "fn": 95,
+      "f1": 0.8321554770318021,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9964664310954063,
+     "baseline_kit_only_f1": 0.9966329966329966,
+     "best": {
+      "tp": 330,
+      "fp": 208,
+      "fn": 236,
+      "f1": 0.5978260869565217,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.7644927536231884,
+     "best_kit_only_f1": 0.8585961342828077
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 710,
+      "fp": 1,
+      "fn": 712,
+      "f1": 0.6657290201593999,
+      "modal_pitch_offset": [
+       0,
+       1420
+      ]
+     },
+     "best": {
+      "tp": 710,
+      "fp": 1,
+      "fn": 712,
+      "f1": 0.6657290201593999,
+      "modal_pitch_offset": [
+       0,
+       1420
+      ]
+     }
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 206,
+      "fp": 17,
+      "fn": 16,
+      "f1": 0.9258426966292135,
+      "modal_pitch_offset": [
+       0,
+       206
+      ]
+     },
+     "best": {
+      "tp": 206,
+      "fp": 17,
+      "fn": 16,
+      "f1": 0.9258426966292135,
+      "modal_pitch_offset": [
+       0,
+       206
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00012",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 249,
+      "fp": 25,
+      "fn": 2,
+      "f1": 0.9485714285714286,
+      "modal_pitch_offset": [
+       0,
+       249
+      ]
+     },
+     "best": {
+      "tp": 251,
+      "fp": 17,
+      "fn": 0,
+      "f1": 0.9672447013487476,
+      "modal_pitch_offset": [
+       0,
+       251
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 214,
+      "fp": 1,
+      "fn": 4,
+      "f1": 0.9884526558891455,
+      "modal_pitch_offset": [
+       0,
+       214
+      ]
+     },
+     "best": {
+      "tp": 113,
+      "fp": 62,
+      "fn": 105,
+      "f1": 0.5750636132315522,
+      "modal_pitch_offset": [
+       0,
+       113
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 556,
+      "fp": 50,
+      "fn": 33,
+      "f1": 0.9305439330543933,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9305439330543933,
+     "baseline_kit_only_f1": 0.989406779661017,
+     "best": {
+      "tp": 469,
+      "fp": 31,
+      "fn": 120,
+      "f1": 0.8613406795224977,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.8705234159779615,
+     "best_kit_only_f1": 0.9851694915254238
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 342,
+      "fp": 1,
+      "fn": 118,
+      "f1": 0.8518057285180572,
+      "modal_pitch_offset": [
+       0,
+       457
+      ]
+     },
+     "best": {
+      "tp": 342,
+      "fp": 1,
+      "fn": 118,
+      "f1": 0.8518057285180572,
+      "modal_pitch_offset": [
+       0,
+       457
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 55,
+      "fp": 9,
+      "fn": 21,
+      "f1": 0.7857142857142857,
+      "modal_pitch_offset": [
+       0,
+       60
+      ]
+     },
+     "best": {
+      "tp": 55,
+      "fp": 9,
+      "fn": 21,
+      "f1": 0.7857142857142857,
+      "modal_pitch_offset": [
+       0,
+       60
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00013",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 370,
+      "fp": 5,
+      "fn": 0,
+      "f1": 0.9932885906040269,
+      "modal_pitch_offset": [
+       0,
+       370
+      ]
+     },
+     "best": {
+      "tp": 363,
+      "fp": 115,
+      "fn": 7,
+      "f1": 0.8561320754716981,
+      "modal_pitch_offset": [
+       0,
+       363
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 158,
+      "fp": 3,
+      "fn": 8,
+      "f1": 0.9663608562691132,
+      "modal_pitch_offset": [
+       0,
+       158
+      ]
+     },
+     "best": {
+      "tp": 144,
+      "fp": 17,
+      "fn": 22,
+      "f1": 0.8807339449541285,
+      "modal_pitch_offset": [
+       0,
+       144
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 619,
+      "fp": 40,
+      "fn": 65,
+      "f1": 0.9218168279970216,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9233060312732688,
+     "baseline_kit_only_f1": 0.9522900763358778,
+     "best": {
+      "tp": 400,
+      "fp": 70,
+      "fn": 284,
+      "f1": 0.6932409012131716,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.7365684575389948,
+     "best_kit_only_f1": 0.8449304174950298
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 413,
+      "fp": 22,
+      "fn": 58,
+      "f1": 0.9116997792494481,
+      "modal_pitch_offset": [
+       0,
+       413
+      ]
+     },
+     "best": {
+      "tp": 413,
+      "fp": 22,
+      "fn": 58,
+      "f1": 0.9116997792494481,
+      "modal_pitch_offset": [
+       0,
+       413
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00014",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "bass",
+    "drums",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 229,
+      "fp": 72,
+      "fn": 90,
+      "f1": 0.7387096774193549,
+      "modal_pitch_offset": [
+       0,
+       229
+      ]
+     },
+     "best": {
+      "tp": 275,
+      "fp": 106,
+      "fn": 44,
+      "f1": 0.7857142857142857,
+      "modal_pitch_offset": [
+       0,
+       275
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 75,
+      "fp": 0,
+      "fn": 0,
+      "f1": 1.0,
+      "modal_pitch_offset": [
+       0,
+       75
+      ]
+     },
+     "best": {
+      "tp": 68,
+      "fp": 7,
+      "fn": 7,
+      "f1": 0.9066666666666666,
+      "modal_pitch_offset": [
+       0,
+       68
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 345,
+      "fp": 15,
+      "fn": 78,
+      "f1": 0.8812260536398467,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.8991060025542784,
+     "baseline_kit_only_f1": 0.9146853146853147,
+     "best": {
+      "tp": 161,
+      "fp": 91,
+      "fn": 262,
+      "f1": 0.47703703703703704,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.5007407407407407,
+     "best_kit_only_f1": 0.5339652448657188
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 359,
+      "fp": 35,
+      "fn": 69,
+      "f1": 0.8734793187347932,
+      "modal_pitch_offset": [
+       0,
+       359
+      ]
+     },
+     "best": {
+      "tp": 359,
+      "fp": 35,
+      "fn": 69,
+      "f1": 0.8734793187347932,
+      "modal_pitch_offset": [
+       0,
+       359
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 89,
+      "fp": 41,
+      "fn": 47,
+      "f1": 0.6691729323308271,
+      "modal_pitch_offset": [
+       0,
+       89
+      ]
+     },
+     "best": {
+      "tp": 89,
+      "fp": 41,
+      "fn": 47,
+      "f1": 0.6691729323308271,
+      "modal_pitch_offset": [
+       0,
+       89
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00015",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 191,
+      "fp": 13,
+      "fn": 13,
+      "f1": 0.9362745098039216,
+      "modal_pitch_offset": [
+       0,
+       191
+      ]
+     },
+     "best": {
+      "tp": 191,
+      "fp": 0,
+      "fn": 13,
+      "f1": 0.9670886075949368,
+      "modal_pitch_offset": [
+       0,
+       191
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 64,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.9922480620155039,
+      "modal_pitch_offset": [
+       0,
+       64
+      ]
+     },
+     "best": {
+      "tp": 59,
+      "fp": 5,
+      "fn": 6,
+      "f1": 0.9147286821705426,
+      "modal_pitch_offset": [
+       0,
+       59
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 187,
+      "fp": 16,
+      "fn": 47,
+      "f1": 0.8558352402745996,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9244851258581236,
+     "baseline_kit_only_f1": 0.9491525423728814,
+     "best": {
+      "tp": 116,
+      "fp": 45,
+      "fn": 118,
+      "f1": 0.5873417721518988,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.6784810126582278,
+     "best_kit_only_f1": 0.708994708994709
+    },
+    "strings": {
+     "baseline": {
+      "tp": 87,
+      "fp": 5,
+      "fn": 26,
+      "f1": 0.848780487804878,
+      "modal_pitch_offset": [
+       0,
+       90
+      ]
+     },
+     "best": {
+      "tp": 87,
+      "fp": 5,
+      "fn": 26,
+      "f1": 0.848780487804878,
+      "modal_pitch_offset": [
+       0,
+       90
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00016",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 332,
+      "fp": 0,
+      "fn": 2,
+      "f1": 0.996996996996997,
+      "modal_pitch_offset": [
+       0,
+       332
+      ]
+     },
+     "best": {
+      "tp": 91,
+      "fp": 243,
+      "fn": 243,
+      "f1": 0.27245508982035926,
+      "modal_pitch_offset": [
+       0,
+       91
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 156,
+      "fp": 0,
+      "fn": 3,
+      "f1": 0.9904761904761905,
+      "modal_pitch_offset": [
+       0,
+       156
+      ]
+     },
+     "best": {
+      "tp": 136,
+      "fp": 58,
+      "fn": 23,
+      "f1": 0.7705382436260623,
+      "modal_pitch_offset": [
+       0,
+       136
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 710,
+      "fp": 111,
+      "fn": 124,
+      "f1": 0.8580060422960725,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9861027190332327,
+     "baseline_kit_only_f1": 0.9898373983739838,
+     "best": {
+      "tp": 82,
+      "fp": 111,
+      "fn": 752,
+      "f1": 0.1596884128529698,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.25511197663096397,
+     "best_kit_only_f1": 0.3819241982507289
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 225,
+      "fp": 20,
+      "fn": 26,
+      "f1": 0.907258064516129,
+      "modal_pitch_offset": [
+       0,
+       225
+      ]
+     },
+     "best": {
+      "tp": 225,
+      "fp": 20,
+      "fn": 26,
+      "f1": 0.907258064516129,
+      "modal_pitch_offset": [
+       0,
+       225
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 86,
+      "fp": 19,
+      "fn": 41,
+      "f1": 0.7413793103448276,
+      "modal_pitch_offset": [
+       0,
+       86
+      ]
+     },
+     "best": {
+      "tp": 86,
+      "fp": 19,
+      "fn": 41,
+      "f1": 0.7413793103448276,
+      "modal_pitch_offset": [
+       0,
+       86
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00017",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "acoustic_guitar",
+    "drums",
+    "electric_guitar",
+    "strings"
+   ],
+   "tracks": {
+    "drums": {
+     "baseline": {
+      "tp": 266,
+      "fp": 15,
+      "fn": 227,
+      "f1": 0.6873385012919897,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.6873385012919897,
+     "baseline_kit_only_f1": 0.6882276843467011,
+     "best": {
+      "tp": 187,
+      "fp": 25,
+      "fn": 306,
+      "f1": 0.5304964539007092,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.5333333333333333,
+     "best_kit_only_f1": 0.5333333333333333
+    },
+    "acoustic_guitar": {
+     "baseline": {
+      "tp": 164,
+      "fp": 24,
+      "fn": 31,
+      "f1": 0.856396866840731,
+      "modal_pitch_offset": [
+       0,
+       164
+      ]
+     },
+     "best": {
+      "tp": 164,
+      "fp": 24,
+      "fn": 31,
+      "f1": 0.856396866840731,
+      "modal_pitch_offset": [
+       0,
+       164
+      ]
+     }
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 128,
+      "fp": 1,
+      "fn": 4,
+      "f1": 0.9808429118773946,
+      "modal_pitch_offset": [
+       0,
+       128
+      ]
+     },
+     "best": {
+      "tp": 128,
+      "fp": 1,
+      "fn": 4,
+      "f1": 0.9808429118773946,
+      "modal_pitch_offset": [
+       0,
+       128
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 134,
+      "fp": 12,
+      "fn": 15,
+      "f1": 0.9084745762711864,
+      "modal_pitch_offset": [
+       0,
+       134
+      ]
+     },
+     "best": {
+      "tp": 134,
+      "fp": 12,
+      "fn": 15,
+      "f1": 0.9084745762711864,
+      "modal_pitch_offset": [
+       0,
+       134
+      ]
+     }
+    }
+   },
+   "absent_category_extra_notes": {
+    "best": {
+     "bass": 58
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00018",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 50,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.9900990099009901,
+      "modal_pitch_offset": [
+       0,
+       50
+      ]
+     },
+     "best": {
+      "tp": 35,
+      "fp": 96,
+      "fn": 16,
+      "f1": 0.38461538461538464,
+      "modal_pitch_offset": [
+       0,
+       35
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 40,
+      "fp": 0,
+      "fn": 2,
+      "f1": 0.975609756097561,
+      "modal_pitch_offset": [
+       0,
+       40
+      ]
+     },
+     "best": {
+      "tp": 33,
+      "fp": 9,
+      "fn": 9,
+      "f1": 0.7857142857142857,
+      "modal_pitch_offset": [
+       0,
+       33
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 30,
+      "fp": 2,
+      "fn": 42,
+      "f1": 0.5769230769230769,
+      "modal_pitch_offset": [
+       0,
+       60
+      ]
+     },
+     "best": {
+      "tp": 30,
+      "fp": 2,
+      "fn": 42,
+      "f1": 0.5769230769230769,
+      "modal_pitch_offset": [
+       0,
+       60
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00019",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 118,
+      "fp": 7,
+      "fn": 6,
+      "f1": 0.9477911646586346,
+      "modal_pitch_offset": [
+       0,
+       119
+      ]
+     },
+     "best": {
+      "tp": 98,
+      "fp": 42,
+      "fn": 26,
+      "f1": 0.7424242424242424,
+      "modal_pitch_offset": [
+       0,
+       98
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 244,
+      "fp": 1,
+      "fn": 3,
+      "f1": 0.991869918699187,
+      "modal_pitch_offset": [
+       0,
+       244
+      ]
+     },
+     "best": {
+      "tp": 109,
+      "fp": 151,
+      "fn": 138,
+      "f1": 0.42998027613412226,
+      "modal_pitch_offset": [
+       -12,
+       133
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 620,
+      "fp": 50,
+      "fn": 27,
+      "f1": 0.9415337889141989,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9476082004555809,
+     "baseline_kit_only_f1": 0.9796839729119639,
+     "best": {
+      "tp": 324,
+      "fp": 15,
+      "fn": 323,
+      "f1": 0.6572008113590264,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.665314401622718,
+     "best_kit_only_f1": 0.8431876606683805
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 68,
+      "fp": 14,
+      "fn": 15,
+      "f1": 0.8242424242424242,
+      "modal_pitch_offset": [
+       0,
+       68
+      ]
+     },
+     "best": {
+      "tp": 68,
+      "fp": 14,
+      "fn": 15,
+      "f1": 0.8242424242424242,
+      "modal_pitch_offset": [
+       0,
+       68
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 86,
+      "fp": 7,
+      "fn": 22,
+      "f1": 0.8557213930348259,
+      "modal_pitch_offset": [
+       0,
+       86
+      ]
+     },
+     "best": {
+      "tp": 86,
+      "fp": 7,
+      "fn": 22,
+      "f1": 0.8557213930348259,
+      "modal_pitch_offset": [
+       0,
+       86
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "slakh-Track00020",
+   "source": "BabySlakh (Slakh2100 train split)",
+   "contains": [
+    "bass",
+    "drums",
+    "electric_guitar",
+    "piano",
+    "strings"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 202,
+      "fp": 20,
+      "fn": 50,
+      "f1": 0.8523206751054853,
+      "modal_pitch_offset": [
+       0,
+       237
+      ]
+     },
+     "best": {
+      "tp": 169,
+      "fp": 8,
+      "fn": 83,
+      "f1": 0.7878787878787878,
+      "modal_pitch_offset": [
+       0,
+       202
+      ]
+     }
+    },
+    "bass": {
+     "baseline": {
+      "tp": 55,
+      "fp": 0,
+      "fn": 1,
+      "f1": 0.990990990990991,
+      "modal_pitch_offset": [
+       0,
+       55
+      ]
+     },
+     "best": {
+      "tp": 51,
+      "fp": 2,
+      "fn": 5,
+      "f1": 0.9357798165137615,
+      "modal_pitch_offset": [
+       0,
+       51
+      ]
+     }
+    },
+    "drums": {
+     "baseline": {
+      "tp": 142,
+      "fp": 85,
+      "fn": 85,
+      "f1": 0.6255506607929515,
+      "modal_pitch_offset": null
+     },
+     "baseline_kit_piece_f1": 0.9955947136563876,
+     "baseline_kit_only_f1": 0.9955947136563876,
+     "best": {
+      "tp": 134,
+      "fp": 103,
+      "fn": 93,
+      "f1": 0.5775862068965517,
+      "modal_pitch_offset": null
+     },
+     "best_kit_piece_f1": 0.9396551724137931,
+     "best_kit_only_f1": 0.9396551724137931
+    },
+    "electric_guitar": {
+     "baseline": {
+      "tp": 78,
+      "fp": 14,
+      "fn": 1,
+      "f1": 0.9122807017543859,
+      "modal_pitch_offset": [
+       0,
+       78
+      ]
+     },
+     "best": {
+      "tp": 78,
+      "fp": 14,
+      "fn": 1,
+      "f1": 0.9122807017543859,
+      "modal_pitch_offset": [
+       0,
+       78
+      ]
+     }
+    },
+    "strings": {
+     "baseline": {
+      "tp": 51,
+      "fp": 11,
+      "fn": 9,
+      "f1": 0.8360655737704918,
+      "modal_pitch_offset": [
+       0,
+       51
+      ]
+     },
+     "best": {
+      "tp": 51,
+      "fp": 11,
+      "fn": 9,
+      "f1": 0.8360655737704918,
+      "modal_pitch_offset": [
+       0,
+       51
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "maestro-01",
+   "source": "MAESTRO v3.0.0 test split",
+   "contains": [
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 822,
+      "fp": 9,
+      "fn": 60,
+      "f1": 0.9597197898423818,
+      "modal_pitch_offset": [
+       0,
+       822
+      ]
+     },
+     "best": {
+      "tp": 815,
+      "fp": 0,
+      "fn": 67,
+      "f1": 0.9605185621685327,
+      "modal_pitch_offset": [
+       0,
+       815
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "maestro-02",
+   "source": "MAESTRO v3.0.0 test split",
+   "contains": [
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 837,
+      "fp": 7,
+      "fn": 23,
+      "f1": 0.9823943661971831,
+      "modal_pitch_offset": [
+       0,
+       837
+      ]
+     },
+     "best": {
+      "tp": 836,
+      "fp": 0,
+      "fn": 24,
+      "f1": 0.9858490566037735,
+      "modal_pitch_offset": [
+       0,
+       836
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "maestro-03",
+   "source": "MAESTRO v3.0.0 test split",
+   "contains": [
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 1347,
+      "fp": 4,
+      "fn": 53,
+      "f1": 0.9792802617230099,
+      "modal_pitch_offset": [
+       0,
+       1347
+      ]
+     },
+     "best": {
+      "tp": 1357,
+      "fp": 0,
+      "fn": 43,
+      "f1": 0.9844033369604642,
+      "modal_pitch_offset": [
+       0,
+       1357
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "maestro-04",
+   "source": "MAESTRO v3.0.0 test split",
+   "contains": [
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 1077,
+      "fp": 20,
+      "fn": 33,
+      "f1": 0.9759855006796556,
+      "modal_pitch_offset": [
+       0,
+       1077
+      ]
+     },
+     "best": {
+      "tp": 1105,
+      "fp": 14,
+      "fn": 5,
+      "f1": 0.9914759982054733,
+      "modal_pitch_offset": [
+       0,
+       1105
+      ]
+     }
+    }
+   }
+  },
+  {
+   "id": "maestro-05",
+   "source": "MAESTRO v3.0.0 test split",
+   "contains": [
+    "piano"
+   ],
+   "tracks": {
+    "piano": {
+     "baseline": {
+      "tp": 1206,
+      "fp": 8,
+      "fn": 50,
+      "f1": 0.9765182186234818,
+      "modal_pitch_offset": [
+       0,
+       1206
+      ]
+     },
+     "best": {
+      "tp": 1227,
+      "fp": 2,
+      "fn": 29,
+      "f1": 0.9875251509054326,
+      "modal_pitch_offset": [
+       0,
+       1227
+      ]
+     }
+    }
+   }
+  }
+ ]
+}

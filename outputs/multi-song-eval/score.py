@@ -14,6 +14,7 @@ from pathlib import Path
 
 from audio_midi.evaluate import evaluate
 from audio_midi.events import NoteEvent
+from audio_midi.muscriptor_routing import parse_note_lines
 from audio_midi.quality import read_notes
 
 TRACKS = ('piano', 'bass', 'drums', 'acoustic_guitar', 'electric_guitar', 'strings')
@@ -52,8 +53,9 @@ def clip(notes, duration):
     return [n for n in notes if 0 <= n.onset < duration]
 
 
-def kit(notes):
-    return [replace(n, pitch=KIT.get(n.pitch, n.pitch)) for n in notes if n.category == 'drums']
+def kit(notes, kit_only=False):
+    return [replace(n, pitch=KIT.get(n.pitch, n.pitch)) for n in notes
+            if n.category == 'drums' and (not kit_only or n.pitch in KIT)]
 
 
 def add(acc, key, m):
@@ -76,7 +78,7 @@ def finish(acc):
 
 def main(items, dest):
     manifest = json.loads((items / 'manifest.json').read_text())
-    per_item = []; agg = {'baseline': {}, 'best': {}}; agg_src = {}; missing = []
+    per_item = []; agg = {'baseline': {}, 'best': {}}; agg_src = {}; missing = []; raw_fallback = []
     for m in manifest:
         d = items / m['id']; dur = m['window_seconds'][1] - m['window_seconds'][0]
         ref = ref_notes(d / 'reference.json', m['source'])
@@ -92,8 +94,16 @@ def main(items, dest):
                 missing.append({'id': m['id'], 'route': 'piano-b'})
         mu = d / 'muscriptor/Noto-MuScriptor贝斯鼓.mid'
         if {'bass', 'drums'} & set(m['contains']):
+            raw_log = d / 'muscriptor/muscriptor.log'
+            mu_notes = None
             if mu.exists():
                 mu_notes = clip(read_notes(mu), dur)
+            elif raw_log.exists() and 'NOTE,' in raw_log.read_text():
+                # The entry script refuses to splice when the baseline lacks a bass or drums
+                # track; MuScriptor itself finished, so score its raw notes directly.
+                mu_notes = clip(parse_note_lines(raw_log.read_text()), dur)
+                raw_fallback.append(m['id'])
+            if mu_notes is not None:
                 best = [n for n in best if n.category not in ('bass', 'drums')] + [n for n in mu_notes if n.category in ('bass', 'drums')]
             else:
                 missing.append({'id': m['id'], 'route': 'muscriptor'})
@@ -115,14 +125,19 @@ def main(items, dest):
                 k = evaluate(kit(ref), kit(pred))['drums']
                 add(agg[route], 'drums_kit_piece', k)
                 row['tracks']['drums'][route + '_kit_piece_f1'] = k['f1']
+                # Slakh drum stems also hold auxiliary percussion (tambourine, cabasa, ...);
+                # kit-only drops keys outside the drum kit from both sides.
+                ko = evaluate(kit(ref, True), kit(pred, True))['drums']
+                add(agg[route], 'drums_kit_only', ko)
+                row['tracks']['drums'][route + '_kit_only_f1'] = ko['f1']
         per_item.append(row)
     result = {'reference_corrections': {'BabySlakh bass': SLAKH_BASS_SHIFT},
-              'metric': 'one-to-one, same category and pitch (drums: GM key), onset <= 50 ms; drums_kit_piece maps GM keys to kick/snare/hi-hat/tom/cymbal',
+              'metric': 'one-to-one, same category and pitch (drums: GM key), onset <= 50 ms; drums_kit_piece maps GM keys to kick/snare/hi-hat/tom/cymbal; drums_kit_only additionally drops non-kit percussion keys from reference and prediction',
               'routes': {'baseline': 'YourMT3 yptf_moe_nops whole mix',
                          'best': 'piano: piano-B (BS-RoFormer SW -> Transkun 2.0); bass+drums: MuScriptor Medium; other tracks: baseline'},
               'aggregate': {r: finish(a) for r, a in agg.items()},
               'by_source': {f'{r}/{s}': finish(a) for (r, s), a in agg_src.items()},
-              'missing_outputs': missing, 'items': per_item}
+              'missing_outputs': missing, 'muscriptor_scored_from_raw_log': raw_fallback, 'items': per_item}
     Path(dest).write_text(json.dumps(result, ensure_ascii=False, indent=1))
     for r in ('baseline', 'best'):
         print(r, {t: (v['songs'], v['micro_f1']) for t, v in result['aggregate'][r].items()})
