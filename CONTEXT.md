@@ -20,6 +20,7 @@
 - 仓库现为公开：<https://github.com/Max-Ren0/audio-to-midi-mvp>，默认 `main`。匿名 GitHub API 返回 HTTP 200。
 - 已搭建本地多轨 MIDI 实验、钢琴 B 固定路线和贝斯/鼓 MuScriptor 替换实验；详细版本与实验见 `CHANGELOG.md`、`outputs/` 和 Git 历史。
 - 2026-11-17 整理展示首页：README 项目概览、GitHub Pages 在线作品集 <https://max-ren0.github.io/audio-to-midi-mvp/>（`gh-pages` 分支只放 `outputs/portfolio-preview/index.html` 副本，需手动同步）、仓库简介与 topics。
+- 2026-11-17 作品集新增"听一听"对比演示（自写合成片段，YourMT3 基线；素材 `outputs/portfolio-preview/demo/`，复现见 `outputs/demo-synthetic/README.md`），Claude 实现、Codex 独立核验与复验。
 - 已制作项目作品集、PDF 和 PRD；旧版完整项目上下文归档于 `outputs/history/CONTEXT-before-public-visibility.md`。
 
 ## 关键决策
@@ -51,6 +52,8 @@
 - 单独确认各模型权重、依赖及商业使用许可；MuScriptor 当前权重标注为非商业使用。
 
 ## 风险与注意点
+
+- `.venv` 入口脚本与 .pth 指向迁移前路径，运行需 `PYTHONPATH=src .venv/bin/python -m audio_midi.cli`。
 
 - 仓库及可达提交历史已公开。PRD、实验记录中的歌曲名、路径和其他已提交文字也对公众可见；本地素材与权重不随仓库自动公开。
 - 训练或微调尚未开展；研究结果不等于正式产品验收。
