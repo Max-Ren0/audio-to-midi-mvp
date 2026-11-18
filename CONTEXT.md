@@ -47,7 +47,7 @@
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
 - `outputs/Noto-产品需求文档.md`：当前需求文档（PRD）。
 - `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
-- `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`../作品集/Noto-音频转MIDI-作品集.pdf`：作品集 PDF。
+- `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`../作品集/Noto-音频转MIDI-作品集-2026-11.pdf`：当前简历附件用作品集 PDF（源文件 `outputs/portfolio-pdf/index.html`）；旧版 `../作品集/Noto-音频转MIDI-作品集.pdf` 保留。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
 - `outputs/history/CONTEXT-before-public-visibility.md`：原始长上下文及历史详细记录。

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>谱刻 Noto · 作品集</title>
+<style>
+@page{size:1280px 720px;margin:0}
+:root{--ink:#191c22;--sub:#4b515c;--muted:#7a808b;--faint:#a3a8b1;--line:#e4e6ea;--paper:#f6f7f9;--blue:#485bdb;--lblue:#9aa6f0;--dark:#11141c;--gray:#c3c7ce}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:inherit;text-decoration:none}
+.page{width:1280px;height:720px;position:relative;overflow:hidden;padding:72px 88px 64px;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+.dark{background:var(--dark);color:#f3f4f8}
+.alt{background:var(--paper)}
+.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:700;color:var(--blue);text-transform:uppercase}
+.dark .eyebrow{color:var(--lblue)}
+h2{font-size:38px;line-height:1.28;letter-spacing:-.035em;font-weight:700;margin-top:16px}
+.lead{font-size:15px;line-height:1.85;color:var(--sub);margin-top:16px;max-width:420px}
+.dark .lead{color:#a5abb8}
+.foot{position:absolute;left:88px;right:88px;bottom:30px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.12em;color:var(--faint)}
+.dark .foot{color:#5d6475}
+.cols{display:grid;grid-template-columns:400px 1fr;gap:72px;height:100%}
+.num{font-variant-numeric:tabular-nums}
+small.k{display:block;font-size:11px;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.dark small.k{color:#8b93a6}
+
+/* cover */
+.cover{display:grid;grid-template-columns:1fr 520px;gap:64px;align-items:center;padding-top:64px}
+.cover h1{font-size:64px;line-height:1.12;letter-spacing:-.05em;margin-top:22px}
+.cover h1 span{color:var(--lblue)}
+.cover .lead{font-size:16px;max-width:470px;margin-top:22px}
+.meta{display:grid;grid-template-columns:repeat(3,auto);gap:34px;margin-top:40px;justify-content:start}
+.meta b{display:block;font-size:14px;margin-top:7px;font-weight:600}
+.links{margin-top:34px;display:flex;flex-direction:column;gap:9px;font-size:13px;color:var(--sub)}
+.links a{color:var(--blue)}
+.links i{font-style:normal;display:inline-block;width:86px;color:var(--muted)}
+.visual{height:440px;border-radius:20px;background:linear-gradient(145deg,#1d2232,#0d1018);position:relative;overflow:hidden}
+.visual:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 28%,#6677e850,transparent 50%)}
+.vtop{position:relative;display:flex;justify-content:space-between;padding:24px 26px;color:#9ea6b8;font-size:10px;letter-spacing:.14em}
+.wave{position:relative;height:64px;margin:16px 26px 22px;display:flex;align-items:center;gap:3px}
+.wave i{flex:1;background:#929ce9;border-radius:4px;opacity:.75}
+.roll{position:absolute;left:26px;right:26px;bottom:44px;height:220px;border:1px solid #ffffff18;border-radius:10px;background:repeating-linear-gradient(0deg,transparent 0 27px,#ffffff0a 28px),repeating-linear-gradient(90deg,transparent 0 57px,#ffffff0b 58px)}
+.roll b{position:absolute;height:11px;border-radius:3px;opacity:.9}
+.lane{position:absolute;left:12px;font-size:9px;letter-spacing:.1em;color:#7d8597}
+.vfoot{position:absolute;bottom:16px;left:26px;right:26px;display:flex;justify-content:space-between;font-size:9px;color:#6d7487;letter-spacing:.1em}
+.band{position:absolute;left:0;right:0;bottom:0;height:86px;background:var(--paper);border-top:1px solid #eceef1;display:grid;grid-template-columns:repeat(4,1fr);padding:0 88px;align-items:center}
+.band b{display:block;font-size:13px;margin-top:6px;font-weight:600}
+
+/* cards */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--line);gap:1px;margin-top:84px}
+.trio article{background:#fff;padding:32px 30px 40px}
+.trio h3{font-size:17px;margin:20px 0 9px;letter-spacing:-.01em}
+.trio p{font-size:13px;line-height:1.8;color:var(--muted)}
+.quote{font-size:22px;line-height:1.65;letter-spacing:-.02em;border-left:3px solid var(--blue);padding-left:24px;font-weight:600}
+.quote-sub{font-size:13px;color:var(--muted);line-height:1.8;margin-top:14px;padding-left:27px}
+
+/* list rows */
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:118px 1fr;gap:22px;padding:19px 0;border-bottom:1px solid var(--line)}
+.row small{font-size:11px;color:var(--muted);letter-spacing:.06em;padding-top:3px}
+.row h3{font-size:16px;letter-spacing:-.01em;margin-bottom:6px}
+.row p{font-size:13px;line-height:1.75;color:var(--muted)}
+.row p b{color:var(--ink);font-weight:600}
+.pill{display:inline-block;font-size:11px;padding:3px 9px;border-radius:20px;background:#eef0fd;color:var(--blue);font-weight:600;margin-right:6px}
+.pill.g{background:#eef0f2;color:#80868f}
+
+/* scope bars */
+.scope{margin-top:30px}
+.sbar{display:grid;grid-template-columns:62px 1fr 58px;align-items:center;gap:14px;padding:6px 0;font-size:12px;color:var(--sub)}
+.sbar .t{height:6px;background:#e9ebef;border-radius:6px;position:relative}
+.sbar .t i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--blue)}
+.sbar.off .t i{background:var(--gray)}
+.sbar b{text-align:right;font-weight:600}
+.sbar.off{color:var(--faint)}
+.sbar.off b{color:var(--faint);font-weight:500}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:46px}
+.step{border-top:1.5px solid #c4cad6;padding:20px 20px 0 0}
+.step small{color:var(--blue);font-weight:700;font-size:12px}
+.step h3{font-size:16px;margin:16px 0 8px}
+.step p{font-size:12.5px;line-height:1.75;color:var(--muted)}
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.route{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.route h3{font-size:15px;margin:12px 0 8px}
+.route p{font-size:12.5px;line-height:1.75;color:var(--muted)}
+.route.muted{background:transparent;border-style:dashed}
+
+/* chart */
+.chart{margin-top:6px}
+.cbar{display:grid;grid-template-columns:1fr 330px 64px;gap:18px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cbar:first-child{border-top:1px solid var(--line)}
+.cbar h4{font-size:13.5px;font-weight:600}
+.cbar p{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.55}
+.cbar .t{height:10px;background:#eceef2;border-radius:6px;position:relative}
+.cbar .t i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:#aab3f2}
+.cbar.last .t i{background:var(--blue)}
+.cbar b{font-size:17px;text-align:right;letter-spacing:-.02em}
+.cbar.first b{color:var(--muted)}
+.callout{margin-top:22px;display:flex;gap:40px}
+.callout div{flex:1}
+.callout strong{display:block;font-size:30px;letter-spacing:-.03em;margin:8px 0 4px}
+.callout strong em{font-style:normal;color:var(--blue)}
+.callout p{font-size:12px;color:var(--muted);line-height:1.7}
+
+/* multi-song */
+.mtab{width:100%;border-collapse:collapse;margin-top:6px}
+.mtab th{font-size:11px;letter-spacing:.08em;color:#8b93a6;font-weight:600;text-align:left;padding:0 0 12px;border-bottom:1px solid #ffffff1c}
+.mtab td{padding:15px 0;border-bottom:1px solid #ffffff12;font-size:13.5px;color:#d9dce4;vertical-align:middle}
+.mtab td.src{color:#8f97a9;font-size:12px}
+.pair{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;font-size:12.5px}
+.pair+.pair{margin-top:6px}
+.pair .t{height:7px;border-radius:5px;background:#ffffff10;position:relative}
+.pair .t i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.pair.base i{background:#5d6577}
+.pair.best i{background:#8797ff}
+.pair span{color:#a8afbd}
+.pair.win span{color:#fff;font-weight:600}
+.legend{display:flex;gap:22px;font-size:11px;color:#8b93a6;margin-top:16px}
+.legend i{display:inline-block;width:12px;height:7px;border-radius:3px;margin-right:7px}
+.finds{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.finds article{border:1px solid #ffffff1c;border-radius:12px;padding:18px 20px}
+.finds h4{font-size:14px;margin:10px 0 6px;color:#f3f4f8}
+.finds p{font-size:12px;line-height:1.7;color:#99a0ae}
+.finds small{font-size:10.5px;letter-spacing:.1em;color:var(--lblue);font-weight:700}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;position:relative}
+.proc div{padding:0 18px 0 0}
+.proc .dot{width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.proc .ln{position:absolute;top:15px;left:30px;right:60px;height:1.5px;background:#c9cfe9;z-index:0}
+.proc .dot{position:relative;z-index:1}
+.proc h4{font-size:15px;margin:16px 0 6px}
+.proc p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:38px}
+.stats div{background:#fff;padding:22px 22px}
+.stats strong{display:block;font-size:34px;letter-spacing:-.04em;margin:10px 0 4px}
+.stats p{font-size:12px;color:var(--muted);line-height:1.6}
+.examples{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.examples p{font-size:12.5px;line-height:1.75;color:var(--sub);padding-left:14px;border-left:2px solid #dfe3f6}
+.examples p b{font-weight:600;color:var(--ink)}
+
+/* takeaways */
+.take{border-top:1px solid var(--line)}
+.take div{padding:17px 0;border-bottom:1px solid var(--line)}
+.take h3{font-size:15.5px}
+.take p{font-size:12.5px;color:var(--muted);line-height:1.7;margin-top:5px}
+.next{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px}
+.next li{font-size:12.5px;line-height:1.75;color:var(--sub);margin-left:16px}
+.endlinks{margin-top:26px;font-size:12.5px;line-height:2;color:var(--sub);display:grid;grid-template-columns:62px 1fr}
+.endlinks a{color:var(--blue)}
+</style></head><body>
+
+<!-- 1 cover -->
+<section class="page">
+ <div class="cover">
+  <div>
+   <div class="eyebrow">AI Product Case Study · 个人项目</div>
+   <h1>谱刻 Noto<br><span>让音乐可以编辑</span></h1>
+   <p class="lead">一个 AI 音乐转写工具的探索：把一首混合歌曲（MP3）转换成按乐器分轨、可逐音编辑的多轨 MIDI，为扒谱、练习和重新编曲提供起点。</p>
+   <div class="meta">
+    <div><small class="k">角色</small><b>产品负责人 · 独立推进</b></div>
+    <div><small class="k">时间</small><b class="num">2026.10 – 2026.11</b></div>
+    <div><small class="k">阶段</small><b>本地研究原型</b></div>
+   </div>
+   <div class="links">
+    <div><i>GitHub</i><a href="https://github.com/Max-Ren0/audio-to-midi-mvp">github.com/Max-Ren0/audio-to-midi-mvp</a></div>
+    <div><i>在线作品集</i><a href="https://max-ren0.github.io/audio-to-midi-mvp/">max-ren0.github.io/audio-to-midi-mvp</a>（含试听对比）</div>
+   </div>
+  </div>
+  <div class="visual">
+   <div class="vtop"><span>NOTO / AUDIO → MIDI</span><span>MP3 · 3 TRACKS</span></div>
+   <div class="wave" id="wave"></div>
+   <div class="roll" id="roll">
+    <span class="lane" style="top:22px">PIANO</span><span class="lane" style="top:98px">BASS</span><span class="lane" style="top:166px">DRUMS</span>
+   </div>
+   <div class="vfoot"><span>混合音频</span><span>可编辑多轨 MIDI</span></div>
+  </div>
+ </div>
+ <div class="band">
+  <div><small class="k">INPUT</small><b>混合歌曲 MP3</b></div>
+  <div><small class="k">OUTPUT</small><b>多轨 MIDI + 处理报告</b></div>
+  <div><small class="k">MVP SCOPE</small><b>钢琴 · 贝斯 · 鼓</b></div>
+  <div><small class="k">APPROACH</small><b>按乐器组合模型 + 逐轨评测</b></div>
+ </div>
+</section>
+
+<!-- 2 problem -->
+<section class="page">
+ <div class="eyebrow">01 / Problem</div>
+ <div class="cols" style="height:auto;margin-top:0">
+  <div>
+   <h2>音频能听，<br>却没法逐个音符地改。</h2>
+   <p class="lead">学乐器的人想扒谱、练习或重新编曲时，手里通常只有一首混好的歌。把它拆成乐器分轨的音符，目前主要靠人工反复听写，耗时且门槛高。</p>
+  </div>
+  <div style="padding-top:34px">
+   <p class="quote">如何让用户从一首歌出发，更快得到可以试听、修改、继续创作的乐器音轨？</p>
+   <p class="quote-sub">关键不只是能导出文件，还要看音高、节奏和乐器归属是否足够接近原曲，用户改起来是否比从零扒谱更省时间。</p>
+  </div>
+ </div>
+ <div class="trio">
+  <article><small class="k">难点 01 · 分离</small><h3>声音混在一起</h3><p>人声和多种乐器同时发声，频率互相遮挡，容易漏音，也容易把音符分错到别的乐器轨上。</p></article>
+  <article><small class="k">难点 02 · 识别</small><h3>每种乐器难点不同</h3><p>钢琴有密集和弦，贝斯音低、起音含糊，鼓要分清底鼓、军鼓、镲片等不同鼓件。</p></article>
+  <article><small class="k">难点 03 · 验证</small><h3>能导出不等于能用</h3><p>要逐轨和参考 MIDI 对比，量化漏音、多余音和八度错误，才知道结果有没有使用价值。</p></article>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">02</span></div>
+</section>
+
+<!-- 3 requirements -->
+<section class="page">
+ <div class="cols">
+  <div>
+   <div class="eyebrow">02 / Requirements</div>
+   <h2>先验证转写质量，<br>再决定做多少产品。</h2>
+   <p class="lead">调研灵谱（Lingpu）、Audiojam 等竞品。以灵谱为例，它提供多轨展示、音视频转录、逐音编辑，以及 MID / WAV 分别导出，说明用户真正要的是“转完还能改”。据此编写 PRD，暂缓前端，先回答模型能不能转准。</p>
+   <div class="scope">
+    <small class="k" style="margin-bottom:10px">按实测收窄 MVP ·《唯一》逐轨 F1</small>
+    <div class="sbar"><span>钢琴</span><div class="t"><i style="width:92.36%"></i></div><b class="num">92.36%</b></div>
+    <div class="sbar"><span>贝斯</span><div class="t"><i style="width:71.92%"></i></div><b class="num">71.92%</b></div>
+    <div class="sbar"><span>鼓</span><div class="t"><i style="width:55.99%"></i></div><b class="num">55.99%</b></div>
+    <div class="sbar off"><span>电吉他</span><div class="t"><i style="width:8.87%"></i></div><b class="num">8.87%</b></div>
+    <div class="sbar off"><span>弦乐</span><div class="t"><i style="width:6.60%"></i></div><b class="num">6.60%</b></div>
+    <div class="sbar off"><span>木吉他</span><div class="t"><i style="width:5.17%"></i></div><b class="num">5.17%</b></div>
+   </div>
+  </div>
+  <div class="rows" style="margin-top:6px">
+   <div class="row"><small>目标用户</small><div><h3>学乐器、扒谱、翻弹和编曲的人</h3><p>输入一首现成歌曲，希望拿到能在音乐软件里继续编辑的分轨音符。</p></div></div>
+   <div class="row"><small>乐器范围</small><div><h3>六类目标，MVP 先承诺三轨</h3><p><span class="pill">MVP</span>钢琴、贝斯、鼓 <span class="pill g" style="margin-left:8px">研究中</span>木吉他、电吉他、弦乐；人声不输出。依据是逐轨实测：三类研究轨的 F1 都低于 10%。</p></div></div>
+   <div class="row"><small>输出规格</small><div><h3>Type 1 多轨 MIDI + 处理报告</h3><p>每类乐器一条轨，写入对应乐器编号；报告记录模型版本、耗时、缺轨和异常原因，方便追溯。</p></div></div>
+   <div class="row"><small>异常处理</small><div><h3>先校验，失败要说清楚</h3><p>检查格式、时长和解码结果；某类乐器没识别出音符就不输出空轨，并在报告里注明原因。</p></div></div>
+   <div class="row"><small>验收原则</small><div><h3>逐轨报告指标，不提前宣布达标</h3><p>指标为音符级 F1（音高一致、起音误差 ≤ 50 ms），并结合试听和人工修改时间综合判断。</p></div></div>
+  </div>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">03</span></div>
+</section>
+
+<!-- 4 solution -->
+<section class="page alt">
+ <div class="eyebrow">03 / Solution</div>
+ <h2>不追求一个模型解决所有问题。</h2>
+ <p class="lead" style="max-width:720px">没有从零训练，而是按乐器挑选现有的开源模型与商业工具做对照，再组合使用。每次替换都用同一份参考逐轨比较，确认确实变好了才采用。原型借助 AI 编程工具在本地完成。</p>
+ <div class="flow">
+  <div class="step"><small>01</small><h3>输入与预处理</h3><p>校验格式与时长，统一解码，固定时间线。</p></div>
+  <div class="step"><small>02</small><h3>音源分离</h3><p>先从混音里提取目标乐器，减少其他声音干扰。</p></div>
+  <div class="step"><small>03</small><h3>音符识别</h3><p>按乐器选用专门的转写模型或多乐器模型。</p></div>
+  <div class="step"><small>04</small><h3>纠错处理</h3><p>合并重复切分、修正起音、多模型共识补漏音。</p></div>
+  <div class="step"><small>05</small><h3>MIDI 导出</h3><p>合并为多轨 MIDI，附处理报告，逐轨回测。</p></div>
+ </div>
+ <div class="routes">
+  <div class="route"><span class="pill">钢琴</span><h3>先分离，再用钢琴专用模型</h3><p>BS-RoFormer SW 分离出钢琴 → Transkun 转写。在真实钢琴录音上优于整曲转写的基线。</p></div>
+  <div class="route"><span class="pill">贝斯 · 鼓</span><h3>换用多乐器模型重新验证</h3><p>贝斯和鼓替换为 MuScriptor Medium 的输出，与原方案用同一参考对比。权重仅限非商业使用。</p></div>
+  <div class="route muted"><span class="pill g">吉他 · 弦乐</span><h3>保留为研究轨道</h3><p>照常输出，但不计入 MVP 验收；漏音和误报仍然明显，需要更多数据与模型尝试。</p></div>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">04</span></div>
+</section>
+
+<!-- 5 iteration -->
+<section class="page">
+ <div class="cols" style="grid-template-columns:360px 1fr;gap:64px">
+  <div>
+   <div class="eyebrow">04 / Iteration</div>
+   <h2>先找到错在哪，<br>再决定改什么。</h2>
+   <p class="lead">逐轨、逐音对照参考 MIDI，把错误拆成漏音、重复切分和八度错误几类，每一步只针对一类问题改，保留无效方案的负面结果。</p>
+   <div class="callout" style="flex-direction:column;gap:18px;margin-top:30px">
+    <div><small class="k">换模型 · 歌曲《唯一》贝斯</small><strong class="num">25.45% <em>→ 71.92%</em></strong><p>贝斯改用 MuScriptor 后，在同一参考与评测范围下的变化；鼓为 55.22% → 55.99%。</p></div>
+   </div>
+  </div>
+  <div style="padding-top:8px">
+   <small class="k" style="margin-bottom:14px">后处理迭代 · 贝斯起音匹配 F1 · 60 秒开发片段</small>
+   <div class="chart">
+    <div class="cbar first"><div><h4>原始路线</h4><p>Demucs 分离 + pYIN 测音高</p></div><div class="t"><i style="width:41.38%"></i></div><b class="num">41.38%</b></div>
+    <div class="cbar"><div><h4>过滤低置信音符</h4><p>按置信度和起音强度联合筛选</p></div><div class="t"><i style="width:53.33%"></i></div><b class="num">53.33%</b></div>
+    <div class="cbar"><div><h4>修正切分边界</h4><p>短窗起音检测 + 多方投票确定音符边界</p></div><div class="t"><i style="width:62.34%"></i></div><b class="num">62.34%</b></div>
+    <div class="cbar"><div><h4>合并重复、补回漏音</h4><p>合并重复切分，多个模型一致时补音，局部校正起音</p></div><div class="t"><i style="width:75%"></i></div><b class="num">75.00%</b></div>
+    <div class="cbar last"><div><h4>多源共识补音</h4><p>至少 64 ms 的多源一致才补；新增 2 个命中，无丢失</p></div><div class="t"><i style="width:77.33%"></i></div><b class="num" style="color:var(--blue)">77.33%</b></div>
+   </div>
+   <p style="font-size:11.5px;color:var(--muted);line-height:1.7;margin-top:16px">说明：这个片段只有 36 个贝斯音，且被反复用于调参，数字只代表开发片段上的进展，不代表其他歌曲。泛化效果见下一页的多曲评测。</p>
+  </div>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">05</span></div>
+</section>
+
+<!-- 6 multi-song -->
+<section class="page dark">
+ <div class="cols" style="grid-template-columns:380px 1fr;gap:64px;height:auto">
+  <div>
+   <div class="eyebrow">05 / Evaluation</div>
+   <h2>换一批歌，<br>看结论还成不成立。</h2>
+   <p class="lead">用 25 段公开数据（MAESTRO 真实钢琴录音 5 首、BabySlakh 合成多轨 20 段），逐轨比较基线（YourMT3 整曲转写）和当前最优路线。结果有好有坏，都如实记录。</p>
+  </div>
+  <div style="padding-top:10px">
+   <table class="mtab">
+    <tr><th style="width:150px">数据</th><th style="width:70px">轨道</th><th>逐音 F1</th></tr>
+    <tr><td class="src">MAESTRO · 5 首<br>真实钢琴录音</td><td>钢琴</td><td>
+     <div class="pair base"><span class="num">97.5%</span><div class="t"><i style="width:97.5%"></i></div></div>
+     <div class="pair best win"><span class="num">98.3%</span><div class="t"><i style="width:98.3%"></i></div></div></td></tr>
+    <tr><td class="src">BabySlakh · 19 段<br>合成多轨</td><td>钢琴</td><td>
+     <div class="pair base win"><span class="num">89.1%</span><div class="t"><i style="width:89.1%"></i></div></div>
+     <div class="pair best"><span class="num">79.4%</span><div class="t"><i style="width:79.4%"></i></div></div></td></tr>
+    <tr><td class="src">BabySlakh · 19 段</td><td>贝斯</td><td>
+     <div class="pair base win"><span class="num">97.8%</span><div class="t"><i style="width:97.8%"></i></div></div>
+     <div class="pair best"><span class="num">69.7%</span><div class="t"><i style="width:69.7%"></i></div></div></td></tr>
+    <tr><td class="src">BabySlakh · 19 段</td><td>鼓</td><td>
+     <div class="pair base win"><span class="num">85.2%</span><div class="t"><i style="width:85.2%"></i></div></div>
+     <div class="pair best"><span class="num">55.3%</span><div class="t"><i style="width:55.3%"></i></div></div></td></tr>
+   </table>
+   <div class="legend"><span><i style="background:#5d6577"></i>基线 YourMT3</span><span><i style="background:#8797ff"></i>当前最优路线</span></div>
+  </div>
+ </div>
+ <div class="finds">
+  <article><small>结论</small><h4>钢琴路线在真实录音上成立</h4><p>5 首全部提升；但遇到电钢、羽管键琴等合成键盘会多报音，产品上应只对原声钢琴启用。</p></article>
+  <article><small>发现</small><h4>数据集标注差了一个八度</h4><p>两条路线的贝斯分数都接近 0。对音频测音高后发现，Slakh 贝斯标注比实际发声高一个八度，修正后才得到可信分数。</p></article>
+  <article><small>边界</small><h4>不把单曲提升当成泛化</h4><p>BabySlakh 可能在基线的训练数据里，基线有主场优势。贝斯和鼓需要用真实录音多轨数据再复核。</p></article>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">06</span></div>
+</section>
+
+<!-- 7 verification -->
+<section class="page">
+ <div class="eyebrow">06 / Verification & Versioning</div>
+ <h2>每个结论，都要经得起别人复查。</h2>
+ <p class="lead" style="max-width:740px">每个候选版本先冻结成 Git 提交，再交给一个独立 Agent 只读复核。复核者不改文件，也不默认作者的结论是对的；发现问题就修复、再冻结、再复验。</p>
+ <div class="proc" style="margin-top:38px">
+  <span class="ln"></span>
+  <div><span class="dot">1</span><h4>冻结版本</h4><p>提交代码与结果，记录提交号和结果文件哈希。</p></div>
+  <div><span class="dot">2</span><h4>独立复核</h4><p>另一个 Agent 只读检查评分逻辑、输出文件和边界情况。</p></div>
+  <div><span class="dot">3</span><h4>修复问题</h4><p>逐条判断复核意见，确认成立的就修复。</p></div>
+  <div><span class="dot">4</span><h4>复验后发布</h4><p>只复查改动部分，通过后合并、打标签、上线。</p></div>
+ </div>
+ <div class="stats">
+  <div><small class="k">多曲评测复核</small><strong class="num">3 轮</strong><p>共提出 11 条意见，全部修复后发布</p></div>
+  <div><small class="k">结果复算</small><strong>一致</strong><p>复核者独立重算全部评分，与提交的结果逐项相同</p></div>
+  <div><small class="k">自动化测试</small><strong class="num">139 项</strong><p>每次发布前全部通过</p></div>
+  <div><small class="k">版本记录</small><strong class="num">175 次</strong><p>Git 提交，17 个版本标签，变更与验证写入 CHANGELOG</p></div>
+ </div>
+ <div class="examples">
+  <p><b>复核发现的典型问题：</b>报告把“训练数据可能重叠”写成了确定事实；续跑脚本可能把中途中断的结果当成已完成。两项都已修正。</p>
+  <p><b>对外可追溯：</b>代码、实验记录、版本日志托管在公开 GitHub；在线作品集附原曲与转写结果的试听对比。音频素材和模型权重不上传。</p>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">07</span></div>
+</section>
+
+<!-- 8 takeaways -->
+<section class="page alt">
+ <div class="cols">
+  <div>
+   <div class="eyebrow">07 / Takeaways</div>
+   <h2>把“能生成”，<br>变成“能判断、能改进”。</h2>
+   <p class="lead">这个项目最大的收获，是建立了一套能定位问题、能量化改进、也能说清边界的工作方式。</p>
+   <div class="endlinks">
+    <span>GitHub</span><a href="https://github.com/Max-Ren0/audio-to-midi-mvp">github.com/Max-Ren0/audio-to-midi-mvp</a>
+    <span>作品集</span><a href="https://max-ren0.github.io/audio-to-midi-mvp/">max-ren0.github.io/audio-to-midi-mvp</a>
+   </div>
+  </div>
+  <div>
+   <div class="take">
+    <div><h3>按音轨定位问题，而不是只看整体分数</h3><p>不同乐器的错误类型不同，逐轨、逐音的指标才能指导下一步改什么。</p></div>
+    <div><h3>用数据收窄范围</h3><p>六类乐器全做会拖慢验证，所以按实测把 MVP 收到效果最好的三轨，研究轨照常输出但不计入验收。</p></div>
+    <div><h3>评测本身也要被检验</h3><p>标注错误、训练数据重叠、反复调参的开发片段，都会让分数失真。先确认评测可信，再相信结论。</p></div>
+    <div><h3>分清技术可行与商业落地</h3><p>MuScriptor 权重只允许非商业使用，产品化前需要另行解决授权。</p></div>
+   </div>
+   <div class="next">
+    <small class="k" style="margin-bottom:8px">下一步</small>
+    <ul>
+     <li>用不在训练集里的真实录音多轨数据，复核贝斯和鼓。</li>
+     <li>把各轨路线接成任意歌曲一键生成的完整流程，并做端到端评测。</li>
+     <li>邀请目标用户试听和修改，记录修改时间，再决定前端编辑功能。</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">08</span></div>
+</section>
+
+<script>
+const w=document.getElementById('wave');
+for(let i=0;i<88;i++){const h=12+Math.abs(Math.sin(i*.37)*38+Math.sin(i*.11)*18);const e=document.createElement('i');e.style.height=h+'px';w.appendChild(e)}
+const r=document.getElementById('roll');
+const N=[['#a7b2ff',[[70,14,60],[140,26,48],[196,8,70],[280,20,52],[340,4,64],[415,16,40]]],
+         ['#7fd1b4',[[70,92,90],[170,104,66],[246,92,80],[336,110,70],[414,98,40]]],
+         ['#f0b48f',[[70,160,14],[118,174,14],[166,160,14],[214,186,14],[262,160,14],[310,174,14],[358,160,14],[406,186,14]]]];
+for(const [c,arr] of N)for(const [x,y,wd] of arr){const b=document.createElement('b');b.style.cssText=`left:${x}px;top:${y}px;width:${wd}px;background:${c}`;r.appendChild(b)}
+</script>
+</body></html>

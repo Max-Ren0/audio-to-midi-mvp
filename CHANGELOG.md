@@ -1,5 +1,12 @@
 # 版本记录
 
+## v0.1.0-public.7 — 2026-11-18（简历附件作品集 PDF）
+
+- 新增 16:9 八页作品集 PDF，用作简历附件，内容按当前进度编写：需求与 MVP 三轨、方案、贝斯迭代、多曲评测、独立复核与版本管理、反思。
+- 源文件 `outputs/portfolio-pdf/index.html`，用 Chrome headless 打印；PDF 存于 `../作品集/Noto-音频转MIDI-作品集-2026-11.pdf`（不入库），旧版 PDF 保留。
+- 验证：用 PDFKit 逐页渲染检查；共 8 页，960×540 pt，两处链接可点击。所有数字均与 CHANGELOG、多曲评测 results.json 和贝斯迭代报告核对过。
+- 记录提交：以本节所在提交为准。
+
 ## v0.1.0-public.6 — 2026-11-18（多曲评测）
 
 - 新增多曲评测 `outputs/multi-song-eval/`：BabySlakh 20 段（合成多轨，60 s 窗口）+ MAESTRO v3 test 最短 5 首（真实钢琴整曲），逐轨比较基线 YourMT3 与当前最优路线（钢琴 B + MuScriptor 贝斯/鼓）。
