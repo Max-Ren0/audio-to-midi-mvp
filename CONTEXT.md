@@ -4,20 +4,16 @@
 
 ## 交接给新 agent（2026-11-24）
 
-- 用户目标：校招，方向为 AI 产品、产品运营、传统产品；本项目用作简历项目和面试作品。
 - 已完成（11-18 至 11-24）：
-  - 简历 4 条已更新（三轨 MVP、Transkun/MuScriptor、贝斯 41.38%→77.33%、25 段多曲评测、三轮独立复核）。
-  - 8 页作品集 PDF（源文件 `outputs/portfolio-pdf/index.html`，提交 6c23d09）。**用户已把成品挪到 `~/Desktop/秋招/Noto-音频转MIDI_作品集.pdf`**，`../作品集/` 现在是空的。
-  - 面试准备框架（30 秒/2 分钟/5 分钟讲法、产品侧和 AI 侧问答、高风险追问、要背的数字）只在旧会话记录里，没有存成文件。
+  - 8 页作品集 PDF（源文件 `outputs/portfolio-pdf/index.html`，提交 6c23d09），成品不入库。
   - 结论：项目没用大模型，接入 Dify 意义不大；Dify 自带的网页做不了多轨 MIDI 界面。
   - 竞品公开信息（11-24 查看，未实测）：Audio Jam 是练习工具，做分轨、和弦、变速，官网未提音频转 MIDI，美区 App Store（id6745493736）Pro 周付 $6.99、月付 $12.99，年付有 $29.99 和 $39.99 两种条目（2026-11-24 查看，以商店实时为准）；灵谱是网页版可编辑多轨 MIDI 工作台，支持粘贴抖音/小红书/B 站链接、歌曲最长 30 分钟、有曲谱广场和微信群，首页无标价，按转录时长充值、新用户送 10 分钟，具体价格未见。灵谱广场里的《唯一》可能经过人工编辑，不能当盲测。详见 `outputs/competitor-analysis/README.md`。
   - 11-24 新增竞品对比 `outputs/competitor-analysis/README.md`。Noto 贝斯/鼓替换路线与 NeuralNote v2 同属 MuScriptor 家族，差异可从按乐器组合多模型、统一逐轨评测口径和交付流程验证。
-- 待用户确认（面试准备的 7 个问题）：目标岗位细分；实际对比过哪些商业工具（没实测就写"调研"）；是否用过 Audio Jam；需求来源的说法（**不要提"朋友提出需求"**）；AI 编程的说法；面试形式；下一份交付物。
 - 建议的下一步（用户还没选）：
   1. 竞品盲测：3–5 首歌，记录灵谱首次自动转写，用同一 F1 口径对比。要上传到外部平台，需用户同意。
   2. 用户调研：访谈 5–8 个扒谱、翻弹用户。
   3. 测人工修改时间。
-  - 按岗位另补：运营侧做增长闭环和冷启动方案；传统产品侧做用户故事和低保真原型；AI 侧做端到端评测，以及成本和延迟（历史多路线批测用 BabySlakh 60 秒片段与 MAESTRO 约 66–125 秒整曲，每个样本约 9 分钟）。
+  - 另可补：增长闭环和冷启动方案；用户故事和低保真原型；端到端评测，以及成本和延迟（历史多路线批测用 BabySlakh 60 秒片段与 MAESTRO 约 66–125 秒整曲，每个样本约 9 分钟）。
 - 约束：
   - 用中文回答。
   - 新下载、花钱、对外提交都要先问用户。
@@ -70,7 +66,7 @@
 - `outputs/Noto-产品需求文档.md`：当前需求文档（PRD）。
 - `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
 - `outputs/competitor-analysis/README.md`：竞品对比、证据边界和低成本验证计划。
-- `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`~/Desktop/秋招/Noto-音频转MIDI_作品集.pdf`：当前简历附件用作品集 PDF（用户 11-18 从 `../作品集/` 挪过去并改名）（源文件 `outputs/portfolio-pdf/index.html`）；旧版在 `~/Desktop/秋招/项目/Noto-音频转MIDI-作品集.pdf`。
+- `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
 - `outputs/history/CONTEXT-before-public-visibility.md`：原始长上下文及历史详细记录。
@@ -97,5 +93,5 @@
 
 ## 下一步建议
 
-- 面试时可分享公开仓库地址、在线作品集链接及本地作品集 PDF，说明项目仍处于研究原型阶段。
+- 对外分享时可给公开仓库地址和在线作品集链接，说明项目仍处于研究原型阶段。
 - 若继续开发，先读取本文件与相应实验报告，检查当前 Git 状态，避免改写冻结结果。

@@ -11,6 +11,7 @@
 - 修改清单：新增 `outputs/competitor-analysis/README.md`，更新 `CHANGELOG.md`、`CONTEXT.md`。
 - 仅文档变更；作品集未改，无需同步 gh-pages。
 - 记录提交：以本节所在提交为准。
+- CONTEXT.md 移除求职相关内容和求职材料的本地路径，只保留项目信息（git 历史中的旧版本仍可见）。
 
 ## v0.1.0-public.7 — 2026-11-18（简历附件作品集 PDF）
 
