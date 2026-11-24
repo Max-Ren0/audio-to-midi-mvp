@@ -1,5 +1,17 @@
 # 版本记录
 
+## v0.1.0-public.8 — 2026-11-24（竞品对比）
+
+- 新增竞品对比 `outputs/competitor-analysis/README.md`：
+  - Audio Jam 侧重分轨跟练，灵谱提供网页改谱与多轨导出；以 Moises、RipX DAW、NeuralNote v2 分别参照练习、逐音编辑和 DAW 工作流。
+  - NeuralNote v2 与 Noto 贝斯/鼓替换路线同属 MuScriptor 家族；差异可从按乐器组合多模型、统一逐轨评测口径和交付流程验证。
+  - 区分公开调研、仓库历史实测和推断；拟用保留未经编辑首稿的同片段对照与人工修改计时验证三轨草稿是否省工。
+- 校正 CONTEXT：Audio Jam 美区 App Store（id6745493736）Pro 周付 $6.99、月付 $12.99，年付有 $29.99 和 $39.99 两种条目（2026-11-24 查看，以商店实时为准）；灵谱首页无标价，按转录时长充值、新用户送 10 分钟，具体价格未见；历史批测包含 BabySlakh 60 秒片段与 MAESTRO 约 66–125 秒整曲，每个样本约 9 分钟。
+- 独立复核：Codex 执行、Claude 独立审核，返工 1 轮。主要补充 NeuralNote v2 的底层模型 MuScriptor，并纠正 Audio Jam 定价周期。
+- 修改清单：新增 `outputs/competitor-analysis/README.md`，更新 `CHANGELOG.md`、`CONTEXT.md`。
+- 仅文档变更；作品集未改，无需同步 gh-pages。
+- 记录提交：以本节所在提交为准。
+
 ## v0.1.0-public.7 — 2026-11-18（简历附件作品集 PDF）
 
 - 新增 16:9 八页作品集 PDF，用作简历附件，内容按当前进度编写：需求与 MVP 三轨、方案、贝斯迭代、多曲评测、独立复核与版本管理、反思。
