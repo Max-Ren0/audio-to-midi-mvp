@@ -1,0 +1,1447 @@
+{
+  "selection": "BabySlakh: the first three numbered items whose manifest contains piano, bass and drums, plus Track00017 and Track00018. MAESTRO: maestro-01 through maestro-03.",
+  "metric": "One-to-one same-category same-pitch (drums: GM key) onset matching within 50 ms; micro pooling over the eight samples; failed outputs counted as empty predictions.",
+  "reference_corrections": {
+    "BabySlakh bass": -12
+  },
+  "conditional_results": "outputs/multi-song-eval/results.json",
+  "conditional_raw_muscriptor_samples": [
+    "slakh-Track00017",
+    "slakh-Track00018"
+  ],
+  "samples": 8,
+  "successes": 8,
+  "success_rate": 1.0,
+  "first_attempt_successes": 8,
+  "aggregate": {
+    "piano": {
+      "e2e_all": {
+        "tp": 3831,
+        "fp": 183,
+        "fn": 242,
+        "precision": 0.9544095665171899,
+        "recall": 0.9405843358703658,
+        "f1": 0.947446519104736
+      },
+      "conditional_best": {
+        "tp": 3831,
+        "fp": 183,
+        "fn": 242,
+        "precision": 0.9544095665171899,
+        "recall": 0.9405843358703658,
+        "f1": 0.947446519104736
+      },
+      "e2e_minus_conditional": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "e2e_reference_present": {
+        "tp": 3831,
+        "fp": 183,
+        "fn": 242,
+        "precision": 0.9544095665171899,
+        "recall": 0.9405843358703658,
+        "f1": 0.947446519104736
+      },
+      "e2e_reference_present_minus_conditional": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "samples_with_reference": 7,
+      "absent_category_false_positives": 0
+    },
+    "bass": {
+      "e2e_all": {
+        "tp": 266,
+        "fp": 344,
+        "fn": 95,
+        "precision": 0.4360655737704918,
+        "recall": 0.7368421052631579,
+        "f1": 0.5478887744593203
+      },
+      "conditional_best": {
+        "tp": 266,
+        "fp": 208,
+        "fn": 95,
+        "precision": 0.5611814345991561,
+        "recall": 0.7368421052631579,
+        "f1": 0.637125748502994
+      },
+      "e2e_minus_conditional": {
+        "precision": -0.12511586082866433,
+        "recall": 0.0,
+        "f1": -0.0892369740436737
+      },
+      "e2e_reference_present": {
+        "tp": 266,
+        "fp": 208,
+        "fn": 95,
+        "precision": 0.5611814345991561,
+        "recall": 0.7368421052631579,
+        "f1": 0.637125748502994
+      },
+      "e2e_reference_present_minus_conditional": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "samples_with_reference": 4,
+      "absent_category_false_positives": 136
+    },
+    "drums": {
+      "e2e_all": {
+        "tp": 863,
+        "fp": 619,
+        "fn": 1121,
+        "precision": 0.5823211875843455,
+        "recall": 0.43497983870967744,
+        "f1": 0.4979803808424697
+      },
+      "conditional_best": {
+        "tp": 863,
+        "fp": 555,
+        "fn": 1121,
+        "precision": 0.6086036671368125,
+        "recall": 0.43497983870967744,
+        "f1": 0.5073486184597296
+      },
+      "e2e_minus_conditional": {
+        "precision": -0.026282479552466986,
+        "recall": 0.0,
+        "f1": -0.009368237617259856
+      },
+      "e2e_reference_present": {
+        "tp": 863,
+        "fp": 555,
+        "fn": 1121,
+        "precision": 0.6086036671368125,
+        "recall": 0.43497983870967744,
+        "f1": 0.5073486184597296
+      },
+      "e2e_reference_present_minus_conditional": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "samples_with_reference": 4,
+      "absent_category_false_positives": 64
+    }
+  },
+  "timing_summary": {
+    "total_seconds": 4249.285,
+    "median_seconds": 513.2405,
+    "realtime_factor_min": 2.68085,
+    "realtime_factor_max": 10.934583333333334,
+    "stage_seconds": {
+      "baseline": 570.828,
+      "piano_b": 2483.346,
+      "muscriptor": 1194.84
+    }
+  },
+  "by_source": {
+    "BabySlakh (Slakh2100 train split)": {
+      "piano": {
+        "tracks": {
+          "tp": 823,
+          "fp": 183,
+          "fn": 108,
+          "precision": 0.8180914512922465,
+          "recall": 0.8839957035445757,
+          "f1": 0.8497676819824471
+        },
+        "conditional_best": {
+          "tp": 823,
+          "fp": 183,
+          "fn": 108,
+          "precision": 0.8180914512922465,
+          "recall": 0.8839957035445757,
+          "f1": 0.8497676819824471
+        }
+      },
+      "bass": {
+        "tracks": {
+          "tp": 266,
+          "fp": 266,
+          "fn": 95,
+          "precision": 0.5,
+          "recall": 0.7368421052631579,
+          "f1": 0.5957446808510638
+        },
+        "conditional_best": {
+          "tp": 266,
+          "fp": 208,
+          "fn": 95,
+          "precision": 0.5611814345991561,
+          "recall": 0.7368421052631579,
+          "f1": 0.637125748502994
+        }
+      },
+      "drums": {
+        "tracks": {
+          "tp": 863,
+          "fp": 555,
+          "fn": 1121,
+          "precision": 0.6086036671368125,
+          "recall": 0.43497983870967744,
+          "f1": 0.5073486184597296
+        },
+        "conditional_best": {
+          "tp": 863,
+          "fp": 555,
+          "fn": 1121,
+          "precision": 0.6086036671368125,
+          "recall": 0.43497983870967744,
+          "f1": 0.5073486184597296
+        }
+      }
+    },
+    "MAESTRO v3.0.0 test split": {
+      "piano": {
+        "tracks": {
+          "tp": 3008,
+          "fp": 0,
+          "fn": 134,
+          "precision": 1.0,
+          "recall": 0.9573520050922979,
+          "f1": 0.9782113821138212
+        },
+        "conditional_best": {
+          "tp": 3008,
+          "fp": 0,
+          "fn": 134,
+          "precision": 1.0,
+          "recall": 0.9573520050922979,
+          "f1": 0.9782113821138212
+        }
+      },
+      "bass": {
+        "tracks": {
+          "tp": 0,
+          "fp": 78,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "conditional_best": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "drums": {
+        "tracks": {
+          "tp": 0,
+          "fp": 64,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "conditional_best": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "slakh-Track00001",
+      "source": "BabySlakh (Slakh2100 train split)",
+      "reference_window_seconds": 60.0,
+      "audio_seconds": 60.0,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 7.381733333333333,
+      "input_sha256": "3229f56a2dbd2adb902f4b23e1471a0348a80be6d633d55577173318dc2ad4b8",
+      "reference_sha256": "f708e645c687894aa3d82d201048463fc7cf63d9c28dba82acd18025e9316b1b",
+      "midi_sha256": "2c0a5d003faa6e18f529240a3ce41d2be91b5775670c67a3a5540b849cdcde1c",
+      "attempt": "slakh-Track00001",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 35.111
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 292.907
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 114.857
+        }
+      },
+      "total_seconds": 442.904,
+      "process_wall_seconds": 442.997,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "slakh-Track00001",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 35.111
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 292.907
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 114.857
+            }
+          },
+          "total_seconds": 442.904,
+          "process_wall_seconds": 442.997,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 94,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.9690721649484536,
+          "recall": 0.9690721649484536,
+          "f1": 0.9690721649484536
+        },
+        "bass": {
+          "tp": 79,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.9186046511627907,
+          "recall": 0.9753086419753086,
+          "f1": 0.9461077844311377
+        },
+        "drums": {
+          "tp": 77,
+          "fp": 194,
+          "fn": 194,
+          "precision": 0.28413284132841327,
+          "recall": 0.28413284132841327,
+          "f1": 0.28413284132841327
+        }
+      },
+      "reference_note_counts": {
+        "piano": 97,
+        "bass": 81,
+        "drums": 271
+      },
+      "absent_category_false_positives": {},
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b",
+        "bass": "muscriptor",
+        "drums": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "note_off_without_onset": 74,
+        "missing_tie": 52
+      },
+      "muscriptor_track_actions": {
+        "bass": "replaced",
+        "drums": "replaced"
+      },
+      "research_track_note_counts": {
+        "electric_guitar": 55
+      },
+      "conditional_best": {
+        "piano": {
+          "tp": 94,
+          "fp": 3,
+          "fn": 3,
+          "precision": 0.9690721649484536,
+          "recall": 0.9690721649484536,
+          "f1": 0.9690721649484536
+        },
+        "bass": {
+          "tp": 79,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.9186046511627907,
+          "recall": 0.9753086419753086,
+          "f1": 0.9461077844311377
+        },
+        "drums": {
+          "tp": 77,
+          "fp": 194,
+          "fn": 194,
+          "precision": 0.28413284132841327,
+          "recall": 0.28413284132841327,
+          "f1": 0.28413284132841327
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "slakh-Track00002",
+      "source": "BabySlakh (Slakh2100 train split)",
+      "reference_window_seconds": 60.0,
+      "audio_seconds": 60.0,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 7.9130666666666665,
+      "input_sha256": "cac6128ac2e2e77f18af64c41732692a5c1415e5a0e6fe8a78e9918927286db6",
+      "reference_sha256": "4b6dd2b1526bfea659ccc866be9c9aef44d982e10df13966270c1abc5805da94",
+      "midi_sha256": "41ca2d948677cd5e9c938ca709187bea6e8398815f84c84ec9c09ff73e819b70",
+      "attempt": "slakh-Track00002",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 39.685
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 298.306
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 136.757
+        }
+      },
+      "total_seconds": 474.784,
+      "process_wall_seconds": 474.918,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "slakh-Track00002",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 39.685
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 298.306
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 136.757
+            }
+          },
+          "total_seconds": 474.784,
+          "process_wall_seconds": 474.918,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 152,
+          "fp": 22,
+          "fn": 3,
+          "precision": 0.8735632183908046,
+          "recall": 0.9806451612903225,
+          "f1": 0.9240121580547113
+        },
+        "bass": {
+          "tp": 77,
+          "fp": 21,
+          "fn": 5,
+          "precision": 0.7857142857142857,
+          "recall": 0.9390243902439024,
+          "f1": 0.8555555555555555
+        },
+        "drums": {
+          "tp": 324,
+          "fp": 121,
+          "fn": 423,
+          "precision": 0.7280898876404495,
+          "recall": 0.43373493975903615,
+          "f1": 0.5436241610738255
+        }
+      },
+      "reference_note_counts": {
+        "piano": 155,
+        "bass": 82,
+        "drums": 747
+      },
+      "absent_category_false_positives": {},
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b",
+        "bass": "muscriptor",
+        "drums": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "note_off_without_onset": 25,
+        "missing_tie": 21
+      },
+      "muscriptor_track_actions": {
+        "bass": "replaced",
+        "drums": "replaced"
+      },
+      "research_track_note_counts": {
+        "electric_guitar": 228,
+        "strings": 25
+      },
+      "conditional_best": {
+        "piano": {
+          "tp": 152,
+          "fp": 22,
+          "fn": 3,
+          "precision": 0.8735632183908046,
+          "recall": 0.9806451612903225,
+          "f1": 0.9240121580547113
+        },
+        "bass": {
+          "tp": 77,
+          "fp": 21,
+          "fn": 5,
+          "precision": 0.7857142857142857,
+          "recall": 0.9390243902439024,
+          "f1": 0.8555555555555555
+        },
+        "drums": {
+          "tp": 324,
+          "fp": 121,
+          "fn": 423,
+          "precision": 0.7280898876404495,
+          "recall": 0.43373493975903615,
+          "f1": 0.5436241610738255
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "slakh-Track00003",
+      "source": "BabySlakh (Slakh2100 train split)",
+      "reference_window_seconds": 60.0,
+      "audio_seconds": 60.0,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 10.934583333333334,
+      "input_sha256": "da861b9b7cc5d833acd4da882206863fad7e9101b16f633ff003f2433ea88069",
+      "reference_sha256": "7955ce8af5c897fb45031ff78d927a750260e890326d2830ab6ddf70ed9b1a68",
+      "midi_sha256": "aef44109cbdd68f815674c7a05e2711e5cf2340d0015d0a54220bdfdc1c751dd",
+      "attempt": "slakh-Track00003",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 110.108
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 308.742
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 237.19
+        }
+      },
+      "total_seconds": 656.075,
+      "process_wall_seconds": 656.208,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "slakh-Track00003",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 110.108
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 308.742
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 237.19
+            }
+          },
+          "total_seconds": 656.075,
+          "process_wall_seconds": 656.208,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 542,
+          "fp": 62,
+          "fn": 86,
+          "precision": 0.8973509933774835,
+          "recall": 0.8630573248407644,
+          "f1": 0.8798701298701299
+        },
+        "bass": {
+          "tp": 77,
+          "fp": 171,
+          "fn": 79,
+          "precision": 0.31048387096774194,
+          "recall": 0.4935897435897436,
+          "f1": 0.3811881188118812
+        },
+        "drums": {
+          "tp": 275,
+          "fp": 215,
+          "fn": 198,
+          "precision": 0.5612244897959183,
+          "recall": 0.5813953488372093,
+          "f1": 0.5711318795430945
+        }
+      },
+      "reference_note_counts": {
+        "piano": 628,
+        "bass": 156,
+        "drums": 473
+      },
+      "absent_category_false_positives": {},
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b",
+        "bass": "muscriptor",
+        "drums": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "note_off_without_onset": 96,
+        "missing_tie": 101,
+        "Err/Note off without note on": 7.0
+      },
+      "muscriptor_track_actions": {
+        "bass": "replaced",
+        "drums": "replaced"
+      },
+      "research_track_note_counts": {
+        "acoustic_guitar": 486,
+        "electric_guitar": 505
+      },
+      "conditional_best": {
+        "piano": {
+          "tp": 542,
+          "fp": 62,
+          "fn": 86,
+          "precision": 0.8973509933774835,
+          "recall": 0.8630573248407644,
+          "f1": 0.8798701298701299
+        },
+        "bass": {
+          "tp": 77,
+          "fp": 171,
+          "fn": 79,
+          "precision": 0.31048387096774194,
+          "recall": 0.4935897435897436,
+          "f1": 0.3811881188118812
+        },
+        "drums": {
+          "tp": 275,
+          "fp": 215,
+          "fn": 198,
+          "precision": 0.5612244897959183,
+          "recall": 0.5813953488372093,
+          "f1": 0.5711318795430945
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "slakh-Track00017",
+      "source": "BabySlakh (Slakh2100 train split)",
+      "reference_window_seconds": 60.0,
+      "audio_seconds": 60.0,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 2.68085,
+      "input_sha256": "6c28d71e7d19f65cdd0b4c0a0a0b92ac55133941262f36f6a52c94aebd33fb8e",
+      "reference_sha256": "ce1a377cdc700b5abf1b405776e23e5c9fe721dc83e3ccfd08cc4818390407a8",
+      "midi_sha256": "721b921df96fd44475d565f08c426b1e35e1855f98a8f522b0b27ce5b82b8fcb",
+      "attempt": "slakh-Track00017",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 52.012
+        },
+        "piano_b": {
+          "status": "skipped",
+          "seconds": null,
+          "reason": "基线没有识别到钢琴轨"
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 108.808
+        }
+      },
+      "total_seconds": 160.851,
+      "process_wall_seconds": 160.997,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "slakh-Track00017",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 52.012
+            },
+            "piano_b": {
+              "status": "skipped",
+              "seconds": null,
+              "reason": "基线没有识别到钢琴轨"
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 108.808
+            }
+          },
+          "total_seconds": 160.851,
+          "process_wall_seconds": 160.997,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "bass": {
+          "tp": 0,
+          "fp": 58,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "drums": {
+          "tp": 187,
+          "fp": 25,
+          "fn": 306,
+          "precision": 0.8820754716981132,
+          "recall": 0.3793103448275862,
+          "f1": 0.5304964539007092
+        }
+      },
+      "reference_note_counts": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 493
+      },
+      "absent_category_false_positives": {
+        "piano": 0,
+        "bass": 58
+      },
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "drums": "muscriptor",
+        "bass": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "missing_tie": 39,
+        "note_off_without_onset": 38
+      },
+      "muscriptor_track_actions": {
+        "bass": "added",
+        "drums": "replaced"
+      },
+      "research_track_note_counts": {
+        "acoustic_guitar": 188,
+        "electric_guitar": 129,
+        "strings": 146
+      },
+      "conditional_best": {
+        "drums": {
+          "tp": 187,
+          "fp": 25,
+          "fn": 306,
+          "precision": 0.8820754716981132,
+          "recall": 0.3793103448275862,
+          "f1": 0.5304964539007092
+        }
+      },
+      "conditional_unscored_absent_note_counts": {
+        "bass": 58
+      }
+    },
+    {
+      "id": "slakh-Track00018",
+      "source": "BabySlakh (Slakh2100 train split)",
+      "reference_window_seconds": 60.0,
+      "audio_seconds": 60.0,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 7.032816666666666,
+      "input_sha256": "893ff167d63301e95ff802a7be1646a5b17c608a51a1fc436da99a014feec32a",
+      "reference_sha256": "e7e9460fb1a12df7479c70baf479235dc9c5e6c2e99d66635497a5ce83165ef8",
+      "midi_sha256": "d0c56304c0438bf34ef6867083348a21c8a065df0d6d46b819122735a717f613",
+      "attempt": "slakh-Track00018",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 36.523
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 293.135
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 92.28
+        }
+      },
+      "total_seconds": 421.969,
+      "process_wall_seconds": 422.098,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "slakh-Track00018",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 36.523
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 293.135
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 92.28
+            }
+          },
+          "total_seconds": 421.969,
+          "process_wall_seconds": 422.098,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 35,
+          "fp": 96,
+          "fn": 16,
+          "precision": 0.26717557251908397,
+          "recall": 0.6862745098039216,
+          "f1": 0.38461538461538464
+        },
+        "bass": {
+          "tp": 33,
+          "fp": 9,
+          "fn": 9,
+          "precision": 0.7857142857142857,
+          "recall": 0.7857142857142857,
+          "f1": 0.7857142857142857
+        },
+        "drums": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "reference_note_counts": {
+        "piano": 51,
+        "bass": 42,
+        "drums": 0
+      },
+      "absent_category_false_positives": {
+        "drums": 0
+      },
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b",
+        "bass": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "note_off_without_onset": 116,
+        "missing_tie": 63
+      },
+      "muscriptor_track_actions": {
+        "bass": "replaced",
+        "drums": "absent"
+      },
+      "research_track_note_counts": {
+        "strings": 32
+      },
+      "conditional_best": {
+        "piano": {
+          "tp": 35,
+          "fp": 96,
+          "fn": 16,
+          "precision": 0.26717557251908397,
+          "recall": 0.6862745098039216,
+          "f1": 0.38461538461538464
+        },
+        "bass": {
+          "tp": 33,
+          "fp": 9,
+          "fn": 9,
+          "precision": 0.7857142857142857,
+          "recall": 0.7857142857142857,
+          "f1": 0.7857142857142857
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "maestro-01",
+      "source": "MAESTRO v3.0.0 test split",
+      "reference_window_seconds": 65.9481178125,
+      "audio_seconds": 67.150875,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 8.215782742965002,
+      "input_sha256": "d68ffc21d870d0c49170edc2ac29a2f97bdd3c7c09a8e095f49850a3a154df86",
+      "reference_sha256": "417197f955f98ad2affccf4f85a4a2c7e4c23b16c99029b9d2ed13a12b0c05ba",
+      "midi_sha256": "4d357e1dc039106ed3f41029dfa796142ca2e372468ba32988163dbeada404c0",
+      "attempt": "maestro-01",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 74.158
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 344.324
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 133.181
+        }
+      },
+      "total_seconds": 551.697,
+      "process_wall_seconds": 551.797,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "maestro-01",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 74.158
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 344.324
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 133.181
+            }
+          },
+          "total_seconds": 551.697,
+          "process_wall_seconds": 551.797,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 815,
+          "fp": 0,
+          "fn": 67,
+          "precision": 1.0,
+          "recall": 0.9240362811791383,
+          "f1": 0.9605185621685327
+        },
+        "bass": {
+          "tp": 0,
+          "fp": 78,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "drums": {
+          "tp": 0,
+          "fp": 64,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        }
+      },
+      "reference_note_counts": {
+        "piano": 882,
+        "bass": 0,
+        "drums": 0
+      },
+      "absent_category_false_positives": {
+        "bass": 78,
+        "drums": 64
+      },
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b",
+        "bass": "muscriptor",
+        "drums": "muscriptor"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "note_off_without_onset": 19,
+        "missing_tie": 29
+      },
+      "muscriptor_track_actions": {
+        "bass": "added",
+        "drums": "added"
+      },
+      "research_track_note_counts": {},
+      "conditional_best": {
+        "piano": {
+          "tp": 815,
+          "fp": 0,
+          "fn": 67,
+          "precision": 1.0,
+          "recall": 0.9240362811791383,
+          "f1": 0.9605185621685327
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "maestro-02",
+      "source": "MAESTRO v3.0.0 test split",
+      "reference_window_seconds": 95.9707907813,
+      "audio_seconds": 97.1504375,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 7.158753145090057,
+      "input_sha256": "29b52e06f1c202f27218426d93ad73dc19bcd2c678e23348109c06984f59272b",
+      "reference_sha256": "f3c6ade86ddf024dd5195cdee2e79242ac15813dd010d1d188834c7dd485a684",
+      "midi_sha256": "e0d43acf1674202ef4fe08e82d7fc79211b0c3f872b5e84a2c1cce4af7842441",
+      "attempt": "maestro-02",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 91.527
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 442.844
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 161.067
+        }
+      },
+      "total_seconds": 695.476,
+      "process_wall_seconds": 695.632,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "maestro-02",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 91.527
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 442.844
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 161.067
+            }
+          },
+          "total_seconds": 695.476,
+          "process_wall_seconds": 695.632,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 836,
+          "fp": 0,
+          "fn": 24,
+          "precision": 1.0,
+          "recall": 0.9720930232558139,
+          "f1": 0.9858490566037735
+        },
+        "bass": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "drums": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "reference_note_counts": {
+        "piano": 860,
+        "bass": 0,
+        "drums": 0
+      },
+      "absent_category_false_positives": {
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "Err/Note off without note on": 1.0,
+        "missing_tie": 28,
+        "note_off_without_onset": 25
+      },
+      "muscriptor_track_actions": {
+        "bass": "absent",
+        "drums": "absent"
+      },
+      "research_track_note_counts": {},
+      "conditional_best": {
+        "piano": {
+          "tp": 836,
+          "fp": 0,
+          "fn": 24,
+          "precision": 1.0,
+          "recall": 0.9720930232558139,
+          "f1": 0.9858490566037735
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    },
+    {
+      "id": "maestro-03",
+      "source": "MAESTRO v3.0.0 test split",
+      "reference_window_seconds": 109.870833333,
+      "audio_seconds": 110.90525,
+      "audio_seconds_source": "decoded",
+      "realtime_factor": 7.623886155073813,
+      "input_sha256": "f27aa600bd77026e2ae9c35fcd224336af71e81ade2c4406064b9349414afa2b",
+      "reference_sha256": "4d29b8d1d3d53d7b728ce18025fad8b08c575e42b5ab12e49356646d875c7980",
+      "midi_sha256": "b968843aaef7debc0fbca580e4de6cdaebea49d524353ae753793014edbf1fd0",
+      "attempt": "maestro-03",
+      "success": true,
+      "exit_code": 0,
+      "failed_stage": null,
+      "failure_reason": null,
+      "stage_timings": {
+        "baseline": {
+          "status": "ok",
+          "seconds": 131.704
+        },
+        "piano_b": {
+          "status": "ok",
+          "seconds": 503.088
+        },
+        "muscriptor": {
+          "status": "ok",
+          "seconds": 210.7
+        }
+      },
+      "total_seconds": 845.529,
+      "process_wall_seconds": 845.688,
+      "measured_machine": {
+        "cpu": "Apple M3 Pro",
+        "logical_cpus": 11,
+        "threads": 2,
+        "nice_adjustment": 10,
+        "device": "cpu",
+        "parallel_samples": 1
+      },
+      "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720",
+      "attempts": [
+        {
+          "attempt": "maestro-03",
+          "success": true,
+          "exit_code": 0,
+          "failed_stage": null,
+          "failure_reason": null,
+          "stage_timings": {
+            "baseline": {
+              "status": "ok",
+              "seconds": 131.704
+            },
+            "piano_b": {
+              "status": "ok",
+              "seconds": 503.088
+            },
+            "muscriptor": {
+              "status": "ok",
+              "seconds": 210.7
+            }
+          },
+          "total_seconds": 845.529,
+          "process_wall_seconds": 845.688,
+          "measured_machine": {
+            "cpu": "Apple M3 Pro",
+            "logical_cpus": 11,
+            "threads": 2,
+            "nice_adjustment": 10,
+            "device": "cpu",
+            "parallel_samples": 1
+          },
+          "pipeline_commit": "69d53a8ee46e84e3218fcace4bbffc5f9f444720"
+        }
+      ],
+      "tracks": {
+        "piano": {
+          "tp": 1357,
+          "fp": 0,
+          "fn": 43,
+          "precision": 1.0,
+          "recall": 0.9692857142857143,
+          "f1": 0.9844033369604642
+        },
+        "bass": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "drums": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "reference_note_counts": {
+        "piano": 1400,
+        "bass": 0,
+        "drums": 0
+      },
+      "absent_category_false_positives": {
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_notes_outside_reference_window": {
+        "piano": 0,
+        "bass": 0,
+        "drums": 0
+      },
+      "mvp_track_sources": {
+        "piano": "piano_b"
+      },
+      "baseline_attempts": 1,
+      "baseline_decode_errors": {
+        "missing_tie": 30,
+        "note_off_without_onset": 50
+      },
+      "muscriptor_track_actions": {
+        "bass": "absent",
+        "drums": "absent"
+      },
+      "research_track_note_counts": {},
+      "conditional_best": {
+        "piano": {
+          "tp": 1357,
+          "fp": 0,
+          "fn": 43,
+          "precision": 1.0,
+          "recall": 0.9692857142857143,
+          "f1": 0.9844033369604642
+        }
+      },
+      "conditional_unscored_absent_note_counts": {}
+    }
+  ]
+}
