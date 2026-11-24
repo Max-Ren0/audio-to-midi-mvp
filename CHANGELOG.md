@@ -1,5 +1,35 @@
 # 版本记录
 
+## v0.1.0-public.9 — 2026-11-25（缺轨入口、一键三轨、端到端评测）
+
+- MuScriptor 贝斯和鼓缺轨修复（`4e4a79d`）
+  - 贝斯与鼓各自处理，回执标记四种状态：替换 `replaced`、新增 `added`、保留基线 `kept_baseline`、无轨 `absent`。
+  - 推理日志没有任何 `NOTE` 记录时，入口明确报错。
+  - 回执新增 `track_note_counts`，记录最终 MIDI 中贝斯与鼓各自的音符数。
+- 一键三轨入口 `scripts/run_noto.py`（`69d53a8`）
+  - MP3 依次经过 YourMT3 基线、钢琴 B 与 MuScriptor 贝斯和鼓替换。基线未识别到钢琴轨时跳过钢琴 B。
+  - 所有应执行的阶段成功后才发布最终 `noto.mid`。阶段失败时保留回执与日志。
+  - `receipt.json` 记录运行状态、输入及模型哈希、实际命令与参数、Git 提交和工作树状态、阶段耗时、失败阶段及各轨来源和音符数。
+  - 资源预检失败会写入失败回执并以退出码 `2` 结束，模型无需启动。
+- 端到端评测 `outputs/e2e-eval/`（`1bc9ee5`）
+  - 仅输入音频，8/8 段成功。micro F1 为钢琴 94.74%、贝斯 54.79%、鼓 49.80%。
+  - 相对同批条件评测变化为 +0.00/−8.92/−0.94 个百分点。贝斯和鼓的降幅全部来自参考缺失类别中的误报。
+  - 单段处理耗时为音频时长的 2.68–10.93 倍，钢琴 B 占合计耗时的 58.4%。逐段结果和阶段耗时见 [端到端评测报告](outputs/e2e-eval/README.md)。
+
+| 现象 | 原因 | 解决 |
+|---|---|---|
+| 缺贝斯或鼓的样本拼接报错 | 旧入口要求基线恰好各有一条贝斯和鼓轨 | 分别处理两类轨道，按基线轨和预测音符决定替换、新增、保留或留空 |
+| 零 `NOTE` 日志静默成功 | 引擎退出成功后，入口没有检查日志是否包含音符记录 | 解析和拼接前检查 `NOTE` 记录，缺失时明确报错 |
+| 回执未标记未提交改动 | Git 提交号只能定位已提交的版本 | 增加 `git_dirty`，在运行开始时记录工作树是否有未提交改动 |
+
+- 独立复核：三段均由 Codex 执行、Claude 独立只读审核。S1、S2 各返工 1 轮，S3 未返工。
+- 审核者根据回执和最终 MIDI 重算 S3 评分，结果与交付 JSON 一致。
+- PRD 已同步。作品集网页与 `gh-pages` 未同步，留待后续。
+- 修改清单：`scripts/run_muscriptor_bass_drums.py`、`src/audio_midi/muscriptor_routing.py`、`tests/test_muscriptor_routing.py`、`scripts/run_noto.py`、`src/audio_midi/one_click.py`、`tests/test_run_noto.py`、`README.md`、`outputs/muscriptor-route/使用说明.md`、`outputs/e2e-eval/`（`README.md`、`results.json`、`run_e2e.py`、`score_e2e.py`）、`tests/test_e2e_eval.py`、`outputs/Noto-产品需求文档.md`、`CHANGELOG.md`、`CONTEXT.md`。
+- 运行产物（MIDI、回执）不入库。
+- 遗留：样本少，训练数据可能重叠。空类别误报需要增加乐器是否存在的判断，钢琴 B 是耗时瓶颈。听感和人工修改时间仍待测。
+- 记录提交：以本节所在提交为准。
+
 ## v0.1.0-public.8 — 2026-11-24（竞品对比）
 
 - 新增竞品对比 `outputs/competitor-analysis/README.md`：
