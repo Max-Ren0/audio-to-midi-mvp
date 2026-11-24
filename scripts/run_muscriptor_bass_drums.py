@@ -37,9 +37,19 @@ def main():
         env=os.environ.copy();env['OMP_NUM_THREADS']='2';env['OPENBLAS_NUM_THREADS']='2'
         with log.open('x') as f:
             subprocess.run([str(a.engine.resolve()),'--transcribe','--weights',str(a.weights.resolve()),'--audio',str(wav.resolve()),'--device','cpu','--threads','2'],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=a.timeout,env=env)
-        notes=parse_note_lines(log.read_text());out=a.output_dir/'Noto-MuScriptor贝斯鼓.mid'
-        replace_midi_tracks(a.baseline,notes,out,duration)
+        log_text = log.read_text()
+        if not any(line.startswith('NOTE,') for line in log_text.splitlines()):
+            raise ValueError(f'MuScriptor log contains no NOTE records: {log}')
+        notes = parse_note_lines(log_text)
+        out = a.output_dir/'Noto-MuScriptor贝斯鼓.mid'
+        tracks=replace_midi_tracks(a.baseline,notes,out,duration)
+    track_note_counts = dict.fromkeys(tracks, 0)
+    for track in mido.MidiFile(out).tracks:
+        if track.name in track_note_counts:
+            track_note_counts[track.name] = sum(msg.type == 'note_on' and msg.velocity > 0 for msg in track)
     receipt={'decoded_wav_sha256':decoded_sha,'decoded_sample_rate':info.samplerate,'decoded_frames':info.frames,'audio_sha256':sha(a.audio),'baseline_midi_sha256':sha(a.baseline),'engine_sha256':sha(a.engine),'weights_sha256':sha(a.weights),'raw_log_sha256':sha(log),'output_sha256':sha(out),'duration_seconds':duration,'elapsed_seconds':time.monotonic()-start,'conditioning':['AcousticPiano','AcousticGuitar','CleanElectricGuitar','ElectricBass','StringEnsemble','Drums'],'device':'cpu','threads':2,'caveats':['No predicted velocity; fixed MIDI velocity 80','Requires baseline and audio share the same timeline; hash is user-supplied provenance, not independent proof','MuScriptor weights CC BY-NC 4.0; non-commercial use']}
+    receipt['tracks']=tracks
+    receipt['track_note_counts'] = track_note_counts
     (a.output_dir/'运行报告.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2))
     print(json.dumps(receipt,ensure_ascii=False))
 if __name__=='__main__':main()

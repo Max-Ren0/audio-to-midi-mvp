@@ -25,26 +25,29 @@ def parse_note_lines(text: str) -> list[NoteEvent]:
             notes.append(NoteEvent(category, pitch, onset, offset, 80, program))
     return notes
 
-def replace_bass_drums(baseline: list[NoteEvent], source: list[NoteEvent], duration: float) -> list[NoteEvent]:
+def _source_notes_in_window(source: list[NoteEvent], duration: float) -> list[NoteEvent]:
     if not isfinite(duration) or duration <= 0:
         raise ValueError('Invalid duration')
-    selected=[]
+    selected = []
     for n in source:
         if n.category not in TARGETS:
             continue
-        if n.offset is None or not all(isfinite(x) for x in (n.onset,n.offset)) or n.onset < 0 or n.offset <= n.onset:
+        if n.offset is None or not all(isfinite(x) for x in (n.onset, n.offset)) or n.onset < 0 or n.offset <= n.onset:
             raise ValueError('Invalid source note')
         if n.onset < duration:
             end = min(n.offset, duration)
             if end > n.onset:
                 selected.append(replace(n, offset=end))
-    for target in sorted(TARGETS):
-        if not any(n.category == target for n in selected):
-            raise ValueError(f'Missing {target} notes; refusing silent replacement')
-    return sorted([n for n in baseline if n.category not in TARGETS]+selected, key=lambda n:(n.onset,n.category,n.pitch))
+    return selected
 
-def replace_midi_tracks(baseline_path, source: list[NoteEvent], output_path, duration: float):
-    """Keep original tracks verbatim, replace only bass/drums; fixed Noto MIDI format."""
+def replace_bass_drums(baseline: list[NoteEvent], source: list[NoteEvent], duration: float) -> list[NoteEvent]:
+    selected = _source_notes_in_window(source, duration)
+    replaced_categories = {n.category for n in selected}
+    kept = [n for n in baseline if n.category not in replaced_categories]
+    return sorted(kept + selected, key=lambda n: (n.onset, n.category, n.pitch))
+
+def replace_midi_tracks(baseline_path, source: list[NoteEvent], output_path, duration: float) -> dict[str, str]:
+    """Merge predicted bass/drums into Noto MIDI and report the action per track."""
     import tempfile
     from pathlib import Path
     import mido
@@ -60,28 +63,57 @@ def replace_midi_tracks(baseline_path, source: list[NoteEvent], output_path, dur
     if tempos != [500000]:
         raise ValueError('Baseline requires a single 120 BPM tempo')
     target_tracks = {name: [t for t in original.tracks if t.name == name] for name in TARGETS}
-    if any(len(v) != 1 for v in target_tracks.values()):
-        raise ValueError('Baseline requires exactly one bass and one drums track')
-    bass_channels = {m.channel for m in target_tracks['bass'][0] if hasattr(m, 'channel')}
-    if len(bass_channels) != 1 or 9 in bass_channels:
-        raise ValueError('Invalid baseline bass channel')
-    bass_channel = next(iter(bass_channels))
-    for track in original.tracks:
-        if track.name not in TARGETS and any(getattr(m,'channel',None) in (bass_channel,9) for m in track):
-            raise ValueError('Target channel shared with another track')
-    chosen = replace_bass_drums(read_notes(baseline_path), source, duration)
-    target_notes = [n for n in chosen if n.category in TARGETS]
-    with tempfile.TemporaryDirectory(prefix='noto-midi-') as td:
-        temp = Path(td) / 'replacement.mid'
-        write_midi(target_notes, temp)
-        generated = mido.MidiFile(temp)
-    replacements = {t.name:t for t in generated.tracks if t.name in TARGETS}
-    for msg in replacements['bass']:
-        if hasattr(msg,'channel'):
-            msg.channel = bass_channel
+    if any(len(tracks) > 1 for tracks in target_tracks.values()):
+        raise ValueError('Baseline allows at most one track each for bass and drums')
+    other_channels = {
+        msg.channel for track in original.tracks if track.name not in TARGETS
+        for msg in track if hasattr(msg, 'channel')
+    }
+    bass_channel = None
+    if target_tracks['bass']:
+        bass_channels = {m.channel for m in target_tracks['bass'][0] if hasattr(m, 'channel')}
+        if len(bass_channels) != 1 or 9 in bass_channels:
+            raise ValueError('Invalid baseline bass channel')
+        bass_channel = next(iter(bass_channels))
+    target_notes = _source_notes_in_window(source, duration)
+    writing_drums = any(note.category == 'drums' for note in target_notes)
+    if bass_channel in other_channels or (writing_drums and 9 in other_channels):
+        raise ValueError('Target channel shared with another track')
+
+    read_notes(baseline_path)  # Preserve validation of baseline MIDI note pairs.
+    replacements = {}
+    if target_notes:
+        target_notes.sort(key=lambda n: (n.onset, n.category, n.pitch))
+        with tempfile.TemporaryDirectory(prefix='noto-midi-') as td:
+            temp = Path(td) / 'replacement.mid'
+            write_midi(target_notes, temp)
+            generated = mido.MidiFile(temp)
+        replacements = {track.name: track for track in generated.tracks if track.name in TARGETS}
+    if 'bass' in replacements:
+        if bass_channel is None:
+            used_channels = {
+                msg.channel for track in original.tracks for msg in track if hasattr(msg, 'channel')
+            }
+            # Prefer the full Noto mix's bass channel without changing any existing track.
+            bass_channel = next((ch for ch in (3, *range(16)) if ch != 9 and ch not in used_channels), None)
+            if bass_channel is None:
+                raise ValueError('No free MIDI channel for added bass track')
+        for msg in replacements['bass']:
+            if hasattr(msg, 'channel'):
+                msg.channel = bass_channel
+
+    track_states = {}
+    for target, tracks in sorted(target_tracks.items()):
+        if target in replacements:
+            track_states[target] = 'replaced' if tracks else 'added'
+        else:
+            track_states[target] = 'kept_baseline' if tracks else 'absent'
     result = mido.MidiFile(type=original.type, ticks_per_beat=original.ticks_per_beat)
     for track in original.tracks:
-        result.tracks.append(replacements[track.name] if track.name in TARGETS else track.copy())
+        replacement = replacements.pop(track.name, None)
+        result.tracks.append(track.copy() if replacement is None else replacement)
+    result.tracks.extend(replacements.values())
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open('xb') as f:
         result.save(file=f)
+    return track_states
