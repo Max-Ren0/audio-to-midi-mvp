@@ -15,11 +15,13 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('input',type=Path);p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--stems',type=Path,help='Optional hash-bound SW cache for this exact input')
+    p.add_argument('--threads', type=int, choices=[1, 2])
     a=p.parse_args();a.input=a.input.resolve();a.output_dir=a.output_dir.resolve()
     if a.stems:a.stems=a.stems.resolve()
     if a.output_dir.exists():raise FileExistsError('Output exists; preserving it')
     root=Path(__file__).resolve().parents[1];os.chdir(root)
     lock_path=root/'config/piano-b.lock.json';lock=json.loads(lock_path.read_text())
+    threads = a.threads if a.threads is not None else lock['cpu_threads']
     if lock['pipeline']!=['bs-roformer-sw','transkun-2.0'] or lock['automatic_fallback'] is not False:
         raise ValueError('Unsupported piano route; B must stay locked')
     verify_assets(root,lock)
@@ -34,22 +36,22 @@ def main():
     scratch=root/'work/piano-b'/str(time.time_ns());scratch.mkdir(parents=True)
     start=time.monotonic();runs={}
     def run(cmd,name):
-        runs[name]=asdict(run_command(cmd,time.monotonic()+1800,scratch/f'{name}.log',6*1024**3))
+        runs[name]=asdict(run_command(cmd,time.monotonic()+1800,scratch/f'{name}.log',6*1024**3,threads=threads))
     if a.stems:
         stems=a.stems
     else:
         from audio_midi.stems import write_stem_receipt
         wav=scratch/'input.wav';stems=scratch/'sw'
-        run(['ffmpeg','-v','error','-nostdin','-threads','2','-i',str(a.input),'-vn','-ac','2','-ar','44100','-c:a','pcm_f32le',str(wav)],'decode')
-        run([str(specialist),str(root/lock['model_assets']['sw_wrapper']['path']),str(wav),str(stems),str(audio.duration_seconds)],'sw_separation')
+        run(['ffmpeg','-v','error','-nostdin','-threads',str(threads),'-i',str(a.input),'-vn','-ac','2','-ar','44100','-c:a','pcm_f32le',str(wav)],'decode')
+        run([str(specialist),str(root/lock['model_assets']['sw_wrapper']['path']),str(wav),str(stems),str(audio.duration_seconds),str(threads)],'sw_separation')
         write_stem_receipt(stems,input_hash,{'model':'locked BS-Roformer-SW','original_input_sha256':input_hash,'source_wav_sha256':digest(wav),'upstream_receipt_sha256':digest(stems/'receipt.json'),'decoder':'FFmpeg 44100 stereo full input; no trim'})
-    piano=verify_piano_cache(stems,input_hash,lock)
+    piano=verify_piano_cache(stems,input_hash,{**lock, 'cpu_threads': threads})
     import soundfile as sf
     info=sf.info(piano)
     if info.samplerate!=44100 or info.channels!=2 or abs(info.duration-audio.duration_seconds)>.05:
         raise ValueError('Piano stem timeline/format mismatch')
     raw=scratch/'transkun.mid'
-    run([str(specialist),'scripts/transcribe_specialist.py','transkun',str(piano),str(raw)],'transkun')
+    run([str(specialist),'scripts/transcribe_specialist.py','transkun',str(piano),str(raw),'--threads',str(threads)],'transkun')
     raw_notes=read_notes(raw)
     if any(n.category!='piano' for n in raw_notes):raise ValueError('Unexpected piano backend category')
     notes=clean_notes(raw_notes,audio.duration_seconds)
@@ -58,6 +60,7 @@ def main():
     mf=mido.MidiFile(mid);mf.tracks[0].append(mido.MetaMessage('end_of_track',time=round(audio.duration_seconds*960)));mf.save(mid)
     render=render_midi(mid,root/'work/models/GeneralUser-GS.sf2',stage/'钢琴-B试听.wav')
     report={'version':lock['version'],'route':lock['pipeline'],'input_sha256':input_hash,'duration_seconds':audio.duration_seconds,'lock_sha256':digest(lock_path),'lock':lock,'piano_stem_sha256':digest(piano),'separation_receipt_sha256':digest(stems/'separation-receipt.json'),'separation_cache_reused':bool(a.stems),'raw_midi_sha256':digest(raw),'midi_sha256':digest(mid),'notes':len(notes),'runs':runs,'scratch':str(scratch),'elapsed_seconds':time.monotonic()-start,'render':render,'soundfont_sha256':digest(root/'work/models/GeneralUser-GS.sf2'),'warnings':['MIDI contains GM instructions, not sampled sound','Default120BPM/4-4, not detected','Cached run timing excludes separation','No reference MIDI or automatic alternative route']}
+    report['cpu_threads'] = threads
     (stage/'运行报告.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     a.output_dir.parent.mkdir(parents=True,exist_ok=True);os.rename(stage,a.output_dir)
     print(json.dumps({'output':str(a.output_dir),'notes':len(notes),'runs':runs},ensure_ascii=False))

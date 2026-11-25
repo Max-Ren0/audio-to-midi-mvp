@@ -1,18 +1,25 @@
 """Compose the fixed local transcription routes from audio alone."""
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
+from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
 import shutil
+import signal
 import subprocess
 import sys
 import tempfile
+from threading import Event, Thread, current_thread, main_thread
 import time
 
 import mido
+import psutil
 
 from .audio import decode_mp3
 from .piano_lock import digest
 from .pipeline import publish
+from .worker import process_tree_rss
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -69,7 +76,7 @@ def _missing_assets(resources, weights):
     return missing
 
 
-def _run(args, stage_dir, threads):
+def _run(args, stage_dir, threads, *, isolated=False):
     log = stage_dir / 'command.log'
     env = {
         **os.environ,
@@ -85,7 +92,7 @@ def _run(args, stage_dir, threads):
     with log.open('w', encoding='utf-8') as stream:
         result = subprocess.run(
             [sys.executable, *map(str, args)], cwd=stage_dir, env=env,
-            stdout=stream, stderr=subprocess.STDOUT,
+            stdout=stream, stderr=subprocess.STDOUT, start_new_session=isolated,
         )
     if result.returncode:
         contents = log.read_text(encoding='utf-8', errors='replace').strip()
@@ -186,7 +193,58 @@ def _outputs(stage_dir, output_dir):
     )
 
 
-def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, command=None):
+def _timestamp():
+    return datetime.now(timezone.utc).isoformat(timespec='microseconds')
+
+
+@contextmanager
+def _defer_parallel_signals():
+    """Keep parent signals from interrupting the executor's worker joins."""
+    interruptions = []
+    previous_handlers = {}
+
+    def remember(signum, _frame):
+        if not interruptions:
+            interruptions.append(signal.Signals(signum).name)
+
+    try:
+        if current_thread() is main_thread():
+            for signum in (signal.SIGINT, signal.SIGTERM):
+                previous_handlers[signum] = signal.getsignal(signum)
+                signal.signal(signum, remember)
+        yield interruptions
+    finally:
+        for signum, handler in previous_handlers.items():
+            signal.signal(signum, handler)
+
+
+def _stage(name, directory, output_dir, action=None, *, reason=None):
+    stage = {
+        'name': name, 'status': 'skipped', 'seconds': 0, 'outputs': [],
+        'started_at': None, 'finished_at': None,
+    }
+    if action is None:
+        stage['reason'] = reason
+        return stage, None
+    stage['started_at'] = _timestamp()
+    start = time.monotonic()
+    result = None
+    try:
+        if directory is not None:
+            directory.mkdir(parents=True)
+        result = action()
+        stage['status'] = 'ok'
+    except (Exception, KeyboardInterrupt) as error:
+        stage.update(status='failed', error=str(error) or type(error).__name__)
+    stage['finished_at'] = _timestamp()
+    stage['seconds'] = round(time.monotonic() - start, 3)
+    if directory is not None:
+        stage['outputs'] = _outputs(directory, output_dir)
+    return stage, result
+
+
+def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, command=None,
+             parallel=False, piano_threads=2, muscriptor_threads=2):
     input_path = Path(input_path).absolute()
     output_dir = Path(output_dir).absolute()
     resources = Path(os.path.abspath(resources))
@@ -195,6 +253,9 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         return 2
     if threads != 2 or device != 'cpu':
         print('固定路线仅支持 CPU 和 2 个计算线程', file=sys.stderr)
+        return 2
+    if piano_threads not in (1, 2) or muscriptor_threads not in (1, 2):
+        print('钢琴 B 和 MuScriptor 各支持 1 或 2 个计算线程', file=sys.stderr)
         return 2
     try:
         output_dir.mkdir(parents=True, exist_ok=False)
@@ -208,14 +269,19 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
     receipt = {
         'status': 'running', 'input_filename': input_path.name, 'input_sha256': None,
         'duration_seconds': None, 'git_commit': None, 'git_dirty': None,
+        'parallel_used': False,
         'command': command if command is not None else [
             sys.executable, str(ROOT / 'scripts/run_noto.py'), str(input_path),
             '--output-dir', str(output_dir), '--resources', str(resources),
             '--threads', str(threads), '--device', device,
+            '--parallel' if parallel else '--no-parallel',
+            '--piano-threads', str(piano_threads), '--muscriptor-threads', str(muscriptor_threads),
         ],
         'parameters': {
             'input': str(input_path), 'output_dir': str(output_dir),
             'resources': str(resources), 'threads': threads, 'device': device,
+            'parallel': parallel, 'piano_threads': piano_threads,
+            'muscriptor_threads': muscriptor_threads,
         },
         'stages': [], 'tracks': [],
         'muscriptor': None, 'model_hashes': {}, 'mvp_tracks': list(MVP_TRACKS),
@@ -230,9 +296,25 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
     final = delivery / 'Noto-MuScriptor贝斯鼓.mid'
     target = output_dir / 'noto.mid'
     weights = Path.home() / MUSCRIPTOR_WEIGHTS
+    peak_memory_bytes = 0
+    stop_sampling = Event()
+    process = psutil.Process()
+
+    def sample_memory():
+        nonlocal peak_memory_bytes
+        while True:
+            peak_memory_bytes = max(peak_memory_bytes, process_tree_rss(process))
+            if stop_sampling.wait(0.1):
+                break
+
+    sampler = Thread(target=sample_memory, daemon=True)
+
+    def update_totals():
+        receipt['total_seconds'] = round(time.monotonic() - start, 3)
+        receipt['peak_memory_bytes'] = peak_memory_bytes
 
     def checkpoint():
-        receipt['total_seconds'] = round(time.monotonic() - start, 3)
+        update_totals()
         _save_receipt(receipt_path, receipt)
 
     def finish_failure(code):
@@ -265,7 +347,8 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
     def piano_b():
         entry = _piano_workspace(piano_dir, resources)
         piano_output = piano_dir / 'delivery'
-        _run([entry, input_path, '--output-dir', piano_output], piano_dir, threads)
+        _run([entry, input_path, '--output-dir', piano_output, '--threads', piano_threads],
+             piano_dir, piano_threads, isolated=receipt['parallel_used'])
         report = _read_json(piano_output / '运行报告.json')
         if report['input_sha256'] != receipt['input_sha256']:
             raise ValueError('钢琴 B 回执的音频 SHA256 不一致')
@@ -276,23 +359,33 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         models['piano_b']['soundfont_sha256'] = report['soundfont_sha256']
         _replace_piano(routed, piano_output / '钢琴-B.mid', piano_dir / 'routed.mid')
 
-    def muscriptor(piano_present):
-        source = piano_dir / 'routed.mid' if piano_present else routed
+    def muscriptor(source):
         _run([
             ROOT / 'scripts/run_muscriptor_bass_drums.py', '--audio', input_path,
             '--baseline', source, '--baseline-audio-sha256', receipt['input_sha256'],
             '--engine', resources / MUSCRIPTOR_ENGINE, '--weights', weights,
-            '--output-dir', delivery,
-        ], muscriptor_dir, threads)
+            '--output-dir', delivery, '--threads', muscriptor_threads,
+        ], muscriptor_dir, muscriptor_threads, isolated=receipt['parallel_used'])
         report = _read_json(delivery / '运行报告.json')
         receipt['muscriptor'] = {key: report[key] for key in ('tracks', 'track_note_counts')}
         models['muscriptor'] = {key: report[key] for key in ('engine_sha256', 'weights_sha256')}
-        receipt['tracks'] = _summarize_tracks(final, piano_present, report['tracks'])
+        return report
+
+    def summarize(path, piano_present, report):
+        receipt['tracks'] = _summarize_tracks(path, piano_present, report['tracks'])
         receipt['research_tracks'] = [
             track['instrument'] for track in receipt['tracks'] if track['instrument'] not in MVP_TRACKS
         ]
 
+    def record(stage):
+        receipt['stages'].append(stage)
+        if stage['status'] == 'failed':
+            receipt.setdefault('failed_stage', stage['name'])
+        checkpoint()
+
+    sampler.start()
     phase = 'preflight'
+    phase_started_at = _timestamp()
     try:
         # Capture the starting tree before creating any files inside the output directory.
         receipt['git_commit'] = _git_output('rev-parse', 'HEAD')
@@ -304,46 +397,70 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
             receipt['failed_stage'] = phase
             receipt['stages'].append({
                 'name': phase, 'status': 'failed', 'seconds': round(time.monotonic() - start, 3),
+                'started_at': phase_started_at, 'finished_at': _timestamp(),
                 'error': '缺少或无法使用资源：' + '、'.join(missing), 'outputs': [],
             })
             return finish_failure(2)
         phase = 'receipt'
         checkpoint()
 
-        piano_present = False
-        failed = False
-        for name, directory in zip(STAGE_NAMES, (baseline_dir, piano_dir, muscriptor_dir)):
-            stage = {'name': name, 'status': 'skipped', 'seconds': 0, 'outputs': []}
-            receipt['stages'].append(stage)
-            stage_start = time.monotonic()
-            try:
-                if failed:
-                    stage['reason'] = '前一阶段失败'
-                elif name == 'piano_b' and not piano_present:
-                    stage['reason'] = '基线没有识别到钢琴轨'
-                else:
-                    directory.mkdir(parents=True)
-                    if name == 'baseline':
-                        piano_present = baseline()
-                    elif name == 'piano_b':
-                        piano_b()
-                    else:
-                        muscriptor(piano_present)
-                    stage['status'] = 'ok'
-            except (Exception, KeyboardInterrupt) as error:
-                stage.update(status='failed', error=str(error) or type(error).__name__)
-                receipt['failed_stage'] = name
-                failed = True
-            stage['seconds'] = round(time.monotonic() - stage_start, 3)
-            stage['outputs'] = _outputs(directory, output_dir)
+        base_stage, piano_present = _stage('baseline', baseline_dir, output_dir, baseline)
+        record(base_stage)
+        if parallel and piano_present:
+            receipt['parallel_used'] = True
             checkpoint()
-        if failed:
+            phase = 'parallel'
+            phase_started_at = _timestamp()
+            # The route subprocesses run in separate sessions, so terminal
+            # signals are handled here while their normal cleanup runs.
+            with _defer_parallel_signals() as interruptions:
+                with ThreadPoolExecutor(max_workers=2) as executor:
+                    piano_job = executor.submit(_stage, 'piano_b', piano_dir, output_dir, piano_b)
+                    muscriptor_job = executor.submit(
+                        _stage, 'muscriptor', muscriptor_dir, output_dir, lambda: muscriptor(routed),
+                    )
+                piano_stage, _ = piano_job.result()
+                muscriptor_stage, report = muscriptor_job.result()
+                record(piano_stage)
+                record(muscriptor_stage)
+            if interruptions:
+                receipt['interrupted_by'] = interruptions[0]
+                raise RuntimeError(f'收到 {interruptions[0]}，两路已结束')
+        else:
+            reason = ('前一阶段失败' if 'failed_stage' in receipt else '基线没有识别到钢琴轨')
+            piano_stage, _ = _stage(
+                'piano_b', piano_dir, output_dir, piano_b if piano_present else None, reason=reason,
+            )
+            record(piano_stage)
+
+            def serial_muscriptor():
+                report = muscriptor(piano_dir / 'routed.mid' if piano_present else routed)
+                summarize(final, piano_present, report)
+
+            muscriptor_stage, _ = _stage(
+                'muscriptor', muscriptor_dir, output_dir,
+                serial_muscriptor if 'failed_stage' not in receipt else None, reason='前一阶段失败',
+            )
+            record(muscriptor_stage)
+        if 'failed_stage' in receipt:
             return finish_failure(1)
 
+        if receipt['parallel_used']:
+            def merge():
+                merged = stages_dir / 'merge' / 'noto.mid'
+                _replace_piano(final, piano_dir / 'routed.mid', merged)
+                summarize(merged, piano_present, report)
+                return merged
+
+            merge_stage, final = _stage('merge', stages_dir / 'merge', output_dir, merge)
+            record(merge_stage)
+            if 'failed_stage' in receipt:
+                return finish_failure(1)
+
         phase = 'publish'
+        phase_started_at = _timestamp()
         receipt['status'] = 'ok'
         receipt['output_sha256'] = digest(final)
-        receipt['total_seconds'] = round(time.monotonic() - start, 3)
         # The directory belongs to this run. Replace its progress receipt and
         # publish an independent MIDI copy in one rollback-capable operation.
         if os.path.lexists(target):
@@ -351,16 +468,21 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         with tempfile.TemporaryDirectory(prefix='.publish-', dir=output_dir) as scratch:
             staged_receipt = Path(scratch) / receipt_path.name
             staged_midi = Path(scratch) / target.name
-            _write_json(staged_receipt, receipt)
             shutil.copyfile(final, staged_midi)
+            update_totals()
+            _write_json(staged_receipt, receipt)
             publish([(staged_midi, target), (staged_receipt, receipt_path)], overwrite=True)
     except (Exception, KeyboardInterrupt) as error:
         receipt.setdefault('failed_stage', phase)
         receipt['stages'].append({
             'name': phase, 'status': 'failed', 'seconds': 0,
+            'started_at': phase_started_at, 'finished_at': _timestamp(),
             'error': str(error) or type(error).__name__, 'outputs': [],
         })
         return finish_failure(1)
+    finally:
+        stop_sampling.set()
+        sampler.join()
 
     print(f'已生成 {target}')
     return 0

@@ -120,13 +120,16 @@ uv lock --check
 
 ```sh
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/新目录
+.venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/并行结果 --parallel
 ```
 
-单首输入最长 180 秒，固定使用 CPU 和 2 个计算线程（可显式传入 `--device cpu --threads 2`），输出目录必须尚未创建。默认从仓库根目录读取本地资源；在独立检出目录运行时，传入 `--resources /完整路径/有模型资源的主检出目录`，并用已准备依赖的 Python 环境执行。MuScriptor 权重沿用本机默认位置 `~/Library/NeuralNote/models/muscriptor-medium-f16.gguf`。
+单首输入最长 180 秒，使用 CPU，YourMT3 基线固定为 2 个计算线程（`--device cpu --threads 2`）。输出目录必须尚未创建。默认从仓库根目录读取本地资源。在独立检出目录运行时，传入 `--resources /完整路径/有模型资源的主检出目录`，并用已准备依赖的 Python 环境执行。MuScriptor 权重沿用本机默认位置 `~/Library/NeuralNote/models/muscriptor-medium-f16.gguf`。
 
 YourMT3 先生成整曲基线；只有基线识别到钢琴时才用钢琴 B 替换。MuScriptor 根据音频补充或替换贝斯和鼓，保留未被替换的基线轨。吉他、弦乐等研究轨沿用基线，不计入 MVP 验收，人声不输出。处理过程只使用输入音频及本次推理生成的中间文件，不读取参考 MIDI 或参考乐器列表。
 
-启动后先写入 `running` 回执，每个阶段结束后更新一次。回执记录实际命令、解析后的参数、Git 提交及工作树是否有未提交改动。成功时退出 `0`，并记录各轨来源、缺轨和阶段耗时。阶段失败时退出 `1`，留下失败回执和已生成的 `stages/` 日志，且不会生成 `noto.mid`。缺少所需资源时，预检查会在任何模型启动前写失败回执并退出 `2`。参数错误或输出目录已存在时也退出 `2`。
+默认串行（`--no-parallel`）。启用 `--parallel` 后，如果基线识别到钢琴轨，钢琴 B 和 MuScriptor 会同时运行，结束后再合并 MIDI。两路默认各用 2 个计算线程，可分别用 `--piano-threads` 和 `--muscriptor-threads` 设为 1 或 2。钢琴 B 的阶段报告以 `cpu_threads` 记录实际值，`lock.cpu_threads` 保留锁文件默认值。两路各用 1 线程时，串并行一致性已通过桩测试。真实模型的 MIDI 一致性实测使用各 2 线程，1 线程的模型输出仍待验证。
+
+启动后先写入 `running` 回执。串行逐阶段更新，并行两路结束后记录各自结果。回执记录实际命令、参数、Git 状态、是否实际并行（`parallel_used`）、各阶段 UTC 起止时间、墙钟耗时和进程树 RSS 采样峰值（`peak_memory_bytes`）。RSS 按进程求和，共享页可能被重复计入。成功时发布 `noto.mid`，记录各轨来源和缺轨，退出 `0`。任一路失败，或并行期间父进程收到 `SIGINT`、`SIGTERM`，会等两路结束，保留各阶段结果和日志，写入失败回执后退出 `1`。信号中断时回执还会记录 `interrupted_by`。资源预检失败会在模型启动前写失败回执并退出 `2`。参数错误或输出目录已存在时也退出 `2`。
 
 ## 尚未通过的验收
 

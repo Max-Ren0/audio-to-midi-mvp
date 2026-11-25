@@ -15,12 +15,20 @@ def main(argv=None):
     parser.add_argument('--resources', type=Path, default=ROOT)
     parser.add_argument('--threads', type=int, choices=[2], default=2)
     parser.add_argument('--device', choices=['cpu'], default='cpu')
+    parser.add_argument('--parallel', action=argparse.BooleanOptionalAction, default=False,
+                        help='run Piano B and MuScriptor concurrently after the baseline')
+    parser.add_argument('--piano-threads', type=int, choices=[1, 2], default=2,
+                        help='Piano B compute threads (default: 2)')
+    parser.add_argument('--muscriptor-threads', type=int, choices=[1, 2], default=2,
+                        help='MuScriptor compute threads (default: 2)')
     raw_args = sys.argv[1:] if argv is None else list(argv)
     args = parser.parse_args(raw_args)
     from audio_midi.one_click import run_noto
 
     return run_noto(
         args.input, args.output_dir, args.resources, args.threads, args.device,
+        parallel=args.parallel, piano_threads=args.piano_threads,
+        muscriptor_threads=args.muscriptor_threads,
         command=[sys.executable, sys.argv[0], *raw_args],
     )
 

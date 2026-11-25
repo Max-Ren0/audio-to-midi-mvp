@@ -21,7 +21,7 @@
     },
     "sw_wrapper": {
       "path": "outputs/two-methods/run_sw_experiment.py",
-      "sha256": "b3bcc49f58d28c6311cfe7cc7d0f07bafd9f02b85870aacf5b9bb4c5177ddc8d"
+      "sha256": "23e7f42489bcb55f9795991ac57e6b6b2e1d126902b698c85cb3ef75bb5cd333"
     },
     "transkun_weights": {
       "path": "work/sep-env/lib/python3.11/site-packages/transkun/pretrained/2.0.pt",

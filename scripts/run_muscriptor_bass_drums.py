@@ -21,6 +21,7 @@ def main():
     p.add_argument('--engine',type=Path,default=Path('work/muscriptor-comparison-engine/build/bench/muscriptor_bench'))
     p.add_argument('--weights',type=Path,default=Path.home()/'Library/NeuralNote/models/muscriptor-medium-f16.gguf')
     p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--timeout',type=int,default=3600)
+    p.add_argument('--threads', type=int, choices=[1, 2], default=2)
     a=p.parse_args()
     if a.output_dir.exists():raise FileExistsError(a.output_dir)
     if sha(a.audio)!=a.baseline_audio_sha256.lower():raise ValueError('Audio SHA does not match baseline source')
@@ -29,14 +30,14 @@ def main():
     start=time.monotonic();a.output_dir.mkdir(parents=True)
     with tempfile.TemporaryDirectory(prefix='muscriptor-input-',dir=a.output_dir) as temp:
         wav=Path(temp)/'input.wav'
-        subprocess.run(['ffmpeg','-v','error','-nostdin','-threads','2','-i',str(a.audio),'-vn','-ac','1','-ar','16000','-c:a','pcm_f32le',str(wav)],check=True,timeout=a.timeout)
+        subprocess.run(['ffmpeg','-v','error','-nostdin','-threads',str(a.threads),'-i',str(a.audio),'-vn','-ac','1','-ar','16000','-c:a','pcm_f32le',str(wav)],check=True,timeout=a.timeout)
         info=sf.info(wav);duration=info.frames/info.samplerate;decoded_sha=sha(wav)
         midi_length=mido.MidiFile(a.baseline).length
         if abs(midi_length-duration)>.1:raise ValueError(f'Baseline and audio lengths differ: {midi_length} vs {duration}')
         log=a.output_dir/'muscriptor.log'
-        env=os.environ.copy();env['OMP_NUM_THREADS']='2';env['OPENBLAS_NUM_THREADS']='2'
+        env=os.environ.copy();env['OMP_NUM_THREADS']=str(a.threads);env['OPENBLAS_NUM_THREADS']=str(a.threads)
         with log.open('x') as f:
-            subprocess.run([str(a.engine.resolve()),'--transcribe','--weights',str(a.weights.resolve()),'--audio',str(wav.resolve()),'--device','cpu','--threads','2'],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=a.timeout,env=env)
+            subprocess.run([str(a.engine.resolve()),'--transcribe','--weights',str(a.weights.resolve()),'--audio',str(wav.resolve()),'--device','cpu','--threads',str(a.threads)],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=a.timeout,env=env)
         log_text = log.read_text()
         if not any(line.startswith('NOTE,') for line in log_text.splitlines()):
             raise ValueError(f'MuScriptor log contains no NOTE records: {log}')
@@ -47,7 +48,7 @@ def main():
     for track in mido.MidiFile(out).tracks:
         if track.name in track_note_counts:
             track_note_counts[track.name] = sum(msg.type == 'note_on' and msg.velocity > 0 for msg in track)
-    receipt={'decoded_wav_sha256':decoded_sha,'decoded_sample_rate':info.samplerate,'decoded_frames':info.frames,'audio_sha256':sha(a.audio),'baseline_midi_sha256':sha(a.baseline),'engine_sha256':sha(a.engine),'weights_sha256':sha(a.weights),'raw_log_sha256':sha(log),'output_sha256':sha(out),'duration_seconds':duration,'elapsed_seconds':time.monotonic()-start,'conditioning':['AcousticPiano','AcousticGuitar','CleanElectricGuitar','ElectricBass','StringEnsemble','Drums'],'device':'cpu','threads':2,'caveats':['No predicted velocity; fixed MIDI velocity 80','Requires baseline and audio share the same timeline; hash is user-supplied provenance, not independent proof','MuScriptor weights CC BY-NC 4.0; non-commercial use']}
+    receipt={'decoded_wav_sha256':decoded_sha,'decoded_sample_rate':info.samplerate,'decoded_frames':info.frames,'audio_sha256':sha(a.audio),'baseline_midi_sha256':sha(a.baseline),'engine_sha256':sha(a.engine),'weights_sha256':sha(a.weights),'raw_log_sha256':sha(log),'output_sha256':sha(out),'duration_seconds':duration,'elapsed_seconds':time.monotonic()-start,'conditioning':['AcousticPiano','AcousticGuitar','CleanElectricGuitar','ElectricBass','StringEnsemble','Drums'],'device':'cpu','threads':a.threads,'caveats':['No predicted velocity; fixed MIDI velocity 80','Requires baseline and audio share the same timeline; hash is user-supplied provenance, not independent proof','MuScriptor weights CC BY-NC 4.0; non-commercial use']}
     receipt['tracks']=tracks
     receipt['track_note_counts'] = track_note_counts
     (a.output_dir/'运行报告.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2))

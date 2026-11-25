@@ -19,14 +19,26 @@ class WorkerError(RuntimeError):
         self.attempts=attempts
 
 
-def run_command(command: list[str], deadline: float, log_path: Path, memory_limit_bytes: int | None = None) -> WorkerResult:
+def process_tree_rss(root: psutil.Process) -> int:
+    rss = 0
+    for process in [root, *root.children(recursive=True)]:
+        try:
+            rss += process.memory_info().rss
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return rss
+
+
+def run_command(command: list[str], deadline: float, log_path: Path, memory_limit_bytes: int | None = None, *, threads: int = 2) -> WorkerResult:
     start=time.monotonic(); peak=0
     log_path.parent.mkdir(parents=True,exist_ok=True)
     for attempt in (1,2):
         if time.monotonic()>=deadline:
             raise WorkerError('处理超时',peak,attempt-1)
         env=os.environ.copy()
-        env.update({'OMP_NUM_THREADS':'2','OPENBLAS_NUM_THREADS':'2','NUMBA_NUM_THREADS':'2','MKL_NUM_THREADS':'2','TOKENIZERS_PARALLELISM':'false','PYTHONUNBUFFERED':'1','AUDIO_MIDI_BATCH_SIZE':str(2 if attempt==1 else 1)})
+        env.update(dict.fromkeys(('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'NUMBA_NUM_THREADS',
+                                  'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS'), str(threads)))
+        env.update({'TOKENIZERS_PARALLELISM':'false','PYTHONUNBUFFERED':'1','AUDIO_MIDI_BATCH_SIZE':str(2 if attempt==1 else 1)})
         reason=None
         with log_path.open('ab') as log:
             process=subprocess.Popen(command,stdout=log,stderr=log,start_new_session=True,env=env)
@@ -35,7 +47,7 @@ def run_command(command: list[str], deadline: float, log_path: Path, memory_limi
                     rss=0
                     try:
                         root=psutil.Process(process.pid)
-                        rss=sum(p.memory_info().rss for p in [root,*root.children(recursive=True)] if p.is_running())
+                        rss=process_tree_rss(root)
                         peak=max(peak,rss)
                     except (psutil.NoSuchProcess,psutil.AccessDenied):
                         pass

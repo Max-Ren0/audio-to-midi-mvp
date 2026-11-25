@@ -9,7 +9,8 @@ from models.bs_roformer import BSRoformer
 from utils.model_utils import demix
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-torch.set_num_threads(2)
+threads = int(sys.argv[4]) if len(sys.argv) > 4 else 2
+torch.set_num_threads(threads)
 source=Path(sys.argv[1]);out=Path(sys.argv[2]);duration=float(sys.argv[3])
 if out.exists():raise FileExistsError(out)
 c=ConfigDict(yaml.load(Path('work/two-methods/BS-Rofo-SW-Fixed.yaml').read_text(),Loader=yaml.FullLoader))
@@ -29,5 +30,5 @@ out.mkdir();files={}
 for name,v in result.items():
  assert v.shape==y.T.shape and np.isfinite(v).all()
  p=out/(name.lower()+'.wav');sf.write(p,v.T,sr,subtype='FLOAT');files[name]={'path':str(p),'sha256':sha(p),'rms':float(np.sqrt(np.mean(v*v))),'peak':float(np.max(np.abs(v)))}
-(out/'receipt.json').write_text(json.dumps({'input_sha256':sha(source),'duration_seconds':len(y)/sr,'weight_sha256':sha('work/models/BS-Rofo-SW-Fixed.ckpt'),'config_sha256':sha('work/two-methods/BS-Rofo-SW-Fixed.yaml'),'code_commit':'6fdad13686bb7e84d029ec66f9dbe76e65c93ebf','cpu_threads':2,'amp':False,'elapsed_seconds':time.monotonic()-start,'files':files},indent=2))
+(out/'receipt.json').write_text(json.dumps({'input_sha256':sha(source),'duration_seconds':len(y)/sr,'weight_sha256':sha('work/models/BS-Rofo-SW-Fixed.ckpt'),'config_sha256':sha('work/two-methods/BS-Rofo-SW-Fixed.yaml'),'code_commit':'6fdad13686bb7e84d029ec66f9dbe76e65c93ebf','cpu_threads':threads,'amp':False,'elapsed_seconds':time.monotonic()-start,'files':files},indent=2))
 print('complete',time.monotonic()-start,flush=True)
