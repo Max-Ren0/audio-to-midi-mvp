@@ -331,6 +331,10 @@ def main():
             checks = [capacity]
             if jobs == 2:
                 checks.append(machine_capacity())
+                if checks[-1]['load'] > 8:
+                    print(f'Waiting for load {checks[-1]}', flush=True)
+                    time.sleep(60)
+                    continue
                 jobs = batch_jobs(2, checks[-1])
             print(f'Launch {[s["id"] for s in todo[:jobs]]} with {jobs} slot(s): {checks}', flush=True)
             batch, todo = todo[:jobs], todo[jobs:]
