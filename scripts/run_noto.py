@@ -21,6 +21,10 @@ def main(argv=None):
                         help='Piano B compute threads (default: 2)')
     parser.add_argument('--muscriptor-threads', type=int, choices=[1, 2], default=2,
                         help='MuScriptor compute threads (default: 2)')
+    parser.add_argument('--beat-align', action=argparse.BooleanOptionalAction, default=False,
+                        help='detect beats and write a tempo map without quantizing notes')
+    parser.add_argument('--quantize', choices=['1/4', '1/8', '1/16'],
+                        help='optionally snap note onsets to the given MIDI grid')
     raw_args = sys.argv[1:] if argv is None else list(argv)
     args = parser.parse_args(raw_args)
     from audio_midi.one_click import run_noto
@@ -29,6 +33,7 @@ def main(argv=None):
         args.input, args.output_dir, args.resources, args.threads, args.device,
         parallel=args.parallel, piano_threads=args.piano_threads,
         muscriptor_threads=args.muscriptor_threads,
+        beat_align=args.beat_align, quantize=args.quantize,
         command=[sys.executable, sys.argv[0], *raw_args],
     )
 

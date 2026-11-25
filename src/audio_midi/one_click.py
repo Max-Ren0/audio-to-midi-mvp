@@ -17,6 +17,7 @@ import mido
 import psutil
 
 from .audio import decode_mp3
+from .beat_align import BeatEstimate, QUANTIZE, TempoMap, detect_beats, write_aligned_midi
 from .piano_lock import digest
 from .pipeline import publish
 from .worker import process_tree_rss
@@ -244,7 +245,8 @@ def _stage(name, directory, output_dir, action=None, *, reason=None):
 
 
 def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, command=None,
-             parallel=False, piano_threads=2, muscriptor_threads=2):
+             parallel=False, piano_threads=2, muscriptor_threads=2,
+             beat_align=False, quantize=None):
     input_path = Path(input_path).absolute()
     output_dir = Path(output_dir).absolute()
     resources = Path(os.path.abspath(resources))
@@ -256,6 +258,9 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         return 2
     if piano_threads not in (1, 2) or muscriptor_threads not in (1, 2):
         print('钢琴 B 和 MuScriptor 各支持 1 或 2 个计算线程', file=sys.stderr)
+        return 2
+    if quantize is not None and quantize not in QUANTIZE:
+        print('量化网格须为 1/4、1/8 或 1/16', file=sys.stderr)
         return 2
     try:
         output_dir.mkdir(parents=True, exist_ok=False)
@@ -276,14 +281,18 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
             '--threads', str(threads), '--device', device,
             '--parallel' if parallel else '--no-parallel',
             '--piano-threads', str(piano_threads), '--muscriptor-threads', str(muscriptor_threads),
+            '--beat-align' if beat_align else '--no-beat-align',
+            *(['--quantize', quantize] if quantize else []),
         ],
         'parameters': {
             'input': str(input_path), 'output_dir': str(output_dir),
             'resources': str(resources), 'threads': threads, 'device': device,
             'parallel': parallel, 'piano_threads': piano_threads,
             'muscriptor_threads': muscriptor_threads,
+            'beat_align': beat_align, 'quantize': quantize,
         },
         'stages': [], 'tracks': [],
+        'beat_alignment': None,
         'muscriptor': None, 'model_hashes': {}, 'mvp_tracks': list(MVP_TRACKS),
         'research_tracks': [], 'research_tracks_note': '不计入 MVP 验收',
     }
@@ -296,6 +305,7 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
     final = delivery / 'Noto-MuScriptor贝斯鼓.mid'
     target = output_dir / 'noto.mid'
     weights = Path.home() / MUSCRIPTOR_WEIGHTS
+    audio = None
     peak_memory_bytes = 0
     stop_sampling = Event()
     process = psutil.Process()
@@ -329,9 +339,12 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         return code
 
     def baseline():
-        audio = decode_mp3(input_path)
-        receipt['duration_seconds'] = audio.duration_seconds
-        if audio.duration_seconds > 180:
+        nonlocal audio
+        decoded = decode_mp3(input_path)
+        if beat_align:
+            audio = decoded
+        receipt['duration_seconds'] = decoded.duration_seconds
+        if decoded.duration_seconds > 180:
             raise ValueError('实际解码长度超过 180 秒；已拒绝，不自动截断')
         output = baseline_dir / 'result.mid'
         _run([
@@ -342,7 +355,7 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         if report['input_sha256'] != receipt['input_sha256']:
             raise ValueError('基线回执的音频 SHA256 不一致')
         models['baseline'] = {'yourmt3_weights_sha256': report['model']['weight_sha256']}
-        return _prepare_baseline(output, routed, audio.duration_seconds)
+        return _prepare_baseline(output, routed, decoded.duration_seconds)
 
     def piano_b():
         entry = _piano_workspace(piano_dir, resources)
@@ -456,6 +469,28 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
             record(merge_stage)
             if 'failed_stage' in receipt:
                 return finish_failure(1)
+
+        if beat_align or quantize:
+            alignment_dir = stages_dir / 'beat_align'
+
+            def align():
+                estimate = detect_beats(audio.samples, audio.sample_rate) if beat_align else BeatEstimate()
+                tempo_map = TempoMap(estimate)
+                output = final
+                moved = 0
+                if estimate.beats or quantize:
+                    output = alignment_dir / 'noto.mid'
+                    moved = write_aligned_midi(final, output, tempo_map, quantize)
+                receipt['beat_alignment'] = tempo_map.receipt(estimate, beat_align, quantize, moved)
+                return output
+
+            alignment_stage, final = _stage('beat_align', alignment_dir, output_dir, align)
+            record(alignment_stage)
+            if 'failed_stage' in receipt:
+                return finish_failure(1)
+        else:
+            estimate = BeatEstimate()
+            receipt['beat_alignment'] = TempoMap(estimate).receipt(estimate, False, None)
 
         phase = 'publish'
         phase_started_at = _timestamp()

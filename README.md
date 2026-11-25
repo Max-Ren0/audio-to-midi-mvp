@@ -121,6 +121,7 @@ uv lock --check
 ```sh
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/新目录
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/并行结果 --parallel
+.venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/小节对齐 --beat-align
 ```
 
 单首输入最长 180 秒，使用 CPU，YourMT3 基线固定为 2 个计算线程（`--device cpu --threads 2`）。输出目录必须尚未创建。默认从仓库根目录读取本地资源。在独立检出目录运行时，传入 `--resources /完整路径/有模型资源的主检出目录`，并用已准备依赖的 Python 环境执行。MuScriptor 权重沿用本机默认位置 `~/Library/NeuralNote/models/muscriptor-medium-f16.gguf`。
@@ -128,6 +129,12 @@ uv lock --check
 YourMT3 先生成整曲基线；只有基线识别到钢琴时才用钢琴 B 替换。MuScriptor 根据音频补充或替换贝斯和鼓，保留未被替换的基线轨。吉他、弦乐等研究轨沿用基线，不计入 MVP 验收，人声不输出。处理过程只使用输入音频及本次推理生成的中间文件，不读取参考 MIDI 或参考乐器列表。
 
 默认串行（`--no-parallel`）。启用 `--parallel` 后，如果基线识别到钢琴轨，钢琴 B 和 MuScriptor 会同时运行，结束后再合并 MIDI。两路默认各用 2 个计算线程，可分别用 `--piano-threads` 和 `--muscriptor-threads` 设为 1 或 2。钢琴 B 的阶段报告以 `cpu_threads` 记录实际值，`lock.cpu_threads` 保留锁文件默认值。两路各用 1 线程时，串并行一致性已通过桩测试。真实模型的 MIDI 一致性实测使用各 2 线程，1 线程的模型输出仍待验证。
+
+默认使用 `--no-beat-align`，保留固定 120 BPM、4/4。开启 `--beat-align` 后，沿用环境中的 librosa 检测节拍，通过频谱和和声重音估计 4/4 或 3/4。检测到的小节起点写成 MIDI 变速事件。拍号不确定时使用 4/4，节拍检测不可用时保留固定网格。支持导入节奏图的音乐软件需同时导入 MIDI 的速度与拍号。
+
+默认保持音符的原起止秒数、音高和力度。对齐后以 30,720 PPQ 写出，秒数只有 MIDI tick 舍入误差。显式传入 `--quantize 1/4`、`1/8` 或 `1/16` 才会把起音吸附到当前 MIDI 网格。量化会改变起音和时值，可能跳过会打乱同音高事件顺序的起音，转写 F1 评测应保持量化关闭。
+
+回执的 `beat_alignment` 记录名义 BPM、拍号、速度变化数、检测方法、启发式置信度和回退情况，并记录请求的量化网格与实际移动起音数。RWC-P 22 首调参曲的宏平均节拍 F1 从 25.53% 升至 83.76%，逐曲小节线中位偏差的中位数从 490 ms 降至 10 ms。13 首达到 70 ms 内，4 首比固定网格偏差更大，部分歌曲存在倍速层级歧义，因此维持默认关闭。
 
 启动后先写入 `running` 回执。串行逐阶段更新，并行两路结束后记录各自结果。回执记录实际命令、参数、Git 状态、是否实际并行（`parallel_used`）、各阶段 UTC 起止时间、墙钟耗时和进程树 RSS 采样峰值（`peak_memory_bytes`）。RSS 按进程求和，共享页可能被重复计入。成功时发布 `noto.mid`，记录各轨来源和缺轨，退出 `0`。任一路失败，或并行期间父进程收到 `SIGINT`、`SIGTERM`，会等两路结束，保留各阶段结果和日志，写入失败回执后退出 `1`。信号中断时回执还会记录 `interrupted_by`。资源预检失败会在模型启动前写失败回执并退出 `2`。参数错误或输出目录已存在时也退出 `2`。
 

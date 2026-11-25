@@ -58,7 +58,9 @@ def job(tmp_path, monkeypatch):
         muscriptor=[note('bass', 40), note('drums', 41)],
     )
     original_digest = one_click.digest(audio)
-    monkeypatch.setattr(one_click, 'decode_mp3', lambda _: SimpleNamespace(duration_seconds=options.duration))
+    monkeypatch.setattr(one_click, 'decode_mp3', lambda _: SimpleNamespace(
+        duration_seconds=options.duration, samples=[.1], sample_rate=16000,
+    ))
 
     def read_arg(args, name):
         return Path(args[args.index(name) + 1])
@@ -136,6 +138,7 @@ def test_success_preserves_baseline_tracks_and_reports_provenance(job):
     assert receipt['total_seconds'] >= 0
     assert receipt['peak_memory_bytes'] > 0
     assert not receipt['parallel_used']
+    assert receipt['beat_alignment']['method'] == 'fixed'
     assert job.threads == dict.fromkeys(one_click.STAGE_NAMES, 2)
     assert receipt['model_hashes'] == {
         'baseline': {'yourmt3_weights_sha256': 'yourmt3'},
@@ -535,15 +538,20 @@ def test_success_receipt_interrupt_does_not_publish_midi(job, monkeypatch, capsy
     assert 'Traceback' not in capsys.readouterr().err
 
 
-@pytest.mark.parametrize('parallel_flag', ['--parallel', '--no-parallel'])
-def test_cli_records_invocation_and_resolved_parameters(job, monkeypatch, parallel_flag):
+@pytest.mark.parametrize('parallel_flag,beat_flag', [
+    ('--parallel', '--beat-align'), ('--no-parallel', '--no-beat-align'),
+])
+def test_cli_records_invocation_and_resolved_parameters(job, monkeypatch, parallel_flag, beat_flag):
     entry = one_click.ROOT / 'scripts/run_noto.py'
     monkeypatch.chdir(job.audio.parent)
     monkeypatch.setenv('NOTO_TEST_SECRET', 'secret-env-value')
     args = [
         'input.mp3', '--threads', '2', '--resources', 'assets', '--output-dir', 'result',
-        parallel_flag, '--piano-threads', '1', '--muscriptor-threads', '2',
+        parallel_flag, '--piano-threads', '1', '--muscriptor-threads', '2', beat_flag,
     ]
+    monkeypatch.setattr(one_click, 'detect_beats', lambda *_: one_click.BeatEstimate(
+        fallback_reason='insufficient_beats',
+    ))
     monkeypatch.setattr(sys, 'argv', [str(entry), *args])
     main = runpy.run_path(str(entry))['main']
     assert main() == 0
@@ -553,8 +561,63 @@ def test_cli_records_invocation_and_resolved_parameters(job, monkeypatch, parall
         'input': str(job.audio), 'output_dir': str(job.output),
         'resources': str(job.resources), 'threads': 2, 'device': 'cpu',
         'parallel': parallel_flag == '--parallel', 'piano_threads': 1, 'muscriptor_threads': 2,
+        'beat_align': beat_flag == '--beat-align', 'quantize': None,
     }
+    assert receipt['beat_alignment']['fallback'] is (beat_flag == '--beat-align')
+    assert receipt['beat_alignment']['time_signature'] == '4/4'
     assert 'secret-env-value' not in json.dumps(receipt)
+
+
+@pytest.mark.parametrize('parallel', [False, True])
+def test_beat_alignment_retimes_final_mix_without_quantizing(job, monkeypatch, parallel):
+    from audio_midi.quality import read_notes
+
+    assert job.run() == 0
+    events = read_notes(job.output / 'noto.mid')
+    aligned = job.output.with_name('aligned')
+
+    def fake_detect(samples, rate):
+        assert samples == [.1] and rate == 16000
+        return one_click.BeatEstimate((.27, .71, 1.23, 1.68, 2.17, 2.61), .99, 3, 2, .9, False)
+
+    monkeypatch.setattr(one_click, 'detect_beats', fake_detect)
+    assert one_click.run_noto(job.audio, aligned, job.resources,
+                              parallel=parallel, beat_align=True) == 0
+    output = aligned / 'noto.mid'
+    actual = read_notes(output)
+    assert len(actual) == len(events) == 6
+    for before, after in zip(events, actual):
+        assert (after.category, after.pitch, after.velocity, after.program) == (
+            before.category, before.pitch, before.velocity, before.program,
+        )
+        assert (after.onset, after.offset) == pytest.approx((before.onset, before.offset), abs=25e-6)
+    receipt = one_click._read_json(aligned / 'receipt.json')
+    assert receipt['tracks'] == job.receipt()['tracks']
+    assert receipt['beat_alignment']['time_signature'] == '3/4'
+    assert receipt['beat_alignment']['tempo_changes'] > 1
+    assert not receipt['beat_alignment']['quantized']
+    assert receipt['output_sha256'] == one_click.digest(output)
+
+
+def test_beat_fallback_keeps_original_bytes_and_explicit_quantization_changes_onsets(job, monkeypatch):
+    assert job.run() == 0
+    original = job.output / 'noto.mid'
+    fallback = job.output.with_name('fallback')
+    monkeypatch.setattr(one_click, 'detect_beats', lambda *_: one_click.BeatEstimate(
+        fallback_reason='insufficient_beats',
+    ))
+    assert one_click.run_noto(job.audio, fallback, job.resources, beat_align=True) == 0
+    assert (fallback / original.name).read_bytes() == original.read_bytes()
+    report = one_click._read_json(fallback / 'receipt.json')['beat_alignment']
+    assert report['fallback'] and report['fallback_reason'] == 'insufficient_beats'
+
+    quantized = job.output.with_name('quantized')
+    assert one_click.run_noto(job.audio, quantized, job.resources, quantize='1/4') == 0
+    report = one_click._read_json(quantized / 'receipt.json')['beat_alignment']
+    assert report['quantize_grid'] == '1/4'
+    assert report['quantized'] and report['quantized_onsets'] == 6
+    from audio_midi.quality import read_notes
+    assert [(note.onset, note.offset) for note in read_notes(quantized / original.name)] == [(0.5, 1.)] * 6
 
 
 def test_documentation_matches_one_click_entry():
