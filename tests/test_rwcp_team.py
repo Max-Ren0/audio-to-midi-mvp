@@ -39,7 +39,14 @@ def test_presence_uses_all_gm_drum_onsets_in_center_context(team):
 
 
 def test_parallel_batch_respects_new_load_and_memory_limits(team):
-    assert team.batch_jobs(2, {'load': 7, 'available_gib': 7, 'pressure_free_pct': 40}) == 2
-    assert team.batch_jobs(2, {'load': 7.1, 'available_gib': 8, 'pressure_free_pct': 45}) == 1
-    assert team.batch_jobs(2, {'load': 6, 'available_gib': 6, 'pressure_free_pct': 45}) == 1
-    assert team.batch_jobs(2, {'load': 6, 'available_gib': 8, 'pressure_free_pct': 39}) == 1
+    assert team.batch_jobs(2, {'load': 7, 'swap_free_gib': 1.5, 'pressure_free_pct': 25}) == 2
+    assert team.batch_jobs(2, {'load': 7.1, 'swap_free_gib': 2, 'pressure_free_pct': 45}) == 1
+    assert team.batch_jobs(2, {'load': 6, 'swap_free_gib': 1.49, 'pressure_free_pct': 45}) == 1
+    assert team.batch_jobs(2, {'load': 6, 'swap_free_gib': 2, 'pressure_free_pct': 24}) == 1
+    assert team.batch_jobs(2, {'load': 6, 'swap_free_gib': None, 'pressure_free_pct': 45}) == 1
+
+
+def test_swapusage_parser_uses_reported_free_space(team):
+    assert team.swap_free_gib('vm.swapusage: total = 7168.00M used = 5632.00M free = 1536.00M') == 1.5
+    assert team.swap_free_gib('free = 0.95G (encrypted)') == .95
+    assert team.swap_free_gib('unknown') is None

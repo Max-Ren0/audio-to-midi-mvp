@@ -12,7 +12,6 @@ import time
 
 import numpy as np
 import pretty_midi
-import psutil
 
 from audio_midi.midi import write_midi
 from audio_midi.quality import read_notes
@@ -228,20 +227,29 @@ def summarize(items):
     return {'combinations': summary, 'intervals': intervals}
 
 
+def swap_free_gib(report):
+    match = re.search(r'\bfree\s*=\s*([\d.]+)\s*([BKMGT])', report)
+    return float(match[1]) * 1024 ** ('BKMGT'.index(match[2]) - 3) if match else None
+
+
 def machine_capacity():
-    memory = psutil.virtual_memory()
-    log = subprocess.run(['/usr/bin/memory_pressure', '-Q'], text=True,
-                         capture_output=True).stdout if platform.system() == 'Darwin' else ''
-    match = re.search(r'System-wide memory free percentage: (\d+)%', log)
-    return {'available_gib': memory.available / 1024**3, 'load': os.getloadavg()[0],
-            'pressure_free_pct': int(match[1]) if match else None}
+    swap_report = pressure_report = ''
+    if platform.system() == 'Darwin':
+        swap_report = subprocess.run(['/usr/sbin/sysctl', 'vm.swapusage'], text=True,
+                                     capture_output=True).stdout.strip()
+        pressure_report = subprocess.run(['/usr/bin/memory_pressure', '-Q'], text=True,
+                                         capture_output=True).stdout.strip()
+    match = re.search(r'System-wide memory free percentage: (\d+)%', pressure_report)
+    return {'load': os.getloadavg()[0], 'swap_free_gib': swap_free_gib(swap_report),
+            'pressure_free_pct': int(match[1]) if match else None,
+            'swap_report': swap_report, 'pressure_report': pressure_report}
 
 
 def batch_jobs(requested, capacity):
-    free = capacity['pressure_free_pct']
-    if requested == 2 and capacity['load'] <= 7 and capacity['available_gib'] >= 7 and (free is None or free >= 40):
-        return 2
-    return 1
+    free, swap = capacity['pressure_free_pct'], capacity['swap_free_gib']
+    can_parallel = (capacity['load'] <= 7 and free is not None and free >= 25
+                    and swap is not None and swap >= 1.5)
+    return 2 if requested == 2 and can_parallel else 1
 
 
 def main():
@@ -314,12 +322,17 @@ def main():
         todo = [song for song in songs if song['id'] not in result['items'] or
                 not finished(result['items'][song['id']])]
         while todo:
-            while os.getloadavg()[0] > 8:
-                print(f'Waiting for load {os.getloadavg()[0]:.2f}', flush=True)
-                time.sleep(60)
             capacity = machine_capacity()
-            # Prefer two jobs only with room for their observed ~3.3 GiB peaks.
-            jobs = batch_jobs(args.jobs, capacity)
+            while capacity['load'] > 8:
+                print(f'Waiting for load {capacity}', flush=True)
+                time.sleep(60)
+                capacity = machine_capacity()
+            jobs = min(batch_jobs(args.jobs, capacity), len(todo))
+            checks = [capacity]
+            if jobs == 2:
+                checks.append(machine_capacity())
+                jobs = batch_jobs(2, checks[-1])
+            print(f'Launch {[s["id"] for s in todo[:jobs]]} with {jobs} slot(s): {checks}', flush=True)
             batch, todo = todo[:jobs], todo[jobs:]
             began = time.monotonic()
             failed = False
@@ -336,7 +349,7 @@ def main():
                     write_json(result_path, result)
                     failed |= not finished(item)
                     print(f'{song_id}: {"completed" if finished(item) else "incomplete"}', flush=True)
-            result['batches'].append({**capacity, 'jobs': jobs, 'songs': [s['id'] for s in batch],
+            result['batches'].append({'capacity_checks': checks, 'jobs': jobs, 'songs': [s['id'] for s in batch],
                                       'elapsed_seconds': time.monotonic() - began})
             write_json(result_path, result)
             if failed:
