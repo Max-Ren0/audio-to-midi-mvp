@@ -127,11 +127,11 @@ def test_p5_nonempty_evidence_can_be_serialized(prepare):
     sample_rate = 44100
     t = np.arange(sample_rate) / sample_rate
     hz = specialist.pitch_hz(69)
-    notes = [NoteEvent('piano', 69, .1, .5)]
+    notes = [NoteEvent('piano', 69, i * .06, i * .06 + .4) for i in range(8)]
     signal = sum(np.sin(2 * np.pi * hz * i * (1 + .00025 * (i ** 2 - 1)) * t)
                  / i for i in range(1, 9))
     outcome = specialist.choose_piano(notes, signal, sample_rate)
-    assert outcome['usable_notes'] == 1
+    assert outcome == {'usable_notes': 8, 'stretched_notes': 8, 'route': 'P2'}
     assert json.loads(json.dumps(outcome)) == outcome
 
 

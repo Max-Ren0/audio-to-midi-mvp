@@ -1,6 +1,6 @@
 """Render the completed local RWC-P pilot as a Chinese Markdown report."""
 import argparse
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from statistics import mean
 
@@ -36,6 +36,18 @@ def scores(route, metric):
     return ' → '.join(f'{value:.1%}' if value is not None else '—' for value in values)
 
 
+def recorded_loads(work):
+    loads = defaultdict(list)
+    for name in ('pilot.log', 'pilot-resume.log', 'pilot-final.log'):
+        log = work / name
+        if log.is_file():
+            for line in log.read_text().splitlines():
+                song, separator, load = line.partition(': 1-minute load=')
+                if separator and song.startswith('RWC_P'):
+                    loads[song].append(load)
+    return loads
+
+
 def render(work, result, test_summary, code_commit):
     manifest = read_json(work / 'manifest.json')
     if digest(work / 'manifest.json') != result['manifest_sha256']:
@@ -44,6 +56,7 @@ def render(work, result, test_summary, code_commit):
     if [row['id'] for row in items] != [song['id'] for song in pilot_songs(manifest)]:
         raise ValueError('Incomplete pilot or pilot results are from different songs')
     strata = Counter((song['drum_information'], song['split']) for song in manifest['songs'])
+    loads = recorded_loads(work)
     lines = [
         '# Noto · RWC-P 三轨路线试跑', '',
         '本轮覆盖 5 首调参曲目，每首一个约 60 秒片段。成绩是**与 RWC-P 参考的一致度**，'
@@ -62,11 +75,11 @@ def render(work, result, test_summary, code_commit):
     table(lines, ['DrumInformation', '调参', '测试'],
           [(label, strata[label, 'tuning'], strata[label, 'test'])
            for label in ('Drum sequences', 'Live drums', 'Drum loops', 'Without drums')])
-    table(lines, ['试跑曲目', '中心区间（秒）', '参考偏移（毫秒）', '峰值相关 / 零偏移相关', '开始时 1 分钟负载'],
+    table(lines, ['试跑曲目', '中心区间（秒）', '参考偏移（毫秒）', '峰值相关 / 零偏移相关', '各次启动的 1 分钟负载'],
           [(item['id'], '–'.join(f'{point:.3f}' for point in item['center_seconds']),
             f'{item["offset"]["seconds"] * 1000:+.1f}',
             f'{item["offset"]["peak"]:.3f} / {item["offset"]["at_zero"]:.3f}',
-            f'{item["one_minute_load"]:.2f}') for item in items])
+            ' / '.join(loads.get(item['id']) or [f'{item["one_minute_load"]:.2f}'])) for item in items])
     lines.extend([
         '## 2. 计分', '',
         '- 每个音符按起点归入中心半开区间。匹配沿用 e2e 的同类、同音高、起音偏差 ≤ 50 ms 的'
@@ -116,6 +129,14 @@ def render(work, result, test_summary, code_commit):
                                    for kind in ('reference', 'prediction'))))
     song_ids = [item['id'] for item in items]
     table(lines, ['候选', *song_ids, 'micro F1'], score_rows)
+    diagnostic = next((item for item in items if item['id'] == 'RWC_P052'), None)
+    if diagnostic and all(diagnostic['routes'][route]['status'] == 'ok' for route in ('P1', 'D2')):
+        p1 = scores(diagnostic['routes']['P1'], 'exact')
+        d2 = scores(diagnostic['routes']['D2'], 'exact')
+        lines.extend([
+            f'P052 校正后多条路线的一致度同时下降，例如 P1 为 {p1}、D2 为 {d2}。'
+            '这个偏移峰须人工复核。两套分数均保留，试跑未依据候选分数重选偏移。', '',
+        ])
     table(lines, ['鼓路线', '其他 GM 鼓参考音符数（校正后）', '其他 GM 鼓预测音符数'], drums)
     nonzero_absent = [row for row in absent if any(row[1:])]
     if nonzero_absent:
@@ -125,6 +146,8 @@ def render(work, result, test_summary, code_commit):
     table(lines, ['曲目', 'P5 实际选择', '可测 / 泛音偏移符合阈值的音符'],
           [(item['id'], item['p5']['route'], f'{item["p5"]["usable_notes"]} / {item["p5"]["stretched_notes"]}')
            if item['p5'] else (item['id'], '—', '—') for item in items])
+    if all(item['p5'] and item['p5']['route'] == 'P1' for item in items):
+        lines.extend(['五段 P5 均走 P1。P2 触发分支通过合成泛音测试，实际录音触发待验证。', ''])
     lines.extend([
         '## 5. 本机耗时与内存', '',
         'Apple Silicon，本轮各模型 CPU 2 线程、逐阶段串行。墙钟含加载、推理与阶段输出。'
@@ -139,6 +162,14 @@ def render(work, result, test_summary, code_commit):
             f'恢复计时时的 uptime 为 **{recovery_load.read_text().strip()}**。'
             'P029 首次 SW 已生成分轨，但旧计时流程返回系统权限错误，未完整保留计时回执。'
             '恢复后只重新实测未完成阶段，先前完整缓存继续复用。', '',
+        ])
+    final_load = work / 'final-uptime.log'
+    if final_load.exists():
+        lines.extend([
+            f'修复 P5 证据输出后的 uptime 为 **{final_load.read_text().strip()}**。'
+            '首段 P5 因证据计数的数据类型无法直接写 JSON。修复仅转换数据类型，音色条件保持原值。'
+            'P029 的 ADTOF 首次为 8.56 秒，共享脚本哈希变更后复测为 2.81 秒，后者纳入表格。'
+            '其余未变化的模型缓存继续复用。', '',
         ])
     names = list(dict.fromkeys(name for item in items for name in item['stages']))
     timings = []
@@ -155,9 +186,8 @@ def render(work, result, test_summary, code_commit):
     table(lines, ['阶段', *song_ids, '平均秒', '最高 RSS GiB'], timings)
     if all(summary.get(route, {}).get('songs') == 5 for route in FIXED_ROUTES):
         serial_hours = 72 * total_seconds / 3600
-        elapsed = sum(item['wall_seconds_including_cache'] for item in items)
         lines.extend([
-            f'本次五段运行的歌曲级墙钟合计 **{elapsed / 60:.1f} 分钟**（含裁片、缓存写读与计分）。'
+            f'五段的有效阶段墙钟合计 **{total_seconds * 5 / 60:.1f} 分钟**（含解码，失败尝试另见日志）。'
             f'共享后每首各阶段均值合计 **{total_seconds:.1f} 秒**。'
             f'按每首一段、12 个候选外推到 72 首，串行约 **{serial_hours:.2f} 小时**。'
             f'两条歌曲流水线并行、每个进程仍用 2 线程，理想约 **{serial_hours / 2:.2f} 小时**。'
@@ -174,6 +204,7 @@ def render(work, result, test_summary, code_commit):
         '## 6. 待决定事项', '',
         '- 现有候选均有本地资产，本轮无需重新下载或安装。P5 琴种判断若保留，待决定如何提供独立琴种标注。',
         '- 由项目负责人决定是否按实测成本削减候选，并在使用剩余调参曲目之前冻结调整。'
+        '保留任一依赖 SW 的路线就仍需支付一次分离成本，应按可省下的模型阶段估算。'
         '本次五段试跑未产生赢家。',
         '- 正式选拔前待决定是否抽听偏移较大的曲目，并独立校核钢琴与贝斯参考。', '',
         f'本地验证 **{test_summary}**。逐段分数、鼓键计数、输入及阶段输出哈希见 {work / "pilot-results.json"}。'
