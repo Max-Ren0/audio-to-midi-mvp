@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "offset_rule": "rwcp-offset-v2",
+  "recipes": {
+    "S1": [
+      "P1",
+      "B1",
+      "D1"
+    ],
+    "S3": [
+      "P2",
+      "B2",
+      "D2"
+    ],
+    "S5": [
+      "P2",
+      "B2",
+      "D2"
+    ],
+    "S6": [
+      "P2",
+      "B2",
+      "D2"
+    ]
+  },
+  "thresholds": {
+    "piano": 0,
+    "bass": 0,
+    "drums": 0
+  },
+  "bootstrap_seed": 20261126,
+  "bootstrap_replicates": 10000
+}
