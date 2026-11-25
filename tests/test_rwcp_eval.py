@@ -119,3 +119,25 @@ def test_b7_octave_repair_preserves_onset_and_p5_no_evidence(prepare):
     assert corrected.pitch == 33
     assert corrected.onset == original.onset and corrected.offset == original.offset
     assert specialist.choose_piano([], signal, sample_rate)['route'] == 'P1'
+
+
+def test_stage_measurement_cache_and_retry_after_failure(prepare, monkeypatch, tmp_path):
+    monkeypatch.setitem(sys.modules, 'prepare', prepare)
+    monkeypatch.setitem(sys.modules, 'score', score)
+    run = load('run_pilot')
+    run.scheduled_stage(tmp_path, 'test', 'input', ['v1'], ['notes'],
+                        lambda _: [sys.executable, '-c', 'raise SystemExit(3)'])
+    failed, = list(tmp_path.iterdir())
+    record = run.read_json(failed / 'stage.json')
+    assert record['status'] == 'failed' and record['exit_code'] == 3
+    assert record['elapsed_seconds'] > 0 and record['peak_memory_bytes'] > 0
+    output, record = run.scheduled_stage(
+        tmp_path, 'test', 'input', ['v1'], ['notes'],
+        lambda stage: [sys.executable, '-c', 'from pathlib import Path; import sys;'
+                       'Path(sys.argv[1]).write_text("sample")', stage / 'notes'],
+    )
+    assert record['status'] == 'ok' and record['peak_memory_bytes'] > 0
+    assert run.scheduled_stage(tmp_path, 'test', 'input', ['v1'], ['notes'], None) == (output, record)
+    (output / 'notes').write_text('modified')
+    with pytest.raises(ValueError, match='Cache integrity'):
+        run.scheduled_stage(tmp_path, 'test', 'input', ['v1'], ['notes'], None)

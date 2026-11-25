@@ -1,7 +1,6 @@
 """Run only the five frozen tuning clips, serially, using local model assets."""
 import argparse
 from collections import defaultdict
-from dataclasses import asdict
 import fcntl
 import hashlib
 import importlib.metadata
@@ -9,7 +8,7 @@ import json
 import os
 from pathlib import Path
 import platform
-import shutil
+import signal
 import subprocess
 import sys
 import tempfile
@@ -17,6 +16,7 @@ import time
 
 import numpy as np
 import pretty_midi
+import psutil
 import soundfile as sf
 
 from audio_midi.backends.selected import MODEL_REVISION, WEIGHT_SHA256
@@ -25,7 +25,6 @@ from audio_midi.muscriptor_routing import parse_note_lines
 from audio_midi.piano_lock import verify_assets
 from audio_midi.quality import read_notes
 from audio_midi.stitching import clean_notes
-from audio_midi.worker import WorkerError, run_command
 
 from prepare import digest, reference_notes
 from score import pool, score
@@ -107,6 +106,52 @@ def assets(resources):
     return paths, versions
 
 
+def measure(command, log_path, timeout=1800, limit=6 * 1024**3):
+    """Measure one stage and only signal its process group while its PID is reserved."""
+    env = {**os.environ, 'OMP_NUM_THREADS': '2', 'OPENBLAS_NUM_THREADS': '2',
+           'NUMBA_NUM_THREADS': '2', 'MKL_NUM_THREADS': '2', 'PYTHONUNBUFFERED': '1',
+           'TOKENIZERS_PARALLELISM': 'false', 'AUDIO_MIDI_BATCH_SIZE': '2',
+           'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1'}
+    start = time.monotonic()
+    peak = 0
+    reason = None
+    with log_path.open('wb') as log:
+        process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT,
+                                   env=env, start_new_session=True)
+        try:
+            while True:
+                pid, status, usage = os.wait4(process.pid, os.WNOHANG)
+                if pid:
+                    process.returncode = os.waitstatus_to_exitcode(status)
+                    unit = 1 if sys.platform == 'darwin' else 1024
+                    peak = max(peak, usage.ru_maxrss * unit)
+                    break
+                try:
+                    leader = psutil.Process(process.pid)
+                    rss = 0
+                    for member in [leader, *leader.children(recursive=True)]:
+                        try:
+                            rss += member.memory_info().rss
+                        except (psutil.Error, OSError):
+                            continue
+                    peak = max(peak, rss)
+                except (psutil.Error, OSError):
+                    pass
+                if peak > limit or time.monotonic() - start > timeout:
+                    reason = 'RSS limit exceeded' if peak > limit else 'Stage timed out'
+                    break
+                time.sleep(.03)
+        finally:
+            if process.returncode is None:
+                try:
+                    os.killpg(process.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                process.wait()
+    return {'elapsed_seconds': time.monotonic() - start, 'peak_memory_bytes': peak,
+            'attempts': 1, 'exit_code': process.returncode, 'error': reason}
+
+
 def scheduled_stage(cache, stage, input_hash, signature, outputs, command):
     """Cache only a successful invocation with hash-checked outputs."""
     version_hash = hashlib.sha256(json.dumps(signature, sort_keys=True).encode()).hexdigest()
@@ -119,19 +164,19 @@ def scheduled_stage(cache, stage, input_hash, signature, outputs, command):
         raise ValueError(f'Cache integrity mismatch: {target}')
     work = Path(tempfile.mkdtemp(prefix=f'{stage}-', dir=cache))
     print(f'{stage}: start', flush=True)
+    details = {}
     try:
-        details = run_command([str(x) for x in command(work)], time.monotonic() + 1800,
-                              work / 'stage.log', 6 * 1024**3)
-        record = {'identity': [stage, input_hash, signature], **asdict(details),
+        details = measure([str(x) for x in command(work)], work / 'stage.log')
+        if details['exit_code'] or details['error']:
+            raise ValueError(details['error'] or f"Stage exited with {details['exit_code']}")
+        record = {'identity': [stage, input_hash, signature], **details,
                   'outputs': {name: digest(work / name) for name in outputs}, 'status': 'ok'}
         write_json(work / 'stage.json', record)
         work.rename(target)
-        print(f'{stage}: {details.elapsed_seconds:.2f}s', flush=True)
+        print(f'{stage}: {details["elapsed_seconds"]:.2f}s', flush=True)
         return target, record
-    except (OSError, ValueError, WorkerError) as error:
-        record = {'status': 'failed', 'error': str(error), 'log': str(work / 'stage.log'),
-                  'peak_memory_bytes': getattr(error, 'peak_memory_bytes', None),
-                  'attempts': getattr(error, 'attempts', None)}
+    except (OSError, ValueError) as error:
+        record = {**details, 'status': 'failed', 'error': str(error), 'log': str(work / 'stage.log')}
         write_json(work / 'stage.json', record)
         print(f'{stage}: failed ({work / "stage.log"})', flush=True)
         return None, record
