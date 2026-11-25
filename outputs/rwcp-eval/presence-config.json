@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "tracks": {
+    "piano": {
+      "route": "P2",
+      "threshold": 0
+    },
+    "bass": {
+      "route": "B2",
+      "threshold": 0
+    },
+    "drums": {
+      "route": "D2",
+      "threshold": 0
+    }
+  }
+}
