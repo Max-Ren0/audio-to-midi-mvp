@@ -9,6 +9,7 @@ from report_dev import OFFSET_STATUS, fmt
 from run_dev import CONFIDENT, MANIFEST_SHA
 from run_pilot import HERE, read_json, verify_hash
 from run_team import COMBOS, TRACKS, summarize, test_songs
+from score import pool
 
 
 LABEL = {'piano': '钢琴', 'bass': '贝斯', 'drums': '鼓'}
@@ -48,15 +49,26 @@ def render(work):
         values = {combo: combos[combo]['tracks'][c]['corrected']['exact']['f1'] for combo in COMBOS}
         deltas[c] = {pair: values[a] - values[b] for pair in intervals[c]['deltas']
                      for a, b in [pair.split('-')]}
-    delta_summary = '、'.join(f'{LABEL[c]} {deltas[c]["S5-S3"] * 100:+.2f}' for c in TRACKS)
+    equivalent = (config['recipes']['S3'] == config['recipes']['S5'] == config['recipes']['S6']
+                  and not any(config['thresholds'].values()))
+    if equivalent and any(len({i['combinations'][group]['midi_sha256'] for group in ('S3', 'S5', 'S6')}) != 1
+                          for i in items):
+        raise ValueError('Equivalent configurations produced different MIDI')
+    comparison = 'S5-S1' if equivalent else 'S5-S3'
+    delta_summary = '、'.join(f'{LABEL[c]} {deltas[c][comparison] * 100:+.2f}' for c in TRACKS)
     suppressed = sum(combos['S6']['tracks'][category]['gated'] for category in TRACKS)
+    headline = (f'**团体赛实际比较 S1 与 S3。S3 相对 S1 的校正后 micro F1 差值为 {delta_summary} 个百分点。**'
+                if equivalent else
+                f'**S5 相对 S3 的校正后 micro F1 差值为 {delta_summary} 个百分点。**')
     lines = [
         '# Noto · RWC-P 冻结团体赛', '',
-        f'**在 50 首封存曲目上，S5 相对当前组合 S3 的校正后 micro F1 差值为 {delta_summary} 个百分点。**'
-        f'S6 的存在判断抑制了 {suppressed} 条非空预测轨。', '',
+        headline, '',
         '分数表示**与 RWC-P 参考的一致度**。钢琴参考可靠性低。',
         '', '## 1. 单项赛与被冻结的组合', '',
     ]
+    if equivalent:
+        lines.extend(['**S6 ≡ S5 ≡ S3。乐器是否存在判断本轮未得到检验。**'
+                      '22 首调参曲目在三个轨道都没有参考为空的片段，三轨阈值冻结为 0。', ''])
     table(lines, ['轨道', '22 首入选路线', '调参校正后 F1', '决定依据'], [
         (LABEL[c], dev_summary['winners'][c]['winner'],
          fmt(dev_summary['routes'][dev_summary['winners'][c]['winner']]['corrected']['exact']['f1'], '.2%'),
@@ -64,7 +76,8 @@ def render(work):
         for c in TRACKS
     ])
     table(lines, ['组合', '钢琴', '贝斯', '鼓', '存在判断'], [
-        (combo, *config['recipes'][combo], '应用冻结阈值' if combo == 'S6' else '关闭')
+        (combo, *config['recipes'][combo],
+         '冻结阈值全 0，关闭' if combo == 'S6' and equivalent else '应用冻结阈值' if combo == 'S6' else '关闭')
         for combo in COMBOS
     ])
     lines += [
@@ -101,6 +114,9 @@ def render(work):
         (pair, *(f'{deltas[c][pair] * 100:+.2f}，95% CI {interval(intervals[c]["deltas"][pair], True)}'
                  for c in TRACKS)) for pair in intervals['piano']['deltas']
     ])
+    if equivalent:
+        lines += ['S3、S5、S6 在 50 首上的 MIDI 哈希逐首一致。三者之间的差值及配对区间恒为 0，'
+                  '存在判断的效果没有被检验。', '']
     lines += ['## 3. 空输出、误报与存在判断', '']
     table(lines, ['轨道', '调参参考存在／缺失', '阈值（音符）', '调参删除误报音符', '正例误删'], [
         (LABEL[c], f'{presence[c]["positive"]} / {presence[c]["negative"]}', presence[c]['threshold'],
@@ -117,6 +133,8 @@ def render(work):
     ])
     if not any(config['thresholds'].values()):
         lines += ['所有阈值均为 0，这次 S6 的实际输出与 S5 一样。此次数据无法验证存在判断能否减少适用场景中的误报。', '']
+    else:
+        lines += [f'S6 共抑制 {suppressed} 条非空预测轨。', '']
     lines += ['## 4. 低置信偏移与一键耗时', '']
     if low:
         table(lines, ['曲目', '低置信原因', '峰值', '领先次峰'],
@@ -135,9 +153,25 @@ def render(work):
         f'（{batches[1]} 个串行批次、{batches[2]} 个双歌曲批次）。'
         '各组合的等效耗时汇总其实际需要的独立阶段及组装读写，不重复跑模型计时。'
         '一键成功要求至少一轨有效 MIDI 且能回读。', '',
-        '## 5. 局限与默认路线建议', '',
+        '## 5. P092 贝斯参考八度敏感性', '',
+        'P092 属于调参集。独立审核在 B2 的 262 对起音匹配中发现 258 对预测比参考低 12 半音。'
+        '四条贝斯路线在该首精确 F1 均为 0%，B2 忽略八度 F1 为 96.4%。参考疑似整体高一八度，仍需逐音复核。',
+        '下表仅以调参集补做敏感性比较，保留冻好的赢家与测试集主结果。',
+        ' [单项赛独立审核](../noto-rwcp-dev-审核/README.md)', '',
+    ]
+    bass_rows = []
+    for route in ('B1', 'B2', 'B5', 'B7'):
+        values = dev_summary['routes'][route]['corrected']
+        subset = [item['routes'][route]['corrected'] for song, item in dev['items'].items() if song != 'RWC_P092']
+        bass_rows.append((route, fmt(values['exact']['f1'], '.2%'), fmt(pool(subset, 'exact')['f1'], '.2%'),
+                          fmt(values['octave_free']['f1'], '.2%'), fmt(pool(subset, 'octave_free')['f1'], '.2%')))
+    table(lines, ['贝斯路线', '原 22 首精确', '剔除 P092 后精确', '原 22 首忽略八度', '剔除 P092 后忽略八度'], bass_rows)
+    lines += [
+        '## 6. 局限与默认路线建议', '',
         '- RWC-P 的 MIDI 参考存在计时及音高误差，钢琴参考可靠性低，贝斯的八度有歧义。'
         '这些成绩衡量候选与参考的相对一致度。v2 看过五段试跑及其候选扫描后设计，存在选择偏差。',
+        '- 20 ms 补偿是在试跑观察上固定的近似值。模型各自的起音延迟也可能贡献差异，'
+        '所以 50 ms 匹配容差对不同路线的影响可能不同。',
         '- 72 首整曲均从三轨齐全的池中选出，真实缺轨片段稀少。弱轨误删与真实无乐器的误报仍需另作专项验证。',
         '- RWC-P 许可为 CC BY-NC 4.0，本轮用作本地研究比较。', '',
     ]
