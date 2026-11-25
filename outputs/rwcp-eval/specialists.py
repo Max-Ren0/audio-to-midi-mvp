@@ -78,7 +78,7 @@ def stretched_piano_votes(notes, audio, sr):
         slope = np.dot(harmonic[2:] ** 2 - 1, relative[2:]) / np.sum((harmonic[2:] ** 2 - 1) ** 2)
         residual = np.median(np.abs(relative[2:] - slope * (harmonic[2:] ** 2 - 1)))
         votes.append(.00012 <= slope <= .0015 and residual <= .003)
-    return len(votes), sum(votes)
+    return len(votes), int(sum(votes))
 
 
 def choose_piano(notes, audio, sr):

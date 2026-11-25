@@ -1,4 +1,5 @@
 import importlib.util
+import json
 from pathlib import Path
 import sys
 
@@ -119,6 +120,19 @@ def test_b7_octave_repair_preserves_onset_and_p5_no_evidence(prepare):
     assert corrected.pitch == 33
     assert corrected.onset == original.onset and corrected.offset == original.offset
     assert specialist.choose_piano([], signal, sample_rate)['route'] == 'P1'
+
+
+def test_p5_nonempty_evidence_can_be_serialized(prepare):
+    specialist = load('specialists')
+    sample_rate = 44100
+    t = np.arange(sample_rate) / sample_rate
+    hz = specialist.pitch_hz(69)
+    notes = [NoteEvent('piano', 69, .1, .5)]
+    signal = sum(np.sin(2 * np.pi * hz * i * (1 + .00025 * (i ** 2 - 1)) * t)
+                 / i for i in range(1, 9))
+    outcome = specialist.choose_piano(notes, signal, sample_rate)
+    assert outcome['usable_notes'] == 1
+    assert json.loads(json.dumps(outcome)) == outcome
 
 
 def test_stage_measurement_cache_and_retry_after_failure(prepare, monkeypatch, tmp_path):

@@ -128,11 +128,18 @@ def render(work, result, test_summary, code_commit):
     lines.extend([
         '## 5. 本机耗时与内存', '',
         'Apple Silicon，本轮各模型 CPU 2 线程、逐阶段串行。墙钟含加载、推理与阶段输出。'
-        '峰值为约每 30 ms 采样的子进程树聚合 RSS，快速进程的采样值可能偏低。'
-        '表中保留首跑阶段回执，避免将缓存命中计作模型时间。', '',
+        '峰值为约每 30 ms 采样的子进程树聚合 RSS。恢复后的计时器另用操作系统记录的进程峰值补足短进程采样。'
+        '表中引用实际执行阶段的回执，缓存读取耗时不计入模型时间。', '',
         f'开跑前 uptime 为 **{(work / "preflight-uptime.log").read_text().strip()}**。'
         '开跑时 1 分钟负载若超过 4，相关耗时会受同时运行的系统和应用进程影响。',
     ])
+    recovery_load = work / 'resume-uptime.log'
+    if recovery_load.exists():
+        lines.extend([
+            f'恢复计时时的 uptime 为 **{recovery_load.read_text().strip()}**。'
+            'P029 首次 SW 已生成分轨，但旧计时流程返回系统权限错误，未完整保留计时回执。'
+            '恢复后只重新实测未完成阶段，先前完整缓存继续复用。', '',
+        ])
     names = list(dict.fromkeys(name for item in items for name in item['stages']))
     timings = []
     total_seconds = 0
@@ -170,6 +177,7 @@ def render(work, result, test_summary, code_commit):
         '本次五段试跑未产生赢家。',
         '- 正式选拔前待决定是否抽听偏移较大的曲目，并独立校核钢琴与贝斯参考。', '',
         f'本地验证 **{test_summary}**。逐段分数、鼓键计数、输入及阶段输出哈希见 {work / "pilot-results.json"}。'
+        f'结果 SHA-256 **{digest(work / "pilot-results.json")}**。'
         '音频、MIDI、缓存和结果均保存在主检出被忽略的 work/rwcp-eval/。', '',
     ])
     return '\n'.join(lines)
