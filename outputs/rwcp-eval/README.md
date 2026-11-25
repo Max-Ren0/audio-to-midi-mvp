@@ -43,7 +43,7 @@ offset_sha="$(shasum -a 256 "$work/dev-offsets-v2.json" | cut -d ' ' -f 1)"
 nice -n 10 "$python" outputs/rwcp-eval/run_dev.py run --resources "$resources" --work "$work" --offset-sha256 "$offset_sha"
 ```
 
-运行按单阶段串行，开始每首前等待 1 分钟负载 ≤4。原试跑的模型产物按哈希复用，每首写一份增量检查点，重启沿用已有偏移文件与已完成曲目的结果。
+运行按单阶段串行，开始每首前等待 1 分钟负载 ≤8 并记录 uptime。原试跑的模型产物按哈希复用，每首写一份增量检查点，重启沿用已有偏移文件与已完成曲目的结果。
 
 ## S6 乐器存在判断的调参规则
 
@@ -69,4 +69,4 @@ nice -n 10 "$python" outputs/rwcp-eval/run_team.py run --resources "$resources" 
   --offset-sha256 "$test_offset_sha" --jobs 2
 ```
 
-每个组合的等效串行耗时计所需去重阶段与组装读写，一次执行的实际耗时另计。双流水线根据本机内存可用量检查自动降为单流水线。中断可使用同一个命令续跑，原测试偏移与已完成检查点保留。
+每个组合的等效串行耗时计所需去重阶段与组装读写，一次执行的实际耗时另计。双流水线在 1 分钟负载 ≤7 且当前可用内存满足检查时运行，单流水线启动门槛为 ≤8。每首记录 uptime。中断可使用同一个命令续跑，原测试偏移与已完成检查点保留。

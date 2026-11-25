@@ -254,19 +254,21 @@ def main():
             if song_id in result['items'] and finished(result['items'][song_id]):
                 continue
             waiting = time.monotonic()
-            while os.getloadavg()[0] > 4:
+            while os.getloadavg()[0] > 8:
                 print(f'{song_id}: waiting for load {os.getloadavg()[0]:.2f}', flush=True)
                 time.sleep(60)
             begin = time.monotonic()
             load = os.getloadavg()[0]
+            uptime = subprocess.check_output(['uptime'], text=True).strip()
             print(f'{song_id}: start ({load:.2f})', flush=True)
+            print(uptime, flush=True)
             mix, duration = prepare_clip(song, dataset, work / 'clips')
             offset = offsets[song_id]
             verify_hash(mix, offset['clip_sha256'])
             products, stages = run_clip(mix, duration, work / 'cache', paths, versions)
             routes, gate = route_scores(song, dataset, products, stages, duration, offset['seconds'])
             entry = {'id': song_id, 'center_seconds': song['center_seconds'], 'offset': offset,
-                     'load': load, 'wait_seconds': begin - waiting,
+                     'load': load, 'uptime': uptime, 'wait_seconds': begin - waiting,
                      'elapsed_seconds': time.monotonic() - begin,
                      'stages': stages, 'routes': routes, 'p5': gate}
             result['items'][song_id] = entry

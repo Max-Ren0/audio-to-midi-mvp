@@ -139,10 +139,12 @@ def publish_combo(path, notes):
 
 def evaluate_song(song, offset, dataset, work, paths, versions, config):
     began = time.monotonic()
+    uptime = subprocess.check_output(['uptime'], text=True).strip()
     song_id = song['id']
     mix, duration = prepare_clip(song, dataset, work / 'clips')
     verify_hash(mix, offset['clip_sha256'])
     print(f'{song_id}: start', flush=True)
+    print(f'{song_id}: {uptime}', flush=True)
     recipes = config['recipes']
     products, stages = run_clip(mix, duration, work / 'cache', paths, versions, needed=needed_stages(recipes))
     routes = track_outputs(recipes, products, duration)
@@ -182,7 +184,7 @@ def evaluate_song(song, offset, dataset, work, paths, versions, config):
             'publish_seconds': publish_seconds,
         }
     return {'id': song_id, 'offset': offset, 'center_seconds': center, 'stages': stages,
-            'combinations': combinations, 'wall_seconds': time.monotonic() - began}
+            'combinations': combinations, 'uptime': uptime, 'wall_seconds': time.monotonic() - began}
 
 
 def finished(item):
@@ -233,6 +235,13 @@ def machine_capacity():
     match = re.search(r'System-wide memory free percentage: (\d+)%', log)
     return {'available_gib': memory.available / 1024**3, 'load': os.getloadavg()[0],
             'pressure_free_pct': int(match[1]) if match else None}
+
+
+def batch_jobs(requested, capacity):
+    free = capacity['pressure_free_pct']
+    if requested == 2 and capacity['load'] <= 7 and capacity['available_gib'] >= 7 and (free is None or free >= 40):
+        return 2
+    return 1
 
 
 def main():
@@ -304,14 +313,13 @@ def main():
                 raise ValueError('Existing test checkpoint belongs to another evaluation')
         todo = [song for song in songs if song['id'] not in result['items'] or
                 not finished(result['items'][song['id']])]
-        while todo and os.getloadavg()[0] > 4:
-            print(f'Waiting for initial load {os.getloadavg()[0]:.2f}', flush=True)
-            time.sleep(60)
         while todo:
+            while os.getloadavg()[0] > 8:
+                print(f'Waiting for load {os.getloadavg()[0]:.2f}', flush=True)
+                time.sleep(60)
             capacity = machine_capacity()
-            free = capacity['pressure_free_pct']
             # Prefer two jobs only with room for their observed ~3.3 GiB peaks.
-            jobs = 2 if args.jobs == 2 and capacity['available_gib'] >= 7 and (free is None or free >= 40) else 1
+            jobs = batch_jobs(args.jobs, capacity)
             batch, todo = todo[:jobs], todo[jobs:]
             began = time.monotonic()
             failed = False
