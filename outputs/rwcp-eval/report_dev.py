@@ -42,7 +42,7 @@ def render(work):
     lines = [
         '# Noto · RWC-P 调参单项赛', '',
         '22 首调参曲目 × 12 条单轨路线。分数表示**与 RWC-P 参考的一致度**。'
-        '50 首测试曲目和团体赛留待另行确认，独立真值的上线门槛待定。', '',
+        '本报告只使用调参集。50 首封存测试曲目留给另行冻结的团体赛，独立真值的上线门槛待定。', '',
         '## 1. 按冻结规则选出的路线', '',
     ]
     rows = []
@@ -134,6 +134,11 @@ def render(work):
     load_path = work / 'dev-preflight-uptime.log'
     if load_path.exists():
         lines += [f'启动前 uptime 为 {load_path.read_text().strip()}。', '']
+    if (work / 'dev-resume-uptime.log').exists():
+        lines += [
+            '第 10 首前提高串行启动负载上限至 8，停在等待阶段后复用已完成检查点和模型缓存。'
+            '恢复后每首保存完整 uptime，此前保存了各首的一分钟负载。', '',
+        ]
     lines += [
         f'22 首有效阶段累计 **{shared / 3600:.2f} 小时**，包含 5 首已缓存的实测阶段。'
         f'本轮新增评测实际工作墙钟 **{active / 3600:.2f} 小时**（含缓存读取、裁片和计分），'
@@ -144,7 +149,7 @@ def render(work):
         *(f'  - {route} 使用 {ROUTES[route]}。' for route in labels.values()),
         '- **S6** 沿用 S5，各轨发布前补一层仅依赖音频与候选输出的乐器存在判断。'
         '仅在调参侧校准门槛和不确定时的保留策略，分别记录空轨误报与误删，再与组件一同冻结。'
-        '等待协调者确认后再做团体赛。',
+        '存在判断与组合分别提交冻结后进入团体赛。',
         '', f'结果 JSON SHA-256 **{digest(result_path)}**。冻结曲目、偏移曲线、每首阶段计时及打分均保存在本机 {work}。', '',
     ]
     return '\n'.join(lines)
