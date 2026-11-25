@@ -7,9 +7,10 @@ from threading import Barrier
 from types import SimpleNamespace
 
 import mido
+import numpy as np
 import pytest
 
-from audio_midi import one_click
+from audio_midi import beat_align, one_click
 from audio_midi.events import NoteEvent
 from audio_midi.midi import write_midi
 from audio_midi.muscriptor_routing import replace_midi_tracks
@@ -549,7 +550,7 @@ def test_cli_records_invocation_and_resolved_parameters(job, monkeypatch, parall
         'input.mp3', '--threads', '2', '--resources', 'assets', '--output-dir', 'result',
         parallel_flag, '--piano-threads', '1', '--muscriptor-threads', '2', beat_flag,
     ]
-    monkeypatch.setattr(one_click, 'detect_beats', lambda *_: one_click.BeatEstimate(
+    monkeypatch.setattr(beat_align, 'detect_beats', lambda *_, **__: beat_align.BeatEstimate(
         fallback_reason='insufficient_beats',
     ))
     monkeypatch.setattr(sys, 'argv', [str(entry), *args])
@@ -576,11 +577,12 @@ def test_beat_alignment_retimes_final_mix_without_quantizing(job, monkeypatch, p
     events = read_notes(job.output / 'noto.mid')
     aligned = job.output.with_name('aligned')
 
-    def fake_detect(samples, rate):
+    def fake_detect(samples, rate, *, start_bpm):
         assert samples == [.1] and rate == 16000
-        return one_click.BeatEstimate((.27, .71, 1.23, 1.68, 2.17, 2.61), .99, 3, 2, .9, False)
+        assert start_bpm == 120
+        return beat_align.BeatEstimate((.27, .71, 1.23, 1.68, 2.17, 2.61), .99, 3, 2, .9, False)
 
-    monkeypatch.setattr(one_click, 'detect_beats', fake_detect)
+    monkeypatch.setattr(beat_align, 'detect_beats', fake_detect)
     assert one_click.run_noto(job.audio, aligned, job.resources,
                               parallel=parallel, beat_align=True) == 0
     output = aligned / 'noto.mid'
@@ -603,7 +605,7 @@ def test_beat_fallback_keeps_original_bytes_and_explicit_quantization_changes_on
     assert job.run() == 0
     original = job.output / 'noto.mid'
     fallback = job.output.with_name('fallback')
-    monkeypatch.setattr(one_click, 'detect_beats', lambda *_: one_click.BeatEstimate(
+    monkeypatch.setattr(beat_align, 'detect_beats', lambda *_, **__: beat_align.BeatEstimate(
         fallback_reason='insufficient_beats',
     ))
     assert one_click.run_noto(job.audio, fallback, job.resources, beat_align=True) == 0
@@ -618,6 +620,40 @@ def test_beat_fallback_keeps_original_bytes_and_explicit_quantization_changes_on
     assert report['quantized'] and report['quantized_onsets'] == 6
     from audio_midi.quality import read_notes
     assert [(note.onset, note.offset) for note in read_notes(quantized / original.name)] == [(0.5, 1.)] * 6
+
+
+@pytest.mark.parametrize(('problem', 'reason'), [
+    ('detector_exception', 'ParameterError: invalid onset data'),
+    ('tempo_map_exception', 'ValueError: Detected beat interval exceeds MIDI tempo limits'),
+    ('empty_audio', 'empty_audio'),
+    ('short_audio', 'audio_too_short'),
+])
+def test_optional_beat_detection_failure_still_publishes_fixed_midi(job, monkeypatch, problem, reason):
+    assert job.run() == 0
+    if problem == 'detector_exception':
+        class ParameterError(Exception):
+            pass
+
+        def fail(*_args, **_kwargs):
+            raise ParameterError('invalid onset data')
+
+        monkeypatch.setattr(beat_align, 'detect_beats', fail)
+    elif problem == 'tempo_map_exception':
+        def detect(*_args, **_kwargs):
+            return beat_align.BeatEstimate((0., 100.))
+
+        monkeypatch.setattr(beat_align, 'detect_beats', detect)
+    else:
+        samples = np.empty(0) if problem == 'empty_audio' else np.zeros(1000)
+        monkeypatch.setattr(one_click, 'decode_mp3', lambda _: SimpleNamespace(
+            duration_seconds=job.duration, samples=samples, sample_rate=16000,
+        ))
+    fallback = job.output.with_name('fallback')
+    assert one_click.run_noto(job.audio, fallback, job.resources, beat_align=True) == 0
+    assert (fallback / 'noto.mid').read_bytes() == (job.output / 'noto.mid').read_bytes()
+    report = one_click._read_json(fallback / 'receipt.json')['beat_alignment']
+    assert (report['fallback'], report['bpm'], report['time_signature']) == (True, 120, '4/4')
+    assert report['fallback_reason'] == reason
 
 
 def test_documentation_matches_one_click_entry():

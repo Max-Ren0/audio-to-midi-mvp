@@ -49,3 +49,49 @@ def test_exported_conductor_places_detected_downbeats_on_bar_lines(tmp_path):
     assert [seconds_at(bar * 3 * quarter) for bar in range(1, 4)] == pytest.approx(
         beats[2::3], abs=2e-6,
     )
+
+
+def test_slow_pickup_keeps_note_time_within_half_of_the_longest_tick(tmp_path):
+    source = tmp_path / 'source.mid'
+    target = tmp_path / 'target.mid'
+    fixed = mido.MidiFile(ticks_per_beat=480)
+    fixed.add_track('Conductor').append(mido.MetaMessage('set_tempo', tempo=500000))
+    track = fixed.add_track('piano')
+    for _ in range(600):
+        track.append(mido.Message('note_on', note=60, time=1))
+        track.append(mido.Message('note_off', note=60, time=1))
+    fixed.save(source)
+
+    estimate = BeatEstimate(beats=tuple(2.21 + i * 1.48 for i in range(9)),
+                            downbeat_index=3)
+    tempo_map = TempoMap(estimate)
+    write_aligned_midi(source, target, tempo_map)
+
+    def note_times(path):
+        now = 0.
+        for event in mido.MidiFile(path):
+            now += event.time
+            if event.type in ('note_on', 'note_off'):
+                yield now
+
+    maximum_error = max(abs(a - b) for a, b in zip(note_times(source), note_times(target), strict=True))
+    half_tick = max(tempo_map.tempos) / mido.MidiFile(target).ticks_per_beat / 2e6
+    assert 35e-6 < maximum_error <= half_tick + 1e-12
+
+
+@pytest.mark.parametrize(('bars', 'f_measure', 'count_ratio'), [
+    ([0., 1., 2., 3.], 2 / 3, 2.),
+    ([0.], 2 / 3, .5),
+    ([0., 2.06, 4.], 1., 1.),
+])
+def test_scoring_penalizes_extra_and_missing_bar_lines(monkeypatch, bars, f_measure, count_ratio):
+    from pathlib import Path
+
+    monkeypatch.syspath_prepend(str(Path(__file__).resolve().parents[1] / 'scripts'))
+    from eval_noto_beat_align import scores
+
+    quarter_notes = np.arange(0., 4., .5)
+    result = scores(quarter_notes, np.array([0., 2.]), quarter_notes,
+                    np.array(bars), lo=0., hi=4.)
+    assert result['downbeat_f1'] == pytest.approx(f_measure)
+    assert result['bar_count_ratio'] == count_ratio

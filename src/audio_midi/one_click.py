@@ -17,7 +17,7 @@ import mido
 import psutil
 
 from .audio import decode_mp3
-from .beat_align import BeatEstimate, QUANTIZE, TempoMap, detect_beats, write_aligned_midi
+from .beat_align import BeatEstimate, QUANTIZE, TempoMap, write_aligned_midi
 from .piano_lock import digest
 from .pipeline import publish
 from .worker import process_tree_rss
@@ -474,8 +474,11 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
             alignment_dir = stages_dir / 'beat_align'
 
             def align():
-                estimate = detect_beats(audio.samples, audio.sample_rate) if beat_align else BeatEstimate()
-                tempo_map = TempoMap(estimate)
+                if beat_align:
+                    estimate, tempo_map = TempoMap.from_audio(audio.samples, audio.sample_rate)
+                else:
+                    estimate = BeatEstimate()
+                    tempo_map = TempoMap(estimate)
                 output = final
                 moved = 0
                 if estimate.beats or quantize:

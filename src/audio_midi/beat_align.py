@@ -52,27 +52,30 @@ def _chord_changes(librosa, samples, sample_rate, hop, frames):
     return np.clip(novelty / max(float(np.percentile(novelty, 90)), 1e-6), 0, 2)
 
 
-def detect_beats(samples, sample_rate):
+def detect_beats(samples, sample_rate, *, start_bpm=120):
     """Estimate beats and a single meter, with heuristic confidence in [0, 1]."""
-    try:
-        import librosa
+    samples = np.asarray(samples)
+    if samples.size == 0:
+        return BeatEstimate(fallback_reason='empty_audio')
+    if samples.size < 4096:
+        return BeatEstimate(fallback_reason='audio_too_short')
 
-        hop = max(1, round(sample_rate / 100))
-        n_fft = 1024
-        mel = librosa.feature.melspectrogram(
-            y=samples, sr=sample_rate, n_fft=n_fft, hop_length=hop, n_mels=64,
-        )
-        log_mel = librosa.power_to_db(mel)
-        flux = librosa.onset.onset_strength_multi(
-            S=log_mel, sr=sample_rate, hop_length=hop, n_fft=n_fft,
-            channels=[0, 8, 24, 64],
-        )
-        envelope = np.mean(flux, axis=0)
-        _, frames = librosa.beat.beat_track(
-            onset_envelope=envelope, sr=sample_rate, hop_length=hop, trim=True,
-        )
-    except (ImportError, ValueError, RuntimeError) as error:
-        return BeatEstimate(fallback_reason=f'{type(error).__name__}: {error}')
+    import librosa
+
+    hop = max(1, round(sample_rate / 100))
+    n_fft = 1024
+    mel = librosa.feature.melspectrogram(
+        y=samples, sr=sample_rate, n_fft=n_fft, hop_length=hop, n_mels=64,
+    )
+    log_mel = librosa.power_to_db(mel)
+    flux = librosa.onset.onset_strength_multi(
+        S=log_mel, sr=sample_rate, hop_length=hop, n_fft=n_fft,
+        channels=[0, 8, 24, 64],
+    )
+    envelope = np.mean(flux, axis=0)
+    _, frames = librosa.beat.beat_track(
+        onset_envelope=envelope, sr=sample_rate, hop_length=hop, start_bpm=start_bpm, trim=True,
+    )
     frames = frames[frames * hop < len(samples)]
     if len(frames) < 8:
         return BeatEstimate(fallback_reason='insufficient_beats')
@@ -88,10 +91,7 @@ def detect_beats(samples, sample_rate):
     band_accents = np.max(flux[:, neighborhood], axis=2)
     band_accents /= np.maximum(np.percentile(band_accents, 90, axis=1)[:, None], 1e-6)
     attacks = np.array([.5, .35, .15]) @ np.clip(band_accents, 0, 2)
-    try:
-        changes = _chord_changes(librosa, samples, sample_rate, hop, frames)
-    except (ValueError, RuntimeError) as error:
-        return BeatEstimate(confidence=regularity, fallback_reason=f'{type(error).__name__}: {error}')
+    changes = _chord_changes(librosa, samples, sample_rate, hop, frames)
     accents = .4 * attacks + .6 * changes
     meter, phase, confidence, fallback = _infer_meter(accents)
     return BeatEstimate(tuple(float(beat) for beat in beats), regularity, meter, phase,
@@ -100,6 +100,17 @@ def detect_beats(samples, sample_rate):
 
 class TempoMap:
     """A MIDI tempo map with the actual times implied by integer tempo values."""
+
+    @classmethod
+    def from_audio(cls, samples, sample_rate, *, start_bpm=120):
+        try:
+            estimate = detect_beats(samples, sample_rate, start_bpm=start_bpm)
+            return estimate, cls(estimate)
+        except Exception as error:
+            # Detection and tempo fitting are optional. A failed MIDI write
+            # still propagates so a publication error cannot look successful.
+            estimate = BeatEstimate(fallback_reason=f'{type(error).__name__}: {error}')
+            return estimate, cls(estimate)
 
     def __init__(self, estimate):
         self.meter = estimate.meter
