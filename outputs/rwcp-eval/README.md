@@ -50,3 +50,23 @@ nice -n 10 "$python" outputs/rwcp-eval/run_dev.py run --resources "$resources" -
 S6 仅对 S5 各赢家输出作整轨判定。用中心约 60 秒的预测起音数，鼓包含所有 GM 键。预测数严格低于该轨阈值则不发布该轨，阈值 0 表示停用判断。运行时只读取预测，参考只用来校准和评估。
 
 阈值从 0、2、4、8、16 选择。使用 22 首调参集的校时后片段，至少 3 个该乐器参考为空的片段且有正例才启用筛选。允许的阈值在调参集须保留所有原本有预测的正例轨，再最大化缺轨样本上去掉的误报音符数。效果相同取最小阈值。证据不足取 0。使用这一批 RWC-P 真值口径一致的近一分钟片段校准，BabySlakh／MAESTRO 的异分布与不同时长留作后续单独验证。
+
+## 封存团体赛执行
+
+提交调参赛结果文档、存在判断配置，再提交组合配置后才执行测试切片与 v2 偏移冻结。团体赛使用实际发布并回读的 MIDI，计分规则保持 ±50 ms 及固定鼓件口径。按歌曲配对重采样 10,000 次，固定种子 20261126。至少一轨有效 MIDI 且能回读算一键成功，空轨单列。
+
+默认路线建议保守地沿用 S3。若 S5 各轨点估计都达到 S3 且至少一轨配对区间下限大于零，把 S5 列为下一版默认候选。正式切换需要独立真值验证。报告记录 S6 的误删与误报证据，当前默认入口保持原样。
+
+```sh
+# 先完成调参赛。各配置生成后单独审核并提交。
+"$python" outputs/rwcp-eval/presence.py --work "$work" --config outputs/rwcp-eval/presence-config.json
+"$python" outputs/rwcp-eval/run_team.py freeze-combinations --resources "$resources" --work "$work"
+# 组合配置和评分代码提交后，才读取封存 50 曲的音频及 MIDI。
+uptime
+"$python" outputs/rwcp-eval/run_team.py freeze-offsets --resources "$resources" --work "$work"
+test_offset_sha="$(shasum -a 256 "$work/team-offsets-v2.json" | cut -d ' ' -f 1)"
+nice -n 10 "$python" outputs/rwcp-eval/run_team.py run --resources "$resources" --work "$work" \
+  --offset-sha256 "$test_offset_sha" --jobs 2
+```
+
+每个组合的等效串行耗时计所需去重阶段与组装读写，一次执行的实际耗时另计。双流水线根据本机内存可用量检查自动降为单流水线。中断可使用同一个命令续跑，原测试偏移与已完成检查点保留。

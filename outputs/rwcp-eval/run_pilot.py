@@ -12,6 +12,7 @@ import signal
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 
 import numpy as np
@@ -43,6 +44,7 @@ FIXED_ROUTES = {
     'D1': ('drums', 'mt3-mix'), 'D2': ('drums', 'mu-mix'),
     'D3': ('drums', 'mt3-drums'), 'D4': ('drums', 'adtof-drums'),
 }
+STAGE_LOCKS = [threading.Lock() for _ in range(128)]
 
 
 def read_json(path):
@@ -156,6 +158,11 @@ def scheduled_stage(cache, stage, input_hash, signature, outputs, command):
     """Cache only a successful invocation with hash-checked outputs."""
     version_hash = hashlib.sha256(json.dumps(signature, sort_keys=True).encode()).hexdigest()
     target = cache / f'{stage}-{input_hash}-{version_hash}'
+    with STAGE_LOCKS[hash(target) % len(STAGE_LOCKS)]:
+        return stage_under_lock(cache, target, stage, input_hash, signature, outputs, command)
+
+
+def stage_under_lock(cache, target, stage, input_hash, signature, outputs, command):
     if target.exists():
         record = read_json(target / 'stage.json')
         if (record['identity'] == [stage, input_hash, signature]
@@ -187,8 +194,11 @@ def decode(source, output, codec):
             '-vn', '-ac', '1', '-ar', '16000', '-c:a', codec, output]
 
 
-def run_clip(mix, duration, cache, paths, versions):
+def run_clip(mix, duration, cache, paths, versions, *, needed=None):
     stages = {}
+
+    def want(name):
+        return needed is None or name in needed
 
     def run(name, source, version, outputs, command, extra=()):
         directory, record = scheduled_stage(cache, name, digest(source),
@@ -198,6 +208,8 @@ def run_clip(mix, duration, cache, paths, versions):
 
     def mt3(name, source):
         # One invocation per signal, using the same backend and cleanup as Noto.
+        if not want(name):
+            return None
         output = run('decode-' + name, source, 'decode', ['input.f32'],
                      lambda work: decode(source, work / 'input.f32', 'pcm_f32le')[:-1]
                      + ['-f', 'f32le', work / 'input.f32'])
@@ -206,23 +218,32 @@ def run_clip(mix, duration, cache, paths, versions):
         raw = output / 'input.f32'
         npy = output / 'input.npy'
         if not npy.exists():
-            np.save(npy, np.fromfile(raw, dtype='<f4'))
+            # Identical stems can share the decoded cache in the parallel batch.
+            with tempfile.NamedTemporaryFile(dir=output, suffix='.npy', delete=False) as temp:
+                try:
+                    np.save(temp, np.fromfile(raw, dtype='<f4'))
+                    temp.flush()
+                    Path(temp.name).replace(npy)
+                finally:
+                    Path(temp.name).unlink(missing_ok=True)
         return run(name, npy, 'mt3', ['notes.json'],
                    lambda work: [sys.executable, '-m', 'audio_midi.backends.selected',
                                  npy, paths['mt3'], work / 'notes.json', '--device', 'cpu'])
 
     def transkun(name, source):
+        if not want(name):
+            return None
         return run(name, source, 'transkun', ['notes.mid'],
                    lambda work: [paths['specialist'], ROOT / 'scripts/transcribe_specialist.py',
                                  'transkun', source, work / 'notes.mid'])
 
     sw = run('sw', mix, 'sw', ['stems/' + name for name in
              ('piano.wav', 'bass.wav', 'drums.wav', 'receipt.json')],
-             lambda work: [paths['specialist'], paths['sw'], mix, work / 'stems', duration])
+             lambda work: [paths['specialist'], paths['sw'], mix, work / 'stems', duration]) if want('sw') else None
     mixed_mt3 = mt3('mt3-mix', mix)
     mixed_transkun = transkun('transkun-mix', mix)
     pcm = run('decode-mu', mix, 'decode', ['input.wav'],
-              lambda work: decode(mix, work / 'input.wav', 'pcm_f32le'))
+              lambda work: decode(mix, work / 'input.wav', 'pcm_f32le')) if want('mu-mix') else None
     mu = None
     if pcm:
         wav = pcm / 'input.wav'
@@ -242,16 +263,17 @@ def run_clip(mix, duration, cache, paths, versions):
             'mt3-drums': mt3('mt3-drums', drums),
             'adtof-drums': run('adtof-drums', drums, 'adtof', ['notes.mid'],
                                lambda work: [paths['specialist'], HERE / 'specialists.py',
-                                             'adtof', drums, paths['adtof'], work / 'notes.mid']),
+                                             'adtof', drums, paths['adtof'], work / 'notes.mid'])
+            if want('adtof-drums') else None,
         })
-        if mu:
+        if mu and want('bass-octave'):
             raw = mu / 'stage.log'
             products['bass-octave'] = run(
                 'bass-octave', bass, 'proxy', ['notes.json'],
                 lambda work: [sys.executable, HERE / 'specialists.py', 'bass-octave',
                               bass, raw, work / 'notes.json'], (digest(raw),),
             )
-        if p2:
+        if p2 and want('piano-gate'):
             midi = p2 / 'notes.mid'
             products['piano-gate'] = run(
                 'piano-gate', piano, 'proxy', ['gate.json'],
