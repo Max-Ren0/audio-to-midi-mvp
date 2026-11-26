@@ -57,7 +57,7 @@ def render(work):
     comparison = 'S5-S1' if equivalent else 'S5-S3'
     delta_summary = '、'.join(f'{LABEL[c]} {deltas[c][comparison] * 100:+.2f}' for c in TRACKS)
     suppressed = sum(combos['S6']['tracks'][category]['gated'] for category in TRACKS)
-    headline = (f'**团体赛实际比较 S1 与 S3。S3 相对 S1 的校正后 micro F1 差值为 {delta_summary} 个百分点。**'
+    headline = (f'**团体赛实际比较 S1 与 S3。S3 相对 S1 的校正后 micro F1 差值为{delta_summary}个百分点。**'
                 if equivalent else
                 f'**S5 相对 S3 的校正后 micro F1 差值为 {delta_summary} 个百分点。**')
     lines = [
@@ -67,7 +67,7 @@ def render(work):
         '', '## 1. 单项赛与被冻结的组合', '',
     ]
     if equivalent:
-        lines.extend(['**S6 ≡ S5 ≡ S3。乐器是否存在判断本轮未得到检验。**'
+        lines.extend(['**S6 ≡ S5 ≡ S3。乐器是否存在判断本轮未得到检验。**', '',
                       '22 首调参曲目在三个轨道都没有参考为空的片段，三轨阈值冻结为 0。', ''])
     table(lines, ['轨道', '22 首入选路线', '调参校正后 F1', '决定依据'], [
         (LABEL[c], dev_summary['winners'][c]['winner'],
@@ -85,6 +85,7 @@ def render(work):
         f'- 测试偏移冻结 SHA-256 {result["offset_sha256"]}，组合配置 SHA-256 {result["combinations_sha256"]}。',
         '- 使用规则 v2 的局部偏移，宽度 ±100 ms，置信筛选后减 20 ms，再应用 50 ms 死区。'
         '曲目的所有模型使用同一偏移。各组合按实际组装并回读的 MIDI 计分。',
+        '- 一键验证运行固定的组合配方。现有产品入口的钢琴触发与缺轨回退仍需单独验证。',
         f'- 校正后为主指标，仅高置信分析用 {len(confident)}/50 首。'
         '贝斯精确音高为主，另报忽略八度。鼓只计底鼓 35/36 和军鼓 38/40。',
         f'- 95% 区间用同一批按歌曲配对的 {config["bootstrap_replicates"]:,} 次重采样，'
@@ -153,6 +154,14 @@ def render(work):
         f'（{batches[1]} 个串行批次、{batches[2]} 个双歌曲批次）。'
         '各组合的等效耗时汇总其实际需要的独立阶段及组装读写，不重复跑模型计时。'
         '一键成功要求至少一轨有效 MIDI 且能回读。', '',
+    ]
+    if (work / 'team-scheduling.log').exists():
+        lines += [
+            '双歌曲批次期间本机负载上升，个别 MuScriptor 阶段超过 8 分钟。'
+            '按用户指示等在跑阶段结束后，复用检查点切回单路，剩余曲目以 1 分钟负载 ≤6 开跑。'
+            '上述耗时是本轮实际机器负载下的结果。调度及完整 uptime 见本地日志。', '',
+        ]
+    lines += [
         '## 5. P092 贝斯参考八度敏感性', '',
         'P092 属于调参集。独立审核在 B2 的 262 对起音匹配中发现 258 对预测比参考低 12 半音。'
         '四条贝斯路线在该首精确 F1 均为 0%，B2 忽略八度 F1 为 96.4%。参考疑似整体高一八度，仍需逐音复核。',
