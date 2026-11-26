@@ -95,3 +95,36 @@ def test_scoring_penalizes_extra_and_missing_bar_lines(monkeypatch, bars, f_meas
                     np.array(bars), lo=0., hi=4.)
     assert result['downbeat_f1'] == pytest.approx(f_measure)
     assert result['bar_count_ratio'] == count_ratio
+
+
+@pytest.mark.parametrize('rule', ['onset', 'downbeat', 'combined'])
+def test_tempo_selection_considers_both_phases_and_keeps_even_pulse(rule):
+    from audio_midi.beat_align import _choose_tempo
+
+    beats = np.arange(96) * .36
+    flat = np.ones(len(beats))
+    retained, selection = _choose_tempo(beats, flat, flat, rule)
+    assert retained == slice(None)
+    assert selection.selected == 'original'
+
+    pulse = np.tile([0., 5., 0., .5, 0., .5, 0., .5], 12)
+    retained, selection = _choose_tempo(beats, pulse, pulse, rule)
+    assert retained == slice(1, None, 2)
+    assert selection.selected == 'half_odd'
+    assert selection.candidates[2].strength > selection.candidates[0].strength
+    receipt = TempoMap(BeatEstimate()).receipt(BeatEstimate(tempo_selection=selection), True, None)
+    assert [c['bpm'] for c in receipt['tempo_selection']['candidates']] == pytest.approx(
+        [166.667, 83.333, 83.333], abs=.001,
+    )
+    assert receipt['tempo_selection']['reason']
+
+
+def test_tempo_selection_does_not_halve_a_moderate_tempo():
+    from audio_midi.beat_align import _choose_tempo
+
+    beats = np.arange(96) * .5
+    accents = np.tile([0., 3., 0., 1., 0., 2., 0., 1.], 12)
+    retained, selection = _choose_tempo(beats, accents, accents, 'combined')
+    assert retained == slice(None)
+    assert selection.selected == 'original'
+    assert not selection.candidates[2].eligible

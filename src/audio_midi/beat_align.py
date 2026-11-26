@@ -1,6 +1,6 @@
 """Audio-only beat inference and MIDI grid export for the one-click route."""
 from bisect import bisect_right
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from itertools import accumulate
 
 import mido
@@ -11,6 +11,27 @@ METHOD = 'librosa.beat_track + spectral flux and chroma accents'
 DEFAULT_TEMPO = 500_000
 EXPORT_PPQ = 30_720
 QUANTIZE = {'1/4': 1, '1/8': 2, '1/16': 4}
+TEMPO_RULES = ('onset', 'downbeat', 'combined')
+DEFAULT_TEMPO_RULE = 'public12'
+
+
+@dataclass(frozen=True)
+class TempoCandidate:
+    grid: str
+    bpm: float
+    eligible: bool
+    strength: float
+    onset_contrast: float
+    downbeat_prominence: float
+    prior_bonus: float
+
+
+@dataclass(frozen=True)
+class TempoSelection:
+    rule: str
+    candidates: tuple[TempoCandidate, ...]
+    selected: str
+    reason: str
 
 
 @dataclass(frozen=True)
@@ -22,6 +43,7 @@ class BeatEstimate:
     meter_confidence: float | None = None
     meter_fallback: bool = True
     fallback_reason: str | None = None
+    tempo_selection: TempoSelection | None = None
 
 
 def _infer_meter(accents):
@@ -52,13 +74,67 @@ def _chord_changes(librosa, samples, sample_rate, hop, frames):
     return np.clip(novelty / max(float(np.percentile(novelty, 90)), 1e-6), 0, 2)
 
 
-def detect_beats(samples, sample_rate, *, start_bpm=120):
-    """Estimate beats and a single meter, with heuristic confidence in [0, 1]."""
+def _downbeat_prominence(accents, scale):
+    profile = np.array([np.mean(accents[phase::4]) for phase in range(4)])
+    return float((profile.max() - np.mean(profile)) * 4 / (3 * scale))
+
+
+def _choose_tempo(beats, attacks, accents, rule):
+    """Choose T or one of the two T/2 phases, using margins relative to T.
+
+    Rules preregistered before tuning:
+    * onset: retained-minus-skipped mean attack / SD, require > 0.30.
+    * downbeat: increase in 4-beat peak vs other phases / SD, require > 0.25.
+    * combined: 65% onset contrast + 35% downbeat gain, require > 0.20.
+      Add 0.10 if T > 150 BPM and T/2 is within 70–150 BPM.
+    All use the full-grid SD and allow halving only from >=140 BPM,
+    with at least eight beats in the retained phase. T wins ties.
+    """
+    variants = (
+        ('original', slice(None)),
+        ('half_even', slice(0, None, 2)),
+        ('half_odd', slice(1, None, 2)),
+    )
+    attack_scale = max(float(np.std(attacks)), 1e-6)
+    accent_scale = max(float(np.std(accents)), 1e-6)
+    original_bpm = 60 / float(np.median(np.diff(beats)))
+    original_prominence = _downbeat_prominence(accents, accent_scale)
+    candidates = [TempoCandidate('original', round(original_bpm, 3), True, 0.,
+                                 0., original_prominence, 0.)]
+    eligible = original_bpm >= 140
+    for name, phase in variants[1:]:
+        retained = beats[phase]
+        bpm = 60 / float(np.median(np.diff(retained)))
+        contrast = float((np.mean(attacks[phase]) - np.mean(attacks[1 - phase.start::2]))
+                         / attack_scale)
+        prominence = _downbeat_prominence(accents[phase], accent_scale)
+        gain = prominence - original_prominence
+        prior = .10 if rule == 'combined' and original_bpm > 150 and 70 <= bpm <= 150 else 0.
+        margin = {
+            'onset': contrast - .30,
+            'downbeat': gain - .25,
+            'combined': .65 * contrast + .35 * gain + prior - .20,
+        }[rule]
+        candidates.append(TempoCandidate(name, round(bpm, 3), eligible and len(retained) >= 8,
+                                         margin, contrast, prominence, prior))
+    winner = max((candidate for candidate in candidates if candidate.eligible),
+                 key=lambda candidate: candidate.strength)
+    if winner.grid != 'original':
+        reason = 'half_grid_exceeded_original'
+    elif not any(candidate.eligible for candidate in candidates[1:]):
+        reason = 'half_grid_ineligible'
+    else:
+        reason = 'insufficient_evidence_to_halve'
+    return dict(variants)[winner.grid], TempoSelection(rule, tuple(candidates), winner.grid, reason)
+
+
+def detect_beat_options(samples, sample_rate, *, start_bpm=120, rules):
+    """Share audio features and the original beat track across tempo rules."""
     samples = np.asarray(samples)
     if samples.size == 0:
-        return BeatEstimate(fallback_reason='empty_audio')
+        return dict.fromkeys(rules, BeatEstimate(fallback_reason='empty_audio'))
     if samples.size < 4096:
-        return BeatEstimate(fallback_reason='audio_too_short')
+        return dict.fromkeys(rules, BeatEstimate(fallback_reason='audio_too_short'))
 
     import librosa
 
@@ -78,14 +154,16 @@ def detect_beats(samples, sample_rate, *, start_bpm=120):
     )
     frames = frames[frames * hop < len(samples)]
     if len(frames) < 8:
-        return BeatEstimate(fallback_reason='insufficient_beats')
+        return dict.fromkeys(rules, BeatEstimate(fallback_reason='insufficient_beats'))
 
     beats = frames * hop / sample_rate
     periods = np.diff(beats)
     period = float(np.median(periods))
     regularity = float(np.mean(np.abs(periods / period - 1) <= .25))
     if not .2 <= period <= 1.5 or regularity < .65:
-        return BeatEstimate(confidence=regularity, fallback_reason='unstable_beat_intervals')
+        return dict.fromkeys(rules, BeatEstimate(
+            confidence=regularity, fallback_reason='unstable_beat_intervals',
+        ))
 
     neighborhood = np.clip(frames[:, None] + np.arange(-5, 6), 0, len(envelope) - 1)
     band_accents = np.max(flux[:, neighborhood], axis=2)
@@ -93,9 +171,26 @@ def detect_beats(samples, sample_rate, *, start_bpm=120):
     attacks = np.array([.5, .35, .15]) @ np.clip(band_accents, 0, 2)
     changes = _chord_changes(librosa, samples, sample_rate, hop, frames)
     accents = .4 * attacks + .6 * changes
-    meter, phase, confidence, fallback = _infer_meter(accents)
-    return BeatEstimate(tuple(float(beat) for beat in beats), regularity, meter, phase,
-                        confidence, fallback)
+    estimates = {}
+    for rule in rules:
+        retained, selection = (slice(None), None) if rule == 'public12' else _choose_tempo(
+            beats, attacks, accents, rule,
+        )
+        selected_beats = beats[retained]
+        selected_periods = np.diff(selected_beats)
+        selected_period = float(np.median(selected_periods))
+        selected_regularity = float(np.mean(np.abs(selected_periods / selected_period - 1) <= .25))
+        meter, phase, confidence, fallback = _infer_meter(accents[retained])
+        estimates[rule] = BeatEstimate(tuple(float(beat) for beat in selected_beats),
+                                       selected_regularity, meter, phase, confidence, fallback,
+                                       tempo_selection=selection)
+    return estimates
+
+
+def detect_beats(samples, sample_rate, *, start_bpm=120):
+    """Estimate beats and a single meter, with heuristic confidence in [0, 1]."""
+    return detect_beat_options(samples, sample_rate, start_bpm=start_bpm,
+                               rules=(DEFAULT_TEMPO_RULE,))[DEFAULT_TEMPO_RULE]
 
 
 class TempoMap:
@@ -103,13 +198,17 @@ class TempoMap:
 
     @classmethod
     def from_audio(cls, samples, sample_rate, *, start_bpm=120):
+        estimate = None
         try:
             estimate = detect_beats(samples, sample_rate, start_bpm=start_bpm)
             return estimate, cls(estimate)
         except Exception as error:
             # Detection and tempo fitting are optional. A failed MIDI write
             # still propagates so a publication error cannot look successful.
-            estimate = BeatEstimate(fallback_reason=f'{type(error).__name__}: {error}')
+            estimate = BeatEstimate(
+                fallback_reason=f'{type(error).__name__}: {error}',
+                tempo_selection=estimate.tempo_selection if estimate is not None else None,
+            )
             return estimate, cls(estimate)
 
     def __init__(self, estimate):
@@ -182,6 +281,7 @@ class TempoMap:
             'meter_fallback': enabled and estimate.meter_fallback,
             'fallback': enabled and not estimate.beats,
             'fallback_reason': estimate.fallback_reason,
+            'tempo_selection': asdict(estimate.tempo_selection) if estimate.tempo_selection else None,
             'quantize_grid': quantize,
             'quantized': moved > 0,
             'quantized_onsets': moved,

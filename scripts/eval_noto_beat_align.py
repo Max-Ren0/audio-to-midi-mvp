@@ -1,7 +1,9 @@
-"""Compare MIDI beat grids on the frozen RWC-P tuning windows, without transcription."""
+"""Compare exported MIDI beat grids on a frozen RWC-P split, without transcription."""
 import argparse
 from bisect import bisect_right
+from contextlib import nullcontext
 import csv
+from hashlib import sha256
 import json
 from itertools import accumulate
 from pathlib import Path
@@ -14,7 +16,13 @@ from scipy.signal import resample_poly
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 
-from audio_midi.beat_align import TempoMap, write_aligned_midi
+from audio_midi.beat_align import (
+    DEFAULT_TEMPO_RULE, TEMPO_RULES, BeatEstimate, TempoMap, detect_beat_options,
+    write_aligned_midi,
+)
+
+
+MANIFEST_SHA256 = '21a9a1879f33ec84d2191b3deab083f9f6cbe5ef0c0e887f366c0dc1578ff00e'
 
 
 def grid(path):
@@ -73,7 +81,7 @@ def scores(ref, downbeats, beats, bars, lo, hi):
     }
 
 
-def evaluate(song, dataset, scratch, *, start_bpm=120):
+def evaluate(song, dataset, scratch, *, rules, start_bpm=120):
     import soundfile as sf
 
     start, end = song['input_frames']
@@ -91,7 +99,6 @@ def evaluate(song, dataset, scratch, *, start_bpm=120):
     ref = np.array([time for time, _ in annotations if lo <= time < hi])
     downbeats = np.array([time for time, beat in annotations if lo <= time < hi and beat == 1])
 
-    estimate, tempo_map = TempoMap.from_audio(audio, 16000, start_bpm=start_bpm)
     fixed_path = scratch / 'fixed.mid'
     aligned_path = scratch / 'aligned.mid'
     fixed = mido.MidiFile(type=1, ticks_per_beat=480)
@@ -101,35 +108,64 @@ def evaluate(song, dataset, scratch, *, start_bpm=120):
         mido.MetaMessage('end_of_track', time=round(len(audio) / 16000 * 960)),
     ])
     fixed.save(fixed_path)
-    if estimate.beats:
-        write_aligned_midi(fixed_path, aligned_path, tempo_map)
-    else:
-        aligned_path = fixed_path
-    return {'song': song['id'], 'start_bpm': start_bpm,
-            'reference_bpm': 60 / float(np.median(np.diff(ref))),
-            'reference_max_beat': max(beat for time, beat in annotations if lo <= time < hi),
-            'fixed': scores(ref, downbeats, *grid(fixed_path), lo, hi),
-            'aligned': scores(ref, downbeats, *grid(aligned_path), lo, hi),
-            'detection': tempo_map.receipt(estimate, True, None)}
+    variants = {'fixed': scores(ref, downbeats, *grid(fixed_path), lo, hi)}
+    estimates = detect_beat_options(audio, 16000, start_bpm=start_bpm, rules=rules)
+    detections = {}
+    for rule, estimate in estimates.items():
+        try:
+            tempo_map = TempoMap(estimate)
+        except ValueError as error:
+            estimate = BeatEstimate(fallback_reason=f'ValueError: {error}',
+                                    tempo_selection=estimate.tempo_selection)
+            tempo_map = TempoMap(estimate)
+        if estimate.beats:
+            write_aligned_midi(fixed_path, aligned_path, tempo_map)
+            variants[rule] = scores(ref, downbeats, *grid(aligned_path), lo, hi)
+        else:
+            variants[rule] = variants['fixed']
+        detections[rule] = tempo_map.receipt(estimate, True, None)
+    return {
+        'song': song['id'], 'start_bpm': start_bpm,
+        'reference_bpm': 60 / float(np.median(np.diff(ref))),
+        'reference_max_beat': max(beat for time, beat in annotations if lo <= time < hi),
+        'scores': variants, 'detection': detections,
+    }
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('dataset', type=Path)
     parser.add_argument('manifest', type=Path)
+    parser.add_argument('--split', choices=('tuning', 'test'), default='tuning')
+    parser.add_argument('--output', type=Path, help='create a new JSONL; required for test')
     parser.add_argument('--experimental-start-bpm', type=float, default=120,
                         help='evaluate an alternate librosa tempo prior without changing the one-click default')
     args = parser.parse_args()
     if not np.isfinite(args.experimental_start_bpm) or args.experimental_start_bpm <= 0:
         parser.error('experimental starting BPM must be positive and finite')
-    manifest = json.loads(args.manifest.read_text())
-    tuning = [song for song in manifest['songs'] if song['split'] == 'tuning']
-    if not tuning:
-        parser.error('manifest has no tuning songs')
-    with TemporaryDirectory(prefix='noto-beat-eval-') as scratch:
-        for song in tuning:
-            result = evaluate(song, args.dataset, Path(scratch), start_bpm=args.experimental_start_bpm)
-            print(json.dumps(result), flush=True)
+    if args.split == 'test':
+        if DEFAULT_TEMPO_RULE not in TEMPO_RULES:
+            parser.error('freeze a tuning winner before evaluation on the test split')
+        if args.output is None or args.experimental_start_bpm != 120:
+            parser.error('test requires a new --output and the original 120 BPM tracking prior')
+        rules = ('public12', DEFAULT_TEMPO_RULE)
+    else:
+        rules = ('public12', *TEMPO_RULES)
+
+    manifest_bytes = args.manifest.read_bytes()
+    if sha256(manifest_bytes).hexdigest() != MANIFEST_SHA256:
+        parser.error('expected the frozen 72-song RWC-P manifest')
+    manifest = json.loads(manifest_bytes)
+    songs = [song for song in manifest['songs'] if song['split'] == args.split]
+    expected_count = {'tuning': 22, 'test': 50}[args.split]
+    if len(songs) != expected_count or len({song['id'] for song in songs}) != expected_count:
+        parser.error(f'expected {expected_count} unique songs in {args.split}')
+    destination = args.output.open('x') if args.output else nullcontext(sys.stdout)
+    with destination as stream, TemporaryDirectory(prefix='noto-beat-eval-') as scratch:
+        for song in songs:
+            result = evaluate(song, args.dataset, Path(scratch), rules=rules,
+                              start_bpm=args.experimental_start_bpm)
+            print(json.dumps(result, allow_nan=False), file=stream, flush=True)
 
 
 if __name__ == '__main__':
