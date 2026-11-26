@@ -6,7 +6,7 @@
 
 - 清单、划分先于推理冻结（`e22199b`）。见 `outputs/presence-eval/manifest.json` 和 `split.json`。15 段调参，23 段测试，另保留原 RWC-P 50 首测试作真实轨误删对照。
 - `84ae053` 增加默认关闭的一键开关、回执和评测运行器。240 项测试通过。当前占位规则保留所有非空轨，待调参后换成冻结配置。
-- 本地旧端到端结果可复用 3 段调参。12 段缺少可复用 S3 缓存，交换区剩余低于 1.5 GiB，未启动新模型，也未读取测试预测。等资源达标后串行续跑 `outputs/presence-eval/run.py tuning --allow-inference`，提交阈值后再执行 `test`。完整命令和状态见本地报告。
+- 本地旧端到端结果可复用 3 段调参，另 12 段从本地音频串行推理。协调者将串行门槛改为可用内存 ≥30% 且一分钟负载 ≤6。可用内存低于 20% 时完成当前阶段后暂停。交换区记录作诊断。见 `922d980` 及 `work/presence-eval/tuning-serial.log`。先提交阈值，再执行 `test`。
 - 本轮报告在 `/Users/ringscherry/Desktop/AGENT/Claude/2026-11-26/noto-presence/README.md`。产物和日志在 `work/presence-eval/`，本分支未推送。
 
 ## RWC-P 三轨路线选拔（v0.1.0-public.13）
