@@ -1,72 +1,81 @@
-# RWC-P 五段试跑
+# Noto · RWC-P 三轨路线评测
 
-先冻结清单，再运行固定的五首调参曲目。清单包含 72 首的窗、分层和全曲 MIDI 偏移。模型入口只生成五首调参曲目的预测和分数。
+在封存的 50 首测试曲中，现有组合 S3 的钢琴、贝斯和鼓与 RWC-P 参考的一致度均高于全 YourMT3 的 S1，micro F1 分别高出 26.47、49.63 和 4.38 个百分点，所有测试曲均沿用原时间轴计分。
 
-## 本机复现
+## 数据与许可
 
-在该试验分支的仓库根运行。参数 `resources` 指向带有现成数据、Python 环境和模型的主检出。
+RWC Music Database 的 Popular Music 子集（RWC-P / RWC-MDB-P-2001）含 100 首流行棚录，本评测从中选了钢琴、贝斯、鼓参考齐全的 72 首。音频及配套标注按 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 发布。署名为 RWC Music Database 制作团队，原始论文作者为 Masataka Goto、Hiroki Hashiguchi、Takuichi Nishimura 和 Ryuichi Oka，更新标注由 RWC 2.0 团队维护。评测从音频中截取评分片段，仓库只发布代码、冻结配置及汇总，音频、参考 MIDI、预测 MIDI 和逐曲结果均不入库。 [原始论文](https://doi.org/10.5281/zenodo.1416473) · [音频发布及引用说明](https://zenodo.org/records/18656623) · [标注来源](https://github.com/rwc-music/rwc-annotations) · [更新说明](https://doi.org/10.5334/tismir.326)
+
+## 冻结流程与计分
+
+1. **清单冻结。** 按鼓来源分层，以歌曲为单位固定 22 首调参、50 首测试。每首约 60 秒，另留上下文供推理。清单 SHA-256 为 `21a9a1879f33ec84d2191b3deab083f9f6cbe5ef0c0e887f366c0dc1578ff00e`。
+2. **规则 v2。** 先试跑 5 首调参曲，审核后冻结规则，再运行其余 17 首。每首所有候选共享同一个偏移估计，搜索范围约 ±100 ms，相关峰至少 0.30、比竞争峰至少高 0.05。通过置信检查后先减去谱通量的 20 ms 延迟，再对绝对值小于 50 ms 的偏移应用死区。低置信或落入死区均使用 0 ms。
+3. **单项赛。** 用全部 22 首调参曲比较 12 个候选。每轨以校正后 micro F1 为主，与最高分差距严格小于 2 个百分点的路线按平均独立路线耗时决胜。
+4. **阈值与组合冻结。** 用调参集确定 [S6 存在判断配置](presence-config.json)，再冻结 [团体组合](team-config.json)。S1 是全 YourMT3，S3 是现有三轨方案，S5 由单项赢家组成，S6 在 S5 上使用冻结的存在阈值。
+5. **封存测试。** 组合和评分规则冻结后才在 50 首测试曲上运行团体赛一次，评分使用实际组装并回读的 MIDI。测试集 45 首估计落入死区，5 首因竞争峰判为低置信。应用偏移全部为 0 ms，测试分数未经偏移校正，未校正与校正后分数完全相同。
+
+中心评分窗内的起音以 ±50 ms 容差一对一匹配，再按所有曲目的 TP、FP、FN 计算 micro F1。贝斯主指标用精确音高，另报忽略八度。鼓只计底鼓 GM 35/36 和军鼓 GM 38/40，其他打击乐单列。整轨空输出按零预测计分并另计次数。参考缺轨仍预测的音符计误报。
+
+## 调参集单项赛
+
+| 轨道 | 入选路线 | 校正后 micro F1 | 选择依据 |
+|---|---|---:|---|
+| 钢琴（参考可靠性低） | P2 · BS-RoFormer SW 分离 → Transkun | 69.62% | 主指标最高 |
+| 贝斯（精确音高） | B2 · MuScriptor 混音转写 | 68.85% | 与 B7 打平，耗时更短 |
+| 鼓（底鼓及军鼓） | D2 · MuScriptor 混音转写 | 78.20% | 与 D4 打平，耗时更短 |
+
+## 封存测试集团体赛
+
+| 轨道 | S1 micro F1（95% 区间） | S3 micro F1（95% 区间） | S3 − S1，百分点（95% 区间） |
+|---|---:|---:|---:|
+| 钢琴（参考可靠性低） | 55.82%（49.38%～61.84%） | 82.29%（76.22%～87.22%） | +26.47（+22.11～+31.17） |
+| 贝斯（精确音高） | 26.56%（21.05%～32.27%） | 76.19%（70.67%～81.26%） | +49.63（+43.73～+56.03） |
+| 鼓（底鼓及军鼓） | 75.45%（69.77%～80.42%） | 79.83%（73.12%～85.77%） | +4.38（+0.89～+7.80） |
+
+95% 区间按歌曲配对重采样 10,000 次，随机种子 20261126。贝斯忽略八度时 S1 为 45.29%、S3 为 79.62%。仅汇总 45 首偏移高置信曲时，S1 钢琴／贝斯（精确）／鼓为 56.63%／28.51%／76.47%，S3 为 82.24%／77.63%／80.74%。四个配方均成功生成 50/50 首可回读的 MIDI。S3、S5、S6 的 MIDI 逐首一致。本批样本支持保留 S3。评测运行器发布固定组合，产品入口的钢琴触发和缺轨回退需单独验证。
+
+## 局限
+
+- F1 衡量**与 RWC-P 参考的一致度**。参考有错音、漏音和时序偏差，钢琴参考可靠性低。产品准确率及验收门槛需用独立校订或录制的真值进一步验证。
+- v2 来自五首调参试跑及候选偏移扫描，调参成绩存在选择偏差。50 首测试曲的应用偏移均为 0 ms，本批测试分数没有经过任何偏移校正。
+- 所选歌曲均有三轨，22 首调参的评分片段也没有缺轨负例。S6 的三轨阈值全为 0，故 S6 ≡ S5 ≡ S3。**乐器是否存在判断本轮未得到检验。**
+- 调参曲 P092 的贝斯参考疑似高一个八度，B2 的 262 对起音匹配中有 258 对预测比参考低 12 半音。剔除 P092 后 B2 精确 micro F1 从 68.85% 升至 74.12%，赢家保持不变。测试集以 S3 逐曲检查忽略八度与精确 F1 之差，差距超过 30 个百分点的曲目为 0 首。
+- P058、P059、P091 的参考有其他 GM 打击乐，评分窗内没有底鼓或军鼓。这三首的底鼓及军鼓预测计入鼓分数的假阳性，整轨缺失统计保持原定义。
+
+## 复现
+
+从包含本评测代码的仓库根目录运行。资源检出须有同一版本的 SW 包装脚本，复用合入前的模型资产时可保持其文件内容并使用新的评测工作目录。按[项目安装说明](../../README.md)准备 Python 环境、FFmpeg 与本地模型。评测的模型版本和文件校验见 [钢琴路线锁文件](../../config/piano-b.lock.json) 和 [运行器资源检查](run_pilot.py)。资源预检还会校验 ADTOF 0.1.0 的权重，D4 单项路线使用该模型。完整模型推理使用本地 CPU。将 `RWC-P.zip` 解压到 `work/datasets/rwc-p/`，保留子目录 `RWC-P/`，并将[标注仓库](https://github.com/rwc-music/rwc-annotations)的提交 `3438af9cb68cded321497153a9ff7d6fef0019b7` 放在同级的 `annotations/`。
 
 ```sh
-resources="/path/to/main/checkout"
+resources=.
+dataset="$resources/work/datasets/rwc-p"
 work="$resources/work/rwcp-eval"
 python="$resources/.venv/bin/python"
-git -C "$resources" check-ignore -v work/rwcp-eval/manifest.json work/rwcp-eval/pilot-results.json
+
+git check-ignore "$work/manifest.json" "$work/team-results.json"
 mkdir -p "$work"
-export PYTHONPATH="$PWD/src" PYTHONDONTWRITEBYTECODE=1 NUMBA_CACHE_DIR="$work/numba"
+export PYTHONPATH="$PWD/src" PYTHONDONTWRITEBYTECODE=1 NUMBA_CACHE_DIR="$PWD/$work/numba"
 export OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
-nice -n 10 "$python" outputs/rwcp-eval/prepare.py "$resources/work/datasets/rwc-p" "$work/manifest.json"
-uptime | tee "$work/preflight-uptime.log"
-nice -n 10 "$python" outputs/rwcp-eval/run_pilot.py --resources "$resources" --work "$work" \
-  --manifest-sha256 "$(cut -d ' ' -f 1 "$work/manifest.sha256")"
-"$python" outputs/rwcp-eval/report.py --work "$work" --output "/path/to/pilot/README.md" \
-  --test-summary "实际测试结果" --code-commit "$(git rev-parse --short HEAD)"
+
+"$python" outputs/rwcp-eval/prepare.py "$dataset" "$work/manifest.json"
+(cd "$work" && shasum -a 256 -c manifest.sha256)
+manifest_sha="$(cut -d ' ' -f 1 "$work/manifest.sha256")"
+"$python" outputs/rwcp-eval/run_pilot.py --resources "$resources" --work "$work" \
+  --manifest-sha256 "$manifest_sha"
+
+"$python" outputs/rwcp-eval/run_dev.py freeze-offsets --resources "$resources" --work "$work"
+dev_sha="$(shasum -a 256 "$work/dev-offsets-v2.json" | cut -d ' ' -f 1)"
+"$python" outputs/rwcp-eval/run_dev.py run --resources "$resources" --work "$work" \
+  --offset-sha256 "$dev_sha"
+"$python" outputs/rwcp-eval/report_dev.py --work "$work" --output "$work/dev-report.md"
 ```
 
-复跑时保留现有清单，跳过准备步骤。运行器校验输入及成功阶段的产物哈希，读取耗时回执并只重试未完成的模型阶段。原始数据按只读输入处理，输出位于主检出忽略的 `work/`。运行前确认同一机器没有其他转写或训练任务。若 1 分钟负载超过 4，在试跑报告中标记。
-
-计分结果以与 RWC-P 参考的一致度表示。时间偏移来自非人声 MIDI 脉冲与原混音的互相关。鼓按底鼓和军鼓两个类别计分，其他 GM 鼓件另计。贝斯保留原音高，另报忽略八度的分数。钢琴参考可靠性低。完整计分口径以及模型依赖见脚本及本地报告。
-
-## 调参单项赛冻结规则 v2
-
-- 沿用原清单哈希及 22 首调参曲目，先对这 22 首冻结新偏移。估计只读原本约 62 秒的实际 WAV 输入与相同区间内的非人声 MIDI 起音。候选完全共用每曲偏移。50 首测试曲目仅在旧清单中保留分组。
-- 搜索 ±10 帧（约 ±100 ms）。最高峰必须 ≥0.30、高于 ±3 帧邻域外的次峰 ≥0.05，且避开搜索边缘，否则偏移标为低置信，使用 0 ms。单独记录 ±25 帧内的竞争峰和相关曲线，供诊断。
-- 在通过置信检查的估计上减去 20 ms，补偿审核发现的谱通量估计延迟。补偿后绝对偏移 <50 ms 时保持 0 ms。保留原估计、补偿后估计和实际应用值。
-- 空输出指目标乐器在含上下文输入上完全没有预测音符。分数按零预测计入，另记空输出次数。模型或文件错误视为未完成。成品中只有非评分鼓键的结果仍属于非空。
-- 主指标为完整 22 首的校正后 micro F1。贝斯用精确音高，鼓只计底鼓和军鼓。报告同时列未校正、剔除偏移低置信曲目的校正分、贝斯忽略八度分，以及候选两两逐曲胜／平／负。逐曲同分才记为平，任一 F1 未定义单列。
-- 每轨先找主指标最高者，与其差值严格小于 2 个百分点的候选进入打平组。使用 22 首的平均独立路线耗时决胜，计入所需的解码、分离、模型和后处理阶段。P5 算上 P2 和判据的成本，选 P1 时再计入 P1。若耗时完全相同，取主指标较高者，再按候选编号。全流程实际耗时按共享阶段另计。
-- v2 来自对五段试跑及候选扫描的审核，存在选择偏差。钢琴结论标记参考可靠性低。胜负是与 RWC-P 参考的一致度，独立真值和最终效果留待后续。
+公开版已带有原先冻结的阈值与组合。复现团体赛时沿用两份配置，并确认清单 SHA-256 与上文一致。续跑时保留当前评测目录和已冻结偏移，跳过对应的生成步骤。
 
 ```sh
-nice -n 10 "$python" outputs/rwcp-eval/run_dev.py freeze-offsets --resources "$resources" --work "$work"
-uptime
-offset_sha="$(shasum -a 256 "$work/dev-offsets-v2.json" | cut -d ' ' -f 1)"
-nice -n 10 "$python" outputs/rwcp-eval/run_dev.py run --resources "$resources" --work "$work" --offset-sha256 "$offset_sha"
-```
-
-运行按单阶段串行，开始每首前等待 1 分钟负载 ≤8 并记录 uptime。原试跑的模型产物按哈希复用，每首写一份增量检查点，重启沿用已有偏移文件与已完成曲目的结果。
-
-## S6 乐器存在判断的调参规则
-
-S6 仅对 S5 各赢家输出作整轨判定。用中心约 60 秒的预测起音数，鼓包含所有 GM 键。预测数严格低于该轨阈值则不发布该轨，阈值 0 表示停用判断。运行时只读取预测，参考只用来校准和评估。
-
-阈值从 0、2、4、8、16 选择。使用 22 首调参集的校时后片段，至少 3 个该乐器参考为空的片段且有正例才启用筛选。允许的阈值在调参集须保留所有原本有预测的正例轨，再最大化缺轨样本上去掉的误报音符数。效果相同取最小阈值。证据不足取 0。使用这一批 RWC-P 真值口径一致的近一分钟片段校准，BabySlakh／MAESTRO 的异分布与不同时长留作后续单独验证。
-
-## 封存团体赛执行
-
-提交调参赛结果文档、存在判断配置，再提交组合配置后才执行测试切片与 v2 偏移冻结。团体赛使用实际发布并回读的 MIDI，计分规则保持 ±50 ms 及固定鼓件口径。按歌曲配对重采样 10,000 次，固定种子 20261126。至少一轨有效 MIDI 且能回读算一键成功，空轨单列。
-
-默认路线建议保守地沿用 S3。若 S5 各轨点估计都达到 S3 且至少一轨配对区间下限大于零，把 S5 列为下一版默认候选。正式切换需要独立真值验证。报告记录 S6 的误删与误报证据，当前默认入口保持原样。
-
-```sh
-# 先完成调参赛。各配置生成后单独审核并提交。
-"$python" outputs/rwcp-eval/presence.py --work "$work" --config outputs/rwcp-eval/presence-config.json
-"$python" outputs/rwcp-eval/run_team.py freeze-combinations --resources "$resources" --work "$work"
-# 组合配置和评分代码提交后，才读取封存 50 曲的音频及 MIDI。
-uptime
 "$python" outputs/rwcp-eval/run_team.py freeze-offsets --resources "$resources" --work "$work"
-test_offset_sha="$(shasum -a 256 "$work/team-offsets-v2.json" | cut -d ' ' -f 1)"
-nice -n 10 "$python" outputs/rwcp-eval/run_team.py run --resources "$resources" --work "$work" \
-  --offset-sha256 "$test_offset_sha" --jobs 2
+team_sha="$(shasum -a 256 "$work/team-offsets-v2.json" | cut -d ' ' -f 1)"
+"$python" outputs/rwcp-eval/run_team.py run --resources "$resources" --work "$work" \
+  --offset-sha256 "$team_sha" --jobs 1
+"$python" outputs/rwcp-eval/report_team.py --work "$work" --output "$work/team-report.md"
 ```
-
-每个组合的等效串行耗时计所需去重阶段与组装读写，一次执行的实际耗时另计。单流水线启动门槛是 1 分钟负载 ≤8。双流水线须同时满足负载 ≤7、`sysctl vm.swapusage` 剩余 ≥1.5 GiB 和 `memory_pressure -Q` 的系统可用内存 ≥25%。每首记录 uptime 及调度判断，诊断无法读取时采用串行。中断可使用同一个命令续跑，原测试偏移与已完成检查点保留。
