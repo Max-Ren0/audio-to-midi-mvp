@@ -4,7 +4,7 @@
 
 ## 数据与许可
 
-RWC Music Database 的 Popular Music 子集（RWC-P / RWC-MDB-P-2001）含 100 首流行棚录，本评测从中选了钢琴、贝斯、鼓参考齐全的 72 首。音频及配套标注按 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 发布。署名为 RWC Music Database 制作团队，原始论文作者为 Masataka Goto、Hiroki Hashiguchi、Takuichi Nishimura 和 Ryuichi Oka，更新标注由 RWC 2.0 团队维护。评测从音频中截取评分片段，仓库只发布代码、冻结配置及汇总，音频、参考 MIDI、预测 MIDI 和逐曲结果均不入库。 [原始论文](https://doi.org/10.5281/zenodo.1416473) · [音频发布及引用说明](https://zenodo.org/records/18656623) · [标注来源](https://github.com/rwc-music/rwc-annotations) · [更新说明](https://doi.org/10.5334/tismir.326)
+RWC Music Database 的 Popular Music 子集（RWC-P / RWC-MDB-P-2001）含 100 首流行棚录，本评测从中选了钢琴、贝斯、鼓参考齐全的 72 首。音频及配套标注按 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 发布，仅限非商业使用。署名为 RWC Music Database 制作团队，原始论文作者为 Masataka Goto、Hiroki Hashiguchi、Takuichi Nishimura 和 Ryuichi Oka，更新标注由 RWC 2.0 团队维护。评测从音频中截取评分片段，仓库只发布代码、冻结配置及汇总，音频、参考 MIDI、预测 MIDI 和逐曲结果均不入库。 [原始论文](https://doi.org/10.5281/zenodo.1416473) · [音频发布及引用说明](https://zenodo.org/records/18656623) · [标注来源](https://github.com/rwc-music/rwc-annotations) · [更新说明](https://doi.org/10.5334/tismir.326)
 
 ## 冻结流程与计分
 
@@ -37,14 +37,14 @@ RWC Music Database 的 Popular Music 子集（RWC-P / RWC-MDB-P-2001）含 100 �
 ## 局限
 
 - F1 衡量**与 RWC-P 参考的一致度**。参考有错音、漏音和时序偏差，钢琴参考可靠性低。产品准确率及验收门槛需用独立校订或录制的真值进一步验证。
-- v2 来自五首调参试跑及候选偏移扫描，调参成绩存在选择偏差。50 首测试曲的应用偏移均为 0 ms，本批测试分数没有经过任何偏移校正。
+- v2 来自五首调参试跑及候选偏移扫描，调参成绩存在选择偏差。20 ms 补偿是试跑中得到的近似值，各模型的起音延迟也可能不同。50 首测试曲的应用偏移均为 0 ms，本批测试分数没有经过任何偏移校正。
 - 所选歌曲均有三轨，22 首调参的评分片段也没有缺轨负例。S6 的三轨阈值全为 0，故 S6 ≡ S5 ≡ S3。**乐器是否存在判断本轮未得到检验。**
 - 调参曲 P092 的贝斯参考疑似高一个八度，B2 的 262 对起音匹配中有 258 对预测比参考低 12 半音。剔除 P092 后 B2 精确 micro F1 从 68.85% 升至 74.12%，赢家保持不变。测试集以 S3 逐曲检查忽略八度与精确 F1 之差，差距超过 30 个百分点的曲目为 0 首。
-- P058、P059、P091 的参考有其他 GM 打击乐，评分窗内没有底鼓或军鼓。这三首的底鼓及军鼓预测计入鼓分数的假阳性，整轨缺失统计保持原定义。
+- P058、P059、P091 的参考有其他 GM 打击乐，评分窗内没有底鼓或军鼓。这三首的底鼓及军鼓预测计入鼓分数的假阳性，整轨缺失统计保持原定义。剔除这三首作敏感性分析时，S1 和 S3 的鼓 micro F1 分别为 78.54% 和 82.34%。
 
 ## 复现
 
-从包含本评测代码的仓库根目录运行。资源检出须有同一版本的 SW 包装脚本，复用合入前的模型资产时可保持其文件内容并使用新的评测工作目录。按[项目安装说明](../../README.md)准备 Python 环境、FFmpeg 与本地模型。评测的模型版本和文件校验见 [钢琴路线锁文件](../../config/piano-b.lock.json) 和 [运行器资源检查](run_pilot.py)。资源预检还会校验 ADTOF 0.1.0 的权重，D4 单项路线使用该模型。完整模型推理使用本地 CPU。将 `RWC-P.zip` 解压到 `work/datasets/rwc-p/`，保留子目录 `RWC-P/`，并将[标注仓库](https://github.com/rwc-music/rwc-annotations)的提交 `3438af9cb68cded321497153a9ff7d6fef0019b7` 放在同级的 `annotations/`。
+从包含本评测代码的仓库根目录运行。资源检出须使用与钢琴路线锁文件匹配的 SW 包装脚本。合入后的锁文件记录了新的包装脚本哈希，依赖该锁文件的旧 SW 和 Transkun 阶段缓存无法命中。使用旧模型资产复现时请另建评测工作目录。按[项目安装说明](../../README.md)准备 Python 环境、FFmpeg 与本地模型。评测的模型版本和文件校验见 [钢琴路线锁文件](../../config/piano-b.lock.json) 和 [运行器资源检查](run_pilot.py)。资源预检还会校验 ADTOF 0.1.0 的权重，D4 单项路线使用该模型。完整模型推理使用本地 CPU。将 `RWC-P.zip` 解压到 `work/datasets/rwc-p/`，保留子目录 `RWC-P/`，并将上游标注提交 [`0a1a6c31dbe73a7f5d44f7caef8cd0999402a4c2`](https://github.com/rwc-music/rwc-annotations/commit/0a1a6c31dbe73a7f5d44f7caef8cd0999402a4c2) 解压或检出到同级的 `annotations/`。原评测的两份元数据 CSV 仅保留表头和 RWC-P 行，下面的命令在本地标注副本执行同样的筛选。
 
 ```sh
 resources=.
@@ -54,6 +54,10 @@ python="$resources/.venv/bin/python"
 
 git check-ignore "$work/manifest.json" "$work/team-results.json"
 mkdir -p "$work"
+for csv in "$dataset/annotations/metadata.csv" \
+  "$dataset/annotations/01_annotations_preprocessed/MIDI_aligned/metadata_mapping_vocals.csv"; do
+  awk 'NR == 1 || /^RWC_P[0-9]+;/' "$csv" > "$csv.rwc-p" && mv "$csv.rwc-p" "$csv"
+done
 export PYTHONPATH="$PWD/src" PYTHONDONTWRITEBYTECODE=1 NUMBA_CACHE_DIR="$PWD/$work/numba"
 export OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 
