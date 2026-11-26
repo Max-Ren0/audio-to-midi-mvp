@@ -2,6 +2,11 @@
 
 最后更新：2026-11-27（Asia/Taipei）
 
+## 作品集同步准备（v0.1.0-public.16）
+
+- 网页与 PDF 源已按 public.15 同步，补齐一键入口、端到端评测、RWC-P 路线选拔、可选功能实测和产品定位。网页移除了旧合成试听入口。
+- `gh-pages-sync` 的根 `index.html` 已准备，待推送到 `gh-pages`。发布前线上链接仍指向旧版本。
+
 ## 节拍倍速专项（v0.1.0-public.15）
 
 - 候选先于运行记录于 `40ae26c`。用 RWC-P 冻结调参集 22 首选中组合规则，比较原网格与两相位半频网格，按起音、四拍重音和速度弱先验选择。相较历史 public.12，小节线宏 F1 51.36% → 60.13%，节拍宏 F1 83.76% → 90.96%，倍速 8 → 3，半速 0 → 0。
@@ -78,7 +83,7 @@
 
 - 仓库现为公开：<https://github.com/Max-Ren0/audio-to-midi-mvp>，默认 `main`。匿名 GitHub API 返回 HTTP 200。
 - 已搭建本地多轨 MIDI 实验、钢琴 B 固定路线和贝斯/鼓 MuScriptor 替换实验；详细版本与实验见 `CHANGELOG.md`、`outputs/` 和 Git 历史。
-- 2026-11-17 整理展示首页：README 项目概览、GitHub Pages 在线作品集 <https://max-ren0.github.io/audio-to-midi-mvp/>（`gh-pages` 分支只放 `outputs/portfolio-preview/index.html` 副本，需手动同步）、仓库简介与 topics。
+- 2026-11-17 整理展示首页：README 项目概览、GitHub Pages 在线作品集 <https://max-ren0.github.io/audio-to-midi-mvp/>、仓库简介与 topics。
 - 2026-11-17 作品集新增"听一听"对比演示（自写合成片段，YourMT3 基线；素材 `outputs/portfolio-preview/demo/`，复现见 `outputs/demo-synthetic/README.md`），Claude 实现、Codex 独立核验与复验。
 - 已制作项目作品集、PDF 和 PRD；旧版完整项目上下文归档于 `outputs/history/CONTEXT-before-public-visibility.md`。
 
@@ -93,13 +98,13 @@
 ## 重要文件
 
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
-- `outputs/Noto-产品需求文档.md`：PRD 2.5，含 A+B、真值 F1 上线门槛、三轨路线选拔及节拍对齐。
+- `outputs/Noto-产品需求文档.md`：PRD 2.5.1，含 A+B、真值 F1 上线门槛、三轨路线选拔及节拍对齐。
 - `outputs/eval-dataset-research/README.md`：评测集来源、训练重叠风险、自录和盲听方案。
 - `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
 - `scripts/run_noto.py`：从 MP3 生成三轨 MIDI 与运行回执的一键入口。
 - `outputs/e2e-eval/`：端到端评测脚本、结果与报告。
 - `outputs/competitor-analysis/README.md`：竞品对比、证据边界和低成本验证计划。
-- `outputs/portfolio-preview/index.html`：作品集网页（改动后需手动同步到 `gh-pages` 分支才会上线）；`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
+- `outputs/portfolio-preview/index.html`：作品集网页，发布副本已在 `gh-pages-sync` 准备，待推送。`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
 - `outputs/history/CONTEXT-before-public-visibility.md`：原始长上下文及历史详细记录。
@@ -107,7 +112,7 @@
 ## 验证结果
 
 - 《唯一》单曲、既定对齐与 50ms 起音容差下，MuScriptor 替换前后：贝斯 F1 25.45%→71.92%，鼓 55.22%→55.99%；不代表其他歌曲表现或听感准确率。
-- 全量测试 180 项通过，2 项因缺少本地音色库跳过。参考 MIDI 来源及完整性未独立核实，未系统试听。
+- public.15 全量测试 243 项通过、2 项跳过。单曲参考 MIDI 的来源及完整性未独立核实，未系统试听。
 - 本次公开前扫描 Git 可达历史中常见音频、MIDI、权重文件名和常见凭据格式，未发现匹配；扫描不能保证涵盖全部敏感内容。0d263f7 冻结后独立核验了公开状态、匿名访问、文档一致性及上下文归档；未逐条审查所有历史私人信息。
 
 ## 未完成事项
