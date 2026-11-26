@@ -25,6 +25,8 @@ def main(argv=None):
                         help='detect beats and write a tempo map without quantizing notes')
     parser.add_argument('--quantize', choices=['1/4', '1/8', '1/16'],
                         help='optionally snap note onsets to the given MIDI grid')
+    parser.add_argument('--presence-gate', action=argparse.BooleanOptionalAction, default=False,
+                        help='optionally suppress tracks judged absent (default: off)')
     raw_args = sys.argv[1:] if argv is None else list(argv)
     args = parser.parse_args(raw_args)
     from audio_midi.one_click import run_noto
@@ -33,7 +35,7 @@ def main(argv=None):
         args.input, args.output_dir, args.resources, args.threads, args.device,
         parallel=args.parallel, piano_threads=args.piano_threads,
         muscriptor_threads=args.muscriptor_threads,
-        beat_align=args.beat_align, quantize=args.quantize,
+        beat_align=args.beat_align, quantize=args.quantize, presence_gate=args.presence_gate,
         command=[sys.executable, sys.argv[0], *raw_args],
     )
 

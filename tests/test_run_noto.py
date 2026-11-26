@@ -10,7 +10,7 @@ import mido
 import numpy as np
 import pytest
 
-from audio_midi import beat_align, one_click
+from audio_midi import beat_align, one_click, presence_gate
 from audio_midi.events import NoteEvent
 from audio_midi.midi import write_midi
 from audio_midi.muscriptor_routing import replace_midi_tracks
@@ -128,10 +128,61 @@ def job(tmp_path, monkeypatch):
     return options
 
 
+@pytest.mark.parametrize('parallel', [False, True])
+def test_presence_gate_reports_and_removes_only_target_tracks(job, monkeypatch, parallel):
+    rules = {'piano': {}, 'bass': {'notes_per_minute': 21, 'distinct_pitches': 2},
+             'drums': {'notes_per_minute': 20}}
+    monkeypatch.setattr(presence_gate, 'RULES', rules)
+    assert one_click.run_noto(job.audio, job.output, job.resources, parallel=parallel,
+                              presence_gate=True) == 0
+    receipt = job.receipt()
+    decisions = receipt['presence_gate']['tracks']
+    assert receipt['parameters']['presence_gate'] is True
+    assert decisions['bass'] == {
+        'features': {'note_count': 1, 'notes_per_minute': 20, 'distinct_pitches': 1},
+        'thresholds': rules['bass'], 'suppressed': True, 'predicted_present': False,
+        'reason': '判定为不存在，未输出',
+    }
+    assert decisions['drums']['predicted_present']
+    assert decisions['piano']['predicted_present']
+    output = job.output / 'noto.mid'
+    published = mido.MidiFile(output)
+    assert [track.name for track in published.tracks] == [
+        'Conductor', 'piano', 'acoustic_guitar', 'electric_guitar', 'drums', 'strings',
+    ]
+    original = (job.output / 'stages/merge/noto.mid' if parallel else
+                job.output / 'stages/muscriptor/delivery/Noto-MuScriptor贝斯鼓.mid')
+    assert published.tracks == [track for track in mido.MidiFile(original).tracks if track.name != 'bass']
+    assert 'bass' not in {track['instrument'] for track in receipt['tracks']}
+    assert receipt['output_sha256'] == one_click.digest(output)
+
+
+def test_presence_gate_preserves_midi_when_no_track_is_removed(tmp_path):
+    source = tmp_path / 'source.mid'
+    target = tmp_path / 'target.mid'
+    write_midi([note('piano', 60)], source)
+    chosen, decisions = presence_gate.gate_midi(source, target, 1, dict.fromkeys(('piano', 'bass', 'drums'), {}))
+    assert chosen == source and not target.exists()
+    assert decisions['piano']['predicted_present']
+    assert decisions['bass']['reason'] == '模型未输出音符'
+    assert not decisions['bass']['suppressed']
+
+
+def test_presence_gate_can_publish_a_conductor_without_notes(tmp_path):
+    source = tmp_path / 'source.mid'
+    target = tmp_path / 'target.mid'
+    write_midi([note('piano', 60)], source)
+    rules = {'piano': {'distinct_pitches': 2}, 'bass': {}, 'drums': {}}
+    chosen, _ = presence_gate.gate_midi(source, target, 1, rules)
+    assert chosen == target
+    assert mido.MidiFile(target).tracks == mido.MidiFile(source).tracks[:1]
+
+
 def test_success_preserves_baseline_tracks_and_reports_provenance(job):
     assert job.run() == 0
     receipt = job.receipt()
     assert receipt['status'] == 'ok'
+    assert 'presence_gate' not in receipt
     assert receipt['input_filename'] == 'input.mp3'
     assert receipt['input_sha256'] == one_click.digest(job.audio)
     assert receipt['duration_seconds'] == 3.0
@@ -567,6 +618,15 @@ def test_cli_records_invocation_and_resolved_parameters(job, monkeypatch, parall
     assert receipt['beat_alignment']['fallback'] is (beat_flag == '--beat-align')
     assert receipt['beat_alignment']['time_signature'] == '4/4'
     assert 'secret-env-value' not in json.dumps(receipt)
+
+
+@pytest.mark.parametrize('flag, enabled', [('--presence-gate', True), ('--no-presence-gate', False)])
+def test_cli_presence_gate_can_be_enabled_or_disabled(job, flag, enabled):
+    entry = one_click.ROOT / 'scripts/run_noto.py'
+    assert runpy.run_path(str(entry))['main']([
+        str(job.audio), '--resources', str(job.resources), '--output-dir', str(job.output), flag,
+    ]) == 0
+    assert ('presence_gate' in job.receipt()) is enabled
 
 
 @pytest.mark.parametrize('parallel', [False, True])

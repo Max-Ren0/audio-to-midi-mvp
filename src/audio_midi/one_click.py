@@ -20,6 +20,7 @@ from .audio import decode_mp3
 from .beat_align import BeatEstimate, QUANTIZE, TempoMap, write_aligned_midi
 from .piano_lock import digest
 from .pipeline import publish
+from .presence_gate import gate_midi
 from .worker import process_tree_rss
 
 
@@ -246,7 +247,7 @@ def _stage(name, directory, output_dir, action=None, *, reason=None):
 
 def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, command=None,
              parallel=False, piano_threads=2, muscriptor_threads=2,
-             beat_align=False, quantize=None):
+             beat_align=False, quantize=None, presence_gate=False):
     input_path = Path(input_path).absolute()
     output_dir = Path(output_dir).absolute()
     resources = Path(os.path.abspath(resources))
@@ -283,6 +284,7 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
             '--piano-threads', str(piano_threads), '--muscriptor-threads', str(muscriptor_threads),
             '--beat-align' if beat_align else '--no-beat-align',
             *(['--quantize', quantize] if quantize else []),
+            *(['--presence-gate'] if presence_gate else []),
         ],
         'parameters': {
             'input': str(input_path), 'output_dir': str(output_dir),
@@ -296,6 +298,9 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
         'muscriptor': None, 'model_hashes': {}, 'mvp_tracks': list(MVP_TRACKS),
         'research_tracks': [], 'research_tracks_note': '不计入 MVP 验收',
     }
+    if presence_gate:
+        receipt['parameters']['presence_gate'] = True
+        receipt['presence_gate'] = {'enabled': True, 'tracks': {}}
     models = receipt['model_hashes']
     baseline_dir = stages_dir / 'baseline'
     piano_dir = stages_dir / 'piano_b'
@@ -467,6 +472,24 @@ def run_noto(input_path, output_dir, resources, threads=2, device='cpu', *, comm
 
             merge_stage, final = _stage('merge', stages_dir / 'merge', output_dir, merge)
             record(merge_stage)
+            if 'failed_stage' in receipt:
+                return finish_failure(1)
+
+        if presence_gate:
+            gate_dir = stages_dir / 'presence_gate'
+
+            def apply_presence_gate():
+                output, decisions = gate_midi(
+                    final, gate_dir / 'noto.mid', receipt['duration_seconds'],
+                )
+                receipt['presence_gate']['tracks'] = decisions
+                suppressed = {name for name, decision in decisions.items() if decision['suppressed']}
+                receipt['tracks'][:] = [track for track in receipt['tracks']
+                                        if track['instrument'] not in suppressed]
+                return output
+
+            gate_stage, final = _stage('presence_gate', gate_dir, output_dir, apply_presence_gate)
+            record(gate_stage)
             if 'failed_stage' in receipt:
                 return finish_failure(1)
 
