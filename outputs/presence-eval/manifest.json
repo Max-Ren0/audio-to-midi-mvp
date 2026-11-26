@@ -1,0 +1,900 @@
+{
+  "original_manifest_sha256": "21a9a1879f33ec84d2191b3deab083f9f6cbe5ef0c0e887f366c0dc1578ff00e",
+  "samples": [
+    {
+      "audio": "RWC-P/RWC_P015.wav",
+      "audio_sha256": "abd84376bb5a01cb3f14b856bb685fd59083123e4a818d5703247efbc07e5b39",
+      "id": "RWC_P015",
+      "input_frames": [
+        2647852,
+        5294293
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P015.mid",
+      "midi_sha256": "6d494cfec4682fc5d58008d186916ccf8c04f5e5ef1a4cad187c457c70bedc92",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.041995464852604,
+        120.05199546485261
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P021.wav",
+      "audio_sha256": "98830540ce9d6a76ac88e2d8b31acd32e47d34b1c81d93958032fa725889bd66",
+      "id": "RWC_P021",
+      "input_frames": [
+        2647544,
+        5293544
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P021.mid",
+      "midi_sha256": "deb5a6e644f2bf0d8772121dde9fe7c397b4db559abd49485cadd0480796951f",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.03501133786848,
+        120.03501133786848
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P026.wav",
+      "audio_sha256": "d65d164dffe25d87910293ef4f3926f079581547b58791dadcdba40a5a50f8fc",
+      "id": "RWC_P026",
+      "input_frames": [
+        2638900,
+        5284900
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P026.mid",
+      "midi_sha256": "ba35d6395931386ccfe64573942c926d7839f2c153d955ee468d9fbfcaf6fd46",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        59.8390022675737,
+        119.83900226757369
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P032.wav",
+      "audio_sha256": "10c018cc456c73a7414c53767b3f35eabb5f300e31b041e1b432cf138f352412",
+      "id": "RWC_P032",
+      "input_frames": [
+        2647455,
+        5293455
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P032.mid",
+      "midi_sha256": "b304e256cbe27630076a02311cd8efc9c4ce15c8a42b9308c842d5e88e3efa33",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.03299319727891,
+        120.03299319727891
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P033.wav",
+      "audio_sha256": "ea8d14c12a3ba5bf91a48c0c29ae666a24bcc8218083b83608ed73ee3d492f44",
+      "id": "RWC_P033",
+      "input_frames": [
+        2646573,
+        5290809
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P033.mid",
+      "midi_sha256": "342653721a6296581d78767f5c806dd282bbf9a112cb434863608206155d3a45",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.01299319727891,
+        119.97299319727891
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P035.wav",
+      "audio_sha256": "7e66777cb08d3cb228fd979b4503e1523ed6775e3463474b8c2f159464fbff69",
+      "id": "RWC_P035",
+      "input_frames": [
+        2650675,
+        5294911
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P035.mid",
+      "midi_sha256": "e4c6bf5d44ef65d3fd03af349e763d89f8210151d24cfff1396f08e8a138799e",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.10600907029478,
+        120.06600907029478
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P036.wav",
+      "audio_sha256": "28dae7ef0a9b93f120b2e22d4d20954da4dd399b63698776b6fd769632424d82",
+      "id": "RWC_P036",
+      "input_frames": [
+        2639120,
+        5283797
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P036.mid",
+      "midi_sha256": "00fbad2a7afbff36baf503386adad0a7aa0d5cc4f3fd4651451fa8ca06da6f85",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        59.843990929705214,
+        119.81399092970521
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody 1"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P037.wav",
+      "audio_sha256": "a24a9ff59c6ae3b1e7e6d82bce19a57d3c9a2109b7672d1a61e79742a4922ace",
+      "id": "RWC_P037",
+      "input_frames": [
+        2650410,
+        5294646
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P037.mid",
+      "midi_sha256": "b9dfef2d70d585b5e4b9b8ee8faee56010f579e06dccc36682b116b975833321",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.1,
+        120.06
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody 1"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P041.wav",
+      "audio_sha256": "7a2db96a69c8d7e9550af986be92feb3952b79d51d4752496fa45ec909df95f3",
+      "id": "RWC_P041",
+      "input_frames": [
+        2649352,
+        5295528
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P041.mid",
+      "midi_sha256": "6eb8ee39e826fe8352f873cc4ede79f0a8bd6e3ec9730b89a5bbec9ec56e570c",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.07600907029479,
+        120.08
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P045.wav",
+      "audio_sha256": "a2f76fc5d1fda7bd08303c4d248b1659e55756458f3872416304ee1d3c4c05d4",
+      "id": "RWC_P045",
+      "input_frames": [
+        2646882,
+        5292882
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P045.mid",
+      "midi_sha256": "4cf6f80be9ba752edfe77941ab83663ce6282aac8204828226445034b6550619",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.02,
+        120.02
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P056.wav",
+      "audio_sha256": "f6b3325ee34d89180724e6584eb9dd928f27f5ea81a77caab4cd0a481f7296a4",
+      "id": "RWC_P056",
+      "input_frames": [
+        2647764,
+        5277888
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P056.mid",
+      "midi_sha256": "ea6232a6d99b81e39bbbd6a79eb77d85c4d0d794b3bb967e04ab5497983e05d9",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.04,
+        119.68
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P060.wav",
+      "audio_sha256": "bf8fcc7b14bfc7f29da550da94ffba0ea63254968b1584b4a0f5ba1e4d5fd87f",
+      "id": "RWC_P060",
+      "input_frames": [
+        2646088,
+        5292970
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P060.mid",
+      "midi_sha256": "22c01d16ec844515e802ced9f1bf3c412b08bd315593f7740f393348749fe35a",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.001995464852605,
+        120.02199546485261
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P061.wav",
+      "audio_sha256": "589988a58c4eca62bc486cee580989f1626ec3f3bddb4f655ced5a6137632545",
+      "id": "RWC_P061",
+      "input_frames": [
+        2647764,
+        5293764
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P061.mid",
+      "midi_sha256": "cb374113a3083b9428f19000f4e42da5a046e0c61e52d1e8030bd850d7a60b22",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.04,
+        120.04
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P063.wav",
+      "audio_sha256": "8937773d255cf50655849e3906764b915dc23db150982c298ef9e08ef9d2645d",
+      "id": "RWC_P063",
+      "input_frames": [
+        2653188,
+        5298747
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P063.mid",
+      "midi_sha256": "60ec67136a1699fb0b90f6a65af2326bd64420378cd59d40bd6878d68907e2a8",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.16299319727891,
+        120.15299319727892
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "vocal"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P071.wav",
+      "audio_sha256": "b24b67ba8401fbc34ec54bb25e073dbc2638807ea6d3d3fd245fdf6d5fd5ed88",
+      "id": "RWC_P071",
+      "input_frames": [
+        2653938,
+        5299056
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P071.mid",
+      "midi_sha256": "94a780684434539d91b0544649e362c6da2c622ae30f3abfefe1163ca8b9097d",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.18,
+        120.16
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P072.wav",
+      "audio_sha256": "86b15822bda094cf45e6079d9c75338ce6d8edeaabe4798c5cb44d8537662a3c",
+      "id": "RWC_P072",
+      "input_frames": [
+        2659318,
+        5305450
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P072.mid",
+      "midi_sha256": "184a2e7c90dbe0fe604528822e96152868ebe5117439e60f2e6a361b9ed425e4",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.30199546485261,
+        120.30498866213152
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P073.wav",
+      "audio_sha256": "c215f125c3df51603118ac431f5a6b4718d556ab3a68ae69a3c16b6f0c29cee4",
+      "id": "RWC_P073",
+      "input_frames": [
+        2648205,
+        5289354
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P073.mid",
+      "midi_sha256": "d797cf8aa2e74d08e78e47179792472ad1c307cacb45320f3fbed86dab968b63",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.05,
+        119.94
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo",
+        "sub melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P074.wav",
+      "audio_sha256": "15cf86bac0f295567d977c4adccf36a2fd8750a7bfcb42f830d80883f56ab80c",
+      "id": "RWC_P074",
+      "input_frames": [
+        2649087,
+        5294646
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P074.mid",
+      "midi_sha256": "1b74db10b08edcefed27199b847b4cc8ce0b106e1346f2af3fe38b80a1cada35",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.07,
+        120.06
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P075.wav",
+      "audio_sha256": "126d78630b45583c753e30fb064f72c434836077b65340087d190f47867e161e",
+      "id": "RWC_P075",
+      "input_frames": [
+        2644677,
+        5290677
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P075.mid",
+      "midi_sha256": "5153172ab0c0d066fb3e65cbb0751c73c07a169c9bf33f340960a65bd877f9ac",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        59.97,
+        119.97
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P076.wav",
+      "audio_sha256": "fbefba121e53cbb9f670c9b691f6526bd3a9e0f7e74ca31cd8c4c27ed043af9a",
+      "id": "RWC_P076",
+      "input_frames": [
+        2652615,
+        5298615
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P076.mid",
+      "midi_sha256": "7b122ce2669ac44d10abac04c717c599528e3d0da80da4d162289896a0ef7eff",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.15,
+        120.15
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P077.wav",
+      "audio_sha256": "73e37daed4200667ef338db6f8cf7a0d74bcf8c0ef640042ce07b47622e86aac",
+      "id": "RWC_P077",
+      "input_frames": [
+        2649528,
+        5295528
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P077.mid",
+      "midi_sha256": "57b4be0cad198c3061b540a573fc75711aa9f67a4c815709dda09a4bf338b933",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.08,
+        120.08
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P078.wav",
+      "audio_sha256": "6aa99d1d5222d12dd36469121bb654a1d6bea29044be0053be35beb1c1ea3859",
+      "id": "RWC_P078",
+      "input_frames": [
+        2648205,
+        5294205
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P078.mid",
+      "midi_sha256": "1712d8d76908d9e599b54115e2f376e9a0af014176ce193aaae6ae5675900dc4",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.05,
+        120.05
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P079.wav",
+      "audio_sha256": "a6d68bde3e5f75074b1d2d793c127c618421e986b51cdc75ec6b00c8e81a45bc",
+      "id": "RWC_P079",
+      "input_frames": [
+        2647632,
+        5293632
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P079.mid",
+      "midi_sha256": "54e91fb9b05c350938541fb9768bca4088c6a97edec60e85e5e90cf034a1599e",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.03700680272109,
+        120.0370068027211
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melo"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P080.wav",
+      "audio_sha256": "da95a908cee0a6298cfa6a847b85cebbc000f155b17902ccec1602aec07fa3e0",
+      "id": "RWC_P080",
+      "input_frames": [
+        2648161,
+        5294161
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P080.mid",
+      "midi_sha256": "917e4e6d7e42a3eeee497a0bd4dc77b94dcab4e854009cd86b780dcb64bcf7c3",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.0490022675737,
+        120.0490022675737
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P088.wav",
+      "audio_sha256": "09c8267567b1fce3a1cf1cd8d458c3b81e86d00256722a8ea67b61b0d9293ffd",
+      "id": "RWC_P088",
+      "input_frames": [
+        2646000,
+        5292441
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P088.mid",
+      "midi_sha256": "88d94ec464eec75ff4183c5f7fcbf752e01698c99525c14adecaa8583e840e31",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.0,
+        120.01
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P093.wav",
+      "audio_sha256": "a8123ce599be659eb881e1d9371644a9f001b8fa8758fa3ec7921607e42b03d1",
+      "id": "RWC_P093",
+      "input_frames": [
+        2647323,
+        5293323
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P093.mid",
+      "midi_sha256": "67f220e3098c11b08fc0dfd575a76abdd8ec1037ee3c9abb1ca11d82590e87de",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.03,
+        120.03
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P094.wav",
+      "audio_sha256": "7e3dc1aced7e2d918733eedcc71b6b0de27239ee52726519ceefd6a67c2ddc1c",
+      "id": "RWC_P094",
+      "input_frames": [
+        5733000,
+        8379000
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P094.mid",
+      "midi_sha256": "9c6aec3f4fd7eb2b8486d18498d48ab90e47ec51f6abb48390274dd72abc1574",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        130.0,
+        190.0
+      ],
+      "source": "RWC-P local",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P095.wav",
+      "audio_sha256": "b1c745b718ccfb10eacf343e7c56e37ffe4e51c748a0cfab787c029dced219df",
+      "id": "RWC_P095",
+      "input_frames": [
+        2653012,
+        5299012
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P095.mid",
+      "midi_sha256": "97ff08b3d363b76ed222cb6af316ea6fe1f81b4f67cd25e56e1519452512cab9",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.1590022675737,
+        120.1590022675737
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P098.wav",
+      "audio_sha256": "208f7c59e5ad0285ad33e6bb0c6b48e8cb403a360525e9d6aca9cf0f45dd4ae4",
+      "id": "RWC_P098",
+      "input_frames": [
+        2646000,
+        5292441
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P098.mid",
+      "midi_sha256": "3904a116ebe956d7c593125dd03f3604beb890b3912d65c5afaa59a7b73e498e",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": false
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        60.0,
+        120.01
+      ],
+      "source": "RWC-P excluded",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "RWC-P/RWC_P100.wav",
+      "audio_sha256": "b68a178819bf11e23a5fd1f2c53eb307ea5ff70af0e8064883b090269eb203a3",
+      "id": "RWC_P100",
+      "input_frames": [
+        220500,
+        2866500
+      ],
+      "midi": "annotations/01_annotations_preprocessed/MIDI_aligned/RWC-P/RWC_P100.mid",
+      "midi_sha256": "d322a5291a138e482639fde4c22ad21d104d222f2912b50652be81ae38e36062",
+      "presence": {
+        "bass": true,
+        "drums": false,
+        "piano": true
+      },
+      "sample_rate": 44100,
+      "seconds": [
+        5.0,
+        65.0
+      ],
+      "source": "RWC-P local",
+      "vocal_names": [
+        "melody"
+      ]
+    },
+    {
+      "audio": "slakh-Track00001/input.mp3",
+      "audio_sha256": "3229f56a2dbd2adb902f4b23e1471a0348a80be6d633d55577173318dc2ad4b8",
+      "id": "slakh-Track00001",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": true
+      },
+      "reference": "slakh-Track00001/reference.json",
+      "reference_sha256": "f708e645c687894aa3d82d201048463fc7cf63d9c28dba82acd18025e9316b1b",
+      "reference_source": "BabySlakh (Slakh2100 train split)",
+      "seconds": [
+        0,
+        60.0
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "slakh-Track00002/input.mp3",
+      "audio_sha256": "cac6128ac2e2e77f18af64c41732692a5c1415e5a0e6fe8a78e9918927286db6",
+      "id": "slakh-Track00002",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": true
+      },
+      "reference": "slakh-Track00002/reference.json",
+      "reference_sha256": "4b6dd2b1526bfea659ccc866be9c9aef44d982e10df13966270c1abc5805da94",
+      "reference_source": "BabySlakh (Slakh2100 train split)",
+      "seconds": [
+        0,
+        60.0
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "slakh-Track00003/input.mp3",
+      "audio_sha256": "da861b9b7cc5d833acd4da882206863fad7e9101b16f633ff003f2433ea88069",
+      "id": "slakh-Track00003",
+      "presence": {
+        "bass": true,
+        "drums": true,
+        "piano": true
+      },
+      "reference": "slakh-Track00003/reference.json",
+      "reference_sha256": "7955ce8af5c897fb45031ff78d927a750260e890326d2830ab6ddf70ed9b1a68",
+      "reference_source": "BabySlakh (Slakh2100 train split)",
+      "seconds": [
+        0,
+        60.0
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "slakh-Track00017/input.mp3",
+      "audio_sha256": "6c28d71e7d19f65cdd0b4c0a0a0b92ac55133941262f36f6a52c94aebd33fb8e",
+      "id": "slakh-Track00017",
+      "presence": {
+        "bass": false,
+        "drums": true,
+        "piano": false
+      },
+      "reference": "slakh-Track00017/reference.json",
+      "reference_sha256": "ce1a377cdc700b5abf1b405776e23e5c9fe721dc83e3ccfd08cc4818390407a8",
+      "reference_source": "BabySlakh (Slakh2100 train split)",
+      "seconds": [
+        0,
+        60.0
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "slakh-Track00018/input.mp3",
+      "audio_sha256": "893ff167d63301e95ff802a7be1646a5b17c608a51a1fc436da99a014feec32a",
+      "id": "slakh-Track00018",
+      "presence": {
+        "bass": true,
+        "drums": false,
+        "piano": true
+      },
+      "reference": "slakh-Track00018/reference.json",
+      "reference_sha256": "e7e9460fb1a12df7479c70baf479235dc9c5e6c2e99d66635497a5ce83165ef8",
+      "reference_source": "BabySlakh (Slakh2100 train split)",
+      "seconds": [
+        0,
+        60.0
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "maestro-01/input.mp3",
+      "audio_sha256": "d68ffc21d870d0c49170edc2ac29a2f97bdd3c7c09a8e095f49850a3a154df86",
+      "id": "maestro-01",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "reference": "maestro-01/reference.json",
+      "reference_sha256": "417197f955f98ad2affccf4f85a4a2c7e4c23b16c99029b9d2ed13a12b0c05ba",
+      "reference_source": "MAESTRO v3.0.0 test split",
+      "seconds": [
+        0,
+        65.9481178125
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "maestro-02/input.mp3",
+      "audio_sha256": "29b52e06f1c202f27218426d93ad73dc19bcd2c678e23348109c06984f59272b",
+      "id": "maestro-02",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "reference": "maestro-02/reference.json",
+      "reference_sha256": "f3c6ade86ddf024dd5195cdee2e79242ac15813dd010d1d188834c7dd485a684",
+      "reference_source": "MAESTRO v3.0.0 test split",
+      "seconds": [
+        0,
+        95.9707907813
+      ],
+      "source": "e2e"
+    },
+    {
+      "audio": "maestro-03/input.mp3",
+      "audio_sha256": "f27aa600bd77026e2ae9c35fcd224336af71e81ade2c4406064b9349414afa2b",
+      "id": "maestro-03",
+      "presence": {
+        "bass": false,
+        "drums": false,
+        "piano": true
+      },
+      "reference": "maestro-03/reference.json",
+      "reference_sha256": "4d29b8d1d3d53d7b728ce18025fad8b08c575e42b5ab12e49356646d875c7980",
+      "reference_source": "MAESTRO v3.0.0 test split",
+      "seconds": [
+        0,
+        109.870833333
+      ],
+      "source": "e2e"
+    }
+  ]
+}
