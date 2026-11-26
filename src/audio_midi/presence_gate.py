@@ -6,9 +6,12 @@ import mido
 
 
 TRACKS = ('piano', 'bass', 'drums')
-# A zero threshold keeps every nonempty track. Calibrated rules replace these
-# defaults only after the exact frozen tuning cohort has been evaluated.
-RULES = dict.fromkeys(TRACKS, {'notes_per_minute': 0})
+# Selected on the 15 frozen tuning clips. Equality retains the track.
+RULES = {
+    'piano': {'notes_per_minute': 150},
+    'bass': {'notes_per_minute': 80},
+    'drums': {'notes_per_minute': 100},
+}
 
 
 def track_features(midi, duration):

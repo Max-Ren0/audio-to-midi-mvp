@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "piano": {"notes_per_minute": 150},
+    "bass": {"notes_per_minute": 80},
+    "drums": {"notes_per_minute": 100}
+  },
+  "manifest_sha256": "0a41021d43983fed2738f98931e6c4f712ce4ae185f89c0b1947f7a7fcc4b444",
+  "split_sha256": "3cdcce57040ff50d90c3d5ec5415e045e0ec09d183e92625e75a26a584d6cb61",
+  "tuning_results_sha256": "a0c7fe8dd1a0eaddc7bd5ea9c924f109cf214b4becd6fa2a3d940e54fa321663"
+}
