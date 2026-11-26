@@ -1,6 +1,6 @@
 # 作品集对比演示（自写合成片段）
 
-作品集"听一听"区块的素材与复现方法。
+旧版作品集试听区块的素材与复现方法。public.16 起网页移除该入口，改用端到端与多曲路线评测说明当前三轨方案。这个自写片段演示的是 YourMT3 基线。
 
 - 原曲：`compose.py` 自写的 30 秒片段（96 BPM，C–G–Am–F 循环 3 次），钢琴、贝斯、鼓三轨，共 301 个音符。没有使用任何现成歌曲。
 - 音色：`work/models/GeneralUser-GS.sf2`（许可允许用于音乐制作，含商业用途）。
@@ -30,5 +30,5 @@ PYTHONPATH=src .venv/bin/python -c "from pathlib import Path;from audio_midi.ren
 ffmpeg -i $B/transcribed.wav -ac 2 -b:a 160k $B/transcribed.mp3
 ```
 
-页面素材在 `outputs/portfolio-preview/demo/`：`original.mp3`、`transcribed.mp3`（转写 MIDI 用同一音色重新合成）、`reference.mid`、`transcribed.mid`、`notes.json`（卷帘与分数数据）。
+旧版试听素材保存在 `outputs/portfolio-preview/demo/`：`original.mp3`、`transcribed.mp3`（转写 MIDI 用同一音色重新合成）、`reference.mid`、`transcribed.mid`、`notes.json`（卷帘与分数数据）。当前网页不再引用这些素材。
 
