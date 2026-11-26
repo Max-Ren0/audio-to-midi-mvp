@@ -29,6 +29,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / 'rwcp-eval'))
 import run_pilot as pilot
 import run_team as team
+from score import score as score_rwc
 
 spec = importlib.util.spec_from_file_location('presence_prepare', HERE / 'prepare.py')
 manifest_builder = importlib.util.module_from_spec(spec)
@@ -222,8 +223,8 @@ def score_item(row, observed, reference, rules, work, rwc_kit=False):
     scores = {}
     for label, prediction in (('off', read_notes(path)), ('on', read_notes(gated))):
         if rwc_kit:
-            scores[label] = {name: team.score_route(reference, prediction, name, center,
-                                                    row['input_start'], 0)['exact'] for name in TRACKS}
+            scores[label] = {name: score_rwc(reference, prediction, name, center,
+                                             row['input_start'], 0)['exact'] for name in TRACKS}
         else:
             start, end = center
             normalized = [replace(note, onset=note.onset - start)
@@ -254,7 +255,7 @@ def original_tests(resources, rules, work):
             'source': 'RWC-P original', 'presence': present(reference, center),
         }, (path, (last - first) / row['sample_rate']), reference, rules, work, rwc_kit=True)
         for name in TRACKS:
-            if scored['scores']['off'][name] != item['scores'][name]['exact']:
+            if scored['scores']['off'][name] != item['scores'][name]['uncorrected']['exact']:
                 raise ValueError(f'{row["id"]}: baseline score changed for {name}')
         result.append(scored)
     return result
