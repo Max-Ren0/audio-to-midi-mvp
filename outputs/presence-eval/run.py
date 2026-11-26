@@ -10,8 +10,10 @@ import json
 import os
 from pathlib import Path
 from pprint import pformat
+import re
 import subprocess
 import sys
+import time
 from unittest.mock import patch
 
 import mido
@@ -66,12 +68,25 @@ def selections(split):
     return [row for row in pilot.read_json(manifest)['samples'] if index[row['id']] == split]
 
 
-def capacity():
+def wait_for_capacity(stage):
+    # The coordinator replaced the swap threshold for serial inference.
+    # Each stage finishes before the next launch. Below 20% pause the queue.
+    while not capacity(stage):
+        time.sleep(45)
+
+
+def capacity(stage):
     uptime = subprocess.check_output(['uptime'], text=True).strip()
     swap = subprocess.check_output(['sysctl', 'vm.swapusage'], text=True).strip()
-    free = team.swap_free_gib(swap)
-    print(f'{uptime}\n{swap}', flush=True)
-    return os.getloadavg()[0] <= 6 and free is not None and free >= 1.5
+    pressure = subprocess.check_output(['memory_pressure', '-Q'], text=True).strip()
+    match = re.search(r'System-wide memory free percentage: (\d+)%', pressure)
+    if match is None:
+        raise ValueError(f'Cannot read system memory pressure: {pressure}')
+    available = int(match[1])
+    ready = os.getloadavg()[0] <= 6 and available >= 30
+    decision = 'launch' if ready else 'pause (<20% free)' if available < 20 else 'wait'
+    print(f'{stage}: {decision}\n{uptime}\n{pressure}\n{swap}', flush=True)
+    return ready
 
 
 def scheduled(main_cache, allow_inference):
@@ -87,8 +102,7 @@ def scheduled(main_cache, allow_inference):
         if not (cache / dirname).exists() and name in {'sw', 'transkun-piano', 'mu-mix'}:
             if not allow_inference:
                 raise PendingInference(f'{name}: cache miss (cache-only)')
-            if not capacity():
-                raise PendingInference(f'{name}: load > 6 or free swap < 1.5 GiB')
+            wait_for_capacity(name)
         return run_stage(cache, name, input_hash, signature, outputs, command)
 
     return stage
@@ -307,6 +321,10 @@ def main():
         (args.work / path).mkdir(exist_ok=True)
     dataset = args.resources / 'work/datasets/rwc-p'
     rows = selections(args.phase)
+    if args.allow_inference:
+        print('2026-11-26 coordinator update: serial only, launch with 1-minute load <= 6 '
+              'and system free memory >= 30%. Below 20% pause the queue after the current stage. '
+              'Swap is recorded for diagnostics.', flush=True)
     compute = scheduled(args.resources / 'work/rwcp-eval/cache', args.allow_inference)
     with (args.work / 'inference.lock').open('a') as lock, patch.object(pilot, 'scheduled_stage', compute):
         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
