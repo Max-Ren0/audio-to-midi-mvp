@@ -122,6 +122,7 @@ uv lock --check
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/新目录
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/并行结果 --parallel
 .venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/小节对齐 --beat-align
+.venv/bin/python scripts/run_noto.py input.mp3 --output-dir /完整路径/缺轨过滤 --presence-gate
 ```
 
 单首输入最长 180 秒，使用 CPU，YourMT3 基线固定为 2 个计算线程（`--device cpu --threads 2`）。输出目录必须尚未创建。默认从仓库根目录读取本地资源。在独立检出目录运行时，传入 `--resources /完整路径/有模型资源的主检出目录`，并用已准备依赖的 Python 环境执行。MuScriptor 权重沿用本机默认位置 `~/Library/NeuralNote/models/muscriptor-medium-f16.gguf`。
@@ -135,6 +136,8 @@ YourMT3 先生成整曲基线；只有基线识别到钢琴时才用钢琴 B 替
 默认保持音符的原起止秒数、音高和力度。对齐后以 30,720 PPQ 写出，时间误差不超过对应速度下的半个 MIDI tick。慢速回归样本的最大实测误差为 35.81 μs。显式传入 `--quantize 1/4`、`1/8` 或 `1/16` 才会把起音吸附到当前 MIDI 网格。量化会改变起音和时值，可能跳过会打乱同音高事件顺序的起音，转写 F1 评测应保持量化关闭。
 
 回执的 `beat_alignment` 记录名义 BPM、拍号、速度变化数、检测方法、节拍间隔规律度和回退情况，并记录请求的量化网格与实际移动起音数。RWC-P 22 首调参曲使用 ±70 ms 的一对一匹配，小节线宏平均 F1 从 5.11% 升至 51.36%，节拍宏平均 F1 从 25.53% 升至 83.76%。8 首检出约两倍于官方标注的 BPM，小节线过密，因此维持默认关闭。
+
+`--presence-gate` 为默认关闭的实验选项，可用 `--no-presence-gate` 显式关闭。开启后，钢琴、贝斯、鼓每分钟预测音符数分别低于 150、80、100 时移除该轨，回执记录每轨特征、阈值和判断。23 段封存测试的空类别误报从 1065 降到 215 个音符，同时误删 3／36 条真实轨。原 RWC-P 50 首测试误删 11／148 条真实轨，因此维持默认关闭。
 
 启动后先写入 `running` 回执。串行逐阶段更新，并行两路结束后记录各自结果。回执记录实际命令、参数、Git 状态、是否实际并行（`parallel_used`）、各阶段 UTC 起止时间、墙钟耗时和进程树 RSS 采样峰值（`peak_memory_bytes`）。RSS 按进程求和，共享页可能被重复计入。成功时发布 `noto.mid`，记录各轨来源和缺轨，退出 `0`。任一路失败，或并行期间父进程收到 `SIGINT`、`SIGTERM`，会等两路结束，保留各阶段结果和日志，写入失败回执后退出 `1`。信号中断时回执还会记录 `interrupted_by`。资源预检失败会在模型启动前写失败回执并退出 `2`。参数错误或输出目录已存在时也退出 `2`。
 
