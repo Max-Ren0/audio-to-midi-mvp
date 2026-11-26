@@ -12,7 +12,7 @@ DEFAULT_TEMPO = 500_000
 EXPORT_PPQ = 30_720
 QUANTIZE = {'1/4': 1, '1/8': 2, '1/16': 4}
 TEMPO_RULES = ('onset', 'downbeat', 'combined')
-DEFAULT_TEMPO_RULE = 'public12'
+DEFAULT_TEMPO_RULE = 'combined'
 
 
 @dataclass(frozen=True)
