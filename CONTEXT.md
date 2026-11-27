@@ -2,6 +2,14 @@
 
 最后更新：2026-11-27（Asia/Taipei）
 
+## 差异化实现状态与未来规划（v0.1.0-public.18）
+
+- PRD 2.6 第 2.2 节记录 A+B 的技术实现与证据边界。两项假设痛点尚未经用户验证。
+- 评测口径已公开，回执可查各轨状态与音符数。存在判断默认关闭。逐轨可信度本版不做，与面向用户的缺轨提示一并列入第 5.2 节。
+- 节拍与小节对齐默认关闭，RWC-P 50 首小节线宏 F1 为 49.54%，真实 3/4 和 DAW 导入待验证。输出 GM 鼓键，RWC-P 路线评测只计底鼓、军鼓。
+- README、作品集网页和 PDF 源及 RWC-P 报告已同步口径。GitHub Pages 发布副本位于本地分支 `noto-prd-future-gh-pages`（`2d7891f`），根 `index.html` 与网页源逐字节一致。本轮两个分支均仅本地提交。
+- 全量 pytest 245 项通过、2 项因缺少本地 SoundFont 跳过，含两份作品集的链接测试。改动范围限于文档。
+
 ## 流程验收文案同步（v0.1.0-public.17）
 
 - 网页、PDF 源和项目文档统一使用「流程验收（冒烟测试）」。8 段覆盖三轨齐全、缺贝斯、缺鼓、纯钢琴，全部跑通并输出可读 MIDI；同时发现缺轨时会误报。质量评测见 [RWC-P 50 首](outputs/rwcp-eval/README.md)。
@@ -99,13 +107,13 @@
 ## 重要文件
 
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
-- `outputs/Noto-产品需求文档.md`：PRD 2.5.2，含 A+B、真值 F1 上线门槛、三轨路线选拔及节拍对齐。
+- `outputs/Noto-产品需求文档.md`：PRD 2.6，含 A+B 实现状态、未来版本规划、真值 F1 上线门槛及三轨路线选拔。
 - `outputs/eval-dataset-research/README.md`：评测集来源、训练重叠风险、自录和盲听方案。
 - `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
 - `scripts/run_noto.py`：从 MP3 生成三轨 MIDI 与运行回执的一键入口。
 - `outputs/e2e-eval/`：流程验收（冒烟测试）的脚本、结果与报告。
 - `outputs/competitor-analysis/README.md`：竞品对比、证据边界和低成本验证计划。
-- `outputs/portfolio-preview/index.html`：作品集网页，发布副本已在 `noto-smoke-wording-gh-pages` 准备，待推送。`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
+- `outputs/portfolio-preview/index.html`：作品集网页，最新发布副本在本地 `noto-prd-future-gh-pages` 分支。`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
 - `outputs/history/CONTEXT-before-public-visibility.md`：原始长上下文及历史详细记录。
