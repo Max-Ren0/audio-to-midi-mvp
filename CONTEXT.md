@@ -2,10 +2,11 @@
 
 最后更新：2026-11-27（Asia/Taipei）
 
-## 作品集同步准备（v0.1.0-public.16）
+## 流程验收文案同步（v0.1.0-public.17）
 
-- 网页与 PDF 源已按 public.15 同步，补齐一键入口、端到端评测、RWC-P 路线选拔、可选功能实测和产品定位。网页移除了旧合成试听入口。
-- `gh-pages-sync` 的根 `index.html` 已准备，待推送到 `gh-pages`。发布前线上链接仍指向旧版本。
+- 网页、PDF 源和项目文档统一使用「流程验收（冒烟测试）」。8 段覆盖三轨齐全、缺贝斯、缺鼓、纯钢琴，全部跑通并输出可读 MIDI；同时发现缺轨时会误报。质量评测见 [RWC-P 50 首](outputs/rwcp-eval/README.md)。
+- GitHub Pages 的根 `index.html` 与网页源同步于本地分支 `noto-smoke-wording-gh-pages`。两个提交均待协调者获授权后推送。
+- 全量 pytest 245 项通过，2 项因缺少本地 SoundFont 跳过。两份作品集的链接测试通过。
 
 ## 节拍倍速专项（v0.1.0-public.15）
 
@@ -20,7 +21,7 @@
 - `84ae053` 增加默认关闭的一键开关、回执和评测运行器。`0fe1151` 冻结钢琴／贝斯／鼓每分钟 150／80／100 个音符的阈值。调参 15 段合计减少 769 个空类别误报音符，误删 0 轨。
 - 封存测试 23 段合计空类别误报由 1065 降至 215 个音符，三轨合并 micro F1 从 65.35% 升至 67.09%，误删 3／36 条真实轨。原 50 首误删 11／148 条真实轨，三轨合并 micro F1 从 80.03% 降至 79.37%，开关仍默认关闭。
 - 专项三条误删均来自 Slakh。原 50 首的典型误删涉及稀疏声部和模型漏检，现有证据不能将其归因于 RWC-P 参考误差。后续可验证分离轨能量或模型置信度能否减少稀疏声部误删。
-- 串行推理按可用内存 ≥30% 且一分钟负载 ≤6 启动阶段，交换区作诊断。12 段调参和 18 段测试新跑 S3，8 段复用旧端到端输出。原 50 首计分字段修复 `57d42f7` 后复用同一批模型输出完成评分。验证 241 项测试和 73 组前后 MIDI。
+- 串行推理按可用内存 ≥30% 且一分钟负载 ≤6 启动阶段，交换区作诊断。12 段调参和 18 段测试新跑 S3，8 段复用冒烟测试输出。原 50 首计分字段修复 `57d42f7` 后复用同一批模型输出完成评分。验证 241 项测试和 73 组前后 MIDI。
 - 本地报告见 `work/presence-eval/README.md`，评测产物和日志位于同一目录。本分支未推送。
 
 ## RWC-P 三轨路线选拔（v0.1.0-public.13）
@@ -38,7 +39,7 @@
 - 11-25 一键三轨首次加入默认关闭的 `--beat-align`（历史 public.12），为最终 MIDI 写可变速度与 4/4 或 3/4，检测或拟合失败时回退到固定网格并记录原因。显式 `--quantize` 才吸附起音。当前节拍规则和结果见本页节拍倍速专项。
 - 11-25 一键三轨（public.11）新增可选并行，默认串行。开启后，YourMT3 识别到钢琴时并行运行钢琴 B 和 MuScriptor，结束后合并。两段 60 秒对照分别节省 19.9% 和 21.8%，每段的串并行 MIDI 哈希一致。两路线程各可设为 1 或 2，默认各 2。详见 README 与 CHANGELOG。
 - 11-25 PRD 2.0（public.10）确立真值集逐轨 F1 为北极星和唯一上线门槛，差异化选定 A+B。路线选拔用 RWC-P 主考和单科诊断，按歌曲 30%／70% 划分，每首 60 秒。先在调参集选路线，再对封存测试集一次性评组合。
-- 11-25 修复 MuScriptor 贝斯和鼓的缺轨拼接，新增只需输入 MP3 的一键三轨入口 `scripts/run_noto.py`，完成 8 段端到端评测。8/8 段成功，钢琴、贝斯、鼓的 micro F1 分别为 94.74%、54.79%、49.80%，贝斯和鼓相对条件评测的降幅均来自空类别误报。详见 `outputs/e2e-eval/README.md`。
+- 11-25 修复 MuScriptor 贝斯和鼓的缺轨拼接，新增只需输入 MP3 的一键三轨入口 `scripts/run_noto.py`，完成 8 段流程验收（冒烟测试）；逐段记录、缺轨误报和同批分数见 `outputs/e2e-eval/README.md`。
 - 已完成（11-18 至 11-24）：
   - 8 页作品集 PDF（源文件 `outputs/portfolio-pdf/index.html`，提交 6c23d09），成品不入库。
   - 结论：项目没用大模型，接入 Dify 意义不大；Dify 自带的网页做不了多轨 MIDI 界面。
@@ -48,7 +49,7 @@
   1. 路线与真值评测使用本页 RWC-P 三轨路线选拔的决策，真值仍需独立校订或采集。
   2. 用户调研：访谈 3–5 人。
   3. 小范围试用：试用 5–8 人，记使用卡点。A/B 盲听留到上线后、有资源时补测。人工修改时间也待有专家或目标用户参与时再测。
-  - 另可补：增长闭环和冷启动方案、用户故事和低保真原型、处理成本估算。端到端评测已记录逐段和阶段耗时，见 `outputs/e2e-eval/README.md`。
+  - 另可补：增长闭环和冷启动方案、用户故事和低保真原型、处理成本估算。冒烟测试已记录逐段和阶段耗时，见 `outputs/e2e-eval/README.md`。
 - 约束：
   - 用中文回答。
   - 新下载、花钱、对外提交都要先问用户。
@@ -98,13 +99,13 @@
 ## 重要文件
 
 - `README.md`：运行入口与限制；`CHANGELOG.md`：版本记录。
-- `outputs/Noto-产品需求文档.md`：PRD 2.5.1，含 A+B、真值 F1 上线门槛、三轨路线选拔及节拍对齐。
+- `outputs/Noto-产品需求文档.md`：PRD 2.5.2，含 A+B、真值 F1 上线门槛、三轨路线选拔及节拍对齐。
 - `outputs/eval-dataset-research/README.md`：评测集来源、训练重叠风险、自录和盲听方案。
 - `outputs/multi-song-eval/`：多曲评测脚本、结果与报告。
 - `scripts/run_noto.py`：从 MP3 生成三轨 MIDI 与运行回执的一键入口。
-- `outputs/e2e-eval/`：端到端评测脚本、结果与报告。
+- `outputs/e2e-eval/`：流程验收（冒烟测试）的脚本、结果与报告。
 - `outputs/competitor-analysis/README.md`：竞品对比、证据边界和低成本验证计划。
-- `outputs/portfolio-preview/index.html`：作品集网页，发布副本已在 `gh-pages-sync` 准备，待推送。`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
+- `outputs/portfolio-preview/index.html`：作品集网页，发布副本已在 `noto-smoke-wording-gh-pages` 准备，待推送。`outputs/portfolio-pdf/index.html`：作品集 PDF 源文件。
 - `outputs/muscriptor-route/`：贝斯/鼓替换入口说明、实验和验证；`scripts/run_muscriptor_bass_drums.py`：本地入口。
 - `outputs/weiyi-noto/`：新歌生成报告；`outputs/runs/` 下的本地音频/MIDI产物不上传。
 - `outputs/history/CONTEXT-before-public-visibility.md`：原始长上下文及历史详细记录。

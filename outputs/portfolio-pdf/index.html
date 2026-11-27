@@ -244,11 +244,11 @@ small.k{display:block;font-size:11px;letter-spacing:.1em;color:var(--muted);font
  <div class="foot"><span>谱刻 NOTO · AI 音乐转写</span><span class="num">04</span></div>
 </section>
 
-<!-- 5 e2e and options -->
+<!-- 5 smoke test and options -->
 <section class="page">
-<div class="eyebrow">04 / 端到端与可选功能</div>
- <h2>端到端跑通了 8/8 段。</h2>
- <p class="lead" style="max-width:800px">2026-11-25 实测仅输入音频。钢琴、贝斯、鼓的逐音 micro F1 为 94.74%、54.79%、49.80%。贝斯和鼓较同批条件评测的降分均来自参考缺失类别中的误报。样本仅覆盖合成混音和真实钢琴独奏。<br><a href="https://github.com/Max-Ren0/audio-to-midi-mvp/blob/2b501aa79acab981849869e7ffe77b431ca882f5/outputs/e2e-eval/README.md" style="color:var(--blue)">端到端评测与样本 ↗</a></p>
+<div class="eyebrow">04 / 流程验收与可选功能</div>
+ <h2>流程验收（冒烟测试）</h2>
+ <p class="lead" style="max-width:800px">8 段覆盖三轨齐全、缺贝斯、缺鼓、纯钢琴，全部跑通并输出可读 MIDI；同时发现缺轨时会误报。质量评测见 <a style="color:var(--blue)" href="https://github.com/Max-Ren0/audio-to-midi-mvp/blob/2b501aa79acab981849869e7ffe77b431ca882f5/outputs/rwcp-eval/README.md">RWC-P 50 首</a>。<br><a href="https://github.com/Max-Ren0/audio-to-midi-mvp/blob/main/outputs/e2e-eval/README.md" style="color:var(--blue)">冒烟测试报告 ↗</a></p>
  <div class="trio" style="margin-top:40px">
   <article><small class="k">11-25 实测 · 默认串行</small><h3>并行耗时约少 20%</h3><p>两个 60 秒片段串并行输出一致。并行更占内存，收益随片段和设备变化。</p></article>
   <article><small class="k">11-27 实测 · 默认关闭</small><h3>小节线 F1 7.74% → 49.54%</h3><p>50 首对比固定 120 BPM。相对上一版对齐，倍速 6 → 0 首，半速 1 → 2 首，小节线增幅未达显著。真实 3/4 和音乐软件导入待验。</p></article>
